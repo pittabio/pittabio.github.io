@@ -30,8 +30,8 @@
 			--hovered: 	#802800;
 
 			/* Font */
-			--font-display: 'Playfair Display', serif;
-			--font-body:    'DM Sans', sans-serif;
+			--font-playfair: 'Playfair Display', serif;
+			--font-sans:    'DM Sans', sans-serif;
 
 			/* Header */
 			--border:		rgba(255,255,255,0.07);
@@ -51,7 +51,7 @@
 		body {
 			background-color: var(--bg);
 			color: var(--text);
-			font-family: var(--font-body), sans-serif;
+			font-family: var(--font-sans), sans-serif;
 			font-size: 16px;
 			margin: 0;
 			padding-top: 80px; /* Header Space */
@@ -82,27 +82,21 @@
 
 		/* SITE NAME */
 		.site-name {
-			font-family: var(--font-display), serif;
+			font-family: var(--font-playfair), serif;
 			font-weight: 800;
-			font-size: 1.25rem;
+			font-size: 1rem;
 			letter-spacing: -0.02em;
 			color: var(--text);
-			text-decoration: none;
 			white-space: nowrap;
 			flex-shrink: 0;
-			transition: color var(--transition);
 		}
 
-		.site-name span {
-			color: var(--accent);
-		}
-
-		.site-name:hover { color: var(--hovered); }
+		.site-name:hover { color: var(--text); }
 
 		/* HEADER TAGS */
 		h1, h2, h3,
 		.navbar-brand {
-			font-family: 'Playfair Display', serif;
+			font-family: var(--font-playfair), serif;
 		}
 
 		/* Header and Navigation */
@@ -126,12 +120,12 @@
 		}
 
 		.nav-link {
-			font-family: var(--font-body), serif;
+			font-family: var(--font-sans), serif;
 			font-size: 0.8rem;
 			font-weight: 600;
 			letter-spacing: 0.06em;
 			text-transform: uppercase;
-			color: var(--accent);
+			color: var(--text);
 			text-decoration: none;
 			padding: 0.45rem 0.85rem;
 			border-radius: var(--radius);
@@ -140,12 +134,12 @@
 		}
 
 		.nav-link:hover {
-			color: var(--text);
+			color: var(--accent);
 			background: var(--bg);
 		}
 
 		.nav-link.active {
-			color: var(--accent);
+			color: var(--hovered);
 			background: var(--bg);
 		}
 
@@ -157,7 +151,7 @@
 			padding: 0.6rem 1.5rem;
 			border-radius: 0;
 			transition: all 0.3s ease;
-			font-family: var(--font-body), sans-serif;
+			font-family: var(--font-sans), sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			font-size: 0.9rem;
@@ -182,7 +176,7 @@
 		}
 
 		.lang-btn {
-			font-family: var(--font-display), serif;
+			font-family: var(--font-playfair), serif;
 			font-size: 0.72rem;
 			font-weight: 700;
 			letter-spacing: 0.08em;
@@ -196,10 +190,14 @@
 			line-height: 1;
 		}
 
-		.lang-btn.active,
-		.lang-btn:hover {
+		.lang-btn.active {
 			color: var(--bg);
 			background: var(--accent);
+		}
+
+		.lang-btn:not(.active):hover {
+			color: var(--bg);
+			background: var(--hovered);
 		}
 
 		/* LINKS */
@@ -289,7 +287,7 @@
 		}
 
 		.hero-tag {
-			font-family: var(--font-display), serif;
+			font-family: var(--font-playfair), serif;
 			font-size: 0.75rem;
 			font-weight: 700;
 			letter-spacing: 0.14em;
@@ -301,7 +299,7 @@
 		}
 
 		.hero h1 {
-			font-family: var(--font-display), serif;
+			font-family: var(--font-playfair), serif;
 			font-size: clamp(2.8rem, 7vw, 6rem);
 			font-weight: 800;
 			letter-spacing: -0.03em;
@@ -325,8 +323,8 @@
 			align-items: center;
 			gap: 0.5rem;
 			background: var(--accent);
-			color: #1E1E1E;
-			font-family: var(--font-display), serif;
+			color: var(--bg);
+			font-family: var(--font-playfair), serif;
 			font-weight: 700;
 			font-size: 0.875rem;
 			letter-spacing: 0.04em;
@@ -337,7 +335,11 @@
 			transition: opacity var(--transition), transform var(--transition);
 		}
 
-		.hero-cta:hover { opacity: 0.85; transform: translateY(-2px); color: #1E1E1E; }
+		.hero-cta:hover {
+			opacity: 0.85;
+			transform: translateY(-2px);
+			color: var(--bg);
+		}
 
 		/* Responsive */
 		@media (max-width: 768px) {
@@ -351,18 +353,20 @@
 <body>
 
 <header class="site-header">
-	<a href="#" class="site-name">FABIO <span>PITTACCIO</span></a>
+	<span class="site-name">FABIO PITTACCIO</span>
 
 	<div class="ms-auto d-flex align-items-center">
 		<div class="lang-switcher">
-			<button class="lang-btn active">IT</button>
-			<button class="lang-btn">EN</button>
+			<button class="lang-btn active">EN</button>
+			<button class="lang-btn">IT</button>
 		</div>
 
 		<nav class="site-nav">
 			<a href="#" class="nav-link active">Home</a>
 			<a href="#" class="nav-link">Projects</a>
+			<a href="#" class="nav-link">Resume</a>
 			<a href="#" class="nav-link">Contacts</a>
+			<a href="#" class="nav-link">Support</a>
 		</nav>
 
 		<button class="hamburger" id="mobile-toggle">
@@ -375,47 +379,9 @@
 
 <main class="container page-content">
 	<section class="hero">
-		<span class="hero-tag">Unreal Engine Developer</span>
-		<h1>Creating worlds through <em>Code</em>.</h1>
-		<p>This is a test to check the readability of the DM Sans font on the background color #1E1E1E and the contrast of the orange accent.</p>
-
-		<div class="d-flex gap-3 justify-content-center">
-			<a href="#" class="hero-cta">Test Button</a>
-			<button class="btn-custom">Custom Button</button>
-		</div>
+		<span class="hero-tag">index page</span>
 	</section>
-
-	<div class="row mt-5">
-		<div class="col-md-6 border-top border-secondary pt-4">
-			<h2 class="mb-3">Typography Test (Playfair)</h2>
-			<p>Links within the text appear <a href="#">of this color</a>. Secondary text uses a lighter shade to create visual hierarchy.</p>
-		</div>
-		<div class="col-md-6 border-top border-secondary pt-4">
-			<h2 class="mb-3">Icons Test</h2>
-			<div class="d-flex gap-4 fs-2">
-				<i class="devicon-unrealengine-plain"></i>
-				<i class="devicon-cplusplus-plain"></i>
-				<i class="devicon-github-original"></i>
-			</div>
-		</div>
-	</div>
 </main>
-
-<script>
-	const toggle = document.getElementById('mobile-toggle');
-	toggle.addEventListener('click', () => {
-		toggle.classList.toggle('open');
-	});
-
-	window.addEventListener('scroll', () => {
-		const header = document.querySelector('.site-header');
-		if (window.scrollY > 20) {
-			header.classList.add('scrolled');
-		} else {
-			header.classList.remove('scrolled');
-		}
-	});
-</script>
 
 <!-- JavaScript -->   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
