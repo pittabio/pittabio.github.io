@@ -23,39 +23,50 @@
 </head>
 <body>
 
-<header class="site-header">
-	<span class="site-name">FABIO PITTACCIO</span>
+<!-- HEADER -->
+<div id="header-placeholder"></div>
 
-	<div class="ms-auto d-flex align-items-center">
-		<div class="lang-switcher">
-			<button class="lang-btn active">EN</button>
-			<button class="lang-btn">IT</button>
-		</div>
-
-		<nav class="site-nav">
-			<a href="#" class="nav-link active">Home</a>
-			<a href="#" class="nav-link">Projects</a>
-			<a href="#" class="nav-link">Resume</a>
-			<a href="#" class="nav-link">Contacts</a>
-			<a href="#" class="nav-link">Support</a>
-		</nav>
-
-		<button class="hamburger" id="mobile-toggle">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-	</div>
-</header>
-
+<!-- PAGE -->
 <main class="container page-content">
 	<section class="hero">
 		<span class="hero-tag">index page</span>
 	</section>
 </main>
 
-<!-- JavaScript -->   
+<!-- JAVASCRIPT -->
+<!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!-- Header -->
+<script>
+	fetch('header.html')
+		.then(response => response.text())
+		.then(data => {
+			// Load header
+			document.getElementById('header-placeholder').innerHTML = data;
+
+			// Active the specific links for this page
+			document.getElementById('nav-home').classList.add('active');
+			document.getElementById('lang-en').classList.add('active');
+
+			// Reactive mobile menu script
+			const toggle = document.getElementById('mobile-toggle');
+			toggle.addEventListener('click', () => {
+				toggle.classList.toggle('open');
+				// TODO: logic for the mobile drawer
+			});
+
+			// Scroll management for the .scrolled class
+			window.addEventListener('scroll', () => {
+				const header = document.querySelector('.site-header');
+				if (window.scrollY > 20) {
+					header.classList.add('scrolled');
+				} else {
+					header.classList.remove('scrolled');
+				}
+			});
+		})
+		.catch(error => console.error('ERROR loading header:', error));
+</script>
 	
 </body>
 </html>
