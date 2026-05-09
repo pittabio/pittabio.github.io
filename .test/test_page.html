@@ -1,78 +1,34 @@
 ﻿<!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabio Pittaccio</title>
 
-    <!-- SEO optimization (languages) -->
-    <link rel="alternate" hreflang="it" href="https://pittabio.github.io/it/index.html">
-    <link rel="alternate" hreflang="en" href="https://pittabio.github.io/index.html">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- CDN Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- CDN DevCon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
     <!-- CSS Style -->
     <link rel="stylesheet" href="../style.css">
-
-    <style>
-        /* Solo per rendere la pagina di test leggibile */
-        .test-section {
-            padding: 4rem 3rem 2rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .test-label {
-            font-family: var(--font-sans);
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            opacity: 0.6;
-        }
-        .test-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .swatch {
-            width: 48px;
-            height: 48px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: flex-end;
-            padding: 4px;
-        }
-        .swatch-label {
-            font-size: 0.5rem;
-            font-family: var(--font-sans);
-            opacity: 0.7;
-        }
-    </style>
+    <link rel="stylesheet" href="test_style.css">
 </head>
 <body>
 
-<!-- HEADER (fuori da page-content, come da struttura reale) -->
+<!--  ===================== HEADER =====================  -->
 <header class="site-header" id="site-header">
     <a href="#" class="site-name">Hello World</a>
 
     <nav class="site-nav" style="margin-left: auto; margin-right: 1rem;">
-        <a href="#" class="nav-link active">Home</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Work</a>
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link active">Link1</a>
+        <a href="#" class="nav-link">Link2</a>
+        <a href="#" class="nav-link">Link3</a>
+        <a href="#" class="nav-link">Link4</a>
     </nav>
 
     <div class="lang-switcher">
@@ -81,16 +37,17 @@
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
+        <span></span> <span></span> <span></span>
     </button>
 </header>
 
 <!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobile-nav">
-    <a href="#" class="nav-link active">Home</a>
-    <a href="#" class="nav-link">About</a>
-    <a href="#" class="nav-link">Work</a>
-    <a href="#" class="nav-link">Contact</a>
+    <a href="#" class="nav-link active">Link1</a>
+    <a href="#" class="nav-link">Link2</a>
+    <a href="#" class="nav-link">Link3</a>
+    <a href="#" class="nav-link">Link3</a>
+
     <div class="lang-switcher">
         <button class="lang-btn active">IT</button>
         <button class="lang-btn">EN</button>
@@ -103,22 +60,18 @@
     <!-- 1. HERO -->
     <section class="hero test-section" style="padding-top: calc(var(--height) + 3rem);">
         <div class="hero-content">
-            <p class="test-label">— Sezione: .hero</p>
+            <p class="test-label">Section: .hero</p>
             <span class="hero-tag">Hello World Tag</span>
             <h1>Hello <em>World</em> Heading</h1>
-            <p>Hello world. Questo è un paragrafo dentro <code>.hero p</code>. Testo di prova per vedere il font, la dimensione e il colore applicati dal CSS.</p>
-            <a href="#" class="hero-cta">Hello CTA ↗</a>
+            <p>Hello world. This is a paragraph inside <code>.hero p</code>. Test text to see the font, size and color applied by CSS.</p>
+            <a href="#" class="hero-cta">Hero CTA</a>
         </div>
-        <img
-                class="hero-image"
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
-                alt="Hello World Image"
-        >
+        <img class="hero-image" src="/.media/test.png" alt="Test Image">
     </section>
 
-    <!-- 2. VARIABILI COLORE -->
+    <!-- 2. COLOR VARIABLES -->
     <section class="test-section">
-        <p class="test-label">— Variabili: colori CSS custom properties</p>
+        <p class="test-label">Variables: CSS colors custom properties</p>
         <div class="test-row">
             <div class="swatch" style="background:var(--bg)"><span class="swatch-label">--bg</span></div>
             <div class="swatch" style="background:var(--bgbt)"><span class="swatch-label">--bgbt</span></div>
@@ -130,18 +83,18 @@
         </div>
     </section>
 
-    <!-- 3. TIPOGRAFIA -->
+    <!-- 3. TYPOGRAPHY -->
     <section class="test-section">
-        <p class="test-label">— Tipografia: font-playfair + font-sans, headings</p>
+        <p class="test-label">Typography: font-playfair + font-sans, headings</p>
         <h1>Hello World — h1 Playfair</h1>
         <h2>Hello World — h2 Playfair</h2>
         <h3>Hello World — h3 Playfair</h3>
-        <p style="margin-top:1rem">Hello world — body text DM Sans. <a href="#">Hello link</a> con colore accent. <a href="#" style="pointer-events:none; color:var(--hovered)">Hello hovered link</a>.</p>
+        <p style="margin-top:1rem">Hello world — body text DM Sans. <a href="#">Hello link</a> with accent color. <a href="#" style="pointer-events:none; color:var(--hovered)">Hello hovered link</a>.</p>
     </section>
 
     <!-- 4. LANGUAGE SWITCHER -->
     <section class="test-section">
-        <p class="test-label">— Componente: .lang-switcher + .lang-btn</p>
+        <p class="test-label">Component: .lang-switcher + .lang-btn</p>
         <div class="test-row">
             <div class="lang-switcher">
                 <button class="lang-btn active">IT</button>
@@ -156,18 +109,18 @@
 
     <!-- 5. NAVIGATION -->
     <section class="test-section">
-        <p class="test-label">— Componente: .site-nav + .nav-link</p>
+        <p class="test-label">Component: .site-nav + .nav-link</p>
         <nav class="site-nav" style="flex-wrap:wrap;">
             <a href="#" class="nav-link active">Active Link</a>
-            <a href="#" class="nav-link">Hello Nav</a>
-            <a href="#" class="nav-link">Hello Nav</a>
-            <a href="#" class="nav-link">Hello Nav</a>
+            <a href="#" class="nav-link">Hello Nav 1</a>
+            <a href="#" class="nav-link">Hello Nav 2</a>
+            <a href="#" class="nav-link">Hello Nav 3</a>
         </nav>
     </section>
 
-    <!-- 6. BOTTONE CTA -->
+    <!-- 6. CTA BUTTON -->
     <section class="test-section">
-        <p class="test-label">— Componente: .hero-cta</p>
+        <p class="test-label">Component: .hero-cta</p>
         <div class="test-row">
             <a href="#" class="hero-cta">Hello CTA</a>
             <a href="#" class="hero-cta">Hello CTA ↗</a>
@@ -176,16 +129,16 @@
 
     <!-- 7. HAMBURGER -->
     <section class="test-section">
-        <p class="test-label">— Componente: .hamburger (stato normale + aperto)</p>
+        <p class="test-label">Component: .hamburger — states: closed (normal) + opened</p>
         <div class="test-row">
             <div>
-                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Chiuso</p>
+                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Closed</p>
                 <button class="hamburger">
                     <span></span><span></span><span></span>
                 </button>
             </div>
             <div>
-                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Aperto</p>
+                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Opened</p>
                 <button class="hamburger open">
                     <span></span><span></span><span></span>
                 </button>
@@ -193,9 +146,9 @@
         </div>
     </section>
 
-    <!-- 8. VARIABILI DI STILE STRUTTURALI -->
+    <!-- 8. STRUCTURAL STYLE VARIABLES -->
     <section class="test-section">
-        <p class="test-label">— Variabili strutturali: --radius, --transition, --blur, --height, --shadow</p>
+        <p class="test-label">Structural variables: --radius, --transition, --blur, --height, --shadow</p>
         <div class="test-row">
             <div style="
                     background: var(--bgbt);
@@ -205,7 +158,7 @@
                     transition: transform var(--transition);
                     cursor:pointer;
                 " onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform=''">
-                Hello — box con --radius + --shadow + --transition hover
+                Hello — box with --radius + --shadow + --transition hover
             </div>
             <div style="
                     height: var(--height);
@@ -215,14 +168,14 @@
                     font-size:0.8rem; opacity:0.7;
                     backdrop-filter: var(--blur);
                 ">
-                Hello — altezza --height con --blur
+                Hello — height --height con --blur
             </div>
         </div>
     </section>
 
     <!-- 9. HEADER SCROLLED STATE -->
     <section class="test-section" style="padding-bottom: 3rem;">
-        <p class="test-label">— Stato: .site-header.scrolled (simulato)</p>
+        <p class="test-label">State: .site-header.scrolled (simulated)</p>
         <div style="
                 height: calc(var(--height) - 20px);
                 background: var(--bg);
@@ -233,7 +186,7 @@
                 gap: 1rem;
             ">
             <span class="site-name">Hello World</span>
-            <span style="margin-left:auto; font-size:0.7rem; opacity:0.4">← header scrolled (altezza ridotta)</span>
+            <span style="margin-left:auto; font-size:0.7rem; opacity:0.4">← header scrolled (reduced height)</span>
         </div>
     </section>
 
@@ -266,9 +219,6 @@
     });
 </script>
 
-<!-- JAVASCRIPT -->
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <!-- Header -->
 <script>
     fetch('header.html')
