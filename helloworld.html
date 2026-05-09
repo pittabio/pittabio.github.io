@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Pittaccio</title>
+
+    <!-- SEO optimization (languages) -->
+    <link rel="alternate" hreflang="it" href="https://pittabio.github.io/it/index.html">
+    <link rel="alternate" hreflang="en" href="https://pittabio.github.io/index.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CDN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- CDN DevCon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Solo per rendere la pagina di test leggibile */
+        .test-section {
+            padding: 4rem 3rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .test-label {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+        .test-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: flex-end;
+            padding: 4px;
+        }
+        .swatch-label {
+            font-size: 0.5rem;
+            font-family: var(--font-sans);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER (fuori da page-content, come da struttura reale) -->
+<header class="site-header" id="site-header">
+    <a href="#" class="site-name">Hello World</a>
+
+    <nav class="site-nav" style="margin-left: auto; margin-right: 1rem;">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Work</a>
+        <a href="#" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="lang-switcher">
+        <button class="lang-btn active">IT</button>
+        <button class="lang-btn">EN</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobile-nav">
+    <a href="#" class="nav-link active">Home</a>
+    <a href="#" class="nav-link">About</a>
+    <a href="#" class="nav-link">Work</a>
+    <a href="#" class="nav-link">Contact</a>
+    <div class="lang-switcher">
+        <button class="lang-btn active">IT</button>
+        <button class="lang-btn">EN</button>
+    </div>
+</nav>
+
+<!-- ===================== PAGE-CONTENT ===================== -->
+<main class="page-content">
+
+    <!-- 1. HERO -->
+    <section class="hero test-section" style="padding-top: calc(var(--height) + 3rem);">
+        <div class="hero-content">
+            <p class="test-label">— Sezione: .hero</p>
+            <span class="hero-tag">Hello World Tag</span>
+            <h1>Hello <em>World</em> Heading</h1>
+            <p>Hello world. Questo è un paragrafo dentro <code>.hero p</code>. Testo di prova per vedere il font, la dimensione e il colore applicati dal CSS.</p>
+            <a href="#" class="hero-cta">Hello CTA ↗</a>
+        </div>
+        <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                alt="Hello World Image"
+        >
+    </section>
+
+    <!-- 2. VARIABILI COLORE -->
+    <section class="test-section">
+        <p class="test-label">— Variabili: colori CSS custom properties</p>
+        <div class="test-row">
+            <div class="swatch" style="background:var(--bg)"><span class="swatch-label">--bg</span></div>
+            <div class="swatch" style="background:var(--bgbt)"><span class="swatch-label">--bgbt</span></div>
+            <div class="swatch" style="background:var(--text)"><span class="swatch-label">--text</span></div>
+            <div class="swatch" style="background:var(--accent)"><span class="swatch-label">--accent</span></div>
+            <div class="swatch" style="background:var(--hovered)"><span class="swatch-label">--hovered</span></div>
+            <div class="swatch" style="background:var(--border); border:1px solid var(--accent)"><span class="swatch-label">--border</span></div>
+            <div class="swatch" style="background:var(--shadow)"><span class="swatch-label">--shadow</span></div>
+        </div>
+    </section>
+
+    <!-- 3. TIPOGRAFIA -->
+    <section class="test-section">
+        <p class="test-label">— Tipografia: font-playfair + font-sans, headings</p>
+        <h1>Hello World — h1 Playfair</h1>
+        <h2>Hello World — h2 Playfair</h2>
+        <h3>Hello World — h3 Playfair</h3>
+        <p style="margin-top:1rem">Hello world — body text DM Sans. <a href="#">Hello link</a> con colore accent. <a href="#" style="pointer-events:none; color:var(--hovered)">Hello hovered link</a>.</p>
+    </section>
+
+    <!-- 4. LANGUAGE SWITCHER -->
+    <section class="test-section">
+        <p class="test-label">— Componente: .lang-switcher + .lang-btn</p>
+        <div class="test-row">
+            <div class="lang-switcher">
+                <button class="lang-btn active">IT</button>
+                <button class="lang-btn">EN</button>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn">IT</button>
+                <button class="lang-btn active">EN</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. NAVIGATION -->
+    <section class="test-section">
+        <p class="test-label">— Componente: .site-nav + .nav-link</p>
+        <nav class="site-nav" style="flex-wrap:wrap;">
+            <a href="#" class="nav-link active">Active Link</a>
+            <a href="#" class="nav-link">Hello Nav</a>
+            <a href="#" class="nav-link">Hello Nav</a>
+            <a href="#" class="nav-link">Hello Nav</a>
+        </nav>
+    </section>
+
+    <!-- 6. BOTTONE CTA -->
+    <section class="test-section">
+        <p class="test-label">— Componente: .hero-cta</p>
+        <div class="test-row">
+            <a href="#" class="hero-cta">Hello CTA</a>
+            <a href="#" class="hero-cta">Hello CTA ↗</a>
+        </div>
+    </section>
+
+    <!-- 7. HAMBURGER -->
+    <section class="test-section">
+        <p class="test-label">— Componente: .hamburger (stato normale + aperto)</p>
+        <div class="test-row">
+            <div>
+                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Chiuso</p>
+                <button class="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div>
+                <p style="font-size:0.75rem; margin-bottom:0.5rem; opacity:0.5">Aperto</p>
+                <button class="hamburger open">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. VARIABILI DI STILE STRUTTURALI -->
+    <section class="test-section">
+        <p class="test-label">— Variabili strutturali: --radius, --transition, --blur, --height, --shadow</p>
+        <div class="test-row">
+            <div style="
+                    background: var(--bgbt);
+                    border-radius: var(--radius);
+                    padding: 1rem 1.5rem;
+                    box-shadow: 0 4px 24px var(--shadow);
+                    transition: transform var(--transition);
+                    cursor:pointer;
+                " onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform=''">
+                Hello — box con --radius + --shadow + --transition hover
+            </div>
+            <div style="
+                    height: var(--height);
+                    background: var(--bgbt);
+                    border-radius: var(--radius);
+                    display:flex; align-items:center; padding: 0 1.5rem;
+                    font-size:0.8rem; opacity:0.7;
+                    backdrop-filter: var(--blur);
+                ">
+                Hello — altezza --height con --blur
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HEADER SCROLLED STATE -->
+    <section class="test-section" style="padding-bottom: 3rem;">
+        <p class="test-label">— Stato: .site-header.scrolled (simulato)</p>
+        <div style="
+                height: calc(var(--height) - 20px);
+                background: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: 0 4px 24px var(--shadow);
+                display:flex; align-items:center; padding: 0 2rem;
+                gap: 1rem;
+            ">
+            <span class="site-name">Hello World</span>
+            <span style="margin-left:auto; font-size:0.7rem; opacity:0.4">← header scrolled (altezza ridotta)</span>
+        </div>
+    </section>
+
+</main>
+<!-- ================== FINE PAGE-CONTENT ================== -->
+
+<script>
+    // Header scrolled state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Hamburger toggle
+    const burger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+    });
+
+    // Lang buttons toggle
+    document.querySelectorAll('.lang-switcher').forEach(switcher => {
+        switcher.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                switcher.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    });
+</script>
+
+<!-- JAVASCRIPT -->
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!-- Header -->
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            // Load header
+            document.getElementById('header-placeholder').innerHTML = data;
+
+            // Active the specific links for this page
+            document.getElementById('nav-home').classList.add('active');
+            document.getElementById('lang-it').classList.add('active');
+
+            // Reactive mobile menu script
+            const toggle = document.getElementById('mobile-toggle');
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('open');
+                // TODO: logic for the mobile drawer
+            });
+
+            // Scroll management for the .scrolled class
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.site-header');
+                if (window.scrollY > 20) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        })
+        .catch(error => console.error('ERROR loading header:', error));
+</script>
+
+</body>
+</html>
