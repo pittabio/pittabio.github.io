@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // 1. Detect browser language (es. "it", "it-IT", "en-US")
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // 2. Define the destination folders
+        const folderIT = "./it/index.html";
+        const folderEN = "./en/index.html";
+
+        // 3. Redirection logic
+        // Check if the language string starts with "it"
+        if (userLang.startsWith('it')) {
+            window.location.replace(folderIT);
+        // Add other languages if necessary
+        // For all other languages, go to the English version
+        } else {
+            window.location.replace(folderEN);
+        }
+    </script>
+</head>
+<body>
+
+<!-- Security message if JS is disabled -->
+<p>If you are not redirected, choose a language:</p>
+<ul>
+    <li><a href="./en/index.html">English</a></li>
+    <li><a href="./it/index.html">Italiano</a></li>
+</ul>
+</body>
+</html>
