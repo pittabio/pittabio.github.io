@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<!--  ===================== HEADER =====================  -->
+<!-- HEADER -->
 <header class="site-header" id="site-header">
     <a href="#" class="site-name">Hello World</a>
 
@@ -54,7 +54,7 @@
     </div>
 </nav>
 
-<!-- ===================== PAGE-CONTENT ===================== -->
+<!-- PAGE-CONTENT -->
 <main class="page-content">
 
     <!-- 1. HERO -->
@@ -191,8 +191,8 @@
     </section>
 
 </main>
-<!-- ================== FINE PAGE-CONTENT ================== -->
 
+<!-- SCRIPT -->
 <script>
     // Header scrolled state
     const header = document.getElementById('site-header');
@@ -217,38 +217,6 @@
             });
         });
     });
-</script>
-
-<!-- Header -->
-<script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            // Load header
-            document.getElementById('header-placeholder').innerHTML = data;
-
-            // Active the specific links for this page
-            document.getElementById('nav-home').classList.add('active');
-            document.getElementById('lang-it').classList.add('active');
-
-            // Reactive mobile menu script
-            const toggle = document.getElementById('mobile-toggle');
-            toggle.addEventListener('click', () => {
-                toggle.classList.toggle('open');
-                // TODO: logic for the mobile drawer
-            });
-
-            // Scroll management for the .scrolled class
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('.site-header');
-                if (window.scrollY > 20) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        })
-        .catch(error => console.error('ERROR loading header:', error));
 </script>
 
 </body>

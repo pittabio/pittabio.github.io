@@ -28,9 +28,63 @@
 
 <!-- PAGE -->
 <main class="page-content">
-	<section class="hero test-section" style="padding-top: calc(var(--height) + 3rem);">
+	<!-- HERO SECTION -->
+	<section class="hero" id="home">
+		<!-- LEFT PART: TEXT -->
 		<div class="hero-content">
-			<h1>WORK IN PROGRESS</h1>
+			<!-- Tag & Name-->
+			<span class="hero-tag">Game Developer · Unreal Engine C++</span>
+			<h1>Fabio Pittaccio</h1>
+
+			<!-- Presentation -->
+			<p>
+				I'm <strong>Fabio Pittaccio</strong>, a game developer specializing in <em>Unreal Engine</em>,
+				dedicated to creating immersive experiences from concept to publication.
+				<br><br>
+				With a focus on clean code architecture and performance optimization,
+				I bridge the gap between creative vision and technical excellence.
+			</p>
+
+			<!-- Buttons -->
+			<div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center; margin-bottom: 2rem;">
+				<a href="#" class="hero-cta">
+					View Projects
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+				</a>
+			</div>
+
+			<!-- Quick info -->
+			<div class="hero-info">
+				<div>
+					<a>5+</a> <br> <b>Published Games</b>
+				</div>
+				<div>
+					<a>UE5</a> <br> <b>Primary Engine</b>
+				</div>
+				<div>
+					<a>PC · Android</a> <br> <b>Platforms</b>
+				</div>
+			</div>
+		</div>
+
+		<!-- RIGHT PART: PHOTO -->
+		<div style="padding-right: 2rem;">
+			<img src="/.media/profile.jpg" alt="Fabio Pittaccio" class="hero-image" />
+		</div>
+
+		<!-- BUTTON PART: INDICATOR -->
+		<a href="#projects" class="scroll-indicator" aria-label="Scroll to the projects section">
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M7 10l5 5 5-5"/>
+			</svg>
+		</a>
+	<!-- END HERO -->
+	</section>
+
+	<!-- SHORT PROJECTS SECTION -->
+	<section class="hero" id="projects">
+		<div class="hero-content">
+			<h1>TEST PROJECT</h1>
 		</div>
 	</section>
 </main>
