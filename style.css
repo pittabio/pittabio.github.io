@@ -21,8 +21,16 @@
 }
 
 /* ## BASE ## */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
@@ -122,6 +130,8 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .nav-link {
@@ -292,7 +302,7 @@ a:hover {
     opacity: 0.6;
     cursor: pointer;
     text-decoration: none;
-    transition: opacity var(--transition), border-color var(--transition);
+    transition: opacity 0.3s ease, border-color var(--transition);
     animation: bounce 2s infinite;
 }
 
@@ -300,6 +310,11 @@ a:hover {
     opacity: 1;
     border-color: var(--accent);
     color: var(--accent);
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @keyframes bounce {

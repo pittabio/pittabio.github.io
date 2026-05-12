@@ -1,34 +1,92 @@
-﻿<!DOCTYPE html>
-<html lang="">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script>
-        // 1. Detect browser language (es. "it", "it-IT", "en-US")
-        const userLang = navigator.language || navigator.userLanguage;
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fabio Pittaccio</title>
 
-        // 2. Define the destination folders
-        const folderIT = "./it/index.html";
-        const folderEN = "./en/index.html";
+	<!-- CSS Style -->
+	<link rel="stylesheet" href="style.css">
 
-        // 3. Redirection logic
-        // Check if the language string starts with "it"
-        if (userLang.startsWith('it')) {
-            window.location.replace(folderIT);
-        // Add other languages if necessary
-        // For all other languages, go to the English version
-        } else {
-            window.location.replace(folderEN);
-        }
-    </script>
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<!-- CDN DevCon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
 </head>
 <body>
 
-<!-- Security message if JS is disabled -->
-<p>If you are not redirected, choose a language:</p>
-<ul>
-    <li><a href="./en/index.html">English</a></li>
-    <li><a href="./it/index.html">Italiano</a></li>
-</ul>
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- PAGE -->
+<main class="page-content">
+	<!-- HERO SECTION -->
+	<section class="hero" id="home">
+		<!-- LEFT PART: TEXT -->
+		<div class="hero-content">
+			<!-- Tag & Name-->
+			<span class="hero-tag" data-i18n="hero.tag"></span>
+			<h1>Fabio Pittaccio</h1>
+
+			<!-- Presentation -->
+			<p data-i18n-html="hero.presentation"></p>
+
+			<!-- Buttons -->
+			<div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center; margin-bottom: 2rem;">
+				<a href="#" class="hero-cta">
+					<span data-i18n="hero.projects"></span>
+					<!-- svg arrow -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+				</a>
+			</div>
+
+			<!-- Quick info -->
+			<div class="hero-info">
+				<div>
+					<a>5+</a>
+					<br>
+					<b data-i18n="hero.info.published"></b>
+				</div>
+				<div>
+					<a>UE5</a>
+					<br>
+					<b data-i18n="hero.info.engine"></b>
+				</div>
+				<div>
+					<a>PC · Android</a>
+					<br>
+					<b data-i18n="hero.info.platforms"></b>
+				</div>
+			</div>
+		</div>
+
+		<!-- RIGHT PART: PHOTO -->
+		<div style="padding-right: 2rem;">
+			<img src="/media/profile.jpg" alt="Fabio Pittaccio" class="hero-image" />
+		</div>
+
+		<!-- BUTTON PART: INDICATOR -->
+		<a href="#projects" class="scroll-indicator" aria-label="Scroll to the projects section">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DADADA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13M5 12l7 7 7-7"/></svg>
+		</a>
+	<!-- END HERO -->
+	</section>
+
+	<!-- SHORT PROJECTS SECTION -->
+	<section class="hero" id="projects">
+		<div class="hero-content">
+			<h1>TEST PROJECT</h1>
+		</div>
+	</section>
+</main>
+
+<!-- ## JAVASCRIPT ## -->
+<script src="scripts/main.js"></script>
+
 </body>
 </html>

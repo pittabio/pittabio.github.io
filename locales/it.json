@@ -1,0 +1,27 @@
+﻿{
+  "head": {
+    "home": "Home",
+    "projects": "Progetti",
+    "resume": "Curriculum",
+    "contacts": "Contatti",
+    "support": "Supporto"
+  },
+
+  "hero": {
+    "tag": "Sviluppatore Videogiochi · Unreal Engine C++",
+    "cta": "Vedi progetti",
+    "presentation": [
+      "Sono <strong>Fabio Pittaccio</strong>, uno sviluppatore di giochi specializzato in <em>Unreal Engine</em>,",
+      "dedicato alla creazione di esperienze coinvolgenti dall'ideazione alla pubblicazione.",
+      "<br><br>",
+      "Con particolare attenzione all'architettura del codice pulito e all'ottimizzazione delle prestazioni",
+      "Colmo il divario tra visione creativa ed eccellenza tecnica."
+    ],
+    "projects": "Guarda i progetti",
+    "info": {
+      "published": "Giochi pubblicati",
+      "engine": "Engine principale",
+      "platforms": "Piattaforme"
+    }
+  }
+}

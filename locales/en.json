@@ -1,0 +1,27 @@
+﻿{
+  "head": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contacts": "Contacts",
+    "support": "Support"
+  },
+
+  "hero": {
+    "tag": "Game Developer · Unreal Engine C++",
+    "cta": "View Projects",
+    "presentation": [
+      "I'm <strong>Fabio Pittaccio</strong>, a game developer specializing in <em>Unreal Engine</em>,",
+      "dedicated to creating immersive experiences from concept to publication.",
+      "<br><br>",
+      "With a focus on clean code architecture and performance optimization,",
+      "I bridge the gap between creative vision and technical excellence."
+    ],
+    "projects": "View Projects",
+    "info": {
+      "published": "Published Games",
+      "engine": "Primary Engine",
+      "platforms": "Platforms"
+    }
+  }
+}
