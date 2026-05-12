@@ -11,13 +11,13 @@ fetch('header.html')
         // When the user click on the language button EN
         document.getElementById('lang-en').addEventListener('click', (e) => {
             e.preventDefault();
-            changeLanguage('en').then(r => {});
+            changeLanguage('en').then(() => {});
         });
 
         // When the user click on the language button IT
         document.getElementById('lang-it') .addEventListener('click', (e) => {
             e.preventDefault();
-            changeLanguage('it').then(r => {})
+            changeLanguage('it').then(() => {})
         });
 
         // Reactive mobile menu script
@@ -38,7 +38,7 @@ fetch('header.html')
         });
 
         const savedLang = localStorage.getItem('preferredLang') || 'en';
-        changeLanguage(savedLang).then(r => {});
+        changeLanguage(savedLang).then(() => {});
 
     })
     .catch(error => console.error('ERROR loading header:', error));

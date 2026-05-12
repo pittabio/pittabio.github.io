@@ -216,7 +216,7 @@ a:hover {
 .hero p {
     font-size: 1.1rem;
     color: var(--text);
-    max-width: 520px;
+    max-width: 650px;
 }
 
 /* Column Text */
