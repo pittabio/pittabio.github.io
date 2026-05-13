@@ -2,7 +2,7 @@
   "head": {
     "home": "Home",
     "projects": "Progetti",
-    "resume": "Curriculum",
+    "resume": "Su di me",
     "contacts": "Contatti",
     "support": "Supporto"
   },
@@ -17,7 +17,6 @@
       "<br><br>",
       "Unisco un'architettura del codice pulita e manutenibile a una costante ricerca dell'ottimizzazione,",
       "colmando il divario tra <em>visione artistica</em> ed <em>eccellenza tecnica</em>.",
-      "<br>",
       "Che si tratti di esplorare antiche rovine o implementare sistemi AI complessi,",
       "<strong>il mio obiettivo</strong> è trasformare grandi idee in prodotti solidi e performanti."
     ],
@@ -27,5 +26,22 @@
       "engine": "Engine principale",
       "platforms": "Piattaforme"
     }
+  },
+
+  "about": {
+    "title": "Perché scegliere me?",
+    "item1": {
+      "title": "UE5 Specialist",
+      "desc": "Sviluppo esperienze immersive sfruttando le ultime tecnologie di Unreal Engine 5, dal Blueprint al C++"
+    },
+    "item2": {
+      "title": "Cross-Platform",
+      "desc": "Esperienza consolidata nella pubblicazione e ottimizzazione di titoli per PC e dispositivi Android"
+    },
+    "item3": {
+      "title": "Full-Cycle Dev",
+      "desc": "Gestione completa del progetto: dal concept iniziale alla pubblicazione"
+    },
+    "find_more": "Scopri di più"
   }
 }

@@ -2,7 +2,7 @@
   "head": {
     "home": "Home",
     "projects": "Projects",
-    "resume": "Resume",
+    "resume": "About me",
     "contacts": "Contacts",
     "support": "Support"
   },
@@ -17,7 +17,6 @@
       "<br><br>",
       "I combine clean and maintainable code architecture with a constant pursuit of optimization,",
       "bridging the gap between <em>artistic vision</em> and <em>technical excellence</em>.",
-      "<br>",
       "Whether it's exploring ancient ruins or implementing complex AI systems,",
       "<strong>my goal</strong> is to transform great ideas into solid, high-performance products."
     ],
@@ -27,5 +26,22 @@
       "engine": "Primary Engine",
       "platforms": "Platforms"
     }
+  },
+
+  "about": {
+    "title": "Why choose me?",
+    "item1": {
+      "title": "UE5 Specialist",
+      "desc": "I develop immersive experiences using the latest Unreal Engine 5 technologies, from Blueprint to C++"
+    },
+    "item2": {
+      "title": "Cross-Platform",
+      "desc": "Consolidated experience in publishing and optimizing titles for PC and Android devices"
+    },
+    "item3": {
+      "title": "Full-Cycle Dev",
+      "desc": "Complete project management: from initial concept to publication"
+    },
+    "find_more": "Find out more"
   }
 }

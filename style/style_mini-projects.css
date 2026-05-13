@@ -1,0 +1,107 @@
+﻿/* ## PROJECTS SECTION ## */
+
+.projects-section {
+    padding: 6rem 4rem;
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text);
+    text-align: center;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Square Card */
+.project-card {
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition), box-shadow var(--transition);
+    aspect-ratio: 1 / 1;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 80, 0, 0.2);
+}
+
+.project-name {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.project-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Links */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-primary {
+    background: var(--accent);
+    color: var(--bg) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.link-secondary {
+    color: var(--text) !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.link-secondary:hover {
+    color: var(--accent) !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 4rem 1.5rem;
+    }
+    .project-card {
+        aspect-ratio: auto;
+    }
+}

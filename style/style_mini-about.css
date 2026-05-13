@@ -1,0 +1,92 @@
+﻿/* ## ABOUT & SKILLS ## */
+.about-skills {
+    padding: 6rem 2rem;
+    background: var(--bg);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.about-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.about-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-item h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.about-item p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Resume Link */
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    transition: var(--transition);
+}
+
+.resume-link:hover {
+    color: var(--accent);
+    gap: 0.8rem;
+}
+
+/* Skills Bar */
+.skills-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+    opacity: 0.7;
+}
+
+.skills-bar i {
+    font-size: 2.5rem;
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.skills-bar i:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.skills-bar img {
+    font-size: 2.5rem;
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.skills-bar img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .skills-bar { gap: 2rem; }
+    .skills-bar i { font-size: 2rem; }
+}

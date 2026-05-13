@@ -7,7 +7,10 @@
 	<title>Fabio Pittaccio</title>
 
 	<!-- CSS Style -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style/style_main.css">
+	<link rel="stylesheet" href="style/style_mobile.css">
+	<link rel="stylesheet" href="style/style_projects.css">
+	<link rel="stylesheet" href="style/style_about.css">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,18 +74,63 @@
 		</div>
 
 		<!-- BUTTON PART: INDICATOR -->
-		<a href="#projects" class="scroll-indicator" aria-label="Scroll to the projects section">
+		<a href="#about" class="scroll-indicator" aria-label="Scroll to the projects section">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DADADA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13M5 12l7 7 7-7"/></svg>
 		</a>
 	<!-- END HERO -->
 	</section>
 
-	<!-- SHORT PROJECTS SECTION -->
-	<section class="hero" id="projects">
-		<div class="hero-content">
-			<h1>TEST PROJECT</h1>
+	<!-- SHORT ABOUT -->
+	<section class="about-skills" id="about">
+		<div class="section-container">
+			<h2 class="section-title" data-i18n="about.title"></h2>
+
+			<!-- Grid -->
+			<div class="about-grid">
+				<!-- UE Specialist -->
+				<div class="about-item">
+					<div class="about-icon">🚀</div>
+					<h3 data-i18n="about.item1.title"></h3>
+					<p data-i18n="about.item1.desc"></p>
+				</div>
+				<!-- Cross-Platform -->
+				<div class="about-item">
+					<div class="about-icon">📱</div>
+					<h3 data-i18n="about.item2.title"></h3>
+					<p data-i18n="about.item2.desc"></p>
+				</div>
+				<!-- Full-Cycle Dev -->
+				<div class="about-item">
+					<div class="about-icon">🛠️</div>
+					<h3 data-i18n="about.item3.title"></h3>
+					<p data-i18n="about.item3.desc"></p>
+				</div>
+			</div>
+
+			<!-- Find More -->
+			<div style="text-align: center; margin: 3rem 0;">
+				<a href="#" class="resume-link">
+					<span data-i18n="about.find_more"></span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+				</a>
+			</div>
+
+			<!-- LOGOS -->
+			<div class="skills-bar">
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" alt="unreal engine logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="cplusplus logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="git logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt="gitlab logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitkraken/gitkraken-original-wordmark.svg" alt="GitKraken logo" width="40" height="40" />
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg" alt="android logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="windows logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg" alt="JetBrains logo" width="40" height="40"/>
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rider/rider-original.svg" alt="rider logo" width="40" height="40"/>
+			</div>
 		</div>
 	</section>
+
 </main>
 
 <!-- ## JAVASCRIPT ## -->
