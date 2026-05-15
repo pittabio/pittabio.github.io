@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="style/style_overlay.css">
 	<link rel="stylesheet" href="style/style_mini-about.css">
 	<link rel="stylesheet" href="style/style_mini-projects.css">
+	<link rel="stylesheet" href="style/style_mini-contact.css">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +24,18 @@
 </head>
 
 <body>
-<!-- HEADER -->
+<!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- PAGE -->
+<!-- ## IMAGES OVERLAY ## -->
+<div class="overlay" id="overlay" onclick="closePopup(event)">
+	<div class="popup-img-wrap" id="popupWrap">
+		<button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
+		<img id="popupImg" src="" alt="">
+	</div>
+</div>
+
+<!-- ## PAGE ## -->
 <main class="page-content">
 	<!-- ## HERO SECTION ## -->
 	<section class="hero" id="home">
@@ -206,14 +215,54 @@
 		</div>
 	</section> <!-- END featured projects -->
 
-	<!-- ## IMAGES OVERLAY ## -->
-	<div class="overlay" id="overlay" onclick="closePopup(event)">
-		<div class="popup-img-wrap" id="popupWrap">
-			<button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
-			<img id="popupImg" src="" alt="">
-		</div>
-	</div>
+	<!-- ## CONTACT ## -->
+	<section class="contact-section" id="contact">
+		<div class="contact-inner">
 
+			<!-- TEXT -->
+			<span class="contact-tag" data-i18n="contact.tag"></span>
+			<h2 class="contact-title" data-i18n-html="contact.title"></h2>
+			<p class="contact-subtitle" data-i18n="contact.subtitle"></p>
+			<div class="contact-badge" data-i18n="contact.badge"></div>
+
+			<!-- BUTTONS -->
+			<div class="contact-socials">
+				<!-- e-mail -->
+				<a href="mailto:pittacciofabio@proton.me" class="contact-social-link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+					Email
+				</a>
+
+				<!-- LinkedIn -->
+				<a href="https://linkedin.com/in/fabio-pittaccio" target="_blank" class="contact-social-link">
+					<i class="devicon-linkedin-plain"></i>
+					LinkedIn
+				</a>
+
+				<!-- GitHub -->
+				<a href="https://github.com/pittabio" target="_blank" class="contact-social-link">
+					<i class="devicon-github-original"></i>
+					Github
+				</a>
+
+				<!-- itch.io -->
+				<a href="https://pittabio.itch.io" target="_blank" class="contact-social-link">
+					<img src="media/itchio-mini-logo.png" alt="itch.io logo" height="16" width="16"/>
+					itch.io
+				</a>
+			</div>
+
+			<!-- Divider -->
+			<div class="contact-divider"><span data-i18n="contact.or"></span></div>
+
+			<!-- Full Contacts Button -->
+			<a href="contacts.html" class="contact-cta">
+				<span data-i18n="contact.cta"></span>
+				<!-- svg arrow -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+			</a>
+		</div>
+	</section>
 </main>
 
 <!-- ## JAVASCRIPT ## -->

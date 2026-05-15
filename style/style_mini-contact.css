@@ -1,0 +1,196 @@
+﻿/* ## CONTACT SECTION ## */
+
+.contact-section {
+    padding: 5rem 2rem;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Tag */
+.contact-tag {
+    font-family: var(--font-playfair), serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.25rem;
+}
+
+/* Title */
+.contact-title {
+    font-family: var(--font-playfair), serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.contact-title em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+/* Subtitle */
+.contact-subtitle {
+    font-size: 1rem;
+    color: var(--text);
+    opacity: 0.6;
+    margin-bottom: 3rem;
+}
+
+/* Availability badge */
+.contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 80, 0, 0.1);
+    border: 1px solid rgba(255, 80, 0, 0.25);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+/* Pulsing dot before badge text */
+.contact-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    animation: contact-pulse 2s infinite;
+}
+
+@keyframes contact-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* ## SOCIAL LINKS ## */
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.contact-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--bgbt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.4rem;
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text);
+    transition: background var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.contact-social-link svg {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.contact-social-link:hover {
+    background: rgba(255, 80, 0, 0.12);
+    border-color: rgba(255, 80, 0, 0.4);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.contact-social-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* ## OR DIVIDER ## */
+
+.contact-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.3;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--text);
+}
+
+.contact-divider span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+/* ## CTA BUTTON ## */
+
+.contact-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font-playfair), serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.contact-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+    color: var(--bg);
+}
+
+/* ## RESPONSIVE ## */
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .contact-socials {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-social-link {
+        justify-content: center;
+    }
+}

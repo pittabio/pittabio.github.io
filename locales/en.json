@@ -81,5 +81,14 @@
         "The project demonstrates the ability to handle dynamic events and enemy AI with unique abilities in UE5."
       ]
     }
+  },
+
+  "contact": {
+    "tag": "Available for Work",
+    "title": "Let's build something<br><em>together.</em>",
+    "subtitle": "Freelance • Remote • Open to new opportunities",
+    "badge": "Open Contacts",
+    "or": "or",
+    "cta": "Full contact page"
   }
 }

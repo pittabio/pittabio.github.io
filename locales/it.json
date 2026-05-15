@@ -81,5 +81,14 @@
         "Il progetto dimostra la capacità di gestire eventi dinamici e IA nemiche con abilità uniche in UE5."
       ]
     }
+  },
+
+  "contact": {
+    "tag": "Disponibile per lavoro",
+    "title": "Costruiamo qualcosa<br><em>insieme.</em>",
+    "subtitle": "Freelance • Remoto • Aperto per nuove opportunità",
+    "badge": "Contatti Aperti",
+    "or": "oppure",
+    "cta": "Pagina completa dei contatti"
   }
 }
