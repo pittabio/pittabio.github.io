@@ -90,5 +90,10 @@
     "badge": "Contatti Aperti",
     "or": "oppure",
     "cta": "Pagina completa dei contatti"
+  },
+
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "back_top": "Torna su"
   }
 }
