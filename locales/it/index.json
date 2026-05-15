@@ -1,12 +1,4 @@
 ﻿{
-  "head": {
-    "home": "Home",
-    "projects": "Progetti",
-    "resume": "Su di me",
-    "contacts": "Contatti",
-    "support": "Supporto"
-  },
-
   "hero": {
     "tag": "Sviluppatore Videogiochi · Unreal Engine C++",
     "cta": "Vedi progetti",
@@ -90,10 +82,5 @@
     "badge": "Contatti Aperti",
     "or": "oppure",
     "cta": "Pagina completa dei contatti"
-  },
-
-  "footer": {
-    "rights": "Tutti i diritti riservati.",
-    "back_top": "Torna su"
   }
 }

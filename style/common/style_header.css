@@ -1,0 +1,88 @@
+﻿/* ## HEADER ## */
+
+.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background: var(--bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+    z-index: 1000;
+    will-change: height;
+    transition: height var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.site-header.scrolled {
+    background: var(--bg);
+    height: calc(var(--height) - 20px);
+    box-shadow: var(--shadow);
+}
+
+/* Name */
+.site-name {
+    font-family: var(--font-playfair), serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.site-point  {
+    font-family: var(--font-playfair), serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+/* LANGUAGE */
+
+/* Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    background: var(--bgbt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3px;
+    margin-right: 0.75rem;
+}
+
+/* Button */
+.lang-btn {
+    font-family: var(--font-playfair), serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    border-radius: calc(var(--radius) - 3px);
+    transition: color var(--transition), background var(--transition);
+    line-height: 1;
+}
+
+/* Button Activated */
+.lang-btn.active {
+    color: var(--bg);
+    background: var(--accent);
+}
+
+/* Button not activate and hovered */
+.lang-btn:not(.active):hover {
+    color: var(--bg);
+    background: var(--hovered);
+}

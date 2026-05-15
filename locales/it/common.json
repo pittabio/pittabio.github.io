@@ -1,0 +1,14 @@
+﻿{
+  "head": {
+    "home": "Home",
+    "projects": "Progetti",
+    "resume": "Su di me",
+    "contacts": "Contatti",
+    "support": "Supporto"
+  },
+
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "back_top": "Torna su"
+  }
+}

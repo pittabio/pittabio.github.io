@@ -1,12 +1,4 @@
 ﻿{
-  "head": {
-    "home": "Home",
-    "projects": "Projects",
-    "resume": "About me",
-    "contacts": "Contacts",
-    "support": "Support"
-  },
-
   "hero": {
     "tag": "Game Developer · Unreal Engine C++",
     "cta": "View Projects",
@@ -90,10 +82,5 @@
     "badge": "Open Contacts",
     "or": "or",
     "cta": "Full contact page"
-  },
-
-  "footer": {
-    "rights": "All rights reserved.",
-    "back_top": "Back to top"
   }
 }

@@ -43,33 +43,62 @@ fetch('/header.html')
     })
     .catch(error => console.error('ERROR loading header:', error));
 
+// -- FOOTER -- //
+fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        // Inietta il codice html del footer nel contenitore
+        document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => {
+        console.error("ERROR loading footer:", error);
+    });
+
 // -- LANGUAGE -- //
 async function changeLanguage(lang) {
     try {
-        // 1. Upload the language JSON file
-        const response = await fetch(`../locales/${lang}.json`);
-        const translations = await response.json();
+        // 1. Automatically detect the current page name from the URL
+        let pageName = window.location.pathname.split("/").pop().replace(".html", "");
 
-        // 2a. Find all elements with the data-i18n attribute
+        // Gestione della root del sito o della index
+        if (pageName === "" || pageName === "index") {
+            pageName = "index";
+        }
+
+        // 2. Download both the page file and the common file in parallel
+        const [pageRes, commonRes] = await Promise.all([
+            fetch(`../locales/${lang}/${pageName}.json`).catch(() => null),
+            fetch(`../locales/${lang}/common.json`).catch(() => null)
+        ]);
+
+        // Extract JSON data (if files exist, otherwise use empty object)
+        const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
+        const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
+
+        // Merge translations: Page-specific ones override common
+        const translations = { ...commonTranslations, ...pageTranslations };
+
+        // 3a. Find all elements with the data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n'); // Get the attribute key
-            const text = key.split('.').reduce((obj, i) => obj[i], translations); // Accesses nested keys (e.g. "head.projects")
-            if (text) element.innerText = text; // Translate the text
+            const key = element.getAttribute('data-i18n');
+            const text = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
+            if (text) element.innerText = text;
         });
 
-        // 2b. Find all elements with the data-i18n-html attribute (supports HTML tags)
+        // 3b. Find all elements with data-i18n-html attribute (supports HTML tags)
         document.querySelectorAll('[data-i18n-html]').forEach(element => {
-            const key = element.getAttribute('data-i18n-html'); // Get the attribute key
-            const html = key.split('.').reduce((obj, i) => obj[i], translations);  // Accesses nested keys (e.g. "head.projects")
-            if (html) element.innerHTML = Array.isArray(html) ? html.join(' ') : html;  // Translate the html text
+            const key = element.getAttribute('data-i18n-html');
+            const html = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
+            if (html) element.innerHTML = Array.isArray(html) ? html.join(' ') : html;
         });
 
-        // 3. Save preference in browser
+        // 4. Save the preference in your browser
         localStorage.setItem('preferredLang', lang);
 
-        // 4. Update the active button
+        // 5. Updates the visual state of the language buttons in the header
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(`lang-${lang}`).classList.add('active');
+        const activeBtn = document.getElementById(`lang-${lang}`);
+        if (activeBtn) activeBtn.classList.add('active');
     }
     catch (error) {
         console.error("Error loading language:", error);

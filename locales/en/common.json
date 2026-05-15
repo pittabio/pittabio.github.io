@@ -1,0 +1,14 @@
+﻿{
+  "head": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "About me",
+    "contacts": "Contacts",
+    "support": "Support"
+  },
+
+  "footer": {
+    "rights": "All rights reserved.",
+    "back_top": "Back to top"
+  }
+}
