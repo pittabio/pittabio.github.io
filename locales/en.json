@@ -90,5 +90,10 @@
     "badge": "Open Contacts",
     "or": "or",
     "cta": "Full contact page"
+  },
+
+  "footer": {
+    "rights": "All rights reserved.",
+    "back_top": "Back to top"
   }
 }
