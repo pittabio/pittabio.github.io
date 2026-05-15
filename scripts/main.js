@@ -1,5 +1,5 @@
 ﻿// -- HEADER -- //
-fetch('header.html')
+fetch('/header.html')
     .then(response => response.text())
     .then(data => {
         // Load header
