@@ -1,13 +1,13 @@
 ﻿/* ## PROJECTS SECTION ## */
 
 .projects-section {
-    padding: 6rem 4rem;
+    padding: 2rem 2rem;
     background: var(--bg);
     min-height: 100vh;
 }
 
 .section-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -30,7 +30,7 @@
     background: var(--bg);
     border: 2px solid var(--accent);
     border-radius: var(--radius);
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

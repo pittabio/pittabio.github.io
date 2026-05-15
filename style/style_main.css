@@ -241,7 +241,15 @@ a:hover {
 }
 
 /* Buttons */
-.hero-cta {
+.hero-bt-container {
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-bottom: 2rem;
+}
+
+.hero-bt {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -258,7 +266,7 @@ a:hover {
     transition: opacity var(--transition), transform var(--transition);
 }
 
-.hero-cta:hover {
+.hero-bt:hover {
     opacity: 0.85;
     transform: translateY(-2px);
     color: var(--bg);

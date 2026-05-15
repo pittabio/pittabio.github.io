@@ -43,5 +43,43 @@
       "desc": "Gestione completa del progetto: dal concept iniziale alla pubblicazione"
     },
     "find_more": "Scopri di più"
+  },
+
+  "projects": {
+    "title": "Progetti Principali",
+    "link1": "Scarica",
+    "link2": "Dettagli",
+    "view_all": "Guarda tutti i progetti",
+
+    "ruins": {
+      "name": "Ruins' Rhapsody",
+      "desc": [
+        "Un'avventura dinamica ispirata a pilastri come Tomb Raider.",
+        "Vesti i panni di un'archeologa alla ricerca di una runa mitica, tra enigmi ambientali, esplorazione verticale",
+        "e combattimenti intensi in rovine ancestrali.",
+        "Il progetto mette in risalto la gestione di sistemi di movimento complessi e l'atmosfera cinematografica",
+        "in Unreal Engine."
+      ]
+    },
+
+    "goblin": {
+      "name": "Goblin Jr. Adventure",
+      "desc": [
+        "Un platformer colorato e vivace ambientato in mondi cubici stilizzati.",
+        "Progettato con un focus sull'accessibilità e il divertimento immediato,",
+        "il gioco sfida i giocatori a guidare un piccolo goblin attraverso trappole e segreti.",
+        "Un esempio di game design pulito e ottimizzazione visiva per un'esperienza di gioco fluida e coinvolgente."
+      ]
+    },
+
+    "zombie": {
+      "name": "Zombie Siege Chronicles",
+      "desc": [
+        "Sviluppato per i Rookie Awards 2024, questo Tower Defense in visuale isometrica porta la sopravvivenza",
+        "a un nuovo livello strategico.",
+        "Difendi la tua base da orde incessanti di non-morti utilizzando strutture speciali, barriere e torrette potenziabili.",
+        "Il progetto dimostra la capacità di gestire eventi dinamici e IA nemiche con abilità uniche in UE5."
+      ]
+    }
   }
 }
