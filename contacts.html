@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Fabio Pittaccio - Contacts</title>
 
     <!-- CSS Style -->
-    <link rel="stylesheet" href="/style/style_main.css">
-    <link rel="stylesheet" href="/style/style_mobile.css">
-    <link rel="stylesheet" href="/style/style_overlay.css">
+    <link rel="stylesheet" href="style/style_main.css">
+    <link rel="stylesheet" href="style/style_mobile.css">
+    <link rel="stylesheet" href="style/style_contacts.css">
+    <link rel="stylesheet" href="style/index/style_mini-about.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,26 +20,120 @@
     <!-- CDN DevCon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
-
 <body>
-<!-- HEADER -->
+
+<!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- PAGE -->
-<main class="page-content">
-    <!-- ## HERO SECTION ## -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <div class="hero-content">
-                <h1>WORK IN PROGRESS</h1>
-            </div>
+<!-- ## PAGE ## -->
+<main class="page-content contact-page-section">
+    <section class="contact-section" style="border-top: none; padding: 0;">
+        <div class="contact-inner">
+
+            <!-- HEAD -->
+            <span class="hero-tag" data-i18n="contact_page.tag"></span>
+            <h1 class="contact-title" data-i18n-html="contact_page.title"></h1>
+            <p class="contact-subtitle" data-i18n="contact_page.subtitle"></p>
+
+            <!-- ABOUT -->
+            <div class="about-grid" style="margin-top: 4rem;">
+                <!-- Quick Info -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="contact_page.quick_info_title"></h3>
+                    <ul class="contact-info-list">
+                        <li>📍 <!-- Location -->
+                            <strong data-i18n="contact_page.info.location_label"></strong>
+                            <span class="contact-info" data-i18n="contact_page.info.location"></span>
+                        </li>
+                        <li>🕐 <!-- Time Zone -->
+                            <strong data-i18n="contact_page.info.timezone_label"></strong>
+                            <span class="contact-info" data-i18n="contact_page.info.timezone"></span>
+                        </li>
+                        <li>💭 <!-- Languages -->
+                            <strong data-i18n="contact_page.info.lang_label"></strong>
+                            <span class="contact-info" data-i18n="contact_page.info.lang"></span>
+                        </li>
+                        <li>💼 <!-- Status -->
+                            <strong data-i18n="contact_page.info.status_label"></strong>
+                            <span class="accent-text" data-i18n="contact_page.info.status_value"></span>
+                        </li>
+                    </ul>
+                </div> <!-- END quick info -->
+
+                <!-- Social -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="contact_page.networks_title"></h3>
+                    <div class="contact-social-grid">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/fabio-pittaccio" target="_blank" class="resume-link">
+                            <i class="devicon-linkedin-plain"></i>
+                            <strong>LinkedIn</strong>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/pittabio" target="_blank" class="resume-link">
+                            <i class="devicon-github-original"></i>
+                            <strong>GitHub</strong>
+                        </a>
+                        <!-- itch.io -->
+                        <a href="https://pittabio.itch.io" target="_blank" class="resume-link">
+                            <img src="media/logo-mini/itchio.png" alt="itch.io mini logo" class="social-icon-img"/>
+                            <strong>itch.io</strong>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://youtube.com/channel/UCQ7xNTQLaIW01wgbONjlYug" target="_blank" class="resume-link">
+                            ▶
+                            <strong>YouTube</strong>
+                        </a>
+                        <!-- Twitch -->
+                        <a href="https://twitch.tv/pittabio" target="_blank" class="resume-link">
+                            <img src="media/logo-mini/twitch.png" alt="twitch mini logo" class="social-icon-img"/>
+                            <strong>Twitch</strong>
+                        </a>
+                    </div>
+                </div> <!-- END social -->
+            </div> <!-- END about -->
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-container">
+                <h1 class="contact-title" data-i18n-html="contact_page.form.title"></h1>
+                <p class="contact-subtitle" data-i18n="contact_page.form.subtitle"></p>
+                <form class="contact-form-element">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="form-name" data-i18n="contact_page.form.name"></label>
+                        <input type="text" id="form-name" name="name" required placeholder="e.g. John Doe">
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="form-email" data-i18n="contact_page.form.email"></label>
+                        <input type="email" id="form-email" name="email" required placeholder="e.g. john@example.com">
+                    </div>
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label for="form-subject" data-i18n="contact_page.form.subject"></label>
+                        <input type="text" id="form-subject" name="subject" required placeholder="e.g. Job Opportunity / Collaboration">
+                    </div>
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="form-message" data-i18n="contact_page.form.message"></label>
+                        <textarea id="form-message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit" class="contact-submit-btn">
+                        <span data-i18n="contact_page.form.submit"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </div> <!-- END contact form -->
         </div>
     </section>
 </main>
 
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
 <!-- ## JAVASCRIPT ## -->
-<script src="/scripts/main.js"></script>
-<script src="/scripts/overlay.js"></script>
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
