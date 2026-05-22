@@ -8,19 +8,33 @@
     "fun_fact": "Curiosità: Il nickname @pittabio nasce dalla fusione del mio cognome (Pittaccio) e del mio nome (Fabio). Mi trovi così quasi ovunque.",
     "info": {
       "location_label": "Posizione attuale:",
+      "location": "Roma, Italia",
+
       "timezone_label": "Fuso Orario:",
-      "lang_label": "Lingue parlate:",
+      "timezone": "CET (Europa/Roma)",
+
+      "lang_label": "Lingue Parlate:",
+      "lang": "Italiano, Inglese",
+
       "status_label": "Stato:",
       "status_value": "Disponibile per nuove opportunità"
     },
     "form": {
       "title": "Modulo di contatto",
-      "subtitle": "Per favore, non usatelo per lo spam.",
+      "subtitle": "Per favore, non usatelo per lo spam",
+
       "name": "Nome Completo",
-      "email": "Indirizzo Email",
+      "email": "Indirizzo Email - Per essere ricontattati",
       "subject": "Oggetto del messaggio",
-      "message": "Il tuo Messaggio",
-      "submit": "Invia Messaggio"
+      "message": "Messaggio",
+      "submit": "Invia Messaggio",
+
+      "placeholder": {
+        "name": "es. Mario Rossi",
+        "email": "es. mario_rossi@email.it",
+        "subject": "es. Opportunità di lavoro",
+        "message": "Il messaggio qui..."
+      }
     }
   }
 }

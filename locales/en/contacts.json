@@ -22,11 +22,19 @@
     "form": {
       "title": "Contact Form",
       "subtitle": "Please, don't use for spam",
+
       "name": "Full Name",
-      "email": "Email Address",
+      "email": "Email Address - To be recontacted ",
       "subject": "Subject",
-      "message": "Your Message",
-      "submit": "Send Message"
+      "message": "Message",
+      "submit": "Send Message",
+
+      "placeholder": {
+        "name": "e.g. John Doe",
+        "email": "e.g. john_doe@example.com",
+        "subject": "e.g. Job Opportunity",
+        "message": "Your message here..."
+      }
     }
   }
 }

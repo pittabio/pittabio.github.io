@@ -92,6 +92,13 @@ async function changeLanguage(lang) {
             if (html) element.innerHTML = Array.isArray(html) ? html.join(' ') : html;
         });
 
+        // 3c. Find all elements with the data-i18n-placeholder attribute
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            const placeholderText = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
+            if (placeholderText) element.placeholder = placeholderText;
+        });
+
         // 4. Save the preference in your browser
         localStorage.setItem('preferredLang', lang);
 
