@@ -21,8 +21,8 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                alert("Message sent successfully!");
-                contactForm.reset(); // Empty the form
+                contactForm.reset();
+                openSuccessModal();
             } else {
                 alert("Error sending message.");
             }
