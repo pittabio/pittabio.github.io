@@ -1,9 +1,27 @@
 ﻿// -- HEADER -- //
-fetch('/header.html')
+fetch('/common/header.html')
     .then(response => response.text())
     .then(data => {
         // Load header
         document.getElementById('header').innerHTML = data;
+
+        // href link correction
+        // Calculate the base path of the site (e.g. "/pittabio.github.io/" on localhost, "/" on GitHub Pages root)
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        const isGitHubPages = window.location.hostname.includes('github.io');
+
+        // On GitHub Pages the root is "/", on localhost/WebStorm it is "/project-folder-name/"
+        const basePath = isGitHubPages
+            ? '/'
+            : (pathSegments.length > 0 ? '/' + pathSegments[0] + '/' : '/');
+
+        // Replace "../" with the correct basePath in all nav-links
+        document.querySelectorAll('.site-nav .nav-link').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('../')) {
+                link.setAttribute('href', href.replace('../', basePath));
+            }
+        });
 
         // Active the specific links for this page
         document.getElementById('nav-home').classList.add('active');
@@ -44,7 +62,7 @@ fetch('/header.html')
     .catch(error => console.error('ERROR loading header:', error));
 
 // -- FOOTER -- //
-fetch('/footer.html')
+fetch('/common/footer.html')
     .then(response => response.text())
     .then(data => {
         // Inietta il codice html del footer nel contenitore
@@ -67,8 +85,8 @@ async function changeLanguage(lang) {
 
         // 2. Download both the page file and the common file in parallel
         const [pageRes, commonRes] = await Promise.all([
-            fetch(`../locales/${lang}/${pageName}.json`).catch(() => null),
-            fetch(`../locales/${lang}/common.json`).catch(() => null)
+            fetch(`/locales/${lang}/${pageName}.json`).catch(() => null),
+            fetch(`/locales/${lang}/common.json`).catch(() => null)
         ]);
 
         // Extract JSON data (if files exist, otherwise use empty object)
@@ -90,6 +108,13 @@ async function changeLanguage(lang) {
             const key = element.getAttribute('data-i18n-html');
             const html = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
             if (html) element.innerHTML = Array.isArray(html) ? html.join(' ') : html;
+        });
+
+        // 3c. Find all elements with the data-i18n-placeholder attribute
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            const placeholderText = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
+            if (placeholderText) element.placeholder = placeholderText;
         });
 
         // 4. Save the preference in your browser

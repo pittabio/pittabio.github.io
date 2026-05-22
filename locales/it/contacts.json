@@ -1,0 +1,40 @@
+﻿{
+  "contact_page": {
+    "tag": "Mettiti in contatto",
+    "title": "Parliamo del tuo prossimo <em>progetto.</em>",
+    "subtitle": "Che tu voglia discutere di opportunità lavorative, collaborazioni su Unreal Engine o semplicemente farmi una domanda, sono a tua disposizione.",
+    "quick_info_title": "Informazioni Rapide",
+    "networks_title": "Profili & Community",
+    "fun_fact": "Curiosità: Il nickname @pittabio nasce dalla fusione del mio cognome (Pittaccio) e del mio nome (Fabio). Mi trovi così quasi ovunque.",
+    "info": {
+      "location_label": "Posizione attuale:",
+      "location": "Roma, Italia",
+
+      "timezone_label": "Fuso Orario:",
+      "timezone": "CET (Europa/Roma)",
+
+      "lang_label": "Lingue Parlate:",
+      "lang": "Italiano, Inglese",
+
+      "status_label": "Stato:",
+      "status_value": "Disponibile per nuove opportunità"
+    },
+    "form": {
+      "title": "Modulo di contatto",
+      "subtitle": "Per favore, non usatelo per lo spam",
+
+      "name": "Nome Completo",
+      "email": "Indirizzo Email - Per essere ricontattati",
+      "subject": "Oggetto del messaggio",
+      "message": "Messaggio",
+      "submit": "Invia Messaggio",
+
+      "placeholder": {
+        "name": "es. Mario Rossi",
+        "email": "es. mario_rossi@email.it",
+        "subject": "es. Opportunità di lavoro",
+        "message": "Il messaggio qui..."
+      }
+    }
+  }
+}
