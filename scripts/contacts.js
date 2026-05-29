@@ -8,21 +8,34 @@ if (contactForm) {
         e.preventDefault(); // Impedisce il ricaricamento della pagina
 
         const submitBtn = contactForm.querySelector('.contact-submit-btn');
+        const submitSpan = submitBtn?.querySelector('span');
+        const originalText = submitSpan?.textContent ?? '';
 
-        // Anti-spam: blocca se ha già inviato di recente
+        // Anti-spam: block if it has already sent recently
         const lastSent = localStorage.getItem('contact_last_sent');
         if (lastSent && Date.now() - parseInt(lastSent) < COOLDOWN_MS) {
-            showModal(false, true); // mostra messaggio "attendi"
+            showModal(false, true); // show "wait" message
             return;
         }
 
-        if (submitBtn) submitBtn.disabled = true;
+        // Disable button and show "sending" message
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').textContent = 'Sending...';
+        }
+
+        if (submitSpan) submitSpan.textContent = originalText;
 
         const myEmail = "pittacciofabio@proton.me";
         const endpoint = `https://formsubmit.co/ajax/${myEmail}`;
+
         const formData = new FormData(contactForm);
-        formData.append('_captcha', 'false');
-        formData.append('_subject', 'Nuovo messaggio dal sito');
+        //formData.append('_captcha', 'false'); <!-- captcha -->
+
+        // Dynamic subject: takes the value from the form's subject field
+        const subjectField = contactForm.querySelector('#form-subject');
+        const subjectValue = subjectField ? subjectField.value.trim() : '';
+        formData.append('_subject', subjectValue ? `[Sito] ${subjectValue}` : 'Nuovo messaggio');
 
         try {
             const response = await fetch(endpoint, {

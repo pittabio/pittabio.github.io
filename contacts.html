@@ -106,7 +106,7 @@
                     <!-- Email -->
                     <div class="form-group">
                         <label for="form-email" data-i18n="contact_page.form.email"></label>
-                        <input type="email" id="form-email" name="_replyto" required data-i18n-placeholder="contact_page.form.placeholder.email">
+                        <input type="email" id="form-email" name="email" required data-i18n-placeholder="contact_page.form.placeholder.email">
                     </div>
                     <!-- Subject -->
                     <div class="form-group">
@@ -118,6 +118,10 @@
                         <label for="form-message" data-i18n="contact_page.form.message"></label>
                         <textarea id="form-message" name="message" rows="6" required data-i18n-placeholder="contact_page.form.placeholder.message"></textarea>
                     </div>
+
+                    <!-- Honeypot anti-spam -->
+                    <label> <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"> </label>
+
                     <!-- Submit button -->
                     <button type="submit" class="contact-submit-btn">
                         <span data-i18n="contact_page.form.submit"></span>
@@ -134,6 +138,7 @@
 
 <!-- ## JAVASCRIPT ## -->
 <script src="scripts/main.js"></script>
+<script src="scripts/contacts.js"></script>
 
 </body>
 </html>
