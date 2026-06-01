@@ -19,6 +19,9 @@
 
     <!-- CDN DevCon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- hCaptcha (Web3Forms zero-config) -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 
@@ -27,7 +30,7 @@
 
 <!-- ## PAGE ## -->
 <main class="page-content contact-page-section">
-    <section class="contact-section" style="border-top: none; padding: 0;">
+    <section class="contact-section">
         <div class="contact-inner">
 
             <!-- HEAD -->
@@ -36,7 +39,7 @@
             <p class="contact-subtitle" data-i18n="contact_page.subtitle"></p>
 
             <!-- ABOUT -->
-            <div class="about-grid" style="margin-top: 4rem;">
+            <div class="about-grid">
                 <!-- Quick Info -->
                 <div class="project-card">
                     <h3 class="project-name" data-i18n="contact_page.quick_info_title"></h3>
@@ -97,35 +100,52 @@
             <div class="contact-form-container">
                 <h1 class="contact-title" data-i18n-html="contact_page.form.title"></h1>
                 <p class="contact-subtitle" data-i18n="contact_page.form.subtitle"></p>
-                <form class="contact-form-element">
+                <form class="contact-form-element" novalidate>
+
+                    <!-- Web3Forms botcheck honeypot (hidden, non toccare) -->
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
                     <!-- Name -->
                     <div class="form-group">
                         <label for="form-name" data-i18n="contact_page.form.name"></label>
-                        <input type="text" id="form-name" name="name" required data-i18n-placeholder="contact_page.form.placeholder.name">
+                        <input type="text" id="form-name" name="name" required
+                               data-i18n-placeholder="contact_page.form.placeholder.name">
                     </div>
                     <!-- Email -->
                     <div class="form-group">
                         <label for="form-email" data-i18n="contact_page.form.email"></label>
-                        <input type="email" id="form-email" name="email" required data-i18n-placeholder="contact_page.form.placeholder.email">
+                        <input type="email" id="form-email" name="email" required
+                               data-i18n-placeholder="contact_page.form.placeholder.email">
                     </div>
                     <!-- Subject -->
                     <div class="form-group">
                         <label for="form-subject" data-i18n="contact_page.form.subject"></label>
-                        <input type="text" id="form-subject" name="subject" required data-i18n-placeholder="contact_page.form.placeholder.subject">
+                        <input type="text" id="form-subject" name="subject" required
+                               data-i18n-placeholder="contact_page.form.placeholder.subject">
                     </div>
                     <!-- Message -->
                     <div class="form-group">
                         <label for="form-message" data-i18n="contact_page.form.message"></label>
-                        <textarea id="form-message" name="message" rows="6" required data-i18n-placeholder="contact_page.form.placeholder.message"></textarea>
+                        <textarea id="form-message" name="message" rows="6" required
+                                  data-i18n-placeholder="contact_page.form.placeholder.message"></textarea>
                     </div>
 
-                    <!-- Honeypot anti-spam -->
-                    <label> <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"> </label>
+                    <!-- hCaptcha widget (Web3Forms) -->
+                    <div class="form-group">
+                        <div class="h-captcha"
+                             data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be8"
+                             data-theme="dark">
+                        </div>
+                    </div>
 
                     <!-- Submit button -->
                     <button type="submit" class="contact-submit-btn">
                         <span data-i18n="contact_page.form.submit"></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="#000000" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h13M12 5l7 7-7 7"/>
+                        </svg>
                     </button>
                 </form>
             </div> <!-- END contact form -->

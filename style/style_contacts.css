@@ -5,6 +5,11 @@
     min-height: 85vh;
 }
 
+.contact-section {
+    border-top: none;
+    padding: 0;
+}
+
 /* Aligns the main header texts to the center */
 .contact-inner {
     max-width: 1400px;
@@ -20,6 +25,10 @@
 }
 
 /* INFO CARDS & UTILITIES (Overrides index grid specs) */
+
+.about-grid {
+    margin-top: 4rem;
+}
 
 /* Resets fixed square aspect-ratio from index and fixes inner spacing */
 .about-grid .project-card {
