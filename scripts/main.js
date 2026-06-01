@@ -1,4 +1,14 @@
-﻿// -- HEADER -- //
+﻿// PAGES
+const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+const pageNavMap = {
+    'index':    'nav-home',
+    'contacts': 'nav-contacts',
+    'projects': 'nav-projects',
+    'resume':   'nav-resume',
+    'support':  'nav-support'
+};
+
+// -- HEADER -- //
 fetch('/common/header.html')
     .then(response => response.text())
     .then(data => {
@@ -23,8 +33,10 @@ fetch('/common/header.html')
             }
         });
 
-        // Active the specific links for this page
-        document.getElementById('nav-home').classList.add('active');
+        // Active the specific links for the page
+        const activeNavId = pageNavMap[pageName];
+        const activeNavEl = document.getElementById(activeNavId);
+        if (activeNavEl) { activeNavEl.classList.add('active'); }
 
         // When the user click on the language button EN
         document.getElementById('lang-en').addEventListener('click', (e) => {

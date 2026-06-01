@@ -20,14 +20,6 @@ document.addEventListener('keydown', e => {
 
 // -- CONTACT SUCCESS MODAL -- //
 
-// Load the modal HTML snippet into its container
-fetch('/contacts_success.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('contact-success-modal-container').innerHTML = data;
-    })
-    .catch(error => console.error('ERROR loading contact success modal:', error));
-
 // Open the success modal
 function openSuccessModal() {
     const modal = document.getElementById('contact-success-modal');
