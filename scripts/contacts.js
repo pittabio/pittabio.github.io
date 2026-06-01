@@ -28,23 +28,41 @@ document.addEventListener('DOMContentLoaded', () => {
 async function handleFormSubmit(e) {
     e.preventDefault();
 
-    const form      = e.currentTarget;
-    const submitBtn = form.querySelector('.contact-submit-btn');
+    const form       = e.currentTarget;
+    const submitBtn  = form.querySelector('.contact-submit-btn');
     const submitSpan = submitBtn?.querySelector('span');
 
-    // Validate hCaptcha (skipped automatically in local/dev environments)
-    const hcaptchaResponse = IS_LOCAL ? 'local-bypass' : hcaptcha.getResponse();
-    if (!IS_LOCAL && !hcaptchaResponse) {
-        showModal('captcha');
-        return;
+    // Manual validation of required fields
+    const requiredFields = form.querySelectorAll('[required]');
+    for (const field of requiredFields) {
+        if (!field.value.trim()) {
+            field.focus();
+            return; // esce senza bloccare nulla
+        }
     }
 
-    // Lock button permanently (no reload = no resend)
+    // Check hCaptcha securely
+    let hcaptchaResponse = 'local-bypass';
+    if (!IS_LOCAL) {
+        if (typeof hcaptcha === 'undefined') {
+            showModal('error'); // hCaptcha non ancora caricato
+            return;
+        }
+        hcaptchaResponse = hcaptcha.getResponse();
+        if (!hcaptchaResponse) {
+            showModal('captcha');
+            return;
+        }
+    }
+
+    // Lock button
     if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.setAttribute('aria-busy', 'true');
         if (submitSpan) submitSpan.textContent = 'Sending…';
     }
+
+    // ... resto invariato
 
     // Collect form data
     const name    = form.querySelector('#form-name')?.value.trim()    ?? '';
@@ -160,6 +178,9 @@ function showModal(type) {
     `;
 
     document.body.appendChild(modal);
+    window.addEventListener('pagehide', () => {
+        document.body.style.overflow = '';
+    });
     document.body.style.overflow = 'hidden';
 
     // Entrance animation
