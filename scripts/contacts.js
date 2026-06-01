@@ -1,117 +1,153 @@
-// -- CONTACT FORM SUBMIT -- //
+// Web3Forms Key
+const WEB3FORMS_ACCESS_KEY = "a307525d-a65d-45ee-9b44-ce6fa6279698";
 
-const contactForm = document.querySelector('.contact-form-element');
-const COOLDOWN_MS = 60_000; // 1 minuto anti-spam
+// Dev/local detection — hCaptcha is skipped on these environments.
+// Add any test domain you use to this list.
+const LOCAL_HOSTS = ['localhost', '127.0.0.1', 'ngrok-free.dev', 'ngrok.io'];
+const IS_LOCAL = LOCAL_HOSTS.some(h =>
+    location.hostname === h || location.hostname.endsWith('.' + h)
+);
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Impedisce il ricaricamento della pagina
+// -- INIT -- //
 
-        const submitBtn = contactForm.querySelector('.contact-submit-btn');
-        const submitSpan = submitBtn?.querySelector('span');
-        const originalText = submitSpan?.textContent ?? '';
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form-element');
+    if (!contactForm) return;
 
-        // Anti-spam: block if it has already sent recently
-        const lastSent = localStorage.getItem('contact_last_sent');
-        if (lastSent && Date.now() - parseInt(lastSent) < COOLDOWN_MS) {
-            showModal(false, true); // show "wait" message
-            return;
+    // Hide hCaptcha widget in local/dev environments
+    if (IS_LOCAL) {
+        const captchaWidget = contactForm.querySelector('.h-captcha');
+        if (captchaWidget) captchaWidget.style.display = 'none';
+    }
+
+    contactForm.addEventListener('submit', handleFormSubmit);
+});
+
+// -- SUBMIT HANDLER -- //
+
+async function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const form      = e.currentTarget;
+    const submitBtn = form.querySelector('.contact-submit-btn');
+    const submitSpan = submitBtn?.querySelector('span');
+
+    // Validate hCaptcha (skipped automatically in local/dev environments)
+    const hcaptchaResponse = IS_LOCAL ? 'local-bypass' : hcaptcha.getResponse();
+    if (!IS_LOCAL && !hcaptchaResponse) {
+        showModal('captcha');
+        return;
+    }
+
+    // Lock button permanently (no reload = no resend)
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy', 'true');
+        if (submitSpan) submitSpan.textContent = 'Sending…';
+    }
+
+    // Collect form data
+    const name    = form.querySelector('#form-name')?.value.trim()    ?? '';
+    const email   = form.querySelector('#form-email')?.value.trim()   ?? '';
+    const subject = form.querySelector('#form-subject')?.value.trim() ?? '';
+    const message = form.querySelector('#form-message')?.value.trim() ?? '';
+
+    const payload = {
+        access_key:       WEB3FORMS_ACCESS_KEY,
+        name,
+        email,
+        subject:          subject ? `[Site] ${subject}` : 'New message from portfolio',
+        message,
+        replyto:          email,   // Web3Forms reply-to: direct reply to the sender
+        "h-captcha-response": hcaptchaResponse,
+        botcheck:         '',      // honeypot Web3Forms standard
+    };
+
+    try {
+        const res  = await fetch('https://api.web3forms.com/submit', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body:    JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+            form.reset();
+            hcaptcha.reset();
+            showModal('success');
+        } else {
+            // Re-enable button only on failure so the user can retry
+            enableButton(submitBtn, submitSpan);
+            hcaptcha.reset();
+            showModal('error');
         }
 
-        // Disable button and show "sending" message
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.querySelector('span').textContent = 'Sending...';
-        }
+    } catch (err) {
+        console.error('[contacts.js] Fetch error:', err);
+        enableButton(submitBtn, submitSpan);
+        hcaptcha.reset();
+        showModal('error');
+    }
+}
 
-        if (submitSpan) submitSpan.textContent = originalText;
-
-        const myEmail = "pittacciofabio@proton.me";
-        const endpoint = `https://formsubmit.co/ajax/${myEmail}`;
-
-        const formData = new FormData(contactForm);
-        //formData.append('_captcha', 'false'); <!-- captcha -->
-
-        // Dynamic subject: takes the value from the form's subject field
-        const subjectField = contactForm.querySelector('#form-subject');
-        const subjectValue = subjectField ? subjectField.value.trim() : '';
-        formData.append('_subject', subjectValue ? `[Sito] ${subjectValue}` : 'Nuovo messaggio');
-
-        try {
-            const response = await fetch(endpoint, {
-                method: "POST",
-                headers: { 'Accept': 'application/json' },
-                body: formData
-            });
-
-            let success = false;
-            try {
-                const result = await response.json();
-                success = response.ok && (result.success === "true" || result.success === true);
-            } catch {
-                // FormSubmit a volte non risponde con JSON valido ma l'invio è ok
-                success = response.ok;
-            }
-
-            if (success) {
-                contactForm.reset();
-                localStorage.setItem('contact_last_sent', Date.now().toString());
-                showModal(true, false);
-                // Blocca il bottone per il cooldown
-                setTimeout(() => {
-                    if (submitBtn) submitBtn.disabled = false;
-                }, COOLDOWN_MS);
-            } else {
-                if (submitBtn) submitBtn.disabled = false;
-                showModal(false, false);
-            }
-
-        } catch (error) {
-            console.error("Form submit error:", error);
-            if (submitBtn) submitBtn.disabled = false;
-            showModal(false, false);
-        }
-    });
+function enableButton(btn, span) {
+    if (!btn) return;
+    btn.disabled = false;
+    btn.removeAttribute('aria-busy');
+    if (span) span.textContent = 'Send Message';
 }
 
 // -- MODAL -- //
-function showModal(success, cooldown) {
-    // Rimuovi modal precedente se esiste
+
+// Config variables
+const MODAL_CONFIG = {
+    success: {
+        icon:     '<polyline points="20 6 9 17 4 12"/>',
+        title:    'Message sent!',
+        subtitle: "Thank you for reaching out. I'll get back to you as soon as possible.",
+        accent:   true,
+    },
+    error: {
+        icon:     '<line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>',
+        title:    'Something went wrong',
+        subtitle: 'There was an error sending your message. Please try again.',
+        accent:   false,
+    },
+    captcha: {
+        icon:     '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+        title:    'Verify you\'re human',
+        subtitle: 'Please complete the CAPTCHA check before sending your message.',
+        accent:   false,
+    },
+};
+
+// Function to show modal
+function showModal(type) {
+    // Remove any existing modal
     document.getElementById('contact-success-modal')?.remove();
 
-    const title = success
-        ? 'Message sent!'
-        : cooldown
-            ? 'Please wait'
-            : 'Something went wrong';
-
-    const subtitle = success
-        ? "Thank you for reaching out. I'll get back to you as soon as possible."
-        : cooldown
-            ? 'You already sent a message recently. Please wait a minute before trying again.'
-            : 'There was an error sending your message. Please try again later.';
-
-    const iconPath = success
-        ? '<polyline points="20 6 9 17 4 12"/>'
-        : '<line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>';
-
+    const cfg   = MODAL_CONFIG[type] ?? MODAL_CONFIG.error;
     const modal = document.createElement('div');
-    modal.id = 'contact-success-modal';
+
+    modal.id        = 'contact-success-modal';
     modal.className = 'overlay';
-    modal.setAttribute('role', 'dialog');
-    modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-labelledby', 'modal-title');
+    modal.setAttribute('role',           'dialog');
+    modal.setAttribute('aria-modal',     'true');
+    modal.setAttribute('aria-labelledby','modal-title');
+
+    // Modal HTML script
     modal.innerHTML = `
         <div class="project-card" style="max-width:460px;width:100%;margin:1.5rem;text-align:center;padding:3rem 2.5rem;">
-            <div class="contact-icon" style="${success ? '' : 'background: var(--border);'}">
+            <div class="contact-icon" style="${cfg.accent ? '' : 'background:var(--border);'}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round">
-                    ${iconPath}
+                    ${cfg.icon}
                 </svg>
             </div>
-            <h2 id="modal-title" class="project-name">${title}</h2>
-            <p class="contact-text">${subtitle}</p>
+            <h2 id="modal-title" class="project-name">${cfg.title}</h2>
+            <p class="contact-text">${cfg.subtitle}</p>
             <button class="contact-submit-btn" id="modal-close-btn" type="button">
                 <span>Close</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -126,7 +162,7 @@ function showModal(success, cooldown) {
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
 
-    // Animazione entrata
+    // Entrance animation
     requestAnimationFrame(() => modal.classList.add('active'));
 
     const close = () => {
@@ -135,7 +171,12 @@ function showModal(success, cooldown) {
         setTimeout(() => modal.remove(), 350);
     };
 
-    document.getElementById('modal-close-btn').addEventListener('click', close, { once: true });
-    modal.addEventListener('click', (e) => { if (e.target === modal) close(); }, { once: true });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); }, { once: true });
+    document.getElementById('modal-close-btn')
+        .addEventListener('click', close, { once: true });
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) close();
+    }, { once: true });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    }, { once: true });
 }
