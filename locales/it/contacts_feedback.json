@@ -1,0 +1,11 @@
+{
+  "feedback": {
+    "success_title": "✅ Messaggio inviato con successo!",
+    "success_body": "Grazie per avermi contattato. Ti risponderò il prima possibile.",
+    "error_title": "❌ Errore durante l'invio del messaggio.",
+    "error_detail_prefix": "Dettaglio: ",
+    "error_body": "Riprova tra qualche istante o contattami direttamente via email.",
+    "network_error": "Errore di rete. Controlla la connessione.",
+    "sending": "Invio in corso…"
+  }
+}

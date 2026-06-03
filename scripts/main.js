@@ -141,6 +141,12 @@ async function changeLanguage(lang) {
     catch (error) {
         console.error("Error loading language:", error);
     }
+
+    // Fetch for contacts feedback
+    let fetchContactFeedbackStrings;
+    if (typeof fetchContactFeedbackStrings === "function") {
+        fetchContactFeedbackStrings();
+    }
 }
 
 // -- INDICATOR -- //
