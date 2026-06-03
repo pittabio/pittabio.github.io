@@ -55,8 +55,7 @@
      * Web3Forms uses the widget with the "h-captcha" class.
      */
     function resetCaptcha() {
-        let hcaptcha;
-        if (typeof hcaptcha !== "undefined") {
+        if (typeof hcaptcha !== "undefined" && hcaptcha !== null) {
             try { hcaptcha.reset(); } catch (_) {}
         }
     }
@@ -114,6 +113,11 @@
             try {
                 const formData = new FormData(form);
                 formData.set("access_key", WEB3FORMS_ACCESS_KEY);
+
+                // Retrieve the hCaptcha token and insert it into the form data
+                if (typeof hcaptcha !== "undefined") {
+                    formData.set("h-captcha-response", hcaptcha.getResponse());
+                }
 
                 const response = await fetch(WEB3FORMS_ENDPOINT, {
                     method:  "POST",
