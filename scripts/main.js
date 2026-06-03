@@ -77,7 +77,7 @@ fetch('/common/header.html')
 fetch('/common/footer.html')
     .then(response => response.text())
     .then(data => {
-        // Inietta il codice html del footer nel contenitore
+        // Inject the footer html code into the container
         document.getElementById('footer').innerHTML = data;
     })
     .catch(error => {
@@ -90,7 +90,7 @@ async function changeLanguage(lang) {
         // 1. Automatically detect the current page name from the URL
         let pageName = window.location.pathname.split("/").pop().replace(".html", "");
 
-        // Gestione della root del sito o della index
+        // Managing the site root or index
         if (pageName === "" || pageName === "index") {
             pageName = "index";
         }
@@ -131,6 +131,7 @@ async function changeLanguage(lang) {
 
         // 4. Save the preference in your browser
         localStorage.setItem('preferredLang', lang);
+        document.documentElement.lang = lang; // Change the html document language
 
         // 5. Updates the visual state of the language buttons in the header
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
