@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="devicon" level="application" />
     <orderEntry type="library" name="api" level="application" />
+    <orderEntry type="library" name="script" level="application" />
   </component>
 </module>

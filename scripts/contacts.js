@@ -1,182 +1,150 @@
-// Web3Forms Key
-const WEB3FORMS_ACCESS_KEY = "a307525d-a65d-45ee-9b44-ce6fa6279698";
+/**
+ * contacts.js
+ * Contact form management via Web3Forms + hCaptcha
+ */
 
-// Dev/local detection — hCaptcha is skipped on these environments.
-// Add any test domain you use to this list.
-const LOCAL_HOSTS = ['localhost', '127.0.0.1', 'ngrok-free.dev', 'ngrok.io'];
-const IS_LOCAL = LOCAL_HOSTS.some(h =>
-    location.hostname === h || location.hostname.endsWith('.' + h)
-);
+(function () {
+    "use strict";
 
-// -- INIT -- //
+    /* ── CONFIGURATION ── */
 
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('.contact-form-element');
-    if (!contactForm) return;
+    const WEB3FORMS_ACCESS_KEY = "a307525d-a65d-45ee-9b44-ce6fa6279698";
+    const WEB3FORMS_ENDPOINT   = "https://api.web3forms.com/submit";
 
-    // Hide hCaptcha widget in local/dev environments
-    if (IS_LOCAL) {
-        const captchaWidget = contactForm.querySelector('.h-captcha');
-        if (captchaWidget) captchaWidget.style.display = 'none';
-    }
+    /* ── I18N ── */
 
-    contactForm.addEventListener('submit', handleFormSubmit);
-});
-
-// -- SUBMIT HANDLER -- //
-
-async function handleFormSubmit(e) {
-    e.preventDefault();
-
-    const form      = e.currentTarget;
-    const submitBtn = form.querySelector('.contact-submit-btn');
-    const submitSpan = submitBtn?.querySelector('span');
-
-    // Validate hCaptcha (skipped automatically in local/dev environments)
-    const hcaptchaResponse = IS_LOCAL ? 'local-bypass' : hcaptcha.getResponse();
-    if (!IS_LOCAL && !hcaptchaResponse) {
-        showModal('captcha');
-        return;
-    }
-
-    // Lock button permanently (no reload = no resend)
-    if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.setAttribute('aria-busy', 'true');
-        if (submitSpan) submitSpan.textContent = 'Sending…';
-    }
-
-    // Collect form data
-    const name    = form.querySelector('#form-name')?.value.trim()    ?? '';
-    const email   = form.querySelector('#form-email')?.value.trim()   ?? '';
-    const subject = form.querySelector('#form-subject')?.value.trim() ?? '';
-    const message = form.querySelector('#form-message')?.value.trim() ?? '';
-
-    const payload = {
-        access_key:       WEB3FORMS_ACCESS_KEY,
-        name,
-        email,
-        subject:          subject ? `[Site] ${subject}` : 'New message from portfolio',
-        message,
-        replyto:          email,   // Web3Forms reply-to: direct reply to the sender
-        "h-captcha-response": hcaptchaResponse,
-        botcheck:         '',      // honeypot Web3Forms standard
+    // Fallback strings (English) used if the JSON fetch fails
+    const FALLBACK_STRINGS = {
+        success_title:      "✅ Message sent successfully!",
+        success_body:       "Thank you for reaching out. I'll get back to you as soon as possible.",
+        error_title:        "❌ Error sending the message.",
+        error_detail_prefix:"Detail: ",
+        error_body:         "Please try again in a moment or contact me directly via email.",
+        network_error:      "Network error. Please check your connection.",
+        sending:            "Sending…"
     };
 
-    try {
-        const res  = await fetch('https://api.web3forms.com/submit', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body:    JSON.stringify(payload),
-        });
+    // Will hold the loaded strings once fetchFeedbackStrings() resolves
+    let t = { ...FALLBACK_STRINGS };
 
-        const data = await res.json();
+    /**
+     * Loads `/locales/{lang}/contacts_feedback.json` and stores the
+     * feedback strings in `t`. Falls back to FALLBACK_STRINGS on any error.
+     */
+    async function fetchFeedbackStrings() {
+        const lang = localStorage.getItem('preferredLang') || 'en';
+        try {
+            const res = await fetch(`/locales/${lang}/contacts_feedback.json`);
+            if (res.ok) {
+                const json = await res.json();
+                t = { ...FALLBACK_STRINGS, ...json.feedback };
+            } else {
+                console.warn(`[contacts.js] Could not load feedback strings (HTTP ${res.status}), using fallback.`);
+                t = { ...FALLBACK_STRINGS };
+            }
+        } catch (e) {
+            console.warn("[contacts.js] Could not load feedback strings, using fallback.", e);
+            t = { ...FALLBACK_STRINGS };
+        }
+    }
 
-        if (res.ok && data.success) {
-            form.reset();
-            hcaptcha.reset();
-            showModal('success');
+    /* ── HELPERS ── */
+
+    /**
+     * Reset the hCaptcha widget (if present on the page).
+     * Web3Forms uses the widget with the "h-captcha" class.
+     */
+    function resetCaptcha() {
+        let hcaptcha;
+        if (typeof hcaptcha !== "undefined") {
+            try { hcaptcha.reset(); } catch (_) {}
+        }
+    }
+
+    /**
+     * Shows a native alert with a success or error message.
+     * @param {boolean} success
+     * @param {string}  [detail]
+     */
+    function showFeedback(success, detail) {
+        if (success) {
+            window.alert(`${t.success_title}\n\n${t.success_body}`);
         } else {
-            // Re-enable button only on failure so the user can retry
-            enableButton(submitBtn, submitSpan);
-            hcaptcha.reset();
-            showModal('error');
+            const detailLine = detail ? `${t.error_detail_prefix}${detail}\n\n` : "";
+            window.alert(`${t.error_title}\n\n${detailLine}${t.error_body}`);
+        }
+    }
+
+    /* ── INITIALIZATION ── */
+
+    document.addEventListener("DOMContentLoaded", async function () {
+
+        const form = document.querySelector(".contact-form-element");
+        if (!form) {
+            console.warn("[contacts.js] Form not found.");
+            return;
         }
 
-    } catch (err) {
-        console.error('[contacts.js] Fetch error:', err);
-        enableButton(submitBtn, submitSpan);
-        hcaptcha.reset();
-        showModal('error');
-    }
-}
+        // Load translated feedback strings before the user can submit
+        await fetchFeedbackStrings();
 
-function enableButton(btn, span) {
-    if (!btn) return;
-    btn.disabled = false;
-    btn.removeAttribute('aria-busy');
-    if (span) span.textContent = 'Send Message';
-}
+        /* ── SUBMIT HANDLER ── */
 
-// -- MODAL -- //
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-// Config variables
-const MODAL_CONFIG = {
-    success: {
-        icon:     '<polyline points="20 6 9 17 4 12"/>',
-        title:    'Message sent!',
-        subtitle: "Thank you for reaching out. I'll get back to you as soon as possible.",
-        accent:   true,
-    },
-    error: {
-        icon:     '<line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>',
-        title:    'Something went wrong',
-        subtitle: 'There was an error sending your message. Please try again.',
-        accent:   false,
-    },
-    captcha: {
-        icon:     '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-        title:    'Verify you\'re human',
-        subtitle: 'Please complete the CAPTCHA check before sending your message.',
-        accent:   false,
-    },
-};
+            const submitBtn = form.querySelector(".contact-submit-btn");
+            const originalBtnContent = submitBtn ? submitBtn.innerHTML : null;
 
-// Function to show modal
-function showModal(type) {
-    // Remove any existing modal
-    document.getElementById('contact-success-modal')?.remove();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML =
+                    `<span>${t.sending}</span>` +
+                    `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" opacity="0.25"/>
+                        <path d="M12 2a10 10 0 0 1 10 10" stroke-dasharray="31.4" stroke-dashoffset="0">
+                            <animateTransform attributeName="transform" type="rotate"
+                                from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/>
+                        </path>
+                    </svg>`;
+            }
 
-    const cfg   = MODAL_CONFIG[type] ?? MODAL_CONFIG.error;
-    const modal = document.createElement('div');
+            try {
+                const formData = new FormData(form);
+                formData.set("access_key", WEB3FORMS_ACCESS_KEY);
 
-    modal.id        = 'contact-success-modal';
-    modal.className = 'overlay';
-    modal.setAttribute('role',           'dialog');
-    modal.setAttribute('aria-modal',     'true');
-    modal.setAttribute('aria-labelledby','modal-title');
+                const response = await fetch(WEB3FORMS_ENDPOINT, {
+                    method:  "POST",
+                    headers: { "Accept": "application/json" },
+                    body:    formData
+                });
 
-    // Modal HTML script
-    modal.innerHTML = `
-        <div class="project-card" style="max-width:460px;width:100%;margin:1.5rem;text-align:center;padding:3rem 2.5rem;">
-            <div class="contact-icon" style="${cfg.accent ? '' : 'background:var(--border);'}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    ${cfg.icon}
-                </svg>
-            </div>
-            <h2 id="modal-title" class="project-name">${cfg.title}</h2>
-            <p class="contact-text">${cfg.subtitle}</p>
-            <button class="contact-submit-btn" id="modal-close-btn" type="button">
-                <span>Close</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h13M12 5l7 7-7 7"/>
-                </svg>
-            </button>
-        </div>
-    `;
+                const data = await response.json();
 
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
+                if (response.ok && data.success) {
+                    form.reset();
+                    resetCaptcha();
+                    showFeedback(true);
+                } else {
+                    const detail = data.message || ("HTTP " + response.status);
+                    console.error("[contacts.js] Web3Forms error:", data);
+                    resetCaptcha();
+                    showFeedback(false, detail);
+                }
 
-    // Entrance animation
-    requestAnimationFrame(() => modal.classList.add('active'));
+            } catch (networkError) {
+                console.error("[contacts.js] Network error:", networkError);
+                resetCaptcha();
+                showFeedback(false, t.network_error);
 
-    const close = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        setTimeout(() => modal.remove(), 350);
-    };
-
-    document.getElementById('modal-close-btn')
-        .addEventListener('click', close, { once: true });
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) close();
-    }, { once: true });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') close();
-    }, { once: true });
-}
+            } finally {
+                if (submitBtn && originalBtnContent) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnContent;
+                }
+            }
+        });
+    });
+})();

@@ -102,8 +102,10 @@
                 <p class="contact-subtitle" data-i18n="contact_page.form.subtitle"></p>
                 <form class="contact-form-element" novalidate>
 
-                    <!-- Web3Forms botcheck honeypot (hidden, non toccare) -->
-                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                    <!-- Web3Forms botcheck honeypot (hidden) -->
+                    <label>
+                        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                    </label>
 
                     <!-- Name -->
                     <div class="form-group">
@@ -159,6 +161,7 @@
 <!-- ## JAVASCRIPT ## -->
 <script src="scripts/main.js"></script>
 <script src="scripts/contacts.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script> <!-- Web3Forms script -->
 
 </body>
 </html>
