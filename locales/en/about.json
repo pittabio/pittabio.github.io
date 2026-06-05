@@ -1,0 +1,72 @@
+﻿{
+  "resume_page": {
+    "tag": "Curriculum Vitae",
+    "title": "About me",
+    "subtitle": "Certified Game Developer · Unreal Engine C++ Specialist",
+    "description": "A summary of my key qualifications and technical skills. For a complete detailed resume with full work history, certifications, and professional references, please reach out through the contacts page.",
+
+    "skills": {
+      "title": "Technical Skills",
+
+      "engines_title": "Game Engines",
+      "engine1_name": "Unreal Engine 5",
+      "engine1_level": "Advanced",
+      "engine2_name": "Unity",
+      "engine2_level": "Intermediate",
+
+      "languages_title": "Programming Languages",
+      "lang1_name": "C++",
+      "lang1_level": "Advanced",
+      "lang2_name": "Blueprint Visual Scripting",
+      "lang2_level": "Expert",
+      "lang3_name": "C#",
+      "lang3_level": "Basic",
+      "lang4_name": "Java",
+      "lang4_level": "Basic",
+      "lang5_name": "HTML / CSS / JS",
+      "lang5_level": "Basic",
+
+      "vcs_title": "Version Control",
+      "vcs_cert": "Git Certified Specialist",
+      "vcs_cert_id": "Certificate ID: 06p4apf1rm · GitKraken Learn",
+      "vcs_items": "<li>Repository management &amp; collaboration workflows</li><li>Branching strategies, merging, rebasing</li><li>Remote repositories and pull requests</li><li>Advanced: hooks, LFS, worktrees, submodules</li>",
+
+      "spec_title": "Specializations",
+      "spec_items": "<li>C++ &amp; Blueprint integration</li><li>Combat and movement mechanics</li><li>AI Systems for NPCs</li><li>Resource management &amp; game economy</li><li>Multi-language localization</li><li>Multi-platform: Windows &amp; Android</li><li>VR and Multiplayer (fundamentals)</li>",
+
+      "tools_title": "Other Software & Tools",
+      "tools_items": "<li>MetaHuman Creator</li><li>Android SDK</li><li>JetBrains Rider (IDE)</li><li>Blender — 3D Graphics</li><li>Adobe Photoshop &amp; Lightroom</li><li>DaVinci Resolve — Video editing</li><li>Cubase &amp; Ableton Live — Audio</li>"
+    },
+
+    "education": {
+      "title": "Education & Training",
+
+      "item1_date": "October 2025",
+      "item1_role": "Git Certified Specialist",
+      "item1_institution": "GitKraken Learn · Online",
+      "item1_cert": "Certificate ID: 06p4apf1rm",
+      "item1_details": "<li>Foundations of Git — Certification Course</li><li>Advanced repository management and collaboration workflows</li><li>Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules</li><li>Passed the 60-question certification exam</li>",
+
+      "item2_date": "2023 – 2024",
+      "item2_role": "Unreal Developer — Master in C++ Programming",
+      "item2_institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
+      "item2_details": "<li>Advanced Blueprint and C++ programming</li><li>Hybrid Blueprint/C++ implementation</li><li>Component management, SaveGame systems and audio management</li><li>AI development for NPCs and game mechanics</li><li>HUD and user interface development</li><li>Multiplayer and VR mechanics</li><li>Game Design fundamentals</li>",
+
+      "item3_date": "2011 – 2016",
+      "item3_role": "Technical Diploma — Computer Science & Telecommunications",
+      "item3_institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
+      "item3_details": "<li>Intermediate C++ programming</li><li>Extracurricular Arduino course</li><li>Java, SQL and HTML foundations</li><li>Computer systems and telecommunications</li>",
+
+      "item4_date": "2018 – 2020",
+      "item4_role": "Audio Technician Certificate",
+      "item4_institution": "Professional Academy for Entertainment · Italy",
+      "item4_details": "<li>Sound propagation and acoustics</li><li>Professional use of mixers and audio equipment</li><li>Mixing and mastering with Cubase</li><li>Audio management for live events and studio recordings</li>"
+    },
+
+    "cta": {
+      "title": "Need the full <em>resume?</em>",
+      "subtitle": "Contact me for a complete PDF with work history, certifications, and professional references.",
+      "button": "Get in touch"
+    }
+  }
+}

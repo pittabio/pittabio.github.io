@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Pittaccio - About Me</title>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style/style_main.css">
+    <link rel="stylesheet" href="style/style_mobile.css">
+    <link rel="stylesheet" href="style/index/style_mini-about.css">
+    <link rel="stylesheet" href="style/index/style_mini-projects.css">
+    <link rel="stylesheet" href="style/index/style_mini-contact.css">
+    <link rel="stylesheet" href="style/about.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CDN DevCon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+
+<!-- ## HEADER ## -->
+<div id="header"></div>
+
+<!-- ## PAGE ## -->
+<main class="page-content resume-page-section">
+
+    <!-- ## PAGE HEAD ## -->
+    <!-- Centered intro block: tag, title, role subtitle, availability badge, description -->
+    <div class="resume-header">
+        <span class="hero-tag"         data-i18n="resume_page.tag"></span>
+        <h1 class="contact-title"      data-i18n-html="resume_page.title"></h1>
+        <p  class="contact-subtitle"   data-i18n="resume_page.subtitle"></p>
+        <p  class="resume-description" data-i18n="resume_page.description"></p>
+    </div>
+
+    <!-- ## TECHNICAL SKILLS ## -->
+    <section class="resume-section" id="skills">
+        <div class="section-container">
+
+            <h2 class="section-title" data-i18n="resume_page.skills.title"></h2>
+
+            <!-- 4 cards fit cleanly in one row on desktop with the about-grid auto-fit.
+                 Engines + Languages share one card (separated by a .skill-group divider)
+                 to keep the grid balanced and avoid a 4+1 orphaned-card layout. -->
+            <div class="about-grid">
+
+                <!-- ## Card 1: Game Engines & Programming Languages ## -->
+                <div class="project-card">
+
+                    <!-- Game Engines group -->
+                    <div class="skill-group">
+                        <h3 class="project-name" data-i18n="resume_page.skills.engines_title"></h3>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.engine1_name"></span>
+                            <span class="skill-level advanced"     data-i18n="resume_page.skills.engine1_level"></span>
+                        </div>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.engine2_name"></span>
+                            <span class="skill-level intermediate" data-i18n="resume_page.skills.engine2_level"></span>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages group (visually separated from Engines) -->
+                    <div class="skill-group">
+                        <h3 class="project-name" data-i18n="resume_page.skills.languages_title"></h3>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.lang1_name"></span>
+                            <span class="skill-level advanced"     data-i18n="resume_page.skills.lang1_level"></span>
+                        </div>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.lang2_name"></span>
+                            <span class="skill-level expert"       data-i18n="resume_page.skills.lang2_level"></span>
+                        </div>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.lang3_name"></span>
+                            <span class="skill-level basic"        data-i18n="resume_page.skills.lang3_level"></span>
+                        </div>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.lang4_name"></span>
+                            <span class="skill-level basic"        data-i18n="resume_page.skills.lang4_level"></span>
+                        </div>
+                        <div class="skill-row">
+                            <span data-i18n="resume_page.skills.lang5_name"></span>
+                            <span class="skill-level basic"        data-i18n="resume_page.skills.lang5_level"></span>
+                        </div>
+                    </div>
+
+                </div> <!-- END card 1 -->
+
+                <!-- ## Card 2: Version Control ## -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="resume_page.skills.vcs_title"></h3>
+                    <!-- Certification badge -->
+                    <div class="cert-badge">
+                        🏆 <span data-i18n="resume_page.skills.vcs_cert"></span>
+                    </div>
+                    <p class="cert-id" data-i18n="resume_page.skills.vcs_cert_id"></p>
+                    <!-- Feature list injected as HTML <li> items from JSON -->
+                    <ul class="skill-list" data-i18n-html="resume_page.skills.vcs_items"></ul>
+                </div> <!-- END card 2 -->
+
+                <!-- ## Card 3: Specializations ## -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="resume_page.skills.spec_title"></h3>
+                    <ul class="skill-list" data-i18n-html="resume_page.skills.spec_items"></ul>
+                </div> <!-- END card 3 -->
+
+                <!-- ## Card 4: Other Software & Tools ## -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="resume_page.skills.tools_title"></h3>
+                    <ul class="skill-list" data-i18n-html="resume_page.skills.tools_items"></ul>
+                </div> <!-- END card 4 -->
+
+            </div> <!-- END about-grid -->
+
+        </div>
+    </section> <!-- END technical skills -->
+
+    <!-- ## EDUCATION & TRAINING ## -->
+    <section class="resume-section" id="education">
+        <div class="section-container">
+
+            <h2 class="section-title" data-i18n="resume_page.education.title"></h2>
+
+            <!-- Vertical timeline: newest entry first -->
+            <div class="education-timeline">
+
+                <!-- ## Entry 1: Git Certified Specialist (2025) ## -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"        data-i18n="resume_page.education.item1_date"></div>
+                    <div class="timeline-role"        data-i18n="resume_page.education.item1_role"></div>
+                    <div class="timeline-institution" data-i18n="resume_page.education.item1_institution"></div>
+                    <div class="cert-badge">
+                        🏆 <span data-i18n="resume_page.education.item1_cert"></span>
+                    </div>
+                    <ul class="timeline-details" data-i18n-html="resume_page.education.item1_details"></ul>
+                </div>
+
+                <!-- ## Entry 2: Rainbow Academy — Unreal Developer (2023–2024) ## -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"        data-i18n="resume_page.education.item2_date"></div>
+                    <div class="timeline-role"        data-i18n="resume_page.education.item2_role"></div>
+                    <div class="timeline-institution" data-i18n="resume_page.education.item2_institution"></div>
+                    <ul class="timeline-details" data-i18n-html="resume_page.education.item2_details"></ul>
+                </div>
+
+                <!-- ## Entry 3: Audio Technician Certificate (2018–2020) ## -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"        data-i18n="resume_page.education.item4_date"></div>
+                    <div class="timeline-role"        data-i18n="resume_page.education.item4_role"></div>
+                    <div class="timeline-institution" data-i18n="resume_page.education.item4_institution"></div>
+                    <ul class="timeline-details" data-i18n-html="resume_page.education.item4_details"></ul>
+                </div>
+
+                <!-- ## Entry 4: Technical Diploma — Computer Science (2011–2016) ## -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"        data-i18n="resume_page.education.item3_date"></div>
+                    <div class="timeline-role"        data-i18n="resume_page.education.item3_role"></div>
+                    <div class="timeline-institution" data-i18n="resume_page.education.item3_institution"></div>
+                    <ul class="timeline-details" data-i18n-html="resume_page.education.item3_details"></ul>
+                </div>
+
+            </div> <!-- END education-timeline -->
+
+        </div>
+    </section> <!-- END education -->
+
+    <!-- ## CALL TO ACTION ## -->
+    <!-- Reuses .contact-section from style_mini-contact.css for the border-top separator,
+         .contact-inner for centering, and .contact-cta for the accent button style. -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="contact-title"   data-i18n-html="resume_page.cta.title"></h2>
+            <p  class="contact-subtitle" data-i18n="resume_page.cta.subtitle"></p>
+            <a href="contacts.html" class="contact-cta">
+                <span data-i18n="resume_page.cta.button"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                     fill="none" stroke="#000000" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h13M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section> <!-- END call to action -->
+
+</main>
+
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
+<!-- ## JAVASCRIPT ## -->
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
