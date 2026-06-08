@@ -4,16 +4,13 @@
     "title": "About me",
     "subtitle": "Sviluppatore di Giochi Certificato · Specialista Unreal Engine C++",
     "description": "Un riepilogo delle mie qualifiche chiave e competenze tecniche. Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali, contatta tramite la pagina dei contatti.",
-
     "skills": {
       "title": "Competenze Tecniche",
-
       "engines_title": "Motori Grafici",
       "engine1_name": "Unreal Engine 5",
       "engine1_level": "Avanzato",
       "engine2_name": "Unity",
       "engine2_level": "Intermedio",
-
       "languages_title": "Linguaggi di Programmazione",
       "lang1_name": "C++",
       "lang1_level": "Avanzato",
@@ -25,42 +22,40 @@
       "lang4_level": "Base",
       "lang5_name": "HTML / CSS / JS",
       "lang5_level": "Base",
-
       "vcs_title": "Controllo di Versione",
       "vcs_cert": "Specialista Certificato Git",
       "vcs_cert_id": "ID Certificato: 06p4apf1rm · GitKraken Learn",
       "vcs_items": "<li>Gestione dei repository e flussi di lavoro collaborativi</li><li>Strategie di branching, merging, rebasing</li><li>Repository remoti e pull request</li><li>Avanzato: hook, LFS, worktree, sottomoduli</li>",
-
       "spec_title": "Specializzazioni",
       "spec_items": "<li>Integrazione C++ e Blueprint</li><li>Meccaniche di combattimento e movimento</li><li>Sistemi IA per NPC</li><li>Gestione delle risorse ed economia di gioco</li><li>Localizzazione multilingua</li><li>Multi-piattaforma: Windows e Android</li><li>VR e Multiplayer (fondamenti)</li>",
-
       "tools_title": "Altri Software e Strumenti",
       "tools_items": "<li>MetaHuman Creator</li><li>Android SDK</li><li>JetBrains Rider (IDE)</li><li>Blender — Grafica 3D</li><li>Adobe Photoshop &amp; Lightroom</li><li>DaVinci Resolve — Montaggio video</li><li>Cubase &amp; Ableton Live — Audio</li>"
     },
 
     "education": {
       "title": "Istruzione e Formazione",
-
       "item1_date": "Ottobre 2025",
       "item1_role": "Specialista Certificato Git",
       "item1_institution": "GitKraken Learn · Online",
       "item1_cert": "ID Certificato: 06p4apf1rm",
       "item1_details": "<li>Fondamenti di Git — Corso di Certificazione</li><li>Gestione avanzata dei repository e flussi di lavoro collaborativi</li><li>Argomenti: Commit, Branch, Merging, Rebasing, Remoti, Fork, Pull Request, LFS, Sottomoduli</li><li>Superamento dell'esame di certificazione da 60 domande</li>",
-
       "item2_date": "2023 – 2024",
       "item2_role": "Sviluppatore Unreal — Master in Programmazione C++",
       "item2_institution": "Rainbow Academy · Digital Entertainment Academy · Roma, Italia",
       "item2_details": "<li>Programmazione avanzata in Blueprint e C++</li><li>Implementazione ibrida Blueprint/C++</li><li>Gestione dei componenti, sistemi SaveGame e gestione audio</li><li>Sviluppo IA per NPC e meccaniche di gioco</li><li>Sviluppo HUD e interfaccia utente</li><li>Meccaniche multiplayer e VR</li><li>Fondamenti di Game Design</li>",
-
       "item3_date": "2011 – 2016",
       "item3_role": "Diploma Tecnico — Informatica e Telecomunicazioni",
       "item3_institution": "Alessandro Volta · Istituto Tecnico · Guidonia, Italia",
       "item3_details": "<li>Programmazione C++ a livello intermedio</li><li>Corso extracurriculare di Arduino</li><li>Fondamenti di Java, SQL e HTML</li><li>Sistemi informatici e telecomunicazioni</li>",
-
       "item4_date": "2018 – 2020",
       "item4_role": "Certificato di Tecnico del Suono",
       "item4_institution": "Accademia Professionale per lo Spettacolo · Italia",
       "item4_details": "<li>Propagazione del suono e acustica</li><li>Uso professionale di mixer e apparecchiature audio</li><li>Mixing e mastering con Cubase</li><li>Gestione audio per eventi dal vivo e registrazioni in studio</li>"
+    },
+
+    "projects": {
+      "label": "Vuoi vedere queste competenze in azione?",
+      "button": "Guarda i miei progetti"
     },
 
     "cta": {
