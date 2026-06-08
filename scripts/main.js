@@ -38,13 +38,13 @@ fetch('/common/header.html')
         const activeNavEl = document.getElementById(activeNavId);
         if (activeNavEl) { activeNavEl.classList.add('active'); }
 
-        // When the user click on the language button EN
+        // When the user clicks on the language button EN
         document.getElementById('lang-en').addEventListener('click', (e) => {
             e.preventDefault();
             changeLanguage('en').then(() => {});
         });
 
-        // When the user click on the language button IT
+        // When the user clicks on the language button IT
         document.getElementById('lang-it') .addEventListener('click', (e) => {
             e.preventDefault();
             changeLanguage('it').then(() => {})
