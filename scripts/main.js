@@ -4,7 +4,7 @@ const pageNavMap = {
     'index':    'nav-home',
     'contacts': 'nav-contacts',
     'projects': 'nav-projects',
-    'resume':   'nav-resume',
+    'about':    'nav-about',
     'support':  'nav-support'
 };
 
@@ -17,20 +17,25 @@ fetch('/common/header.html')
 
         // href link correction
         // Calculate the base path of the site (e.g. "/pittabio.github.io/" on localhost, "/" on GitHub Pages root)
-        const pathSegments = window.location.pathname.split('/').filter(Boolean);
         const isGitHubPages = window.location.hostname.includes('github.io');
 
-        // On GitHub Pages the root is "/", on localhost/WebStorm it is "/project-folder-name/"
-        const basePath = isGitHubPages
-            ? '/'
-            : (pathSegments.length > 0 ? '/' + pathSegments[0] + '/' : '/');
+        // Filter out file segments (e.g. "about.html") — keep only directory segments
+        const pathSegments = window.location.pathname.split('/').filter(seg => seg && !seg.includes('.'));
+
+        // If it is GitHub Pages, the base is the first segment (repo name)
+        // Otherwise on domain the base is empty
+        const repoName = isGitHubPages ? '/' + pathSegments[1] : '';
 
         // Replace "../" with the correct basePath in all nav-links
         document.querySelectorAll('.site-nav .nav-link').forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('../')) {
-                link.setAttribute('href', href.replace('../', basePath));
-            }
+            let href = link.getAttribute('href');
+
+            // If the link is an anchor # or an external link, do nothing
+            if (!href || href.startsWith('#') || href.startsWith('http')) return;
+
+            // Remove any leading "/" to avoid duplicates and add the correct base
+            const cleanHref = href.startsWith('/') ? href.slice(1) : href;
+            link.setAttribute('href', `${repoName}/${cleanHref}`);
         });
 
         // Active the specific links for the page
@@ -41,13 +46,15 @@ fetch('/common/header.html')
         // When the user clicks on the language button EN
         document.getElementById('lang-en').addEventListener('click', (e) => {
             e.preventDefault();
-            changeLanguage('en').then(() => {});
+            changeLanguage('en')
+                .then(() => {});
         });
 
         // When the user clicks on the language button IT
         document.getElementById('lang-it') .addEventListener('click', (e) => {
             e.preventDefault();
-            changeLanguage('it').then(() => {})
+            changeLanguage('it')
+                .then(() => {})
         });
 
         // Reactive mobile menu script
@@ -95,10 +102,14 @@ async function changeLanguage(lang) {
             pageName = "index";
         }
 
+        const repoName = window.location.hostname.includes('github.io')
+            ? '/' + window.location.pathname.split('/')[1]
+            : '';
+
         // 2. Download both the page file and the common file in parallel
         const [pageRes, commonRes] = await Promise.all([
-            fetch(`/locales/${lang}/${pageName}.json`).catch(() => null),
-            fetch(`/locales/${lang}/common.json`).catch(() => null)
+            fetch(`${repoName}/locales/${lang}/${pageName}.json`).catch(() => null),
+            fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null)
         ]);
 
         // Extract JSON data (if files exist, otherwise use empty object)
@@ -142,7 +153,7 @@ async function changeLanguage(lang) {
         console.error("Error loading language:", error);
     }
 
-    // Fetch for contacts feedback
+    // Fetch for contact feedback
     let fetchContactFeedbackStrings;
     if (typeof fetchContactFeedbackStrings === "function") {
         fetchContactFeedbackStrings();
