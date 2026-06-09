@@ -1,0 +1,105 @@
+﻿{
+  "projects_page": {
+
+    "tag": "Giochi & Esperimenti",
+    "title": "Tutti i <em>Progetti</em>",
+    "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
+    "description": [
+      "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici —",
+      "dai titoli action-adventure completi ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
+    ],
+
+    "games_title": "Giochi",
+    "experiments_title": "Esperimenti & Esplorazioni",
+    "experiments_desc": [
+      "Progetti sperimentali in cui esploro i sistemi avanzati di Unreal Engine e testo nuove meccaniche.",
+      "Showcase tecnici realizzati per imparare, superare i limiti e approfondire la comprensione di framework complessi",
+      "per lo sviluppo di videogiochi."
+    ],
+
+    "link_details": "Dettagli",
+    "link_play":    "Download",
+    "link_github":  "Vedi su GitHub",
+
+    "ruins": {
+      "name": "Ruins' Rhapsody",
+      "desc": [
+        "Vesti i panni di <strong>Alessandra Morioka</strong>, un'audace archeologa a caccia di un antico e misterioso reliquia.",
+        "Una demo action-adventure ispirata a Tomb Raider e Uncharted,",
+        "che fonde un <em>sistema di movimento dinamico</em>, puzzle ambientali, combattimenti intensi",
+        "ed esplorazione immersiva tra rovine antiche mozzafiato.",
+        "Sviluppato in <strong>Unreal Engine 5</strong>."
+      ]
+    },
+
+    "goblin": {
+      "name": "Goblin Jr. Adventure",
+      "desc": [
+        "Guida un coraggioso piccolo Goblin attraverso <em>mondi a cubi</em> stilizzati pieni di trappole,",
+        "segreti nascosti e tesori scintillanti.",
+        "Un colorato <strong>platform collect-a-thon</strong> pensato per giocatori casual e bambini,",
+        "con raccolta di monete, sfide in classifica e un'esperienza breve ma emozionante.",
+        "Disponibile in <strong>inglese e italiano</strong>."
+      ]
+    },
+
+    "zombie": {
+      "name": "Zombie Siege Chronicles",
+      "desc": [
+        "Un <strong>progetto di gruppo</strong> creato per i <em>Rookie Awards 2024</em>.",
+        "Difendi la tua base da ondate implacabili di zombie usando torrette, barriere difensive",
+        "e strutture speciali in questo <strong>tower defense</strong> con visuale dall'alto.",
+        "Include tipi di zombie unici (Tank, Katana…), eventi speciali come la <em>Frenesia Zombie</em>,",
+        "e gestione strategica delle risorse."
+      ]
+    },
+
+    "flying": {
+      "name": "Flying Bird",
+      "desc": [
+        "Un <strong>remake 3D</strong> dell'iconico gioco mobile <em>Flappy Bird</em>,",
+        "realizzato in <strong>Unreal Engine 5.4</strong> e disponibile sia per <strong>Windows che Android</strong>.",
+        "Naviga l'uccellino attraverso gli ostacoli con semplici controlli touch.",
+        "Gameplay infinito — punta al punteggio più alto possibile."
+      ]
+    },
+
+    "wizard": {
+      "name": "WizardScape: The Magic Chase",
+      "desc": [
+        "Un <strong>survival action</strong> per Android realizzato in Unreal Engine.",
+        "Controlla un giovane mago con un <em>sistema di combattimento a incantesimi automatici</em>:",
+        "personalizza i potenziamenti, gestisci i power-up basati sui diamanti",
+        "e sopravvivi a ondate di nemici sempre più difficili.",
+        "<em>Demo Pre-Alpha</em> — mostra le meccaniche principali sia in C++ che in Blueprint."
+      ]
+    },
+
+    "state_trees": {
+      "name": "State Tree AI [WIP]",
+      "desc": [
+        "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
+        "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
+        "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
+        "e a sistemi dinamici basati sugli eventi.",
+        "Lavoro in corso."
+      ]
+    },
+
+    "gas": {
+      "name": "GAS Abilities",
+      "desc": [
+        "Un approfondimento tecnico sul <strong>Gameplay Ability System (GAS)</strong> di Unreal Engine.",
+        "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
+        "ed effetti di gioco —",
+        "uno dei framework più potenti e complessi di Unreal."
+      ]
+    },
+
+    "cta": {
+      "title": "Ti interessa collaborare<br><em>insieme?</em>",
+      "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",
+      "button": "Contattami"
+    }
+  }
+}
