@@ -1,7 +1,12 @@
 ﻿{
+<<<<<<< HEAD
   "head_title": "Progetti · Fabio Pittaccio",
 
   "projects_page": {
+=======
+  "projects_page": {
+
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "tag": "Giochi & Esperimenti",
     "title": "Tutti i <em>Progetti</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
@@ -76,6 +81,7 @@
       ]
     },
 
+<<<<<<< HEAD
     "more": {
       "name": "Altre novità in arrivo",
       "desc": [
@@ -87,6 +93,8 @@
       "contact_me": "Contattami"
     },
 
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "state_trees": {
       "name": "State Tree AI [WIP]",
       "desc": [
@@ -108,6 +116,7 @@
       ]
     },
 
+<<<<<<< HEAD
     "archive_title": "Dev Archive",
     "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
     "status_cancelled": "Cancellato",
@@ -133,6 +142,8 @@
       ]
     },
 
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "cta": {
       "title": "Ti interessa collaborare<br><em>insieme?</em>",
       "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="">
 <head>
     <meta charset="UTF-8">
@@ -230,12 +231,198 @@
 
 =======
 <html lang="en">
+=======
+<html lang="">
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabio Pittaccio - Projects</title>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <link rel="stylesheet" href="style/overlay.css">
+    <link rel="stylesheet" href="style/index/mini-about.css">
+    <link rel="stylesheet" href="style/index/mini-projects.css">
+    <link rel="stylesheet" href="style/index/mini-contact.css">
+    <link rel="stylesheet" href="style/about.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CDN DevCon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
 
+<<<<<<< HEAD
 >>>>>>> 3cc5382 (feat: first commit projects page)
+=======
+<!-- ## HEADER ## -->
+<div id="header"></div>
+
+<!-- ## IMAGES OVERLAY ## -->
+<div class="overlay" id="overlay" onclick="closePopup()">
+    <div class="popup-img-wrap" id="popupWrap">
+        <button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
+        <img id="popupImg" src="" alt="">
+    </div>
+</div>
+
+<!-- ## PAGE ## -->
+<main class="page-content resume-page-section">
+
+    <!-- ## PAGE HEAD ## -->
+    <div class="resume-header">
+        <span class="hero-tag"          data-i18n="projects_page.tag"></span>
+        <h1  class="contact-title"      data-i18n-html="projects_page.title"></h1>
+        <p   class="contact-subtitle"   data-i18n="projects_page.subtitle"></p>
+        <p   class="resume-description" data-i18n="projects_page.description"></p>
+    </div>
+
+    <!-- ## GAMES ## -->
+    <section class="resume-section" id="games">
+        <div class="section-container">
+
+            <h2 class="section-title" data-i18n="projects_page.games_title"></h2>
+
+            <div class="projects-grid">
+
+                <!-- ## Ruins' Rhapsody ## -->
+                <div class="project-card">
+                    <a href="projects/ruins-rhapsody.html" class="project-link">
+                        <h3 class="project-name" data-i18n="projects_page.ruins.name"></h3>
+                    </a>
+                    <img src="media/games/ruins-rhapsody.jpg" alt="Ruins' Rhapsody Banner" class="project-image" onclick="openPopup(this)"/>
+                    <br>
+                    <p class="project-desc" data-i18n-html="projects_page.ruins.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/ruins-rhapsody.html" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                        <a href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank" class="link-primary" data-i18n="projects_page.link_play"></a>
+                    </div>
+                </div>
+
+                <!-- ## Goblin Jr. Adventure ## -->
+                <div class="project-card">
+                    <a href="projects/goblin-jr.html" class="project-link">
+                        <h3 class="project-name" data-i18n="projects_page.goblin.name"></h3>
+                    </a>
+                    <img src="media/games/goblin-jr.png" alt="Goblin Jr. Adventure Banner" class="project-image" onclick="openPopup(this)"/>
+                    <br>
+                    <p class="project-desc" data-i18n-html="projects_page.goblin.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/goblin-jr.html" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                        <a href="https://pittabio.itch.io/goblin-jr-adventure" target="_blank" class="link-primary" data-i18n="projects_page.link_play"></a>
+                    </div>
+                </div>
+
+                <!-- ## Zombie Siege Chronicles ## -->
+                <div class="project-card">
+                    <a href="projects/zombie-siege.html" class="project-link">
+                        <h3 class="project-name" data-i18n="projects_page.zombie.name"></h3>
+                    </a>
+                    <img src="media/games/zombie-siege.png" alt="Zombie Siege Chronicles Banner" class="project-image" onclick="openPopup(this)"/>
+                    <br>
+                    <p class="project-desc" data-i18n-html="projects_page.zombie.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/zombie-siege.html" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                        <a href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank" class="link-primary" data-i18n="projects_page.link_play"></a>
+                    </div>
+                </div>
+
+                <!-- ## Flying Bird ## -->
+                <div class="project-card">
+                    <a href="projects/flying-bird.html" class="project-link">
+                        <h3 class="project-name" data-i18n="projects_page.flying.name"></h3>
+                    </a>
+                    <img src="media/games/flying-bird.png" alt="Flying Bird Banner" class="project-image" onclick="openPopup(this)"/>
+                    <br>
+                    <p class="project-desc" data-i18n-html="projects_page.flying.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/flying-bird.html" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                        <a href="https://pittabio.itch.io/flying-bird" target="_blank" class="link-primary" data-i18n="projects_page.link_play"></a>
+                    </div>
+                </div>
+
+                <!-- ## WizardScape: The Magic Scape ## -->
+                <div class="project-card">
+                    <a href="projects/wizardscape.html" class="project-link">
+                        <h3 class="project-name" data-i18n="projects_page.wizard.name"></h3>
+                    </a>
+                    <img src="media/games/WizardScape.png" alt="WizardScape Banner" class="project-image" onclick="openPopup(this)"/>
+                    <br>
+                    <p class="project-desc" data-i18n-html="projects_page.wizard.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/wizardscape.html" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                        <a href="https://pittabio.itch.io/wizardscape" target="_blank" class="link-primary" data-i18n="projects_page.link_play"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- END games -->
+
+    <!-- ## EXPERIMENTS ## -->
+    <section class="resume-section" id="experiments">
+        <div class="section-container">
+
+            <h2 class="section-title" data-i18n="projects_page.experiments_title"></h2>
+            <p class="resume-description" style="text-align: center; margin-bottom: 2rem;" data-i18n="projects_page.experiments_desc"></p>
+
+            <div class="about-grid">
+
+                <!-- ## StateTrees ## -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="projects_page.state_trees.name"></h3>
+                    <p class="project-desc" data-i18n-html="projects_page.state_trees.desc"></p>
+                    <div class="project-links">
+                        <a href="https://github.com/pittabio/StateTrees" target="_blank" class="link-primary" data-i18n="projects_page.link_github"></a>
+                    </div>
+                </div>
+
+                <!-- ## GAS Abilities ## -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="projects_page.gas.name"></h3>
+                    <p class="project-desc" data-i18n-html="projects_page.gas.desc"></p>
+                    <div class="project-links">
+                        <a href="https://github.com/pittabio/GasAbilities" target="_blank" class="link-primary" data-i18n="projects_page.link_github"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- END experiments -->
+
+    <!-- ## CALL TO ACTION ## -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="contact-title"    data-i18n-html="projects_page.cta.title"></h2>
+            <p  class="contact-subtitle" data-i18n="projects_page.cta.subtitle"></p>
+            <a href="contacts.html" class="contact-cta">
+                <span data-i18n="projects_page.cta.button"></span>
+                <!-- svg arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                     fill="none" stroke="#000000" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h13M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section> <!-- END call to action -->
+
+</main>
+
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
+<!-- ## JAVASCRIPT ## -->
+<script src="scripts/main.js"></script>
+<script src="scripts/overlay.js"></script>
+
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
 </body>
 </html>

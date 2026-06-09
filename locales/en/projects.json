@@ -1,13 +1,23 @@
 ﻿{
+<<<<<<< HEAD
   "head_title": "Projects · Fabio Pittaccio",
 
   "projects_page": {
+=======
+  "projects_page": {
+
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "tag": "Games & Experiments",
     "title": "All <em>Projects</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
     "description": [
+<<<<<<< HEAD
       "A complete overview of my published games and technical experiments",
       " from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+=======
+      "A complete overview of my published games and technical experiments —",
+      "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     ],
 
     "games_title": "Games",
@@ -21,7 +31,10 @@
     "link_details": "Details",
     "link_play":    "Download",
     "link_github":  "View on GitHub",
+<<<<<<< HEAD
     "link_gitlab":  "View on GitLab",
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
 
     "ruins": {
       "name": "Ruins' Rhapsody",
@@ -77,6 +90,7 @@
       ]
     },
 
+<<<<<<< HEAD
     "more": {
       "name": "More to come",
       "desc": [
@@ -88,6 +102,8 @@
       "contact_me": "Contact me"
     },
 
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "state_trees": {
       "name": "State Tree AI",
       "desc": [
@@ -109,6 +125,7 @@
       ]
     },
 
+<<<<<<< HEAD
     "archive_title": "Dev Archive",
     "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
     "status_cancelled": "Cancelled",
@@ -134,6 +151,8 @@
       ]
     },
 
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "cta": {
       "title": "Interested in working<br><em>together?</em>",
       "subtitle": "Freelance · Remote · Open to new opportunities",
