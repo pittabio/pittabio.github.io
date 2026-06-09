@@ -1,0 +1,105 @@
+﻿{
+  "projects_page": {
+
+    "tag": "Games & Experiments",
+    "title": "All <em>Projects</em>",
+    "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
+    "description": [
+      "A complete overview of my published games and technical experiments —",
+      "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+    ],
+
+    "games_title": "Games",
+    "experiments_title": "Experiments & Explorations",
+    "experiments_desc": [
+      "Experimental projects where I explore advanced Unreal Engine systems and test new mechanics.",
+      "Technical showcases built for learning, pushing boundaries, and deepening my understanding of complex",
+      "game development frameworks."
+    ],
+
+    "link_details": "Details",
+    "link_play":    "Download",
+    "link_github":  "View on GitHub",
+
+    "ruins": {
+      "name": "Ruins' Rhapsody",
+      "desc": [
+        "Play as <strong>Alessandra Morioka</strong>, a daring archaeologist hunting for an ancient mysterious relic.",
+        "An action-adventure demo inspired by Tomb Raider and Uncharted,",
+        "blending a <em>dynamic movement system</em>, environmental puzzles, intense combat,",
+        "and immersive exploration across breathtaking ancient ruins.",
+        "Developed in <strong>Unreal Engine 5</strong>."
+      ]
+    },
+
+    "goblin": {
+      "name": "Goblin Jr. Adventure",
+      "desc": [
+        "Guide a courageous little Goblin through stylized <em>cube worlds</em> filled with traps,",
+        "hidden secrets, and glittering treasures.",
+        "A colorful <strong>collect-a-thon platformer</strong> designed for casual players and kids,",
+        "featuring coin collection, leaderboard challenges, and a short but thrilling experience.",
+        "Available in <strong>English and Italian</strong>."
+      ]
+    },
+
+    "zombie": {
+      "name": "Zombie Siege Chronicles",
+      "desc": [
+        "A <strong>group project</strong> created for the <em>Rookie Awards 2024</em>.",
+        "Defend your base from relentless zombie waves using turrets, defensive barriers,",
+        "and special structures in this top-down <strong>tower defense</strong> game.",
+        "Features unique zombie types (Tank, Katana…), special events like <em>Zombie Frenzy</em>,",
+        "and strategic resource management."
+      ]
+    },
+
+    "flying": {
+      "name": "Flying Bird",
+      "desc": [
+        "A <strong>3D remake</strong> of the iconic mobile game <em>Flappy Bird</em>,",
+        "built in <strong>Unreal Engine 5.4</strong> and available on both <strong>Windows and Android</strong>.",
+        "Navigate the bird through obstacles with simple one-touch controls.",
+        "Endless gameplay — aim for the highest score possible."
+      ]
+    },
+
+    "wizard": {
+      "name": "WizardScape: The Magic Chase",
+      "desc": [
+        "A mobile <strong>survival action game</strong> for Android built in Unreal Engine.",
+        "Control a young wizard with an <em>auto-cast spell combat system</em>:",
+        "customize upgrades, manage diamond-based power-ups,",
+        "and survive increasingly difficult enemy waves.",
+        "<em>Pre-Alpha demo</em> — showcasing core mechanics in both C++ and Blueprints."
+      ]
+    },
+
+    "state_trees": {
+      "name": "State Tree AI",
+      "desc": [
+        "Practical exploration of Unreal Engine's <strong>State Tree</strong> system",
+        "for <em>AI behavior</em> and quest management.",
+        "Showcasing modern approaches to game logic, AI decision-making,",
+        "and dynamic event-driven systems.",
+        "Work in progress."
+      ]
+    },
+
+    "gas": {
+      "name": "GAS Abilities",
+      "desc": [
+        "A technical deep-dive into Unreal Engine's <strong>Gameplay Ability System (GAS)</strong>.",
+        "Focused on implementing <em>advanced ability mechanics</em>, attribute systems,",
+        "and gameplay effects —",
+        "one of Unreal's most powerful and complex frameworks."
+      ]
+    },
+
+    "cta": {
+      "title": "Interested in working<br><em>together?</em>",
+      "subtitle": "Freelance · Remote · Open to new opportunities",
+      "button": "Get in touch"
+    }
+  }
+}
