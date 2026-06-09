@@ -75,6 +75,17 @@
       ]
     },
 
+    "more": {
+      "name": "Altre novità in arrivo",
+      "desc": [
+        "Altri progetti sono in arrivo! Restate sintonizzati per aggiornamenti e nuovi contenuti entusiasmanti.",
+        "Nel frattempo, sentitevi liberi di esplorare i miei repository GitHub e GitLab per approfondimenti più dettagliati."
+      ],
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "contact_me": "Contattami"
+    },
+
     "state_trees": {
       "name": "State Tree AI [WIP]",
       "desc": [
@@ -94,6 +105,21 @@
         "ed effetti di gioco —",
         "uno dei framework più potenti e complessi di Unreal."
       ]
+    },
+
+    "archive_title": "Dev Archive",
+    "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
+    "status_cancelled": "Cancellato",
+    "status_shelved":   "In Pausa",
+
+    "game_cancelled": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+    "game_shelved": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
     },
 
     "cta": {

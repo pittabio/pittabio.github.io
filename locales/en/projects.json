@@ -5,8 +5,8 @@
     "title": "All <em>Projects</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
     "description": [
-      "A complete overview of my published games and technical experiments —",
-      "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+      "A complete overview of my published games and technical experiments",
+      " from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
     ],
 
     "games_title": "Games",
@@ -20,6 +20,7 @@
     "link_details": "Details",
     "link_play":    "Download",
     "link_github":  "View on GitHub",
+    "link_gitlab":  "View on GitLab",
 
     "ruins": {
       "name": "Ruins' Rhapsody",
@@ -75,6 +76,17 @@
       ]
     },
 
+    "more": {
+      "name": "More to come",
+      "desc": [
+        "More projects are on the way! Stay tuned for updates and exciting new content.",
+        "In the meantime, feel free to explore my GitHub and GitLab repositories for more in-depth insights."
+      ],
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "contact_me": "Contact me"
+    },
+
     "state_trees": {
       "name": "State Tree AI",
       "desc": [
@@ -94,6 +106,21 @@
         "and gameplay effects —",
         "one of Unreal's most powerful and complex frameworks."
       ]
+    },
+
+    "archive_title": "Dev Archive",
+    "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
+    "status_cancelled": "Cancelled",
+    "status_shelved":   "On Hold",
+
+    "game_cancelled": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+    "game_shelved": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
     },
 
     "cta": {
