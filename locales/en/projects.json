@@ -12,12 +12,17 @@
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
     "description": [
 <<<<<<< HEAD
+<<<<<<< HEAD
       "A complete overview of my published games and technical experiments",
       " from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
 =======
       "A complete overview of my published games and technical experiments —",
       "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+      "A complete overview of my published games and technical experiments",
+      " from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     ],
 
     "games_title": "Games",
@@ -32,9 +37,13 @@
     "link_play":    "Download",
     "link_github":  "View on GitHub",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "link_gitlab":  "View on GitLab",
 =======
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+    "link_gitlab":  "View on GitLab",
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
 
     "ruins": {
       "name": "Ruins' Rhapsody",
@@ -91,6 +100,9 @@
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "more": {
       "name": "More to come",
       "desc": [
@@ -102,8 +114,11 @@
       "contact_me": "Contact me"
     },
 
+<<<<<<< HEAD
 =======
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "state_trees": {
       "name": "State Tree AI",
       "desc": [
@@ -126,12 +141,16 @@
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "archive_title": "Dev Archive",
     "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
     "status_cancelled": "Cancelled",
     "status_shelved":   "On Hold",
 
     "game_cancelled": {
+<<<<<<< HEAD
       "name": "Echoes of the Witch Wood",
       "desc": [
         "An internal <strong>action platformer</strong> prototype with two playable characters,",
@@ -153,6 +172,17 @@
 
 =======
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+    "game_shelved": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "cta": {
       "title": "Interested in working<br><em>together?</em>",
       "subtitle": "Freelance · Remote · Open to new opportunities",

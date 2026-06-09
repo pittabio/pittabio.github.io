@@ -82,6 +82,9 @@
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "more": {
       "name": "Altre novità in arrivo",
       "desc": [
@@ -93,8 +96,11 @@
       "contact_me": "Contattami"
     },
 
+<<<<<<< HEAD
 =======
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "state_trees": {
       "name": "State Tree AI [WIP]",
       "desc": [
@@ -117,12 +123,16 @@
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "archive_title": "Dev Archive",
     "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
     "status_cancelled": "Cancellato",
     "status_shelved":   "In Pausa",
 
     "game_cancelled": {
+<<<<<<< HEAD
       "name": "Echoes of the Witch Wood",
       "desc": [
         "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
@@ -144,6 +154,17 @@
 
 =======
 >>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+    "game_shelved": {
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+    },
+
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "cta": {
       "title": "Ti interessa collaborare<br><em>insieme?</em>",
       "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",
