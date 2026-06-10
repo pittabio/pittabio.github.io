@@ -113,8 +113,13 @@
     "status_shelved":   "In Pausa",
 
     "game_cancelled": {
-      "name": "NOME PROGETTO",
-      "desc": ["DESCRIZIONE"]
+      "name": "Echoes of the Witch Wood",
+      "desc": [
+        "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
+        "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
+        "e una pipeline di salvataggio completa.",
+        "Cancellato prima dell'annuncio pubblico."
+      ]
     },
 
     "game_shelved": {
