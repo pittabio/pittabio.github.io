@@ -166,8 +166,13 @@
     },
 
     "game_shelved": {
-      "name": "NOME PROGETTO",
-      "desc": ["DESCRIZIONE"]
+      "name": "Project Pyramid",
+      "desc": [
+        "Un gioco action-adventure di team ambientato nell'antico Egitto.",
+        "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+        "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
+        "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
+      ]
     },
 
 >>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
