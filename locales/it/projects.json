@@ -133,6 +133,9 @@
 
     "game_cancelled": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b6c1841 (feat(projects): add a cancelled project)
       "name": "Echoes of the Witch Wood",
       "desc": [
         "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
@@ -140,6 +143,7 @@
         "e una pipeline di salvataggio completa.",
         "Cancellato prima dell'annuncio pubblico."
       ]
+<<<<<<< HEAD
     },
 
     "game_shelved": {
@@ -157,6 +161,8 @@
 =======
       "name": "NOME PROGETTO",
       "desc": ["DESCRIZIONE"]
+=======
+>>>>>>> b6c1841 (feat(projects): add a cancelled project)
     },
 
     "game_shelved": {
