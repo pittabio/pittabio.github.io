@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: start; /* This prevents short cards from stretching as much as long ones */
 }
 
 /* Square Card */
@@ -33,14 +34,26 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* aspect-ratio: 1/1; */
+    height: 100%; /* Causes all cards in the same row to be the same height */
     transition: transform var(--transition), box-shadow var(--transition);
-    aspect-ratio: 1 / 1;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(255, 80, 0, 0.2);
+}
+
+.project-card a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project-card a:hover .project-image {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .project-name {
@@ -57,12 +70,13 @@
 }
 
 .project-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
+    height: 220px;        /* Fixed height for preview */
+    object-fit: cover;    /* Crop the image to fill the space */
+    object-position: top; /* Show top (crucial for code screenshots) */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    cursor: zoom-in;
 }
 
 /* Links */
