@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruins' Rhapsody</title>
+    <title data-i18n="ruins_page.tab_title">Ruins' Rhapsody — Fabio Pittaccio</title>
 
     <!-- CSS Style -->
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/mobile.css">
-    <link rel="stylesheet" href="/style/overlay.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/mobile.css">
+    <link rel="stylesheet" href="../style/overlay.css">
+    <link rel="stylesheet" href="../style/index/mini-about.css">
+    <link rel="stylesheet" href="../style/index/mini-projects.css">
+    <link rel="stylesheet" href="../style/index/mini-contact.css">
+    <link rel="stylesheet" href="../style/about.css">
+    <link rel="stylesheet" href="../style/project.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,26 +24,180 @@
     <!-- CDN DevCon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
-
 <body>
-<!-- HEADER -->
+
+<!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- PAGE -->
-<main class="page-content">
-    <!-- ## HERO SECTION ## -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <div class="hero-content">
-                <h1>WORK IN PROGRESS</h1>
+<!-- ## IMAGES OVERLAY ## -->
+<div class="overlay" id="overlay" onclick="closePopup()">
+    <div class="popup-img-wrap" id="popupWrap">
+        <button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
+        <img id="popupImg" src="" alt="">
+    </div>
+</div>
+
+<!-- ## PAGE ## -->
+<main class="page-content resume-page-section">
+
+    <!-- ## PAGE HEAD ## -->
+    <div class="resume-header">
+        <span class="hero-tag"        data-i18n="ruins_page.tag"></span>
+        <h1 class="contact-title"     data-i18n-html="ruins_page.title"></h1>
+        <p  class="contact-subtitle"  data-i18n="ruins_page.subtitle"></p>
+    </div>
+
+    <!-- ## BANNER IMAGE ## -->
+    <section class="resume-section">
+        <div class="section-container">
+            <img
+                    src="../media/games/ruins-rhapsody/banner.jpg"
+                    alt="Ruins' Rhapsody"
+                    class="project-banner"
+                    onclick="openPopup(this)"
+            />
+        </div>
+    </section> <!-- END banner -->
+
+    <!-- ## ABOUT ## -->
+    <section class="resume-section" id="about">
+        <div class="section-container">
+            <div class="education-timeline" style="padding-left: 0; max-width: 860px;">
+
+                <!-- 1. Overview -->
+                <div class="timeline-entry" style="padding-left: 0;">
+                    <div class="timeline-date"  data-i18n="ruins_page.about.tag"></div>
+                    <div class="timeline-role"  data-i18n="ruins_page.about.title"></div>
+                    <p class="timeline-institution" style="margin-top: 0.6rem; opacity: 0.85; font-size: 0.95rem;" data-i18n-html="ruins_page.about.desc"></p>
+                </div>
+
+                <!-- 2. Gameplay & Features -->
+                <div class="timeline-entry" style="padding-left: 0;">
+                    <div class="timeline-date"  data-i18n="ruins_page.gameplay.tag"></div>
+                    <div class="timeline-role"  data-i18n="ruins_page.gameplay.title"></div>
+                    <ul class="timeline-details" data-i18n-html="ruins_page.gameplay.items"></ul>
+                </div>
+
+                <!-- 3. Technical Architecture (C++/UE5) -->
+                <div class="timeline-entry" style="padding-left: 0;">
+                    <div class="timeline-date"  data-i18n="ruins_page.tech.tag"></div>
+                    <div class="timeline-role"  data-i18n="ruins_page.tech.title"></div>
+                    <ul class="timeline-details" data-i18n-html="ruins_page.tech.items"></ul>
+                </div>
+
+                <!-- 4. Optimization & Systems -->
+                <div class="timeline-entry" style="padding-left: 0; padding-bottom: 0;">
+                    <div class="timeline-date"  data-i18n="ruins_page.systems.tag"></div>
+                    <div class="timeline-role"  data-i18n="ruins_page.systems.title"></div>
+                    <ul class="timeline-details" data-i18n-html="ruins_page.systems.items"></ul>
+                </div>
+
             </div>
         </div>
-    </section>
+    </section> <!-- END about -->
+
+    <!-- ## VIDEO ## -->
+    <section class="resume-section" id="video">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="ruins_page.video_title"></h2>
+            <div class="project-video-wrapper">
+                <!-- Replace VIDEO_ID with the actual YouTube video ID -->
+                <iframe
+                        src="https://www.youtube.com/embed/uM6MI6B5VFk"
+                        title="Ruins' Rhapsody Trailer"
+                        allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </section> <!-- END video -->
+
+    <!-- ## GALLERY ## -->
+    <section class="resume-section" id="gallery">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="ruins_page.gallery_title"></h2>
+
+            <!-- ## GRID ## -->
+            <div class="projects-grid">
+
+                <!-- ## Code Map ## -->
+                <div class="project-card">
+                    <a href="../media/games/ruins-rhapsody/code-map.pdf" target="_blank" title="Open PDF">
+                        <img src="../media/games/ruins-rhapsody/code-map.jpg" alt="Code Map" class="project-image" />
+                    </a>
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.codemap_title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.codemap_desc"></p>
+                </div>
+
+                <!-- ## Components ## -->
+                <div class="project-card">
+                    <img src="../media/games/ruins-rhapsody/components.png" alt="Components" class="project-image" onclick="openPopup(this)" />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.components_title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.components_desc"></p>
+                </div>
+
+                <!-- ### Controls ## -->
+                <div class="project-card">
+                    <img src="../media/games/ruins-rhapsody/controls.png" alt="Controls" class="project-image" onclick="openPopup(this)" />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.input_title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.input_desc"></p>
+                </div>
+
+                <!-- ### AI Params ## -->
+                <div class="project-card">
+                    <img src="../media/games/ruins-rhapsody/enemy-details.png" alt="AI Enemy Details" class="project-image" onclick="openPopup(this)" />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.ai_title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.ai_desc"></p>
+                </div>
+
+                <!-- ### AI BT ## -->
+                <div class="project-card">
+                    <img src="../media/games/ruins-rhapsody/enemy-tree.png" alt="AI Enemy Tree" class="project-image" onclick="openPopup(this)" />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.bt_title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.bt_desc"></p>
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- END gallery -->
+
+    <!-- ## CTA ## -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="contact-title"    data-i18n-html="ruins_page.cta.title"></h2>
+            <p  class="contact-subtitle" data-i18n="ruins_page.cta.subtitle"></p>
+
+            <div class="contact-socials">
+                <!-- itch.io -->
+                <a href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank" class="contact-social-link">
+                    <img src="../media/logo-mini/itchio.png" alt="itch.io" height="16" width="16"/>
+                    itch.io
+                </a>
+                <!-- GameJolt -->
+                <a href="https://gamejolt.com/games/ruins-rhapsody-demo/992941" target="_blank" class="contact-social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Game Jolt
+                </a>
+            </div>
+
+            <div class="contact-divider">
+                <span data-i18n="ruins_page.cta.or"></span>
+            </div>
+
+            <a href="../projects.html" class="contact-cta">
+                <span data-i18n="ruins_page.cta.btn_back"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section> <!-- END cta -->
+
 </main>
 
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
 <!-- ## JAVASCRIPT ## -->
-<script src="/scripts/main.js"></script>
-<script src="/scripts/overlay.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/overlay.js"></script>
 
 </body>
 </html>

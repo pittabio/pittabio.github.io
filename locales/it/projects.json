@@ -75,6 +75,17 @@
       ]
     },
 
+    "more": {
+      "name": "Altre novità in arrivo",
+      "desc": [
+        "Altri progetti sono in arrivo! Restate sintonizzati per aggiornamenti e nuovi contenuti entusiasmanti.",
+        "Nel frattempo, sentitevi liberi di esplorare i miei repository GitHub e GitLab per approfondimenti più dettagliati."
+      ],
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "contact_me": "Contattami"
+    },
+
     "state_trees": {
       "name": "State Tree AI [WIP]",
       "desc": [
@@ -93,6 +104,31 @@
         "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
         "ed effetti di gioco —",
         "uno dei framework più potenti e complessi di Unreal."
+      ]
+    },
+
+    "archive_title": "Dev Archive",
+    "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
+    "status_cancelled": "Cancellato",
+    "status_shelved":   "In Pausa",
+
+    "game_cancelled": {
+      "name": "Echoes of the Witch Wood",
+      "desc": [
+        "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
+        "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
+        "e una pipeline di salvataggio completa.",
+        "Cancellato prima dell'annuncio pubblico."
+      ]
+    },
+
+    "game_shelved": {
+      "name": "Project Pyramid",
+      "desc": [
+        "Un gioco action-adventure di team ambientato nell'antico Egitto.",
+        "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+        "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
+        "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
       ]
     },
 
