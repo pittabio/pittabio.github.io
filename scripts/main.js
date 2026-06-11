@@ -94,69 +94,72 @@ fetch('/common/footer.html')
 // -- LANGUAGE -- //
 async function changeLanguage(lang) {
     try {
-        // 1. Automatically detect the current page name from the URL
-        let pageName = window.location.pathname.split("/").pop().replace(".html", "");
+        // 1. Calculating the correct relative path
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        let path = window.location.pathname;
 
-        // Managing the site root or index
-        if (pageName === "" || pageName === "index") {
-            pageName = "index";
+        // If we are on GitHub Pages, we remove the repo name from the path
+        if (isGitHubPages) {
+            const pathSegments = path.split('/').filter(s => s);
+            pathSegments.shift(); // Rimuove il primo segmento (il nome della repo)
+            path = '/' + pathSegments.join('/');
         }
 
-        const repoName = window.location.hostname.includes('github.io')
+        // Path cleanup: remove the .html extension and leading/trailing slashes
+        let relativePath = path.replace('.html', '').replace(/\/$/, '');
+
+        // If the path is empty or ends with the root, we use 'index'
+        if (relativePath === "" || relativePath === "/") {
+            relativePath = "index";
+        }
+
+        // We remove the first slash if present for the construction of the fetch
+        const cleanPath = relativePath.startsWith('/') ? relativePath.slice(1) : relativePath;
+        const repoName = isGitHubPages
             ? '/' + window.location.pathname.split('/')[1]
             : '';
 
-        // 2. Download both the page file and the common file in parallel
+        // 2. File downloads (Page-specific and Common)
         const [pageRes, commonRes] = await Promise.all([
-            fetch(`${repoName}/locales/${lang}/${pageName}.json`).catch(() => null),
+            fetch(`${repoName}/locales/${lang}/${cleanPath}.json`).catch(() => null),
             fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null)
         ]);
 
-        // Extract JSON data (if files exist, otherwise use empty object)
+        // JSON extraction and data-i18n mapping
         const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
         const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
-
-        // Merge translations: Page-specific ones override common
         const translations = { ...commonTranslations, ...pageTranslations };
 
-        // 3a. Find all elements with the data-i18n attribute
+        // 3a. Texts Update (data-i18n)
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             const text = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
             if (text) element.innerText = text;
         });
 
-        // 3b. Find all elements with data-i18n-html attribute (supports HTML tags)
+        // 3b. Update HTML (data-i18n-html)
         document.querySelectorAll('[data-i18n-html]').forEach(element => {
             const key = element.getAttribute('data-i18n-html');
             const html = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
             if (html) element.innerHTML = Array.isArray(html) ? html.join(' ') : html;
         });
 
-        // 3c. Find all elements with the data-i18n-placeholder attribute
+        // 3c. Placeholder
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
             const placeholderText = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
             if (placeholderText) element.placeholder = placeholderText;
         });
 
-        // 4. Save the preference in your browser
         localStorage.setItem('preferredLang', lang);
-        document.documentElement.lang = lang; // Change the html document language
+        document.documentElement.lang = lang;
 
-        // 5. Updates the visual state of the language buttons in the header
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         const activeBtn = document.getElementById(`lang-${lang}`);
         if (activeBtn) activeBtn.classList.add('active');
-    }
-    catch (error) {
-        console.error("Error loading language:", error);
-    }
 
-    // Fetch for contact feedback
-    let fetchContactFeedbackStrings;
-    if (typeof fetchContactFeedbackStrings === "function") {
-        fetchContactFeedbackStrings();
+    } catch (error) {
+        console.error("Error loading language:", error);
     }
 }
 
