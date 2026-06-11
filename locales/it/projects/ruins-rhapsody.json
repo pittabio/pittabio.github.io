@@ -1,11 +1,18 @@
 ﻿{
+<<<<<<< HEAD
   "head_title": "Ruins' Rhapsody · Fabio Pittaccio",
 
+=======
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
   "ruins_page": {
     "tab_title": "Ruins' Rhapsody — Fabio Pittaccio",
     "tag": "Progetto in Evidenza · Unreal Engine 5",
     "title": "Ruins' <em>Rhapsody</em>",
+<<<<<<< HEAD
     "subtitle": "Un framework Action-Adventure in terza persona focalizzato su movimento, esplorazione e sistemi C++.",
+=======
+    "subtitle": "Un framework Action-Adventure cinematografico creato in C++ con tecnologia MetaHuman.",
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
     "btn_download": "Scarica Demo",
     "btn_back": "Torna ai Progetti",
 
@@ -14,19 +21,34 @@
       "title": "Alla ricerca del Cuore Perduto",
       "desc": [
         "Vesti i panni di <strong>Alessandra Morioka</strong>, un'archeologa intraprendente in missione per scoprire il <em>Cuore Perduto di Aracne</em>.",
+<<<<<<< HEAD
         "Sviluppato originariamente come <strong>tesi accademica</strong> e successivamente affinato in una demo tecnica, il progetto mette in mostra un framework personalizzato in terza persona.",
         "Ispirato a classici come <em>Tomb Raider</em>, il lavoro si concentra sull'integrazione tra meccaniche di gioco e solidi sistemi backend in C++."
+=======
+        "Sviluppato originariamente come <strong>tesi accademica</strong> e successivamente ampliato in una demo tecnica completa,",
+        "questo progetto mette in mostra un framework in terza persona di alto livello.",
+        "Ispirato a classici come <em>Tomb Raider</em>, unisce narrazione cinematografica e rigorosa ingegneria del software."
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
       ]
     },
 
     "gameplay": {
       "tag": "Meccaniche",
+<<<<<<< HEAD
       "title": "Esperienza di Gioco",
       "items": [
         "<li><strong>Movimento Avanzato:</strong> Sistema di navigazione che include arrampicata, spostamento sulle sporgenze e un componente di nuoto con gestione del respiro.</li>",
         "<li><strong>Sistema di Inventario:</strong> Struttura divisa in tre categorie: Armi (Pistola), Utility (Medikit e Chiavi per la progressione) e Collezionabili (Statue).</li>",
         "<li><strong>Combattimento e IA:</strong> Framework di base per gli scontri, con un nemico robotico gestito tramite Behavior Tree e sistemi di sensing automatici.</li>",
         "<li><strong>Esplorazione:</strong> Un'isola esplorabile divisa in tre aree principali: il Tempio Antico, le Grotte Sotterranee e le Rovine all'aperto.</li>"
+=======
+      "title": "Caratteristiche del Gameplay",
+      "items": [
+        "<li><strong>Movimento Avanzato:</strong> Sistema di movimento multi-modale che include arrampicata, navigazione sulle sporgenze e scivolata dinamica.</li>",
+        "<li><strong>Interazione Ambientale:</strong> Enigmi complessi che utilizzano meccaniche chiave-porta e trigger basati sull'inventario.</li>",
+        "<li><strong>Combattimento Tattico:</strong> Affronta diverse minacce IA (animali, robot, umani) con sistemi di armi modulari e gestione munizioni.</li>",
+        "<li><strong>Esplorazione:</strong> Tre zone distinte: Tempio Antico, Grotta Sotterranea con lago e Rovine all'aperto.</li>"
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
       ]
     },
 
@@ -34,27 +56,44 @@
       "tag": "Tecnica",
       "title": "Architettura Core (C++)",
       "items": [
+<<<<<<< HEAD
         "<li><strong>Logica a Componenti C++:</strong> Meccaniche come Arrampicata, Nuoto e Salute sono incapsulate in componenti C++ per una maggiore riusabilità.</li>",
         "<li><strong>Level Streaming:</strong> Transizione verso un mondo persistente con streaming dei sub-level per ottimizzare memoria e caricamenti.</li>",
         "<li><strong>Sistema di Salvataggio:</strong> Pipeline di serializzazione in C++ che tiene traccia dello stato dei livelli, della posizione del giocatore e dell'inventario.</li>",
         "<li><strong>Collisioni Custom:</strong> Utilizzo di Trace Channel dedicati per interazioni di precisione con l'ambiente e gli oggetti interattivi.</li>"
+=======
+        "<li><strong>Logica a Componenti:</strong> Componenti C++ personalizzati per Arrampicata, Nuoto (con resistenza del respiro) e gestione Inventario.</li>",
+        "<li><strong>Level Streaming:</strong> Implementazione di un mondo persistente con sub-level streaming per eliminare i caricamenti e ottimizzare la memoria.</li>",
+        "<li><strong>Percezione IA:</strong> I nemici utilizzano Sensing Components e Behavior Tree personalizzati per stati di rilevamento e combattimento realistici.</li>",
+        "<li><strong>Collisioni Custom:</strong> Trace Channel ECC specializzati per sparatorie ad alta precisione, rilevamento arrampicata e interazioni con i fluidi.</li>"
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
       ]
     },
 
     "systems": {
       "tag": "Sistemi",
+<<<<<<< HEAD
       "title": "UI e Ottimizzazione",
       "items": [
         "<li><strong>Interfaccia Multi-livello:</strong> Include un menu principale 3D, un inventario funzionale e un menu di pausa avanzato per la configurazione delle opzioni.</li>",
         "<li><strong>Localizzazione:</strong> Sistema integrato per il cambio della lingua in tempo reale tra Inglese e Italiano.</li>",
         "<li><strong>Audio Ambientale:</strong> Paesaggi sonori che includono vento, fauna e riverberi naturali nelle grotte per aumentare l'immersione.</li>",
         "<li><strong>Ottimizzazione Asset:</strong> Pulizia del progetto e ridimensionamento delle texture per garantire un'esperienza stabile su diverse configurazioni.</li>"
+=======
+      "title": "Ottimizzazione e UX",
+      "items": [
+        "<li><strong>Pipeline di Salvataggio:</strong> Sistema di serializzazione robusto che traccia stati dei livelli, progressi e persistenza inventario.</li>",
+        "<li><strong>Localizzazione:</strong> Framework di traduzione integrato con cambio lingua in tempo reale tra inglese e italiano.</li>",
+        "<li><strong>UI Interattiva:</strong> Widget per il Menu Principale 3D integrati nell'ambiente di gioco con sound design ambientale stratificato.</li>",
+        "<li><strong>Performance:</strong> Profilazione estensiva e ottimizzazione degli asset (ridimensionamento texture, pulizia mesh) per mantenere 60+ FPS.</li>"
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
       ]
     },
 
     "video_title": "Gameplay Trailer",
     "gallery_title": "Documentazione di Progetto",
     "gallery": {
+<<<<<<< HEAD
       "codemap_title": "Architettura di Sistema",
       "codemap_desc": [
         "Mappa software iniziale progettata durante la tesi, che illustra la gerarchia delle classi e la logica di comunicazione tra i sistemi core.",
@@ -72,11 +111,34 @@
 
       "bt_title": "Behavior Tree Nemico",
       "bt_desc": "Flusso logico del guardiano robotico: pattugliamento, rilevamento del giocatore e fasi di ingaggio."
+=======
+      "codemap_title": "Architettura Iniziale",
+      "codemap_desc": [
+        "Mappa software fondamentale progettata durante la tesi. Illustra la logica core e le interazioni tra classi che costituiscono la base del progetto.",
+        "<br><a href='../media/games/ruins-rhapsody/code-map.pdf' target='_blank' style='color:var(--accent); font-weight:500; text-decoration:underline;'>Apri PDF tecnico in alta risoluzione</a>"
+      ],
+
+      "components_title": "Logica Modulare del Personaggio",
+      "components_desc": "Analisi dei componenti C++ custom (Climbing, Nuoto, Inventario) che estendono il base MetaHuman.",
+
+      "input_title": "Enhanced Input System",
+      "input_desc": "Schema di controlli scalabile tramite Data Asset per gestire movimento, combattimento e interazioni.",
+
+      "ai_title": "Configurazione IA",
+      "ai_desc": "Parametri per il sensing dei nemici, sistemi di loot procedurale e feedback visivo tramite Niagara VFX.",
+
+      "bt_title": "Behavior Trees",
+      "bt_desc": "Flusso logico dell'IA con 3 stati: Pattugliamento, Inseguimento e Combattimento a distanza."
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
     },
 
     "cta": {
       "title": "Pronto ad <em>esplorare?</em>",
+<<<<<<< HEAD
       "subtitle": "Scarica la demo e prova con mano il framework tecnico.",
+=======
+      "subtitle": "Scarica la demo (~1.5 GB) e prova con mano il framework tecnico.",
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation)
       "or": "oppure",
       "btn_back": "Vedi altri progetti"
     }
