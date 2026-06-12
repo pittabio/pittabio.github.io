@@ -1,0 +1,12 @@
+﻿/* ## FONTS ## */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ## CDN ICONS ## */
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+/* ## LOCALS ## */
+@import url('./common/variables.css');
+@import url('./common/base.css');
+@import url('./common/header.css');
+@import url('./common/footer.css');
+@import url('./common/overlay.css');
