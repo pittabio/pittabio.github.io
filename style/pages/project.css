@@ -1,13 +1,13 @@
 ﻿/* ## PROJECT DETAIL PAGE ## */
 
-/* Responsive 16:9 video embed wrapper */
 .project-video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     border-radius: var(--radius);
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 .project-video-wrapper iframe {
@@ -17,7 +17,6 @@
     border: 0;
 }
 
-/* Full-width banner image at the top of the page */
 .project-banner {
     width: 100%;
     max-height: 55vh;
@@ -25,12 +24,13 @@
     border-radius: var(--radius);
     cursor: pointer;
     display: block;
+    transition: var(--transition);
 }
 
-/* ## RESPONSIVE ## */
+.project-banner:hover {
+    filter: brightness(1.1);
+}
 
 @media (max-width: 768px) {
-    .project-banner {
-        max-height: 40vh;
-    }
+    .project-banner { max-height: 40vh; }
 }

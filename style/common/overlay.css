@@ -1,0 +1,42 @@
+﻿.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Più scuro per far risaltare l'immagine */
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Più alto dell'header */
+}
+.overlay.active { display: flex; }
+
+.popup-img-wrap {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.popup-img-wrap img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.btn-close {
+    position: absolute;
+    top: -15px; right: -15px;
+    width: 35px; height: 35px;
+    border-radius: 50%;
+    background: var(--accent); /* Coerenza con il brand */
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+.btn-close:hover { background: var(--hovered); transform: scale(1.1); }
