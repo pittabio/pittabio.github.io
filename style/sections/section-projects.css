@@ -1,0 +1,101 @@
+﻿/* ## PROJECTS SECTION ## */
+
+.projects-section {
+    padding: 4rem 2rem;
+    background: var(--bg);
+}
+
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: start;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg);
+    border: 2px solid var(--border); /* Partiamo leggeri con il bordo */
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--accent); /* Il bordo diventa arancione al passaggio */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
+}
+
+.project-name {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Spinge i link sempre in fondo */
+}
+
+.project-image {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
+    object-position: top;
+    margin-bottom: 1.5rem;
+    cursor: zoom-in;
+}
+
+/* Links interni alla card */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-links .link-primary {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.project-links .link-secondary {
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.project-links .link-secondary:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .projects-section { padding: 3rem 1.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+}

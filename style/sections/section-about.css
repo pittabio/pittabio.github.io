@@ -1,12 +1,13 @@
-﻿/* ## ABOUT & SKILLS ## */
+﻿/* ## ABOUT & SKILLS SECTION ## */
+
 .about-skills {
-    padding: 2rem 2rem;
+    padding: 4rem 2rem;
     background: var(--bg);
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
@@ -19,6 +20,7 @@
 .about-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    display: block;
 }
 
 .about-item h3 {
@@ -66,34 +68,30 @@
     gap: 3rem;
     padding-top: 4rem;
     border-top: 1px solid var(--border);
-    opacity: 0.7;
 }
 
-.skills-bar i {
-    font-size: 2.5rem;
-    transition: var(--transition);
-    filter: grayscale(100%);
-}
-
-.skills-bar i:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
-
+.skills-bar i,
 .skills-bar img {
     font-size: 2.5rem;
-    transition: var(--transition);
-    filter: grayscale(100%);
     width: 40px;
     height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: var(--transition);
 }
 
+.skills-bar i:hover,
 .skills-bar img:hover {
     filter: grayscale(0%);
+    opacity: 1;
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .about-grid { grid-template-columns: 1fr; }
+
+    .about-skills { padding: 3rem 1.5rem; }
     .skills-bar { gap: 2rem; }
-    .skills-bar i { font-size: 2rem; }
+    .skills-bar i, .skills-bar img { font-size: 2rem; width: 32px; height: 32px; }
 }
