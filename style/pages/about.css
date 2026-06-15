@@ -69,6 +69,47 @@
     box-shadow: 0 0 0 3px rgba(255, 80, 0, 0.18);
 }
 
+.timeline-date {
+    font-family: var(--font-playfair), serif;
+    font-size: 0.85rem;          /* date-tag */
+    font-weight: 700;
+    color: var(--accent);        /* Orange color like the brand */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-role {
+    font-family: var(--font-playfair), serif;
+    font-size: 1.4rem;           /* Change this value for the block title */
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for details (the <ul> list) if not already defined */
+.timeline-details {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.timeline-details li {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 0.4rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.timeline-details li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .resume-page-section { padding: 5rem 1.5rem 0; }
     .education-timeline { padding-left: 1.5rem; }
