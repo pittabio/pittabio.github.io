@@ -79,7 +79,7 @@
 .timeline-entry::before {
     content: '';
     position: absolute;
-    left: -1.85rem;
+    left: -1.8rem;
     top: 6px;
     width: 12px;
     height: 12px;
