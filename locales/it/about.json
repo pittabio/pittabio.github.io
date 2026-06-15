@@ -1,8 +1,10 @@
 ﻿{
+  "head_title": "Su di me · Fabio Pittaccio",
+
   "resume_page": {
     "tag": "Curriculum Vitae",
     "title": "About me",
-    "subtitle": "Sviluppatore di Giochi Certificato · Specialista Unreal Engine C++",
+    "subtitle": "Sviluppatore di Giochi Certificato · Specializzato in Unreal Engine C++",
     "description": "Un riepilogo delle mie qualifiche chiave e competenze tecniche. Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali, contatta tramite la pagina dei contatti.",
     "skills": {
       "title": "Competenze Tecniche",
