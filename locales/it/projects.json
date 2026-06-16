@@ -1,6 +1,7 @@
 ﻿{
-  "projects_page": {
+  "head_title": "Progetti · Fabio Pittaccio",
 
+  "projects_page": {
     "tag": "Giochi & Esperimenti",
     "title": "Tutti i <em>Progetti</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
