@@ -55,17 +55,23 @@
     "video_title": "Official Trailer",
     "gallery_title": "Gallery & Resources",
     "gallery": {
-      "controls_title": "Input Scheme",
-      "controls_desc": "Visual map of the control system designed for accessibility, covering both platforming and menu navigation.",
+      "architecture_title": "C++ Software Architecture",
+      "architecture_desc": "Modular project structure organized into specialized namespaces (SaveSystem, Collectibles, Widgets) for high maintainability and clean C++ source management.",
 
-      "ui_title": "Leaderboard & Widgets",
-      "ui_desc": "The Top 5 ranking system and the dynamic loading screen featuring Paper2D flipbook animations.",
+      "hybrid_title": "Hybrid Development Workflow",
+      "hybrid_desc": "Usage of <code>BlueprintImplementableEvent</code> to trigger visual logic (timelines, materials) from C++ core classes, maintaining a clear separation between data and presentation.",
 
-      "level_title": "World Design",
-      "level_desc": "Showcase of the stylized 'Cubic' environments, focusing on readability and verticality in level design.",
+      "persistence_title": "Save System & Serialization",
+      "persistence_desc": "Implementation of a robust save system for both gameplay progression (coins, chests, checkpoints) and user preferences (audio mixers, language, input settings).",
 
-      "settings_title": "System Settings",
-      "settings_desc": "Implementation of the options menu with real-time saving for audio and gameplay preferences."
+      "input_title": "Enhanced Input & Scalability",
+      "input_desc": "Unified mapping for Keyboard, Gamepad, and Mobile Touch using UE5 Enhanced Input, ensuring a consistent feel across all supported platforms.",
+
+      "instance_title": "Game Instance & Global State",
+      "instance_desc": "Centralized management of save file references and global states (save slots, level names) that persist throughout the entire game session.",
+
+      "ui_title": "UI Hierarchy & UX Design",
+      "ui_desc": "Menu system architecture built using Widget Blueprints, with a focus on hierarchical navigation, background blur, and pause state management."
     },
 
     "cta": {

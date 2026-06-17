@@ -55,17 +55,23 @@
     "video_title": "Trailer Ufficiale",
     "gallery_title": "Galleria e Risorse",
     "gallery": {
-      "controls_title": "Schema Controlli",
-      "controls_desc": "Mappa visiva del sistema di controllo, pensata per l'accessibilità sia nel gameplay che nei menu.",
+      "architecture_title": "Architettura Software C++",
+      "architecture_desc": "Struttura di progetto modulare organizzata in namespace specializzati (SaveSystem, Collectibles, Widgets) per un'alta manutenibilità e una gestione pulita del codice sorgente.",
 
-      "ui_title": "Classifiche e Widget",
-      "ui_desc": "Il sistema di ranking Top 5 e la schermata di caricamento dinamica con animazioni flip-book Paper2D.",
+      "hybrid_title": "Workflow Ibrido C++/Blueprint",
+      "hybrid_desc": "Utilizzo di <code>BlueprintImplementableEvent</code> per gestire logiche visive (timeline, materiali) partendo da classi core C++, mantenendo una separazione netta tra dati e presentazione.",
 
-      "level_title": "World Design",
-      "level_desc": "Vetrina degli ambienti 'Cubic' stilizzati, con focus sulla leggibilità e verticalità del level design.",
+      "persistence_title": "Persistenza e Serializzazione",
+      "persistence_desc": "Implementazione di un sistema di salvataggio robusto sia per i progressi di gioco (monete, forzieri, checkpoint) che per le preferenze utente (mixer audio, lingua, input).",
 
-      "settings_title": "Impostazioni di Sistema",
-      "settings_desc": "Implementazione del menu opzioni con salvataggio in tempo reale delle preferenze audio e gameplay."
+      "input_title": "Enhanced Input e Scalabilità",
+      "input_desc": "Mappatura unificata per Tastiera, Gamepad e Touch tramite Enhanced Input di UE5, garantendo un feeling coerente su tutte le piattaforme supportate.",
+
+      "instance_title": "Game Instance & Global State",
+      "instance_desc": "Gestione centralizzata dei riferimenti ai salvataggi e degli stati globali (slot di salvataggio, nomi dei livelli) che persistono durante l'intera sessione di gioco.",
+
+      "ui_title": "Gerarchia UI & Design UX",
+      "ui_desc": "Architettura del sistema di menu realizzata tramite Widget Blueprints, con focus sulla navigazione gerarchica, sfocatura dello sfondo e gestione degli stati di pausa."
     },
 
     "cta": {
