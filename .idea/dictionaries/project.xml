@@ -3,13 +3,17 @@
     <words>
 <<<<<<< HEAD
       <w>Aracne</w>
+<<<<<<< HEAD
       <w>Guidonia</w>
+=======
+>>>>>>> d8d02b0 (refactor: project dictionary)
       <w>Morioka</w>
       <w>Profilazione</w>
       <w>Salvataggio</w>
       <w>Sistema</w>
       <w>Sistemi</w>
       <w>Sotterranea</w>
+<<<<<<< HEAD
       <w>Specialista</w>
       <w>Specializzato</w>
       <w>Specializzazioni</w>
@@ -19,6 +23,9 @@
       <w>Struttura</w>
       <w>Suono</w>
       <w>Superamento</w>
+=======
+      <w>Struttura</w>
+>>>>>>> d8d02b0 (refactor: project dictionary)
       <w>botcheck</w>
       <w>dell'IA</w>
       <w>dell'ia</w>
@@ -37,7 +44,10 @@
       <w>hcaptcha</w>
       <w>immersiva</w>
       <w>replyto</w>
+<<<<<<< HEAD
       <w>sottomoduli</w>
+=======
+>>>>>>> d8d02b0 (refactor: project dictionary)
       <w>tarabili</w>
     </words>
   </dictionary>

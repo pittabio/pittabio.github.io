@@ -21,6 +21,7 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: start;
     gap: 2rem;
+    align-items: start; /* This prevents short cards from stretching as much as long ones */
 }
 
 .project-card {
@@ -30,14 +31,32 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD:style/sections/section-projects.css
     height: 100%;
     transition: var(--transition);
+=======
+    /* aspect-ratio: 1/1; */
+    height: 100%; /* Causes all cards in the same row to be the same height */
+    transition: transform var(--transition), box-shadow var(--transition);
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation):style/index/mini-projects.css
 }
 
 .project-card:hover {
     border-color: var(--accent); /* Il bordo diventa arancione al passaggio */
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
+}
+
+.project-card a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project-card a:hover .project-image {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .project-name {
@@ -54,12 +73,20 @@
 }
 
 .project-image {
+<<<<<<< HEAD:style/sections/section-projects.css
     height: 280px;
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
 
     object-position: top;
+=======
+    width: 100%;
+    height: 220px;        /* Fixed height for preview */
+    object-fit: cover;    /* Crop the image to fill the space */
+    object-position: top; /* Show top (crucial for code screenshots) */
+    border-radius: 8px;
+>>>>>>> 2110d8f (feat: add Ruins' Rhapsody project page and technical documentation):style/index/mini-projects.css
     margin-bottom: 1.5rem;
     cursor: zoom-in;
 }
