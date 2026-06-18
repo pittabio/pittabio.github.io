@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="project">
     <words>
+<<<<<<< HEAD
       <w>Aracne</w>
 <<<<<<< HEAD
       <w>Guidonia</w>
@@ -28,6 +29,15 @@
       <w>botcheck</w>
       <w>dell'IA</w>
       <w>dell'ia</w>
+=======
+      <w>Morioka</w>
+      <w>botcheck</w>
+      <w>dell'IA</w>
+<<<<<<< HEAD
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+      <w>dell'ia</w>
+>>>>>>> fd0479e (fix(dictionaries): order)
       <w>devicon</w>
       <w>extracurriculare</w>
       <w>hCaptcha</w>

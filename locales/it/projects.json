@@ -1,7 +1,12 @@
 ﻿{
+<<<<<<< HEAD
   "head_title": "Progetti · Fabio Pittaccio",
 
   "projects_page": {
+=======
+  "projects_page": {
+
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
     "tag": "Giochi & Esperimenti",
     "title": "Tutti i <em>Progetti</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
@@ -76,6 +81,10 @@
       ]
     },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "more": {
       "name": "Altre novità in arrivo",
       "desc": [
@@ -87,6 +96,11 @@
       "contact_me": "Contattami"
     },
 
+<<<<<<< HEAD
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "state_trees": {
       "name": "State Tree AI [WIP]",
       "desc": [
@@ -108,12 +122,20 @@
       ]
     },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "archive_title": "Dev Archive",
     "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
     "status_cancelled": "Cancellato",
     "status_shelved":   "In Pausa",
 
     "game_cancelled": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b6c1841 (feat(projects): add a cancelled project)
       "name": "Echoes of the Witch Wood",
       "desc": [
         "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
@@ -121,6 +143,7 @@
         "e una pipeline di salvataggio completa.",
         "Cancellato prima dell'annuncio pubblico."
       ]
+<<<<<<< HEAD
     },
 
     "game_shelved": {
@@ -133,6 +156,26 @@
       ]
     },
 
+=======
+>>>>>>> cdce55a (feat(projects): add projects page, EN/IT locales, and game assets)
+=======
+      "name": "NOME PROGETTO",
+      "desc": ["DESCRIZIONE"]
+=======
+>>>>>>> b6c1841 (feat(projects): add a cancelled project)
+    },
+
+    "game_shelved": {
+      "name": "Project Pyramid",
+      "desc": [
+        "Un gioco action-adventure di team ambientato nell'antico Egitto.",
+        "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+        "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
+        "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
+      ]
+    },
+
+>>>>>>> 7ddf099 (feat(projects): add more to come card and archive section)
     "cta": {
       "title": "Ti interessa collaborare<br><em>insieme?</em>",
       "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",
