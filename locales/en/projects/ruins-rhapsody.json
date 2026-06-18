@@ -6,6 +6,7 @@
     "tag": "Featured Project · Unreal Engine 5",
     "title": "Ruins' <em>Rhapsody</em>",
     "subtitle": "A third-person Action-Adventure framework focusing on traversal, exploration, and C++ systems.",
+
     "btn_download": "Download Demo",
     "btn_back": "Back to Projects",
 
@@ -15,18 +16,21 @@
       "desc": [
         "Step into the boots of <strong>Alessandra Morioka</strong>, a daring archaeologist on a mission to uncover the <em>Lost Heart of Arachne</em>.",
         "Originally developed as an <strong>academy thesis</strong> and later refined into a technical demo, this project showcases a custom third-person framework.",
-        "Inspired by classics like <em>Tomb Raider</em>, the project focuses on bridging character mechanics with reliable backend systems in C++."
+        "Inspired by classics like <em>Tomb Raider</em>, the project focuses on bridging character mechanics with reliable backend systems in C++.",
+        "Originally developed as a <strong>academy thesis</strong> and later expanded into a full technical demo,",
+        "this project showcases a high-end third-person framework.",
+        "Inspired by classics like <em>Tomb Raider</em>, it bridges the gap between cinematic storytelling and rigorous software engineering."
       ]
     },
 
     "gameplay": {
       "tag": "Mechanics",
-      "title": "Core Gameplay Experience",
+      "title": "Immersive Gameplay Features",
       "items": [
-        "<li><strong>Advanced Traversal:</strong> A movement system featuring climbing, ledge navigation, and a dedicated swimming component with breath management.</li>",
-        "<li><strong>Inventory System:</strong> A structured inventory divided into Weapons (Pistol), Utilities (Medkits and Keys for progression), and Collectibles (Statues).</li>",
-        "<li><strong>Combat & AI:</strong> A base combat framework featuring a robotic enemy managed via Behavior Trees and automated sensing.</li>",
-        "<li><strong>Exploration:</strong> A modular island environment divided into three main areas: the Ancient Temple, the Underground Caves, and the Open Ruins.</li>"
+        "<li><strong>Advanced Traversal:</strong> A multi-modal movement system including climbing, ledge navigation, and dynamic sliding.</li>",
+        "<li><strong>Environmental Interaction:</strong> Complex puzzle-solving using key-door mechanics and inventory-based triggers.</li>",
+        "<li><strong>Tactical Combat:</strong> Encounter diverse AI threats (animals, robots, humans) with modular weapon systems and ammunition management.</li>",
+        "<li><strong>Exploration:</strong> Three distinct atmospheric zones: Ancient Temple, Underground Cave with a lake, and Open Ruins.</li>"
       ]
     },
 
@@ -34,49 +38,53 @@
       "tag": "Technical",
       "title": "Core Architecture (C++)",
       "items": [
-        "<li><strong>C++ Component Logic:</strong> Core mechanics like Climbing, Swimming, and Health are encapsulated in C++ components for better reusability.</li>",
-        "<li><strong>Level Streaming:</strong> Transitioned from standalone levels to a persistent world with sub-level streaming to optimize memory and flow.</li>",
+        "<li><strong>Component-Based Logic:</strong> Custom C++ components for Climbing, Swimming (with breath resistance), and Inventory management.</li>",
+        "<li><strong>Level Streaming:</strong> Implementation of a persistent world with sub-level streaming to eliminate loading screens and optimize memory.</li>",
         "<li><strong>Save/Load System:</strong> A robust C++ serialization pipeline that tracks sub-level states, player position, and inventory persistence.</li>",
-        "<li><strong>Custom Collision:</strong> Implementation of specialized Trace Channels for high-precision interaction with environment and objects.</li>"
+        "<li><strong>AI Perception:</strong> Enemies utilize custom Sensing Components and Behavior Trees for realistic detection and combat states.</li>",
+        "<li><strong>Custom Collision:</strong> Specialized ECC Trace Channels for high-precision shooting, climbing detection, and fluid interactions.</li>"
       ]
     },
 
     "systems": {
       "tag": "Systems",
-      "title": "UI & Optimization",
+      "title": "Optimization & UX",
       "items": [
-        "<li><strong>Multi-layered UI:</strong> Includes an immersive 3D Main Menu, a functional inventory, and a comprehensive settings menu for performance tuning.</li>",
-        "<li><strong>Localisation:</strong> A built-in system allowing real-time switching between English and Italian.</li>",
-        "<li><strong>Ambient Audio:</strong> Integrated environmental soundscapes including wind, wildlife, and cave echoes to enhance immersion.</li>",
-        "<li><strong>Asset Management:</strong> Extensive cleanup and texture optimization to ensure a stable experience across different hardware.</li>"
+        "<li><strong>Save/Load Pipeline:</strong> A robust serialization system tracking sub-level states, player progression, and inventory persistence.</li>",
+        "<li><strong>Localisation:</strong> Built-in translation framework with runtime toggle between English and Italian.</li>",
+        "<li><strong>Interactive UI:</strong> 3D Main Menu widgets integrated into the game environment with layered ambient audio design.</li>",
+        "<li><strong>Performance:</strong> Extensive profiling and asset optimization (texture resizing, mesh cleaning) to maintain 60+ FPS on Windows.</li>"
       ]
     },
 
     "video_title": "Gameplay Trailer",
     "gallery_title": "Project Documentation",
     "gallery": {
-      "codemap_title": "System Architecture",
+      "codemap_title": "Initial System Architecture",
       "codemap_desc": [
-        "The initial software map designed during the thesis phase, outlining the class hierarchy and communication logic between core systems.",
-        "<br><a href='../media/games/ruins-rhapsody/code-map.pdf' target='_blank' style='color:var(--accent); font-weight:500; text-decoration:underline;'>View Technical PDF</a>"
+        "Foundational software map designed during the thesis phase. It illustrates the core logic and class interactions that serve as the project's backbone.",
+        "<br><a href='../media/games/ruins-rhapsody/code-map.pdf' target='_blank' style='color:var(--accent); font-weight:500; text-decoration:underline;'>View full-res Technical PDF</a>"
       ],
 
-      "components_title": "Character Blueprint Structure",
-      "components_desc": "Overview of the modular component stack in Blueprint, showing how C++ logic (Climb, Swim, Inventory) is attached to the character.",
+      "components_title": "Modular Character Logic",
+      "components_desc": "Breakdown of custom C++ components (Climb, Swim, Inventory) extending the MetaHuman base for a reusable traversal framework.",
 
       "input_title": "Enhanced Input System",
-      "input_desc": "Usage of UE5 Enhanced Input for a scalable control scheme covering traversal, combat, and UI interaction.",
+      "input_desc": "Scalable control scheme using UE5 Data Assets to manage traversal, combat, and interaction actions.",
 
-      "ai_title": "AI & Interaction",
-      "ai_desc": "Setup for enemy sensing, interactive world objects, and visual feedback through Niagara VFX.",
+      "ai_title": "AI & Parameter Tuning",
+      "ai_desc": "Configuration for enemy sensing, procedural loot systems, and visual feedback through Niagara VFX.",
 
-      "bt_title": "Enemy Behavior Tree",
-      "bt_desc": "The logic flow for the robotic guardian, handling patrol states, player detection, and engagement."
+      "bt_title": "AI Behavior Trees",
+      "bt_desc": "Logic flow featuring 3 main states: Autonomous Patrol, Player Chasing, and Ranged Combat with cooldown management.",
+
+      "world_title": "World Composition & Streaming",
+      "world_desc": "Implementation of Level Streaming to optimize performance, allowing asynchronous loading of game areas without interruptions in gameplay (invisible loading)."
     },
 
     "cta": {
       "title": "Ready to <em>explore?</em>",
-      "subtitle": "Download the demo and experience the technical framework in action.",
+      "subtitle": "Download the demo (~1.5 GB) and experience the technical framework in action.",
       "or": "or",
       "btn_back": "View more projects"
     }
