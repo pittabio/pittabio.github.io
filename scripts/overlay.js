@@ -1,19 +1,76 @@
-﻿// -- IMAGE OVERLAY -- //
+﻿// -- IMAGE OVERLAY SYSTEM -- //
 
-// Open an image as a pop-up
-function openPopup(imgEl) {
-    document.getElementById('popupImg').src = imgEl.src;
-    document.getElementById('overlay').classList.add('active');
-}
+(function() {
+    // 1. DYNAMIC OVERLAY CREATION
+    const overlayHtml = `
+        <div class="overlay" id="overlay">
+            <div class="popup-img-wrap" id="popupWrap"></div>
+        </div>
+    `;
 
-// Close the pop-up
-function closePopup(e) {
-    // If an event is passed, it only closes if the overlay (outside the image) is clicked.
-    if (e && e.target !== document.getElementById('overlay')) return;
-    document.getElementById('overlay').classList.remove('active');
-}
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.insertAdjacentHTML('beforeend', overlayHtml);
+        const overlay = document.getElementById('overlay');
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closePopup();
+        });
+    });
 
-// Close with Escape too
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') document.getElementById('overlay').classList.remove('active');
-});
+    // 2. TRANSLATION HELPER
+    window.t = function(key) {
+        if (!window.currentTranslations) return key;
+        return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), window.currentTranslations) || key;
+    };
+
+    // 3. SINGLE IMAGE OPENING
+    window.openPopup = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <img src="${imgEl.src}" class="popup-img-single" alt="Enlarged view">
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
+
+    // 4. TRIPLE OPENING
+    window.openPopups = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+
+        const data = {
+            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
+            img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2'),
+            img3: imgEl.getAttribute('data-img3'), desc3: imgEl.getAttribute('data-desc3')
+        };
+
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <div class="popup-grid">
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img2}" alt="">
+                    <p>${t(data.desc2)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img3}" alt="">
+                    <p>${t(data.desc3)}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
+
+    // 5. CLOSING
+    window.closePopup = function() {
+        document.body.classList.remove('no-scroll');
+        document.getElementById('overlay').classList.remove('active');
+    };
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closePopup();
+    });
+})();

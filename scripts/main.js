@@ -118,7 +118,9 @@ async function changeLanguage(lang) {
         const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
         const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
 
+        // Global translations
         const translations = { ...commonTranslations, ...pageTranslations };
+        window.currentTranslations = translations;
 
         const getNestedTranslation = (key) => {
             return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
