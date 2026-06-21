@@ -18,14 +18,14 @@ body.no-scroll {
 .overlay.active {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* or center */
 }
 
 /* Flexible container */
 .popup-img-wrap {
     position: relative;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1600px; /* Container */
     margin: auto;
 }
 
@@ -61,7 +61,7 @@ body.no-scroll {
 
 .popup-item img {
     width: 100%;
-    height: 300px; /* Fixed height for uniformity */
+    height: 500px; /* Fixed height for uniformity */
     object-fit: contain;
     background: #000;
     border-radius: 4px;

@@ -19,7 +19,14 @@
     // 2. TRANSLATION HELPER
     window.t = function(key) {
         if (!window.currentTranslations) return key;
-        return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), window.currentTranslations) || key;
+
+        // Retrieve the value from JSON
+        const val = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), window.currentTranslations);
+
+        if (!val) return key;
+
+        // IF it's an array, join the elements with a space. ELSE, return the value as is.
+        return Array.isArray(val) ? val.join(' ') : val;
     };
 
     // 3. SINGLE IMAGE OPENING
