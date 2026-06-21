@@ -1,0 +1,99 @@
+﻿{
+  "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
+
+  "zombie_page": {
+    "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
+    "tag": "Progetto Collaborativo · Unreal Engine 5",
+    "title": "Zombie Siege <em>Chronicles</em>",
+    "subtitle": "Un intenso Tower Defense strategico con difese modulari e un sistema di teletrasporto personalizzato.",
+    "btn_download": "Gioca su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Panoramica",
+      "title": "L'ultima difesa contro i non-morti",
+      "desc": [
+        "In un mondo devastato dai non-morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate implacabili.",
+        "Questo progetto è stato sviluppato in un <strong>ambiente collaborativo</strong>, permettendomi di concentrarmi su meccaniche sistemiche core, architettura UI e feature complesse come il sistema di portali.",
+        "Unisce strategia top-down e gestione delle risorse in tempo reale, premiando il posizionamento efficiente delle difese e la rapidità tattica."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Strategia e Sopravvivenza",
+      "items": [
+        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette (Robot, Railgun, Shotgun) e barriere per deviare e fermare le orde di zombie.</li>",
+        "<li><strong>Sistema di Portali:</strong> Una meccanica di teletrasporto strategica che permette al giocatore di spostarsi istantaneamente tra due punti della mappa.</li>",
+        "<li><strong>Ondate Dinamiche:</strong> Difficoltà crescente con diversi tipi di zombie (Tank, Runner, Sabotatori) che si adattano alle difese del giocatore.</li>",
+        "<li><strong>Eventi Speciali:</strong> Missioni 'Salva un Sopravvissuto' ad alto rischio che offrono salute o risorse extra durante l'assalto.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Ingegneria di Sistema",
+      "items": [
+        "<li><strong>Logica dei Portali:</strong> Sviluppo della logica C++/BP per i portali, inclusi attivazione per vicinanza, cooldown e teletrasporto fluido.</li>",
+        "<li><strong>Inventario e Shop:</strong> Creazione di un sistema UI completo per l'acquisto e la gestione delle difese, integrato con l'economia di gioco.</li>",
+        "<li><strong>Architettura UI/UX:</strong> Implementazione di Menu Principali 3D con percorsi camera su spline e HUD di gioco ad alte prestazioni.</li>",
+        "<li><strong>Caricamento Asincrono:</strong> Integrazione di schermate di caricamento professionali tramite plugin asincroni per transizioni fluide tra i livelli.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Sistemi",
+      "title": "Ottimizzazione e Rifinitura",
+      "items": [
+        "<li><strong>Standardizzazione Asset:</strong> Applicazione di naming convention e gerarchia di progetto per garantire una collaborazione fluida nel team.</li>",
+        "<li><strong>Gestione Collisioni:</strong> Ottimizzazione dei canali di collisione per difese sovrapposte e percorsi di navigazione dei nemici.</li>",
+        "<li><strong>Integrazione Audio:</strong> Progettazione di un sistema audio dinamico tramite mixer per l'immersione ambientale e feedback UI.</li>",
+        "<li><strong>Tutorial e UX:</strong> Creazione del framework 'How to Play' e step di tutorial interattivi per guidare i nuovi giocatori nelle basi strategiche.</li>"
+      ]
+    },
+
+    "video_title": "Panoramica Gameplay",
+    "gallery_title": "Documentazione Tecnica",
+    "gallery": {
+      "architecture_title": "Diagramma delle Classi",
+      "architecture_desc": "Mappa architettonica completa che illustra le relazioni tra logica della Game Mode, spawner nemici e gerarchia delle strutture.",
+
+      "portals": {
+        "title": "Sistema di teletrasporto",
+        "desc": "Implementazione della meccanica della coppia di portali. Questi attori posizionati in coppia consentono un rapido riposizionamento del giocatore durante intense ondate di combattimento.",
+
+        "desc1": [
+          "Analisi dell'actor Portale: include materiali dinamici (nella mesh Entrance Reference), piani d'interazione invisibili per la navigazione verticale",
+          "e una freccia di debug per verificare i vettori di entrata/uscita"
+        ],
+        "desc2": [
+          "Il sistema di posizionamento esegue controlli sulla superficie in tempo reale. Il portale diventa rosso (stato non valido) perché si tenta di costruire sulla strada,",
+          "dove le strutture sono proibite per non ostacolare il pathfinding."
+        ],
+        "desc3": [
+          "Verifica riuscita su superfici consentite (marciapiedi). La mesh diventa blu (stato valido), offrendo un feedback visivo immediato.",
+          "Questa logica garantisce un piazzamento strategico e previene conflitti di collisione con l'ambiente."
+        ]
+      },
+
+      "ui_title": "Layout Inventario e HUD",
+      "ui_desc": "L'interfaccia strategica che mostra gestione risorse, progressione ondate e lo shop modulare per l'acquisto di torrette.",
+
+      "menu_title": "Menu 3D Cinematico",
+      "menu_desc": "Ambiente 3D interattivo per il menu principale, con una CineCamera che segue un binario spline personalizzato.",
+
+      "howtoplay_title": "Onboarding e Tutorial",
+      "howtoplay_desc": "Il sistema widget 'How to Play' progettato per introdurre i diversi tipi di zombie e i punti di forza delle difese.",
+
+      "waves_title": "Scaling ed Economia",
+      "waves_desc": "Logica di scaling delle ondate, con potenziamento delle statistiche nemiche ogni quattro round per mantenere la sfida costante."
+    },
+
+    "cta": {
+      "title": "Pronto a <em>difendere?</em>",
+      "subtitle": "Consulta la documentazione completa o prova la demo su itch.io.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+﻿{
+  "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
+
+  "zombie_page": {
+    "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
+    "tag": "Collaborative Project · Unreal Engine 5",
+    "title": "Zombie Siege <em>Chronicles</em>",
+    "subtitle": "An intense Tower Defense strategy game featuring modular defenses and a custom teleportation system.",
+    "btn_download": "Play on itch.io",
+    "btn_back": "Back to Projects",
+
+    "about": {
+      "tag": "Overview",
+      "title": "The Last Stand Against the Undead",
+      "desc": [
+        "In a world ravaged by the undead, survival depends on strategic mastery. <strong>Zombie Siege Chronicles</strong> is a tower defense experience where players must protect their refuge from relentless waves.",
+        "This project was developed in a <strong>collaborative environment</strong>, allowing me to focus on core systemic mechanics, UI architecture, and complex gameplay features like the portal system.",
+        "It blends top-down strategy with real-time resource management, rewarding players for efficient defense placement and quick tactical thinking."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Mechanics",
+      "title": "Strategy & Survival",
+      "items": [
+        "<li><strong>Defensive Arsenal:</strong> Deploy a variety of turrets (Robot, Railgun, Shotgun) and barriers to redirect and halt zombie hordes.</li>",
+        "<li><strong>Portal System:</strong> A strategic teleportation mechanic allowing the player to instantly move between two custom-placed locations.</li>",
+        "<li><strong>Dynamic Waves:</strong> Escalating difficulty with diverse zombie types (Tanks, Runners, Saboteurs) that adapt to the player's defenses.</li>",
+        "<li><strong>Special Events:</strong> High-stakes 'Save a Survivor' missions that reward players with health or resources during the onslaught.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Technical",
+      "title": "Systemic Engineering",
+      "items": [
+        "<li><strong>Portal Logic:</strong> Developed the C++/BP logic for portal pairs, including distance-based activation, cooldowns, and seamless teleportation.</li>",
+        "<li><strong>Inventory & Shop:</strong> Built a comprehensive UI system for purchasing and managing defenses, integrated with the game's economy.</li>",
+        "<li><strong>UI/UX Architecture:</strong> Implemented 3D Main Menus with spline-based camera paths and high-performance in-game HUDs.</li>",
+        "<li><strong>Async Loading:</strong> Integrated professional loading screens using asynchronous plugins to maintain high polish during level transitions.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Systems",
+      "title": "Optimization & Polish",
+      "items": [
+        "<li><strong>Asset Standardization:</strong> Enforced naming conventions and project hierarchy to ensure smooth collaboration within the dev team.</li>",
+        "<li><strong>Collision Management:</strong> Optimized complex collision channels for overlapping defenses and enemy navigation paths.</li>",
+        "<li><strong>Audio Integration:</strong> Designed a dynamic audio system using mixers for environmental immersion and UI feedback.</li>",
+        "<li><strong>Tutorial & UX:</strong> Created the 'How to Play' framework and interactive tutorial steps to guide new players through strategy basics.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Overview",
+    "gallery_title": "Technical Documentation",
+    "gallery": {
+      "architecture_title": "Technical Class Diagram",
+      "architecture_desc": "Full architectural map illustrating the relationships between game mode logic, enemy spawners, and the defensive structure hierarchy.",
+
+      "portals": {
+        "title": "Teleportation System",
+        "desc": "Implementation of the portal pair mechanic. These dual-placed actors allow for rapid player repositioning during intense combat waves.",
+
+        "desc1": [
+          "Breakdown of the Portal actor: features dynamic materials (in the Entrance Reference mesh), invisible interaction planes for vertical navigation",
+          "and a debug arrow to verify entry/exit vectors during development"
+        ],
+        "desc2": [
+          "The placement system performs real-time surface checks. Here, the portal turns red (invalid state) because the player is attempting to build on the road",
+          "where structures are prohibited to ensure pathfinding integrity."
+        ],
+        "desc3": [
+          "Successful verification on allowed surfaces (sidewalks). The mesh switches to blue (valid state), providing immediate intuitive feedback.",
+          "This logic ensures strategic placement and prevents collision conflicts with the environment."
+        ]
+      },
+
+      "ui_title": "Inventory & HUD Layout",
+      "ui_desc": "The strategic interface showing resource management, wave progression, and the modular shop for buying new turrets.",
+
+      "menu_title": "3D Cinematic Menu",
+      "menu_desc": "A fully interactive 3D environment used for the main menu, featuring a CineCamera rig following a custom spline rail.",
+
+      "howtoplay_title": "Onboarding & Tutorials",
+      "howtoplay_desc": "The 'How to Play' widget system designed to introduce diverse zombie types and defensive strengths to the player.",
+
+      "waves_title": "Scaling & Economy",
+      "waves_desc": "Back-end logic for wave escalation, managing enemy stat upgrades every four rounds to maintain a constant challenge."
+    },
+
+    "cta": {
+      "title": "Ready to <em>defend?</em>",
+      "subtitle": "Check out the full project documentation or try the demo on itch.io.",
+      "or": "or",
+      "btn_back": "View more projects"
+    }
+  }
+}
