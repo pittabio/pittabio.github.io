@@ -59,18 +59,18 @@
       "architecture_desc": "Mappa architettonica completa che illustra le relazioni tra logica della Game Mode, spawner nemici e gerarchia delle strutture.",
 
       "portals": {
-        "title": "Sistema di teletrasporto",
-        "desc": "Implementazione della meccanica della coppia di portali. Questi attori posizionati in coppia consentono un rapido riposizionamento del giocatore durante intense ondate di combattimento.",
+        "title": "Sistema di Teletrasporto",
+        "desc": "Analisi tecnica della meccanica dei portali, con validazione entrata/uscita, stati dei materiali dinamici e logica di cooldown.",
 
-        "desc1": [
+        "img1": [
           "Analisi dell'actor Portale: include materiali dinamici (nella mesh Entrance Reference), piani d'interazione invisibili per la navigazione verticale",
           "e una freccia di debug per verificare i vettori di entrata/uscita"
         ],
-        "desc2": [
+        "img2": [
           "Il sistema di posizionamento esegue controlli sulla superficie in tempo reale. Il portale diventa rosso (stato non valido) perché si tenta di costruire sulla strada,",
           "dove le strutture sono proibite per non ostacolare il pathfinding."
         ],
-        "desc3": [
+        "img3": [
           "Verifica riuscita su superfici consentite (marciapiedi). La mesh diventa blu (stato valido), offrendo un feedback visivo immediato.",
           "Questa logica garantisce un piazzamento strategico e previene conflitti di collisione con l'ambiente."
         ]
