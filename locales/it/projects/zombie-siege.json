@@ -1,11 +1,11 @@
-﻿{
+{
   "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
 
   "zombie_page": {
     "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
     "tag": "Progetto Collaborativo · Unreal Engine 5",
     "title": "Zombie Siege <em>Chronicles</em>",
-    "subtitle": "Un intenso Tower Defense strategico con difese modulari e un sistema di teletrasporto personalizzato.",
+    "subtitle": "Un Tower Defense strategico con validazione del posizionamento e un sistema di portali modulare.",
     "btn_download": "Gioca su itch.io",
     "btn_back": "Torna ai Progetti",
 
@@ -14,8 +14,8 @@
       "title": "L'ultima difesa contro i non-morti",
       "desc": [
         "In un mondo devastato dai non-morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate implacabili.",
-        "Questo progetto è stato sviluppato in un <strong>ambiente collaborativo</strong>, permettendomi di concentrarmi su meccaniche sistemiche core, architettura UI e feature complesse come il sistema di portali.",
-        "Unisce strategia top-down e gestione delle risorse in tempo reale, premiando il posizionamento efficiente delle difese e la rapidità tattica."
+        "Sviluppato in un <strong>ambiente collaborativo</strong>, mi sono occupato delle meccaniche sistemiche core, dell'architettura UI e della logica di gameplay di alto livello.",
+        "Il progetto mostra una profonda integrazione tra sistemi backend C++ e feedback visivo in Blueprint, garantendo un'esperienza fluida e reattiva."
       ]
     },
 
@@ -23,10 +23,10 @@
       "tag": "Meccaniche",
       "title": "Strategia e Sopravvivenza",
       "items": [
-        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette (Robot, Railgun, Shotgun) e barriere per deviare e fermare le orde di zombie.</li>",
-        "<li><strong>Sistema di Portali:</strong> Una meccanica di teletrasporto strategica che permette al giocatore di spostarsi istantaneamente tra due punti della mappa.</li>",
-        "<li><strong>Ondate Dinamiche:</strong> Difficoltà crescente con diversi tipi di zombie (Tank, Runner, Sabotatori) che si adattano alle difese del giocatore.</li>",
-        "<li><strong>Eventi Speciali:</strong> Missioni 'Salva un Sopravvissuto' ad alto rischio che offrono salute o risorse extra durante l'assalto.</li>"
+        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette modulari e barriere. Alcune difese, come il filo spinato, infliggono danni passivi mentre bloccano il passaggio.</li>",
+        "<li><strong>Strategia Portali:</strong> Un sistema di teletrasporto a due actor che permette al giocatore di riposizionarsi istantaneamente sul campo di battaglia.</li>",
+        "<li><strong>Ondate Dinamiche:</strong> Difficoltà scalabile tramite potenziamenti delle statistiche basati sui round e attivazione di spawn point multipli.</li>",
+        "<li><strong>Eventi Superstiti:</strong> Missioni casuali per salvare NPC, che premiano il giocatore con salute per la base o risorse extra.</li>"
       ]
     },
 
@@ -34,21 +34,21 @@
       "tag": "Tecnica",
       "title": "Ingegneria di Sistema",
       "items": [
-        "<li><strong>Logica dei Portali:</strong> Sviluppo della logica C++/BP per i portali, inclusi attivazione per vicinanza, cooldown e teletrasporto fluido.</li>",
-        "<li><strong>Inventario e Shop:</strong> Creazione di un sistema UI completo per l'acquisto e la gestione delle difese, integrato con l'economia di gioco.</li>",
-        "<li><strong>Architettura UI/UX:</strong> Implementazione di Menu Principali 3D con percorsi camera su spline e HUD di gioco ad alte prestazioni.</li>",
-        "<li><strong>Caricamento Asincrono:</strong> Integrazione di schermate di caricamento professionali tramite plugin asincroni per transizioni fluide tra i livelli.</li>"
+        "<li><strong>Validazione Posizionamento:</strong> Un sistema basato su collisioni che utilizza aree specializzate per verificare se una difesa può essere costruita su una superficie.</li>",
+        "<li><strong>Logica Portali C++:</strong> Implementazione di vettori di entrata/uscita, timer di cooldown e gestione degli stati visivi della rete di teletrasporto.</li>",
+        "<li><strong>Caricamento Asincrono:</strong> Transizioni professionali tramite schermate di caricamento asincrone per gestire gli asset della mappa senza cali di frame.</li>",
+        "<li><strong>Architettura UI:</strong> Struttura complessa per HUD e Shop, con aggiornamento dell'economia in tempo reale e visualizzazione modulare dell'inventario.</li>"
       ]
     },
 
     "systems": {
       "tag": "Sistemi",
-      "title": "Ottimizzazione e Rifinitura",
+      "title": "Ottimizzazione e Workflow",
       "items": [
-        "<li><strong>Standardizzazione Asset:</strong> Applicazione di naming convention e gerarchia di progetto per garantire una collaborazione fluida nel team.</li>",
-        "<li><strong>Gestione Collisioni:</strong> Ottimizzazione dei canali di collisione per difese sovrapposte e percorsi di navigazione dei nemici.</li>",
-        "<li><strong>Integrazione Audio:</strong> Progettazione di un sistema audio dinamico tramite mixer per l'immersione ambientale e feedback UI.</li>",
-        "<li><strong>Tutorial e UX:</strong> Creazione del framework 'How to Play' e step di tutorial interattivi per guidare i nuovi giocatori nelle basi strategiche.</li>"
+        "<li><strong>Standardizzazione Asset:</strong> Naming convention e gerarchia di progetto rigorose per facilitare la collaborazione nel team di sviluppo.</li>",
+        "<li><strong>Audio Ibrido:</strong> Mixer audio dinamici per l'immersione ambientale, integrati con SFX posizionali per le azioni di combattimento.</li>",
+        "<li><strong>Spline Camera:</strong> Sequenze per il menu cinematico che utilizzano rig per telecamere su spline per un background 3D dinamico.</li>",
+        "<li><strong>Ottimizzazione Collisioni:</strong> Trace Channel personalizzati per separare la navigazione dei nemici dall'interazione del giocatore.</li>"
       ]
     },
 

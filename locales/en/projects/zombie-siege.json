@@ -1,62 +1,62 @@
-﻿{
+{
   "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
 
   "zombie_page": {
     "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
-    "tag": "Collaborative Project · Unreal Engine 5",
+    "tag": "Progetto Collaborativo · Unreal Engine 5",
     "title": "Zombie Siege <em>Chronicles</em>",
-    "subtitle": "An intense Tower Defense strategy game featuring modular defenses and a custom teleportation system.",
-    "btn_download": "Play on itch.io",
-    "btn_back": "Back to Projects",
+    "subtitle": "Un Tower Defense strategico con validazione del posizionamento e un sistema di portali modulare.",
+    "btn_download": "Gioca su itch.io",
+    "btn_back": "Torna ai Progetti",
 
     "about": {
-      "tag": "Overview",
-      "title": "The Last Stand Against the Undead",
+      "tag": "Panoramica",
+      "title": "L'ultima difesa contro i non-morti",
       "desc": [
-        "In a world ravaged by the undead, survival depends on strategic mastery. <strong>Zombie Siege Chronicles</strong> is a tower defense experience where players must protect their refuge from relentless waves.",
-        "This project was developed in a <strong>collaborative environment</strong>, allowing me to focus on core systemic mechanics, UI architecture, and complex gameplay features like the portal system.",
-        "It blends top-down strategy with real-time resource management, rewarding players for efficient defense placement and quick tactical thinking."
+        "In un mondo devastato dai non-morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate implacabili.",
+        "Sviluppato in un <strong>ambiente collaborativo</strong>, mi sono occupato delle meccaniche sistemiche core, dell'architettura UI e della logica di gameplay di alto livello.",
+        "Il progetto mostra una profonda integrazione tra sistemi backend C++ e feedback visivo in Blueprint, garantendo un'esperienza fluida e reattiva."
       ]
     },
 
     "gameplay": {
-      "tag": "Mechanics",
-      "title": "Strategy & Survival",
+      "tag": "Meccaniche",
+      "title": "Strategia e Sopravvivenza",
       "items": [
-        "<li><strong>Defensive Arsenal:</strong> Deploy a variety of turrets (Robot, Railgun, Shotgun) and barriers to redirect and halt zombie hordes.</li>",
-        "<li><strong>Portal System:</strong> A strategic teleportation mechanic allowing the player to instantly move between two custom-placed locations.</li>",
-        "<li><strong>Dynamic Waves:</strong> Escalating difficulty with diverse zombie types (Tanks, Runners, Saboteurs) that adapt to the player's defenses.</li>",
-        "<li><strong>Special Events:</strong> High-stakes 'Save a Survivor' missions that reward players with health or resources during the onslaught.</li>"
+        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette modulari e barriere. Alcune difese, come il filo spinato, infliggono danni passivi mentre bloccano il passaggio.</li>",
+        "<li><strong>Strategia Portali:</strong> Un sistema di teletrasporto a due actor che permette al giocatore di riposizionarsi istantaneamente sul campo di battaglia.</li>",
+        "<li><strong>Ondate Dinamiche:</strong> Difficoltà scalabile tramite potenziamenti delle statistiche basati sui round e attivazione di spawn point multipli.</li>",
+        "<li><strong>Eventi Superstiti:</strong> Missioni casuali per salvare NPC, che premiano il giocatore con salute per la base o risorse extra.</li>"
       ]
     },
 
     "tech": {
-      "tag": "Technical",
-      "title": "Systemic Engineering",
+      "tag": "Tecnica",
+      "title": "Ingegneria di Sistema",
       "items": [
-        "<li><strong>Portal Logic:</strong> Developed the C++/BP logic for portal pairs, including distance-based activation, cooldowns, and seamless teleportation.</li>",
-        "<li><strong>Inventory & Shop:</strong> Built a comprehensive UI system for purchasing and managing defenses, integrated with the game's economy.</li>",
-        "<li><strong>UI/UX Architecture:</strong> Implemented 3D Main Menus with spline-based camera paths and high-performance in-game HUDs.</li>",
-        "<li><strong>Async Loading:</strong> Integrated professional loading screens using asynchronous plugins to maintain high polish during level transitions.</li>"
+        "<li><strong>Validazione Posizionamento:</strong> Un sistema basato su collisioni che utilizza aree specializzate per verificare se una difesa può essere costruita su una superficie.</li>",
+        "<li><strong>Logica Portali C++:</strong> Implementazione di vettori di entrata/uscita, timer di cooldown e gestione degli stati visivi della rete di teletrasporto.</li>",
+        "<li><strong>Caricamento Asincrono:</strong> Transizioni professionali tramite schermate di caricamento asincrone per gestire gli asset della mappa senza cali di frame.</li>",
+        "<li><strong>Architettura UI:</strong> Struttura complessa per HUD e Shop, con aggiornamento dell'economia in tempo reale e visualizzazione modulare dell'inventario.</li>"
       ]
     },
 
     "systems": {
-      "tag": "Systems",
-      "title": "Optimization & Polish",
+      "tag": "Sistemi",
+      "title": "Ottimizzazione e Workflow",
       "items": [
-        "<li><strong>Asset Standardization:</strong> Enforced naming conventions and project hierarchy to ensure smooth collaboration within the dev team.</li>",
-        "<li><strong>Collision Management:</strong> Optimized complex collision channels for overlapping defenses and enemy navigation paths.</li>",
-        "<li><strong>Audio Integration:</strong> Designed a dynamic audio system using mixers for environmental immersion and UI feedback.</li>",
-        "<li><strong>Tutorial & UX:</strong> Created the 'How to Play' framework and interactive tutorial steps to guide new players through strategy basics.</li>"
+        "<li><strong>Standardizzazione Asset:</strong> Naming convention e gerarchia di progetto rigorose per facilitare la collaborazione nel team di sviluppo.</li>",
+        "<li><strong>Audio Ibrido:</strong> Mixer audio dinamici per l'immersione ambientale, integrati con SFX posizionali per le azioni di combattimento.</li>",
+        "<li><strong>Spline Camera:</strong> Sequenze per il menu cinematico che utilizzano rig per telecamere su spline per un background 3D dinamico.</li>",
+        "<li><strong>Ottimizzazione Collisioni:</strong> Trace Channel personalizzati per separare la navigazione dei nemici dall'interazione del giocatore.</li>"
       ]
     },
 
-    "video_title": "Gameplay Overview",
-    "gallery_title": "Technical Documentation",
+    "video_title": "Panoramica Gameplay",
+    "gallery_title": "Documentazione Tecnica",
     "gallery": {
-      "architecture_title": "Technical Class Diagram",
-      "architecture_desc": "Full architectural map illustrating the relationships between game mode logic, enemy spawners, and the defensive structure hierarchy.",
+      "architecture_title": "Diagramma delle Classi",
+      "architecture_desc": "Mappa architettonica completa che illustra le relazioni tra logica della Game Mode, spawner nemici e gerarchia delle strutture.",
 
       "portals": {
         "title": "Teleportation System",
