@@ -76,8 +76,23 @@
         ]
       },
 
-      "ui_title": "Inventory & HUD Layout",
-      "ui_desc": "The strategic interface showing resource management, wave progression, and the modular shop for buying new turrets.",
+      "shop": {
+        "title": "Data-Driven Shop System",
+        "desc": "A modular UI architecture that dynamically populates its content by reading from centralized Data Tables, ensuring a clear separation between logic and balancing.",
+
+        "img1": [
+          "Item Data Table: ",
+          "a view of the Row Editor where prices, stats, and icons are managed. This setup allows for rapid gameplay balancing without modifying the UI code."
+        ],
+        "img2": [
+          "Shop UI Architecture: ",
+          "the main widget hierarchy using responsive containers (Canvas, Borders, Scroll Boxes) to organize the dynamically generated shop entries."
+        ],
+        "img3": [
+          "Modular Item Widget: ",
+          "a dedicated reusable widget for individual shop items. It automatically updates its visuals and functionality based on the specific row data received."
+        ]
+      },
 
       "menu_title": "3D Cinematic Menu",
       "menu_desc": "A fully interactive 3D environment used for the main menu, featuring a CineCamera rig following a custom spline rail.",

@@ -76,8 +76,23 @@
         ]
       },
 
-      "ui_title": "Layout Inventario e HUD",
-      "ui_desc": "L'interfaccia strategica che mostra gestione risorse, progressione ondate e lo shop modulare per l'acquisto di torrette.",
+      "shop": {
+        "title": "Sistema Shop Data-Driven",
+        "desc": "Un'architettura UI modulare che popola i contenuti dinamicamente leggendo da Data Table centralizzate, garantendo una netta separazione tra logica e bilanciamento.",
+
+        "img1": [
+          "Tabella Dati Oggetti: ",
+          "vista del Row Editor dove vengono gestiti prezzi, statistiche e icone. Questa configurazione permette modifiche rapide al bilanciamento senza toccare il codice UI."
+        ],
+        "img2": [
+          "Architettura UI dello Shop: ",
+          "la gerarchia del widget principale che utilizza contenitori reattivi (Canvas, Border, Scroll Box) per organizzare le voci dello shop generate dinamicamente."
+        ],
+        "img3": [
+          "Widget Modulare Oggetto: ",
+          "un widget riutilizzabile dedicato al singolo elemento dello shop. Aggiorna automaticamente grafica e funzioni in base ai dati della riga ricevuta."
+        ]
+      },
 
       "menu_title": "Menu 3D Cinematico",
       "menu_desc": "Ambiente 3D interattivo per il menu principale, con una CineCamera che segue un binario spline personalizzato.",
