@@ -94,14 +94,25 @@
         ]
       },
 
-      "menu_title": "Menu 3D Cinematico",
-      "menu_desc": "Ambiente 3D interattivo per il menu principale, con una CineCamera che segue un binario spline personalizzato.",
+      "menu": {
+        "title": "Menu Cinematico Ibrido",
+        "desc": "Un menu principale immersivo che fonde un ambiente 3D in tempo reale con una UI complessa. Include movimenti di camera cinematici e un sistema di stratificazione interattiva ottimizzato.",
 
-      "howtoplay_title": "Onboarding e Tutorial",
-      "howtoplay_desc": "Il sistema widget 'How to Play' progettato per introdurre i diversi tipi di zombie e i punti di forza delle difese.",
+        "img1": [
+          "Rig Camera su Spline",
+          "Implementazione di una CineCamera collegata a un binario spline personalizzato. Questo crea una carrellata cinematografica fluida attraverso l'hangar all'avvio del gioco."
+        ],
+        "img2": [
+          "Stratificazione UI Interattiva",
+          "Analisi della gerarchia dei widget che mostra il sistema di sovrapposizione dei pulsanti. Ho utilizzato livelli di hit-test invisibili per gestire interazioni complesse, come l'overlay 'How to Play'."
+        ]
+      },
+
+      "placement_title": "Logica di Posizionamento",
+      "placement_desc": "Il sistema di aree di collisione usato per validare i punti di costruzione, garantendo che le difese siano poste solo su superfici consentite.",
 
       "waves_title": "Scaling ed Economia",
-      "waves_desc": "Logica di scaling delle ondate, con potenziamento delle statistiche nemiche ogni quattro round per mantenere la sfida costante."
+      "waves_desc": "Logica backend per l'escalation delle ondate, che gestisce il potenziamento dei nemici e l'attivazione degli spawn point in base ai round."
     },
 
     "cta": {

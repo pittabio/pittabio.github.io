@@ -3,112 +3,123 @@
 
   "zombie_page": {
     "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
-    "tag": "Progetto Collaborativo · Unreal Engine 5",
+    "tag": "Collaborative Project · Unreal Engine 5",
     "title": "Zombie Siege <em>Chronicles</em>",
-    "subtitle": "Un Tower Defense strategico con validazione del posizionamento e un sistema di portali modulare.",
-    "btn_download": "Gioca su itch.io",
-    "btn_back": "Torna ai Progetti",
+    "subtitle": "A strategic Tower Defense featuring placement validation and a modular portal system.",
+    "btn_download": "Play on itch.io",
+    "btn_back": "Back to Projects",
 
     "about": {
-      "tag": "Panoramica",
-      "title": "L'ultima difesa contro i non-morti",
+      "tag": "Overview",
+      "title": "The ultimate defense against the undead",
       "desc": [
-        "In un mondo devastato dai non-morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate implacabili.",
-        "Sviluppato in un <strong>ambiente collaborativo</strong>, mi sono occupato delle meccaniche sistemiche core, dell'architettura UI e della logica di gameplay di alto livello.",
-        "Il progetto mostra una profonda integrazione tra sistemi backend C++ e feedback visivo in Blueprint, garantendo un'esperienza fluida e reattiva."
+        "In a world devastated by the undead, survival depends on strategy. <strong>Zombie Siege Chronicles</strong> is a tower defense game where players must protect their shelter from relentless waves.",
+        "Developed in a <strong>collaborative environment</strong>, I was responsible for the core systemic mechanics, UI architecture, and high-level gameplay logic.",
+        "The project showcases deep integration between C++ backend systems and Blueprint visual feedback, ensuring a smooth and responsive experience."
       ]
     },
 
     "gameplay": {
-      "tag": "Meccaniche",
-      "title": "Strategia e Sopravvivenza",
+      "tag": "Mechanics",
+      "title": "Strategy and Survival",
       "items": [
-        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette modulari e barriere. Alcune difese, come il filo spinato, infliggono danni passivi mentre bloccano il passaggio.</li>",
-        "<li><strong>Strategia Portali:</strong> Un sistema di teletrasporto a due actor che permette al giocatore di riposizionarsi istantaneamente sul campo di battaglia.</li>",
-        "<li><strong>Ondate Dinamiche:</strong> Difficoltà scalabile tramite potenziamenti delle statistiche basati sui round e attivazione di spawn point multipli.</li>",
-        "<li><strong>Eventi Superstiti:</strong> Missioni casuali per salvare NPC, che premiano il giocatore con salute per la base o risorse extra.</li>"
+        "<li><strong>Defensive Arsenal:</strong> Deploy modular turrets and barriers. Some defenses, such as barbed wire, deal passive damage while blocking passage.</li>",
+        "<li><strong>Portal Strategy:</strong> A two-actor teleportation system that allows the player to instantly reposition across the battlefield.</li>",
+        "<li><strong>Dynamic Waves:</strong> Scalable difficulty through round-based stat boosts and the activation of multiple spawn points.</li>",
+        "<li><strong>Survivor Events:</strong> Random missions to rescue NPCs, rewarding the player with base health or extra resources.</li>"
       ]
     },
 
     "tech": {
-      "tag": "Tecnica",
-      "title": "Ingegneria di Sistema",
+      "tag": "Technical",
+      "title": "System Engineering",
       "items": [
-        "<li><strong>Validazione Posizionamento:</strong> Un sistema basato su collisioni che utilizza aree specializzate per verificare se una difesa può essere costruita su una superficie.</li>",
-        "<li><strong>Logica Portali C++:</strong> Implementazione di vettori di entrata/uscita, timer di cooldown e gestione degli stati visivi della rete di teletrasporto.</li>",
-        "<li><strong>Caricamento Asincrono:</strong> Transizioni professionali tramite schermate di caricamento asincrone per gestire gli asset della mappa senza cali di frame.</li>",
-        "<li><strong>Architettura UI:</strong> Struttura complessa per HUD e Shop, con aggiornamento dell'economia in tempo reale e visualizzazione modulare dell'inventario.</li>"
+        "<li><strong>Placement Validation:</strong> A collision-based system using specialized areas to verify if a defense can be built on a specific surface.</li>",
+        "<li><strong>C++ Portal Logic:</strong> Implementation of entry/exit vectors, cooldown timers, and visual state management for the teleportation network.</li>",
+        "<li><strong>Asynchronous Loading:</strong> Professional transitions via asynchronous loading screens to manage map assets without frame drops.</li>",
+        "<li><strong>UI Architecture:</strong> Complex structure for HUD and Shop, featuring real-time economy updates and modular inventory visualization.</li>"
       ]
     },
 
     "systems": {
-      "tag": "Sistemi",
-      "title": "Ottimizzazione e Workflow",
+      "tag": "Systems",
+      "title": "Optimization and Workflow",
       "items": [
-        "<li><strong>Standardizzazione Asset:</strong> Naming convention e gerarchia di progetto rigorose per facilitare la collaborazione nel team di sviluppo.</li>",
-        "<li><strong>Audio Ibrido:</strong> Mixer audio dinamici per l'immersione ambientale, integrati con SFX posizionali per le azioni di combattimento.</li>",
-        "<li><strong>Spline Camera:</strong> Sequenze per il menu cinematico che utilizzano rig per telecamere su spline per un background 3D dinamico.</li>",
-        "<li><strong>Ottimizzazione Collisioni:</strong> Trace Channel personalizzati per separare la navigazione dei nemici dall'interazione del giocatore.</li>"
+        "<li><strong>Asset Standardization:</strong> Strict naming conventions and project hierarchy to facilitate collaboration within the development team.</li>",
+        "<li><strong>Hybrid Audio:</strong> Dynamic audio mixers for environmental immersion, integrated with positional SFX for combat actions.</li>",
+        "<li><strong>Spline Camera:</strong> Cinematic menu sequences using spline-based camera rigs for a dynamic 3D background.</li>",
+        "<li><strong>Collision Optimization:</strong> Custom Trace Channels to separate enemy navigation from player interaction.</li>"
       ]
     },
 
-    "video_title": "Panoramica Gameplay",
-    "gallery_title": "Documentazione Tecnica",
+    "video_title": "Gameplay Overview",
+    "gallery_title": "Technical Documentation",
     "gallery": {
-      "architecture_title": "Diagramma delle Classi",
-      "architecture_desc": "Mappa architettonica completa che illustra le relazioni tra logica della Game Mode, spawner nemici e gerarchia delle strutture.",
+      "architecture_title": "Class Diagram",
+      "architecture_desc": "Full architectural map illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy.",
 
       "portals": {
-        "title": "Sistema di Teletrasporto",
-        "desc": "Analisi tecnica della meccanica dei portali, con validazione entrata/uscita, stati dei materiali dinamici e logica di cooldown.",
+        "title": "Teleportation System",
+        "desc": "Technical analysis of the portal mechanics, featuring entry/exit validation, dynamic material states, and cooldown logic.",
 
         "img1": [
-          "Breakdown of the Portal actor: features dynamic materials (in the Entrance Reference mesh), invisible interaction planes for vertical navigation",
-          "and a debug arrow to verify entry/exit vectors during development"
+          "Portal actor analysis: includes dynamic materials (in the Entrance Reference mesh), invisible interaction planes for vertical navigation,",
+          "and a debug arrow to verify entry/exit vectors."
         ],
         "img2": [
-          "The placement system performs real-time surface checks. Here, the portal turns red (invalid state) because the player is attempting to build on the road",
-          "where structures are prohibited to ensure pathfinding integrity."
+          "The placement system performs real-time surface checks. The portal turns red (invalid state) when attempting to build on the road,",
+          "where structures are prohibited to avoid obstructing pathfinding."
         ],
         "img3": [
-          "Successful verification on allowed surfaces (sidewalks). The mesh switches to blue (valid state), providing immediate intuitive feedback.",
+          "Successful verification on allowed surfaces (sidewalks). The mesh turns blue (valid state), providing immediate visual feedback.",
           "This logic ensures strategic placement and prevents collision conflicts with the environment."
         ]
       },
 
       "shop": {
         "title": "Data-Driven Shop System",
-        "desc": "A modular UI architecture that dynamically populates its content by reading from centralized Data Tables, ensuring a clear separation between logic and balancing.",
+        "desc": "A modular UI architecture that populates content dynamically by reading from centralized Data Tables, ensuring a clear separation between logic and balancing.",
 
         "img1": [
           "Item Data Table: ",
-          "a view of the Row Editor where prices, stats, and icons are managed. This setup allows for rapid gameplay balancing without modifying the UI code."
+          "view of the Row Editor where prices, stats, and icons are managed. This setup allows for quick balancing changes without touching the UI code."
         ],
         "img2": [
           "Shop UI Architecture: ",
-          "the main widget hierarchy using responsive containers (Canvas, Borders, Scroll Boxes) to organize the dynamically generated shop entries."
+          "the main widget hierarchy using responsive containers (Canvas, Border, Scroll Box) to organize dynamically generated shop entries."
         ],
         "img3": [
           "Modular Item Widget: ",
-          "a dedicated reusable widget for individual shop items. It automatically updates its visuals and functionality based on the specific row data received."
+          "a reusable widget dedicated to a single shop element. It automatically updates graphics and functions based on the received row data."
         ]
       },
 
-      "menu_title": "3D Cinematic Menu",
-      "menu_desc": "A fully interactive 3D environment used for the main menu, featuring a CineCamera rig following a custom spline rail.",
+      "menu": {
+        "title": "Hybrid Cinematic Menu",
+        "desc": "An immersive main menu blending a real-time 3D environment with a complex UI. Includes cinematic camera movements and an optimized interactive layering system.",
 
-      "howtoplay_title": "Onboarding & Tutorials",
-      "howtoplay_desc": "The 'How to Play' widget system designed to introduce diverse zombie types and defensive strengths to the player.",
+        "img1": [
+          "Spline Camera Rig",
+          "Implementation of a CineCamera attached to a custom spline rail. This creates a smooth cinematic tracking shot through the hangar upon game startup."
+        ],
+        "img2": [
+          "Interactive UI Layering",
+          "Analysis of the widget hierarchy showing the button layering system. I used invisible hit-test levels to handle complex interactions, such as the 'How to Play' overlay."
+        ]
+      },
 
-      "waves_title": "Scaling & Economy",
-      "waves_desc": "Back-end logic for wave escalation, managing enemy stat upgrades every four rounds to maintain a constant challenge."
+      "placement_title": "Placement Logic",
+      "placement_desc": "The collision area system used to validate build points, ensuring defenses are only placed on allowed surfaces.",
+
+      "waves_title": "Scaling and Economy",
+      "waves_desc": "Backend logic for wave escalation, managing enemy scaling and spawn point activation based on rounds."
     },
 
     "cta": {
       "title": "Ready to <em>defend?</em>",
-      "subtitle": "Check out the full project documentation or try the demo on itch.io.",
+      "subtitle": "Check out the full documentation or try the demo on itch.io.",
       "or": "or",
-      "btn_back": "View more projects"
+      "btn_back": "See other projects"
     }
   }
 }
