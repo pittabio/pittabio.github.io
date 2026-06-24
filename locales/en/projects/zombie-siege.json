@@ -108,8 +108,22 @@
         ]
       },
 
-      "placement_title": "Placement Logic",
-      "placement_desc": "The collision area system used to validate build points, ensuring defenses are only placed on allowed surfaces.",
+      "placement": {
+        "title": "Spatial Placement Validation",
+        "desc": [
+          "A robust system designed to enforce building restrictions.",
+          "It cross-checks the item type against area-specific collision volumes to ensure tactical defenses are deployed only on valid terrain."
+        ],
+
+        "img1": [
+          "A look at the Turret's internal properties. I used a lightweight 'uint8' variable to define the item type,",
+          "allowing the placement logic to quickly identify if the object belongs on a sidewalk or a road."
+        ],
+        "img2": [
+          "The BP_TurretsArea blueprint acts as a trigger volume. It integrates a property selector ('Area Type')",
+          "and custom meshes to define the exact boundaries where specific defenses can be successfully built."
+        ]
+      },
 
       "waves_title": "Scaling and Economy",
       "waves_desc": "Backend logic for wave escalation, managing enemy scaling and spawn point activation based on rounds."

@@ -108,8 +108,22 @@
         ]
       },
 
-      "placement_title": "Logica di Posizionamento",
-      "placement_desc": "Il sistema di aree di collisione usato per validare i punti di costruzione, garantendo che le difese siano poste solo su superfici consentite.",
+      "placement": {
+        "title": "Validazione del Posizionamento",
+        "desc": [
+          "Un sistema robusto progettato per far rispettare le restrizioni di costruzione.",
+          "Incrocia il tipo di oggetto con volumi di collisione specifici per garantire che le difese siano schierate solo su terreni validi."
+        ],
+
+        "img1": [
+          "Uno sguardo alle proprietà interne della Torretta. Ho utilizzato una variabile leggera 'uint8' per definire il tipo di oggetto,",
+          "permettendo alla logica di posizionamento di identificare rapidamente se l'oggetto appartiene al marciapiede o alla strada."
+        ],
+        "img2": [
+          "Il blueprint BP_TurretsArea funge da volume di trigger. Integra un selettore di proprietà ('Area Type')",
+          "e mesh personalizzate per definire i confini esatti in cui specifiche difese possono essere costruite con successo."
+        ]
+      },
 
       "waves_title": "Scaling ed Economia",
       "waves_desc": "Logica backend per l'escalation delle ondate, che gestisce il potenziamento dei nemici e l'attivazione degli spawn point in base ai round."
