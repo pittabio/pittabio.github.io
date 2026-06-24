@@ -29,8 +29,8 @@
         return Array.isArray(val) ? val.join(' ') : val;
     };
 
-    // 3. SINGLE IMAGE OPENING
-    window.openPopup = function(imgEl) {
+    // 3a. SINGLE IMAGE OPENING
+    window.openOneImage = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
         wrap.innerHTML = `
@@ -40,8 +40,34 @@
         document.getElementById('overlay').classList.add('active');
     };
 
-    // 4. TRIPLE OPENING
-    window.openPopups = function(imgEl) {
+    // 3b. DOUBLE OPENING
+    window.openTwoImages = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+
+        const data = {
+            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
+            img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2')
+        };
+
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <div class="popup-grid">
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img2}" alt="">
+                    <p>${t(data.desc2)}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
+
+    // 3c. TRIPLE OPENING
+    window.openThreeImages = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
 
@@ -71,7 +97,7 @@
         document.getElementById('overlay').classList.add('active');
     };
 
-    // 5. CLOSING
+    // 4. CLOSING
     window.closePopup = function() {
         document.body.classList.remove('no-scroll');
         document.getElementById('overlay').classList.remove('active');
