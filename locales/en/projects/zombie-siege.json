@@ -58,75 +58,42 @@
       "architecture_title": "Class Diagram",
       "architecture_desc": "Full architectural map illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy.",
 
+      "placement": {
+        "title": "Spatial Placement Validation",
+        "desc": "A robust system designed to enforce building restrictions by cross-checking item types against area-specific collision volumes.",
+
+        "img1": "Item Type Definition: A look at the Turret's internal properties using a lightweight 'uint8' variable to define building rules.",
+        "img2": "Validation Area Setup: The BP_TurretsArea trigger volume using a property selector and custom meshes to define building boundaries."
+      },
+
       "portals": {
         "title": "Teleportation System",
         "desc": "Technical analysis of the portal mechanics, featuring entry/exit validation, dynamic material states, and cooldown logic.",
 
-        "img1": [
-          "Portal actor analysis: includes dynamic materials (in the Entrance Reference mesh), invisible interaction planes for vertical navigation,",
-          "and a debug arrow to verify entry/exit vectors."
-        ],
-        "img2": [
-          "The placement system performs real-time surface checks. The portal turns red (invalid state) when attempting to build on the road,",
-          "where structures are prohibited to avoid obstructing pathfinding."
-        ],
-        "img3": [
-          "Successful verification on allowed surfaces (sidewalks). The mesh turns blue (valid state), providing immediate visual feedback.",
-          "This logic ensures strategic placement and prevents collision conflicts with the environment."
-        ]
-      },
-
-      "shop": {
-        "title": "Data-Driven Shop System",
-        "desc": "A modular UI architecture that populates content dynamically by reading from centralized Data Tables, ensuring a clear separation between logic and balancing.",
-
-        "img1": [
-          "Item Data Table: ",
-          "view of the Row Editor where prices, stats, and icons are managed. This setup allows for quick balancing changes without touching the UI code."
-        ],
-        "img2": [
-          "Shop UI Architecture: ",
-          "the main widget hierarchy using responsive containers (Canvas, Border, Scroll Box) to organize dynamically generated shop entries."
-        ],
-        "img3": [
-          "Modular Item Widget: ",
-          "a reusable widget dedicated to a single shop element. It automatically updates graphics and functions based on the received row data."
-        ]
+        "img1": "Portal actor analysis: features dynamic materials, invisible interaction planes for navigation, and a debug arrow for entry/exit vectors.",
+        "img2": "Invalid placement state: The portal turns red when attempting to build on the road, where structures are prohibited.",
+        "img3": "Valid placement state: Successful verification on sidewalks. The mesh turns blue, providing immediate visual feedback."
       },
 
       "menu": {
         "title": "Hybrid Cinematic Menu",
-        "desc": "An immersive main menu blending a real-time 3D environment with a complex UI. Includes cinematic camera movements and an optimized interactive layering system.",
+        "desc": "An immersive main menu blending a real-time 3D environment with a complex UI and cinematic camera movements.",
 
-        "img1": [
-          "Spline Camera Rig",
-          "Implementation of a CineCamera attached to a custom spline rail. This creates a smooth cinematic tracking shot through the hangar upon game startup."
-        ],
-        "img2": [
-          "Interactive UI Layering",
-          "Analysis of the widget hierarchy showing the button layering system. I used invisible hit-test levels to handle complex interactions, such as the 'How to Play' overlay."
-        ]
+        "img1": "Spline Camera Rig: Implementation of a CineCamera attached to a custom spline rail for a smooth cinematic tracking shot.",
+        "img2": "Interactive Layering: Breakdown of the widget hierarchy showing the hit-test layering system for complex button interactions."
       },
 
-      "placement": {
-        "title": "Spatial Placement Validation",
-        "desc": [
-          "A robust system designed to enforce building restrictions.",
-          "It cross-checks the item type against area-specific collision volumes to ensure tactical defenses are deployed only on valid terrain."
-        ],
+      "shop": {
+        "title": "Data-Driven Shop System",
+        "desc": "A modular UI architecture that populates content dynamically by reading from centralized C++ Data Tables.",
 
-        "img1": [
-          "A look at the Turret's internal properties. I used a lightweight 'uint8' variable to define the item type,",
-          "allowing the placement logic to quickly identify if the object belongs on a sidewalk or a road."
-        ],
-        "img2": [
-          "The BP_TurretsArea blueprint acts as a trigger volume. It integrates a property selector ('Area Type')",
-          "and custom meshes to define the exact boundaries where specific defenses can be successfully built."
-        ]
+        "img1": "Item Data Table: The Row Editor where prices, stats, and icons are managed for rapid gameplay balancing.",
+        "img2": "Shop UI Architecture: The main widget hierarchy using responsive containers to organize dynamically generated entries.",
+        "img3": "Modular Item Widget: A reusable widget that automatically updates its visuals based on the received row data."
       },
 
       "waves_title": "Scaling and Economy",
-      "waves_desc": "Backend logic for wave escalation, managing enemy scaling and spawn point activation based on rounds."
+      "waves_desc": "Backend logic for wave escalation, managing enemy scaling and spawn point activation based on round progression."
     },
 
     "cta": {
