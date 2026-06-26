@@ -1,0 +1,112 @@
+{
+  "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
+
+  "zombie_page": {
+    "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
+    "tag": "Collaborative Project · Unreal Engine 5",
+    "title": "Zombie Siege <em>Chronicles</em>",
+    "subtitle": "A strategic Tower Defense featuring placement validation and a modular portal system.",
+    "btn_download": "Play on itch.io",
+    "btn_back": "Back to Projects",
+
+    "about": {
+      "tag": "Overview",
+      "title": "The ultimate defense against the undead",
+      "desc": [
+        "In a world devastated by the undead, survival depends on strategy. <strong>Zombie Siege Chronicles</strong> is a tower defense game where players must protect their shelter from relentless waves.",
+        "Developed in a <strong>collaborative environment</strong>, I was responsible for the core systemic mechanics, UI architecture, and high-level gameplay logic.",
+        "The project showcases deep integration between C++ backend systems and Blueprint visual feedback, ensuring a smooth and responsive experience."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Mechanics",
+      "title": "Strategy and Survival",
+      "items": [
+        "<li><strong>Defensive Arsenal:</strong> Deploy modular turrets and barriers. Some defenses, such as barbed wire, deal passive damage while blocking passage.</li>",
+        "<li><strong>Portal Strategy:</strong> A two-actor teleportation system that allows the player to instantly reposition across the battlefield.</li>",
+        "<li><strong>Dynamic Waves:</strong> Scalable difficulty through round-based stat boosts and the activation of multiple spawn points.</li>",
+        "<li><strong>Survivor Events:</strong> Random missions to rescue NPCs, rewarding the player with base health or extra resources.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Technical",
+      "title": "System Engineering",
+      "items": [
+        "<li><strong>Placement Validation:</strong> A collision-based system using specialized areas to verify if a defense can be built on a specific surface.</li>",
+        "<li><strong>C++ Portal Logic:</strong> Implementation of entry/exit vectors, cooldown timers, and visual state management for the teleportation network.</li>",
+        "<li><strong>Asynchronous Loading:</strong> Professional transitions via asynchronous loading screens to manage map assets without frame drops.</li>",
+        "<li><strong>UI Architecture:</strong> Complex structure for HUD and Shop, featuring real-time economy updates and modular inventory visualization.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Systems",
+      "title": "Optimization and Workflow",
+      "items": [
+        "<li><strong>Asset Standardization:</strong> Strict naming conventions and project hierarchy to facilitate collaboration within the development team.</li>",
+        "<li><strong>Hybrid Audio:</strong> Dynamic audio mixers for environmental immersion, integrated with positional SFX for combat actions.</li>",
+        "<li><strong>Spline Camera:</strong> Cinematic menu sequences using spline-based camera rigs for a dynamic 3D background.</li>",
+        "<li><strong>Collision Optimization:</strong> Custom Trace Channels to separate enemy navigation from player interaction.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Overview",
+    "gallery_title": "Technical Documentation",
+    "gallery": {
+      "architecture_title": "Class Diagram",
+      "architecture_desc": "Full architectural map illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy.",
+
+      "placement": {
+        "title": "Spatial Placement Validation",
+        "desc": "A robust system designed to enforce building restrictions by cross-checking item types against area-specific collision volumes.",
+
+        "img1": "Item Type Definition: A look at the Turret's internal properties using a lightweight 'uint8' variable to define building rules.",
+        "img2": "Validation Area Setup: The BP_TurretsArea trigger volume using a property selector and custom meshes to define building boundaries."
+      },
+
+      "portals": {
+        "title": "Teleportation System",
+        "desc": "Technical analysis of the portal mechanics, featuring entry/exit validation, dynamic material states, and cooldown logic.",
+
+        "img1": "Portal actor analysis: features dynamic materials, invisible interaction planes for navigation, and a debug arrow for entry/exit vectors.",
+        "img2": "Invalid placement state: The portal turns red when attempting to build on the road, where structures are prohibited.",
+        "img3": "Valid placement state: Successful verification on sidewalks. The mesh turns blue, providing immediate visual feedback."
+      },
+
+      "menu": {
+        "title": "Hybrid Cinematic Menu",
+        "desc": "An immersive main menu blending a real-time 3D environment with a complex UI and cinematic camera movements.",
+
+        "img1": "Spline Camera Rig: Implementation of a CineCamera attached to a custom spline rail for a smooth cinematic tracking shot.",
+        "img2": "Interactive Layering: Breakdown of the widget hierarchy showing the hit-test layering system for complex button interactions."
+      },
+
+      "shop": {
+        "title": "Data-Driven Shop System",
+        "desc": "A modular UI architecture that populates content dynamically by reading from centralized C++ Data Tables.",
+
+        "img1": "Item Data Table: The Row Editor where prices, stats, and icons are managed for rapid gameplay balancing.",
+        "img2": "Shop UI Architecture: The main widget hierarchy using responsive containers to organize dynamically generated entries.",
+        "img3": "Modular Item Widget: A reusable widget that automatically updates its visuals based on the received row data."
+      },
+
+      "survivors": {
+        "title": "Survivor Rescue System",
+        "desc": "A dynamic mission framework that periodically spawns NPCs in need of rescue. It integrates a randomized content system and strategic rewards to diversify the core tower defense gameplay.",
+
+        "img1": "Event Configuration: A look at the SavePeopleEvent manager. It allows designers to easily tune spawning intervals, maximum active NPCs, and specific rewards (Base Health vs. Gold) through custom Blueprint categories.",
+        "img2": "Data-Driven Randomization: The UPeopleMeshes Data Asset. This architectural choice decouples visual assets from logic, allowing the system to pick a random mesh and animation set for each spawned survivor.",
+        "img3": "Player Guidance Logic: The rescue actor setup, featuring an integrated pointer widget class. It provides real-time directional feedback to ensure the player can locate survivors within the environment quickly."
+      }
+    },
+
+    "cta": {
+      "title": "Ready to <em>defend?</em>",
+      "subtitle": "Check out the full documentation or try the demo on itch.io.",
+      "or": "or",
+      "btn_back": "See other projects"
+    }
+  }
+}
