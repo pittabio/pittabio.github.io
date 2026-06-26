@@ -25,7 +25,7 @@
 
 .project-card {
     background: var(--bg);
-    border: 2px solid var(--border); /* Partiamo leggeri con il bordo */
+    border: 2px solid var(--border);
     border-radius: var(--radius);
     padding: 1.5rem;
     display: flex;
@@ -36,7 +36,7 @@
 }
 
 .project-card:hover {
-    border-color: var(--accent); /* Il bordo diventa arancione al passaggio */
+    border-color: var(--accent); /* The border turns orange when you pass */
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
 }
@@ -63,7 +63,7 @@
     font-size: 0.95rem;
     opacity: 0.8;
     margin-bottom: 1.5rem;
-    flex-grow: 1; /* Spinge i link sempre in fondo */
+    flex-grow: 1; /* Always push links to the bottom */
 }
 
 .project-image {
@@ -76,7 +76,7 @@
     cursor: zoom-in;
 }
 
-/* Links interni alla card */
+/* Internal links to the card */
 .project-links {
     display: flex;
     justify-content: space-between;

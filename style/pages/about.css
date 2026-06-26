@@ -22,7 +22,7 @@
 
 .resume-section { padding: 1rem 0; }
 
-/* Override card style per la lista skill */
+/* Override card style for the skill list */
 .resume-page-section .project-card {
     aspect-ratio: auto;
     padding: 2rem;
@@ -45,7 +45,7 @@
 }
 .skill-row:last-child { border-bottom: none; }
 
-/* Livelli Skill */
+/* Skill Levels */
 .skill-level {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     padding: 0.18rem 0.6rem; border-radius: 20px;
