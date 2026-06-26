@@ -92,8 +92,14 @@
         "img3": "Modular Item Widget: A reusable widget that automatically updates its visuals based on the received row data."
       },
 
-      "waves_title": "Scaling and Economy",
-      "waves_desc": "Backend logic for wave escalation, managing enemy scaling and spawn point activation based on round progression."
+      "survivors": {
+        "title": "Survivor Rescue System",
+        "desc": "A dynamic mission framework that periodically spawns NPCs in need of rescue. It integrates a randomized content system and strategic rewards to diversify the core tower defense gameplay.",
+
+        "img1": "Event Configuration: A look at the SavePeopleEvent manager. It allows designers to easily tune spawning intervals, maximum active NPCs, and specific rewards (Base Health vs. Gold) through custom Blueprint categories.",
+        "img2": "Data-Driven Randomization: The UPeopleMeshes Data Asset. This architectural choice decouples visual assets from logic, allowing the system to pick a random mesh and animation set for each spawned survivor.",
+        "img3": "Player Guidance Logic: The rescue actor setup, featuring an integrated pointer widget class. It provides real-time directional feedback to ensure the player can locate survivors within the environment quickly."
+      }
     },
 
     "cta": {

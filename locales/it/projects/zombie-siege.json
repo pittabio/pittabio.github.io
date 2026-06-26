@@ -92,8 +92,14 @@
         "img3": "Widget Oggetto Modulare: Un widget riutilizzabile che aggiorna automaticamente i suoi elementi visivi in base ai dati della riga ricevuti."
       },
 
-      "waves_title": "Scalabilità ed Economia",
-      "waves_desc": "Logica di backend per l'escalation delle ondate, che gestisce il potenziamento dei nemici e l'attivazione dei punti di spawn in base alla progressione dei round."
+      "survivors": {
+        "title": "Sistema di Salvataggio Superstiti",
+        "desc": "Un framework di missioni dinamiche che genera periodicamente NPC da salvare. Integra un sistema di contenuti casuali e ricompense strategiche per diversificare il gameplay principale.",
+
+        "img1": "Configurazione Evento: Analisi del manager SavePeopleEvent. Permette ai designer di regolare intervalli di spawn, numero massimo di NPC e ricompense (Salute Base o Oro) tramite categorie Blueprint personalizzate.",
+        "img2": "Randomizzazione Data-Driven: Il Data Asset UPeopleMeshes. Questa scelta architettonica separa gli asset grafici dalla logica, permettendo al sistema di scegliere mesh e animazioni casuali per ogni superstite generato.",
+        "img3": "Logica di Guida Giocatore: Configurazione dell'actor di salvataggio, completo di una classe widget 'pointer'. Fornisce feedback direzionale in tempo reale per aiutare il giocatore a localizzare i superstiti nella mappa."
+      }
     },
 
     "cta": {
