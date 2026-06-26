@@ -21,14 +21,6 @@
 <!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- ## IMAGES OVERLAY ## -->
-<div class="overlay" id="overlay" onclick="closePopup()">
-	<div class="popup-img-wrap" id="popupWrap">
-		<button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
-		<img id="popupImg" src="" alt="">
-	</div>
-</div>
-
 <!-- ## PAGE ## -->
 <main class="page-content">
 	<!-- ## HERO SECTION ## -->
@@ -73,7 +65,7 @@
 
 		<!-- RIGHT PART: PHOTO -->
 		<div style="padding-right: 2rem;">
-			<img src="/media/profile.jpg" alt="Fabio Pittaccio" class="hero-image" onclick="openPopup(this)"/>
+			<img src="/media/profile.jpg" alt="Fabio Pittaccio" class="hero-image" onclick="openOneImage(this)"/>
 		</div>
 
 		<!-- BUTTON PART: INDICATOR -->
@@ -152,7 +144,7 @@
 					<a href="projects/ruins-rhapsody.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.ruins.name"></h3>
 					</a>
-					<img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody Banner" class="project-image" onclick="openPopup(this)"/>
+					<img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody Banner" class="project-image" onclick="openOneImage(this)"/>
 
 					<br>
 					<!-- Description and links -->
@@ -169,7 +161,7 @@
 					<a href="projects/goblin-jr.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.goblin.name"></h3>
 					</a>
-					<img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure Banner" class="project-image" onclick="openPopup(this)"/>
+					<img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure Banner" class="project-image" onclick="openOneImage(this)"/>
 
 					<br>
 					<!-- Description and links -->
@@ -186,7 +178,7 @@
 					<a href="projects/zombie-siege.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.zombie.name"></h3>
 					</a>
-					<img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles Banner" class="project-image" onclick="openPopup(this)"/>
+					<img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles Banner" class="project-image" onclick="openOneImage(this)"/>
 
 					<br>
 					<!-- Description and links -->
