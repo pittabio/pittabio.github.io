@@ -20,7 +20,7 @@
     ],
 
     "link_details": "Dettagli",
-    "link_play":    "Download",
+    "link_play":    "itch.io",
     "link_github":  "Vedi su GitHub",
     "link_gitlab":  "View on GitLab",
 
@@ -86,7 +86,7 @@
       ],
       "github": "GitHub",
       "gitlab": "GitLab",
-      "contact_me": "Contattami"
+      "about_me": "Conoscimi"
     },
 
     "state_trees": {

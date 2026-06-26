@@ -93,6 +93,11 @@
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 2;
 }
 
 .project-links .link-secondary {
@@ -105,6 +110,11 @@
 
 .project-links .link-secondary:hover {
     color: var(--accent);
+}
+
+/* Remove any margins from the SVG if present, just to be safe. */
+.project-links .link-primary svg {
+    display: block; /* Removes extra white space under the image */
 }
 
 @media (max-width: 480px) {

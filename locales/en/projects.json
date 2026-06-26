@@ -20,9 +20,9 @@
     ],
 
     "link_details": "Details",
-    "link_play":    "Download ↓",
-    "link_github":  "View on GitHub →",
-    "link_gitlab":  "View on GitLab →",
+    "link_play":    "itch.io",
+    "link_github":  "View on GitHub",
+    "link_gitlab":  "View on GitLab",
 
     "ruins": {
       "name": "Ruins' Rhapsody",
@@ -86,7 +86,7 @@
       ],
       "github": "GitHub",
       "gitlab": "GitLab",
-      "contact_me": "Contact me →"
+      "about_me": "About me"
     },
 
     "state_trees": {

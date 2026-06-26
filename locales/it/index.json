@@ -41,7 +41,7 @@
 
   "projects": {
     "title": "Progetti Principali",
-    "link1": "Scarica",
+    "link1": "itch.io",
     "link2": "Dettagli",
     "view_all": "Guarda tutti i progetti",
 
@@ -83,6 +83,6 @@
     "subtitle": "Freelance • Remoto • Aperto per nuove opportunità",
     "badge": "Contatti Aperti",
     "or": "oppure",
-    "cta": "Pagina completa dei contatti"
+    "cta": "Pagina dei contatti"
   }
 }
