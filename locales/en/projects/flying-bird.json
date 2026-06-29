@@ -56,48 +56,45 @@
 
         "img1": "Broadcast Logic: Breakdown of the delegate system. By broadcasting events like OnStartGame, the system ensures a clean communication flow between the countdown timer and the physics activation."
       },
-
       "bird": {
         "title": "Physics & Velocity Control",
         "desc": "Custom flight logic implemented in the <code>Bird</code> class. To ensure consistent jump height, the system resets vertical velocity before applying each new impulse force.",
 
         "img1": "Impulse Handling: Analysis of the <code>ApplyImpulse</code> function, showing the velocity normalization technique and air resistance damping (Linear Damping) setup."
       },
-
       "pipes": {
         "title": "Collision & Score Detection",
         "desc": "The <code>Pipes</code> actor manages complex collision filtering. It distinguishes between lethal obstacles (the pipe meshes) and the scoring trigger zone through specialized Trace Channels.",
 
         "img1": "Collision Profiles: Configuration of custom object types (BIRD, PIPE, SCORE) to handle overlapping events and death triggers accurately."
       },
-
       "spawner": {
         "title": "Procedural Offsetting",
         "desc": "The <code>Pipes Spawner</code> manages the infinite loop using a tick-based delay system and <code>FFloatRange</code> for vertical randomization.",
 
         "img1": "Spawner Configuration: Real-time generation of obstacles with randomized Z-axis positioning to maintain an unpredictable challenge."
       },
-
       "input": {
         "title": "Enhanced Input System",
         "desc": "Implementation of UE5 Enhanced Input for cross-platform support. It maps actions to both spacebar/mouse-click for Windows and screen-taps for Android.",
 
         "img1": "Mapping Context: The <code>IMC_Input</code> setup showing unified key bindings for a consistent feel across devices."
       },
-
       "ui": {
-        "title": "Logic-Driven Widgets",
-        "desc": "High-performance UI system where every Widget Blueprint is parented to a C++ class, allowing for optimized event binding and direct access to GameState delegates.",
+        "title": "Logic-Driven & Cross-Platform UI",
+        "desc": "A sophisticated UI system where every Widget Blueprint is parented to a C++ class. It features platform-specific logic and programmatic styling to ensure performance and visual consistency.",
 
-        "img1": "UI Architecture: Overview of the code-parented widgets and their integration with the persistent high-score system."
-      },
-
-      "cta": {
-        "title": "Ready to <em>fly?</em>",
-        "subtitle": "Download the APK for Android or the Windows version on itch.io.",
-        "or": "or",
-        "btn_back": "View more projects"
+        "img1": "Cross-Platform Optimization: Implementation of conditional UI elements using <code>#if PLATFORM_ANDROID</code>. The pause button is dynamically injected only on mobile builds, maintaining a clean HUD on desktop.",
+        "img2": "Programmatic Slate Styling: Analysis of the <code>AudioMute</code> logic. Button states (Normal, Hover, Pressed) and textures are managed directly via C++ using <code>FSlateBrush</code> for optimized state switching.",
+        "img3": "Architecture & Binding: Usage of <code>meta = (BindWidget)</code> to safely link C++ logic to UI elements, coupled with NativeConstruct for efficient event delegation."
       }
+    },
+
+    "cta": {
+      "title": "Ready to <em>fly?</em>",
+      "subtitle": "Download the APK for Android or the Windows version on itch.io.",
+      "or": "or",
+      "btn_back": "View more projects"
     }
   }
 }

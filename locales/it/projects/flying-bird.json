@@ -90,10 +90,12 @@
       },
 
       "ui": {
-        "title": "Widget Guidati dal Codice",
-        "desc": "Sistema UI ad alte prestazioni in cui ogni Widget Blueprint eredita da una classe C++, permettendo un binding degli eventi ottimizzato e l'accesso diretto ai delegati del GameState.",
+        "title": "UI Cross-Platform & Logic-Driven",
+        "desc": "Un sistema UI avanzato in cui ogni Widget Blueprint eredita da una classe C++. Include logiche specifiche per piattaforma e styling programmatico per garantire prestazioni e coerenza visiva.",
 
-        "img1": "Architettura UI: Panoramica dei widget parentati al codice e della loro integrazione con il sistema persistente dei record."
+        "img1": "Ottimizzazione Cross-Platform: Implementazione di elementi UI condizionali tramite <code>#if PLATFORM_ANDROID</code>. Il tasto pausa viene attivato solo su build mobile, mantenendo l'HUD pulito su desktop.",
+        "img2": "Styling Programmatico Slate: Analisi della logica <code>AudioMute</code>. Gli stati del pulsante (Normal, Hover, Pressed) e le texture sono gestiti via C++ tramite <code>FSlateBrush</code> per uno switch di stato ottimizzato.",
+        "img3": "Architettura e Binding: Utilizzo di <code>meta = (BindWidget)</code> per collegare in modo sicuro la logica C++ agli elementi UI, insieme a NativeConstruct per una delegazione efficiente degli eventi."
       }
     },
 
