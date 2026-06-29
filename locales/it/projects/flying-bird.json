@@ -12,22 +12,33 @@
     "about": {
       "tag": "Obiettivo",
       "title": "Ricreazione Tecnica",
-      "desc": [
-        "<strong>Flying Bird</strong> è un progetto di studio nato per approfondire la <strong>pipeline mobile di Unreal Engine</strong>.",
-        "L'obiettivo era ricreare le classiche meccaniche 'one-touch' con un backend interamente in C++, garantendo prestazioni elevate e un codice pulito.",
-        "Utilizzando asset di terze parti, mi sono concentrato sull'<strong>ingegneria del software</strong>: normalizzazione della fisica, spawning procedurale e ottimizzazioni specifiche per Android."
-      ]
+      "desc": "<strong>Flying Bird</strong> è un progetto di studio nato per approfondire la <strong>pipeline mobile di Unreal Engine</strong>. L'obiettivo era ricreare meccaniche classiche con un backend interamente in C++."
     },
     "gameplay": {
       "tag": "Meccaniche",
       "title": "Logica Core",
       "items": [
-        "<li><strong>Normalizzazione Fisica:</strong> Logica di volo che resetta la velocità verticale prima di ogni impulso per garantire salti costanti.</li>",
-        "<li><strong>Loop Procedurale:</strong> Sistema di spawning che gestisce il ciclo di vita e l'offset casuale degli ostacoli sull'asse Z.</li>",
-        "<li><strong>Persistenza Record:</strong> Sistema di salvataggio C++ per il tracciamento dei record locali tra diverse sessioni.</li>",
-        "<li><strong>UI Reattiva:</strong> HUD leggero con countdown integrato e feedback degli stati di gioco in tempo reale.</li>"
+        "<li><strong>Reset Velocità:</strong> Logica di volo che normalizza la velocità verticale prima di ogni impulso per salti costanti.</li>",
+        "<li><strong>Loop Procedurale:</strong> Sistema di spawning che gestisce il ciclo di vita e l'offset casuale degli ostacoli.</li>"
       ]
     },
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Architettura C++",
+      "items": [
+        "<li><strong>Event-Driven:</strong> Utilizzo di delegati dinamici per disaccoppiare la logica di gioco da UI e Audio.</li>",
+        "<li><strong>Persistenza Dati:</strong> Implementazione C++ di SaveGame per record locali e impostazioni.</li>"
+      ]
+    },
+    "systems": {
+      "tag": "Sistemi",
+      "title": "Ottimizzazione Mobile",
+      "items": [
+        "<li><strong>Cross-Platform:</strong> Uso di macro <code>#if PLATFORM_ANDROID</code> per l'iniezione dinamica dell'UI.</li>",
+        "<li><strong>UI da Codice:</strong> Gerarchia dei widget parentata a classi C++ con styling programmatico Slate.</li>"
+      ]
+    },
+
     "gallery": {
       "game_state": {
         "title": "Architettura a Eventi",
