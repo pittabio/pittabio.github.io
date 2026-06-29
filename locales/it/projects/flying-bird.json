@@ -1,107 +1,77 @@
 ﻿{
   "head_title": "Flying Bird · Fabio Pittaccio",
-
   "flying_page": {
     "tab_title": "Flying Bird — Fabio Pittaccio",
-    "tag": "Progetto Solo · Android & Windows",
+    "tag": "Studio Tecnico · Android & Windows",
     "title": "Flying <em>Bird</em>",
-    "subtitle": "Un clone cross-platform del classico Flappy Bird, ottimizzato per dispositivi Android.",
+    "subtitle": "Un remake 3D di Flappy Bird focalizzato sull'architettura gameplay in C++ e il deployment mobile.",
+
     "btn_download": "Scarica su itch.io",
     "btn_back": "Torna ai Progetti",
 
     "about": {
-      "tag": "Panoramica",
-      "title": "Sviluppo Mobile",
+      "tag": "Obiettivo",
+      "title": "Ricreazione Tecnica",
       "desc": [
-        "<strong>Flying Bird</strong> è un progetto personale nato per esplorare la pipeline mobile all'interno di <strong>Unreal Engine</strong>.",
-        "Come sviluppatore solista, ho gestito l'intero processo: dalla logica di gameplay in C++ allo spawning procedurale, fino alle configurazioni Android come l'input touch e le icone.",
-        "L'obiettivo era creare un'esperienza fluida e leggera con prestazioni costanti sia su mobile che su desktop."
+        "<strong>Flying Bird</strong> è un progetto di studio nato per approfondire la <strong>pipeline mobile di Unreal Engine</strong>.",
+        "L'obiettivo era ricreare le classiche meccaniche 'one-touch' con un backend interamente in C++, garantendo prestazioni elevate e un codice pulito.",
+        "Utilizzando asset di terze parti, mi sono concentrato sull'<strong>ingegneria del software</strong>: normalizzazione della fisica, spawning procedurale e ottimizzazioni specifiche per Android."
       ]
     },
-
     "gameplay": {
       "tag": "Meccaniche",
-      "title": "Gameplay Sfidante",
+      "title": "Logica Core",
       "items": [
-        "<li><strong>Movimento Fisico:</strong> Logica basata su impulsi per il volo dell'uccellino, ottimizzata per i touchscreen.</li>",
-        "<li><strong>Spawning Infinito:</strong> Un sistema procedurale che genera e ricicla gli ostacoli (tubi) per creare un loop senza fine.</li>",
-        "<li><strong>Difficoltà Adattiva:</strong> Posizionamento degli ostacoli studiato per offrire una progressione stimolante ma equa.</li>",
-        "<li><strong>Feedback Audio:</strong> Sistema audio integrato con funzione mute e salvataggio delle preferenze in tempo reale.</li>"
+        "<li><strong>Normalizzazione Fisica:</strong> Logica di volo che resetta la velocità verticale prima di ogni impulso per garantire salti costanti.</li>",
+        "<li><strong>Loop Procedurale:</strong> Sistema di spawning che gestisce il ciclo di vita e l'offset casuale degli ostacoli sull'asse Z.</li>",
+        "<li><strong>Persistenza Record:</strong> Sistema di salvataggio C++ per il tracciamento dei record locali tra diverse sessioni.</li>",
+        "<li><strong>UI Reattiva:</strong> HUD leggero con countdown integrato e feedback degli stati di gioco in tempo reale.</li>"
       ]
     },
-
-    "tech": {
-      "tag": "Tecnica",
-      "title": "Pipeline Mobile",
-      "items": [
-        "<li><strong>Integrazione Android:</strong> Gestione della pipeline di pubblicazione, inclusi SDK/NDK, manifest Android e icone personalizzate.</li>",
-        "<li><strong>Logica Spawner C++:</strong> Creazione della classe <code>PipesSpawner</code> per gestire efficientemente il ciclo di vita degli ostacoli.</li>",
-        "<li><strong>Sistema di Salvataggio:</strong> Implementazione della persistenza locale per high score e impostazioni audio tramite C++.</li>",
-        "<li><strong>Scalabilità Input:</strong> Mappatura unificata per gestire sia il tocco (Android) che il mouse/tastiera (Windows).</li>"
-      ]
-    },
-
-    "systems": {
-      "tag": "Sistemi",
-      "title": "Rifinitura UI e Performance",
-      "items": [
-        "<li><strong>HUD Mobile:</strong> Interfaccia semplificata con countdown pre-partita e punteggio dinamico ottimizzato per schermi piccoli.</li>",
-        "<li><strong>Gestione Stati:</strong> Logica di transizione pulita tra menu principale, loop di gioco e schermata di game-over.</li>",
-        "<li><strong>Ottimizzazione:</strong> Materiali e texture alleggeriti per garantire frame rate elevati su un'ampia gamma di dispositivi Android.</li>"
-      ]
-    },
-
-    "video_title": "Gameplay Mobile",
-    "gallery_title": "Galleria Tecnica",
     "gallery": {
       "game_state": {
-        "title": "Game State Event-Driven",
-        "desc": "La classe <code>Bird Game State</code> (C++) funge da autorità centrale per le regole. Utilizza <strong>Dynamic Multicast Delegates</strong> per disaccoppiare gli eventi di gioco (Score, Dead, Pause) dalla UI e dagli altri actor.",
+        "title": "Architettura a Eventi",
+        "desc": "Utilizzo di <code>Dynamic Multicast Delegates</code> nel GameState per disaccoppiare i trigger di gioco (Score, Morte) dall'interfaccia e dal sistema audio.",
 
-        "img1": "Logica di Broadcast: Analisi del sistema di delegati. Tramite il broadcast di eventi come OnStartGame, il sistema garantisce un flusso di comunicazione pulito tra il countdown e l'attivazione della fisica."
+        "img1": "Sistema di Delegati: Analisi del broadcasting degli eventi per mantenere un flusso di comunicazione pulito tra le classi."
       },
-
       "bird": {
-        "title": "Fisica e Controllo Velocità",
-        "desc": "Logica di volo personalizzata implementata nella classe <code>Bird</code>. Per garantire salti costanti, il sistema azzera la velocità verticale prima di applicare ogni nuovo impulso.",
+        "title": "Fisica e Impulsi",
+        "desc": "Logica di volo gestita tramite <code>AddImpulse</code>. Il sistema smorza la velocità angolare e blocca le rotazioni per mantenere la stabilità.",
 
-        "img1": "Gestione Impulsi: Analisi della funzione <code>ApplyImpulse</code>, che mostra la tecnica di normalizzazione della velocità e il setup della resistenza all'aria (Linear Damping)."
+        "img1": "Logica Impulsi: Vista dei parametri di forza e del setup della resistenza all'aria (Linear Damping)."
       },
-
       "pipes": {
-        "title": "Collisioni e Rilevamento Score",
-        "desc": "L'actor <code>Pipes</code> gestisce un filtraggio complesso delle collisioni. Distingue tra ostacoli letali (le mesh dei tubi) e la zona di punteggio tramite Trace Channel specializzati.",
+        "title": "Gestione Collisioni",
+        "desc": "Ottimizzazione dei canali di collisione per separare le mesh letali dai trigger di punteggio, evitando falsi positivi.",
 
-        "img1": "Profili di Collisione: Configurazione di tipi di oggetto personalizzati (BIRD, PIPE, SCORE) per gestire correttamente gli eventi di overlap e i trigger di sconfitta."
+        "img1": "Filtraggio Collisioni: Configurazione di Object Type personalizzati per un rilevamento accurato delle interazioni."
       },
-
       "spawner": {
-        "title": "Offsetting Procedurale",
-        "desc": "Il <code>Pipes Spawner</code> gestisce il loop infinito utilizzando un sistema di delay basato su tick e <code>FFloatRange</code> per la randomizzazione verticale.",
+        "title": "Spawning Procedurale",
+        "desc": "Implementazione di un generatore che utilizza <code>FFloatRange</code> per randomizzare l'altezza degli ostacoli entro limiti prestabiliti.",
 
-        "img1": "Configurazione Spawner: Generazione in tempo reale degli ostacoli con posizionamento casuale sull'asse Z per mantenere la sfida imprevedibile."
+        "img1": "Setup Spawner: Vista delle proprietà, inclusi ritardi di spawn e range di altezza."
       },
-
       "input": {
-        "title": "Enhanced Input System",
-        "desc": "Implementazione di Enhanced Input di UE5 per il supporto cross-platform. Mappa le azioni sia sulla barra spaziatrice/mouse (Windows) che sul tocco (Android).",
+        "title": "Input Cross-Platform",
+        "desc": "Mappatura unificata tramite Enhanced Input, permettendo alla stessa logica di gestire tocchi su Android e click/tastiera su Windows.",
 
-        "img1": "Mapping Context: Configurazione di <code>IMC_Input</code> con binding unificati per un feeling coerente su tutti i dispositivi."
+        "img1": "IMC_Input: Configurazione dei binding per barra spaziatrice e tap su schermo."
       },
-
       "ui": {
-        "title": "UI Cross-Platform & Logic-Driven",
-        "desc": "Un sistema UI avanzato in cui ogni Widget Blueprint eredita da una classe C++. Include logiche specifiche per piattaforma e styling programmatico per garantire prestazioni e coerenza visiva.",
+        "title": "Ottimizzazione Android",
+        "desc": "Utilizzo di macro di preprocessore (<code>#if PLATFORM_ANDROID</code>) per iniettare elementi UI specifici per mobile come il tasto pausa.",
 
-        "img1": "Ottimizzazione Cross-Platform: Implementazione di elementi UI condizionali tramite <code>#if PLATFORM_ANDROID</code>. Il tasto pausa viene attivato solo su build mobile, mantenendo l'HUD pulito su desktop.",
-        "img2": "Styling Programmatico Slate: Analisi della logica <code>AudioMute</code>. Gli stati del pulsante (Normal, Hover, Pressed) e le texture sono gestiti via C++ tramite <code>FSlateBrush</code> per uno switch di stato ottimizzato.",
-        "img3": "Architettura e Binding: Utilizzo di <code>meta = (BindWidget)</code> per collegare in modo sicuro la logica C++ agli elementi UI, insieme a NativeConstruct per una delegazione efficiente degli eventi."
+        "img1": "HUD di Piattaforma: Logica condizionale per elementi solo mobile.",
+        "img2": "Styling Slate: Gestione programmatica degli stili dei pulsanti in C++ per gestire gli stati Normal/Pressed senza pesare sui Blueprint.",
+        "img3": "Parenting C++: Esempio di Widget Blueprint che ereditano da classi C++ per una logica ottimizzata."
       }
     },
 
     "cta": {
-      "title": "Pronto a <em>volare?</em>",
-      "subtitle": "Scarica l'APK per Android o la versione Windows su itch.io.",
+      "title": "Pronto per la <em>sfida?</em>",
+      "subtitle": "Metti alla prova la fisica e prova a battere il tuo record. Disponibile per Android e Windows.",
       "or": "oppure",
       "btn_back": "Vedi altri progetti"
     }
