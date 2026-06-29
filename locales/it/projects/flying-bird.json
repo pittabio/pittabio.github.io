@@ -34,7 +34,7 @@
       "tag": "Sistemi",
       "title": "Ottimizzazione Mobile",
       "items": [
-        "<li><strong>Cross-Platform:</strong> Uso di macro <code>#if PLATFORM_ANDROID</code> per l'iniezione dinamica dell'UI.</li>",
+        "<li><strong>Cross-Platform:</strong> Uso di macro <code>#if PLATFORM_ANDROID</code> per l'iniezione dinamica dell' UI.</li>",
         "<li><strong>UI da Codice:</strong> Gerarchia dei widget parentata a classi C++ con styling programmatico Slate.</li>"
       ]
     },
