@@ -8,7 +8,6 @@
     "subtitle": "A cross-platform mobile clone of the classic Flappy Bird, optimized for Android devices.",
     "btn_download": "Get it on itch.io",
     "btn_back": "Back to Projects",
-
     "about": {
       "tag": "Overview",
       "title": "Mobile Development Journey",
@@ -18,7 +17,6 @@
         "The goal was to create a polished, lightweight experience that maintains consistent performance across both mobile and desktop platforms."
       ]
     },
-
     "gameplay": {
       "tag": "Mechanics",
       "title": "Hard-to-Master Gameplay",
@@ -29,7 +27,6 @@
         "<li><strong>Audio Feedback:</strong> Integrated sound system with real-time mute functionality and saved preferences.</li>"
       ]
     },
-
     "tech": {
       "tag": "Technical",
       "title": "The Mobile Pipeline",
@@ -40,7 +37,6 @@
         "<li><strong>Input Scalability:</strong> Unified input mapping that handles both screen taps (Android) and mouse clicks/keyboard (Windows).</li>"
       ]
     },
-
     "systems": {
       "tag": "Systems",
       "title": "UX & UI Polish",
@@ -54,35 +50,54 @@
     "video_title": "Mobile Gameplay",
     "gallery_title": "Technical Gallery",
     "gallery": {
-      "mobile": {
-        "title": "Android Integration",
-        "desc": "Focus on the mobile-first development approach, ensuring correct UI scaling, touch responsiveness, and platform-specific assets.",
+      "game_state": {
+        "title": "Event-Driven Game State",
+        "desc": "The <code>Bird Game State</code> (C++) acts as the central authority for game rules. It utilizes <strong>Dynamic Multicast Delegates</strong> to decouple gameplay events (Score, Dead, Pause) from the UI and other actors.",
 
-        "img1": "Platform Setup: Configuration of the Android manifest and project settings to handle device orientation and icon packages.",
-        "img2": "Mobile UX: Implementation of an on-screen countdown and large, accessible buttons designed for thumb interaction.",
-        "img3": "Cross-Platform Build: The game running on Android, demonstrating successful porting of the C++ core logic to the ARM architecture."
+        "img1": "Broadcast Logic: Breakdown of the delegate system. By broadcasting events like OnStartGame, the system ensures a clean communication flow between the countdown timer and the physics activation."
       },
+
+      "bird": {
+        "title": "Physics & Velocity Control",
+        "desc": "Custom flight logic implemented in the <code>Bird</code> class. To ensure consistent jump height, the system resets vertical velocity before applying each new impulse force.",
+
+        "img1": "Impulse Handling: Analysis of the <code>ApplyImpulse</code> function, showing the velocity normalization technique and air resistance damping (Linear Damping) setup."
+      },
+
+      "pipes": {
+        "title": "Collision & Score Detection",
+        "desc": "The <code>Pipes</code> actor manages complex collision filtering. It distinguishes between lethal obstacles (the pipe meshes) and the scoring trigger zone through specialized Trace Channels.",
+
+        "img1": "Collision Profiles: Configuration of custom object types (BIRD, PIPE, SCORE) to handle overlapping events and death triggers accurately."
+      },
+
       "spawner": {
-        "title": "Procedural Spawner Logic",
-        "desc": "A look at the C++ backbone responsible for the infinite gameplay loop and obstacle randomization.",
+        "title": "Procedural Offsetting",
+        "desc": "The <code>Pipes Spawner</code> manages the infinite loop using a tick-based delay system and <code>FFloatRange</code> for vertical randomization.",
 
-        "img1": "PipesSpawner Class: Analysis of the spawner logic which handles the timing, vertical randomization, and recycling of pipe actors.",
-        "img2": "Object Pooling Concept: How the system manages the lifecycle of pipes to minimize memory allocation during gameplay."
+        "img1": "Spawner Configuration: Real-time generation of obstacles with randomized Z-axis positioning to maintain an unpredictable challenge."
       },
-      "savegame": {
-        "title": "Persistence & Data",
-        "desc": "Management of local player data, focusing on high score tracking and user settings.",
 
-        "img1": "High Score Logic: Implementation of the SaveGame class to store the best score locally between play sessions.",
-        "img2": "Settings Persistence: System for saving and loading audio states (mute/unmute) so player preferences are remembered on restart."
+      "input": {
+        "title": "Enhanced Input System",
+        "desc": "Implementation of UE5 Enhanced Input for cross-platform support. It maps actions to both spacebar/mouse-click for Windows and screen-taps for Android.",
+
+        "img1": "Mapping Context: The <code>IMC_Input</code> setup showing unified key bindings for a consistent feel across devices."
+      },
+
+      "ui": {
+        "title": "Logic-Driven Widgets",
+        "desc": "High-performance UI system where every Widget Blueprint is parented to a C++ class, allowing for optimized event binding and direct access to GameState delegates.",
+
+        "img1": "UI Architecture: Overview of the code-parented widgets and their integration with the persistent high-score system."
+      },
+
+      "cta": {
+        "title": "Ready to <em>fly?</em>",
+        "subtitle": "Download the APK for Android or the Windows version on itch.io.",
+        "or": "or",
+        "btn_back": "View more projects"
       }
-    },
-
-    "cta": {
-      "title": "Ready to <em>fly?</em>",
-      "subtitle": "Download the APK for Android or the Windows version on itch.io.",
-      "or": "or",
-      "btn_back": "View more projects"
     }
   }
 }

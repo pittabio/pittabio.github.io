@@ -54,27 +54,46 @@
     "video_title": "Gameplay Mobile",
     "gallery_title": "Galleria Tecnica",
     "gallery": {
-      "mobile": {
-        "title": "Integrazione Android",
-        "desc": "Focus sullo sviluppo mobile-first, garantendo scalabilità dell'UI, reattività del tocco e asset specifici per la piattaforma.",
+      "game_state": {
+        "title": "Game State Event-Driven",
+        "desc": "La classe <code>Bird Game State</code> (C++) funge da autorità centrale per le regole. Utilizza <strong>Dynamic Multicast Delegates</strong> per disaccoppiare gli eventi di gioco (Score, Dead, Pause) dalla UI e dagli altri actor.",
 
-        "img1": "Configurazione Piattaforma: Setup del manifest Android e delle impostazioni per gestire orientamento e pacchetti icone.",
-        "img2": "UX Mobile: Implementazione di un countdown a schermo e pulsanti grandi per un'interazione agevole tramite pollice.",
-        "img3": "Build Cross-Platform: Il gioco in esecuzione su Android, a dimostrazione del porting riuscito della logica C++."
+        "img1": "Logica di Broadcast: Analisi del sistema di delegati. Tramite il broadcast di eventi come OnStartGame, il sistema garantisce un flusso di comunicazione pulito tra il countdown e l'attivazione della fisica."
       },
+
+      "bird": {
+        "title": "Fisica e Controllo Velocità",
+        "desc": "Logica di volo personalizzata implementata nella classe <code>Bird</code>. Per garantire salti costanti, il sistema azzera la velocità verticale prima di applicare ogni nuovo impulso.",
+
+        "img1": "Gestione Impulsi: Analisi della funzione <code>ApplyImpulse</code>, che mostra la tecnica di normalizzazione della velocità e il setup della resistenza all'aria (Linear Damping)."
+      },
+
+      "pipes": {
+        "title": "Collisioni e Rilevamento Score",
+        "desc": "L'actor <code>Pipes</code> gestisce un filtraggio complesso delle collisioni. Distingue tra ostacoli letali (le mesh dei tubi) e la zona di punteggio tramite Trace Channel specializzati.",
+
+        "img1": "Profili di Collisione: Configurazione di tipi di oggetto personalizzati (BIRD, PIPE, SCORE) per gestire correttamente gli eventi di overlap e i trigger di sconfitta."
+      },
+
       "spawner": {
-        "title": "Logica Spawner Procedurale",
-        "desc": "Uno sguardo al cuore C++ responsabile del loop infinito e della randomizzazione degli ostacoli.",
+        "title": "Offsetting Procedurale",
+        "desc": "Il <code>Pipes Spawner</code> gestisce il loop infinito utilizzando un sistema di delay basato su tick e <code>FFloatRange</code> per la randomizzazione verticale.",
 
-        "img1": "Classe PipesSpawner: Analisi della logica che gestisce tempismo, randomizzazione verticale e riciclo dei tubi.",
-        "img2": "Concetto di Object Pooling: Come il sistema gestisce il ciclo di vita dei tubi per minimizzare l'allocazione di memoria."
+        "img1": "Configurazione Spawner: Generazione in tempo reale degli ostacoli con posizionamento casuale sull'asse Z per mantenere la sfida imprevedibile."
       },
-      "savegame": {
-        "title": "Persistenza e Dati",
-        "desc": "Gestione dei dati locali del giocatore, con focus sul tracciamento dei record e delle impostazioni utente.",
 
-        "img1": "Logica High Score: Implementazione della classe SaveGame per memorizzare il miglior punteggio tra le sessioni.",
-        "img2": "Persistenza Impostazioni: Sistema di salvataggio dello stato audio (mute/unmute) in modo che le preferenze siano ricordate al riavvio."
+      "input": {
+        "title": "Enhanced Input System",
+        "desc": "Implementazione di Enhanced Input di UE5 per il supporto cross-platform. Mappa le azioni sia sulla barra spaziatrice/mouse (Windows) che sul tocco (Android).",
+
+        "img1": "Mapping Context: Configurazione di <code>IMC_Input</code> con binding unificati per un feeling coerente su tutti i dispositivi."
+      },
+
+      "ui": {
+        "title": "Widget Guidati dal Codice",
+        "desc": "Sistema UI ad alte prestazioni in cui ogni Widget Blueprint eredita da una classe C++, permettendo un binding degli eventi ottimizzato e l'accesso diretto ai delegati del GameState.",
+
+        "img1": "Architettura UI: Panoramica dei widget parentati al codice e della loro integrazione con il sistema persistente dei record."
       }
     },
 
