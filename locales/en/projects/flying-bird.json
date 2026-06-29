@@ -1,0 +1,88 @@
+﻿{
+  "head_title": "Flying Bird · Fabio Pittaccio",
+
+  "flying_page": {
+    "tab_title": "Flying Bird — Fabio Pittaccio",
+    "tag": "Solo Project · Android & Windows",
+    "title": "Flying <em>Bird</em>",
+    "subtitle": "A cross-platform mobile clone of the classic Flappy Bird, optimized for Android devices.",
+    "btn_download": "Get it on itch.io",
+    "btn_back": "Back to Projects",
+
+    "about": {
+      "tag": "Overview",
+      "title": "Mobile Development Journey",
+      "desc": [
+        "<strong>Flying Bird</strong> is a personal project developed to explore the mobile pipeline within <strong>Unreal Engine</strong>.",
+        "As a solo developer, I handled the entire process: from C++ gameplay logic and procedural spawning to Android-specific configurations like touch inputs and icon management.",
+        "The goal was to create a polished, lightweight experience that maintains consistent performance across both mobile and desktop platforms."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Mechanics",
+      "title": "Hard-to-Master Gameplay",
+      "items": [
+        "<li><strong>Physics-Based Movement:</strong> Precise impulse-based logic for the bird's flight, tuned for responsive feedback on touchscreens.</li>",
+        "<li><strong>Infinite Spawning:</strong> A procedural system that generates and recycles obstacles (pipes) to create a seamless infinite loop.</li>",
+        "<li><strong>Adaptive Difficulty:</strong> Obstacle placement and gaps designed to provide a challenging but fair progression.</li>",
+        "<li><strong>Audio Feedback:</strong> Integrated sound system with real-time mute functionality and saved preferences.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Technical",
+      "title": "The Mobile Pipeline",
+      "items": [
+        "<li><strong>Android Integration:</strong> Managed the full deployment pipeline, including SDK/NDK setup, Android manifests, and custom icon sets.</li>",
+        "<li><strong>C++ Spawner Logic:</strong> Developed a dedicated <code>PipesSpawner</code> class to manage the lifecycle of obstacles efficiently.</li>",
+        "<li><strong>SaveGame System:</strong> Implementation of a local persistence layer for high scores and audio settings using C++.</li>",
+        "<li><strong>Input Scalability:</strong> Unified input mapping that handles both screen taps (Android) and mouse clicks/keyboard (Windows).</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Systems",
+      "title": "UX & UI Polish",
+      "items": [
+        "<li><strong>Mobile HUD:</strong> A simplified UI featuring a pre-game countdown and a dynamic scoring system tailored for small screens.</li>",
+        "<li><strong>State Management:</strong> Clean transition logic between the main menu, gameplay loop, and the game-over screen.</li>",
+        "<li><strong>Performance Tuning:</strong> Optimized textures and materials to ensure high frame rates on a wide range of Android devices.</li>"
+      ]
+    },
+
+    "video_title": "Mobile Gameplay",
+    "gallery_title": "Technical Gallery",
+    "gallery": {
+      "mobile": {
+        "title": "Android Integration",
+        "desc": "Focus on the mobile-first development approach, ensuring correct UI scaling, touch responsiveness, and platform-specific assets.",
+
+        "img1": "Platform Setup: Configuration of the Android manifest and project settings to handle device orientation and icon packages.",
+        "img2": "Mobile UX: Implementation of an on-screen countdown and large, accessible buttons designed for thumb interaction.",
+        "img3": "Cross-Platform Build: The game running on Android, demonstrating successful porting of the C++ core logic to the ARM architecture."
+      },
+      "spawner": {
+        "title": "Procedural Spawner Logic",
+        "desc": "A look at the C++ backbone responsible for the infinite gameplay loop and obstacle randomization.",
+
+        "img1": "PipesSpawner Class: Analysis of the spawner logic which handles the timing, vertical randomization, and recycling of pipe actors.",
+        "img2": "Object Pooling Concept: How the system manages the lifecycle of pipes to minimize memory allocation during gameplay."
+      },
+      "savegame": {
+        "title": "Persistence & Data",
+        "desc": "Management of local player data, focusing on high score tracking and user settings.",
+
+        "img1": "High Score Logic: Implementation of the SaveGame class to store the best score locally between play sessions.",
+        "img2": "Settings Persistence: System for saving and loading audio states (mute/unmute) so player preferences are remembered on restart."
+      }
+    },
+
+    "cta": {
+      "title": "Ready to <em>fly?</em>",
+      "subtitle": "Download the APK for Android or the Windows version on itch.io.",
+      "or": "or",
+      "btn_back": "View more projects"
+    }
+  }
+}

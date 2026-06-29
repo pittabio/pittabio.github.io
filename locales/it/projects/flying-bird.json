@@ -1,0 +1,88 @@
+﻿{
+  "head_title": "Flying Bird · Fabio Pittaccio",
+
+  "flying_page": {
+    "tab_title": "Flying Bird — Fabio Pittaccio",
+    "tag": "Progetto Solo · Android & Windows",
+    "title": "Flying <em>Bird</em>",
+    "subtitle": "Un clone cross-platform del classico Flappy Bird, ottimizzato per dispositivi Android.",
+    "btn_download": "Scarica su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Panoramica",
+      "title": "Sviluppo Mobile",
+      "desc": [
+        "<strong>Flying Bird</strong> è un progetto personale nato per esplorare la pipeline mobile all'interno di <strong>Unreal Engine</strong>.",
+        "Come sviluppatore solista, ho gestito l'intero processo: dalla logica di gameplay in C++ allo spawning procedurale, fino alle configurazioni Android come l'input touch e le icone.",
+        "L'obiettivo era creare un'esperienza fluida e leggera con prestazioni costanti sia su mobile che su desktop."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Gameplay Sfidante",
+      "items": [
+        "<li><strong>Movimento Fisico:</strong> Logica basata su impulsi per il volo dell'uccellino, ottimizzata per i touchscreen.</li>",
+        "<li><strong>Spawning Infinito:</strong> Un sistema procedurale che genera e ricicla gli ostacoli (tubi) per creare un loop senza fine.</li>",
+        "<li><strong>Difficoltà Adattiva:</strong> Posizionamento degli ostacoli studiato per offrire una progressione stimolante ma equa.</li>",
+        "<li><strong>Feedback Audio:</strong> Sistema audio integrato con funzione mute e salvataggio delle preferenze in tempo reale.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Pipeline Mobile",
+      "items": [
+        "<li><strong>Integrazione Android:</strong> Gestione della pipeline di pubblicazione, inclusi SDK/NDK, manifest Android e icone personalizzate.</li>",
+        "<li><strong>Logica Spawner C++:</strong> Creazione della classe <code>PipesSpawner</code> per gestire efficientemente il ciclo di vita degli ostacoli.</li>",
+        "<li><strong>Sistema di Salvataggio:</strong> Implementazione della persistenza locale per high score e impostazioni audio tramite C++.</li>",
+        "<li><strong>Scalabilità Input:</strong> Mappatura unificata per gestire sia il tocco (Android) che il mouse/tastiera (Windows).</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Sistemi",
+      "title": "Rifinitura UI e Performance",
+      "items": [
+        "<li><strong>HUD Mobile:</strong> Interfaccia semplificata con countdown pre-partita e punteggio dinamico ottimizzato per schermi piccoli.</li>",
+        "<li><strong>Gestione Stati:</strong> Logica di transizione pulita tra menu principale, loop di gioco e schermata di game-over.</li>",
+        "<li><strong>Ottimizzazione:</strong> Materiali e texture alleggeriti per garantire frame rate elevati su un'ampia gamma di dispositivi Android.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Mobile",
+    "gallery_title": "Galleria Tecnica",
+    "gallery": {
+      "mobile": {
+        "title": "Integrazione Android",
+        "desc": "Focus sullo sviluppo mobile-first, garantendo scalabilità dell'UI, reattività del tocco e asset specifici per la piattaforma.",
+
+        "img1": "Configurazione Piattaforma: Setup del manifest Android e delle impostazioni per gestire orientamento e pacchetti icone.",
+        "img2": "UX Mobile: Implementazione di un countdown a schermo e pulsanti grandi per un'interazione agevole tramite pollice.",
+        "img3": "Build Cross-Platform: Il gioco in esecuzione su Android, a dimostrazione del porting riuscito della logica C++."
+      },
+      "spawner": {
+        "title": "Logica Spawner Procedurale",
+        "desc": "Uno sguardo al cuore C++ responsabile del loop infinito e della randomizzazione degli ostacoli.",
+
+        "img1": "Classe PipesSpawner: Analisi della logica che gestisce tempismo, randomizzazione verticale e riciclo dei tubi.",
+        "img2": "Concetto di Object Pooling: Come il sistema gestisce il ciclo di vita dei tubi per minimizzare l'allocazione di memoria."
+      },
+      "savegame": {
+        "title": "Persistenza e Dati",
+        "desc": "Gestione dei dati locali del giocatore, con focus sul tracciamento dei record e delle impostazioni utente.",
+
+        "img1": "Logica High Score: Implementazione della classe SaveGame per memorizzare il miglior punteggio tra le sessioni.",
+        "img2": "Persistenza Impostazioni: Sistema di salvataggio dello stato audio (mute/unmute) in modo che le preferenze siano ricordate al riavvio."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto a <em>volare?</em>",
+      "subtitle": "Scarica l'APK per Android o la versione Windows su itch.io.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}
