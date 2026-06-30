@@ -71,12 +71,12 @@
         "img1": "IMC_Input: Configuration showing the mapping for spacebar and screen taps."
       },
       "ui": {
-        "title": "Android Optimization",
-        "desc": "Usage of C++ preprocessor macros (<code>#if PLATFORM_ANDROID</code>) to dynamically inject mobile-specific UI elements like the pause button.",
+        "title": "Logic-Driven & Cross-Platform UI",
+        "desc": "A sophisticated UI system where every Widget Blueprint is parented to a C++ class. It features platform-specific logic and programmatic styling to ensure performance and visual consistency.",
 
-        "img1": "Platform HUD: Conditional logic for mobile-only elements.",
-        "img2": "Slate Styling: Programmatic button styling in C++ to handle Normal/Pressed states without Blueprint overhead.",
-        "img3": "C++ Parenting: Demonstration of Widget Blueprints inheriting from C++ classes for optimized logic."
+        "img1": "Android Platform Optimization: A C++ code snippet showing the use of preprocessor macros (<code>#if PLATFORM_ANDROID</code>) to conditionally inject the pause button only on mobile builds.",
+        "img2": "C++ Parenting & Architecture: A view of the Widget Blueprint editor highlighting the <code>PauseWidget</code> C++ parent class and the organized hierarchy of the interactive elements.",
+        "img3": "Complete UI Ecosystem: A comprehensive look at the full game loop interface, including the main menu, the minimalist gameplay HUD, and the death screen with score persistence."
       }
     },
 

@@ -71,12 +71,12 @@
         "img1": "IMC_Input: Configurazione dei binding per barra spaziatrice e tap su schermo."
       },
       "ui": {
-        "title": "Ottimizzazione Android",
-        "desc": "Utilizzo di macro di preprocessore (<code>#if PLATFORM_ANDROID</code>) per iniettare elementi UI specifici per mobile come il tasto pausa.",
+        "title": "UI Cross-Platform & Logic-Driven",
+        "desc": "Un sistema UI avanzato in cui ogni Widget Blueprint eredita da una classe C++. Include logiche specifiche per piattaforma e styling programmatico per garantire prestazioni e coerenza visiva.",
 
-        "img1": "HUD di Piattaforma: Logica condizionale per elementi solo mobile.",
-        "img2": "Styling Slate: Gestione programmatica degli stili dei pulsanti in C++ per gestire gli stati Normal/Pressed senza pesare sui Blueprint.",
-        "img3": "Parenting C++: Esempio di Widget Blueprint che ereditano da classi C++ per una logica ottimizzata."
+        "img1": "Ottimizzazione Piattaforma Android: Frammento di codice C++ che mostra l'uso di macro del preprocessore per iniettare il tasto pausa solo su build mobile.",
+        "img2": "Parenting C++ e Architettura: Vista dell'editor Widget Blueprint che evidenzia la classe parent C++ (<code>PauseWidget</code>) e l'organizzazione gerarchica degli elementi interattivi.",
+        "img3": "Ecosistema UI Completo: Panoramica dell'intera interfaccia di gioco, dal menu principale all' HUD di gioco minimalista, fino alla schermata di morte con persistenza dei punteggi."
       }
     },
 
