@@ -1,0 +1,99 @@
+﻿{
+  "head_title": "WizardScape · Fabio Pittaccio",
+  "wizard_page": {
+    "tab_title": "WizardScape — Fabio Pittaccio",
+    "tag": "Prototipo Pre-Alpha · Android",
+    "title": "Wizard<em>Scape</em>",
+    "subtitle": "Un prototipo survival 3D per mobile con combattimento auto-cast e sistemi di potenziamento dinamici.",
+
+    "btn_download": "Vedi su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Obiettivo Progetto",
+      "title": "Meccaniche Survivor-like",
+      "desc": [
+        "<strong>WizardScape</strong> è un prototipo tecnico nato per esplorare il genere 'Reverse Bullet Hell' su dispositivi mobile utilizzando <strong>Unreal Engine 5.4</strong>.",
+        "Il progetto si concentra sui pilastri del genere: logica di combattimento autonoma, spawning di nemici ad alta densità e uno shop per la meta-progressione.",
+        "Come demo Pre-Alpha, è servito per ottimizzare le prestazioni C++ su Android gestendo al contempo modificatori di statistiche in tempo reale."
+      ]
+    },
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Loop di Sopravvivenza",
+      "items": [
+        "<li><strong>Combattimento Auto-Cast:</strong> Un sistema di prossimità circolare che aggancia e lancia incantesimi automaticamente contro le minacce più vicine.</li>",
+        "<li><strong>Ecosistema Diamanti:</strong> Raccolta risorse su tre livelli: Blu (Valuta), Verde (Bonus temporanei) e Rosso (Modificatori sfida).</li>",
+        "<li><strong>Meta-Progressione:</strong> Uno shop persistente dove spendere i diamanti raccolti per migliorare permanentemente le statistiche del mago.</li>",
+        "<li><strong>Sciame Dinamico:</strong> Spawning procedurale delle ondate con densità dei nemici e difficoltà crescenti nel tempo.</li>"
+      ]
+    },
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Sistemi Mobile",
+      "items": [
+        "<li><strong>Spawning Ottimizzato:</strong> Spawner basato su componenti C++ progettato per gestire un alto numero di nemici in modo efficiente.</li>",
+        "<li><strong>Architettura Modificatori:</strong> Logica di buff/debuff flessibile che permette alle gemme di iniettare modifiche alle statistiche.</li>",
+        "<li><strong>Pipeline Android:</strong> Integrazione completa con SDK/NDK Android e configurazione Java aggiornata per UE 5.4.</li>",
+        "<li><strong>Filtraggio Collisioni:</strong> Canali fisici specializzati per gestire le interazioni tra mago, gemme e nemici.</li>"
+      ]
+    },
+    "systems": {
+      "tag": "Sistemi",
+      "title": "UX e Performance",
+      "items": [
+        "<li><strong>HUD Mobile-First:</strong> Layout verticale ottimizzato per il gioco a una mano, con barre esperienza e icone di stato integrate.</li>",
+        "<li><strong>Joystick Virtuale:</strong> Mappatura dell'input touch calibrata per garantire movimenti fluidi in scenari di combattimento intensi.</li>",
+        "<li><strong>Gestione Asset:</strong> Pulizia sistematica delle risorse inutilizzate e ottimizzazione delle texture per la stabilità su hardware mobile.</li>"
+      ]
+    },
+
+    "gallery": {
+      "title": "Documentazione Progetto",
+
+      "spawner": {
+        "title": "Logica Sciame Procedurale",
+        "desc": "Implementazione di uno spawner C++ ad alte prestazioni. Gestisce i pool di nemici e la logica di offset per il drop dei diamanti alla sconfitta degli avversari.",
+
+        "img1": "Configurazione Spawner: Dettagli della frequenza di spawn e dei parametri di scaling della densità."
+      },
+      "gems": {
+        "title": "Modificatori Data-Driven",
+        "desc": "Analisi del sistema di Buff/Debuff. Ogni tipo di gemma interagisce con le statistiche del mago tramite un componente modificatore centralizzato.",
+
+        "img1": "Logica Gemme: Vista degli actor risorsa e dei relativi eventi trigger per l'iniezione delle statistiche."
+      },
+      "shop": {
+        "title": "Shop Meta-Progressione",
+        "desc": "Interfaccia di potenziamento funzionale derivata da una classe C++. Gestisce la serializzazione dei diamanti e tiene traccia dei miglioramenti permanenti.",
+
+        "img1": "Interfaccia Shop: Layout UI che mostra la logica di acquisto e lo scaling dei costi."
+      },
+      "input": {
+        "title": "Touch e Joystick Virtuale",
+        "desc": "Integrazione personalizzata del Virtual Joystick di Unreal. La mappatura è stata calibrata per bilanciare precisione e reattività su Android.",
+
+        "img1": "Setup Input Mobile: Configurazione dell'interfaccia touch e della sensibilità del joystick."
+      },
+      "pipeline": {
+        "title": "Setup Android SDK/NDK",
+        "desc": "Documentazione della migrazione a UE 5.4, incluse le configurazioni Java e i requisiti Android per la distribuzione mobile moderna.",
+
+        "img1": "Impostazioni Piattaforma: Vista delle impostazioni di progetto per build Android e pacchetti icone."
+      },
+      "ui": {
+        "title": "Design HUD Verticale",
+        "desc": "Architettura UI progettata per la modalità portrait. Centralizza info in tempo reale come conteggio diamanti e timer, usando classi C++ per la logica.",
+
+        "img1": "UX Mobile: Panoramica dell' HUD in-game e del sistema di tutorial integrato."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto a <em>sopravvivere?</em>",
+      "subtitle": "Scarica l' APK Pre-Alpha e prova le meccaniche core su Android.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}
