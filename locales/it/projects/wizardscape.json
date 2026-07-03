@@ -51,11 +51,13 @@
     "gallery": {
       "title": "Documentazione Progetto",
 
-      "spawner": {
-        "title": "Logica Sciame Procedurale",
-        "desc": "Implementazione di uno spawner C++ ad alte prestazioni. Gestisce i pool di nemici e la logica di offset per il drop dei diamanti alla sconfitta degli avversari.",
+      "components": {
+        "title": "Architettura Modulare a Componenti",
+        "desc": "La logica del personaggio è suddivisa in Actor Component C++ specializzati. Questo approccio modulare garantisce che sistemi come Salute, Economia e Spawning siano indipendenti, riutilizzabili e facili da debuggare.",
 
-        "img1": "Configurazione Spawner: Dettagli della frequenza di spawn e dei parametri di scaling della densità."
+        "img1": "Stack dei Componenti: Vista della gerarchia di BP_Character che mostra i componenti C++ personalizzati (Health, Money, Spawner) integrati nell'actor principale.",
+        "img2": "Logica Salute e Loot: Dettagli dell'<code>HealthComponent</code>. Gestisce i parametri vitali e la logica 'Spawn on Dead', garantendo che i nemici rilascino gemme specifiche con offset personalizzati alla sconfitta.",
+        "img3": "Sistema di Spawning Dinamico: Configurazione dello SpawnerComponent. Gestisce i pool di nemici e i pattern di generazione randomizzata relativi alla posizione del giocatore nel mondo."
       },
       "gems": {
         "title": "Modificatori Data-Driven",

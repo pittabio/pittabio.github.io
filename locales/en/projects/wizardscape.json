@@ -51,11 +51,13 @@
     "gallery": {
       "title": "Project Documentation",
 
-      "spawner": {
-        "title": "Procedural Swarm Logic",
-        "desc": "Implementation of a high-performance C++ spawner. It manages enemy mage pools and handles the 'Dead Gem' offset logic to ensure resources drop correctly upon enemy defeat.",
+      "components": {
+        "title": "Modular Component Architecture",
+        "desc": "The player character's logic is decoupled into specialized C++ Actor Components. This modular approach ensures that systems like Health, Economy, and Spawning are independent, reusable, and easy to debug.",
 
-        "img1": "Spawner Configuration: Details of the spawn frequency and enemy density scaling settings."
+        "img1": "Character Component Stack: A view of the BP_Character hierarchy showing the custom C++ components (Health, Money, Spawner) integrated into the main actor.",
+        "img2": "Health & Loot Logic: Details of the <code>HealthComponent</code>. It manages vitals and handles the 'Spawn on Dead' logic, ensuring enemies drop specific gems with custom Z-axis offsets upon defeat.",
+        "img3": "Dynamic Spawning System: The <code>SpawnerComponent</code> configuration. It manages enemy mage pools and randomized spawning patterns relative to the player's world position."
       },
       "gems": {
         "title": "Data-Driven Modifiers",
