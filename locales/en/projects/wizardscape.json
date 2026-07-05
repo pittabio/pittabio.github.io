@@ -59,12 +59,16 @@
         "img2": "Health & Loot Logic: Details of the <code>HealthComponent</code>. It manages vitals and handles the 'Spawn on Dead' logic, ensuring enemies drop specific gems with custom Z-axis offsets upon defeat.",
         "img3": "Dynamic Spawning System: The <code>SpawnerComponent</code> configuration. It manages enemy mage pools and randomized spawning patterns relative to the player's world position."
       },
-      "gems": {
-        "title": "Data-Driven Modifiers",
-        "desc": "Analysis of the Buff/Debuff system. Each gem type (Blue, Green, Red) interacts with the wizard's base stats via a centralized modifier component.",
 
-        "img1": "Gem Logic: View of the resource actors and their respective trigger events for stat injection."
+      "gems": {
+        "title": "Dynamic Resource Ecosystem",
+        "desc": "A probability-based spawning system for interactive resources. Using a polymorphic C++ hierarchy, gems deliver specific gameplay modifiers while maintaining a lightweight data footprint.",
+
+        "img1": "Spawner Configuration: A view of the <code>BP_GemSpawner</code> properties. It allows designers to assign weight-based probabilities (e.g., 55/45) to different actor classes, which the C++ backend then normalizes at runtime.",
+        "img2": "Polymorphic Hierarchy: Showcase of the three gem Blueprints. Each one inherits from a specialized C++ parent class (Buff, Debuff, Money), demonstrating a clean decoupling between core logic and data-only assets.",
+        "img3": "Technical Implementation: A snippet of the C++ spawning logic. It utilizes <code>LineTraceSingleByChannel</code> to detect the ground and <code>SpawnActor</code> to instantiate the chosen gem at the exact impact point."
       },
+
       "shop": {
         "title": "Meta-Progression Shop",
         "desc": "A functional upgrade interface parented to a C++ class. It handles the serialization of player diamonds and tracks permanent attribute improvements.",

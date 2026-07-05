@@ -108,11 +108,23 @@
 
                 <!-- 2. Gems -->
                 <div class="project-card">
-                    <img src="../media/games/wizard-scape/#" alt="Gems"
-                         class="project-image" onclick="openOneImage(this)"
+                    <img src="" alt="Gems"
+                         class="project-image random-img"
+                         data-srcs="
+                            ../media/games/wizard-scape/gems/gem_blue.png,
+                            ../media/games/wizard-scape/gems/gem_green.png,
+                            ../media/games/wizard-scape/gems/gem_red.png"
 
-                         data-img1="../media/games/wizard-scape/#"
+                         onclick="openThreeImages(this)"
+
+                         data-img1="../media/games/wizard-scape/gems/spawner.png"
                          data-desc1="wizard_page.gallery.gems.img1"
+
+                         data-img2="../media/games/wizard-scape/gems/gems.png"
+                         data-desc2="wizard_page.gallery.gems.img2"
+
+                         data-img3="../media/games/wizard-scape/gems/code.png"
+                         data-desc3="wizard_page.gallery.gems.img3"
                     />
                     <h3 class="project-name" data-i18n="wizard_page.gallery.gems.title"></h3>
                     <p class="project-desc" data-i18n-html="wizard_page.gallery.gems.desc"></p>
@@ -207,6 +219,7 @@
 <!-- ## JAVASCRIPT ## -->
 <script src="../scripts/main.js"></script>
 <script src="../scripts/overlay.js"></script>
+<script src="../scripts/random.js"></script>
 
 </body>
 </html>

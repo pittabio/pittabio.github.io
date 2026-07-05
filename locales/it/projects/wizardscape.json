@@ -59,12 +59,16 @@
         "img2": "Logica Salute e Loot: Dettagli dell'<code>HealthComponent</code>. Gestisce i parametri vitali e la logica 'Spawn on Dead', garantendo che i nemici rilascino gemme specifiche con offset personalizzati alla sconfitta.",
         "img3": "Sistema di Spawning Dinamico: Configurazione dello SpawnerComponent. Gestisce i pool di nemici e i pattern di generazione randomizzata relativi alla posizione del giocatore nel mondo."
       },
-      "gems": {
-        "title": "Modificatori Data-Driven",
-        "desc": "Analisi del sistema di Buff/Debuff. Ogni tipo di gemma interagisce con le statistiche del mago tramite un componente modificatore centralizzato.",
 
-        "img1": "Logica Gemme: Vista degli actor risorsa e dei relativi eventi trigger per l'iniezione delle statistiche."
+      "gems": {
+        "title": "Ecosistema Risorse Dinamico",
+        "desc": "Un sistema di spawning basato su probabilità per le risorse interattive. Utilizzando una gerarchia C++ polimorfica, le gemme applicano modificatori di gameplay mantenendo un'architettura dati leggera.",
+
+        "img1": "Configurazione Spawner: Vista delle proprietà di <code>BP_GemSpawner</code>. Permette ai designer di assegnare probabilità basate su pesi (es. 55/45) a diverse classi di actor, che il backend C++ normalizza poi a runtime.",
+        "img2": "Gerarchia Polimorfica: Panoramica dei tre Blueprint delle gemme. Ognuno eredita da una classe parent C++ specializzata (Buff, Debuff, Money), mostrando una netta separazione tra logica core e asset di soli dati.",
+        "img3": "Implementazione Tecnica: Frammento della logica di spawning in C++. Utilizza <code>LineTraceSingleByChannel</code> per rilevare il terreno e <code>SpawnActor</code> per istanziare la gemma scelta nell'esatto punto di impatto."
       },
+
       "shop": {
         "title": "Shop Meta-Progressione",
         "desc": "Interfaccia di potenziamento funzionale derivata da una classe C++. Gestisce la serializzazione dei diamanti e tiene traccia dei miglioramenti permanenti.",
