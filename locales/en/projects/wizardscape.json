@@ -70,11 +70,14 @@
       },
 
       "shop": {
-        "title": "Meta-Progression Shop",
-        "desc": "A functional upgrade interface parented to a C++ class. It handles the serialization of player diamonds and tracks permanent attribute improvements.",
+        "title": "Modular Meta-Progression Shop",
+        "desc": "A scalable upgrade interface built using reusable custom widgets. The logic is driven by a C++ base class that automatically handles data propagation and event broadcasting via dynamic delegates.",
 
-        "img1": "Upgrade Interface: The shop UI layout showing stat-buy logic and cost scaling."
+        "img1": "Pre-Construct Data Binding: Analysis of the <code>NativePreConstruct</code> function. This logic ensures that descriptions, prices, and limits are automatically updated in the Viewport as soon as a designer changes the C++ properties.",
+        "img2": "Custom Item Component: The <code>WBP_ShopItem</code> widget, parented to the <code>ShopItem</code> C++ class. It encapsulates all individual button logic, including the <code>FOnButtonPressedDelegate</code> for centralized handling.",
+        "img3": "Shop Layout & Hierarchy: The main <code>WBP_ShopPage</code> hierarchy. It utilizes a Vertical Box to manage multiple instances of the custom item widget, demonstrating a clean and DRY (Don't Repeat Yourself) UI architecture."
       },
+
       "input": {
         "title": "Touch & Virtual Joystick",
         "desc": "Custom integration of the UE Virtual Joystick. The input mapping was specifically tuned (Ref: Commit 2c24f4e1) to balance precision and responsiveness on Android.",

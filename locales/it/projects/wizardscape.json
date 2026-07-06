@@ -70,11 +70,14 @@
       },
 
       "shop": {
-        "title": "Shop Meta-Progressione",
-        "desc": "Interfaccia di potenziamento funzionale derivata da una classe C++. Gestisce la serializzazione dei diamanti e tiene traccia dei miglioramenti permanenti.",
+        "title": "Shop Modulare e Meta-Progressione",
+        "desc": "Un'interfaccia di potenziamento scalabile costruita tramite widget personalizzati riutilizzabili. La logica è gestita da una classe base C++ che si occupa della propagazione dei dati e degli eventi tramite delegati dinamici.",
 
-        "img1": "Interfaccia Shop: Layout UI che mostra la logica di acquisto e lo scaling dei costi."
+        "img1": "Binding Dati in Pre-Construct: Analisi della funzione <code>NativePreConstruct</code>. Questa logica garantisce che descrizioni, prezzi e limiti siano aggiornati nel Viewport non appena il designer modifica le proprietà C++.",
+        "img2": "Componente Oggetto Personalizzato: Il widget <code>WBP_ShopItem</code>, parentato alla classe C++ <code>ShopItem</code>. Incapsula la logica del singolo pulsante, incluso il delegato <code>FOnButtonPressedDelegate</code> per una gestione centralizzata.",
+        "img3": "Layout e Gerarchia Shop: La gerarchia della pagina <code>WBP_ShopPage</code>. Utilizza un Vertical Box per gestire molteplici istanze del widget personalizzato, dimostrando un'architettura UI pulita e ottimizzata."
       },
+
       "input": {
         "title": "Touch e Joystick Virtuale",
         "desc": "Integrazione personalizzata del Virtual Joystick di Unreal. La mappatura è stata calibrata per bilanciare precisione e reattività su Android.",
