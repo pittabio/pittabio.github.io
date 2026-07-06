@@ -1,0 +1,108 @@
+﻿{
+  "head_title": "WizardScape · Fabio Pittaccio",
+  "wizard_page": {
+    "tab_title": "WizardScape — Fabio Pittaccio",
+    "tag": "Prototipo Pre-Alpha · Android",
+    "title": "Wizard<em>Scape</em>",
+    "subtitle": "Un prototipo survival 3D per mobile con combattimento auto-cast e sistemi di potenziamento dinamici.",
+
+    "btn_download": "Vedi su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Obiettivo Progetto",
+      "title": "Meccaniche Survivor-like",
+      "desc": [
+        "<strong>WizardScape</strong> è un prototipo tecnico nato per esplorare il genere 'Reverse Bullet Hell' su dispositivi mobile utilizzando <strong>Unreal Engine 5.4</strong>.",
+        "Il progetto si concentra sui pilastri del genere: logica di combattimento autonoma, spawning di nemici ad alta densità e uno shop per la meta-progressione.",
+        "Come demo Pre-Alpha, è servito per ottimizzare le prestazioni C++ su Android gestendo al contempo modificatori di statistiche in tempo reale."
+      ]
+    },
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Loop di Sopravvivenza",
+      "items": [
+        "<li><strong>Combattimento Auto-Cast:</strong> Un sistema di prossimità circolare che aggancia e lancia incantesimi automaticamente contro le minacce più vicine.</li>",
+        "<li><strong>Ecosistema Diamanti:</strong> Raccolta risorse su tre livelli: Blu (Valuta), Verde (Bonus temporanei) e Rosso (Modificatori sfida).</li>",
+        "<li><strong>Meta-Progressione:</strong> Uno shop persistente dove spendere i diamanti raccolti per migliorare permanentemente le statistiche del mago.</li>",
+        "<li><strong>Sciame Dinamico:</strong> Spawning procedurale delle ondate con densità dei nemici e difficoltà crescenti nel tempo.</li>"
+      ]
+    },
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Sistemi Mobile",
+      "items": [
+        "<li><strong>Spawning Ottimizzato:</strong> Spawner basato su componenti C++ progettato per gestire un alto numero di nemici in modo efficiente.</li>",
+        "<li><strong>Architettura Modificatori:</strong> Logica di buff/debuff flessibile che permette alle gemme di iniettare modifiche alle statistiche.</li>",
+        "<li><strong>Pipeline Android:</strong> Integrazione completa con SDK/NDK Android e configurazione Java aggiornata per UE 5.4.</li>",
+        "<li><strong>Filtraggio Collisioni:</strong> Canali fisici specializzati per gestire le interazioni tra mago, gemme e nemici.</li>"
+      ]
+    },
+    "systems": {
+      "tag": "Sistemi",
+      "title": "UX e Performance",
+      "items": [
+        "<li><strong>HUD Mobile-First:</strong> Layout verticale ottimizzato per il gioco a una mano, con barre esperienza e icone di stato integrate.</li>",
+        "<li><strong>Joystick Virtuale:</strong> Mappatura dell'input touch calibrata per garantire movimenti fluidi in scenari di combattimento intensi.</li>",
+        "<li><strong>Gestione Asset:</strong> Pulizia sistematica delle risorse inutilizzate e ottimizzazione delle texture per la stabilità su hardware mobile.</li>"
+      ]
+    },
+
+    "gallery": {
+      "title": "Documentazione Progetto",
+
+      "components": {
+        "title": "Architettura Modulare a Componenti",
+        "desc": "La logica del personaggio è suddivisa in Actor Component C++ specializzati. Questo approccio modulare garantisce che sistemi come Salute, Economia e Spawning siano indipendenti, riutilizzabili e facili da debuggare.",
+
+        "img1": "Stack dei Componenti: Vista della gerarchia di BP_Character che mostra i componenti C++ personalizzati (Health, Money, Spawner) integrati nell'actor principale.",
+        "img2": "Logica Salute e Loot: Dettagli dell'<code>HealthComponent</code>. Gestisce i parametri vitali e la logica 'Spawn on Dead', garantendo che i nemici rilascino gemme specifiche con offset personalizzati alla sconfitta.",
+        "img3": "Sistema di Spawning Dinamico: Configurazione dello SpawnerComponent. Gestisce i pool di nemici e i pattern di generazione randomizzata relativi alla posizione del giocatore nel mondo."
+      },
+
+      "gems": {
+        "title": "Ecosistema Risorse Dinamico",
+        "desc": "Un sistema di spawning basato su probabilità per le risorse interattive. Utilizzando una gerarchia C++ polimorfica, le gemme applicano modificatori di gameplay mantenendo un'architettura dati leggera.",
+
+        "img1": "Configurazione Spawner: Vista delle proprietà di <code>BP_GemSpawner</code>. Permette ai designer di assegnare probabilità basate su pesi (es. 55/45) a diverse classi di actor, che il backend C++ normalizza poi a runtime.",
+        "img2": "Gerarchia Polimorfica: Panoramica dei tre Blueprint delle gemme. Ognuno eredita da una classe parent C++ specializzata (Buff, Debuff, Money), mostrando una netta separazione tra logica core e asset di soli dati.",
+        "img3": "Implementazione Tecnica: Frammento della logica di spawning in C++. Utilizza <code>LineTraceSingleByChannel</code> per rilevare il terreno e <code>SpawnActor</code> per istanziare la gemma scelta nell'esatto punto di impatto."
+      },
+
+      "shop": {
+        "title": "Shop Modulare e Meta-Progressione",
+        "desc": "Un'interfaccia di potenziamento scalabile costruita tramite widget personalizzati riutilizzabili. La logica è gestita da una classe base C++ che si occupa della propagazione dei dati e degli eventi tramite delegati dinamici.",
+
+        "img1": "Binding Dati in Pre-Construct: Analisi della funzione <code>NativePreConstruct</code>. Questa logica garantisce che descrizioni, prezzi e limiti siano aggiornati nel Viewport non appena il designer modifica le proprietà C++.",
+        "img2": "Componente Oggetto Personalizzato: Il widget <code>WBP_ShopItem</code>, parentato alla classe C++ <code>ShopItem</code>. Incapsula la logica del singolo pulsante, incluso il delegato <code>FOnButtonPressedDelegate</code> per una gestione centralizzata.",
+        "img3": "Layout e Gerarchia Shop: La gerarchia della pagina <code>WBP_ShopPage</code>. Utilizza un Vertical Box per gestire molteplici istanze del widget personalizzato, dimostrando un'architettura UI pulita e ottimizzata."
+      },
+
+      "input": {
+        "title": "Touch e Joystick Virtuale",
+        "desc": "Integrazione personalizzata del Virtual Joystick di Unreal. La mappatura è stata calibrata per bilanciare precisione e reattività su Android.",
+
+        "img1": "Setup Input Mobile: Configurazione dell'interfaccia touch e della sensibilità del joystick."
+      },
+      "pipeline": {
+        "title": "Setup Android SDK/NDK",
+        "desc": "Documentazione della migrazione a UE 5.4, incluse le configurazioni Java e i requisiti Android per la distribuzione mobile moderna.",
+
+        "img1": "Impostazioni Piattaforma: Vista delle impostazioni di progetto per build Android e pacchetti icone."
+      },
+      "ui": {
+        "title": "Design HUD Verticale",
+        "desc": "Architettura UI progettata per la modalità portrait. Centralizza info in tempo reale come conteggio diamanti e timer, usando classi C++ per la logica.",
+
+        "img1": "UX Mobile: Panoramica dell' HUD in-game e del sistema di tutorial integrato."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto a <em>sopravvivere?</em>",
+      "subtitle": "Scarica l' APK Pre-Alpha e prova le meccaniche core su Android.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}

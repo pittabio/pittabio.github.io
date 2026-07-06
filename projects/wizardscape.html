@@ -1,44 +1,195 @@
 ﻿<!DOCTYPE html>
 <html lang="">
-<head>
+<head>i
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WizardScape</title>
+    <title data-i18n="head_title"></title>
 
-    <!-- CSS Style -->
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/mobile.css">
-    <link rel="stylesheet" href="/style/overlay.css">
+    <!-- ## CSS ## -->
+    <!-- Core: Base, Header, Footer -->
+    <link rel="stylesheet" href="../style/core.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- CDN DevCon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Sections -->
+    <link rel="stylesheet" href="../style/pages/about.css">               <!-- Manages the timeline and resume header -->
+    <link rel="stylesheet" href="../style/sections/section-projects.css"> <!-- Manages the gallery (grid and card) -->
+    <link rel="stylesheet" href="../style/sections/section-contact.css">  <!-- Manages the final CTA section -->
+    <link rel="stylesheet" href="../style/pages/project.css">             <!-- Manages banners and videos -->
 </head>
-
 <body>
-<!-- HEADER -->
+
+<!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- PAGE -->
-<main class="page-content">
-    <!-- ## HERO SECTION ## -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <div class="hero-content">
-                <h1>WORK IN PROGRESS</h1>
+<!-- ## PAGE ## -->
+<main class="page-content resume-page-section">
+
+    <!-- ## PAGE HEAD ## -->
+    <div class="resume-header">
+        <span class="hero-tag"        data-i18n-html="wizard_page.tag"></span>
+        <h1 class="contact-title"     data-i18n-html="wizard_page.title"></h1>
+        <p  class="contact-subtitle"  data-i18n="wizard_page.subtitle"></p>
+    </div>
+
+    <!-- ## BANNER IMAGE ## -->
+    <section class="resume-section">
+        <div class="section-container">
+            <img
+                src="../media/games/wizard-scape/banner.png"
+                alt="WizardScape (The Magic Chase) Banner"
+                class="project-banner"
+                onclick="openOneImage(this)"
+            />
+        </div>
+    </section> <!-- END banner -->
+
+    <!-- ## ABOUT ## -->
+    <section class="resume-section" id="about">
+        <div class="section-container">
+            <div class="education-timeline">
+
+                <!-- 1. Overview -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="wizard_page.about.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="wizard_page.about.title"></div>
+                    <p class="timeline-details" data-i18n-html="wizard_page.about.desc"></p>
+                </div>
+
+                <!-- 2. Gameplay & Features -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="wizard_page.gameplay.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="wizard_page.gameplay.title"></div>
+                    <ul class="timeline-details" data-i18n-html="wizard_page.gameplay.items"></ul>
+                </div>
+
+                <!-- 3. Technical Architecture (C++/UE5) -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="wizard_page.tech.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="wizard_page.tech.title"></div>
+                    <ul class="timeline-details" data-i18n-html="wizard_page.tech.items"></ul>
+                </div>
+
+                <!-- 4. Optimization & Systems -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="wizard_page.systems.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="wizard_page.systems.title"></div>
+                    <ul class="timeline-details" data-i18n-html="wizard_page.systems.items"></ul>
+                </div>
+
             </div>
         </div>
-    </section>
+    </section> <!-- END about -->
+
+    <!-- ## GALLERY ## -->
+    <section class="resume-section" id="gallery">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="wizard_page.gallery.title"></h2>
+
+            <!-- ## GRID ## -->
+            <div class="projects-grid">
+
+                <!-- 1. Components -->
+                <div class="project-card">
+                    <img src="../media/games/wizard-scape/components/character.png" alt="Components"
+                         class="project-image" onclick="openThreeImages(this)"
+
+                         data-img1="../media/games/wizard-scape/components/components.png"
+                         data-desc1="wizard_page.gallery.components.img1"
+
+                         data-img2="../media/games/wizard-scape/components/health.png"
+                         data-desc2="wizard_page.gallery.components.img2"
+
+                         data-img3="../media/games/wizard-scape/components/spawner.png"
+                         data-desc3="wizard_page.gallery.components.img3"
+                    />
+                    <h3 class="project-name" data-i18n="wizard_page.gallery.components.title"></h3>
+                    <p class="project-desc" data-i18n-html="wizard_page.gallery.components.desc"></p>
+                </div>
+
+                <!-- 2. Gems -->
+                <div class="project-card">
+                    <img src="" alt="Gems"
+                         class="project-image random-img"
+                         data-srcs="
+                            ../media/games/wizard-scape/gems/gem_blue.png,
+                            ../media/games/wizard-scape/gems/gem_green.png,
+                            ../media/games/wizard-scape/gems/gem_red.png"
+
+                         onclick="openThreeImages(this)"
+
+                         data-img1="../media/games/wizard-scape/gems/spawner.png"
+                         data-desc1="wizard_page.gallery.gems.img1"
+
+                         data-img2="../media/games/wizard-scape/gems/gems.png"
+                         data-desc2="wizard_page.gallery.gems.img2"
+
+                         data-img3="../media/games/wizard-scape/gems/code.png"
+                         data-desc3="wizard_page.gallery.gems.img3"
+                    />
+                    <h3 class="project-name" data-i18n="wizard_page.gallery.gems.title"></h3>
+                    <p class="project-desc" data-i18n-html="wizard_page.gallery.gems.desc"></p>
+                </div>
+
+                <!-- 3. Shop -->
+                <div class="project-card">
+                    <img src="../media/games/wizard-scape/shop/in-game.png" alt="Shop"
+                         class="project-image" onclick="openThreeImages(this)"
+
+                         data-img1="../media/games/wizard-scape/shop/pre-construct.png"
+                         data-desc1="wizard_page.gallery.shop.img1"
+
+                         data-img2="../media/games/wizard-scape/shop/item.png"
+                         data-desc2="wizard_page.gallery.shop.img2"
+
+                         data-img3="../media/games/wizard-scape/shop/page.png"
+                         data-desc3="wizard_page.gallery.shop.img3"
+                    />
+                    <h3 class="project-name" data-i18n="wizard_page.gallery.shop.title"></h3>
+                    <p class="project-desc" data-i18n-html="wizard_page.gallery.shop.desc"></p>
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- END gallery -->
+
+    <!-- ## CTA ## -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="contact-title"    data-i18n-html="wizard_page.cta.title"></h2>
+            <p  class="contact-subtitle" data-i18n="wizard_page.cta.subtitle"></p>
+
+            <div class="contact-socials">
+                <!-- itch.io -->
+                <a href="https://pittabio.itch.io/flying-bird" target="_blank" class="contact-social-link">
+                    <img src="../media/logo/itchio.png" alt="itch.io" height="16" width="16"/>
+                    itch.io
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/pittabio/Flying_Bird" target="_blank" class="contact-social-link">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt="GitHub" height="16" width="16"/>
+                    GitHub
+                </a>
+            </div>
+
+            <div class="contact-divider">
+                <span data-i18n="wizard_page.cta.or"></span>
+            </div>
+
+            <a href="../projects.html" class="contact-cta">
+                <span data-i18n="wizard_page.cta.btn_back"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section> <!-- END cta -->
 </main>
 
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
 <!-- ## JAVASCRIPT ## -->
-<script src="/scripts/main.js"></script>
-<script src="/scripts/overlay.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/overlay.js"></script>
+<script src="../scripts/random.js"></script>
 
 </body>
 </html>
