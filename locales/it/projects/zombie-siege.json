@@ -14,7 +14,7 @@
       "title": "La difesa definitiva contro i non morti",
       "desc": [
         "In un mondo devastato dai non morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate incessanti.",
-        "Sviluppato in un <strong>ambiente collaborativo</strong>, sono stato responsabile delle meccaniche sistemiche principali, dell'architettura della UI e della logica di gioco di alto livello.",
+        "Sviluppato in un <strong>ambiente collaborativo</strong>, mi sono occupato delle meccaniche sistemiche principali, dell'architettura della UI alla logica di gioco di alto livello.",
         "Il progetto mostra una profonda integrazione tra sistemi backend in C++ e feedback visivi in Blueprint, garantendo un'esperienza fluida e reattiva."
       ]
     },
@@ -52,11 +52,14 @@
       ]
     },
 
-    "video_title": "Panoramica del Gameplay",
-    "gallery_title": "Documentazione Tecnica",
+    "video_title": "Gameplay Trailer",
     "gallery": {
-      "architecture_title": "Diagramma delle Classi",
-      "architecture_desc": "Mappa architettonica completa che illustra le relazioni tra la logica della Game Mode, gli spawner dei nemici e la gerarchia delle strutture.",
+      "title": "Documentazione Progetto",
+
+      "architecture": {
+        "title": "Diagramma delle Classi",
+        "desc": "Mappa architettonica completa che illustra le relazioni tra la logica della Game Mode, gli spawner dei nemici e la gerarchia delle strutture."
+      },
 
       "placement": {
         "title": "Validazione Spaziale del Posizionamento",

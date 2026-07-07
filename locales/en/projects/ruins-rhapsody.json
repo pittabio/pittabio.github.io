@@ -16,10 +16,7 @@
       "desc": [
         "Step into the boots of <strong>Alessandra Morioka</strong>, a daring archaeologist on a mission to uncover the <em>Lost Heart of Arachne</em>.",
         "Originally developed as an <strong>academy thesis</strong> and later refined into a technical demo, this project showcases a custom third-person framework.",
-        "Inspired by classics like <em>Tomb Raider</em>, the project focuses on bridging character mechanics with reliable backend systems in C++.",
-        "Originally developed as a <strong>academy thesis</strong> and later expanded into a full technical demo,",
-        "this project showcases a high-end third-person framework.",
-        "Inspired by classics like <em>Tomb Raider</em>, it bridges the gap between cinematic storytelling and rigorous software engineering."
+        "Inspired by classics like <em>Tomb Raider</em>, the project focuses on bridging character mechanics with reliable backend systems in C++."
       ]
     },
 
@@ -30,7 +27,7 @@
         "<li><strong>Advanced Traversal:</strong> A multi-modal movement system including climbing, ledge navigation, and dynamic sliding.</li>",
         "<li><strong>Environmental Interaction:</strong> Complex puzzle-solving using key-door mechanics and inventory-based triggers.</li>",
         "<li><strong>Tactical Combat:</strong> Encounter diverse AI threats (animals, robots, humans) with modular weapon systems and ammunition management.</li>",
-        "<li><strong>Exploration:</strong> Three distinct atmospheric zones: Ancient Temple, Underground Cave with a lake, and Open Ruins.</li>"
+        "<li><strong>Exploration:</strong> Three distinct atmospheric zones: Ancient Temple, a Lake with an Underground Cave, and Open Ruins.</li>"
       ]
     },
 
@@ -53,33 +50,55 @@
         "<li><strong>Save/Load Pipeline:</strong> A robust serialization system tracking sub-level states, player progression, and inventory persistence.</li>",
         "<li><strong>Localisation:</strong> Built-in translation framework with runtime toggle between English and Italian.</li>",
         "<li><strong>Interactive UI:</strong> 3D Main Menu widgets integrated into the game environment with layered ambient audio design.</li>",
-        "<li><strong>Performance:</strong> Extensive profiling and asset optimization (texture resizing, mesh cleaning) to maintain 60+ FPS on Windows.</li>"
+        "<li><strong>Performance:</strong> Extensive profiling and asset optimization to maintain a stable and optimized experience on Windows.</li>"
       ]
     },
 
     "video_title": "Gameplay Trailer",
-    "gallery_title": "Project Documentation",
     "gallery": {
-      "codemap_title": "Initial System Architecture",
-      "codemap_desc": [
-        "Foundational software map designed during the thesis phase. It illustrates the core logic and class interactions that serve as the project's backbone.",
-        "<br><a href='../media/games/ruins-rhapsody/code-map.pdf' target='_blank' style='color:var(--accent); font-weight:500; text-decoration:underline;'>View full-res Technical PDF</a>"
-      ],
+      "title": "Project Documentation",
 
-      "components_title": "Modular Character Logic",
-      "components_desc": "Breakdown of custom C++ components (Climb, Swim, Inventory) extending the MetaHuman base for a reusable traversal framework.",
+      "codemap": {
+        "title": "Initial System Architecture",
+        "desc": "Foundational software map designed during the thesis phase, illustrating core logic and class interactions.",
 
-      "input_title": "Enhanced Input System",
-      "input_desc": "Scalable control scheme using UE5 Data Assets to manage traversal, combat, and interaction actions.",
+        "img1": "Architecture Map: High-level overview of the class hierarchy and communication protocols between systems."
+      },
 
-      "ai_title": "AI & Parameter Tuning",
-      "ai_desc": "Configuration for enemy sensing, procedural loot systems, and visual feedback through Niagara VFX.",
+      "components": {
+        "title": "Modular Character Logic",
+        "desc": "Custom C++ components extending the MetaHuman base for a reusable traversal framework.",
 
-      "bt_title": "AI Behavior Trees",
-      "bt_desc": "Logic flow featuring 3 main states: Autonomous Patrol, Player Chasing, and Ranged Combat with cooldown management.",
+        "img1": "Component Stack: View of the custom C++ modules (Climbing, Swimming, Inventory) attached to the main character."
+      },
 
-      "world_title": "World Composition & Streaming",
-      "world_desc": "Implementation of Level Streaming to optimize performance, allowing asynchronous loading of game areas without interruptions in gameplay (invisible loading)."
+      "input": {
+        "title": "Enhanced Input System",
+        "desc": "Scalable control scheme using UE5 Data Assets to manage traversal, combat, and UI actions.",
+
+        "img1": "Input Configuration: Mapping of movement and interaction states using the Enhanced Input plugin."
+      },
+
+      "ai": {
+        "title": "AI & Parameter Tuning",
+        "desc": "Configuration for enemy sensing, procedural loot systems, and visual feedback.",
+
+        "img1": "AI Configuration: Details of the sensing components and combat parameters for robotic enemies."
+      },
+
+      "bt": {
+        "title": "AI Behavior Trees",
+        "desc": "Logic flow featuring 3 main states: Autonomous Patrol, Player Chasing, and Ranged Combat.",
+
+        "img1": "Behavior Tree: Visual logic flow managing enemy decision-making and state transitions."
+      },
+
+      "world": {
+        "title": "World Composition & Streaming",
+        "desc": "Implementation of Level Streaming to optimize performance and area transitions.",
+
+        "img1": "Level Management: Asynchronous loading setup to maintain high performance without gameplay interruptions."
+      }
     },
 
     "cta": {

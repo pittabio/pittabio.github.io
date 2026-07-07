@@ -28,6 +28,7 @@
         "<li><strong>Sciame Dinamico:</strong> Spawning procedurale delle ondate con densità dei nemici e difficoltà crescenti nel tempo.</li>"
       ]
     },
+
     "tech": {
       "tag": "Tecnica",
       "title": "Sistemi Mobile",
@@ -38,6 +39,7 @@
         "<li><strong>Filtraggio Collisioni:</strong> Canali fisici specializzati per gestire le interazioni tra mago, gemme e nemici.</li>"
       ]
     },
+
     "systems": {
       "tag": "Sistemi",
       "title": "UX e Performance",
@@ -48,6 +50,7 @@
       ]
     },
 
+    "video_title": "Gameplay Trailer",
     "gallery": {
       "title": "Documentazione Progetto",
 
@@ -84,17 +87,19 @@
 
         "img1": "Setup Input Mobile: Configurazione dell'interfaccia touch e della sensibilità del joystick."
       },
+
       "pipeline": {
         "title": "Setup Android SDK/NDK",
         "desc": "Documentazione della migrazione a UE 5.4, incluse le configurazioni Java e i requisiti Android per la distribuzione mobile moderna.",
 
         "img1": "Impostazioni Piattaforma: Vista delle impostazioni di progetto per build Android e pacchetti icone."
       },
+
       "ui": {
         "title": "Design HUD Verticale",
         "desc": "Architettura UI progettata per la modalità portrait. Centralizza info in tempo reale come conteggio diamanti e timer, usando classi C++ per la logica.",
 
-        "img1": "UX Mobile: Panoramica dell' HUD in-game e del sistema di tutorial integrato."
+        "img1": "UX Mobile: Panoramica dell'HUD in-game e del sistema di tutorial integrato."
       }
     },
 
