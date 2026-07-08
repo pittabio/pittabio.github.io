@@ -60,9 +60,7 @@
 
       "codemap": {
         "title": "Initial System Architecture",
-        "desc": "Foundational software map designed during the thesis phase, illustrating core logic and class interactions.",
-
-        "img1": "Architecture Map: High-level overview of the class hierarchy and communication protocols between systems."
+        "desc": "Foundational software map designed during the thesis phase, illustrating core logic and class interactions."
       },
 
       "components": {
