@@ -33,9 +33,19 @@
     window.openOneImage = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
+
+        const data = {
+            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1')
+        };
+
         wrap.innerHTML = `
             <button class="btn-close" onclick="closePopup()">✕</button>
-            <img src="${imgEl.src}" class="popup-img-single" alt="Enlarged view">
+            <div class="popup-grid">
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+            </div>
         `;
         document.getElementById('overlay').classList.add('active');
     };
