@@ -25,7 +25,7 @@ body.no-scroll {
 .popup-img-wrap {
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: auto;
 }
 
@@ -39,13 +39,16 @@ body.no-scroll {
 
 /* --- LOGIC FOR 1 IMAGE --- */
 .popup-grid.grid-1 {
-    max-width: 800px; /* Not too wide for vertical screenshots */
+    max-width: 1300px; /* Increased from 800px to 1300px for landscape images */
+    width: 100%;       /* Allows you to expand up to max-width */
     margin: 0 auto;
 }
 .popup-grid.grid-1 .popup-item img {
-    max-height: 75vh; /* Lots of headroom */
+    max-height: 80vh; /* Increased slightly to give more breathing room */
     width: auto;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* --- LOGIC FOR 2-3 IMAGES --- */
