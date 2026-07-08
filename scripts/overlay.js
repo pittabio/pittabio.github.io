@@ -33,14 +33,11 @@
     window.openOneImage = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
-
-        const data = {
-            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1')
-        };
+        const data = { img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1') };
 
         wrap.innerHTML = `
             <button class="btn-close" onclick="closePopup()">✕</button>
-            <div class="popup-grid">
+            <div class="popup-grid grid-1"> <!-- Added grid-1 class -->
                 <div class="popup-item">
                     <img src="${data.img1}" alt="">
                     <p>${t(data.desc1)}</p>
@@ -54,7 +51,6 @@
     window.openTwoImages = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
-
         const data = {
             img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
             img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2')
@@ -62,7 +58,7 @@
 
         wrap.innerHTML = `
             <button class="btn-close" onclick="closePopup()">✕</button>
-            <div class="popup-grid">
+            <div class="popup-grid grid-2"> <!-- Added grid-2 class -->
                 <div class="popup-item">
                     <img src="${data.img1}" alt="">
                     <p>${t(data.desc1)}</p>
@@ -80,7 +76,6 @@
     window.openThreeImages = function(imgEl) {
         document.body.classList.add('no-scroll');
         const wrap = document.getElementById('popupWrap');
-
         const data = {
             img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
             img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2'),
@@ -89,7 +84,7 @@
 
         wrap.innerHTML = `
             <button class="btn-close" onclick="closePopup()">✕</button>
-            <div class="popup-grid">
+            <div class="popup-grid grid-3"> <!-- Added grid-3 class -->
                 <div class="popup-item">
                     <img src="${data.img1}" alt="">
                     <p>${t(data.desc1)}</p>
