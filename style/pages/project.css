@@ -1,5 +1,6 @@
 ﻿/* ## PROJECT DETAIL PAGE ## */
 
+/* Responsive 16:9 video embed wrapper */
 .project-video-wrapper {
     position: relative;
     width: 100%;
@@ -17,9 +18,9 @@
     border: 0;
 }
 
+/* Full-width banner image at the top of the page */
 .project-banner {
     width: 100%;
-    max-height: 55vh;
     object-fit: cover;
     border-radius: var(--radius);
     cursor: pointer;
@@ -31,6 +32,10 @@
     filter: brightness(1.1);
 }
 
+/* ## RESPONSIVE ## */
+
 @media (max-width: 768px) {
-    .project-banner { max-height: 40vh; }
+    .project-banner {
+        max-height: 40vh;
+    }
 }

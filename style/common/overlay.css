@@ -79,11 +79,12 @@ body.no-scroll {
     object-fit: contain;
     background: #000;
     border-radius: 6px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+    display: block;
 }
 
 .popup-item p {
+    margin-top: 15px;
     font-size: 0.95rem;
     color: var(--text);
     line-height: 1.6;
