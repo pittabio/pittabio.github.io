@@ -1,0 +1,66 @@
+{
+  "head_title": "Echoes of the Witch Wood · Archive",
+
+  "echoes_page": {
+    "tag": "Dev Archive · Unreal Engine 5 · C++",
+    "title": "Echoes of the <em>Witch Wood</em>",
+    "subtitle": "A solid and scalable action-platformer architecture, built on custom C++ systems and modular AI logic.",
+    "banner": "Main project folders",
+
+    "status_badge": "Archived / Technical Prototype",
+    "status_note": [
+      "This project served as a fundamental testing ground for implementing core systems in C++.",
+      "Although development is suspended, the code produced for enemy AI and the save system represents some of my most structured work."
+    ],
+
+    "concept": {
+      "tag": "Concept",
+      "title": "Systems over Quantity",
+      "desc": [
+        "The focus was on creating a robust framework for a two-character platformer.",
+        "Every system was designed to be actor-agnostic: ",
+        "from portals to moving platforms, communication occurs via interfaces to ensure maximum maintainability."
+      ]
+    },
+
+    "tech_work": {
+      "tag": "Technical Development (My Role)",
+      "title": "Core Systems Engineering",
+      "items": [
+        "<li><strong>AI & Enemy Framework:</strong> Developed a generic enemy base class with health management and a complex 'Kamikaze' AI, complete with State Machines (Chase, Attack, Stroll), Behavior Trees (Blackboard), and positional SFX.</li>",
+        "<li><strong>Save Architecture:</strong> Implementation of a complete data persistence pipeline based on interfaces, supporting checkpoints, multiple slots, and serialization of Player State and Game State.</li>",
+        "<li><strong>Advanced Movement Systems:</strong> Development of the Dash mechanic (Ground/Air) with conflict resolution on steep surfaces, and creation of a 'Floor Checking' system through C++ components and interfaces.</li>",
+        "<li><strong>Environmental Mechanics:</strong> Design of Spline-based moving platforms, timed platforms (falling platforms), and a portal system for instantaneous actor teleportation.</li>",
+        "<li><strong>Modular Audio System:</strong> Creation of a custom audio component to standardize sound variable management and simplify playback functions across the project.</li>"
+      ]
+    },
+
+    "lessons": {
+      "tag": "Post-Mortem",
+      "title": "Lessons Learned",
+      "desc": [
+        "Through this project, I refined <strong>C++ Timer</strong> management for timed mechanics and <strong>Inheritance</strong> logic for AI.",
+        "Code cleanliness and the creation of a <em>CodeMap</em> were vital for coordinating movement systems with interaction systems (levers/doors)."
+      ]
+    },
+
+    "highlights": {
+      "title": "Key Technical Contributions",
+      "items": [
+        "⁕ Enemy AI with State Machine and Blackboard<br>",
+        "⁕ Save System Pipeline (Slots & Checkpoints)<br>",
+        "⁕ Custom Dash Logic (Ground/Air)<br>",
+        "⁕ Hero & Ability Interface for decoupled systems<br>",
+        "⁕ Async Loading System (Loading Screens)<br>",
+        "⁕ Spline and Timer-driven environmental mechanics"
+      ]
+    },
+
+    "cta": {
+      "title": "Explore other <em>projects</em>",
+      "subtitle": "Even though this journey has ended, the systems created live on in my subsequent works.",
+      "divider": "so",
+      "btn_back": "Back to Projects"
+    }
+  }
+}
