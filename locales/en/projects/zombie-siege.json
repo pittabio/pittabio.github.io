@@ -52,11 +52,14 @@
       ]
     },
 
-    "video_title": "Gameplay Overview",
-    "gallery_title": "Technical Documentation",
+    "video_title": "Gameplay Trailer",
     "gallery": {
-      "architecture_title": "Class Diagram",
-      "architecture_desc": "Full architectural map illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy.",
+      "title": "Project Documentation",
+
+      "architecture": {
+        "title": "Class Diagram",
+        "desc": "Full architectural map illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy."
+      },
 
       "placement": {
         "title": "Spatial Placement Validation",

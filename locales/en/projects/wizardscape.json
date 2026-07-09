@@ -48,6 +48,7 @@
       ]
     },
 
+    "video_title": "Gameplay Trailer",
     "gallery": {
       "title": "Project Documentation",
 
@@ -84,12 +85,14 @@
 
         "img1": "Mobile Input Setup: Configuration of the touch interface and joystick sensitivity."
       },
+
       "pipeline": {
         "title": "Android SDK/NDK Setup",
         "desc": "Documentation of the migration to UE 5.4, including the updated Java and Android requirement configurations for modern mobile distribution.",
 
         "img1": "Platform Settings: A look at the Project Settings for Android builds and icon packaging."
       },
+
       "ui": {
         "title": "Vertical HUD Design",
         "desc": "A UI architecture designed for portrait mode. It centralizes real-time info like diamond count and timer, using C++ classes for optimized widget logic.",

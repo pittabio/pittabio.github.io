@@ -36,7 +36,7 @@
       "items": [
         "<li><strong>Hybrid Framework:</strong> Core systems developed in C++ (SaveGame, Audio Mixers) and extended via Blueprints for rapid gameplay iteration.</li>",
         "<li><strong>Local Leaderboard:</strong> A dedicated Top 5 ranking system that persists locally, allowing players to compete for high scores.</li>",
-        "<li><strong>Asynchronous Loading:</strong> Implementation of real-time loading screens featuring animated 2D flip-books to ensure smooth transitions.</li>",
+        "<li><strong>Asynchronous Loading:</strong> Implementation of real-time loading screens featuring animated Flipbook to ensure smooth transitions.</li>",
         "<li><strong>Audio Control:</strong> Comprehensive Audio Mixer setup for independent management of music, UI sounds, and environmental SFX.</li>"
       ]
     },
@@ -52,26 +52,51 @@
       ]
     },
 
-    "video_title": "Official Trailer",
-    "gallery_title": "Gallery & Resources",
+    "video_title": "Gameplay Trailer",
     "gallery": {
-      "architecture_title": "C++ Software Architecture",
-      "architecture_desc": "Modular project structure organized into specialized namespaces (SaveSystem, Collectibles, Widgets) for high maintainability and clean C++ source management.",
+      "title": "Project Documentation",
 
-      "hybrid_title": "Hybrid Development Workflow",
-      "hybrid_desc": "Usage of <code>BlueprintImplementableEvent</code> to trigger visual logic (timelines, materials) from C++ core classes, maintaining a clear separation between data and presentation.",
+      "architecture": {
+        "title": "C++ Software Architecture",
+        "desc": "Modular project structure organized into specialized namespaces for high maintainability.",
 
-      "persistence_title": "Save System & Serialization",
-      "persistence_desc": "Implementation of a robust save system for both gameplay progression (coins, chests, checkpoints) and user preferences (audio mixers, language, input settings).",
+        "img1": "Solution Overview: Clean organization of header and source files within the Unreal project structure."
+      },
 
-      "input_title": "Enhanced Input & Scalability",
-      "input_desc": "Unified mapping for Keyboard, Gamepad, and Mobile Touch using UE5 Enhanced Input, ensuring a consistent feel across all supported platforms.",
+      "hybrid": {
+        "title": "Hybrid Development Workflow",
+        "desc": "Usage of BlueprintImplementableEvent to trigger visual logic from C++ core classes.",
 
-      "instance_title": "Game Instance & Global State",
-      "instance_desc": "Centralized management of save file references and global states (save slots, level names) that persist throughout the entire game session.",
+        "img1": "C++/BP Integration: Example of a C++ class calling Blueprint events for cosmetic animations."
+      },
 
-      "ui_title": "UI Hierarchy & UX Design",
-      "ui_desc": "Menu system architecture built using Widget Blueprints, with a focus on hierarchical navigation, background blur, and pause state management."
+      "persistence": {
+        "title": "Save System & Serialization",
+        "desc": "Implementation of a robust save system for gameplay progression and user preferences.",
+
+        "img1": "Data Saving: Configuration of the SaveGame object used to persist coins and checkpoints."
+      },
+
+      "input": {
+        "title": "Enhanced Input & Scalability",
+        "desc": "Unified mapping for Keyboard, Gamepad, and Touch using UE5 Enhanced Input.",
+
+        "img1": "Input Mapping: Cross-platform control scheme setup for universal accessibility."
+      },
+
+      "instance": {
+        "title": "Game Instance & Global State",
+        "desc": "Centralized management of save file references and global states that persist across levels.",
+
+        "img1": "Global Logic: Implementation of the GameInstance class to handle persistent data between sessions."
+      },
+
+      "ui": {
+        "title": "UI Hierarchy & UX Design",
+        "desc": "Menu system architecture built using Widget Blueprints and hierarchical navigation.",
+
+        "img1": "Widget Structure: Hierarchy of the pause and main menu widgets with focus on user flow."
+      }
     },
 
     "cta": {

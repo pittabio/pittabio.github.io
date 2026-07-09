@@ -39,37 +39,45 @@
       ]
     },
 
+    "video_title": "Gameplay Trailer",
     "gallery": {
+      "title": "Project Documentation",
+
       "game_state": {
         "title": "Event Architecture",
         "desc": "Usage of <code>Dynamic Multicast Delegates</code> in the GameState to decouple gameplay triggers (Score, Death) from the UI and audio systems.",
 
         "img1": "Delegate System: Implementation of event broadcasting to maintain a clean communication flow between classes."
       },
+
       "bird": {
         "title": "Physics & Impulse",
         "desc": "Flight logic handled via <code>AddImpulse</code>. The system dampens angular velocity and locks rotation to maintain stability during physics simulation.",
 
         "img1": "Impulse Logic: A view of the impulse force parameters and the air resistance (Linear Damping) setup."
       },
+
       "pipes": {
         "title": "Collision Management",
         "desc": "Optimization of collision channels to separate lethal meshes from scoring triggers, preventing false-positive overlaps.",
 
         "img1": "Collision Filtering: Configuration of custom object types for accurate interaction detection."
       },
+
       "spawner": {
         "title": "Procedural Spawning",
         "desc": "Implementation of a tick-based generator that uses <code>FFloatRange</code> to randomize obstacle height within set bounds.",
 
         "img1": "Spawner Setup: View of the spawner properties, including spawn delays and vertical range offsets."
       },
+
       "input": {
         "title": "Cross-Platform Input",
         "desc": "Unified mapping via Enhanced Input, allowing the same logic to handle Android touch events and Windows keyboard/mouse clicks.",
 
         "img1": "IMC_Input: Configuration showing the mapping for spacebar and screen taps."
       },
+
       "ui": {
         "title": "Logic-Driven & Cross-Platform UI",
         "desc": "A sophisticated UI system where every Widget Blueprint is parented to a C++ class. It features platform-specific logic and programmatic styling to ensure performance and visual consistency.",
