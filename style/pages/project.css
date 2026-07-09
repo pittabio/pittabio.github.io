@@ -32,6 +32,25 @@
     filter: brightness(1.1);
 }
 
+.archive-notice {
+    border-left: 4px solid #ffbb33;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 187, 51, 0.05);
+    margin-bottom: 3rem;
+    border-radius: 0 8px 8px 0;
+}
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ffbb33;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
 /* ## RESPONSIVE ## */
 
 @media (max-width: 768px) {
