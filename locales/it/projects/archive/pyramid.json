@@ -1,0 +1,66 @@
+{
+  "head_title": "Project Pyramid · Archivio Sviluppo",
+
+  "pyramid_page": {
+    "tag": "In Sviluppo · Team Project · UE5",
+    "title": "Project <em>Pyramid</em>",
+    "subtitle": "Un'avventura stealth ambientata nell'antico Egitto, con un sistema di IA modulare e navigazione avanzata.",
+    "banner": "Struttura delle classi IA e del Subsystem in JetBrains Rider",
+
+    "status_badge": "In Sviluppo (Contributo Pausato)",
+    "status_note": [
+      "Project Pyramid è un progetto collaborativo in corso.",
+      "Il mio ruolo come <strong>Programmatore IA</strong> è attualmente concluso/pausato dopo aver consegnato l'intera architettura dei nemici e dei sistemi di percezione.",
+      "Il team prosegue ora con il level design e le meccaniche di puzzle."
+    ],
+
+    "concept": {
+      "tag": "Ruolo",
+      "title": "Ingegneria dell'IA Stealth",
+      "desc": [
+        "In un gioco stealth, l'IA è il cuore dell'esperienza. Mi sono occupato di progettare un sistema che non fosse solo 'reattivo', ma credibile.",
+        "Dalla gestione della memoria dei nemici (Dummy System) alla coordinazione dei rinforzi, l'obiettivo è stato creare un framework scalabile e facilmente bilanciabile dai designer tramite Data Table."
+      ]
+    },
+
+    "tech_work": {
+      "tag": "Sviluppo Tecnico",
+      "title": "Sistemi Core e IA",
+      "items": [
+        "<li><strong>Dummy Entity World Subsystem:</strong> Ho implementato un sistema (C++) che genera un'entità 'fantasma' nell'ultima posizione nota del giocatore. L'IA indaga sul Dummy invece che 'barare' conoscendo la posizione reale del player.</li>",
+        "<li><strong>IA Multistato (C++/BT):</strong> Architettura Behavior Tree con 5 stati principali (Patrol, Alert, Search, Combat, Dead). Include una gestione dinamica della percezione che cambia i parametri (vista/udito) in base allo stato attuale.</li>",
+        "<li><strong>Coordinamento e Ruoli:</strong> Sistema di 'Call for Aid' sincronizzato per evitare urla simultanee dei nemici. Gestione dei ruoli (Investigator vs Support) per accerchiare il giocatore durante le ricerche.</li>",
+        "<li><strong>EQS & Flanking:</strong> Utilizzo dell'Environment Query System per il flanking dinamico in combattimento e per la scelta di punti di ricerca esclusivi, evitando che i nemici si sovrappongano.</li>",
+        "<li><strong>Slide Component:</strong> Sviluppo di una meccanica di scivolata basata sulla pendenza (slope-aware) tramite proiezione di vettori e VLerp delle normali del terreno.</li>"
+      ]
+    },
+
+    "lessons": {
+      "tag": "Lessons",
+      "title": "Workflow e Strumenti",
+      "desc": [
+        "Ho imparato a ottimizzare i sistemi rimuovendo i componenti basati su Tick (come il rilevamento passi) a favore di <strong>Anim Notifies</strong> molto più performanti.",
+        "Ho inoltre creato strumenti per l'editor (Construction Script) per visualizzare i percorsi di pattugliamento e i tempi di attesa direttamente nel viewport, velocizzando drasticamente l'iterazione del team."
+      ]
+    },
+
+    "highlights": {
+      "title": "Contributi Tecnici Chiave",
+      "items": [
+        "⁕ Dummy System tramite World Subsystem (C++)<br>",
+        "⁕ Percezione Dual-Sight (Diretta e Periferica)<br>",
+        "⁕ Sistema di Flanking e Point Claiming tramite EQS<br>",
+        "⁕ IA Driven da Data Table per bilanciamento rapido<br>",
+        "⁕ Componente di scivolata Mirror's Edge-style<br>",
+        "⁕ Tooling editor per visualizzazione Spline Patrol"
+      ]
+    },
+
+    "cta": {
+      "title": "Vuoi vedere <em>altro?</em>",
+      "subtitle": "Esplora gli altri progetti nel mio archivio o torna alla lista principale.",
+      "divider": "perciò",
+      "btn_back": "Torna ai Progetti"
+    }
+  }
+}

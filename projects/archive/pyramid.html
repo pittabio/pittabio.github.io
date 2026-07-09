@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="head_title"></title>
+
+    <!-- ## CSS ## -->
+    <link rel="stylesheet" href="../../style/core.css">                         <!-- Core: Base, Header, Footer -->
+    <link rel="stylesheet" href="../../style/pages/about.css">                  <!-- Manages the timeline -->
+    <link rel="stylesheet" href="../../style/sections/section-projects.css">    <!-- Manages the gallery (grid and card) -->
+    <link rel="stylesheet" href="../../style/sections/section-contact.css">     <!-- Manages the final CTA section -->
+    <link rel="stylesheet" href="../../style/pages/project.css">                <!-- Manages banners -->
+</head>
+<body>
+
+<!-- ## HEADER ## -->
+<div id="header"></div>
+
+<!-- ## PAGE ## -->
+<main class="page-content resume-page-section">
+
+    <!-- ## PAGE HEAD ## -->
+    <div class="resume-header">
+        <span class="hero-tag"        data-i18n-html="pyramid_page.tag"></span>
+        <h1 class="contact-title"     data-i18n-html="pyramid_page.title"></h1>
+        <p  class="contact-subtitle"  data-i18n="pyramid_page.subtitle"></p>
+    </div>
+
+    <!-- ## ? BANNER IMAGE HERE ? ## -->
+
+    <!-- ## ABOUT ## -->
+    <section class="resume-section" id="about">
+        <div class="section-container">
+
+            <!-- NOTICE -->
+            <div class="archive-notice">
+                <span class="status-badge" data-i18n="pyramid_page.status_badge"></span>
+                <p class="timeline-details" data-i18n-html="pyramid_page.status_note"></p>
+            </div>
+
+            <div class="education-timeline">
+			
+                <!-- 1. Role -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="pyramid_page.concept.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="pyramid_page.concept.title"></div>
+                    <p class="timeline-details" data-i18n-html="pyramid_page.concept.desc"></p>
+                </div>
+
+                <!-- 2. Technical -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="pyramid_page.tech_work.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="pyramid_page.tech_work.title"></div>
+                    <ul class="timeline-details" data-i18n-html="pyramid_page.tech_work.items"></ul>
+                </div>
+
+                <!-- 3. Lessons -->
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="pyramid_page.lessons.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="pyramid_page.lessons.title"></div>
+                    <p class="timeline-details" data-i18n-html="pyramid_page.lessons.desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ## HIGHLIGHTS ## -->
+    <section class="resume-section" id="highlights">
+        <div class="section-container">
+
+            <!-- Highlights title -->
+            <h2 class="section-title" data-i18n="pyramid_page.highlights.title"></h2>
+
+            <!-- Items -->
+            <div class="education-timeline">
+                <div class="timeline-entry">
+                    <ul class="timeline-details" data-i18n-html="pyramid_page.highlights.items"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ## CTA ## -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="contact-title"    data-i18n-html="pyramid_page.cta.title"></h2>
+            <p  class="contact-subtitle" data-i18n="pyramid_page.cta.subtitle"></p>
+            <div class="contact-divider" data-i18n="pyramid_page.cta.divider"></div>
+            <a href="../../projects.html" class="contact-cta">
+                <span data-i18n="pyramid_page.cta.btn_back"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- ## FOOTER ## -->
+<div id="footer"></div>
+
+<!-- ## JAVASCRIPT ## -->
+<script src="../../scripts/main.js"></script>
+
+</body>
+</html>

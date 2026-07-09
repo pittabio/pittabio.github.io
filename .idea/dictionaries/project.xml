@@ -4,6 +4,7 @@
       <w>Aracne</w>
       <w>Flipbook</w>
       <w>Morioka</w>
+      <w>Multistato</w>
       <w>Profilazione</w>
       <w>Salvataggio</w>
       <w>Schiera</w>
@@ -32,6 +33,7 @@
       <w>collezionabili</w>
       <w>debuggare</w>
       <w>dell'actor</w>
+      <w>dell'environment</w>
       <w>dell'hud</w>
       <w>dell'ia</w>
       <w>dell'ui</w>
@@ -50,6 +52,7 @@
       <w>sottomoduli</w>
       <w>spacebar</w>
       <w>un'ia</w>
+      <w>vlerp</w>
     </words>
   </dictionary>
 </component>
