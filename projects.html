@@ -7,16 +7,12 @@
     <title data-i18n="head_title"></title>
 
     <!-- ## CSS ## -->
-    <link rel="stylesheet" href="style/core.css">  <!-- Core: Base, Header, Footer -->
-
-    <!-- Sections -->
-    <link rel="stylesheet" href="style/sections/section-projects.css"> <!-- Main games grid -->
-    <link rel="stylesheet" href="style/sections/section-about.css">    <!-- Experiment/Archive grid -->
-    <link rel="stylesheet" href="style/sections/section-contact.css">  <!-- Final CTA -->
-
-    <!-- Page specifics -->
-    <link rel="stylesheet" href="style/pages/about.css">    <!-- Resume layout & Header -->
-    <link rel="stylesheet" href="style/pages/project.css">  <!-- Video & Banner details -->
+    <link rel="stylesheet" href="style/core.css">                       <!-- Core: Base, Header, Footer -->
+    <link rel="stylesheet" href="style/sections/section-projects.css">  <!-- Main games grid -->
+    <link rel="stylesheet" href="style/sections/section-about.css">     <!-- Experiment/Archive grid -->
+    <link rel="stylesheet" href="style/sections/section-contact.css">   <!-- Final CTA -->
+    <link rel="stylesheet" href="style/pages/about.css">                <!-- Resume layout & Header -->
+    <link rel="stylesheet" href="style/pages/project.css">              <!-- Video & Banner details -->
 </head>
 <body>
 
@@ -233,20 +229,34 @@
 
             <div class="about-grid">
 
-                <!-- ## [Project never announced] ## -->
+                <!-- ## Echoes of WitchWood ## -->
                 <div class="project-card">
                     <h3 class="project-name" data-i18n="projects_page.game_cancelled.name"></h3>
                     <span class="cert-badge">🗃️ <span data-i18n="projects_page.status_cancelled"></span></span>
                     <p class="project-desc" data-i18n-html="projects_page.game_cancelled.desc"></p>
+                    <div class="project-links">
+                        <a href="projects/archive/echoes.html" target="_blank" class="link-primary">
+                            <span data-i18n="projects_page.link_github"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- ## [Project announced but abandoned] ## -->
+                <!-- ## Project Pyramid ## -->
                 <div class="project-card">
                     <h3 class="project-name" data-i18n="projects_page.game_shelved.name"></h3>
                     <span class="cert-badge">⏸️ <span data-i18n="projects_page.status_shelved"></span></span>
                     <p class="project-desc" data-i18n-html="projects_page.game_shelved.desc"></p>
-                    <div class="project-links"> <!-- Link to Reddit -->
-                        <a href="#" target="_blank" class="link-secondary" data-i18n="projects_page.link_details"></a>
+                    <div class="project-links">
+                        <a href="https://github.com/pittabio/GasAbilities" target="_blank" class="link-primary">
+                            <span data-i18n="projects_page.link_github"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                        </a>
+
+                        <a href="https://gitlab.com/pittabio/GasAbilities" target="_blank" class="link-primary">
+                            <span data-i18n="projects_page.link_gitlab"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
                 </div>
 
