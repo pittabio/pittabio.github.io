@@ -5,9 +5,17 @@
     "tag": "Get in touch",
     "title": "Let's talk about your next <em>project.</em>",
     "subtitle": "Whether you want to discuss job opportunities, Unreal Engine collaborations, or simply ask a question, I'm here to help.",
-    "quick_info_title": "Quick Info",
-    "networks_title": "Profiles & Community",
-    "fun_fact": "Fun Fact: The nickname @pittabio comes from a fusion of my surname first (Pittaccio) and my name later (Fabio). You can find me everywhere with this handler.",
+
+    "quick_info": "Quick info",
+    "dev_profiles": "Dev Profiles",
+    "social_networks": "Community & Social",
+
+    "fun_fact":
+    {
+      "title": "Fun Fact",
+      "description": "The nickname @pittabio comes from a fusion of my surname first (Pittaccio) and my name later (Fabio). You can find me everywhere with this handler."
+    },
+
     "info": {
       "location_label": "Current Location:",
       "location": "Rome, Italy",
