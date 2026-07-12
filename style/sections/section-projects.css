@@ -106,6 +106,10 @@
     .icon-itch {
         color: var(--text);
     }
+
+    .arrow {
+        stroke: var(--text);
+    }
 }
 
 .project-links .link-secondary {

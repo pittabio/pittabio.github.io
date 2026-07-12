@@ -32,7 +32,8 @@
         "che fonde un <em>sistema di movimento dinamico</em>, puzzle ambientali, combattimenti intensi",
         "ed esplorazione immersiva tra rovine antiche mozzafiato.",
         "Sviluppato in <strong>Unreal Engine 5</strong>."
-      ]
+      ],
+      "banner": "Il banner di <strong>Ruins' Rhapsody</strong>"
     },
 
     "goblin": {
@@ -43,7 +44,8 @@
         "Un colorato <strong>platform collect-a-thon</strong> pensato per giocatori casual e bambini,",
         "con raccolta di monete, sfide in classifica e un'esperienza breve ma emozionante.",
         "Disponibile in <strong>inglese e italiano</strong>."
-      ]
+      ],
+      "banner": "Il banner di <strong>Goblin Jr. Adventure</strong>"
     },
 
     "zombie": {
@@ -54,7 +56,8 @@
         "e strutture speciali in questo <strong>tower defense</strong> con visuale dall'alto.",
         "Include tipi di zombie unici (Tank, Katana…), eventi speciali come la <em>Frenesia Zombie</em>,",
         "e gestione strategica delle risorse."
-      ]
+      ],
+      "banner": "Il banner di <strong>Zombie Siege Chronicles</strong>"
     },
 
     "flying": {
@@ -64,7 +67,8 @@
         "realizzato in <strong>Unreal Engine 5.4</strong> e disponibile sia per <strong>Windows che Android</strong>.",
         "Naviga l'uccellino attraverso gli ostacoli con semplici controlli touch.",
         "Gameplay infinito — punta al punteggio più alto possibile."
-      ]
+      ],
+      "banner": "Il banner di <strong>Flying Bird</strong>"
     },
 
     "wizard": {
@@ -75,7 +79,8 @@
         "personalizza i potenziamenti, gestisci i power-up basati sui diamanti",
         "e sopravvivi a ondate di nemici sempre più difficili.",
         "<em>Demo Pre-Alpha</em> — mostra le meccaniche principali sia in C++ che in Blueprint."
-      ]
+      ],
+      "banner": "Il banner di <strong>WizardScape: The Magic Chase</strong>"
     },
 
     "more": {

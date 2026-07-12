@@ -32,7 +32,8 @@
         "blending a <em>dynamic movement system</em>, environmental puzzles, intense combat,",
         "and immersive exploration across breathtaking ancient ruins.",
         "Developed in <strong>Unreal Engine 5</strong>."
-      ]
+      ],
+      "banner": "The <strong>Ruins' Rhapsody</strong> banner"
     },
 
     "goblin": {
@@ -43,7 +44,8 @@
         "A colorful <strong>collect-a-thon platformer</strong> designed for casual players and kids,",
         "featuring coin collection, leaderboard challenges, and a short but thrilling experience.",
         "Available in <strong>English and Italian</strong>."
-      ]
+      ],
+      "banner": "The <strong>Goblin Jr. Adventure</strong> banner"
     },
 
     "zombie": {
@@ -54,7 +56,8 @@
         "and special structures in this top-down <strong>tower defense</strong> game.",
         "Features unique zombie types (Tank, Katana…), special events like <em>Zombie Frenzy</em>,",
         "and strategic resource management."
-      ]
+      ],
+      "banner": "The <strong>Zombie Siege Chronicles</strong> banner"
     },
 
     "flying": {
@@ -64,7 +67,8 @@
         "built in <strong>Unreal Engine 5.4</strong> and available on both <strong>Windows and Android</strong>.",
         "Navigate the bird through obstacles with simple one-touch controls.",
         "Endless gameplay — aim for the highest score possible."
-      ]
+      ],
+      "banner": "The <strong>Flying Bird</strong> banner"
     },
 
     "wizard": {
@@ -75,7 +79,8 @@
         "customize upgrades, manage diamond-based power-ups,",
         "and survive increasingly difficult enemy waves.",
         "<em>Pre-Alpha demo</em> — showcasing core mechanics in both C++ and Blueprints."
-      ]
+      ],
+      "banner": "The <strong>WizardScape: The Magic Chase</strong> banner"
     },
 
     "more": {
