@@ -89,6 +89,8 @@
     font-weight: 600;
     color: var(--text);
     transition: var(--transition);
+
+    filter: grayscale(1);
 }
 
 .contact-social-link:hover {
@@ -96,6 +98,8 @@
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-3px);
+
+    filter: grayscale(0);
 }
 
 /* Divider "OR" */
