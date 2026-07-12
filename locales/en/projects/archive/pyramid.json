@@ -1,0 +1,66 @@
+{
+  "head_title": "Project Pyramid · Development Archive",
+
+  "pyramid_page": {
+    "tag": "In Development · Team Project · UE5",
+    "title": "Project <em>Pyramid</em>",
+    "subtitle": "A stealth-adventure set in ancient Egypt, featuring a modular AI architecture and advanced sensory systems.",
+    "banner": "AI class structure and Subsystem logic in JetBrains Rider",
+
+    "status_badge": "In Development (Contribution Paused)",
+    "status_note": [
+      "Project Pyramid is an ongoing collaborative team project.",
+      "My role as <strong>AI Systems Programmer</strong> is currently concluded/paused after delivering the core enemy architecture and perception framework.",
+      "The team is now proceeding with level design, asset creation, and puzzle mechanics."
+    ],
+
+    "concept": {
+      "tag": "Role",
+      "title": "Stealth AI Engineering",
+      "desc": [
+        "In a stealth-focused experience, the AI is the heart of the gameplay loop. I was responsible for designing a system that wasn't just 'reactive', but believable.",
+        "From managing enemy memory via the Dummy System to reinforcement coordination, the goal was to create a scalable framework that designers could easily tune via Data Tables without touching the codebase."
+      ]
+    },
+
+    "tech_work": {
+      "tag": "Technical Development",
+      "title": "Core Systems & AI",
+      "items": [
+        "<li><strong>Dummy Entity World Subsystem:</strong> Implemented a C++ system that spawns a 'ghost' entity at the player's last known position. AI units investigate the Dummy instead of 'cheating' with omniscience, creating realistic search patterns.</li>",
+        "<li><strong>Multi-State AI (C++/BT):</strong> Developed a modular Behavior Tree architecture with 5 primary states (Patrol, Alert, Search, Combat, Dead). It features dynamic perception management that live-updates sensory parameters based on the current state.</li>",
+        "<li><strong>Coordination & Roles:</strong> Implemented a synchronized 'Call for Aid' system to prevent overlapping enemy yells. Added role assignment logic (Investigator vs. Support) to ensure enemies surround the player during investigations.</li>",
+        "<li><strong>EQS & Flanking:</strong> Leveraged the Environment Query System for dynamic flanking in combat and to claim exclusive search points, preventing multiple AI agents from stacking on the same spot.</li>",
+        "<li><strong>Slide Component:</strong> Built a standalone, slope-aware sliding mechanic for the player character using vector projection and VLerp of terrain normals for smooth traversal.</li>"
+      ]
+    },
+
+    "lessons": {
+      "tag": "Lessons",
+      "title": "Workflow & Tooling",
+      "desc": [
+        "I focused on system optimization by migrating Tick-based components (like footstep detection) to high-performance <strong>Anim Notifies</strong>.",
+        "To improve team iteration, I created editor tools via <strong>Construction Scripts</strong> to visualize patrol paths, indices, and wait times directly in the viewport, removing the need to check individual array elements."
+      ]
+    },
+
+    "highlights": {
+      "title": "Key Technical Contributions",
+      "items": [
+        "⁕ Dummy System via World Subsystem (C++)<br>",
+        "⁕ Dual-Sight Perception (Direct & Peripheral)<br>",
+        "⁕ Dynamic Flanking and Point Claiming via EQS<br>",
+        "⁕ Data Table-driven AI for rapid balancing<br>",
+        "⁕ Mirror's Edge-style Slide Component<br>",
+        "⁕ Custom Editor Tooling for Spline Patrols"
+      ]
+    },
+
+    "cta": {
+      "title": "Want to see <em>more?</em>",
+      "subtitle": "Explore other projects in my archive or head back to the main project list.",
+      "divider": "so",
+      "btn_back": "Back to Projects"
+    }
+  }
+}

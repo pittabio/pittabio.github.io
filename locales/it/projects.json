@@ -2,11 +2,12 @@
   "head_title": "Progetti · Fabio Pittaccio",
 
   "projects_page": {
+
     "tag": "Giochi & Esperimenti",
     "title": "Tutti i <em>Progetti</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
     "description": [
-      "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici —",
+      "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici — ",
       "dai titoli action-adventure completi ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
     ],
 
@@ -19,8 +20,9 @@
     ],
 
     "link_details": "Dettagli",
-    "link_play":    "Download",
+    "link_play":    "itch.io",
     "link_github":  "Vedi su GitHub",
+    "link_gitlab":  "View on GitLab",
 
     "ruins": {
       "name": "Ruins' Rhapsody",
@@ -84,7 +86,7 @@
       ],
       "github": "GitHub",
       "gitlab": "GitLab",
-      "contact_me": "Contattami"
+      "about_me": "Conoscimi"
     },
 
     "state_trees": {

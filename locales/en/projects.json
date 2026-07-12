@@ -2,12 +2,13 @@
   "head_title": "Projects · Fabio Pittaccio",
 
   "projects_page": {
+
     "tag": "Games & Experiments",
     "title": "All <em>Projects</em>",
     "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
     "description": [
-      "A complete overview of my published games and technical experiments",
-      " from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+      "A complete overview of my published games and technical experiments — ",
+      "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
     ],
 
     "games_title": "Games",
@@ -19,7 +20,7 @@
     ],
 
     "link_details": "Details",
-    "link_play":    "Download",
+    "link_play":    "itch.io",
     "link_github":  "View on GitHub",
     "link_gitlab":  "View on GitLab",
 
@@ -85,7 +86,7 @@
       ],
       "github": "GitHub",
       "gitlab": "GitLab",
-      "contact_me": "Contact me"
+      "about_me": "About me"
     },
 
     "state_trees": {

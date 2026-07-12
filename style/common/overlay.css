@@ -1,42 +1,143 @@
-﻿.overlay {
+﻿/* Scroll body block */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Overlay Background */
+.overlay {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Più scuro per far risaltare l'immagine */
-    backdrop-filter: blur(8px);
-    align-items: center;
-    justify-content: center;
-    z-index: 2000; /* Più alto dell'header */
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 80px 40px; /* More breathing space */
 }
-.overlay.active { display: flex; }
 
+.overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Allows scrolling if the content is long */
+}
+
+/* Flexible container */
 .popup-img-wrap {
     position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-}
-.popup-img-wrap img {
-    display: block;
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
 }
 
+/* --- GRID SYSTEM --- */
+.popup-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* --- LOGIC FOR 1 IMAGE --- */
+.popup-grid.grid-1 {
+    max-width: 1300px; /* Increased from 800px to 1300px for landscape images */
+    width: 100%;       /* Allows you to expand up to max-width */
+    margin: 0 auto;
+}
+.popup-grid.grid-1 .popup-item img {
+    max-height: 80vh; /* Increased slightly to give more breathing room */
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- LOGIC FOR 2-3 IMAGES --- */
+.popup-grid.grid-2 .popup-item,
+.popup-grid.grid-3 .popup-item {
+    flex: 1;
+    min-width: 0; /* Flexbox Fix */
+}
+
+.popup-grid.grid-2 .popup-item img,
+.popup-grid.grid-3 .popup-item img {
+    height: 450px; /* Fixed height but reasonable for comparison */
+    width: 100%;
+}
+
+/* --- SINGLE ELEMENT --- */
+.popup-item {
+    background: var(--bgbt);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-item img {
+    object-fit: contain;
+    background: #000;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+    display: block;
+}
+
+.popup-item p {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* --- CLOSE BUTTON --- */
 .btn-close {
     position: absolute;
-    top: -15px; right: -15px;
-    width: 35px; height: 35px;
+    top: -55px;
+    right: 0;
+    width: 40px; height: 40px;
     border-radius: 50%;
-    background: var(--accent); /* Coerenza con il brand */
+    background: var(--accent);
     color: var(--bg);
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    z-index: 2100;
 }
-.btn-close:hover { background: var(--hovered); transform: scale(1.1); }
+.btn-close:hover {
+    background: var(--hovered);
+    transform: scale(1.1) rotate(90deg);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .overlay { padding: 60px 20px; }
+
+    .popup-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .popup-item img {
+        height: auto !important; /* Force auto height on mobile */
+        max-height: 50vh !important;
+        width: 100% !important;
+    }
+
+    .btn-close {
+        top: -50px;
+        right: 10px;
+    }
+}

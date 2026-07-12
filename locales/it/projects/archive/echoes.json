@@ -1,0 +1,66 @@
+{
+  "head_title": "Echoes of the Witch Wood · Archivio",
+
+  "echoes_page": {
+    "tag": "Dev Archive · Unreal Engine 5 · C++",
+    "title": "Echoes of the <em>Witch Wood</em>",
+    "subtitle": "Un'architettura action-platformer solida e scalabile, costruita su sistemi C++ personalizzati e logiche IA modulari.",
+    "banner": "Cartelle principali del progetto",
+
+    "status_badge": "Archiviato / Prototipo Tecnico",
+    "status_note": [
+      "Questo progetto è stato un campo di prova fondamentale per l'implementazione di sistemi core in C++.",
+      "Sebbene lo sviluppo sia stato sospeso, il codice prodotto per l'IA nemica e il sistema di salvataggio rappresenta uno dei miei lavori più strutturati."
+    ],
+
+    "concept": {
+      "tag": "Concept",
+      "title": "Sistemi sopra la Quantità",
+      "desc": [
+        "Il focus è stato la creazione di un framework robusto per un platform a due personaggi.",
+        "Ogni sistema è stato progettato per essere agnostico rispetto all'attore: ",
+        "dai portali alle piattaforme mobili, la comunicazione avviene tramite interfacce per garantire la massima manutenibilità."
+      ]
+    },
+
+    "tech_work": {
+      "tag": "Sviluppo Tecnico (Il mio ruolo)",
+      "title": "Ingegneria dei Sistemi Core",
+      "items": [
+        "<li><strong>Framework IA & Nemici:</strong> Ho sviluppato una classe base nemica generica con gestione della salute e un'IA 'Kamikaze' complessa, completa di State Machine (Chase, Attack, Stroll), Behavior Tree (Blackboard) e SFX posizionali.</li>",
+        "<li><strong>Architettura di Salvataggio:</strong> Implementazione di una pipeline di persistenza dati completa basata su interfacce, con supporto per checkpoint, slot multipli e serializzazione di Player State e Game State.</li>",
+        "<li><strong>Sistemi di Movimento Avanzati:</strong> Sviluppo della meccanica di Dash (Ground/Air) con risoluzione dei conflitti sulle superfici ripide, e creazione di un sistema di 'Floor Checking' tramite componenti C++ e interfacce.</li>",
+        "<li><strong>Meccaniche Ambientali:</strong> Progettazione di piattaforme mobili basate su Spline, piattaforme a tempo (falling platforms) e un sistema di portali per il teletrasporto istantaneo degli attori.</li>",
+        "<li><strong>Sistema Audio Modulare:</strong> Creazione di un componente audio personalizzato per standardizzare la gestione delle variabili sonore e semplificare la funzione di riproduzione in tutto il progetto.</li>"
+      ]
+    },
+
+    "lessons": {
+      "tag": "Post-Mortem",
+      "title": "Lezioni Apprese",
+      "desc": [
+        "Attraverso questo progetto ho perfezionato la gestione dei <strong>Timer in C++</strong> per le meccaniche a tempo e la logica di <strong>Inheritance</strong> per l'IA.",
+        "La pulizia del codice e la creazione di una <em>CodeMap</em> sono state vitali per coordinare i sistemi di movimento con quelli di interazione (leve/porte)."
+      ]
+    },
+
+    "highlights": {
+      "title": "Contributi Tecnici Chiave",
+      "items": [
+        "⁕ IA Nemica con State Machine e Blackboard<br>",
+        "⁕ Save System Pipeline (Slots & Checkpoints)<br>",
+        "⁕ Logica di Dash personalizzata (Ground/Air)<br>",
+        "⁕ Interfaccia Hero & Ability per sistemi decoupled<br>",
+        "⁕ Sistema di caricamento asincrono (Loading Screens)<br>",
+        "⁕ Meccaniche ambientali guidate da Spline e Timer"
+      ]
+    },
+
+    "cta": {
+      "title": "Esplora altri <em>progetti</em>",
+      "subtitle": "Anche se questo viaggio si è interrotto, i sistemi creati vivono nei miei lavori successivi.",
+      "divider": "perciò",
+      "btn_back": "Torna ai Progetti"
+    }
+  }
+}

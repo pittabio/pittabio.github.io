@@ -1,0 +1,115 @@
+{
+  "head_title": "Zombie Siege Chronicles · Fabio Pittaccio",
+
+  "zombie_page": {
+    "tab_title": "Zombie Siege Chronicles — Fabio Pittaccio",
+    "tag": "Progetto Collaborativo · Unreal Engine 5",
+    "title": "Zombie Siege <em>Chronicles</em>",
+    "subtitle": "Un Tower Defense strategico con validazione del posizionamento e un sistema di portali modulare.",
+    "btn_download": "Gioca su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Panoramica",
+      "title": "La difesa definitiva contro i non morti",
+      "desc": [
+        "In un mondo devastato dai non morti, la sopravvivenza dipende dalla strategia. <strong>Zombie Siege Chronicles</strong> è un tower defense in cui i giocatori devono proteggere il proprio rifugio da ondate incessanti.",
+        "Sviluppato in un <strong>ambiente collaborativo</strong>, mi sono occupato delle meccaniche sistemiche principali, dell'architettura della UI alla logica di gioco di alto livello.",
+        "Il progetto mostra una profonda integrazione tra sistemi backend in C++ e feedback visivi in Blueprint, garantendo un'esperienza fluida e reattiva."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Strategia e Sopravvivenza",
+      "items": [
+        "<li><strong>Arsenale Difensivo:</strong> Schiera torrette modulari e barriere. Alcune difese, come il filo spinato, infliggono danni passivi bloccando il passaggio.</li>",
+        "<li><strong>Strategia dei Portali:</strong> Un sistema di teletrasporto a due attori che permette al giocatore di riposizionarsi istantaneamente sul campo di battaglia.</li>",
+        "<li><strong>Ondate Dinamiche:</strong> Difficoltà scalabile attraverso potenziamenti delle statistiche basati sui round e l'attivazione di molteplici punti di spawn.</li>",
+        "<li><strong>Eventi Superstiti:</strong> Missioni casuali per salvare NPC, che ricompensano il giocatore con salute per la base o risorse extra.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Tecnico",
+      "title": "Ingegneria dei Sistemi",
+      "items": [
+        "<li><strong>Validazione del Posizionamento:</strong> Un sistema basato su collisioni che utilizza aree specializzate per verificare se una difesa può essere costruita su una superficie specifica.</li>",
+        "<li><strong>Logica Portali in C++:</strong> Implementazione di vettori di entrata/uscita, timer di ricarica e gestione dello stato visivo per la rete di teletrasporto.</li>",
+        "<li><strong>Caricamento Asincrono:</strong> Transizioni professionali tramite schermate di caricamento asincrono per gestire gli asset della mappa senza cali di frame.</li>",
+        "<li><strong>Architettura UI:</strong> Struttura complessa per HUD e Negozio, con aggiornamenti dell'economia in tempo reale e visualizzazione modulare dell'inventario.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Sistemi",
+      "title": "Ottimizzazione e Flusso di Lavoro",
+      "items": [
+        "<li><strong>Standardizzazione degli Asset:</strong> Rigide convenzioni di nomenclatura e gerarchia di progetto per facilitare la collaborazione all'interno del team di sviluppo.</li>",
+        "<li><strong>Audio Ibrido:</strong> Mixer audio dinamici per l'immersione ambientale, integrati con SFX posizionali per le azioni di combattimento.</li>",
+        "<li><strong>Camera su Spline:</strong> Sequenze di menu cinematiche che utilizzano rig di telecamere basati su spline per uno sfondo 3D dinamico.</li>",
+        "<li><strong>Ottimizzazione delle Collisioni:</strong> Trace Channel personalizzati per separare la navigazione dei nemici dall'interazione del giocatore.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Trailer",
+    "gallery": {
+      "title": "Documentazione Progetto",
+
+      "architecture": {
+        "title": "Diagramma delle Classi",
+        "desc": "Mappa architettonica completa che illustra le relazioni tra la logica della Game Mode, gli spawner dei nemici e la gerarchia delle strutture."
+      },
+
+      "placement": {
+        "title": "Validazione Spaziale del Posizionamento",
+        "desc": "Un sistema robusto progettato per imporre restrizioni di costruzione incrociando i tipi di oggetti con volumi di collisione specifici per area.",
+
+        "img1": "Definizione del Tipo di Oggetto: Uno sguardo alle proprietà interne della Torretta che utilizza una variabile 'uint8' leggera per definire le regole di costruzione.",
+        "img2": "Configurazione Area di Validazione: Il volume trigger BP_TurretsArea che utilizza un selettore di proprietà e mesh personalizzate per definire i confini di costruzione."
+      },
+
+      "portals": {
+        "title": "Sistema di Teletrasporto",
+        "desc": "Analisi tecnica delle meccaniche dei portali, con validazione di entrata/uscita, stati dei materiali dinamici e logica di ricarica.",
+
+        "img1": "Analisi dell'actor portale: include materiali dinamici, piani di interazione invisibili per la navigazione e una freccia di debug per i vettori di entrata/uscita.",
+        "img2": "Stato di posizionamento non valido: Il portale diventa rosso quando si tenta di costruire sulla strada, dove le strutture sono proibite.",
+        "img3": "Stato di posizionamento valido: Verifica riuscita sui marciapiedi. La mesh diventa blu, fornendo un feedback visivo immediato."
+      },
+
+      "menu": {
+        "title": "Menu Cinematico Ibrido",
+        "desc": "Un menu principale immersivo che fonde un ambiente 3D in tempo reale con una UI complessa e movimenti di camera cinematici.",
+
+        "img1": "Rig Camera su Spline: Implementazione di una CineCamera fissata su un binario spline personalizzato per una carrellata cinematografica fluida.",
+        "img2": "Stratificazione Interattiva: Scomposizione della gerarchia dei widget che mostra il sistema di stratificazione hit-test per interazioni complesse con i pulsanti."
+      },
+
+      "shop": {
+        "title": "Sistema di Negozio Data-Driven",
+        "desc": "Un'architettura UI modulare che popola i contenuti dinamicamente leggendo da Data Table centralizzate in C++.",
+
+        "img1": "Data Table degli Oggetti: Il Row Editor dove vengono gestiti prezzi, statistiche e icone per un rapido bilanciamento del gameplay.",
+        "img2": "Architettura UI del Negozio: La gerarchia del widget principale che utilizza contenitori responsive per organizzare voci generate dinamicamente.",
+        "img3": "Widget Oggetto Modulare: Un widget riutilizzabile che aggiorna automaticamente i suoi elementi visivi in base ai dati della riga ricevuti."
+      },
+
+      "survivors": {
+        "title": "Sistema di Salvataggio Superstiti",
+        "desc": "Un framework di missioni dinamiche che genera periodicamente NPC da salvare. Integra un sistema di contenuti casuali e ricompense strategiche per diversificare il gameplay principale.",
+
+        "img1": "Configurazione Evento: Analisi del manager SavePeopleEvent. Permette ai designer di regolare intervalli di spawn, numero massimo di NPC e ricompense (Salute Base o Oro) tramite categorie Blueprint personalizzate.",
+        "img2": "Randomizzazione Data-Driven: Il Data Asset UPeopleMeshes. Questa scelta architettonica separa gli asset grafici dalla logica, permettendo al sistema di scegliere mesh e animazioni casuali per ogni superstite generato.",
+        "img3": "Logica di Guida Giocatore: Configurazione dell'actor di salvataggio, completo di una classe widget 'pointer'. Fornisce feedback direzionale in tempo reale per aiutare il giocatore a localizzare i superstiti nella mappa."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto a <em>difendere?</em>",
+      "subtitle": "Dai un'occhiata alla documentazione completa o prova la demo su itch.io.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}

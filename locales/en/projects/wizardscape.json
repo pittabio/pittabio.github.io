@@ -1,0 +1,111 @@
+﻿{
+  "head_title": "WizardScape · Fabio Pittaccio",
+  "wizard_page": {
+    "tab_title": "WizardScape — Fabio Pittaccio",
+    "tag": "Pre-Alpha Prototype · Android",
+    "title": "Wizard<em>Scape</em>",
+    "subtitle": "A 3D mobile survival prototype featuring auto-cast combat and dynamic power-up systems.",
+
+    "btn_download": "View on itch.io",
+    "btn_back": "Back to Projects",
+
+    "about": {
+      "tag": "Project Vision",
+      "title": "Survivor-like Mechanics",
+      "desc": [
+        "<strong>WizardScape</strong> is a technical prototype developed to explore the 'Reverse Bullet Hell' genre on mobile devices using <strong>Unreal Engine 5.4</strong>.",
+        "The project focuses on the core pillars of the genre: autonomous combat logic, high-density enemy spawning, and a data-driven meta-progression shop.",
+        "As a Pre-Alpha demo, it served as a playground for optimizing C++ performance on Android while managing real-time stat modifiers."
+      ]
+    },
+    "gameplay": {
+      "tag": "Mechanics",
+      "title": "Survival Loop",
+      "items": [
+        "<li><strong>Auto-Cast Combat:</strong> A circular proximity system that automatically targets and triggers spells against the closest threats.</li>",
+        "<li><strong>Diamond Ecosystem:</strong> Multi-tiered resource collection: Blue (Currency), Green (Temporary Boosts), and Red (Challenge Modifiers).</li>",
+        "<li><strong>Meta-Progression:</strong> A persistent shop system where players can spend collected resources to permanently upgrade wizard stats.</li>",
+        "<li><strong>Dynamic Swarm:</strong> Procedural wave spawning with increasing enemy density and scaling difficulty over time.</li>"
+      ]
+    },
+    "tech": {
+      "tag": "Technical",
+      "title": "Mobile Systems",
+      "items": [
+        "<li><strong>Optimized Spawning:</strong> A C++ component-based spawner (Ref: Commit f1620027) designed to handle high enemy counts efficiently.</li>",
+        "<li><strong>Modifier Architecture:</strong> Flexible buff/debuff logic (Ref: Commit aed74a58) allowing gems to inject temporary or permanent stat changes.</li>",
+        "<li><strong>Android Pipeline:</strong> Full integration with the modern Android SDK/NDK stack and customized Java setup for UE 5.4.</li>",
+        "<li><strong>Collision Filtering:</strong> Specialized physics channels to manage interactions between the wizard, gems, and enemy mages.</li>"
+      ]
+    },
+    "systems": {
+      "tag": "Systems",
+      "title": "UX & Performance",
+      "items": [
+        "<li><strong>Mobile-First HUD:</strong> Vertical UI layout optimized for one-handed play, featuring integrated experience bars and status icons.</li>",
+        "<li><strong>Virtual Joystick:</strong> Custom-tuned touch input mapping to ensure fluid movement in high-pressure combat scenarios.</li>",
+        "<li><strong>Asset Management:</strong> Systematic cleanup of unused resources and texture optimization to maintain stability on mobile hardware.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Trailer",
+    "gallery": {
+      "title": "Project Documentation",
+
+      "components": {
+        "title": "Modular Component Architecture",
+        "desc": "The player character's logic is decoupled into specialized C++ Actor Components. This modular approach ensures that systems like Health, Economy, and Spawning are independent, reusable, and easy to debug.",
+
+        "img1": "Character Component Stack: A view of the BP_Character hierarchy showing the custom C++ components (Health, Money, Spawner) integrated into the main actor.",
+        "img2": "Health & Loot Logic: Details of the <code>HealthComponent</code>. It manages vitals and handles the 'Spawn on Dead' logic, ensuring enemies drop specific gems with custom Z-axis offsets upon defeat.",
+        "img3": "Dynamic Spawning System: The <code>SpawnerComponent</code> configuration. It manages enemy mage pools and randomized spawning patterns relative to the player's world position."
+      },
+
+      "gems": {
+        "title": "Dynamic Resource Ecosystem",
+        "desc": "A probability-based spawning system for interactive resources. Using a polymorphic C++ hierarchy, gems deliver specific gameplay modifiers while maintaining a lightweight data footprint.",
+
+        "img1": "Spawner Configuration: A view of the <code>BP_GemSpawner</code> properties. It allows designers to assign weight-based probabilities (e.g., 55/45) to different actor classes, which the C++ backend then normalizes at runtime.",
+        "img2": "Polymorphic Hierarchy: Showcase of the three gem Blueprints. Each one inherits from a specialized C++ parent class (Buff, Debuff, Money), demonstrating a clean decoupling between core logic and data-only assets.",
+        "img3": "Technical Implementation: A snippet of the C++ spawning logic. It utilizes <code>LineTraceSingleByChannel</code> to detect the ground and <code>SpawnActor</code> to instantiate the chosen gem at the exact impact point."
+      },
+
+      "shop": {
+        "title": "Modular Meta-Progression Shop",
+        "desc": "A scalable upgrade interface built using reusable custom widgets. The logic is driven by a C++ base class that automatically handles data propagation and event broadcasting via dynamic delegates.",
+
+        "img1": "Pre-Construct Data Binding: Analysis of the <code>NativePreConstruct</code> function. This logic ensures that descriptions, prices, and limits are automatically updated in the Viewport as soon as a designer changes the C++ properties.",
+        "img2": "Custom Item Component: The <code>WBP_ShopItem</code> widget, parented to the <code>ShopItem</code> C++ class. It encapsulates all individual button logic, including the <code>FOnButtonPressedDelegate</code> for centralized handling.",
+        "img3": "Shop Layout & Hierarchy: The main <code>WBP_ShopPage</code> hierarchy. It utilizes a Vertical Box to manage multiple instances of the custom item widget, demonstrating a clean and DRY (Don't Repeat Yourself) UI architecture."
+      },
+
+      "input": {
+        "title": "Touch & Virtual Joystick",
+        "desc": "Custom integration of the UE Virtual Joystick. The input mapping was specifically tuned (Ref: Commit 2c24f4e1) to balance precision and responsiveness on Android.",
+
+        "img1": "Mobile Input Setup: Configuration of the touch interface and joystick sensitivity."
+      },
+
+      "pipeline": {
+        "title": "Android SDK/NDK Setup",
+        "desc": "Documentation of the migration to UE 5.4, including the updated Java and Android requirement configurations for modern mobile distribution.",
+
+        "img1": "Platform Settings: A look at the Project Settings for Android builds and icon packaging."
+      },
+
+      "ui": {
+        "title": "Vertical HUD Design",
+        "desc": "A UI architecture designed for portrait mode. It centralizes real-time info like diamond count and timer, using C++ classes for optimized widget logic.",
+
+        "img1": "Mobile UX: Showcase of the in-game HUD and the integrated tutorial system."
+      }
+    },
+
+    "cta": {
+      "title": "Ready to <em>survive?</em>",
+      "subtitle": "Download the Pre-Alpha APK and test the core mechanics on Android.",
+      "or": "or",
+      "btn_back": "View more projects"
+    }
+  }
+}

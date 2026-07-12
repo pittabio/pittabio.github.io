@@ -7,28 +7,23 @@
     <title data-i18n="head_title"></title>
 
     <!-- ## CSS ## -->
-    <link rel="stylesheet" href="../style/core.css"> <!-- core css -->
-    <link rel="stylesheet" href="../style/pages/project.css">
+    <link rel="stylesheet" href="../style/core.css">                        <!-- Core: Base, Header, Footer -->
+    <link rel="stylesheet" href="../style/pages/about.css">                 <!-- Manages the timeline -->
+    <link rel="stylesheet" href="../style/sections/section-projects.css">   <!-- Manages the gallery (grid and card) -->
+    <link rel="stylesheet" href="../style/sections/section-contact.css">    <!-- Manages the final CTA section -->
+    <link rel="stylesheet" href="../style/pages/project.css">               <!-- Manages banners and videos -->
 </head>
 <body>
 
 <!-- ## HEADER ## -->
 <div id="header"></div>
 
-<!-- ## IMAGES OVERLAY ## -->
-<div class="overlay" id="overlay" onclick="closePopup()">
-    <div class="popup-img-wrap" id="popupWrap">
-        <button class="btn-close" onclick="closePopup()" aria-label="close">✕</button>
-        <img id="popupImg" src="" alt="">
-    </div>
-</div>
-
 <!-- ## PAGE ## -->
 <main class="page-content resume-page-section">
 
     <!-- ## PAGE HEAD ## -->
     <div class="resume-header">
-        <span class="hero-tag"        data-i18n="ruins_page.tag"></span>
+        <span class="hero-tag"        data-i18n-html="ruins_page.tag"></span>
         <h1 class="contact-title"     data-i18n-html="ruins_page.title"></h1>
         <p  class="contact-subtitle"  data-i18n="ruins_page.subtitle"></p>
     </div>
@@ -37,10 +32,13 @@
     <section class="resume-section">
         <div class="section-container">
             <img
-                    src="../media/games/ruins-rhapsody/banner.jpg"
-                    alt="Ruins' Rhapsody"
-                    class="project-banner"
-                    onclick="openPopup(this)"
+                src="../media/games/ruins-rhapsody/banner.jpg"
+                alt="Ruins' Rhapsody banner"
+                class="project-banner"
+                onclick="openOneImage(this)"
+
+                data-img1="../media/games/ruins-rhapsody/banner.jpg"
+                data-desc1="The Ruins' Rhapsody banner"
             />
         </div>
     </section> <!-- END banner -->
@@ -48,33 +46,33 @@
     <!-- ## ABOUT ## -->
     <section class="resume-section" id="about">
         <div class="section-container">
-            <div class="education-timeline" style="padding-left: 0; max-width: 860px;">
+            <div class="education-timeline">
 
                 <!-- 1. Overview -->
-                <div class="timeline-entry" style="padding-left: 0;">
-                    <div class="timeline-date"  data-i18n="ruins_page.about.tag"></div>
-                    <div class="timeline-role"  data-i18n="ruins_page.about.title"></div>
-                    <p class="timeline-institution" style="margin-top: 0.6rem; opacity: 0.85; font-size: 0.95rem;" data-i18n-html="ruins_page.about.desc"></p>
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="ruins_page.about.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="ruins_page.about.title"></div>
+                    <p class="timeline-details" data-i18n-html="ruins_page.about.desc"></p>
                 </div>
 
                 <!-- 2. Gameplay & Features -->
-                <div class="timeline-entry" style="padding-left: 0;">
-                    <div class="timeline-date"  data-i18n="ruins_page.gameplay.tag"></div>
-                    <div class="timeline-role"  data-i18n="ruins_page.gameplay.title"></div>
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="ruins_page.gameplay.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="ruins_page.gameplay.title"></div>
                     <ul class="timeline-details" data-i18n-html="ruins_page.gameplay.items"></ul>
                 </div>
 
                 <!-- 3. Technical Architecture (C++/UE5) -->
-                <div class="timeline-entry" style="padding-left: 0;">
-                    <div class="timeline-date"  data-i18n="ruins_page.tech.tag"></div>
-                    <div class="timeline-role"  data-i18n="ruins_page.tech.title"></div>
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="ruins_page.tech.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="ruins_page.tech.title"></div>
                     <ul class="timeline-details" data-i18n-html="ruins_page.tech.items"></ul>
                 </div>
 
                 <!-- 4. Optimization & Systems -->
-                <div class="timeline-entry" style="padding-left: 0; padding-bottom: 0;">
-                    <div class="timeline-date"  data-i18n="ruins_page.systems.tag"></div>
-                    <div class="timeline-role"  data-i18n="ruins_page.systems.title"></div>
+                <div class="timeline-entry">
+                    <div class="timeline-date"  data-i18n-html="ruins_page.systems.tag"></div>
+                    <div class="timeline-role"  data-i18n-html="ruins_page.systems.title"></div>
                     <ul class="timeline-details" data-i18n-html="ruins_page.systems.items"></ul>
                 </div>
 
@@ -100,46 +98,78 @@
     <!-- ## GALLERY ## -->
     <section class="resume-section" id="gallery">
         <div class="section-container">
-            <h2 class="section-title" data-i18n="ruins_page.gallery_title"></h2>
+            <h2 class="section-title" data-i18n="ruins_page.gallery.title"></h2>
 
             <!-- ## GRID ## -->
             <div class="projects-grid">
 
-                <!-- ## Code Map ## -->
+                <!-- 1. Code Map -->
                 <div class="project-card">
                     <a href="../media/games/ruins-rhapsody/code-map.pdf" target="_blank" title="Open PDF">
                         <img src="../media/games/ruins-rhapsody/code-map.jpg" alt="Code Map" class="project-image" />
                     </a>
-                    <h3 class="project-name" data-i18n="ruins_page.gallery.codemap_title"></h3>
-                    <p class="project-desc" data-i18n-html="ruins_page.gallery.codemap_desc"></p>
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.codemap.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.codemap.desc"></p>
                 </div>
 
-                <!-- ## Components ## -->
+                <!-- 2. Components -->
                 <div class="project-card">
-                    <img src="../media/games/ruins-rhapsody/components.png" alt="Components" class="project-image" onclick="openPopup(this)" />
-                    <h3 class="project-name" data-i18n="ruins_page.gallery.components_title"></h3>
-                    <p class="project-desc" data-i18n-html="ruins_page.gallery.components_desc"></p>
+                    <img src="../media/games/ruins-rhapsody/components.png" alt="Components"
+                         class="project-image" onclick="openOneImage(this)"
+
+                         data-img1="../media/games/ruins-rhapsody/components.png"
+                         data-desc1="ruins_page.gallery.components.img1"
+                    />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.components.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.components.desc"></p>
                 </div>
 
-                <!-- ### Controls ## -->
+                <!-- 3. Controls -->
                 <div class="project-card">
-                    <img src="../media/games/ruins-rhapsody/controls.png" alt="Controls" class="project-image" onclick="openPopup(this)" />
-                    <h3 class="project-name" data-i18n="ruins_page.gallery.input_title"></h3>
-                    <p class="project-desc" data-i18n-html="ruins_page.gallery.input_desc"></p>
+                    <img src="../media/games/ruins-rhapsody/input.png" alt="Controls"
+                         class="project-image" onclick="openOneImage(this)"
+
+                         data-img1="../media/games/ruins-rhapsody/input.png"
+                         data-desc1="ruins_page.gallery.input.img1"
+                    />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.input.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.input.desc"></p>
                 </div>
 
-                <!-- ### AI Params ## -->
+                <!-- 4. AI Params -->
                 <div class="project-card">
-                    <img src="../media/games/ruins-rhapsody/enemy-details.png" alt="AI Enemy Details" class="project-image" onclick="openPopup(this)" />
-                    <h3 class="project-name" data-i18n="ruins_page.gallery.ai_title"></h3>
-                    <p class="project-desc" data-i18n-html="ruins_page.gallery.ai_desc"></p>
+                    <img src="../media/games/ruins-rhapsody/enemy-details.png" alt="AI Enemy Details"
+                         class="project-image" onclick="openOneImage(this)"
+
+                         data-img1="../media/games/ruins-rhapsody/enemy-details.png"
+                         data-desc1="ruins_page.gallery.ai.img1"
+                    />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.ai.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.ai.desc"></p>
                 </div>
 
-                <!-- ### AI BT ## -->
+                <!-- 5. AI BT -->
                 <div class="project-card">
-                    <img src="../media/games/ruins-rhapsody/enemy-tree.png" alt="AI Enemy Tree" class="project-image" onclick="openPopup(this)" />
-                    <h3 class="project-name" data-i18n="ruins_page.gallery.bt_title"></h3>
-                    <p class="project-desc" data-i18n-html="ruins_page.gallery.bt_desc"></p>
+                    <img src="../media/games/ruins-rhapsody/enemy-tree.png" alt="AI Enemy Tree"
+                         class="project-image" onclick="openOneImage(this)"
+
+                         data-img1="../media/games/ruins-rhapsody/enemy-tree.png"
+                         data-desc1="ruins_page.gallery.bt.img1"
+                    />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.bt.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.bt.desc"></p>
+                </div>
+
+                <!-- 6. World Composition -->
+                <div class="project-card">
+                    <img src="../media/games/ruins-rhapsody/levels.png" alt="World Composition"
+                         class="project-image" onclick="openOneImage(this)"
+
+                         data-img1="../media/games/ruins-rhapsody/levels.png"
+                         data-desc1="ruins_page.gallery.world.img1"
+                    />
+                    <h3 class="project-name" data-i18n="ruins_page.gallery.world.title"></h3>
+                    <p class="project-desc" data-i18n-html="ruins_page.gallery.world.desc"></p>
                 </div>
 
             </div>
@@ -160,8 +190,14 @@
                 </a>
                 <!-- GameJolt -->
                 <a href="https://gamejolt.com/games/ruins-rhapsody-demo/992941" target="_blank" class="contact-social-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                     Game Jolt
+                </a>
+                <!-- GitLab -->
+                <a href="https://gitlab.com/pittabio/RuinsRhapsody" target="_blank" class="contact-social-link">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt="GitLab" height="16" width="16"/>
+                    GitLab
                 </a>
             </div>
 
@@ -175,7 +211,6 @@
             </a>
         </div>
     </section> <!-- END cta -->
-
 </main>
 
 <!-- ## FOOTER ## -->

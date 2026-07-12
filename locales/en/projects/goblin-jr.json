@@ -1,0 +1,109 @@
+﻿{
+  "head_title": "Goblin Jr. Adventure · Fabio Pittaccio",
+
+  "goblin_page": {
+    "tab_title": "Goblin Jr. Adventure — Fabio Pittaccio",
+    "tag": "Featured Project · Unreal Engine 5",
+    "title": "Goblin Jr. <em>Adventure</em>",
+    "subtitle": "A vibrant 3D platformer featuring stylized cubic worlds and a robust local leaderboard system.",
+    "btn_download": "Play on itch.io",
+    "btn_back": "Back to Projects",
+
+    "about": {
+      "tag": "Overview",
+      "title": "A Small Hero in a Big World",
+      "desc": [
+        "Join a brave little Goblin on a journey through floating islands to collect glittering treasures.",
+        "<strong>Goblin Jr. Adventure</strong> is a 3D platformer designed for casual players, built to explore the integration of classic arcade mechanics within <strong>Unreal Engine 5</strong>.",
+        "The project focuses on delivering a polished user experience, from fluid character movement to a complete game loop including persistence and rankings."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Mechanics",
+      "title": "Classic Platforming Fun",
+      "items": [
+        "<li><strong>Stylized Traversal:</strong> Precise jump mechanics designed for navigating floating cubic environments and avoiding ingenious traps.</li>",
+        "<li><strong>Treasure Hunt:</strong> Interactive chests and collectible coins scattered across the levels to encourage exploration.</li>",
+        "<li><strong>Checkpoints & Persistence:</strong> A reliable system that tracks player progress and collected loot across sessions.</li>",
+        "<li><strong>End Game Loop:</strong> Final scoring system with visual rewards (fireworks) and data cleanup for replayability.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Technical",
+      "title": "System Architecture (C++ & BP)",
+      "items": [
+        "<li><strong>Hybrid Framework:</strong> Core systems developed in C++ (SaveGame, Audio Mixers) and extended via Blueprints for rapid gameplay iteration.</li>",
+        "<li><strong>Local Leaderboard:</strong> A dedicated Top 5 ranking system that persists locally, allowing players to compete for high scores.</li>",
+        "<li><strong>Asynchronous Loading:</strong> Implementation of real-time loading screens featuring animated Flipbook to ensure smooth transitions.</li>",
+        "<li><strong>Audio Control:</strong> Comprehensive Audio Mixer setup for independent management of music, UI sounds, and environmental SFX.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Systems",
+      "title": "UX & Localization",
+      "items": [
+        "<li><strong>Advanced Options:</strong> Fully functional settings menu including axis inversion, volume controls, and window mode persistence.</li>",
+        "<li><strong>Multi-language Support:</strong> Integrated localization framework for English and Italian, switchable via the main menu.</li>",
+        "<li><strong>Input Scalability:</strong> Support for both Keyboard/Mouse and Gamepad controllers with dedicated UI feedback.</li>",
+        "<li><strong>VFX Integration:</strong> Use of Niagara and Flipbook plugins to enhance visual feedback during key gameplay moments.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Trailer",
+    "gallery": {
+      "title": "Project Documentation",
+
+      "architecture": {
+        "title": "C++ Software Architecture",
+        "desc": "Modular project structure organized into specialized namespaces for high maintainability.",
+
+        "img1": "Solution Overview: Clean organization of header and source files within the Unreal project structure."
+      },
+
+      "hybrid": {
+        "title": "Hybrid Development Workflow",
+        "desc": "Usage of BlueprintImplementableEvent to trigger visual logic from C++ core classes.",
+
+        "img1": "C++/BP Integration: Example of a C++ class calling Blueprint events for cosmetic animations."
+      },
+
+      "persistence": {
+        "title": "Save System & Serialization",
+        "desc": "Implementation of a robust save system for gameplay progression and user preferences.",
+
+        "img1": "Data Saving: Configuration of the SaveGame object used to persist coins and checkpoints."
+      },
+
+      "input": {
+        "title": "Enhanced Input & Scalability",
+        "desc": "Unified mapping for Keyboard, Gamepad, and Touch using UE5 Enhanced Input.",
+
+        "img1": "Input Mapping: Cross-platform control scheme setup for universal accessibility."
+      },
+
+      "instance": {
+        "title": "Game Instance & Global State",
+        "desc": "Centralized management of save file references and global states that persist across levels.",
+
+        "img1": "Global Logic: Implementation of the GameInstance class to handle persistent data between sessions."
+      },
+
+      "ui": {
+        "title": "UI Hierarchy & UX Design",
+        "desc": "Menu system architecture built using Widget Blueprints and hierarchical navigation.",
+
+        "img1": "Widget Structure: Hierarchy of the pause and main menu widgets with focus on user flow."
+      }
+    },
+
+    "cta": {
+      "title": "Ready for <em>adventure?</em>",
+      "subtitle": "Available for Windows on itch.io. Try to reach the Top 5!",
+      "or": "or",
+      "btn_back": "View more projects"
+    }
+  }
+}

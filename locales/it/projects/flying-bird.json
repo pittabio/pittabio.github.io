@@ -1,0 +1,100 @@
+﻿{
+  "head_title": "Flying Bird · Fabio Pittaccio",
+  "flying_page": {
+    "tab_title": "Flying Bird — Fabio Pittaccio",
+    "tag": "Studio Tecnico · Android & Windows",
+    "title": "Flying <em>Bird</em>",
+    "subtitle": "Un remake 3D di Flappy Bird focalizzato sull'architettura gameplay in C++ e il deployment mobile.",
+
+    "btn_download": "Scarica su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Obiettivo",
+      "title": "Ricreazione Tecnica",
+      "desc": "<strong>Flying Bird</strong> è un progetto di studio nato per approfondire la <strong>pipeline mobile di Unreal Engine</strong>. L'obiettivo era ricreare meccaniche classiche con un backend interamente in C++."
+    },
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Logica Core",
+      "items": [
+        "<li><strong>Reset Velocità:</strong> Logica di volo che normalizza la velocità verticale prima di ogni impulso per salti costanti.</li>",
+        "<li><strong>Loop Procedurale:</strong> Sistema di spawning che gestisce il ciclo di vita e l'offset casuale degli ostacoli.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Architettura C++",
+      "items": [
+        "<li><strong>Event-Driven:</strong> Utilizzo di delegati dinamici per disaccoppiare la logica di gioco da UI e Audio.</li>",
+        "<li><strong>Persistenza Dati:</strong> Implementazione C++ di SaveGame per record locali e impostazioni.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Sistemi",
+      "title": "Ottimizzazione Mobile",
+      "items": [
+        "<li><strong>Cross-Platform:</strong> Uso di macro <code>#if PLATFORM_ANDROID</code> per l'iniezione dinamica dell'UI.</li>",
+        "<li><strong>UI da Codice:</strong> Gerarchia dei widget parentata a classi C++ con styling programmatico Slate.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Trailer",
+    "gallery": {
+      "title": "Documentazione Progetto",
+
+      "game_state": {
+        "title": "Architettura a Eventi",
+        "desc": "Utilizzo di <code>Dynamic Multicast Delegates</code> nel GameState per disaccoppiare i trigger di gioco (Score, Morte) dall'interfaccia e dal sistema audio.",
+
+        "img1": "Sistema di Delegati: Analisi del broadcasting degli eventi per mantenere un flusso di comunicazione pulito tra le classi."
+      },
+
+      "bird": {
+        "title": "Fisica e Impulsi",
+        "desc": "Logica di volo gestita tramite <code>AddImpulse</code>. Il sistema smorza la velocità angolare e blocca le rotazioni per mantenere la stabilità.",
+
+        "img1": "Logica Impulsi: Vista dei parametri di forza e del setup della resistenza all'aria (Linear Damping)."
+      },
+
+      "pipes": {
+        "title": "Gestione Collisioni",
+        "desc": "Ottimizzazione dei canali di collisione per separare le mesh letali dai trigger di punteggio, evitando falsi positivi.",
+
+        "img1": "Filtraggio Collisioni: Configurazione di Object Type personalizzati per un rilevamento accurato delle interazioni."
+      },
+
+      "spawner": {
+        "title": "Spawning Procedurale",
+        "desc": "Implementazione di un generatore che utilizza <code>FFloatRange</code> per randomizzare l'altezza degli ostacoli entro limiti prestabiliti.",
+
+        "img1": "Setup Spawner: Vista delle proprietà, inclusi ritardi di spawn e range di altezza."
+      },
+
+      "input": {
+        "title": "Input Cross-Platform",
+        "desc": "Mappatura unificata tramite Enhanced Input, permettendo alla stessa logica di gestire tocchi su Android e click/tastiera su Windows.",
+
+        "img1": "IMC_Input: Configurazione dei binding per barra spaziatrice e tap su schermo."
+      },
+
+      "ui": {
+        "title": "UI Cross-Platform & Logic-Driven",
+        "desc": "Un sistema UI avanzato in cui ogni Widget Blueprint eredita da una classe C++. Include logiche specifiche per piattaforma e styling programmatico per garantire prestazioni e coerenza visiva.",
+
+        "img1": "Ottimizzazione Piattaforma Android: Frammento di codice C++ che mostra l'uso di macro del preprocessore per iniettare il tasto pausa solo su build mobile.",
+        "img2": "Parenting C++ e Architettura: Vista dell'editor Widget Blueprint che evidenzia la classe parent C++ (<code>PauseWidget</code>) e l'organizzazione gerarchica degli elementi interattivi.",
+        "img3": "Ecosistema UI Completo: Panoramica dell'intera interfaccia di gioco, dal menu principale all'HUD di gioco minimalista, fino alla schermata di morte con persistenza dei punteggi."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto per la <em>sfida?</em>",
+      "subtitle": "Metti alla prova la fisica e prova a battere il tuo record. Disponibile per Android e Windows.",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}

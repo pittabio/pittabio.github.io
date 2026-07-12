@@ -1,48 +1,114 @@
-﻿// -- IMAGE OVERLAY -- //
+﻿// -- IMAGE OVERLAY SYSTEM -- //
 
-// Open an image as a pop-up
-function openPopup(imgEl) {
-    document.getElementById('popupImg').src = imgEl.src;
-    document.getElementById('overlay').classList.add('active');
-}
+(function() {
+    // 1. DYNAMIC OVERLAY CREATION
+    const overlayHtml = `
+        <div class="overlay" id="overlay">
+            <div class="popup-img-wrap" id="popupWrap"></div>
+        </div>
+    `;
 
-// Close the pop-up
-function closePopup(e) {
-    // If an event is passed, it only closes if the overlay (outside the image) is clicked.
-    if (e && e.target !== document.getElementById('overlay')) return;
-    document.getElementById('overlay').classList.remove('active');
-}
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.insertAdjacentHTML('beforeend', overlayHtml);
+        const overlay = document.getElementById('overlay');
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closePopup();
+        });
+    });
 
-// Close with Escape too
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') document.getElementById('overlay').classList.remove('active');
-});
+    // 2. TRANSLATION HELPER
+    window.t = function(key) {
+        if (!window.currentTranslations) return key;
 
-// -- CONTACT SUCCESS MODAL -- //
+        // Retrieve the value from JSON
+        const val = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), window.currentTranslations);
 
-// Open the success modal
-function openSuccessModal() {
-    const modal = document.getElementById('contact-success-modal');
-    if (!modal) return;
+        if (!val) return key;
 
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+        // IF it's an array, join the elements with a space. ELSE, return the value as is.
+        return Array.isArray(val) ? val.join(' ') : val;
+    };
 
-    document.getElementById('modal-close-btn')
-        .addEventListener('click', closeSuccessModal, { once: true });
+    // 3a. SINGLE IMAGE OPENING
+    window.openOneImage = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+        const data = { img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1') };
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeSuccessModal();
-    }, { once: true });
-}
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <div class="popup-grid grid-1"> <!-- Added grid-1 class -->
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
 
-// Close the success modal
-function closeSuccessModal() {
-    const modal = document.getElementById('contact-success-modal');
-    if (!modal) return;
+    // 3b. DOUBLE OPENING
+    window.openTwoImages = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+        const data = {
+            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
+            img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2')
+        };
 
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-}
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <div class="popup-grid grid-2"> <!-- Added grid-2 class -->
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img2}" alt="">
+                    <p>${t(data.desc2)}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
+
+    // 3c. TRIPLE OPENING
+    window.openThreeImages = function(imgEl) {
+        document.body.classList.add('no-scroll');
+        const wrap = document.getElementById('popupWrap');
+        const data = {
+            img1: imgEl.getAttribute('data-img1'), desc1: imgEl.getAttribute('data-desc1'),
+            img2: imgEl.getAttribute('data-img2'), desc2: imgEl.getAttribute('data-desc2'),
+            img3: imgEl.getAttribute('data-img3'), desc3: imgEl.getAttribute('data-desc3')
+        };
+
+        wrap.innerHTML = `
+            <button class="btn-close" onclick="closePopup()">✕</button>
+            <div class="popup-grid grid-3"> <!-- Added grid-3 class -->
+                <div class="popup-item">
+                    <img src="${data.img1}" alt="">
+                    <p>${t(data.desc1)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img2}" alt="">
+                    <p>${t(data.desc2)}</p>
+                </div>
+                <div class="popup-item">
+                    <img src="${data.img3}" alt="">
+                    <p>${t(data.desc3)}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('overlay').classList.add('active');
+    };
+
+    // 4. CLOSING
+    window.closePopup = function() {
+        document.body.classList.remove('no-scroll');
+        document.getElementById('overlay').classList.remove('active');
+    };
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closePopup();
+    });
+})();

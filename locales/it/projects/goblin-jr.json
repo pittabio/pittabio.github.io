@@ -1,0 +1,109 @@
+﻿{
+  "head_title": "Goblin Jr. Adventure · Fabio Pittaccio",
+
+  "goblin_page": {
+    "tab_title": "Goblin Jr. Adventure — Fabio Pittaccio",
+    "tag": "Progetto in Evidenza · Unreal Engine 5",
+    "title": "Goblin Jr. <em>Adventure</em>",
+    "subtitle": "Un vivace platform 3D caratterizzato da mondi cubici stilizzati e un solido sistema di classifiche locali.",
+    "btn_download": "Gioca su itch.io",
+    "btn_back": "Torna ai Progetti",
+
+    "about": {
+      "tag": "Panoramica",
+      "title": "Un piccolo eroe in un grande mondo",
+      "desc": [
+        "Accompagna un coraggioso Goblin in un viaggio attraverso isole sospese per raccogliere tesori luccicanti.",
+        "<strong>Goblin Jr. Adventure</strong> è un platform 3D pensato per giocatori casual, creato per esplorare l'integrazione di meccaniche arcade classiche in <strong>Unreal Engine 5</strong>.",
+        "Il progetto si concentra sull'offrire un'esperienza utente rifinita, dal movimento fluido del personaggio a un loop di gioco completo di salvataggi e classifiche."
+      ]
+    },
+
+    "gameplay": {
+      "tag": "Meccaniche",
+      "title": "Divertimento Platform Classico",
+      "items": [
+        "<li><strong>Movimento Stilizzato:</strong> Meccaniche di salto precise pensate per navigare in ambienti cubici ed evitare trappole ingegnose.</li>",
+        "<li><strong>Caccia al Tesoro:</strong> Forzieri interattivi e monete collezionabili sparsi nei livelli per incoraggiare l'esplorazione.</li>",
+        "<li><strong>Checkpoint e Persistenza:</strong> Un sistema affidabile che traccia i progressi del giocatore e il bottino raccolto tra le sessioni.</li>",
+        "<li><strong>Loop di Fine Gioco:</strong> Sistema di punteggio finale con ricompense visive (fuochi d'artificio) e reset dei dati per la rigiocabilità.</li>"
+      ]
+    },
+
+    "tech": {
+      "tag": "Tecnica",
+      "title": "Architettura di Sistema (C++ e BP)",
+      "items": [
+        "<li><strong>Framework Ibrido:</strong> Sistemi core sviluppati in C++ (SaveGame, Audio Mixer) ed estesi tramite Blueprint per un'iterazione rapida del gameplay.</li>",
+        "<li><strong>Classifica Locale:</strong> Un sistema dedicato Top 5 che persiste localmente, permettendo ai giocatori di competere per il punteggio più alto.</li>",
+        "<li><strong>Caricamento Asincrono:</strong> Implementazione di schermate di caricamento in tempo reale con Flipbook 2D animati per transizioni fluide.</li>",
+        "<li><strong>Controllo Audio:</strong> Gestione completa tramite Audio Mixer per il controllo indipendente di musica, suoni UI e SFX ambientali.</li>"
+      ]
+    },
+
+    "systems": {
+      "tag": "Sistemi",
+      "title": "UX e Localizzazione",
+      "items": [
+        "<li><strong>Opzioni Avanzate:</strong> Menu impostazioni completo con inversione assi, controlli volume e persistenza della modalità finestra.</li>",
+        "<li><strong>Supporto Multilingua:</strong> Framework di localizzazione integrato per Inglese e Italiano, selezionabile dal menu principale.</li>",
+        "<li><strong>Scalabilità Input:</strong> Supporto sia per Tastiera/Mouse che per Gamepad con feedback dedicato nell'interfaccia.</li>",
+        "<li><strong>Integrazione VFX:</strong> Utilizzo di Niagara e plugin Flipbook per arricchire il feedback visivo nei momenti chiave del gioco.</li>"
+      ]
+    },
+
+    "video_title": "Gameplay Trailer",
+    "gallery": {
+      "title": "Documentazione Progetto",
+
+      "architecture": {
+        "title": "Architettura software C++",
+        "desc": "Struttura di progetto modulare organizzata in namespace specializzati per un'elevata manutenibilità.",
+
+        "img1": "Panoramica della soluzione: organizzazione pulita dei file di intestazione e sorgente all'interno della struttura del progetto Unreal."
+      },
+
+      "hybrid": {
+        "title": "Flusso di lavoro di sviluppo ibrido",
+        "desc": "Utilizzo di BlueprintImplementableEvent per attivare la logica visiva dalle classi core C++.",
+
+        "img1": "Integrazione C++/BP: esempio di una classe C++ che richiama eventi Blueprint per animazioni estetiche."
+      },
+
+      "persistence": {
+        "title": "Sistema di salvataggio e serializzazione",
+        "desc": "Implementazione di un robusto sistema di salvataggio per la progressione di gioco e le preferenze dell'utente.",
+
+        "img1": "Salvataggio dei dati: configurazione dell'oggetto SaveGame utilizzato per rendere persistenti monete e checkpoint."
+      },
+
+      "input": {
+        "title": "Enhanced Input e scalabilità",
+        "desc": "Mappatura unificata per tastiera, gamepad e touch tramite UE5 Enhanced Input.",
+
+        "img1": "Mappatura input: schema di controllo multipiattaforma configurato per l'accessibilità universale."
+      },
+
+      "instance": {
+        "title": "Istanza di gioco e stato globale",
+        "desc": "Gestione centralizzata dei riferimenti ai file di salvataggio e degli stati globali che persistono tra i livelli.",
+
+        "img1": "Logica globale: implementazione della classe GameInstance per gestire i dati persistenti tra le sessioni."
+      },
+
+      "ui": {
+        "title": "Gerarchia dell'interfaccia utente e progettazione UX",
+        "desc": "Architettura del sistema di menu realizzata utilizzando Widget Blueprint e navigazione gerarchica.",
+
+        "img1": "Struttura dei widget: gerarchia dei widget di pausa e del menu principale con particolare attenzione al flusso utente."
+      }
+    },
+
+    "cta": {
+      "title": "Pronto per l'<em>avventura?</em>",
+      "subtitle": "Disponibile per Windows su itch.io. Prova a raggiungere la Top 5!",
+      "or": "oppure",
+      "btn_back": "Vedi altri progetti"
+    }
+  }
+}

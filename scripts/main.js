@@ -71,7 +71,21 @@ fetch(`${repoName}/common/header.html`.replace(/\/+/g, '/'))
 // -- FOOTER -- //
 fetch(`${repoName}/common/footer.html`.replace(/\/+/g, '/'))
     .then(response => response.text())
-    .then(data => { document.getElementById('footer').innerHTML = data; })
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+
+        // --- Back to top button  ---
+        const backToTopBtn = document.querySelector('.back-to-top');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevents immediate jumping
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth sliding effect
+                });
+            });
+        }
+    })
     .catch(error => console.error("ERROR loading footer:", error));
 
 // -- LANGUAGE ENGINE -- //
@@ -104,7 +118,9 @@ async function changeLanguage(lang) {
         const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
         const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
 
+        // Global translations
         const translations = { ...commonTranslations, ...pageTranslations };
+        window.currentTranslations = translations;
 
         const getNestedTranslation = (key) => {
             return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);

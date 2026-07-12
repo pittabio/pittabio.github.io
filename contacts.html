@@ -7,13 +7,10 @@
     <title data-i18n="head_title"></title>
 
     <!-- ## CSS ## -->
-    <link rel="stylesheet" href="style/core.css">  <!-- Core: Base, Header, Footer -->
-
-    <!-- Sections -->
-    <link rel="stylesheet" href="style/sections/section-about.css">  <!-- Info grid -->
-
-    <!-- Page specifics -->
-    <link rel="stylesheet" href="style/pages/contacts.css">  <!-- Form & Social networks -->
+    <link rel="stylesheet" href="style/core.css">                   <!-- Core: Base, Header, Footer -->
+    <link rel="stylesheet" href="style/sections/section-about.css"> <!-- Info grid -->
+    <link rel="stylesheet" href="style/pages/contacts.css">         <!-- Form & Social networks -->
+    <link rel="stylesheet" href="style/pages/home.css">  			<!-- Indicator -->
 </head>
 <body>
 
@@ -30,11 +27,10 @@
             <h1 class="contact-title" data-i18n-html="contact_page.title"></h1>
             <p class="contact-subtitle" data-i18n="contact_page.subtitle"></p>
 
-            <!-- ABOUT -->
+            <!-- Quick Info -->
             <div class="about-grid">
-                <!-- Quick Info -->
                 <div class="project-card">
-                    <h3 class="project-name" data-i18n="contact_page.quick_info_title"></h3>
+                    <h3 class="project-name" data-i18n="contact_page.quick_info"></h3>
                     <ul class="contact-info-list">
                         <li>📍 <!-- Location -->
                             <strong data-i18n="contact_page.info.location_label"></strong>
@@ -53,40 +49,84 @@
                             <span class="accent-text" data-i18n="contact_page.info.status_value"></span>
                         </li>
                     </ul>
-                </div> <!-- END quick info -->
+                </div>
+            </div> <!-- END quick info -->
 
-                <!-- Social -->
+            <!-- ABOUT -->
+            <div class="about-grid">
+
+                <!-- Dev Profiles -->
                 <div class="project-card">
-                    <h3 class="project-name" data-i18n="contact_page.networks_title"></h3>
+                    <h3 class="project-name" data-i18n="contact_page.dev_profiles"></h3>
                     <div class="contact-social-grid">
+
                         <!-- LinkedIn -->
                         <a href="https://linkedin.com/in/fabio-pittaccio" target="_blank" class="resume-link">
                             <i class="devicon-linkedin-plain"></i>
                             <strong>LinkedIn</strong>
                         </a>
+
                         <!-- GitHub -->
                         <a href="https://github.com/pittabio" target="_blank" class="resume-link">
                             <i class="devicon-github-original"></i>
                             <strong>GitHub</strong>
                         </a>
+
+                        <!-- GitLab -->
+                        <a href="https://gitlab.com/pittabio" target="_blank" class="resume-link">
+                            <i class="devicon-gitlab-plain"></i>
+                            <strong>GitLab</strong>
+                        </a>
+
                         <!-- itch.io -->
                         <a href="https://pittabio.itch.io" target="_blank" class="resume-link">
                             <img src="media/logo/itchio.png" alt="itch.io mini logo" class="social-icon-img"/>
                             <strong>itch.io</strong>
                         </a>
+
+                    </div>
+                </div> <!-- END profiles -->
+
+                <!-- Social -->
+                <div class="project-card">
+                    <h3 class="project-name" data-i18n="contact_page.social_networks"></h3>
+                    <div class="contact-social-grid">
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/pittabio" target="_blank" class="resume-link">
+                            <img src="media/logo/instagram.png" alt="Instagram mini logo" class="social-icon-img"/>
+                            <strong>Instagram</strong>
+                        </a>
+
                         <!-- YouTube -->
                         <a href="https://youtube.com/channel/UCQ7xNTQLaIW01wgbONjlYug" target="_blank" class="resume-link">
-                            ▶
+                            <img src="media/logo/youtube.png" alt="YouTube mini logo" class="social-icon-img"/>
                             <strong>YouTube</strong>
                         </a>
+
                         <!-- Twitch -->
                         <a href="https://twitch.tv/pittabio" target="_blank" class="resume-link">
                             <img src="media/logo/twitch.png" alt="twitch mini logo" class="social-icon-img"/>
                             <strong>Twitch</strong>
                         </a>
+
                     </div>
                 </div> <!-- END social -->
             </div> <!-- END about -->
+
+            <!-- BUTTON PART: INDICATOR -->
+            <a href="#form" class="scroll-indicator" aria-label="Scroll to the about section">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DADADA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13M5 12l7 7 7-7"/></svg>
+            </a>
+
+            <!-- FUN FACT -->
+            <p id="form"></p> <!-- space -->
+            <div class="about-grid">
+                <div class="project-card">
+                    <h1 class="contact-title" data-i18n-html="contact_page.fun_fact.title"></h1>
+                    <p class="contact-subtitle" data-i18n="contact_page.fun_fact.description"></p>
+                </div>
+            </div>
 
             <!-- CONTACT FORM -->
             <div class="contact-form-container">
@@ -94,7 +134,7 @@
                 <p class="contact-subtitle" data-i18n="contact_page.form.subtitle"></p>
                 <form class="contact-form-element" novalidate>
 
-                    <!-- Web3Forms botcheck honeypot (hidden) -->
+                    <!-- Web3Forms bot-check honeypot (hidden) -->
                     <label>
                         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
                     </label>
@@ -154,6 +194,8 @@
 <script src="scripts/main.js"></script>
 <script src="scripts/contacts.js"></script>
 <script src="https://web3forms.com/client/script.js" async defer></script> <!-- Web3Forms script -->
+
+<script src="scripts/overlay.js"></script>
 
 </body>
 </html>

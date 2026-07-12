@@ -19,25 +19,38 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    align-items: start;
+    align-items: start; /* This prevents short cards from stretching as much as long ones */
     gap: 2rem;
 }
 
 .project-card {
     background: var(--bg);
-    border: 2px solid var(--border); /* Partiamo leggeri con il bordo */
+    border: 2px solid var(--border);
     border-radius: var(--radius);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    transition: var(--transition);
+    /* aspect-ratio: 1/1; */
+    height: 100%; /* Causes all cards in the same row to be the same height */
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .project-card:hover {
-    border-color: var(--accent); /* Il bordo diventa arancione al passaggio */
+    border-color: var(--accent); /* The border turns orange when you pass */
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
+}
+
+.project-card a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project-card a:hover .project-image {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .project-name {
@@ -50,21 +63,20 @@
     font-size: 0.95rem;
     opacity: 0.8;
     margin-bottom: 1.5rem;
-    flex-grow: 1; /* Spinge i link sempre in fondo */
+    flex-grow: 1; /* Always push links to the bottom */
 }
 
 .project-image {
-    height: 280px;
     width: 100%;
-    object-fit: cover;
+    height: 220px;        /* Fixed height for preview */
+    object-fit: cover;    /* Crop the image to fill the space */
+    object-position: top; /* Show top (crucial for code screenshots) */
     border-radius: 8px;
-
-    object-position: top;
     margin-bottom: 1.5rem;
     cursor: zoom-in;
 }
 
-/* Links interni alla card */
+/* Internal links to the card */
 .project-links {
     display: flex;
     justify-content: space-between;
@@ -81,6 +93,11 @@
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 2;
 }
 
 .project-links .link-secondary {
@@ -93,6 +110,11 @@
 
 .project-links .link-secondary:hover {
     color: var(--accent);
+}
+
+/* Remove any margins from the SVG if present, just to be safe. */
+.project-links .link-primary svg {
+    display: block; /* Removes extra white space under the image */
 }
 
 @media (max-width: 480px) {

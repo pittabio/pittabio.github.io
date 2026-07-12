@@ -5,7 +5,8 @@
     "tab_title": "Ruins' Rhapsody — Fabio Pittaccio",
     "tag": "Progetto in Evidenza · Unreal Engine 5",
     "title": "Ruins' <em>Rhapsody</em>",
-    "subtitle": "Un framework Action-Adventure cinematografico creato in C++ con tecnologia MetaHuman.",
+    "subtitle": "Un framework Action-Adventure in terza persona focalizzato su movimento, esplorazione e sistemi C++.",
+
     "btn_download": "Scarica Demo",
     "btn_back": "Torna ai Progetti",
 
@@ -13,10 +14,9 @@
       "tag": "Panoramica",
       "title": "Alla ricerca del Cuore Perduto",
       "desc": [
-        "Vesti i panni di <strong>Alessandra Morioka</strong>, un'archeologa intraprendente in missione per scoprire il <em>Cuore Perduto di Aracne</em>.",
-        "Sviluppato originariamente come <strong>tesi accademica</strong> e successivamente ampliato in una demo tecnica completa,",
-        "questo progetto mette in mostra un framework in terza persona di alto livello.",
-        "Ispirato a classici come <em>Tomb Raider</em>, unisce narrazione cinematografica e rigorosa ingegneria del software."
+        "Indossa i panni di <strong>Alessandra Morioka</strong>, un'audace archeologa in missione per riportare alla luce il <em>Cuore Perduto di Aracne</em>.",
+        "Sviluppato inizialmente come <strong>tesi accademica</strong> e successivamente perfezionato in una demo tecnica, questo progetto presenta un framework personalizzato per la visuale in terza persona.",
+        "Ispirato a classici come <em>Tomb Raider</em>, il progetto si concentra sull'integrazione delle meccaniche di gioco con sistemi backend affidabili in C++."
       ]
     },
 
@@ -27,7 +27,7 @@
         "<li><strong>Movimento Avanzato:</strong> Sistema di movimento multi-modale che include arrampicata, navigazione sulle sporgenze e scivolata dinamica.</li>",
         "<li><strong>Interazione Ambientale:</strong> Enigmi complessi che utilizzano meccaniche chiave-porta e trigger basati sull'inventario.</li>",
         "<li><strong>Combattimento Tattico:</strong> Affronta diverse minacce IA (animali, robot, umani) con sistemi di armi modulari e gestione munizioni.</li>",
-        "<li><strong>Esplorazione:</strong> Tre zone distinte: Tempio Antico, Grotta Sotterranea con lago e Rovine all'aperto.</li>"
+        "<li><strong>Esplorazione:</strong> Tre zone distinte: Tempio Antico, un Lago con una Grotta Sotterranea e Rovine all'aperto.</li>"
       ]
     },
 
@@ -37,6 +37,7 @@
       "items": [
         "<li><strong>Logica a Componenti:</strong> Componenti C++ personalizzati per Arrampicata, Nuoto (con resistenza del respiro) e gestione Inventario.</li>",
         "<li><strong>Level Streaming:</strong> Implementazione di un mondo persistente con sub-level streaming per eliminare i caricamenti e ottimizzare la memoria.</li>",
+        "<li><strong>Sistema di Salvataggio:</strong> Pipeline di serializzazione in C++ che tiene traccia dello stato dei livelli, della posizione del giocatore e dell'inventario.</li>",
         "<li><strong>Percezione IA:</strong> I nemici utilizzano Sensing Components e Behavior Tree personalizzati per stati di rilevamento e combattimento realistici.</li>",
         "<li><strong>Collisioni Custom:</strong> Trace Channel ECC specializzati per sparatorie ad alta precisione, rilevamento arrampicata e interazioni con i fluidi.</li>"
       ]
@@ -49,30 +50,55 @@
         "<li><strong>Pipeline di Salvataggio:</strong> Sistema di serializzazione robusto che traccia stati dei livelli, progressi e persistenza inventario.</li>",
         "<li><strong>Localizzazione:</strong> Framework di traduzione integrato con cambio lingua in tempo reale tra inglese e italiano.</li>",
         "<li><strong>UI Interattiva:</strong> Widget per il Menu Principale 3D integrati nell'ambiente di gioco con sound design ambientale stratificato.</li>",
-        "<li><strong>Performance:</strong> Profilazione estensiva e ottimizzazione degli asset (ridimensionamento texture, pulizia mesh) per mantenere 60+ FPS.</li>"
+        "<li><strong>Performance:</strong> Profilazione estensiva e ottimizzazione degli asset per mantenere un'esperienza stabile e ottimizzata su Windows.</li>"
       ]
     },
 
     "video_title": "Gameplay Trailer",
-    "gallery_title": "Documentazione di Progetto",
     "gallery": {
-      "codemap_title": "Architettura Iniziale",
-      "codemap_desc": [
-        "Mappa software fondamentale progettata durante la tesi. Illustra la logica core e le interazioni tra classi che costituiscono la base del progetto.",
-        "<br><a href='../media/games/ruins-rhapsody/code-map.pdf' target='_blank' style='color:var(--accent); font-weight:500; text-decoration:underline;'>Apri PDF tecnico in alta risoluzione</a>"
-      ],
+      "title": "Documentazione Progetto",
 
-      "components_title": "Logica Modulare del Personaggio",
-      "components_desc": "Analisi dei componenti C++ custom (Climbing, Nuoto, Inventario) che estendono il base MetaHuman.",
+      "codemap": {
+        "title": "Architettura iniziale del sistema",
+        "desc": "Mappa software fondamentale progettata durante la fase di tesi, che illustra la logica principale e le interazioni tra le classi.",
 
-      "input_title": "Enhanced Input System",
-      "input_desc": "Schema di controlli scalabile tramite Data Asset per gestire movimento, combattimento e interazioni.",
+        "img1": "Mappa dell'architettura: panoramica di alto livello della gerarchia delle classi e dei protocolli di comunicazione tra i sistemi."
+      },
 
-      "ai_title": "Configurazione IA",
-      "ai_desc": "Parametri per il sensing dei nemici, sistemi di loot procedurale e feedback visivo tramite Niagara VFX.",
+      "components": {
+        "title": "Logica modulare del personaggio",
+        "desc": "Componenti C++ personalizzati che estendono la base MetaHuman per un framework di attraversamento riutilizzabile.",
 
-      "bt_title": "Behavior Trees",
-      "bt_desc": "Flusso logico dell'IA con 3 stati: Pattugliamento, Inseguimento e Combattimento a distanza."
+        "img1": "Stack dei componenti: vista dei moduli C++ personalizzati (arrampicata, nuoto, inventario) collegati al personaggio principale."
+      },
+
+      "input": {
+        "title": "Sistema di input avanzato",
+        "desc": "Schema di controllo scalabile che utilizza gli asset dati di UE5 per gestire l'attraversamento, il combattimento e le azioni dell'interfaccia utente.",
+
+        "img1": "Configurazione dell'input: mappatura degli stati di movimento e interazione utilizzando il plugin Enhanced Input."
+      },
+
+      "ai": {
+        "title": "IA e ottimizzazione dei parametri",
+        "desc": "Configurazione per il rilevamento dei nemici, i sistemi di bottino procedurali e il feedback visivo.",
+
+        "img1": "Configurazione IA: dettagli dei componenti di rilevamento e dei parametri di combattimento per i nemici robotici."
+      },
+
+      "bt": {
+        "title": "Alberi comportamentali dell'IA",
+        "desc": "Flusso logico con 3 stati principali: Pattugliamento autonomo, Inseguimento del giocatore e Combattimento a distanza.",
+
+        "img1": "Albero comportamentale: flusso logico visivo che gestisce il processo decisionale del nemico e le transizioni di stato."
+      },
+
+      "world": {
+        "title": "Composizione del mondo e streaming",
+        "desc": "Implementazione dello streaming dei livelli per ottimizzare le prestazioni e le transizioni tra le aree.",
+
+        "img1": "Gestione dei livelli: configurazione del caricamento asincrono per mantenere prestazioni elevate senza interruzioni del gioco."
+      }
     },
 
     "cta": {

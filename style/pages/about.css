@@ -22,7 +22,7 @@
 
 .resume-section { padding: 1rem 0; }
 
-/* Override card style per la lista skill */
+/* Override card style for the skill list */
 .resume-page-section .project-card {
     aspect-ratio: auto;
     padding: 2rem;
@@ -45,7 +45,7 @@
 }
 .skill-row:last-child { border-bottom: none; }
 
-/* Livelli Skill */
+/* Skill Levels */
 .skill-level {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     padding: 0.18rem 0.6rem; border-radius: 20px;
@@ -57,20 +57,82 @@
 
 /* Education Timeline */
 .education-timeline {
-    position: relative; max-width: 860px; margin: 3rem auto 0; padding-left: 2rem;
+    position: relative;
+    max-width: 860px;
+    margin: 3rem auto 0;
+    padding-left: 1.5rem;
 }
 .education-timeline::before {
-    content: ''; position: absolute; left: 0; top: 8px; bottom: 24px; width: 2px; background: var(--border);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 24px;
+    width: 2px;
+    background: var(--border);
 }
-.timeline-entry { position: relative; padding-bottom: 3rem; }
+
+.timeline-entry {
+    position: relative;
+    padding-bottom: 3rem;
+}
 .timeline-entry::before {
-    content: ''; position: absolute; left: -2.43rem; top: 6px; width: 12px; height: 12px;
-    border-radius: 50%; background: var(--accent); border: 2px solid var(--bg);
+    content: '';
+    position: absolute;
+    left: -1.8rem;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
     box-shadow: 0 0 0 3px rgba(255, 80, 0, 0.18);
+    z-index: 2;
+}
+
+.timeline-date {
+    font-family: var(--font-playfair), serif;
+    font-size: 0.85rem;          /* date-tag */
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-role {
+    font-family: var(--font-playfair), serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for details (the <ul> list) if not already defined */
+.timeline-details {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.timeline-details li {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 0.4rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.timeline-details li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
     .resume-page-section { padding: 5rem 1.5rem 0; }
-    .education-timeline { padding-left: 1.5rem; }
-    .timeline-entry::before { left: -1.93rem; }
+    .education-timeline { padding-left: 1.2rem; }
+    .timeline-entry::before { left: -1.58rem; }
 }

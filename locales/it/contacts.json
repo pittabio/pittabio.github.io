@@ -5,9 +5,17 @@
     "tag": "Mettiti in contatto",
     "title": "Parliamo del tuo prossimo <em>progetto.</em>",
     "subtitle": "Che tu voglia discutere di opportunità lavorative, collaborazioni su Unreal Engine o semplicemente farmi una domanda, sono a tua disposizione.",
-    "quick_info_title": "Informazioni Rapide",
-    "networks_title": "Profili & Community",
-    "fun_fact": "Curiosità: Il nickname @pittabio nasce dalla fusione del mio cognome (Pittaccio) e del mio nome (Fabio). Mi trovi così quasi ovunque.",
+
+    "quick_info": "Info rapide",
+    "dev_profiles": "Profili Dev",
+    "social_networks": "Community & Social",
+
+    "fun_fact":
+    {
+      "title": "Curiosità",
+      "description": "Il nickname @pittabio nasce dalla fusione del mio cognome (Pittaccio) e del mio nome (Fabio). Mi trovi così quasi ovunque."
+    },
+
     "info": {
       "location_label": "Posizione attuale:",
       "location": "Roma, Italia",
