@@ -6,8 +6,8 @@
     "tag": "Collaborative Project · Unreal Engine 5",
     "title": "Zombie Siege <em>Chronicles</em>",
     "subtitle": "A strategic Tower Defense featuring placement validation and a modular portal system.",
-    "btn_download": "Play on itch.io",
-    "btn_back": "Back to Projects",
+
+    "banner": "The <strong>Zombie Siege Chronicles</strong> banner",
 
     "about": {
       "tag": "Overview",

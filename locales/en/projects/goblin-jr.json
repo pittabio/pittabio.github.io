@@ -6,8 +6,8 @@
     "tag": "Featured Project · Unreal Engine 5",
     "title": "Goblin Jr. <em>Adventure</em>",
     "subtitle": "A vibrant 3D platformer featuring stylized cubic worlds and a robust local leaderboard system.",
-    "btn_download": "Play on itch.io",
-    "btn_back": "Back to Projects",
+
+    "banner": "The <strong>Goblin Jr. Adventure</strong> banner",
 
     "about": {
       "tag": "Overview",

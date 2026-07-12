@@ -6,8 +6,7 @@
     "title": "Wizard<em>Scape</em>",
     "subtitle": "A 3D mobile survival prototype featuring auto-cast combat and dynamic power-up systems.",
 
-    "btn_download": "View on itch.io",
-    "btn_back": "Back to Projects",
+    "banner": "The <strong>WizardScape: The Magic Chase</strong> banner",
 
     "about": {
       "tag": "Project Vision",

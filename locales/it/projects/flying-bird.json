@@ -6,8 +6,7 @@
     "title": "Flying <em>Bird</em>",
     "subtitle": "Un remake 3D di Flappy Bird focalizzato sull'architettura gameplay in C++ e il deployment mobile.",
 
-    "btn_download": "Scarica su itch.io",
-    "btn_back": "Torna ai Progetti",
+    "banner": "Il banner di <strong>Flying Bird</strong>",
 
     "about": {
       "tag": "Obiettivo",

@@ -6,10 +6,8 @@
     "tag": "Featured Project · Unreal Engine 5",
     "title": "Ruins' <em>Rhapsody</em>",
     "subtitle": "A third-person Action-Adventure framework focusing on traversal, exploration, and C++ systems.",
-    "banner": "The Ruins' Rhapsody banner",
 
-    "btn_download": "Download Demo",
-    "btn_back": "Back to Projects",
+    "banner": "The <strong>Ruins' Rhapsody</strong> banner",
 
     "about": {
       "tag": "Overview",
