@@ -88,4 +88,28 @@
         border-bottom: 1px solid var(--border);
         border-radius: 0; /* Let's remove the radius for the list menu */
     }
+
+    .lang-switcher-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.03); /* Un leggero stacco visivo */
+        border-bottom: 1px solid var(--border);
+    }
+
+    .lang-switcher-mobile .lang-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        cursor: pointer;
+        color: var(--text);
+    }
+
+    .lang-switcher-mobile .lang-btn.active {
+        background: var(--accent);
+        color: var(--bg);
+        border-color: var(--accent);
+    }
 }
