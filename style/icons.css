@@ -18,3 +18,14 @@
         stroke var(--transition),
         opacity var(--transition);
 }
+
+.social-icon-img {
+    display: inline-block;
+
+    filter: grayscale(100%) opacity(1);
+    transition: var(--transition);
+}
+
+.resume-link:hover .social-icon-img {
+    filter: grayscale(0%) opacity(1);
+}
