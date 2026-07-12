@@ -14,6 +14,16 @@
     align-items: center;
     gap: 1rem;
     margin-top: auto;
+
+    color: var(--bg);
+}
+
+.support-button:hover {
+    color: var(--text);
+
+    .arrow {
+        stroke: var(--text);
+    }
 }
 
 .support-button .link {
@@ -30,4 +40,8 @@
     align-items: center;
     gap: 0.5rem;
     line-height: 2;
+}
+
+.support-button .link:hover {
+    color: var(--text);
 }
