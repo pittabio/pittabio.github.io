@@ -1,0 +1,59 @@
+﻿{
+  "head_title": "Supporta il mio lavoro · Fabio Pittaccio",
+
+  "support_page": {
+    "tag": "Supporto & Community",
+    "title": "Supporta il mio <em>lavoro!</em>",
+    "subtitle": "Se apprezzi quello che faccio e vuoi aiutarmi a continuare, ecco come puoi farlo. Ogni aiuto è davvero apprezzato 💖",
+
+
+    "direct": {
+      "title": "☕ Offrimi un caffè",
+      "subtitle": "Supporto diretto per il mio sviluppo di giochi indipendenti"
+    },
+
+    "kofi": {
+      "desc": "Fai una donazione una tantum o diventa un membro per supportare i miei progetti. È senza commissioni e completamente flessibile.",
+      "button": "Offrimi un caffè"
+    },
+
+    "paypal": {
+      "desc": "Dona direttamente tramite PayPal. Puoi usare carte di credito, di debito o il tuo conto PayPal.",
+      "button": "Dona con PayPal"
+    },
+
+    "github": {
+      "desc": "Presto potrete supportarmi su GitHub. Restate sintonizzati!",
+      "desc_real": "Sostienimi su GitHub. È un ottimo modo per dimostrare il tuo apprezzamento e supportare il mio lavoro.",
+      "button": "Prossimamente!"
+    },
+
+
+    "mutual": {
+      "title": "🤝 Supporto reciproco",
+      "subtitle": "Tu aiuti me, io aiuto te: vinciamo entrambi!"
+    },
+
+    "gitkraken": {
+      "desc": "GitKraken è un potente client Git. Clicca qui sotto per ottenere il 50% di sconto sulla versione Pro e aiutarmi con una commissione.",
+      "button": "Scopri di più"
+    },
+
+    "ms_rewards": {
+      "desc": "Accumula punti ricompensa cercando con Bing. Clicca sul mio link di invito, registrati e guadagneremo punti bonus insieme.",
+      "button": "Scopri di più"
+    },
+
+    "revolut": {
+      "desc": "Unisciti a me e a oltre 75 milioni di altri utenti che amano Revolut.",
+      "button": "Scopri di più"
+    },
+
+
+    "thanks": {
+      "title": "Grazie di cuore per il tuo <em>supporto!</em><br>💖",
+      "subtitle": "Ogni contributo mi aiuta a dedicare più tempo allo sviluppo di giochi e strumenti.",
+      "button": "Contattami"
+    }
+  }
+}
