@@ -1,0 +1,20 @@
+﻿.arrow {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: var(--transition);
+}
+
+.itch-icon {
+    transition:
+        fill
+        var(--transition),
+        stroke var(--transition),
+        opacity var(--transition);
+}

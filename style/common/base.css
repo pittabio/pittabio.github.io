@@ -24,11 +24,23 @@ img {
     display: block;
 }
 
-h1, h2, h3 { font-family: var(--font-playfair), serif; }
-a { color: var(--accent); text-decoration: none; transition: var(--transition); }
-a:hover { color: var(--hovered); }
+h1, h2, h3 {
+    font-family: var(--font-playfair), serif;
+}
 
-.page-content { min-height: 100vh; }
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--hovered);
+}
+
+.page-content {
+    min-height: 100vh;
+}
 
 :focus-visible {
     outline: 2px solid var(--accent);

@@ -8,6 +8,7 @@
 
 	<!-- ## CSS ## -->
 	<link rel="stylesheet" href="style/core.css">						<!-- Core: Base, Header, Footer -->
+	<link rel="stylesheet" href="style/svg.css">						<!-- SVG icons -->
 	<link rel="stylesheet" href="style/sections/section-about.css">    	<!-- Bio & Tech bar -->
 	<link rel="stylesheet" href="style/sections/section-projects.css"> 	<!-- Cards & Games grid -->
 	<link rel="stylesheet" href="style/sections/section-contact.css">  	<!-- Badge & Final CTA -->
@@ -32,10 +33,10 @@
 
 			<!-- Button -->
 			<div class="hero-bt-container">
-				<a href="#" class="hero-bt">
+				<a href="projects.html" class="hero-bt">
 					<span data-i18n="hero.projects"></span>
 					<!-- svg arrow -->
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>
 
@@ -99,7 +100,7 @@
 
 			<!-- Find More -->
 			<div class="about-more">
-				<a href="#" class="resume-link">
+				<a href="about.html" class="resume-link">
 					<span data-i18n="about.find_more"></span>
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 				</a>
@@ -134,28 +135,43 @@
 
 			<!-- GRID -->
 			<div class="projects-grid">
+
 				<!-- ## Ruins' Rhapsody ## -->
 				<div class="project-card">
 					<!-- Title and image -->
 					<a href="projects/ruins-rhapsody.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.ruins.name"></h3>
 					</a>
-					<img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody Banner" class="project-image" onclick="openOneImage(this)"/>
+					<img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody banner"
+						 class="project-image" onclick="openOneImage(this)"
 
-					<br>
+						 data-img1="../media/games/ruins-rhapsody/banner.jpg"
+						 data-desc1="The Ruins' Rhapsody banner"
+					/>
 					<!-- Description and links -->
 					<p class="project-desc" data-i18n-html="projects.ruins.desc"></p>
 					<div class="project-links">
-						<a href="projects/ruins-rhapsody.html" class="link-secondary" data-i18n="projects.link2"></a>
+						<!-- itch.io Button -->
 						<a href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank" class="link-primary">
 							<span data-i18n="projects.link1"></span>
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z" fill="#1c1f21" fill-opacity="0.3" data-color="color-2"></path>
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+							<!-- logo -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
+								<!-- Path with fill -->
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
+								      fill="currentColor" fill-opacity="0.3"></path>
+								<!-- Path with outline (stroke) -->
+								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
 							</svg>
+						</a>
+						<!-- Details Button -->
+						<a href="projects/ruins-rhapsody.html" class="link-secondary">
+							<span data-i18n="projects.link2"></span>
+							<!-- svg arrow -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 						</a>
 					</div>
 				</div>
@@ -166,22 +182,36 @@
 					<a href="projects/goblin-jr.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.goblin.name"></h3>
 					</a>
-					<img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure Banner" class="project-image" onclick="openOneImage(this)"/>
+					<img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure banner"
+						 class="project-image" onclick="openOneImage(this)"
 
-					<br>
+						 data-img1="../media/games/goblin-jr/banner.png"
+						 data-desc1="The Goblin Jr. Adventure banner"
+					/>
 					<!-- Description and links -->
 					<p class="project-desc" data-i18n-html="projects.goblin.desc"></p>
 					<div class="project-links">
-						<a href="projects/goblin-jr.html" class="link-secondary" data-i18n="projects.link2"></a>
+						<!-- itch.io Button -->
 						<a href="https://pittabio.itch.io/goblin-jr-adventure" target="_blank" class="link-primary">
 							<span data-i18n="projects.link1"></span>
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z" fill="#1c1f21" fill-opacity="0.3" data-color="color-2"></path>
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+							<!-- logo -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
+								<!-- Path with fill -->
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
+								      fill="currentColor" fill-opacity="0.3"></path>
+								<!-- Path with outline (stroke) -->
+								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
 							</svg>
+						</a>
+						<!-- Details Button -->
+						<a href="projects/goblin-jr.html" class="link-secondary">
+							<span data-i18n="projects.link2"></span>
+							<!-- svg arrow -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 						</a>
 					</div>
 				</div>
@@ -192,33 +222,48 @@
 					<a href="projects/zombie-siege.html" class="project-link" target="_blank">
 						<h3 class="project-name" data-i18n="projects.zombie.name"></h3>
 					</a>
-					<img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles Banner" class="project-image" onclick="openOneImage(this)"/>
+					<img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles banner"
+						 class="project-image" onclick="openOneImage(this)"
 
-					<br>
+						 data-img1="../media/games/zombie-siege/banner.png"
+						 data-desc1="The Zombie Siege Chronicles banner"
+					/>
 					<!-- Description and links -->
 					<p class="project-desc" data-i18n-html="projects.zombie.desc"></p>
 					<div class="project-links">
-						<a href="projects/zombie-siege.html" class="link-secondary" data-i18n="projects.link2"></a>
+						<!-- itch.io Button -->
 						<a href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank" class="link-primary">
 							<span data-i18n="projects.link1"></span>
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z" fill="#1c1f21" fill-opacity="0.3" data-color="color-2"></path>
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="#1c1f21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+							<!-- logo -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
+								<!-- Path with fill -->
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
+								      fill="currentColor" fill-opacity="0.3"></path>
+								<!-- Path with outline (stroke) -->
+								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
 							</svg>
+						</a>
+						<!-- Details Button -->
+						<a href="projects/zombie-siege.html" class="link-secondary">
+							<span data-i18n="projects.link2"></span>
+							<!-- svg arrow -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 						</a>
 					</div>
 				</div>
+
 			</div>
 
 			<!-- Button -->
 			<div class="about-more">
-				<a href="#" class="hero-bt">
+				<a href="projects.html" class="hero-bt">
 					<span data-i18n="projects.view_all"></span>
 					<!-- svg arrow -->
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>
 		</div>
@@ -263,7 +308,7 @@
 			<a href="contacts.html" class="contact-cta">
 				<span data-i18n="contact.cta"></span>
 				<!-- svg arrow -->
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
 			</a>
 		</div>
 	</section> <!-- END contact -->

@@ -121,4 +121,12 @@
     border-radius: var(--radius);
     transition: var(--transition);
 }
-.contact-cta:hover { opacity: 0.85; transform: translateY(-2px); }
+.contact-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+    color: var(--text);
+
+    .arrow {
+        stroke: var(--text);
+    }
+}

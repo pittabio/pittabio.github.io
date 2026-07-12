@@ -81,6 +81,11 @@
 .hero-bt:hover {
     opacity: 0.85;
     transform: translateY(-2px);
+    color: var(--text);
+
+    .arrow {
+        stroke: var(--text);
+    }
 }
 
 .hero-info {

@@ -100,21 +100,36 @@
     line-height: 2;
 }
 
-.project-links .link-secondary {
+.project-links .link-primary:hover {
     color: var(--text);
+
+    .icon-itch {
+        color: var(--text);
+    }
+}
+
+.project-links .link-secondary {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
     font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    text-transform: uppercase;
+    justify-content: right;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 2;
 }
 
 .project-links .link-secondary:hover {
-    color: var(--accent);
-}
+    color: var(--text);
 
-/* Remove any margins from the SVG if present, just to be safe. */
-.project-links .link-primary svg {
-    display: block; /* Removes extra white space under the image */
+    .arrow {
+        stroke: var(--text);
+    }
 }
 
 @media (max-width: 480px) {
