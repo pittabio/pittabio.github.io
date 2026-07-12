@@ -59,7 +59,21 @@ fetch(`${repoName}/common/header.html`.replace(/\/+/g, '/'))
 
         // # Mobile menu toggle # //
         const toggle = document.getElementById('mobile-toggle');
-        if (toggle) { toggle.addEventListener('click', () => { toggle.classList.toggle('open'); }); }
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (toggle && mobileMenu) {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // Evita che il clic si propaghi
+                toggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+
+            // Chiudi il menu se si clicca fuori
+            document.addEventListener('click', () => {
+                toggle.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            });
+        }
 
         // Change language on page load
         const savedLang = localStorage.getItem('preferredLang') || 'en';
