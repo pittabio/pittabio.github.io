@@ -1,0 +1,59 @@
+﻿{
+  "head_title": "Support My Work · Fabio Pittaccio",
+
+  "support_page": {
+    "tag": "Support & Community",
+    "title": "Support my <em>work!</em>",
+    "subtitle": "If you appreciate what I do and want to help me continue, here's how you can do it. Any help is truly appreciated 💖",
+
+
+    "direct": {
+      "title": "☕ Offer me a coffee",
+      "subtitle": "Direct support for my independent game development"
+    },
+
+    "kofi": {
+      "desc": "Make a one-time donation or become a member to support my projects. It's commission-free and completely flexible.",
+      "button": "Buy me a coffee"
+    },
+
+    "paypal": {
+      "desc": "Donate directly through PayPal. You can use credit or debit cards or your PayPal account.",
+      "button": "Donate via PayPal"
+    },
+
+    "github": {
+      "desc": "Soon you will be able to sponsor me on GitHub. Stay tuned!",
+      "desc_real": "Sponsor me on GitHub. It's a great way to show your appreciation and support my work.",
+      "button": "Coming soon!"
+    },
+
+
+    "mutual": {
+      "title": "🤝 Mutual Support",
+      "subtitle": "You help me, I help you: win-win!"
+    },
+
+    "gitkraken": {
+      "desc": "GitKraken is a powerful Git client. Click below to get 50% off Pro, and help me with a commission.",
+      "button": "Learn more"
+    },
+
+    "ms_rewards": {
+      "desc": "Earn rewards points by searching with Bing. Click my referral link, sign up, and earn bonus points together.",
+      "button": "Learn more"
+    },
+
+    "revolut": {
+      "desc": "Join me and over 75 million other users who love Revolut.",
+      "button": "Learn more"
+    },
+
+
+    "thanks": {
+      "title": "Thank you so much for your <em>support!</em><br>💖",
+      "subtitle": "Every contribution helps me dedicate more time to game development and tools.",
+      "button": "Get in touch"
+    }
+  }
+}
