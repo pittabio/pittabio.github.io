@@ -21,6 +21,7 @@
 
 .social-icon-img {
     display: inline-block;
+    height: 16px;
 
     filter: grayscale(100%) opacity(1);
     transition: var(--transition);
