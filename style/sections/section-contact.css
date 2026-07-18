@@ -91,6 +91,11 @@
     transition: var(--transition);
 
     filter: grayscale(1);
+
+    img {
+        height: 16px;
+        width: 16px;
+    }
 }
 
 .contact-social-link:hover {
