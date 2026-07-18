@@ -89,8 +89,8 @@
         "More projects are on the way! Stay tuned for updates and exciting new content.",
         "In the meantime, feel free to explore my GitHub and GitLab repositories for more in-depth insights."
       ],
-      "github": "GitHub",
-      "gitlab": "GitLab",
+      "github": "GitHub <img src='media/logo/github.png'>",
+      "gitlab": "GitLab <img src='media/logo/gitlab.png'>",
       "about_me": "About me"
     },
 

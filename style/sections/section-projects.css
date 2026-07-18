@@ -83,6 +83,12 @@
     align-items: center;
     gap: 1rem;
     margin-top: auto;
+
+    img {
+        height: 16px;
+        width: 16px;
+        filter: grayscale(1);
+    }
 }
 
 .project-links .link-primary {
