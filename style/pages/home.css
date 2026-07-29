@@ -49,7 +49,7 @@
 
 .hero-image {
     width: 100%;
-    max-width: 480px;
+    max-width: 750px;
     height: 70vh;
     object-fit: cover;
     border-radius: 20px;
