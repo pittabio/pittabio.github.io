@@ -2,7 +2,9 @@
   <dictionary name="project">
     <words>
       <w>Aracne</w>
+      <w>Cubase</w>
       <w>Flipbook</w>
+      <w>Guidonia</w>
       <w>Morioka</w>
       <w>Multistato</w>
       <w>Profilazione</w>
@@ -32,9 +34,14 @@
       <w>Struttura</w>
       <w>Superstiti</w>
       <w>Supporta</w>
+      <w>all'HUD</w>
       <w>all'hud</w>
+      <w>bilanciabile</w>
       <w>collezionabili</w>
       <w>debuggare</w>
+      <w>dell'HUD</w>
+      <w>dell'IA</w>
+      <w>dell'UI</w>
       <w>dell'actor</w>
       <w>dell'environment</w>
       <w>dell'hud</w>
@@ -45,6 +52,7 @@
       <w>immersivo</w>
       <w>instagram</w>
       <w>kofi</w>
+      <w>l'IA</w>
       <w>l'actor</w>
       <w>l'apk</w>
       <w>l'ia</w>
@@ -55,10 +63,12 @@
       <w>parentati</w>
       <w>parentato</w>
       <w>paypal</w>
+      <w>potenziabili</w>
       <w>revolut</w>
       <w>rigiocabilità</w>
       <w>sottomoduli</w>
       <w>spacebar</w>
+      <w>un'IA</w>
       <w>un'ia</w>
       <w>vlerp</w>
     </words>
