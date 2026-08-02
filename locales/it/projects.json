@@ -2,10 +2,9 @@
   "head_title": "Progetti · Fabio Pittaccio",
 
   "projects_page": {
-
     "tag": "Giochi & Esperimenti",
     "title": "Tutti i <em>Progetti</em>",
-    "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
+    "subtitle": "Gameplay Programming · UE5 · C++ · Blueprint",
     "description": [
       "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici — ",
       "dai titoli action-adventure completi ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
@@ -14,9 +13,8 @@
     "games_title": "Giochi",
     "experiments_title": "Esperimenti & Esplorazioni",
     "experiments_desc": [
-      "Progetti sperimentali in cui esploro i sistemi avanzati di Unreal Engine e testo nuove meccaniche.",
-      "Showcase tecnici realizzati per imparare, superare i limiti e approfondire la comprensione di framework complessi",
-      "per lo sviluppo di videogiochi."
+      "Progetti sperimentali in cui esploro i sistemi avanzati di Unreal Engine e la <strong>logica di gameplay</strong>.",
+      "Showcase tecnici focalizzati sull'<strong>architettura delle meccaniche</strong>, decision-making dell'IA e framework complessi."
     ],
 
     "link_details": "Dettagli",
@@ -133,8 +131,8 @@
     "game_shelved": {
       "name": "Project Pyramid",
       "desc": [
-        "Un gioco action-adventure di team ambientato nell'antico Egitto.",
-        "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+        "Un gioco d'azione e avventura sviluppato da un team e ambientato nell'antico Egitto.",
+        "Ho implementato l'intero <strong>sistema AI di gameplay</strong> — percezione stealth, Behavior Tree,",
         "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
         "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
       ]

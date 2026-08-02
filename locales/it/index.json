@@ -2,12 +2,12 @@
   "head_title": "Fabio Pittaccio · Sviluppatore di Videogiochi",
 
   "hero": {
-    "tag": "Sviluppatore Videogiochi · Unreal Engine C++",
+    "tag": "Gameplay Developer · Unreal Engine C++",
     "cta": "Vedi progetti",
     "presentation": [
-      "Sono uno sviluppatore specializzato in <strong>Unreal Engine</strong> con una solida base in C++,",
-      "dedicato alla creazione di esperienze di gioco coinvolgenti.",
-      "Il mio approccio copre l'intero ciclo di sviluppo: dall'<em>ideazione creativa</em> alla <em>pubblicazione finale</em>.",
+      "Sono un <strong>Gameplay Developer</strong> specializzato in <strong>Unreal Engine</strong> con una solida base in C++,",
+      "dedicato alla creazione di meccaniche di gioco coinvolgenti e performanti.",
+      "Il mio approccio copre l'intero ciclo di sviluppo: dall'<em>architettura del gameplay</em> alla <em>pubblicazione finale</em>.",
       "<br><br>",
       "Unisco un'architettura del codice pulita e mantenibile a una costante ricerca dell'ottimizzazione,",
       "colmando il divario tra <em>visione artistica</em> ed <em>eccellenza tecnica</em>.",
@@ -27,7 +27,7 @@
   "about": {
     "title": "Perché scegliere me?",
     "item1": {
-      "title": "UE5 Specialist",
+      "title": "UE5 Gameplay Specialist",
       "desc": "Sviluppo esperienze immersive sfruttando le ultime tecnologie di Unreal Engine 5, dal Blueprint al C++"
     },
     "item2": {

@@ -2,10 +2,9 @@
   "head_title": "Projects · Fabio Pittaccio",
 
   "projects_page": {
-
     "tag": "Games & Experiments",
     "title": "All <em>Projects</em>",
-    "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
+    "subtitle": "Gameplay Programming · UE5 · C++ · Blueprint",
     "description": [
       "A complete overview of my published games and technical experiments — ",
       "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
@@ -14,9 +13,8 @@
     "games_title": "Games",
     "experiments_title": "Experiments & Explorations",
     "experiments_desc": [
-      "Experimental projects where I explore advanced Unreal Engine systems and test new mechanics.",
-      "Technical showcases built for learning, pushing boundaries, and deepening my understanding of complex",
-      "game development frameworks."
+      "Experimental projects where I explore advanced Unreal Engine systems and <strong>gameplay logic</strong>.",
+      "Technical showcases focused on <strong>mechanics architecture</strong>, AI decision-making, and complex frameworks."
     ],
 
     "link_details": "Details",
@@ -133,8 +131,8 @@
     "game_shelved": {
       "name": "Project Pyramid",
       "desc": [
-        "A team action-adventure game set in ancient Egypt.",
-        "I built the full <strong>enemy AI system</strong> — stealth perception, Behavior Tree,",
+        "A team-developed action-adventure game set in ancient Egypt.",
+        "I implemented the <strong>gameplay AI system</strong> — stealth perception, Behavior Tree,",
         "EQS search, Dummy Entity subsystem, and ally coordination.",
         "The team is still actively developing it; my work is currently on hold."
       ]

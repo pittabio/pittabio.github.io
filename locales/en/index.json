@@ -1,13 +1,13 @@
 ﻿{
-  "head_title": "Fabio Pittaccio · Game Developer",
+  "head_title": "Fabio Pittaccio · Gameplay Developer",
 
   "hero": {
-    "tag": "Game Developer · Unreal Engine C++",
+    "tag": "Gameplay Developer · Unreal Engine C++",
     "cta": "View Projects",
     "presentation": [
-      "I am a developer specialized in <strong>Unreal Engine</strong> with a solid foundation in C++,",
-      "dedicated to creating engaging gaming experiences.",
-      "My approach covers the entire development cycle: from <em>creative ideation</em> to <em>final publication</em>.",
+      "I am a <strong>Gameplay Developer</strong> specialized in <strong>Unreal Engine</strong> with a solid foundation in C++,",
+      "dedicated to creating engaging and high-performance gaming mechanics.",
+      "My approach covers the entire development cycle: from <em>gameplay architecture</em> to <em>final publication</em>.",
       "<br><br>",
       "I combine clean and maintainable code architecture with a constant pursuit of optimization,",
       "bridging the gap between <em>artistic vision</em> and <em>technical excellence</em>.",
@@ -27,7 +27,7 @@
   "about": {
     "title": "Why choose me?",
     "item1": {
-      "title": "UE5 Specialist",
+      "title": "UE5 Gameplay Specialist",
       "desc": "I develop immersive experiences using the latest Unreal Engine 5 technologies, from Blueprint to C++"
     },
     "item2": {
