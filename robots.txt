@@ -1,0 +1,14 @@
+﻿# Welcome robot! You can crawl the entire site
+User-agent: *
+Allow: /
+
+# But don't waste your time with these technical folders
+Disallow: /.github/
+Disallow: /.idea/
+Disallow: /_includes/
+Disallow: /favicon/
+Disallow: /scripts/
+Disallow: /style/
+
+# Here's my official map to help you find me better
+Sitemap: https://pittabio.github.io/sitemap.xml
