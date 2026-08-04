@@ -1,4 +1,11 @@
-﻿.cookie-banner {
+﻿@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.cookie-banner {
+    animation: slideIn 0.5s ease-out;
+
     display: none;
     position: fixed !important;
     bottom: 20px;
@@ -6,7 +13,7 @@
     top: auto !important;
 
     width: 300px;
-    max-width: 90%;
+    max-width: 85%;
 
     background: #1a1a1a;
     color: #fff;
@@ -15,7 +22,7 @@
     border: 1px solid #ff4d00;
 
     z-index: 9999999 !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -32,8 +39,12 @@
 .cookie-banner p {
     margin: 0;
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #ccc;
+}
+
+.cookie-banner p + p {
+    margin-top: 8px;
 }
 
 .cookie-banner .buttons button {

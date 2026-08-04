@@ -13,9 +13,9 @@
   },
 
   "cookies": {
-    "title": "Privacy & Analytics",
+    "title": "Privacy & Analytics [GDPR]",
 
-    "desc1": "I use anonymous analytics to understand how visitors interact with my projects.",
+    "desc1": "I use anonymous analytics to understand how visitors interact with my site.",
     "desc2": "No personal data is collected.",
 
     "accept": "Accept",
