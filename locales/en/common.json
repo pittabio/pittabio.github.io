@@ -13,9 +13,12 @@
   },
 
   "cookies": {
-    "title": "Privacy e Analisi",
-    "desc": "Utilizzo analisi anonime per capire come i visitatori interagiscono con i miei progetti. Non viene raccolto alcun dato personale.",
-    "accept": "Accetta",
-    "decline": "Rifiuta"
+    "title": "Privacy & Analytics",
+    "desc": [
+      "I use anonymous analytics to understand how visitors interact with my projects.",
+      "No personal data is collected."
+    ],
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
