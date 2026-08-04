@@ -15,7 +15,7 @@
   "cookies": {
     "title": "Privacy & Analytics",
     "desc": [
-      "I use anonymous analytics to understand how visitors interact with my projects.",
+      "I use anonymous analytics to understand how visitors interact with my projects.<br>",
       "No personal data is collected."
     ],
     "accept": "Accept",
