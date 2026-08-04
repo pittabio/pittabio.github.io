@@ -1,6 +1,17 @@
+# JetBrains WebStorm
+.idea/
+
+# macOS
+.DS_Store
+
+# Jekyll / Windows
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
 # Console
 start-dev.ps1
 
 # Media
 media/games/wizard-scape/gems/square/
-media/og-image/
+media/banner/

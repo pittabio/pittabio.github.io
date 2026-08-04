@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/media/games/wizard-scape/gems/square" />
       <excludeFolder url="file://$MODULE_DIR$/start-dev.ps1" />
+      <excludeFolder url="file://$MODULE_DIR$/media/banner" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
