@@ -31,13 +31,13 @@
             'personalization_storage': status
         };
 
-        // Aggiorna Google Analytics in tempo reale
+        // Update Google Analytics in real time
         gtag('consent', 'update', consentData);
 
-        // Salva la scelta nel browser per non mostrarlo più
+        // Save choice in browser to never show it again
         localStorage.setItem('consentMode', JSON.stringify(consentData));
 
-        // Nascondi il banner
+        // Hide the banner
         document.getElementById('cookie-banner').style.display = 'none';
     }
 </script>

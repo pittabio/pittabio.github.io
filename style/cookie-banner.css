@@ -2,34 +2,34 @@
     display: none;
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    left: 20px;
+
+    transform: none;
+    width: 350px;
     max-width: 400px;
+
     background: #1a1a1a;
     color: #fff;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #ff4d00;
+
     z-index: 10000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     font-family: 'DM Sans', sans-serif;
 }
 
-.cookie-banner .margin
-{
+.cookie-banner .margin {
     margin-bottom: 15px;
 }
 
-.cookie-banner h4
-{
+.cookie-banner h4 {
     margin: 0 0 10px 0;
     color: #ff4d00;
     font-size: 18px;
 }
 
-.cookie-banner p
-{
+.cookie-banner p {
     margin: 0;
     font-size: 13px;
     line-height: 1.5;
@@ -41,7 +41,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
-    transition: background 0.2s; /* Un piccolo tocco di classe */
+    transition: background 0.2s;
 }
 
 .cookie-banner .buttons .denied {
@@ -63,4 +63,14 @@
 
 .cookie-banner .buttons .granted:hover {
     background: #e64500;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+    .cookie-banner {
+        left: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        max-width: none;
+    }
 }

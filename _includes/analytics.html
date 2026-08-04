@@ -1,9 +1,10 @@
-<!-- Default Consent Setting (Advanced Consent Mode) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-40MTQ3CKBB"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
-    // 1. Define the default state as 'denied'
+    // 1. Consent setting (MUST come before 'js' and 'config')
     if (localStorage.getItem('consentMode') === null) {
         gtag('consent', 'default', {
             'ad_storage': 'denied',
@@ -11,17 +12,16 @@
             'personalization_storage': 'denied',
             'ad_user_data': 'denied',
             'ad_signals': 'denied',
-            'wait_for_update': 500 // Wait half a second to see if the user accepts
+            'wait_for_update': 500
         });
     } else {
-        // If the user has already chosen previously, load their choice
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
     }
-</script>
 
-<!-- Loading Google Tags -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-40MTQ3CKBB"></script>
-<script>
+    // 2. Standard initialization (as required by Google)
     gtag('js', new Date());
-    gtag('config', 'G-40MTQ3CKBB', { 'anonymize_ip': true }); // Anonymous IP for greater privacy
+    gtag('config', 'G-40MTQ3CKBB', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+    });
 </script>
