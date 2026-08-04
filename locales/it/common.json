@@ -13,11 +13,11 @@
   },
 
   "cookies": {
-    "title": "Privacy e Analisi",
-    "desc": [
-      "Utilizzo analisi anonime per capire come i visitatori interagiscono con i miei progetti.<br>",
-      "Non viene raccolto alcun dato personale."
-    ],
+    "title": "Privacy ed Analisi",
+
+    "desc1": "Utilizzo analisi anonime per capire come i visitatori interagiscono con i miei progetti.",
+    "desc2": "Non viene raccolto alcun dato personale.",
+
     "accept": "Accetta",
     "decline": "Rifiuta"
   }

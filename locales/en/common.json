@@ -14,10 +14,10 @@
 
   "cookies": {
     "title": "Privacy & Analytics",
-    "desc": [
-      "I use anonymous analytics to understand how visitors interact with my projects.<br>",
-      "No personal data is collected."
-    ],
+
+    "desc1": "I use anonymous analytics to understand how visitors interact with my projects.",
+    "desc2": "No personal data is collected.",
+
     "accept": "Accept",
     "decline": "Decline"
   }
