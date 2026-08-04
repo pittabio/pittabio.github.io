@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="{{ '/style/cookie.css' | relative_url }}">
+
+<div id="cookie-banner" class="cookie-banner">
+    <div class="margin">
+        <h4 data-i18n="cookies.title">Privacy & Analytics</h4>
+        <p data-i18n="cookies.desc">
+            I use anonymous analytics to understand how visitors interact with my projects.
+            No personal data is collected.
+        </p>
+    </div>
+    <div class="buttons">
+        <button class="denied" onclick="updateConsent('denied')" data-i18n="cookies.decline">Decline</button>
+        <button class="granted" onclick="updateConsent('granted')" data-i18n="cookies.accept">Accept</button>
+    </div>
+</div>
+
+<script>
+    // Show the banner only if a choice has not yet been made
+    window.addEventListener('load', function() {
+        if (localStorage.getItem('consentMode') === null) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+    });
+
+    function updateConsent(status) {
+        const consentData = {
+            'ad_storage': status,
+            'analytics_storage': status,
+            'ad_user_data': status,
+            'ad_signals': status,
+            'personalization_storage': status
+        };
+
+        // Aggiorna Google Analytics in tempo reale
+        gtag('consent', 'update', consentData);
+
+        // Salva la scelta nel browser per non mostrarlo più
+        localStorage.setItem('consentMode', JSON.stringify(consentData));
+
+        // Nascondi il banner
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+</script>

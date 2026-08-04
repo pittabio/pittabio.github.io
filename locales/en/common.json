@@ -10,5 +10,12 @@
   "footer": {
     "copyright": "Licensed under CC BY-NC-ND 4.0",
     "back_top": "Back to top"
+  },
+
+  "cookies": {
+    "title": "Privacy e Analisi",
+    "desc": "Utilizzo analisi anonime per capire come i visitatori interagiscono con i miei progetti. Non viene raccolto alcun dato personale.",
+    "accept": "Accetta",
+    "decline": "Rifiuta"
   }
 }
