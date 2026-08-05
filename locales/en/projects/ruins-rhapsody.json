@@ -23,7 +23,7 @@
       "tag": "Mechanics",
       "title": "Immersive Gameplay Features",
       "items": [
-        "<li><strong>Advanced Traversal:</strong> A multi-modal movement system including climbing, ledge navigation, and dynamic sliding.</li>",
+        "<li><strong>Advanced Traversal:</strong> A multi-modal movement system including climbing, ledge navigation, and underwater swimming mechanics.</li>",
         "<li><strong>Environmental Interaction:</strong> Complex puzzle-solving using key-door mechanics and inventory-based triggers.</li>",
         "<li><strong>Tactical Combat:</strong> Encounter diverse AI threats (animals, robots, humans) with modular weapon systems and ammunition management.</li>",
         "<li><strong>Exploration:</strong> Three distinct atmospheric zones: Ancient Temple, a Lake with an Underground Cave, and Open Ruins.</li>"
@@ -57,7 +57,7 @@
     "gallery": {
       "title": "Project Documentation",
 
-      "codemap": {
+      "CodeMap": {
         "title": "Initial System Architecture",
         "desc": "Foundational software map designed during the thesis phase, illustrating core logic and class interactions."
       },

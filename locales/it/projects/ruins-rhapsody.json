@@ -23,10 +23,10 @@
       "tag": "Meccaniche",
       "title": "Caratteristiche del Gameplay",
       "items": [
-        "<li><strong>Movimento Avanzato:</strong> Sistema di movimento multi-modale che include arrampicata, navigazione sulle sporgenze e scivolata dinamica.</li>",
-        "<li><strong>Interazione Ambientale:</strong> Enigmi complessi che utilizzano meccaniche chiave-porta e trigger basati sull'inventario.</li>",
-        "<li><strong>Combattimento Tattico:</strong> Affronta diverse minacce IA (animali, robot, umani) con sistemi di armi modulari e gestione munizioni.</li>",
-        "<li><strong>Esplorazione:</strong> Tre zone distinte: Tempio Antico, un Lago con una Grotta Sotterranea e Rovine all'aperto.</li>"
+        "<li><strong>Movimento avanzato:</strong> Un sistema di movimento multi-modale che include arrampicata, navigazione su sporgenze e meccanica di nuoto subacqueo.</li>",
+        "<li><strong>Interazione ambientale:</strong> Risoluzione di enigmi complessi tramite meccanismi di apertura e chiusura con chiave e trigger basati sull'inventario.</li>",
+        "<li><strong>Combattimento tattico:</strong> Affronta diverse minacce IA (animali, robot, umani) con sistemi d'arma modulari e gestione delle munizioni.</li>",
+        "<li><strong>Esplorazione:</strong> Tre zone atmosferiche distinte: Tempio antico, Lago con grotta sotterranea e Rovine aperte.</li>"
       ]
     },
 
@@ -34,11 +34,11 @@
       "tag": "Tecnica",
       "title": "Architettura Core (C++)",
       "items": [
-        "<li><strong>Logica a Componenti:</strong> Componenti C++ personalizzati per Arrampicata, Nuoto (con resistenza del respiro) e gestione Inventario.</li>",
-        "<li><strong>Level Streaming:</strong> Implementazione di un mondo persistente con sub-level streaming per eliminare i caricamenti e ottimizzare la memoria.</li>",
-        "<li><strong>Sistema di Salvataggio:</strong> Pipeline di serializzazione in C++ che tiene traccia dello stato dei livelli, della posizione del giocatore e dell'inventario.</li>",
-        "<li><strong>Percezione IA:</strong> I nemici utilizzano Sensing Components e Behavior Tree personalizzati per stati di rilevamento e combattimento realistici.</li>",
-        "<li><strong>Collisioni Custom:</strong> Trace Channel ECC specializzati per sparatorie ad alta precisione, rilevamento arrampicata e interazioni con i fluidi.</li>"
+        "<li><strong>Logica basata su componenti:</strong> Componenti C++ personalizzati per l'arrampicata, il nuoto (con resistenza al respiro) e la gestione dell'inventario.</li>",
+        "<li><strong>Streaming dei livelli:</strong> Implementazione di un mondo persistente con streaming dei sottolivelli per eliminare le schermate di caricamento e ottimizzare la memoria.</li>",
+        "<li><strong>Sistema di salvataggio/caricamento:</strong> Una robusta pipeline di serializzazione C++ che tiene traccia degli stati dei sottolivelli, della posizione del giocatore e della persistenza dell'inventario.</li>",
+        "<li><strong>Percezione IA:</strong> I nemici utilizzano componenti di rilevamento e alberi comportamentali personalizzati per un rilevamento realistico e stati di combattimento.</li>",
+        "<li><strong>Collisioni personalizzate:</strong> Canali di tracciamento ECC specializzati per il tiro di alta precisione, il rilevamento dell'arrampicata e interazioni fluide.</li>"
       ]
     },
 
@@ -57,7 +57,7 @@
     "gallery": {
       "title": "Documentazione Progetto",
 
-      "codemap": {
+      "code-map": {
         "title": "Architettura iniziale del sistema",
         "desc": "Mappa software fondamentale progettata durante la fase di tesi, che illustra la logica principale e le interazioni tra le classi.",
 
