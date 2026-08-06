@@ -3,8 +3,6 @@ User-agent: *
 Allow: /
 
 # But don't waste your time with these technical folders
-Disallow: /.github/
-Disallow: /.idea/
 Disallow: /_includes/
 Disallow: /favicon/
 Disallow: /scripts/
