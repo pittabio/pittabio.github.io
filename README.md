@@ -1,6 +1,6 @@
 <p>
   <a href="https://pittabio.github.io">
-    <img src="media/readme-image.png" alt="Fabio Pittaccio Portfolio Banner" style="width: 800px;">
+    <img src="media/banner/readme-image.png" alt="Fabio Pittaccio Portfolio Banner" style="width: 800px;">
   </a>
 </p>
 
