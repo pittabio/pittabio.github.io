@@ -42,138 +42,131 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
     <!-- ## TECHNICAL SKILLS ## -->
     <section class="resume-section" id="skills">
         <div class="section-container">
-
             <h2 class="section-title" data-i18n="about.skills.title"></h2>
 
-            <!-- 4 cards fit cleanly in one row on desktop with the about-grid auto-fit.
-                 Engines + Languages share one card (separated by a .skill-group divider)
-                 to keep the grid balanced and avoid a 4+1 orphaned-card layout. -->
+            <!-- 3 Cards Grid -->
             <div class="about-grid">
 
                 <!-- ## Card 1: Game Engines & Programming Languages ## -->
                 <div class="project-card">
 
-                    <!-- Game Engines group -->
+                    <!-- Engines -->
                     <div class="skill-group">
                         <h3 class="project-name" data-i18n="about.skills.engines_title"></h3>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.engine1_name"></span>
-                            <span class="skill-level advanced"     data-i18n="about.skills.engine1_level"></span>
-                        </div>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.engine2_name"></span>
-                            <span class="skill-level intermediate" data-i18n="about.skills.engine2_level"></span>
-                        </div>
+                        <ul class="skill-list-flex" data-i18n-html="about.skills.engines_items"></ul>
                     </div>
 
-                    <!-- Programming Languages group (visually separated from Engines) -->
+                    <!-- Code Languages -->
                     <div class="skill-group">
                         <h3 class="project-name" data-i18n="about.skills.languages_title"></h3>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.lang1_name"></span>
-                            <span class="skill-level advanced"     data-i18n="about.skills.lang1_level"></span>
-                        </div>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.lang2_name"></span>
-                            <span class="skill-level expert"       data-i18n="about.skills.lang2_level"></span>
-                        </div>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.lang3_name"></span>
-                            <span class="skill-level basic"        data-i18n="about.skills.lang3_level"></span>
-                        </div>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.lang4_name"></span>
-                            <span class="skill-level basic"        data-i18n="about.skills.lang4_level"></span>
-                        </div>
-                        <div class="skill-row">
-                            <span data-i18n="about.skills.lang5_name"></span>
-                            <span class="skill-level basic"        data-i18n="about.skills.lang5_level"></span>
-                        </div>
+                        <ul class="skill-list-flex" data-i18n-html="about.skills.languages_items"></ul>
+                    </div>
+                </div>
+
+                <!-- ## Card 2: Technical Expertise (Gameplay & Git) ## -->
+                <div class="project-card">
+
+                    <!-- Gameplay Programming -->
+                    <div class="skill-group">
+                        <!-- Title -->
+                        <h3 class="project-name" data-i18n="about.skills.spec_title"></h3>
+                        <!-- Diploma -->
+                        <a href="{{ '/media/certificates/RainbowAcademy.jpg' | relative_url }}"
+                           target="_blank" class="skill-link" data-i18n="about.skills.spec_cert_rainbow">
+                        </a>
+                        <!-- Skills list -->
+                        <ul class="skill-list" data-i18n-html="about.skills.spec_items"></ul>
                     </div>
 
-                </div> <!-- END card 1 -->
-
-                <!-- ## Card 2: Version Control ## -->
-                <div class="project-card">
-                    <h3 class="project-name" data-i18n="about.skills.vcs_title"></h3>
-                    <!-- Certification badge -->
-                    <div class="cert-badge">
-                        🏆 <span data-i18n="about.skills.vcs_cert"></span>
+                    <!-- Version Control -->
+                    <div class="skill-group">
+                        <!-- Title -->
+                        <h3 class="project-name" data-i18n="about.skills.vcs_title"></h3>
+                        <!-- GitKraken Certificate -->
+                        <a href="https://learn.gitkraken.com/certificates/06p4apf1rm"
+                           target="_blank" rel="noopener noreferrer" class="skill-link" data-i18n="about.skills.vcs_cert_gitkraken">
+                        </a>
+                        <!-- GitHub Certificate (Future) -->
+                        <a
+                           target="_blank" rel="noopener noreferrer" class="skill-link disabled" data-i18n="about.skills.vcs_cert_github">
+                        </a>
+                        <!-- Git Skills list -->
+                        <ul class="skill-list" data-i18n-html="about.skills.vcs_items"></ul>
                     </div>
-                    <p class="cert-id" data-i18n="about.skills.vcs_cert_id"></p>
-                    <!-- Feature list injected as HTML <li> items from JSON -->
-                    <ul class="skill-list" data-i18n-html="about.skills.vcs_items"></ul>
-                </div> <!-- END card 2 -->
+                </div>
 
-                <!-- ## Card 3: Specializations ## -->
+                <!-- ## Card 3: Production Tools & Languages ## -->
                 <div class="project-card">
-                    <h3 class="project-name" data-i18n="about.skills.spec_title"></h3>
-                    <ul class="skill-list" data-i18n-html="about.skills.spec_items"></ul>
-                </div> <!-- END card 3 -->
 
-                <!-- ## Card 4: Other Software & Tools ## -->
-                <div class="project-card">
-                    <h3 class="project-name" data-i18n="about.skills.tools_title"></h3>
-                    <ul class="skill-list" data-i18n-html="about.skills.tools_items"></ul>
-                </div> <!-- END card 4 -->
+                    <!-- Software Tools -->
+                    <div class="skill-group">
+                        <h3 class="project-name" data-i18n="about.skills.tools_title"></h3>
+                        <ul class="skill-list" data-i18n-html="about.skills.tools_items"></ul>
+                    </div>
 
-            </div> <!-- END about-grid -->
+                    <!-- Other Certificates (English, etc.) -->
+                    <div class="skill-group">
+                        <h3 class="project-name" data-i18n="about.skills.other_certs.title"></h3>
+                        <ul class="skill-list" data-i18n-html="about.skills.other_certs.english"></ul>
+                    </div>
 
+                </div>
+            </div>
         </div>
     </section> <!-- END technical skills -->
 
     <!-- ## EDUCATION & TRAINING ## -->
     <section class="resume-section" id="education">
         <div class="section-container">
-
             <h2 class="section-title" data-i18n="about.education.title"></h2>
 
             <!-- Vertical timeline: newest entry first -->
             <div class="education-timeline">
 
-                <!-- ## Entry 1: Git Certified Specialist (2025) ## -->
+                <!-- ## Entry 1: Git Certified Specialist ## -->
                 <div class="timeline-entry">
-                    <div class="timeline-date"        data-i18n="about.education.item1_date"></div>
-                    <div class="timeline-role"        data-i18n="about.education.item1_role"></div>
+                    <div class="timeline-date" data-i18n="about.education.item1_date"></div>
+                    <div class="timeline-role" data-i18n="about.education.item1_role"></div>
 
-                    <!-- GitKraken Certification -->
+                    <!-- Link alla pagina di verifica ufficiale di GitKraken -->
                     <a href="https://learn.gitkraken.com/certificates/06p4apf1rm" target="_blank" rel="noopener noreferrer" class="view-cert-link">
-                        <span data-i18n="about."></span>
+                        [Verify Certificate]
                     </a>
 
                     <div class="timeline-institution" data-i18n="about.education.item1_institution"></div>
-                    <div class="cert-badge">
-                        🏆 <span data-i18n="about.education.item1_cert"></span>
-                    </div>
                     <ul class="timeline-details" data-i18n-html="about.education.item1_details"></ul>
                 </div>
 
-                <!-- ## Entry 2: Rainbow Academy — Unreal Developer (2023–2024) ## -->
+                <!-- ## Entry 2: Rainbow Academy — Unreal Developer ## -->
                 <div class="timeline-entry">
-                    <div class="timeline-date"        data-i18n="about.education.item2_date"></div>
-                    <div class="timeline-role"        data-i18n="about.education.item2_role"></div>
+                    <div class="timeline-date" data-i18n="about.education.item2_date"></div>
+                    <div class="timeline-role" data-i18n="about.education.item2_role"></div>
+
+                    <a href="{{ '/media/certificates/RainbowAcademy.jpg' | relative_url }}" target="_blank" class="view-cert-link">
+                        [View Diploma]
+                    </a>
+
                     <div class="timeline-institution" data-i18n="about.education.item2_institution"></div>
                     <ul class="timeline-details" data-i18n-html="about.education.item2_details"></ul>
                 </div>
 
-                <!-- ## Entry 3: Audio Technician Certificate (2018–2020) ## -->
+                <!-- ## Entry 3: Audio Technician ## -->
                 <div class="timeline-entry">
-                    <div class="timeline-date"        data-i18n="about.education.item4_date"></div>
-                    <div class="timeline-role"        data-i18n="about.education.item4_role"></div>
+                    <div class="timeline-date" data-i18n="about.education.item4_date"></div>
+                    <div class="timeline-role" data-i18n="about.education.item4_role"></div>
                     <div class="timeline-institution" data-i18n="about.education.item4_institution"></div>
                     <ul class="timeline-details" data-i18n-html="about.education.item4_details"></ul>
                 </div>
 
-                <!-- ## Entry 4: Technical Diploma — Computer Science (2011–2016) ## -->
+                <!-- ## Entry 4: Technical Diploma ## -->
                 <div class="timeline-entry">
-                    <div class="timeline-date"        data-i18n="about.education.item3_date"></div>
-                    <div class="timeline-role"        data-i18n="about.education.item3_role"></div>
+                    <div class="timeline-date" data-i18n="about.education.item3_date"></div>
+                    <div class="timeline-role" data-i18n="about.education.item3_role"></div>
                     <div class="timeline-institution" data-i18n="about.education.item3_institution"></div>
                     <ul class="timeline-details" data-i18n-html="about.education.item3_details"></ul>
                 </div>
 
             </div> <!-- END education-timeline -->
-
         </div>
     </section> <!-- END education -->
 

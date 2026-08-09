@@ -15,53 +15,57 @@
       "title": "Technical Skills",
 
       "engines_title": "Game Engines",
-      "engine1_name": "Unreal Engine 5",
-      "engine1_level": "Advanced",
-      "engine2_name": "Unity",
-      "engine2_level": "Intermediate",
+      "engines_items": [
+        "<li><span>Unreal Engine 5</span> <span class='skill-level advanced'>Advanced</span></li>",
+        "<li><span>Unity</span>           <span class='skill-level intermediate'>Intermediate</span></li>"
+      ],
 
-      "languages_title": "Programming Languages",
-      "lang1_name": "C++",
-      "lang1_level": "Advanced",
-      "lang2_name": "Blueprint Visual Scripting",
-      "lang2_level": "Expert",
-      "lang3_name": "C#",
-      "lang3_level": "Basic",
-      "lang4_name": "Java",
-      "lang4_level": "Basic",
-      "lang5_name": "HTML / CSS / JS",
-      "lang5_level": "Basic",
+      "languages_title": "Languages & Scripting",
+      "languages_items": [
+        "<li><span>C++</span>             <span class='skill-level advanced'>Advanced</span></li>",
+        "<li><span>Blueprint Visual Scripting</span> <span class='skill-level advanced'>Advanced</span></li>",
+        "<li><span>C#</span>              <span class='skill-level intermediate'>Intermediate</span></li>",
+        "<li><span>HTML / CSS / JS</span> <span class='skill-level intermediate'>Intermediate</span></li>",
+        "<li><span>Java</span>            <span class='skill-level basic'>Basic</span></li>"
+      ],
+
+      "spec_title": "Expertise & Systems",
+      "spec_cert_rainbow": "[View Diploma]",
+      "spec_items": [
+        "<li>C++ & Blueprint integration</li>",
+        "<li>Combat and movement mechanics</li>",
+        "<li>AI Systems for NPCs</li>",
+        "<li>Resource management & game economy</li>",
+        "<li>Multi-language localization</li>",
+        "<li>Multi-platform: Windows & Android</li>",
+        "<li>VR and Multiplayer (fundamentals)</li>"
+      ],
 
       "vcs_title": "Version Control",
-      "vcs_cert": "Git Certified Specialist",
-      "vcs_cert_id": "Certificate ID: 06p4apf1rm · GitKraken Learn",
+      "vcs_cert_gitkraken": "[GitKraken Certificate]",
+      "vcs_cert_github": "[GitHub Certificate] (Coming Soon)",
       "vcs_items": [
-        "<li>Repository management &amp; collaboration workflows</li>",
+        "<li>Git Certified Specialist</li>",
+        "<li>Repository management & collaboration workflows</li>",
         "<li>Branching strategies, merging, rebasing</li>",
         "<li>Remote repositories and pull requests</li>",
         "<li>Advanced: hooks, LFS, worktrees, submodules</li>"
       ],
 
-      "spec_title": "Specializations",
-      "spec_items": [
-        "<li>C++ &amp; Blueprint integration</li>",
-        "<li>Combat and movement mechanics</li>",
-        "<li>AI Systems for NPCs</li>",
-        "<li>Resource management &amp; game economy</li>",
-        "<li>Multi-language localization</li>",
-        "<li>Multi-platform: Windows &amp; Android</li>",
-        "<li>VR and Multiplayer (fundamentals)</li>"
-      ],
+      "other_certs": {
+        "title": "Other Certificates",
+        "english": "<li>English: EFSET Profile (Coming Soon)</li>"
+      },
 
-      "tools_title": "Other Software & Tools",
+      "tools_title": "Additional Tools",
       "tools_items": [
         "<li>MetaHuman Creator</li>",
         "<li>Android SDK</li>",
         "<li>JetBrains Rider (IDE)</li>",
         "<li>Blender — 3D Graphics</li>",
-        "<li>Adobe Photoshop &amp; Lightroom</li>",
+        "<li>Adobe Photoshop & Lightroom</li>",
         "<li>DaVinci Resolve — Video editing</li>",
-        "<li>Cubase &amp; Ableton Live — Audio</li>"
+        "<li>Cubase & Ableton Live — Audio</li>"
       ]
     },
 
@@ -71,7 +75,6 @@
       "item1_date": "October 2025",
       "item1_role": "Git Certified Specialist",
       "item1_institution": "GitKraken Learn · Online",
-      "item1_cert": "Certificate ID: 06p4apf1rm",
       "item1_details": [
         "<li>Foundations of Git — Certification Course</li>",
         "<li>Advanced repository management and collaboration workflows</li>",

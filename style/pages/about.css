@@ -29,9 +29,17 @@
     justify-content: flex-start;
 }
 
+
 .skill-group + .skill-group {
     margin-top: 2rem;
     padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+/* Keep the line only between the h3 groups */
+.resume-page-section .project-card .skill-group + .skill-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--border);
 }
 
@@ -39,21 +47,85 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0;
+    /* border-bottom: 1px solid var(--border); */
+    border-bottom: none;
     font-size: 0.9rem;
 }
 .skill-row:last-child { border-bottom: none; }
 
 /* Skill Levels */
 .skill-level {
-    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
-    padding: 0.18rem 0.6rem; border-radius: 20px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.18rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevents the badge from wrapping */
+    letter-spacing: 0.05em;
 }
-.skill-level.expert       { background: rgba(255, 80, 0, 0.18); color: var(--accent); border: 1px solid rgba(255, 80, 0, 0.35); }
-.skill-level.advanced     { background: rgba(255, 80, 0, 0.10); color: var(--accent); border: 1px solid rgba(255, 80, 0, 0.22); }
-.skill-level.intermediate { background: rgba(218, 218, 218, 0.07); color: var(--text); border: 1px solid rgba(218, 218, 218, 0.12); }
-.skill-level.basic        { background: transparent; color: var(--text); opacity: 0.45; border: 1px solid var(--border); }
+.skill-level.advanced {
+    background: rgba(255, 80, 0, 0.1);
+    color: rgb(255, 80, 0);
+    border: 1px solid rgba(255, 80, 0, 0.3);
+}
+.skill-level.intermediate {
+    background: rgba(255, 143, 92, 0.15);
+    color: rgb(255, 143, 92);
+    border: 1px solid rgba(255, 143, 92, 0.3);
+}
+.skill-level.basic {
+    background: rgba(255, 206, 184, 0.15);
+    color: rgb(255, 206, 184);
+    border: 1px solid rgba(255, 206, 184, 0.3);
+}
+
+/* Skill Links */
+.skill-link {
+    display: block; /* Put them on separate wheels */
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: -5px;      /* Brings them closer to the h3 title */
+    margin-bottom: 10px;   /* Space before the list */
+    transition: opacity 0.2s;
+}
+
+.skill-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.skill-link.disabled {
+    color: var(--text);
+    opacity: 0.4;
+    cursor: default;
+    text-decoration: none !important;
+}
+
+/* Flexible list for Engines and Languages (Name on the left, Badge on the right) */
+.skill-list-flex {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list-flex li {
+    display: flex;
+    justify-content: space-between; /* Pushes content to both sides */
+    align-items: center;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    border-bottom: none; /* Niente linee fastidiose */
+}
+
+/* Let's remove the orange dot only for this specific list */
+.skill-list-flex li::before {
+    content: none;
+}
+
 
 /* Education Timeline */
 .education-timeline {
@@ -130,6 +202,7 @@
     left: 0;
     font-weight: bold;
 }
+
 
 @media (max-width: 768px) {
     .resume-page-section { padding: 5rem 1.5rem 0; }
