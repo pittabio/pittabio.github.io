@@ -24,6 +24,7 @@
       "languages_items": [
         "<li><span>C++</span>             <span class='skill-level advanced'>Avanzato</span></li>",
         "<li><span>Blueprint Visual Scripting</span> <span class='skill-level advanced'>Avanzato</span></li>",
+        "<li><span>Verse</span>           <span class='skill-level learning'>Apprendendo</span></li>",
         "<li><span>C#</span>              <span class='skill-level intermediate'>Intermedio</span></li>",
         "<li><span>HTML / CSS / JS</span> <span class='skill-level intermediate'>Intermedio</span></li>",
         "<li><span>Java</span>            <span class='skill-level basic'>Base</span></li>"

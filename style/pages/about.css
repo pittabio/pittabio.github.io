@@ -79,6 +79,12 @@
     color: rgb(255, 206, 184);
     border: 1px solid rgba(255, 206, 184, 0.3);
 }
+.skill-level.learning {
+    background: rgba(163, 52, 0, 0.15);
+    color: rgb(163, 52, 0);
+    border: 1px solid rgba(163, 52, 0, 0.3);
+}
+
 
 /* Skill Links */
 .skill-link {
@@ -88,8 +94,7 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    margin-top: -5px;      /* Brings them closer to the h3 title */
-    margin-bottom: 10px;   /* Space before the list */
+    margin-bottom: 8px;   /* Space before the list */
     transition: opacity 0.2s;
 }
 
@@ -105,6 +110,18 @@
     text-decoration: none !important;
 }
 
+/* Only the link immediately after the H3 title moves up */
+.project-name + .skill-link {
+    margin-top: -12px;
+}
+
+/* If there are two links in a row (e.g., GitKraken + GitHub),
+    the second link must not have negative margins. */
+.skill-link + .skill-link {
+    margin-top: -5px;
+}
+
+
 /* Flexible list for Engines and Languages (Name on the left, Badge on the right) */
 .skill-list-flex {
     list-style: none;
@@ -116,9 +133,10 @@
     display: flex;
     justify-content: space-between; /* Pushes content to both sides */
     align-items: center;
-    padding: 0.4rem 0;
+    padding: 0.25rem 0;
     font-size: 0.9rem;
-    border-bottom: none; /* Niente linee fastidiose */
+    line-height: 1.4; /* Makes text more compact if it goes to a new line */
+    border-bottom: none; /* No annoying lines */
 }
 
 /* Let's remove the orange dot only for this specific list */
