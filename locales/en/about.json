@@ -8,31 +8,41 @@
     "description": [
       "A summary of my key qualifications and technical skills.",
       "For a complete detailed resume with full work history, certifications, and professional references,",
-      "please reach me out through the contacts page."
-    ],
+      "please reach out to me through the contacts page."
+    ]
+  },
 
-    "skills": {
-      "title": "Technical Skills",
+  "skills": {
+    "title": "Technical Skills",
 
-      "engines_title": "Game Engines",
-      "engines_items": [
+    "CARD 1": "CARD 1",
+
+    "engines": {
+      "title": "Game Engines",
+      "items": [
         "<li><span>Unreal Engine 5</span> <span class='skill-level advanced'>Advanced</span></li>",
         "<li><span>Unity</span>           <span class='skill-level intermediate'>Intermediate</span></li>"
-      ],
+      ]
+    },
 
-      "languages_title": "Languages & Scripting",
-      "languages_items": [
+    "languages": {
+      "title": "Languages & Scripting",
+      "items": [
         "<li><span>C++</span>             <span class='skill-level advanced'>Advanced</span></li>",
         "<li><span>Blueprint Visual Scripting</span> <span class='skill-level advanced'>Advanced</span></li>",
         "<li><span>Verse</span>           <span class='skill-level learning'>Learning</span></li>",
         "<li><span>C#</span>              <span class='skill-level intermediate'>Intermediate</span></li>",
         "<li><span>HTML / CSS / JS</span> <span class='skill-level intermediate'>Intermediate</span></li>",
         "<li><span>Java</span>            <span class='skill-level basic'>Basic</span></li>"
-      ],
+      ]
+    },
 
-      "spec_title": "Expertise & Systems",
-      "spec_cert_rainbow": "[View Diploma]",
-      "spec_items": [
+    "CARD 2": "CARD 2",
+
+    "systems": {
+      "title": "Expertise & Systems",
+      "rainbow": "[Rainbow Academy Diploma]",
+      "items": [
         "<li>C++ & Blueprint integration</li>",
         "<li>Combat and movement mechanics</li>",
         "<li>AI Systems for NPCs</li>",
@@ -40,26 +50,27 @@
         "<li>Multi-language localization</li>",
         "<li>Multi-platform: Windows & Android</li>",
         "<li>VR and Multiplayer (fundamentals)</li>"
-      ],
+      ]
+    },
 
-      "vcs_title": "Version Control",
-      "vcs_cert_gitkraken": "[GitKraken Certificate]",
-      "vcs_cert_github": "[GitHub Certificate] (Coming Soon)",
-      "vcs_items": [
+    "git": {
+      "title": "Version Control",
+      "gitkraken": "[GitKraken Certificate]",
+      "github": "[GitHub Certificate] (Coming Soon)",
+      "items": [
         "<li>Git Certified Specialist</li>",
         "<li>Repository management & collaboration workflows</li>",
         "<li>Branching strategies, merging, rebasing</li>",
         "<li>Remote repositories and pull requests</li>",
         "<li>Advanced: hooks, LFS, worktrees, submodules</li>"
-      ],
+      ]
+    },
 
-      "other_certs": {
-        "title": "Other Certificates",
-        "english": "<li>English: EFSET Profile (Coming Soon)</li>"
-      },
+    "CARD 3": "CARD 3",
 
-      "tools_title": "Additional Tools",
-      "tools_items": [
+    "tools": {
+      "title": "Additional Tools",
+      "items": [
         "<li>MetaHuman Creator</li>",
         "<li>Android SDK</li>",
         "<li>JetBrains Rider (IDE)</li>",
@@ -70,23 +81,34 @@
       ]
     },
 
-    "education": {
-      "title": "Education & Training",
+    "other": {
+      "title": "Other Certificates",
+      "items": [
+        "<li>English: EFSET Profile (Coming Soon)</li>"
+      ]
+    }
+  },
 
-      "item1_date": "October 2025",
-      "item1_role": "Git Certified Specialist",
-      "item1_institution": "GitKraken Learn · Online",
-      "item1_details": [
+  "education": {
+    "title": "Education & Training",
+
+    "gitkraken": {
+      "date": "October 2025",
+      "role": "Git Certified Specialist by GitKraken",
+      "institution": "GitKraken Learn · Online",
+      "details": [
         "<li>Foundations of Git — Certification Course</li>",
         "<li>Advanced repository management and collaboration workflows</li>",
         "<li>Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules</li>",
         "<li>Passed the 60-question certification exam</li>"
-      ],
+      ]
+    },
 
-      "item2_date": "2023 – 2024",
-      "item2_role": "Gameplay Developer — Master in Unreal C++",
-      "item2_institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
-      "item2_details": [
+    "rainbow": {
+      "date": "2023 – 2024",
+      "role": "Gameplay Developer — Master in Unreal C++",
+      "institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
+      "details": [
         "<li>Final Grade: <strong>95/100</strong></li>",
         "<li>Module Excellence: <strong>100/100 in C++ Programming</strong></li>",
         "<li>Advanced Blueprint and C++ programming</li>",
@@ -94,22 +116,15 @@
         "<li>AI development for NPCs and gameplay mechanics</li>",
         "<li>Multiplayer and VR mechanics</li>",
         "<li>HUD, SaveGame systems and Audio management</li>"
-      ],
+      ]
+    },
 
-      "item3_date": "2011 – 2016",
-      "item3_role": "Technical Diploma — Computer Science & Telecommunications",
-      "item3_institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
-      "item3_details": [
-        "<li>Intermediate C++ programming</li>",
-        "<li>Extracurricular Arduino course</li>",
-        "<li>Java, SQL and HTML foundations</li>",
-        "<li>Computer systems and telecommunications</li>"
-      ],
-
-      "item4_date": "2018 – 2020",
-      "item4_role": "Audio Technician Certificate",
-      "item4_institution": "Professional Academy for Entertainment · Italy",
-      "item4_details": [
+    "audio": {
+      "date": "2018 – 2020",
+      "role": "Audio Technician Certificate",
+      "institution": "Professional Academy for Entertainment · Italy",
+      "certificate": "[View Certificate]",
+      "details": [
         "<li>Sound propagation and acoustics</li>",
         "<li>Professional use of mixers and audio equipment</li>",
         "<li>Mixing and mastering with Cubase</li>",
@@ -117,15 +132,29 @@
       ]
     },
 
-    "projects": {
-      "label": "Want to see these skills in action?",
-      "button": "View my projects"
-    },
-
-    "cta": {
-      "title": "Need the full <em>resume?</em>",
-      "subtitle": "Contact me for a complete PDF with work history, certifications, and professional references.",
-      "button": "Get in touch"
+    "it": {
+      "date": "2011 – 2016",
+      "role": "Technical Diploma — Computer Science & Telecommunications",
+      "institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
+      "diploma": "[View Diploma]",
+      "details": [
+        "<li>Intermediate C++ programming</li>",
+        "<li>Extracurricular Arduino course</li>",
+        "<li>Java, SQL and HTML foundations</li>",
+        "<li>Computer systems and telecommunications</li>"
+      ]
     }
+  },
+
+  "projects": {
+    "title": "Want to see these skills <em>in action</em>?",
+    "subtitle": "Explore my portfolio to see how I translate technical expertise into engaging gameplay experiences.",
+    "button": "View my projects"
+  },
+
+  "cta": {
+    "title": "Need the full <em>resume</em>?",
+    "subtitle": "Contact me for a complete PDF with work history, certifications, and professional references.",
+    "button": "Get in touch"
   }
 }

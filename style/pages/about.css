@@ -199,6 +199,17 @@
     margin-bottom: 0.5rem;
 }
 
+.timeline-institution {
+    font-style: italic;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-institution + .skill-link {
+    margin-top: -8px;
+}
+
 /* Style for details (the <ul> list) if not already defined */
 .timeline-details {
     list-style: none;
