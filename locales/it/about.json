@@ -149,13 +149,13 @@
 
   "projects": {
     "title": "Vuoi vedere queste abilità <em>in azione</em>?",
-    "subtitle": "Esplora il mio portfolio per vedere come trasformo le competenze tecniche in esperienze di gioco coinvolgenti.",
+    "subtitle": "Scopri come trasformo le competenze tecniche in gameplay coinvolgente",
     "button": "Guarda i miei progetti"
   },
 
   "cta": {
     "title": "Ti serve il <em>curriculum</em> completo?",
-    "subtitle": "Contattami per ricevere il PDF completo con la storia lavorativa, le certificazioni e le referenze professionali.",
+    "subtitle": "Contattami per il PDF con storia lavorativa, certificazioni e referenze",
     "button": "Contattami"
   }
 }

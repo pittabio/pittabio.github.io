@@ -232,9 +232,64 @@
     font-weight: bold;
 }
 
+/* --- FINAL ACTIONS GRID --- */
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea due colonne uguali */
+    gap: 3rem;                     /* Spazio tra le colonne */
+    align-items: start;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Ridimensionamento titoli per la griglia */
+.actions-grid .contact-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 1rem;
+}
+
+.actions-grid .contact-subtitle {
+    margin-bottom: 2rem;
+    max-width: 400px; /* Evita che le righe di testo diventino troppo lunghe */
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 992px) {
+    .actions-grid {
+        gap: 2rem;
+    }
+}
 
 @media (max-width: 768px) {
-    .resume-page-section { padding: 5rem 1.5rem 0; }
-    .education-timeline { padding-left: 1.2rem; }
-    .timeline-entry::before { left: -1.58rem; }
+    .actions-grid {
+        grid-template-columns: 1fr; /* Torna a una colonna su tablet e mobile */
+        gap: 5rem;                 /* Aumenta lo spazio verticale tra i blocchi quando impilati */
+    }
+
+    .actions-grid .action-item:first-child {
+        padding-bottom: 4rem;
+        border-bottom: 1px solid var(--border); /* Opzionale: aggiunge una linea di separazione su mobile */
+    }
+
+    .resume-page-section {
+        padding: 5rem 1.5rem 0;
+    }
+
+    .education-timeline {
+        padding-left: 1.2rem;
+    }
+
+    .timeline-entry::before {
+        left: -1.58rem;
+    }
 }

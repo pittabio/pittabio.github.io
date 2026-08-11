@@ -148,13 +148,13 @@
 
   "projects": {
     "title": "Want to see these skills <em>in action</em>?",
-    "subtitle": "Explore my portfolio to see how I translate technical expertise into engaging gameplay experiences.",
+    "subtitle": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
     "button": "View my projects"
   },
 
   "cta": {
     "title": "Need the full <em>resume</em>?",
-    "subtitle": "Contact me for a complete PDF with work history, certifications, and professional references.",
+    "subtitle": "Reach out for a full PDF resume including work history, certifications, and references",
     "button": "Get in touch"
   }
 }

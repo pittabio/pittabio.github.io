@@ -184,31 +184,34 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
         </div>
     </section> <!-- END education -->
 
-    <!-- ## PROJECTS ## -->
+    <!-- ## FINAL ACTIONS (Projects & Resume) ## -->
     <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"   data-i18n-html="projects.title"></h2>
-            <p  class="contact-subtitle" data-i18n="projects.subtitle"></p>
-            <a href="contacts.html" class="contact-cta">
-                <span data-i18n="projects.button"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </section> <!-- END Projects -->
+        <div class="section-container">
+            <div class="actions-grid">
 
-    <!-- ## CTA ## -->
-    <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"   data-i18n-html="cta.title"></h2>
-            <p  class="contact-subtitle" data-i18n="cta.subtitle"></p>
-            <a href="contacts.html" class="contact-cta">
-                <span data-i18n="cta.button"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
+                <!-- Column 1: Projects -->
+                <div class="action-item">
+                    <h2 class="contact-title" data-i18n-html="projects.title"></h2>
+                    <p class="contact-subtitle" data-i18n="projects.subtitle"></p>
+                    <a href="{{ '/projects.html' | relative_url }}" class="contact-cta">
+                        <span data-i18n="projects.button"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Column 2: CTA (Resume) -->
+                <div class="action-item">
+                    <h2 class="contact-title" data-i18n-html="cta.title"></h2>
+                    <p class="contact-subtitle" data-i18n="cta.subtitle"></p>
+                    <a href="{{ '/contacts.html' | relative_url }}" class="contact-cta">
+                        <span data-i18n="cta.button"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+            </div>
         </div>
-    </section> <!-- END CTA -->
+    </section>
 
 </main>
 
