@@ -1,0 +1,40 @@
+﻿.error-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative; /* Aggiunto: serve per ancorare il 404 assoluto */
+}
+
+.error-code {
+    font-size: clamp(5rem, 25vw, 15rem); /* Leggermente più grande per impatto */
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    opacity: 0.1; /* Ridotta opacità per non disturbare la lettura dei testi sopra */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none; /* Evita che il numero "intercetti" i click */
+}
+
+/* Stile per il paragrafo di testo */
+.error-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Contenitore del bottone */
+.error-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

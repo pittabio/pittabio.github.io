@@ -1,0 +1,47 @@
+﻿---
+permalink: /404.html
+title: "404 · Page Not Found · Fabio Pittaccio"
+description: "The requested page was not found. Return to the main level of Fabio Pittaccio's Gameplay Developer portfolio."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="head_title">{{ page.title }}</title>
+    {% include favicon.html %}
+
+    <link rel="stylesheet" href="{{ '/style/core.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/style/pages/home.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/style/404.css' | relative_url }}">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="page-content">
+    <div class="error-container">
+        <!-- Il numero 404 grande sullo sfondo -->
+        <div class="error-code">404</div>
+
+        <span class="hero-tag">Error</span>
+        <h1 class="contact-title" data-i18n="404.title">Quest Failed!</h1>
+
+        <!-- Messaggio descrittivo -->
+        <p class="error-subtitle" data-i18n="404.subtitle">
+            The page you are looking for has been moved to another level or deleted.
+        </p>
+
+        <!-- Contenitore del bottone (Azioni) -->
+        <div class="error-actions">
+            <a href="{{ '/' | relative_url }}" class="hero-bt">
+                <span data-i18n="404.button">Return to Checkpoint</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div id="footer"></div>
+<script src="{{ '/scripts/main.js' | relative_url }}"></script>
+</body>
+</html>
