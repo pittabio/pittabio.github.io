@@ -11,8 +11,8 @@
 
 /* Style for the image in the error container */
 .error-container img {
-    height: 128px;
-    width: 128px;
+    height: 32px;
+    width: 32px;
 }
 
 .error-code {

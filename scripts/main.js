@@ -96,10 +96,15 @@ fetch(`${repoName}/common/footer.html`.replace(/\/+/g, '/'))
     .catch(error => console.error("ERROR loading footer:", error));
 
 // -- LANGUAGE ENGINE -- //
+window.forcedPageName = undefined;
+
 async function changeLanguage(lang) {
     try {
         let path = window.location.pathname;
-        let cleanPath = path.replace('.html', '');
+
+        // If a global variable 'forcedPageName' exists, use that instead of the URL path.
+        let cleanPath = window.forcedPageName || path.replace('.html', '');
+
         if (cleanPath === "" || cleanPath === "/" || cleanPath.endsWith('/')) {
             cleanPath += "index";
         }
