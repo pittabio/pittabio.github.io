@@ -135,6 +135,14 @@ async function changeLanguage(lang) {
     }
 }
 
+// -- FOOTER -- //
+fetch(`${repoName}/common/footer.html`)
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => console.error("ERROR loading footer:", error));
+
 // -- SCROLL INDICATOR -- //
 window.addEventListener('scroll', () => {
     const scrollIndicator = document.querySelector('.scroll-indicator');
