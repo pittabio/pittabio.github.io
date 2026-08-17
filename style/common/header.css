@@ -1,115 +1,211 @@
-.site-header {
+@property --header-h {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 65px;
+}
+
+:root {
+    --header-h: 65px;
+    --header-h-scroll: 45px;
+}
+
+header {
+    /* Style */
+    background: var(--bg);
+    height: var(--header-h);
+    border-bottom: 1px solid var(--border);
+
+    /* Layout */
     position: fixed;
     top: 0; left: 0; right: 0;
-    height: var(--height);
+    z-index: 1000;
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    background: var(--bg);
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
-    border-bottom: 1px solid var(--border);
+
+    /* Scroll animation */
+    animation: header-shrink ease-in-out forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+
+    /* Title */
+    & span {
+        color: var(--text);
+        font-family: var(--font-playfair), serif;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+
+        & b {
+            color: var(--accent);
+        }
+    }
+
+    /* Menu */
+    & nav {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-left: auto;
+    }
+}
+
+/* Animation Keyframes for scrolling */
+@keyframes header-shrink {
+    to {
+        --header-h: var(--header-h-scroll);
+        box-shadow: 0 5px 20px var(--shadow);
+    }
+}
+
+/* Language Switcher */
+.lang-switcher {
+    background: var(--bgbt);
+    border: 1px solid var(--border);
+    border-radius: var(--rad-sml);
+
+    display: flex;
+    padding: 3px;
+    margin-right: 0.75rem;
+
+    & .lang-btn {
+        color: var(--text);
+        transition: var(--transition);
+        border-radius: var(--rad-sml);
+
+        font-family: var(--font-playfair), serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.25rem 0.6rem;
+
+
+        &.active {
+            color: var(--bg);
+            background: var(--accent);
+        }
+
+        &:not(.active):hover {
+            color: var(--bg);
+            background: var(--hovered);
+        }
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.15rem;
+
+    & a {
+        color: var(--text);
+        border-radius: var(--rad-sml);
+
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        padding: 0.45rem 0.85rem;
+
+        &.active,
+        &:hover {
+            color: var(--accent);
+            background: var(--bgbt);
+        }
+    }
+}
+
+/* == MOBILE == */
+
+.hamburger {
+    display: none; /* Hidden on desktop by default */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
     z-index: 1000;
-    transition: height var(--transition), box-shadow var(--transition), background var(--transition);
+
+    & span {
+        width: 22px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* The cross animation */
+    &.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    &.open span:nth-child(2) { opacity: 0; }
+    &.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
-
-.site-header.scrolled {
-    height: calc(var(--height) - 20px);
-    box-shadow: var(--shadow);
-}
-
-.site-name { font-family: var(--font-playfair), serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.1em; color: var(--text); text-decoration: none; }
-.site-point { color: var(--accent); }
-
-.site-nav { display: flex; align-items: center; gap: 0.25rem; margin-left: auto; }
-.nav-link {
-    font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text);
-    padding: 0.45rem 0.85rem; border-radius: var(--radius); text-decoration: none;
-}
-.nav-link:hover, .nav-link.active { color: var(--accent); background: var(--bgbt); }
-
-.lang-switcher { display: flex; background: var(--bgbt); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px; margin-right: 0.75rem; }
-.lang-btn {
-    font-family: var(--font-playfair), serif; font-size: 0.75rem; font-weight: 700;
-    color: var(--text); background: transparent; border: none; cursor: pointer;
-    padding: 0.25rem 0.6rem; border-radius: calc(var(--radius) - 3px);
-}
-.lang-btn.active { color: var(--bg); background: var(--accent); }
-.lang-btn:not(.active):hover { color: var(--bg); background: var(--hovered); }
-
-
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-.hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: var(--transition); }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.mobile-nav {
-    display: none; position: fixed; top: var(--height); left: 0; right: 0;
-    background: var(--bg); border-bottom: 1px solid var(--border);
-    padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0.5rem;
-    animation: slideDown 0.2s ease; z-index: 999;
-}
-.mobile-nav.open { display: flex; }
-
-@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 768px) {
-    .site-nav {
-        display: none; /* Hides the horizontal navigation */
+    header {
+        justify-content: space-between;
     }
 
     .hamburger {
-        display: flex; /* Mostra l'hamburger */
+        display: flex; /* Show the hamburger on mobile */
         margin-left: auto;
     }
 
-    .mobile-nav {
-        display: none; /* Hidden by default */
-        position: absolute; /* It attaches to the header */
-        top: 100%; /* It appears exactly below the bar */
-        left: 0;
-        right: 0;
+    nav#main-menu {
         background: var(--bg);
-        flex-direction: column; /* Links go in columns */
-        padding: 1rem 0;
         border-bottom: 1px solid var(--border);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-    }
+        box-shadow: 0 10px 15px var(--shadow);
 
-    /* When it has the .open class, it is shown */
-    .mobile-nav.open {
-        display: flex;
-    }
+        display: none; /* Hide the main menu on mobile */
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
 
-    .mobile-nav .nav-link {
-        padding: 1rem 2rem;
-        width: 100%;
-        border-bottom: 1px solid var(--border);
-        border-radius: 0; /* Let's remove the radius for the list menu */
-    }
+        animation: slideDown 0.3s forwards;
 
-    .lang-switcher-mobile {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.03); /* Un leggero stacco visivo */
-        border-bottom: 1px solid var(--border);
-    }
+        &.open {
+            display: flex; /* Show the main menu when the hamburger is clicked */
+        }
 
-    .lang-switcher-mobile .lang-btn {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        cursor: pointer;
-        color: var(--text);
-    }
+        & .nav-links {
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
 
-    .lang-switcher-mobile .lang-btn.active {
-        background: var(--accent);
-        color: var(--bg);
-        border-color: var(--accent);
+            & a {
+                width: 100%;
+                text-align: center;
+                padding: 1.2rem;
+                border-bottom: 1px solid var(--border);
+                border-radius: 0;
+
+                &:hover {
+                    background: var(--bgbt);
+                }
+            }
+        }
+
+        & .lang-switcher {
+            margin: 1rem 2rem;
+            justify-content: center; /* Centriamolo */
+        }
+    }
+}
+
+/* Animation Keyframes for sliding down the mobile menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
