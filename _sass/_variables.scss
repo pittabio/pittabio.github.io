@@ -1,8 +1,10 @@
 :root {
     /* Colors */
     --bg: #1E1E1E;
+    --bg-alt: #252525;
     --bgbt: #333333;
     --text: #DADADA;
+    --text-muted: #A0A0A0;
     --accent: #FF3300;
     --hovered: #A03200;
 
@@ -10,9 +12,16 @@
     --font-playfair: 'Playfair Display', serif;
     --font-sans: 'DM Sans', sans-serif;
 
+    /* Layout & Spacing */
+    --container-width: 1200px;
+    --section-padding: 5rem 2rem;
+
     /* Buttons */
     --border: rgba(255, 255, 255, 0.07);
-
-    --transition: all 0.3s ease;
+    /*
+    --rad-sml: 6px;
+    --rad-big: 12px;
+     */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow: rgba(0, 0, 0, 0.35);
 }

@@ -6,6 +6,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -17,32 +19,61 @@ body {
     overflow-x: hidden;
 }
 
-/* Responsive Image Utilities */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Layout Container Utility */
+.section-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
 }
 
-h1, h2, h3 {
+/* Typography */
+h1, h2, h3, h4 {
     font-family: var(--font-playfair), serif;
 }
 
 a {
-    color: var(--accent);
+    color: inherit;
     text-decoration: none;
     transition: var(--transition);
 
     &:hover {
-        text-decoration: underline;
-        color: var(--hovered);
+        color: var(--accent);
     }
 }
 
-.page-content {
-    min-height: 100vh;
+/* Section Titles */
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+    text-align: center;
+
+    // Underline
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+        margin: 1rem auto 0;
+    }
 }
 
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--rad-sml);
+}
+
+/* Text Selection */
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+/* Accessibility */
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
