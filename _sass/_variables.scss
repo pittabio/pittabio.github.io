@@ -16,12 +16,13 @@
     --container-width: 1200px;
     --section-padding: 5rem 2rem;
 
-    /* Buttons */
+    /* Design Tokens */
     --border: rgba(255, 255, 255, 0.07);
-    /*
-    --rad-sml: 6px;
-    --rad-big: 12px;
-     */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow: rgba(0, 0, 0, 0.35);
+
+    /* Design Tokens - Radii */
+    --rad-sml: 6px;
+    --rad-big: 12px;
+    --rad-img: 16px;
 }

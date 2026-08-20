@@ -1,4 +1,4 @@
-﻿---
+---
 ---
 
 /* ## FONTS & ICONS ## */
@@ -8,18 +8,26 @@
 /* ## LOCALS ## */
 @import "variables";
 @import "base";
-@import "common/header";
-@import "common/footer";
-@import "common/overlay";
-@import "common/cookie-banner";
+@import "icons";
+
+/* ## COMMON ## */
 @import "common/buttons";
+@import "common/footer";
+@import "common/header";
+@import "common/overlay";
 
 /* ## SECTIONS ## */
+@import "sections/about";
+@import "sections/contact";
+@import "sections/projects";
+
+/* ## PAGES ## */
+@import "pages/about";
+@import "pages/contacts";
 @import "pages/home";
-@import "sections/section-about";
-@import "sections/section-projects";
-@import "sections/section-contact";
+@import "pages/project";
+@import "pages/support";
 
 /* ## EXTRA ## */
-@import "extra/cookie-banner";
+@import "extra/cookies";
 @import "extra/404";
