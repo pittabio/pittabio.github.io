@@ -1,5 +1,9 @@
-title: "Fabio Pittaccio - Portfolio"
+title: "Fabio Pittaccio · Portfolio"
+author: "Fabio Pittaccio"
 url: "https://pittabio.github.io"
 baseurl: ""
 encoding: utf-8
 include: [".well-known"]
+sass:
+    sass_dir: _sass
+    style: compressed

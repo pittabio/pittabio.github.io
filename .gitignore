@@ -1,5 +1,6 @@
 # JetBrains WebStorm
 .idea/
+qodana.yaml
 
 # macOS
 .DS_Store
@@ -9,8 +10,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Console
-start-dev.ps1
+# Internal
+*.ps1
+TODO.md
 
 # Media
 media/games/wizard-scape/gems/square/
