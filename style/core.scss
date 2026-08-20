@@ -1,0 +1,25 @@
+﻿---
+---
+
+/* ## FONTS & ICONS ## */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+/* ## LOCALS ## */
+@import "variables";
+@import "base";
+@import "common/header";
+@import "common/footer";
+@import "common/overlay";
+@import "common/cookie-banner";
+@import "common/buttons";
+
+/* ## SECTIONS ## */
+@import "pages/home";
+@import "sections/section-about";
+@import "sections/section-projects";
+@import "sections/section-contact";
+
+/* ## EXTRA ## */
+@import "extra/cookie-banner";
+@import "extra/404";

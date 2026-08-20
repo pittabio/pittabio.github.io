@@ -32,10 +32,11 @@ a {
     color: var(--accent);
     text-decoration: none;
     transition: var(--transition);
-}
 
-a:hover {
-    color: var(--hovered);
+    &:hover {
+        text-decoration: underline;
+        color: var(--hovered);
+    }
 }
 
 .page-content {

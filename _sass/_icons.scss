@@ -9,6 +9,7 @@
     stroke-linejoin: round;
 
     transition: var(--transition);
+    color: var(--text);
 }
 
 .itch-icon {
@@ -25,8 +26,4 @@
 
     filter: grayscale(100%) opacity(1);
     transition: var(--transition);
-}
-
-.resume-link:hover .social-icon-img {
-    filter: grayscale(0%) opacity(1);
 }
