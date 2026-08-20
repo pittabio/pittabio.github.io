@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    {% include head/favicon.html %}
+    {% include head/seo.html %}
+    {% include head/analytics.html %}
+
+    <!-- The page title -->
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- Preconnect to speed up font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/style/core.css' | relative_url }}">
+</head>
+
+<body class="page-{{ page.title | slugify }}">
+    <!-- Header -->
+    {% include common/header.html %}
+
+    <!-- Page Container -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    {% include common/footer.html %}
+    {% include common/cookies.html %}
+
+    <!-- Scripts -->
+    <script src="{{ '/scripts/main.js' | relative_url }}"></script>
+    <script src="{{ '/scripts/images.js' | relative_url }}"></script>
+</body>
+</html>

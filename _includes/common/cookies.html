@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Cookie Banner · Fabio Pittaccio"
+description: "The banner to accept or decline cookies (Analytics only)."
+---
+
+<script src="{{ '/scripts/cookie-banner.js' | relative_url }}"></script>
+
+<div id="cookie-banner" class="cookie-banner">
+    <!-- Title -->
+    <h4 data-i18n="cookies.title">Privacy & Analytics</h4>
+
+    <!-- Description -->
+    <p data-i18n="cookies.desc1">
+        I use anonymous analytics to understand how visitors interact with my projects.
+    </p>
+    <p data-i18n="cookies.desc2">
+        No personal data is collected.
+    </p>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="denied"  onclick="updateConsent('denied')"  data-i18n="cookies.decline"></button>
+        <button class="granted" onclick="updateConsent('granted')" data-i18n="cookies.accept"> </button>
+    </div>
+</div>
