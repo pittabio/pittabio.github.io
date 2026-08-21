@@ -1,33 +1,17 @@
 ---
 ---
 
+/* ## LOCALS ## */
+@use "variables" as *;
+@use "base" as *;
+@use "icons" as *;
+
+/* ## IMPORTS ## */
+@use "common" as *; // Common Folder
+@use "sections" as *; // Sections Folder
+@use "pages" as *; // Pages Folder
+@use "extra" as *; // Extra Folder
+
 /* ## FONTS & ICONS ## */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
-
-/* ## LOCALS ## */
-@import "variables";
-@import "base";
-@import "icons";
-
-/* ## COMMON ## */
-@import "common/buttons";
-@import "common/footer";
-@import "common/header";
-@import "common/overlay";
-
-/* ## SECTIONS ## */
-@import "sections/about";
-@import "sections/contact";
-@import "sections/projects";
-
-/* ## PAGES ## */
-@import "pages/about";
-@import "pages/contacts";
-@import "pages/home";
-@import "pages/project";
-@import "pages/support";
-
-/* ## EXTRA ## */
-@import "extra/cookies";
-@import "extra/404";

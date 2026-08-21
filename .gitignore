@@ -9,6 +9,7 @@ qodana.yaml
 _site/
 .jekyll-cache/
 .jekyll-metadata
+.editorconfig
 
 # Internal
 *.ps1
