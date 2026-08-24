@@ -1,6 +1,6 @@
 /* STANDARD BUTTON */
 button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
-    // # Custom variables
+    // # Custom Properties
     --btn-bg: var(--accent);
     --btn-color: var(--bg);
     --btn-padding: 0.6rem 1.2rem;
@@ -8,7 +8,7 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
     --fnt-weight: 700;
     --btn-radius: var(--rad-sml);
 
-    // Apply custom variables
+    // Apply Custom Properties
     background: var(--btn-bg);
     color: var(--btn-color);
     padding: var(--btn-padding);
@@ -30,29 +30,38 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
     text-transform: uppercase;
     text-decoration: none;
 
-    // It's an `<a>` (link button)
-    & {
-        @at-root a#{&} {
-            --btn-bg: transparent;
-            --btn-color: var(--text);
-            --btn-padding: 0.45rem 0.85rem;
-
-            &.active, &:hover {
-                --btn-bg: var(--bgbt);
-                --btn-color: var(--accent);
-            }
-        }
-    }
-
     // When hovered
     &:hover {
         --btn-bg: var(--hovered);
         --btn-color: var(--text);
+        color: var(--btn-color);
 
         // There are images or icons
         & img, & svg {
             filter: brightness(.5) invert(1);
             stroke: var(--bg);
+        }
+    }
+
+    // Base styles
+    & {
+        // It's an `<a>` (link button)
+        @at-root a#{&} {
+            --btn-bg: transparent;
+            --btn-color: var(--text);
+            --btn-padding: 0.45rem 0.85rem;
+
+            &:hover {
+                --btn-bg: var(--bg-alt);
+                --btn-color: var(--hovered);
+                color: var(--btn-color);
+            }
+
+            &.active {
+                --btn-bg: var(--bgbt);
+                --btn-color: var(--accent);
+                color: var(--btn-color);
+            }
         }
     }
 
@@ -78,7 +87,7 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
 
     // Language
     &.lang {
-        --btn-bg: var(--bgbt);
+        --btn-bg: transparent;
         --btn-color: var(--text);
         --btn-padding: 0.25rem 0.6rem;
 
@@ -91,8 +100,8 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
         }
 
         &:hover:not(.active) {
-            --btn-bg: var(--bgbt);
-            --btn-color: var(--accent);
+            --btn-bg: var(--hovered);
+            --btn-color: var(--text-muted);
         }
     }
 }

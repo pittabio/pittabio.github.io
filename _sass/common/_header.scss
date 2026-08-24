@@ -1,0 +1,163 @@
+@property --hedr-h {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 65px;
+}
+
+// # Custom Properties
+:root {
+    --hedr-h: 65px;
+    --hedr-h-scr: 45px;
+}
+
+/* HEADER */
+header {
+    // Container
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+
+    // Layout
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--hedr-h);
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+
+    // Scroll animation
+    animation: header-shrink ease-in-out forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 300px;
+
+    // # Left: Title
+    & > span {
+        font-family: var(--font-playfair), serif;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        color: var(--text);
+
+        & b { color: var(--accent); }
+    }
+
+    // # Right: Navigation Links
+    & nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        // Language Switcher
+        & .lang-switcher {
+            display: flex;
+            gap: 0.25rem;
+            padding: 3px;
+            background: var(--bgbt);
+            border: 1px solid var(--border);
+            border-radius: var(--rad-sml);
+        }
+
+        // Navigation Links
+        & .links-wrapper {
+            display: flex;
+            gap: 0.15rem;
+        }
+    }
+
+    // Mobile Menu Hamburger
+    & .hamburger {
+        display: none; /* Hidden on desktop by default */
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        --hedr-padding: 6px;
+        cursor: pointer;
+        z-index: 1000;
+
+        & span {
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        // The cross animation opening the hamburger menu
+        &.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        &.open span:nth-child(2) { opacity: 0; }
+        &.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+}
+
+
+// Animation Keyframes for scrolling
+@keyframes header-shrink {
+    to {
+        --hedr-h: var(--hedr-h-scr);
+        box-shadow: 0 5px 20px var(--shadow);
+    }
+}
+
+// Animation Keyframes for sliding down the mobile menu
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+// MOBILE MEDIA QUERY
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+
+        & .hamburger {
+            display: flex; /* Show the hamburger on mobile */
+        }
+
+        & nav {
+            display: none; /* Hide the main menu on mobile */
+
+            // Position
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+
+            // List Layout
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+
+            // Open the hamburger menu
+            &.open {
+                display: flex;
+                animation: slideDown 0.3s forwards;
+            }
+
+            // Language Switcher
+            & .lang-switcher {
+                margin: 0;
+                align-self: center;
+            }
+
+            // Navigation Links
+            & .links-wrapper {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+
+                & a {
+                    width: 100%;
+                    text-align: center;
+                    padding: 1.2rem;
+                    border-bottom: 1px solid var(--border);
+                    border-radius: 0;
+
+                    &:last-child { border-bottom: none; }
+                }
+            }
+        }
+    }
+}
