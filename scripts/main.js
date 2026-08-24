@@ -6,69 +6,51 @@ let repoName = isGitHubPages ? '' : '';
 const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
 
 // -- HEADER -- //
-fetch(`${repoName}/common/header.html`)
-    .then(response => response.text())
-    .then(data => {
-        const headerEl = document.getElementById('header');
-        headerEl.innerHTML = data;
+function initHeader() {
+    // 1. Active link in the navbar
+    document.querySelectorAll('nav a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('http')) return;
 
-        // 1. Active Link and Path Management
-        document.querySelectorAll('nav a').forEach(link => {
-            let href = link.getAttribute('href');
-            if (!href || href.startsWith('#') || href.startsWith('http')) return;
+        const linkPage = href.split('/').pop().replace('.html', '') || 'index';
+        if (linkPage === pageName) {
+            link.classList.add('active');
+        }
+    });
 
-            // Cleaning the href to remove the leading slash
-            const cleanHref = href.startsWith('/') ? href.slice(1) : href;
-            link.setAttribute('href', `${repoName}/${cleanHref}`.replace(/\/+/g, '/'));
+    // 2. Listener Language Buttons
+    document.querySelectorAll('.lang').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = btn.getAttribute('data-lang');
+            if (selectedLang) changeLanguage(selectedLang).then(() => {});
+        });
+    });
 
-            // If the link matches the current page, add active class
-            const linkPage = cleanHref.replace('.html', '');
-            if (linkPage === pageName || (linkPage === 'index' && pageName === 'index')) {
-                link.classList.add('active');
-            }
+    // 3. Toggle Menu Mobile
+    const toggle = document.getElementById('mobile-toggle');
+    const mainMenu = document.getElementById('main-menu');
+
+    if (toggle && mainMenu) {
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggle.classList.toggle('open');
+            mainMenu.classList.toggle('open');
         });
 
-        // 2. Language button management
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Gets the language from the data-lang attribute or from the ID
-                const selectedLang = btn.getAttribute('data-lang');
-                if (selectedLang) changeLanguage(selectedLang).then(() => {});
-            });
+        document.addEventListener('click', () => {
+            toggle.classList.remove('open');
+            mainMenu.classList.remove('open');
         });
 
-        // 3. Mobile menu toggle
-        const toggle = document.getElementById('mobile-toggle');
-        const mainMenu = document.getElementById('main-menu');
-
-        if (toggle && mainMenu) {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggle.classList.toggle('open');
-                mainMenu.classList.toggle('open');
-            });
-
-            // Close menu if clicked outside
-            document.addEventListener('click', () => {
+        mainMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
                 toggle.classList.remove('open');
                 mainMenu.classList.remove('open');
             });
-
-            // Close the menu if you click on a link
-            mainMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    toggle.classList.remove('open');
-                    mainMenu.classList.remove('open');
-                });
-            });
-        }
-
-        // Load saved language or default 'en'
-        const savedLang = localStorage.getItem('preferredLang') || 'en';
-        changeLanguage(savedLang).then(() => {});
-    })
-    .catch(error => console.error('ERROR loading header: ', error));
+        });
+    }
+}
 
 // -- LANGUAGE ENGINE -- //
 async function changeLanguage(lang) {
@@ -121,7 +103,7 @@ async function changeLanguage(lang) {
         });
 
         // 5. Update the state of the language buttons (syncs Desktop and Mobile)
-        document.querySelectorAll('.lang-btn').forEach(btn => {
+        document.querySelectorAll('.lang').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
 
@@ -135,13 +117,14 @@ async function changeLanguage(lang) {
     }
 }
 
-// -- FOOTER -- //
-fetch(`${repoName}/common/footer.html`)
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer').innerHTML = data;
-    })
-    .catch(error => console.error("ERROR loading footer:", error));
+// -- LOADING INIT -- //
+document.addEventListener('DOMContentLoaded', () => {
+    initHeader();
+
+    // Carica lingua salvata o default
+    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    changeLanguage(savedLang).then(() => {});
+});
 
 // -- SCROLL INDICATOR -- //
 window.addEventListener('scroll', () => {
