@@ -1,5 +1,5 @@
-/* STANDARD BUTTON */
-button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
+/* BUTTON SKELETON */
+%btn-base {
     // # Custom Properties
     --btn-bg: var(--accent);
     --btn-color: var(--bg);
@@ -29,6 +29,11 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
     font-family: var(--font-playfair), serif;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+/* APPLY THE SKELETON */
+button, .btn {
+    @extend %btn-base;
 
     // When hovered
     &:hover {
@@ -43,36 +48,12 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
         }
     }
 
-    // Base styles
-    & {
-        // It's an `<a>` (link button)
-        @at-root a#{&} {
-            --btn-bg: transparent;
-            --btn-color: var(--text);
-            --btn-padding: 0.45rem 0.85rem;
-
-            &:hover {
-                --btn-bg: var(--bg-alt);
-                --btn-color: var(--hovered);
-                color: var(--btn-color);
-            }
-
-            &.active {
-                --btn-bg: var(--bgbt);
-                --btn-color: var(--accent);
-                color: var(--btn-color);
-            }
-        }
-    }
-
-    /* INTERNAL ALIGNMENT */
-
+    // Internal Alignment
     &.center { justify-content: center;     text-align: center; }
     &.left   { justify-content: flex-start; text-align: left; }
     &.right  { justify-content: flex-end;   text-align: right; }
     &.full   { width: 100%; }
 
-    /* VARIANTS */
 
     // Big button
     &.big {
@@ -103,5 +84,24 @@ button, .btn { // btn is for Anchor tag `a` (or others) to simulate the button
             --btn-bg: var(--hovered);
             --btn-color: var(--text-muted);
         }
+    }
+}
+
+/* LINK `a` DISGUISED AS A BUTTON */
+a.btn {
+    --btn-bg: transparent;
+    --btn-color: var(--text);
+    --btn-padding: 0.45rem 0.85rem;
+
+    &:hover {
+        --btn-bg: var(--bg-alt);
+        --btn-color: var(--hovered);
+        color: var(--btn-color);
+    }
+
+    &.active {
+        --btn-bg: var(--bgbt);
+        --btn-color: var(--accent);
+        color: var(--btn-color);
     }
 }
