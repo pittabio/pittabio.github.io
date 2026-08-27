@@ -2,16 +2,18 @@
 ---
 
 /* ## LOCALS ## */
-@use "variables" as *;
-@use "base" as *;
-@use "icons" as *;
+@use "variables" as *;  // Standard Variables
+@use "base" as *;       // Base Styles
+@use "icons" as *;      // Icon Styles
 
 /* ## IMPORTS ## */
-@use "common" as *; // Common Folder
-@use "sections" as *; // Sections Folder
-@use "pages" as *; // Pages Folder
-@use "extra" as *; // Extra Folder
+@use "common" as *;     // Common Folder
+@use "sections" as *;   // Sections Folder
+@use "pages" as *;      // Pages Folder
+@use "extra" as *;      // Extra Folder
 
 /* ## FONTS & ICONS ## */
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+// Devicons
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
