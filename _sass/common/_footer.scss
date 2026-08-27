@@ -1,0 +1,41 @@
+footer {
+    background: var(--bg);
+    color: var(--text);
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    margin-top: 4rem;
+    z-index: 100;
+    opacity: 0.7;
+
+    a {
+        opacity: 0.6;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .container {
+        --container-width: 1800px;
+    }
+
+    .btt {
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1.5rem;
+
+        .container {
+            flex-direction: column-reverse;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .btt {
+            justify-content: center;
+        }
+    }
+}
