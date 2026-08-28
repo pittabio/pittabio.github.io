@@ -41,8 +41,8 @@ h1, h2, h3, h4 {
 }
 
 /* Placeholder selector for shared paragraph text style */
-%paragraph {
-    font-size: 0.85rem;
+@mixin paragraph-style {
+    font-size: .85rem;
     color: var(--text);
     transition: var(--transition);
     text-decoration: none;
@@ -52,10 +52,10 @@ h1, h2, h3, h4 {
 
 /* Links: inherit paragraph style and add hover effect */
 a {
-    @extend %paragraph;
+    @include paragraph-style;
 
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
 
     &:hover {
         color: var(--accent);
@@ -70,7 +70,7 @@ b {
 
 /* Paragraphs: inherit the shared %paragraph style */
 p {
-    @extend %paragraph;
+    @include paragraph-style;
 }
 
 /* Generic span: used for title-like serif text */
@@ -78,7 +78,7 @@ span {
     font-family: var(--font-playfair), serif;
     font-weight: 600;
     font-size: 1rem;
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     color: var(--text);
 }
 
