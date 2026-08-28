@@ -1,9 +1,10 @@
-﻿// --- PATH CONFIGURATION ---
+﻿// # Path configuration
 const isGitHubPages = window.location.hostname.includes('github.io');
 let repoName = isGitHubPages ? '' : '';
 
-// Current page
+// # Current page and translation
 const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+let currentTranslations = {};
 
 // -- HEADER -- //
 function initHeader() {
@@ -19,10 +20,10 @@ function initHeader() {
     });
 
     // 2. Listener Language Buttons
-    document.querySelectorAll('.lang').forEach(btn => {
-        btn.addEventListener('click', (e) => {
+    document.querySelectorAll('.lang').forEach(button => {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
-            const selectedLang = btn.getAttribute('data-lang');
+            const selectedLang = button.getAttribute('data-lang');
             if (selectedLang) changeLanguage(selectedLang).then(() => {});
         });
     });
@@ -31,22 +32,40 @@ function initHeader() {
     const toggle = document.getElementById('mobile-toggle');
     const mainMenu = document.getElementById('main-menu');
 
+    // 3a. Update ARIA menu
+    const updateToggleAria = (isOpen) => {
+        const key = isOpen ? 'head.ARIA.menu_close' : 'head.ARIA.menu_open';
+        toggle.setAttribute('data-i18n-aria', key);
+        toggle.setAttribute('aria-expanded', isOpen);
+
+        // Retrieve the translation already loaded in memory
+        const translation = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), currentTranslations);
+        if (translation) toggle.setAttribute('aria-label', translation);
+    };
+
+    // 3b. Toggle and main menu
     if (toggle && mainMenu) {
         toggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            toggle.classList.toggle('open');
+            const isOpen = toggle.classList.toggle('open'); // Save state (true o false)
             mainMenu.classList.toggle('open');
+
+            updateToggleAria(isOpen); // ARIA update
         });
 
         document.addEventListener('click', () => {
             toggle.classList.remove('open');
             mainMenu.classList.remove('open');
+
+            updateToggleAria(false); // Reset ARIA
         });
 
         mainMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 toggle.classList.remove('open');
                 mainMenu.classList.remove('open');
+
+                updateToggleAria(false); // Reset ARIA
             });
         });
     }
@@ -59,11 +78,13 @@ async function changeLanguage(lang) {
         // E.g.: /projects/ruins.html -> projects/ruins
         let path = window.location.pathname;
 
+        /*
         if (isGitHubPages) {
             const segments = path.split('/').filter(s => s);
-            segments.shift(); // Rimuove il nome della repo
+            segments.shift();
             path = '/' + segments.join('/');
         }
+         */
 
         let cleanPath = path.replace('.html', '').replace(/\/$/, '');
         if (cleanPath === "" || cleanPath === "/") {
@@ -82,6 +103,7 @@ async function changeLanguage(lang) {
 
         // Union of translations
         const translations = { ...commonTranslations, ...pageTranslations };
+        currentTranslations = translations;
 
         // 3. Helper function to navigate the JSON object (e.g. "hero.presentation")
         const getNestedTranslation = (key) => {
@@ -100,6 +122,12 @@ async function changeLanguage(lang) {
         document.querySelectorAll('[data-i18n-html]').forEach(el => {
             const val = getNestedTranslation(el.getAttribute('data-i18n-html'));
             if (val) el.innerHTML = Array.isArray(val) ? val.join(' ') : val;
+        });
+
+        // 4c. Update ARIA labels (Accessibility)
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const val = getNestedTranslation(el.getAttribute('data-i18n-aria'));
+            if (val) el.setAttribute('aria-label', val);
         });
 
         // 5. Update the state of the language buttons (syncs Desktop and Mobile)

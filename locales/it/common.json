@@ -1,24 +1,31 @@
 ﻿{
-  "head": {
-    "home": "Home",
-    "projects": "Progetti",
-    "about": "Su di me",
-    "contacts": "Contatti",
-    "support": "Supporto"
-  },
+    "head": {
+        "home": "Home",
+        "projects": "Progetti",
+        "about": "Su di me",
+        "contacts": "Contatti",
+        "support": "Supporto",
 
-  "footer": {
-    "copyright": "Distribuito con licenza CC BY-NC-ND 4.0",
-    "back_top": "Torna su"
-  },
+        "ARIA": {
+            "home": "Torna alla Home",
+            "nav": "Navigazione principale",
+            "menu_open": "Apri menu",
+            "menu_close": "Chiudi menu"
+        }
+    },
 
-  "cookies": {
-    "title": "Privacy ed Analisi [GDPR]",
+    "footer": {
+        "copyright": "Distribuito con licenza CC BY-NC-ND 4.0",
+        "back_top": "Torna su"
+    },
 
-    "desc1": "Utilizzo analisi anonime per capire come i visitatori interagiscono con il sito.",
-    "desc2": "Non viene raccolto alcun dato personale.",
+    "cookies": {
+        "title": "Privacy ed Analisi [GDPR]",
 
-    "accept": "Accetta",
-    "decline": "Rifiuta"
-  }
+        "desc1": "Utilizzo analisi anonime per capire come i visitatori interagiscono con il sito.",
+        "desc2": "Non viene raccolto alcun dato personale.",
+
+        "accept": "Accetta",
+        "decline": "Rifiuta"
+    }
 }

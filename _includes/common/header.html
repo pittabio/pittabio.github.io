@@ -1,11 +1,11 @@
 ﻿<header>
     <!-- TITLE -->
-    <a href="/index.html" class="logo">
+    <a href="/index.html" class="logo" data-i18n-aria="head.ARIA.home">
         <span>FABIO PITTACCIO<b>.</b></span>
     </a>
 
     <!-- MAIN MENU -->
-    <nav id="main-menu">
+    <nav id="main-menu" data-i18n-aria="head.ARIA.nav">
         <!-- Languages -->
         <div class="lang-switcher">
             <button class="lang" id="lang-en" data-lang="en">EN</button>
@@ -23,7 +23,10 @@
     </nav>
 
     <!-- HAMBURGER (Mobile) -->
-    <button class="hamburger" id="mobile-toggle">
+    <button class="hamburger" id="mobile-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            data-i18n-aria="head.ARIA.menu">
         <span></span> <span></span> <span></span>
     </button>
 </header>
