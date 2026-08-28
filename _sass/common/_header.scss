@@ -1,12 +1,12 @@
+/* Properties */
 @property --hedr-h {
     syntax: '<length>';
     inherits: false;
     initial-value: 65px;
 }
 
-// # Custom Properties
+/* Root variables */
 :root {
-    --hedr-h: 65px;
     --hedr-h-scr: 45px;
 }
 
@@ -32,25 +32,14 @@ header {
     animation-timeline: scroll(root);
     animation-range: 0 300px;
 
-    // # Left: Title
-    & > span {
-        font-family: var(--font-playfair), serif;
-        font-weight: 800;
-        font-size: 1rem;
-        letter-spacing: 0.1em;
-        color: var(--text);
-
-        & b { color: var(--accent); }
-    }
-
-    // # Right: Navigation Links
-    & nav {
+    /* Navigation Links */
+    nav {
         display: flex;
         align-items: center;
         gap: 1.5rem;
 
         // Language Switcher
-        & .lang-switcher {
+        .lang-switcher {
             display: flex;
             gap: 0.25rem;
             padding: 3px;
@@ -60,24 +49,30 @@ header {
         }
 
         // Navigation Links
-        & .links-wrapper {
+        .links-wrapper {
             display: flex;
             gap: 0.15rem;
         }
     }
 
+    /* Logo Style */
+    .logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
     // Mobile Menu Hamburger
-    & .hamburger {
+    .hamburger {
         display: none; /* Hidden on desktop by default */
         flex-direction: column;
         gap: 5px;
         background: none;
         border: none;
-        --hedr-padding: 6px;
         cursor: pointer;
         z-index: 1000;
 
-        & span {
+        span {
             width: 22px;
             height: 2px;
             background: var(--text);
@@ -107,16 +102,12 @@ header {
     to   { opacity: 1; transform: translateY(0);    }
 }
 
-// MOBILE MEDIA QUERY
+/* Mobile optimization */
 @media (max-width: 768px) {
     header {
         justify-content: space-between;
 
-        & .hamburger {
-            display: flex; /* Show the hamburger on mobile */
-        }
-
-        & nav {
+        nav {
             display: none; /* Hide the main menu on mobile */
 
             // Position
@@ -137,27 +128,21 @@ header {
             }
 
             // Language Switcher
-            & .lang-switcher {
+            .lang-switcher {
                 margin: 0;
                 align-self: center;
             }
 
             // Navigation Links
-            & .links-wrapper {
+            .links-wrapper {
                 flex-direction: column;
                 width: 100%;
                 gap: 0;
-
-                & a {
-                    width: 100%;
-                    text-align: center;
-                    padding: 1.2rem;
-                    border-bottom: 1px solid var(--border);
-                    border-radius: 0;
-
-                    &:last-child { border-bottom: none; }
-                }
             }
+        }
+
+        .hamburger {
+            display: flex; /* Show the hamburger on mobile */
         }
     }
 }
