@@ -1,16 +1,16 @@
 /* BUTTON SKELETON */
 %btn-base {
     // # Custom Properties
-    --btn-bg: var(--accent);
-    --btn-color: var(--bg);
+    --btn-bg-color: var(--accent);
+    --btn-txt-color: var(--bg);
     --btn-padding: 0.6rem 1.2rem;
     --fnt-size: 0.8rem;
     --fnt-weight: 700;
     --btn-radius: var(--rad-sml);
 
     // Apply Custom Properties
-    background: var(--btn-bg);
-    color: var(--btn-color);
+    background: var(--btn-bg-color);
+    color: var(--btn-txt-color);
     padding: var(--btn-padding);
     font-size: var(--fnt-size);
     font-weight: var(--fnt-weight);
@@ -21,7 +21,8 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border: none;
+    border: 1px solid;
+    border-color: var(--btn-bg-color);
     cursor: pointer;
     transition: var(--transition);
 
@@ -37,9 +38,10 @@ button, .btn {
 
     // When hovered
     &:hover {
-        --btn-bg: var(--hovered);
-        --btn-color: var(--text);
-        color: var(--btn-color);
+        --btn-bg-color: var(--accent-dark);
+        --btn-txt-color: var(--text);
+        color: var(--btn-txt-color);
+        border-color: var(--accent-soft);
 
         // There are images or icons
         & img, & svg {
@@ -57,8 +59,8 @@ button, .btn {
 
     // Big button
     &.big {
-        --btn-bg: var(--accent);
-        --btn-color: var(--bg);
+        --btn-bg-color: var(--accent);
+        --btn-txt-color: var(--bg);
         --btn-padding: 1rem 2.5rem;
 
         --btn-radius: var(--rad-big);
@@ -68,41 +70,54 @@ button, .btn {
 
     // Language
     &.lang {
-        --btn-bg: transparent;
-        --btn-color: var(--text);
+        --btn-bg-color: transparent;
+        --btn-txt-color: var(--text);
         --btn-padding: 0.25rem 0.6rem;
 
         --fnt-size: 0.75rem;
         --btn-radius: calc(var(--rad-sml) - 3px);
 
         &.active {
-            --btn-bg: var(--accent);
-            --btn-color: var(--bg);
+            --btn-bg-color: var(--accent);
+            --btn-txt-color: var(--bg);
         }
 
         &:hover:not(.active) {
-            --btn-bg: var(--hovered);
-            --btn-color: var(--text-muted);
+            --btn-bg-color: var(--accent-dark);
+            --btn-txt-color: var(--text-muted);
+        }
+    }
+
+    // Just an outline
+    &.outline {
+        --btn-bg-color: transparent;
+        --btn-txt-color: var(--text-muted);
+        border-color: var(--border);
+
+        &:hover {
+            --btn-bg-color: var(--bg-alt);
+            --btn-txt-color: var(--text);
+            border-color: var(--accent);
         }
     }
 }
 
 /* LINK `a` DISGUISED AS A BUTTON */
 a.btn {
-    --btn-bg: transparent;
-    --btn-color: var(--text);
+    --btn-bg-color: transparent;
+    --btn-txt-color: var(--text);
     --btn-padding: 0.45rem 0.85rem;
 
     &:hover {
-        --btn-bg: var(--bg-alt);
-        --btn-color: var(--hovered);
-        color: var(--btn-color);
+        --btn-bg-color: var(--bg-alt);
+        --btn-txt-color: var(--accent-dark);
+        color: var(--btn-txt-color);
     }
 
     &.active {
-        --btn-bg: var(--bgbt);
-        --btn-color: var(--accent);
-        color: var(--btn-color);
+        --btn-bg-color: var(--bgbt);
+        --btn-txt-color: var(--accent);
+        color: var(--btn-txt-color);
     }
 }
 
