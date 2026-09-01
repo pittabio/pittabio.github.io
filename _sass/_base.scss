@@ -1,10 +1,38 @@
-    /* # Reset # */
+/* # Reset # */
 
 // Global reset for box-sizing and spacing
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+    /* # Typography Mixins # */
+
+// Common Base Text Style
+@mixin text-base {
+    color: var(--text);
+    margin: 0;
+}
+
+// Editorial serif - for big element (e.g. Titles)
+@mixin display-text($size, $weight: 800, $lh: 1.1) {
+    @include text-base;
+
+    font-family: var(--font-playfair), serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lh;
+}
+
+// UI sans for body text (e.g. Paragraph)
+@mixin body-text($size: 1rem, $weight: 400, $lh: 1.6) {
+    @include text-base;
+
+    font-family: var(--font-sans), sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lh;
 }
 
     /* # Base # */
@@ -20,52 +48,12 @@ html {
 
 // Base body styles: colors, font and overflow
 body {
+    @include body-text; // Default: 1rem, 400, 1.6
     background-color: var(--bg);
-    color: var(--text);
-    font-family: var(--font-sans), sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
     overflow-x: hidden;
 }
 
-    /* # Layout # */
-
-// Base container mixin — extended by page-specific containers via @use
-@mixin container-style($max-width: 12px) {
-    max-width: var($max-width);
-    margin: 0 auto;
-    display: flex;
-    padding: 0 2rem;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-// Default site container
-.main-container {
-    @include container-style(--container-width);
-}
-
-    /* Typography */
-
-// Common Base Text Style
-@mixin text-base {
-    color: var(--text);
-    margin: 0;
-
-    transition: var(--transition);
-    text-decoration: none;
-}
-
-// Editorial (Titles) Serif
-@mixin display-text($size, $weight: 800, $lh: 1.1) {
-    @include text-base;
-
-    font-family: var(--font-playfair), serif;
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $lh;
-}
+    /* Typography - Headings */
 
     //#region Headings
 h1 {
@@ -123,45 +111,62 @@ h6 {
 }
     //#endregion
 
+    /* Typography - Body level elements */
+
 // Paragraphs: inherit the shared paragraph style
 p {
     @include display-text(
-        1rem,
-        650,
-        1.5
+        1.05rem,
+        500,
+        1.6
     );
 }
-
-// UI (Links, span...) Sans
-@mixin body-text($size: .85rem, $weight: 600, $lh: 1.6) {
-    @include text-base;
-
-    font-family: var(--font-sans), sans-serif;
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $lh;
-}
-
 // Links: inherit paragraph style and add hover effect
 a {
-    @include body-text;
+    color: inherit;
+    font-style: italic;
+    text-decoration: underline solid var(--link-underline);
+    transition: var(--transition);
 
     &:hover {
         color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline dotted var(--link-underline-hvr);
+        transition: var(--transition);
     }
 }
 
-// Generic span: used for title-like serif text
+// Generic span
 span {
-    @include body-text;
-
     letter-spacing: .05rem;
 }
 
 // Bold text: highlighted weight and accent color
 b {
     font-weight: 700;
-    color: var(--accent);
+}
+
+em {
+    font-style: italic;
+}
+
+    /* # Layout # */
+
+// Base container mixin — extended by page-specific containers via @use
+@mixin container-style($max-width: 1920px, $padding: 0 2rem, $direction: column, $align: flex-start) {
+    max-width: min($max-width, 90vw);
+    padding: $padding;
+    flex-direction: $direction;
+    align-items: $align;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+// Default site container
+.main-container {
+    @include container-style;
+    margin-top: calc(var(--hedr-h) + var(--container-margin));
 }
 
     /* # Media # */
@@ -174,13 +179,10 @@ img {
     border-radius: var(--rad-sml);
 }
 
-/* Section Titles */
-.section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 3rem;
-    text-align: center;
+    /* Decorations */
 
-    // Underline
+// Underline
+.underline {
     &::after {
         content: '';
         display: block;
@@ -191,7 +193,7 @@ img {
     }
 }
 
-    /* # Interaction & Accessibility # */
+    /* Interaction & Accessibility */
 
 // Text Selection
 ::selection {

@@ -1,16 +1,12 @@
 /* BUTTON SKELETON */
 %btn-base {
     // # Custom Properties
-    --btn-bg-color: var(--accent);
-    --btn-txt-color: var(--bg);
     --btn-padding: 0.6rem 1.2rem;
     --fnt-size: 0.8rem;
     --fnt-weight: 700;
     --btn-radius: var(--rad-sml);
 
     // Apply Custom Properties
-    background: var(--btn-bg-color);
-    color: var(--btn-txt-color);
     padding: var(--btn-padding);
     font-size: var(--fnt-size);
     font-weight: var(--fnt-weight);
@@ -22,7 +18,6 @@
     justify-content: center;
     gap: 0.5rem;
     border: 1px solid;
-    border-color: var(--btn-bg-color);
     cursor: pointer;
     transition: var(--transition);
 
@@ -30,24 +25,47 @@
     font-family: var(--font-playfair), serif;
     text-transform: uppercase;
     text-decoration: none;
+    font-style: normal;
+
+    & img {
+        display: inline-block;
+        height: 16px;
+        filter: grayscale(100%) opacity(1);
+        transition: var(--transition);
+    }
+
+    & svg {
+        transition: var(--transition);
+    }
+}
+
+@mixin btn-theme($bg: var(--accent), $txt: var(--bg), $border: transparent) {
+    background: $bg;
+    color: $txt;
+    border-color: $border;
 }
 
 /* APPLY THE SKELETON */
 button, .btn {
     @extend %btn-base;
+    @include btn-theme;
 
     // When hovered
     &:hover {
-        --btn-bg-color: var(--accent-dark);
-        --btn-txt-color: var(--text);
-        color: var(--btn-txt-color);
-        border-color: var(--accent-soft);
+        @include btn-theme (
+            var(--accent-dark),
+            var(--text),
+            var(--accent-soft)
+        );
 
-        // There are images or icons
         & img, & svg {
-            filter: brightness(.5) invert(1);
-            stroke: var(--bg);
+            filter: grayscale(0%) opacity(1);
+            stroke: var(--text);
+            transition: var(--transition);
         }
+
+        font-style: normal;
+        text-decoration: none;
     }
 
     // Internal Alignment
@@ -56,73 +74,85 @@ button, .btn {
     &.right  { justify-content: flex-end;   text-align: right; }
     &.full   { width: 100%; }
 
-
     // Big button
     &.big {
-        --btn-bg-color: var(--accent);
-        --btn-txt-color: var(--bg);
         --btn-padding: 1rem 2.5rem;
-
         --btn-radius: var(--rad-big);
         --fnt-size: 1rem;
-        --fnt-weight: 800;
+        --fnt-weight: 700;
     }
 
     // Language
     &.lang {
-        --btn-bg-color: transparent;
-        --btn-txt-color: var(--text);
-        --btn-padding: 0.25rem 0.6rem;
+        @include btn-theme(
+            transparent,
+            var(--text)
+        );
 
+        --btn-padding: 0.25rem 0.6rem;
         --fnt-size: 0.75rem;
-        --btn-radius: calc(var(--rad-sml) - 3px);
+        --btn-radius: 4px;
 
         &.active {
-            --btn-bg-color: var(--accent);
-            --btn-txt-color: var(--bg);
+            @include btn-theme (
+                var(--accent),
+                var(--bg)
+            );
         }
 
         &:hover:not(.active) {
-            --btn-bg-color: var(--accent-dark);
-            --btn-txt-color: var(--text-muted);
+            @include btn-theme (
+                var(--accent-dark),
+                var(--text-muted)
+            );
+        }
+    }
+
+    // Navigation Header Links Buttons
+    &.link {
+        @include btn-theme(
+            transparent,
+            var(--text)
+        );
+
+        --btn-padding: 0.45rem 0.85rem;
+
+        &:hover {
+            @include btn-theme(
+                transparent,
+                var(--accent-dark),
+                var(--accent)
+            );
+        }
+
+        &.active {
+            @include btn-theme (
+                var(--bgbt),
+                var(--accent)
+            );
         }
     }
 
     // Just an outline
     &.outline {
-        --btn-bg-color: transparent;
-        --btn-txt-color: var(--text-muted);
-        border-color: var(--border);
+        @include btn-theme(
+            transparent,
+            var(--text-muted),
+            var(--border)
+        );
 
         &:hover {
-            --btn-bg-color: var(--bg-alt);
-            --btn-txt-color: var(--text);
-            border-color: var(--accent);
+            @include btn-theme(
+                $bg: var(--bg-alt),
+                $txt: var(--text),
+                $border: var(--accent)
+            );
         }
     }
 }
 
-/* LINK `a` DISGUISED AS A BUTTON */
-a.btn {
-    --btn-bg-color: transparent;
-    --btn-txt-color: var(--text);
-    --btn-padding: 0.45rem 0.85rem;
-
-    &:hover {
-        --btn-bg-color: var(--bg-alt);
-        --btn-txt-color: var(--accent-dark);
-        color: var(--btn-txt-color);
-    }
-
-    &.active {
-        --btn-bg-color: var(--bgbt);
-        --btn-txt-color: var(--accent);
-        color: var(--btn-txt-color);
-    }
-}
-
 @media (max-width: 768px) {
-    .btn {
+    button, .btn {
         width: 100%;
         text-align: center;
         padding: 1.2rem;
