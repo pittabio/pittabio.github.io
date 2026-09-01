@@ -7,6 +7,7 @@ Disallow: /_includes/
 Disallow: /favicon/
 Disallow: /scripts/
 Disallow: /style/
+Disallow: /debug-room.html
 
 # Here's my official map to help you find me better
 Sitemap: https://pittabio.github.io/sitemap.xml
