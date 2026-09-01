@@ -5,6 +5,8 @@ let repoName = isGitHubPages ? '' : '';
 // # Current page and translation
 const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
 let currentTranslations = {};
+// Pages to NOT translate
+const excludedPages = ['debug-room'];
 
 // -- HEADER -- //
 function initHeader() {
@@ -73,18 +75,15 @@ function initHeader() {
 
 // -- LANGUAGE ENGINE -- //
 async function changeLanguage(lang) {
+    // Exclude pages in the array
+    if (excludedPages.includes(pageName)) {
+        return;
+    }
+
     try {
         // 1. Identifies the relative path to the JSON file
         // E.g.: /projects/ruins.html -> projects/ruins
         let path = window.location.pathname;
-
-        /*
-        if (isGitHubPages) {
-            const segments = path.split('/').filter(s => s);
-            segments.shift();
-            path = '/' + segments.join('/');
-        }
-         */
 
         let cleanPath = path.replace('.html', '').replace(/\/$/, '');
         if (cleanPath === "" || cleanPath === "/") {
