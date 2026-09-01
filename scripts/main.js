@@ -75,16 +75,13 @@ function initHeader() {
 
 // -- LANGUAGE ENGINE -- //
 async function changeLanguage(lang) {
-    // Exclude pages in the array
-    if (excludedPages.includes(pageName)) {
-        return;
-    }
-
     try {
+        // Flag if the page is excluded
+        const isExcluded = excludedPages.includes(pageName);
+
         // 1. Identifies the relative path to the JSON file
         // E.g.: /projects/ruins.html -> projects/ruins
         let path = window.location.pathname;
-
         let cleanPath = path.replace('.html', '').replace(/\/$/, '');
         if (cleanPath === "" || cleanPath === "/") {
             cleanPath = "index";
@@ -92,11 +89,15 @@ async function changeLanguage(lang) {
         if (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
 
         // 2. Fetch JSON files (Page-specific + Common)
-        const [pageRes, commonRes] = await Promise.all([
-            fetch(`${repoName}/locales/${lang}/${cleanPath}.json`).catch(() => null),
-            fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null)
-        ]);
+        const commonFetch = fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null);
 
+        // Request only if the page is not excluded
+        const pageFetch = isExcluded
+            ? Promise.resolve(null).then()
+            : fetch(`${repoName}/locales/${lang}/${cleanPath}.json`).catch(() => null);
+
+        // Set fetch pages
+        const [commonRes, pageRes] = await Promise.all([commonFetch, pageFetch]);
         const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
         const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
 
