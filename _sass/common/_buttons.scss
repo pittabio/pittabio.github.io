@@ -1,8 +1,8 @@
 /* BUTTON SKELETON */
 %btn-base {
     // # Custom Properties
-    --btn-padding: 0.6rem 1.2rem;
-    --fnt-size: 0.8rem;
+    --btn-padding: .6rem 1.2rem;
+    --fnt-size: .8rem;
     --fnt-weight: 700;
     --btn-radius: var(--rad-sml);
 
@@ -16,7 +16,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem;
     border: 1px solid;
     cursor: pointer;
     transition: var(--transition);
@@ -39,7 +39,11 @@
     }
 }
 
-@mixin btn-theme($bg: var(--accent), $txt: var(--bg), $border: transparent) {
+@mixin btn-theme(
+    $bg: var(--accent),
+    $txt: var(--bg),
+    $border: transparent
+) {
     background: $bg;
     color: $txt;
     border-color: $border;
@@ -89,8 +93,8 @@ button, .btn {
             var(--text)
         );
 
-        --btn-padding: 0.25rem 0.6rem;
-        --fnt-size: 0.75rem;
+        --btn-padding: .25rem .6rem;
+        --fnt-size: .75rem;
         --btn-radius: 4px;
 
         &.active {
@@ -115,7 +119,7 @@ button, .btn {
             var(--text)
         );
 
-        --btn-padding: 0.45rem 0.85rem;
+        --btn-padding: .45rem .85rem;
 
         &:hover {
             @include btn-theme(
@@ -153,11 +157,13 @@ button, .btn {
 
 @media (max-width: 768px) {
     button, .btn {
-        width: 100%;
-        text-align: center;
-        padding: 1.2rem;
-        border-bottom: 1px solid var(--border);
-        border-radius: 0;
+        --btn-padding: .9rem .7rem;
+
+        // Big button
+        &.big {
+            --btn-padding: 1.4rem 2rem;
+            --btn-radius: calc(var(--rad-big) - 2px);
+        }
 
         &:last-child { border-bottom: none; }
     }

@@ -136,11 +136,6 @@ a {
     }
 }
 
-// Generic span
-span {
-    letter-spacing: .05rem;
-}
-
 // Bold text: highlighted weight and accent color
 b {
     font-weight: 700;
@@ -153,11 +148,19 @@ em {
     /* # Layout # */
 
 // Base container mixin — extended by page-specific containers via @use
-@mixin container-style($max-width: 1920px, $padding: 0 2rem, $direction: column, $align: flex-start) {
-    max-width: min($max-width, 90vw);
+@mixin container-style(
+    $max-width: 1920px,
+    $padding: 0 2rem,
+    $direction: column,
+    $align: flex-start,
+    $justify: flex-start
+) {
+    max-width: min($max-width, 80vw);
     padding: $padding;
     flex-direction: $direction;
     align-items: $align;
+    justify-content: $justify;
+
     margin: 0 auto;
     display: flex;
     width: 100%;
@@ -205,4 +208,33 @@ img {
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
+}
+
+    /* # MOBILE # */
+
+@media (max-width: 768px) {
+    // Base container mixin — extended by page-specific containers via @use
+    @mixin container-style(
+        $max-width: 768px,
+        $padding: 0 2rem,
+        $direction: column,
+        $align: flex-start,
+        $justify: flex-start
+    ) {
+        max-width: $max-width;
+        padding: $padding;
+        flex-direction: $direction;
+        align-items: $align;
+        justify-content: $justify;
+
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+    }
+
+    // Default site container
+    .main-container {
+        @include container-style;
+        margin-top: calc(var(--hedr-h) + var(--container-margin));
+    }
 }
