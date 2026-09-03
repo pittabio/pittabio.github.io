@@ -15,10 +15,18 @@
     --font-sans: 'DM Sans', sans-serif;
 
     /* Layout & Spacing */
+
+    // Widths
     --max-width: 1920px;
     --max-width-sm: 768px;
+
+    // Margins
     --main-margin: 2rem;
     --main-margin-sm: 1rem;
+
+    // Paddings
+    --main-padding: 0 2rem;
+    --main-padding-sm: 24px;
 
     /* Design Tokens */
     --border: #33333388;
