@@ -149,13 +149,15 @@ em {
 
 // Base container mixin — extended by page-specific containers via @use
 @mixin container-style(
-    $max-width: 1920px,
+    $max-width: min(var(--max-width), 80vw),
+    $width: 100%,
     $padding: 0 2rem,
     $direction: column,
     $align: flex-start,
     $justify: flex-start
 ) {
-    max-width: min($max-width, 80vw);
+    max-width: $max-width;
+    width: $width;
     padding: $padding;
     flex-direction: $direction;
     align-items: $align;
@@ -163,13 +165,13 @@ em {
 
     margin: 0 auto;
     display: flex;
-    width: 100%;
+    flex-wrap: nowrap;
 }
 
 // Default site container
 .main-container {
     @include container-style;
-    margin-top: calc(var(--hedr-h) + var(--container-margin));
+    margin-top: calc(var(--hedr-h) + var(--main-margin));
 }
 
     /* # Media # */
@@ -213,28 +215,11 @@ img {
     /* # MOBILE # */
 
 @media (max-width: 768px) {
-    // Base container mixin — extended by page-specific containers via @use
-    @mixin container-style(
-        $max-width: 768px,
-        $padding: 0 2rem,
-        $direction: column,
-        $align: flex-start,
-        $justify: flex-start
-    ) {
-        max-width: $max-width;
-        padding: $padding;
-        flex-direction: $direction;
-        align-items: $align;
-        justify-content: $justify;
-
-        margin: 0 auto;
-        display: flex;
-        width: 100%;
-    }
 
     // Default site container
     .main-container {
-        @include container-style;
-        margin-top: calc(var(--hedr-h) + var(--container-margin));
+        max-width: none;
+        margin-top: calc(var(--hedr-h) + var(--main-margin-sm));
+        padding: 0 24px;
     }
 }
