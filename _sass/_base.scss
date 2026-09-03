@@ -150,19 +150,18 @@ em {
 // Base container mixin — extended by page-specific containers via @use
 @mixin container-style(
     $max-width: min(var(--max-width), 80vw),
-    $width: 100%,
     $padding: 0 2rem,
     $direction: column,
     $align: flex-start,
     $justify: flex-start
 ) {
     max-width: $max-width;
-    width: $width;
     padding: $padding;
     flex-direction: $direction;
     align-items: $align;
     justify-content: $justify;
 
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
