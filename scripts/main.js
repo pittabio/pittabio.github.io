@@ -76,9 +76,6 @@ function initHeader() {
 // -- LANGUAGE ENGINE -- //
 async function changeLanguage(lang) {
     try {
-        // Flag if the page is excluded
-        const isExcluded = excludedPages.includes(pageName);
-
         // 1. Identifies the relative path to the JSON file
         // E.g.: /projects/ruins.html -> projects/ruins
         let path = window.location.pathname;
@@ -90,18 +87,20 @@ async function changeLanguage(lang) {
 
         // forcedPageName is used to override the default page name for translation purposes
         const activePageId = window.forcedPageName || cleanPath;
-        isExcluded = excludedPages.includes(activePageId);
+        const isExcluded = excludedPages.includes(activePageId);
 
         // 2. Fetch JSON files (Page-specific + Common)
         const commonFetch = fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null);
 
         // Request only if the page is not excluded
         const pageFetch = isExcluded
-            ? Promise.resolve(null).then()
+            ? Promise.resolve(null)
             : fetch(`${repoName}/locales/${lang}/${cleanPath}.json`).catch(() => null);
 
-        // Set fetch pages
+        // Loading both fetches in parallel
         const [commonRes, pageRes] = await Promise.all([commonFetch, pageFetch]);
+
+        // Set fetch pages
         const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
         const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
 
