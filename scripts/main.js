@@ -88,6 +88,10 @@ async function changeLanguage(lang) {
         }
         if (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
 
+        // forcedPageName is used to override the default page name for translation purposes
+        const activePageId = window.forcedPageName || cleanPath;
+        isExcluded = excludedPages.includes(activePageId);
+
         // 2. Fetch JSON files (Page-specific + Common)
         const commonFetch = fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null);
 
