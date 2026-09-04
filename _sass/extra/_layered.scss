@@ -1,0 +1,66 @@
+@use "../common/base";
+
+// A container with a background layer and a foreground layer overlapping.
+// Reuses container-style for centering/padding/max-width, adds only the stacking.
+@mixin layered-container(
+    $min-height: 400px,
+    $back-color: var(--text),
+    $back-font-size: clamp(8rem, 30vw, 20rem),
+    $fore-img-width: 120px,
+    $fore-img-height: auto
+) {
+    @include base.container-style($align: center, $justify: center);
+
+    position: relative;
+    overflow: hidden;
+    min-height: $min-height;
+    text-align: center;
+
+    // Background layer: decorative, behind the content
+    .layer--bg {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none; // decorative: should not intercept clicks/text selection
+        user-select: none;
+
+        // When the background is an image, make it cover the container
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        // When the background is text, style it appropriately
+        .bg-text {
+            @include base.display-text($font-size: $back-font-size);
+            color: $back-color;
+            opacity: .06;
+        }
+    }
+
+    // Foreground layer: main content, above the background
+    .layer--fg {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        // When the foreground has an image, make it fit within the container
+        img {
+            width: $fore-img-width;
+            height: $fore-img-height;
+            object-fit: contain;
+        }
+    }
+}
+
+// A default container that uses the layered-container mixin, with default parameters.
+.main-layered-container {
+    @include layered-container;
+}
