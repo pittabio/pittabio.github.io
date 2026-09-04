@@ -18,15 +18,13 @@
     /* HEADER */
 
 header {
-    // Container
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: none;
-    padding: 0 1rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include base.container-style(
+        none,
+        var(--main-padding),
+        row,
+        center,
+        space-between
+    );
 
     // Layout
     background: var(--bg);
@@ -109,7 +107,8 @@ header {
 
 @media (max-width: 768px) {
     header {
-        justify-content: space-between;
+        max-width: none;
+        padding: 0 10px 0 var(--main-padding-sm);
 
         // Title
         & a {
