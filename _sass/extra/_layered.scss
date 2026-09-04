@@ -36,7 +36,7 @@
 
         // When the background is text, style it appropriately
         .bg-text {
-            @include base.display-text($font-size: $back-font-size);
+            @include base.display-text($back-font-size, 800, 1);
             color: $back-color;
             opacity: .06;
         }
