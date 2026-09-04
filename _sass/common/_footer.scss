@@ -1,52 +1,89 @@
 @use "../base";
 
+    /* FOOTER */
+
 footer {
+    // Container
+    @include base.container-style(
+        none,
+        var(--main-padding),
+        row,
+        center,
+        space-between
+    );
+
+    // Typography
+    font-family: var(--font-playfair), serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+
+    // Layout
     background: var(--bg);
-    color: var(--text);
-    border-top: 1px solid var(--border);
-    padding: 2rem;
+    z-index: 1000;
+    bottom: 0; left: 0; right: 0;
+    transition: var(--transition);
+
+    // Margin and border
     margin-top: 4rem;
-    z-index: 100;
-    opacity: 0.7;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
 
+    // Mini container
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // Links
     a {
-        opacity: 0.6;
-        transition: opacity 0.3s ease-in-out;
-    }
+        // Typography
+        font-style: normal;
+        text-decoration: none;
 
-    .container {
-        --container-width: 1800px;
-    }
-
-    .btt {
-        text-transform: uppercase;
+        // Internal alignment
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: center;
+        gap: .3rem;
 
-        span {
-            @include base.paragraph-style;
-            color: inherit;
+        // When not hovered, reduce opacity
+        &:not(:hover) {
+            opacity: .5;
+            transition: var(--transition);
         }
 
+        // When hovered, restore opacity
         &:hover {
-            color: var(--accent);
+            opacity: 1;
+            transition: var(--transition);
+            text-decoration: none;
         }
     }
 }
 
-@media (max-width: 768px) {
-    footer {
-        padding: 2rem 1.5rem;
+    /* # MOBILE # */
 
-        .container {
-            flex-direction: column-reverse;
-            gap: 1.5rem;
-            text-align: center;
+@media (max-width: 768px) {
+    // Footer
+    footer {
+        // Layout
+        max-width: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        // Mini container
+        div {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .btt {
-            justify-content: center;
+        // The hyphen between the name and the license is hidden on mobile
+        .hyphen {
+            display: none;
         }
     }
 }
