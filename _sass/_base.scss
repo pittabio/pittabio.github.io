@@ -121,9 +121,11 @@ p {
         1.6
     );
 }
+
 // Links: inherit paragraph style and add hover effect
 a {
     color: inherit;
+    font: inherit;
     font-style: italic;
     text-decoration: underline solid var(--link-underline);
     transition: var(--transition);

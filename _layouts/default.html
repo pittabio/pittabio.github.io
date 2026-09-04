@@ -11,7 +11,7 @@
     {% include head/analytics.html %}
 
     <!-- The page title -->
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }} · {{ site.title }}</title>
 
     <!-- Preconnect to speed up font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ '/style/core.css' | relative_url }}">
 </head>
 
-<body id="top" class="page-{{ page.title | slugify }}">
+<body id="top" class="{{ page.title | slugify }}">
     <!-- Header -->
     {% include common/header.html %}
 
