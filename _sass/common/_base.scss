@@ -16,7 +16,7 @@
 }
 
 // Editorial serif - for big element (e.g. Titles)
-@mixin display-text($size, $weight: 800, $lh: 1.1) {
+@mixin display-text($size: 1rem, $weight: 800, $lh: 1.1) {
     @include text-base;
 
     font-family: var(--font-playfair), serif;
@@ -52,7 +52,7 @@ html {
 
 // Base body styles: colors, font and overflow
 body {
-    @include body-text; // Default: 1rem, 400, 1.6
+    @include body-text;
     background-color: var(--bg);
     overflow-x: hidden;
 
@@ -64,6 +64,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    margin-top: calc(var(--hedr-h) + var(--main-margin));
 }
 
     /* Typography - Headings */
@@ -126,13 +127,9 @@ h6 {
 
     /* Typography - Body level elements */
 
-// Paragraphs: inherit the shared paragraph style
+// Paragraphs
 p {
-    @include display-text(
-        1.05rem,
-        500,
-        1.6
-    );
+    // inherit the shared paragraph style
 }
 
 // Links: inherit paragraph style and add hover effect
@@ -185,7 +182,6 @@ em {
 // Default site container
 .main-container {
     @include container-style;
-    margin-top: calc(var(--hedr-h) + var(--main-margin));
 }
 
     /* # Media # */

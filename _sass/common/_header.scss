@@ -42,6 +42,8 @@ header {
 
     // Title
     a {
+        @include base.display-text;
+
         text-decoration: none;
         text-transform: uppercase;
         font-style: normal;
