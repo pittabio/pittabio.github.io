@@ -37,6 +37,10 @@
 
     /* # Base # */
 
+html, body {
+    height: 100%;
+}
+
 // Base HTML settings: smooth scrolling and font antialiasing
 html {
     @media (prefers-reduced-motion: no-preference) {
@@ -51,6 +55,15 @@ body {
     @include body-text; // Default: 1rem, 400, 1.6
     background-color: var(--bg);
     overflow-x: hidden;
+
+    // Sticky footer
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
     /* Typography - Headings */

@@ -20,12 +20,10 @@ footer {
 
     // Layout
     background: var(--bg);
-    z-index: 1000;
-    bottom: 0; left: 0; right: 0;
     transition: var(--transition);
 
     // Margin and border
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 1rem;
     border-top: 1px solid var(--border);
 
