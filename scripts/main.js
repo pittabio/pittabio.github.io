@@ -89,20 +89,13 @@ async function changeLanguage(lang) {
         const activePageId = window.forcedPageName || cleanPath;
         const isExcluded = excludedPages.includes(activePageId);
 
-        // 2. Fetch JSON files (Page-specific + Common)
-        const commonFetch = fetch(`${repoName}/locales/${lang}/common.json`).catch(() => null);
-
-        // Request only if the page is not excluded
-        const pageFetch = isExcluded
-            ? Promise.resolve(null)
-            : fetch(`${repoName}/locales/${lang}/${cleanPath}.json`).catch(() => null);
-
-        // Loading both fetches in parallel
-        const [commonRes, pageRes] = await Promise.all([commonFetch, pageFetch]);
-
-        // Set fetch pages
-        const pageTranslations = pageRes && pageRes.ok ? await pageRes.json() : {};
-        const commonTranslations = commonRes && commonRes.ok ? await commonRes.json() : {};
+        // 2. Fetch JSON files (Page-specific + Common), in modo "sicuro"
+        const [commonTranslations, pageTranslations] = await Promise.all([
+            safeFetchJson(`${repoName}/locales/${lang}/common.json`),
+            isExcluded
+                ? Promise.resolve({})
+                : safeFetchJson(`${repoName}/locales/${lang}/${activePageId}.json`)
+        ]);
 
         // Union of translations
         const translations = { ...commonTranslations, ...pageTranslations };
@@ -145,6 +138,19 @@ async function changeLanguage(lang) {
     }
     catch (error) {
         console.error("Error loading language:", error);
+    }
+}
+
+// Utility to safe fetch a JSON
+async function safeFetchJson(url) {
+    try {
+        const res = await fetch(url);
+        if (!res.ok) return {};
+        const contentType = res.headers.get('content-type') || '';
+        if (!contentType.includes('application/json')) return {}; // Evita crash su HTML/testo inatteso
+        return await res.json();
+    } catch {
+        return {};
     }
 }
 
