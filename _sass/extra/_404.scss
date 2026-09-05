@@ -1,0 +1,10 @@
+﻿@use "../extra/layered";
+@use "../common/base";
+
+.error-container {
+    @include layered.layered-container(
+        80vh,
+        var(--accent),
+        $fore-img-width: 140px,
+    );
+}

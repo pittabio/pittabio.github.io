@@ -1,8 +1,11 @@
 ﻿{
-  "head_title": "404 [Pagina non trovata] · Fabio Pittaccio",
-  "404": {
-    "title": "Missione Fallita! (404)",
-    "subtitle": "La pagina che stai cercando è stata spostata in un altro livello o eliminata. Riprova...",
-    "button": "Rinasci"
-  }
+    "404": {
+        "title": "Fuori dalla Mappa (404)",
+        "subtitle": [
+            "Sembra che il personaggio sia caduto sotto il livello,",
+            "<br>",
+            "proprio lì dove non erano presenti le collisioni"
+        ],
+        "button": "Ritorna al Checkpoint"
+    }
 }
