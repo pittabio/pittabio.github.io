@@ -23,6 +23,7 @@
     // Properties
     background: currentColor;
     flex-shrink: 0;
+    translate: 0 2px;
 
     // Mask url
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
@@ -31,26 +32,35 @@
     // Mask repeat
     mask-repeat: no-repeat;
     mask-position: center;
+
+    // When hovered
+    a:hover & {
+        animation: bounce 1s infinite;
+    }
 }
 
 /* SCROLL INDICATOR */
 .scroll-indicator {
     @include icn(40px);
 
+    // Properties
     position: absolute;
-    bottom: 1.5rem;
+    left: 50%;
+    bottom: 2rem;
     border: 1px solid var(--bgbt);
-    border-radius: 50%;
+    border-radius: 100%;
     animation: bounce 2s infinite;
 
+    // When hovered
     &:hover {
+        transition: var(--transition);
         opacity: 1;
         border-color: var(--accent);
-        color: var(--accent);
     }
 }
 
 /* ARROWS */
+
 // The arrow from svg
 %icn-arrow {
     // Mask url
@@ -116,6 +126,19 @@
 
 // Bounce
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50%      { transform: translateX(-50%) translateY(6px); }
+    0%, 100% { transform: translateX(0) translateY(0); }
+    50%      { transform: translateX(0) translateY(-6px); }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    // SCROLL INDICATOR
+    .scroll-indicator {
+        position: static; // esce dalla modalità "ancorata", torna nel flusso normale
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 1.5rem auto 0;
+    }
 }

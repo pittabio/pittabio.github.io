@@ -157,11 +157,11 @@ button, .btn {
 
 @media (max-width: 768px) {
     button, .btn {
-        --btn-padding: .9rem .7rem;
+        --btn-padding: .8rem 1.4rem;
 
         // Big button
         &.big {
-            --btn-padding: 1.4rem 2rem;
+            --btn-padding: 1.1rem 2.6rem;
             --btn-radius: calc(var(--rad-big) - 2px);
         }
 

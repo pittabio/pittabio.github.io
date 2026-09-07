@@ -236,11 +236,10 @@ img {
     /* # MOBILE # */
 
 @media (max-width: 768px) {
-
     // Default site container
     .main-container {
         max-width: none;
-        margin-top: calc(var(--hedr-h) + var(--main-margin-sm));
+        margin-top: -1rem;
         padding: 0 var(--main-padding-sm);
     }
 }
