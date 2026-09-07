@@ -1,4 +1,88 @@
-﻿.arrow {
+﻿/* ICON */
+
+// The base of an icon
+%icn-base {
+    align-items: center;
+    justify-content: center;
+}
+
+// The icon mixin
+@mixin icn ($dim: 14px, $display: flex) {
+    @extend %icn-base;
+
+    width: $dim; height: $dim;
+    display: $display;
+}
+
+/* TRIANGLE used in:
+ * "Back To Top" in Footer
+ */
+.icn-triangle {
+    @include icn($display: inline-block);
+
+    // Properties
+    background: currentColor;
+    flex-shrink: 0;
+
+    // Mask url
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
+    mask-image:         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
+
+    // Mask repeat
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+    @include icn(40px);
+
+    position: absolute;
+    bottom: 1.5rem;
+    border: 1px solid var(--bgbt);
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+
+    &:hover {
+        opacity: 1;
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+}
+
+/* ARROWS */
+// The arrow from svg
+%icn-arrow {
+    // Mask url
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v13M5 12l7 7 7-7'/%3E%3C/svg%3E");
+    mask-image:         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v13M5 12l7 7 7-7'/%3E%3C/svg%3E");
+
+    // Mask repeat
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+// The arrow configuration
+@mixin arrow (
+    $color: var(--text),
+    $rot: 0deg,
+    $dim: 20px
+){
+    @extend %icn-arrow;
+    @include icn($dim);
+    rotate: $rot;
+
+    background: currentColor;
+    transition: var(--transition);
+}
+
+// Basic arrow
+.arrow {
+    @include arrow;
+}
+
+
+.arrow-old {
     width: 16px;
     height: 16px;
 
@@ -10,24 +94,6 @@
 
     transition: var(--transition);
     color: var(--text);
-}
-
-/* TRIANGLE */
-.icn-triangle {
-    // Properties
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: currentColor;
-    flex-shrink: 0;
-
-    // Mask url
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
-
-    // Mask repeat
-    mask-repeat: no-repeat;
-    mask-position: center;
 }
 
 .itch-icon {
@@ -44,4 +110,12 @@
 
     filter: grayscale(100%) opacity(1);
     transition: var(--transition);
+}
+
+/* ANIMATIONS */
+
+// Bounce
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(6px); }
 }

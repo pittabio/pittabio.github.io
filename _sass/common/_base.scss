@@ -164,18 +164,19 @@ em {
     $padding: var(--main-padding),
     $direction: column,
     $align: flex-start,
-    $justify: flex-start
+    $justify: flex-start,
+    $wrap: nowrap
 ) {
     max-width: $max-width;
     padding: $padding;
     flex-direction: $direction;
     align-items: $align;
     justify-content: $justify;
+    flex-wrap: $wrap;
 
     width: 100%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;
 }
 
 // Default site container
