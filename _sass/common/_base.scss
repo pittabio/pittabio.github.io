@@ -44,6 +44,9 @@ html, body {
 
 // Base HTML settings: smooth scrolling and font antialiasing
 html {
+    // Typograph calculation [min, const + coeff, max]
+    font-size: clamp(16px, .234vw + 13px, 22px);
+
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
@@ -182,12 +185,23 @@ em {
 
     /* # Media # */
 
-// Responsive images
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+// The standard image
+%img-base {
     border-radius: var(--rad-sml);
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+// The image style to change
+@mixin img-style ($max-width: 750px) {
+    @extend %img-base;
+    max-width: $max-width;
+}
+
+// The images
+img {
+    @include img-style;
 }
 
     /* Decorations */
