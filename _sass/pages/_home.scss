@@ -1,0 +1,74 @@
+﻿@use "../common/base";
+
+/* ## HERO SECTION (Homepage specific) ## */
+
+.hero-container {
+    @include base.container-style (
+        $max-width: min(2600px, 90vw),
+        $direction: row,
+        $align: center,
+        $justify: center
+    );
+
+    // Fill the screen minus the header
+    min-height: calc(95dvh - var(--hedr-h) - var(--main-margin));
+    gap: clamp(3rem, 6vw, 8rem);
+}
+
+#hero {
+    max-width: 700px;
+    flex-shrink: 0;
+}
+
+.hero-tag {
+    @include base.display-text(
+        .75rem,
+        700
+    );
+
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero-info {
+    @include base.container-style(
+        $padding: 1rem,
+        $direction: row,
+        $align: center,
+        $wrap: wrap
+    );
+
+    gap: 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+
+    b {
+        @include base.display-text(
+            1.5rem,
+            800,
+            1
+        );
+        color: var(--accent);
+    }
+
+    span {
+        @include base.display-text(.75rem);
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        opacity: .6;
+        margin-top: .15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        min-height: auto;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+    .hero-image { height: 320px; }
+}
