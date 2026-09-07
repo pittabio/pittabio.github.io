@@ -11,7 +11,6 @@ description: The home page
         <span class="hero-tag" data-i18n="hero.tag"></span>
         <h1>Fabio Pittaccio</h1>
         <p data-i18n-html="hero.presentation"></p>
-
         <br>
 
         <!-- View Projects Button -->
@@ -22,25 +21,23 @@ description: The home page
         </a>
 
         <!-- Quick info -->
-        <div class="hero-info">
-            <div>
+        <div class="hero-info-container">
+            <div class="hero-info">
                 <b>5+</b>
-                <br>
                 <span data-i18n="hero.info.published"></span>
             </div>
-            <div>
+            <div class="hero-info">
                 <b>UE5</b>
-                <br>
                 <span data-i18n="hero.info.engine"></span>
             </div>
-            <div>
+            <div class="hero-info">
                 <b>PC · Android</b>
-                <br>
                 <span data-i18n="hero.info.platforms"></span>
             </div>
         </div>
     </section>
 
+    <!-- RIGHT (Image) -->
     <img src="/media/profile.jpg" alt="Fabio Pittaccio"
          onclick="openOneImage(this)"
 
@@ -48,7 +45,7 @@ description: The home page
          data-desc1="hero.image_desc"
     />
 
-    <!-- BUTTON PART: INDICATOR -->
+    <!-- INDICATOR -->
     <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
         <span class="arrow"></span>
     </a>
