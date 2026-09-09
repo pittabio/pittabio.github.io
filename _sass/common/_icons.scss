@@ -70,27 +70,35 @@
     // Mask repeat
     mask-repeat: no-repeat;
     mask-position: center;
+
+    // Layout
+    align-self: center;
+    justify-self: center;
 }
 
 // The arrow configuration
 @mixin arrow (
     $color: var(--text),
-    $rot: 0deg,
     $dim: 20px
 ){
     @extend %icn-arrow;
     @include icn($dim);
-    rotate: $rot;
 
     background: currentColor;
-    transition: var(--transition);
+    transition: var(--transition), background-color var(--transition);
+    flex-shrink: 0;
 }
 
 // Basic arrow
 .arrow {
     @include arrow;
-}
+    translate: 0 1px;
 
+    &.down  { rotate: 0deg;   } // Default
+    &.right { rotate: -90deg; }
+    &.left  { rotate: 90deg;  }
+    &.up    { rotate: 180deg; }
+}
 
 .arrow-old {
     width: 16px;

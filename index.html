@@ -4,52 +4,53 @@ title: Home
 description: The home page
 ---
 
-<div class="hero-container">
-    <!-- LEFT -->
-    <section id="hero">
-        <!-- Text: tag, header and presentation -->
-        <span class="hero-tag" data-i18n="hero.tag"></span>
-        <h1>Fabio Pittaccio</h1>
-        <p data-i18n-html="hero.presentation"></p>
-        <br>
+<section class="hero-section" id="hero">
+    <div class="hero-container">
+        <!-- LEFT -->
+        <div class="hero-content">
+            <!-- Text: tag, header and presentation -->
+            <span class="hero-tag" data-i18n="hero.tag"></span>
+            <h1>Fabio Pittaccio</h1>
+            <p data-i18n-html="hero.presentation"></p>
+            <br>
 
-        <!-- View Projects Button -->
-        <a class="btn big" href="#">
-            <span data-i18n="hero.projects"></span>
-            <!-- svg arrow -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            <!-- View Projects Button -->
+            <a class="btn big" href="#">
+                <span data-i18n="hero.projects"></span>
+                <span class="arrow right"></span>
+            </a>
+
+            <!-- Quick info -->
+            <div class="hero-info-container">
+                <div class="hero-info">
+                    <b>5+</b>
+                    <span data-i18n="hero.info.published"></span>
+                </div>
+                <div class="hero-info">
+                    <b>UE5</b>
+                    <span data-i18n="hero.info.engine"></span>
+                </div>
+                <div class="hero-info">
+                    <b>PC · Android</b>
+                    <span data-i18n="hero.info.platforms"></span>
+                </div>
+            </div>
+        </div><!-- hero-content -->
+
+        <!-- RIGHT (Image) -->
+        <img src="/media/profile.jpg" alt="Fabio Pittaccio"
+             onclick="openOneImage(this)"
+
+             data-img1="/media/profile.jpg"
+             data-desc1="hero.image_desc"
+        />
+
+        <!-- INDICATOR -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
+            <span class="arrow"></span>
         </a>
-
-        <!-- Quick info -->
-        <div class="hero-info-container">
-            <div class="hero-info">
-                <b>5+</b>
-                <span data-i18n="hero.info.published"></span>
-            </div>
-            <div class="hero-info">
-                <b>UE5</b>
-                <span data-i18n="hero.info.engine"></span>
-            </div>
-            <div class="hero-info">
-                <b>PC · Android</b>
-                <span data-i18n="hero.info.platforms"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- RIGHT (Image) -->
-    <img src="/media/profile.jpg" alt="Fabio Pittaccio"
-         onclick="openOneImage(this)"
-
-         data-img1="/media/profile.jpg"
-         data-desc1="hero.image_desc"
-    />
-
-    <!-- INDICATOR -->
-    <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
-        <span class="arrow"></span>
-    </a>
-</div>
+    </div><!-- hero-container -->
+</section><!-- hero-section -->
 
 	<!-- ## SHORT ABOUT ## -->
 	<section class="about-skills" id="about">
