@@ -1,4 +1,4 @@
-﻿@use "../common/base";
+@use "../common/base";
 
 //#region HERO
 
@@ -33,16 +33,21 @@
     text-transform: uppercase;
 }
 
+// The title (my name)
+.hero-title {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
 // The info container
-.hero-info-container {
-    @include base.container-style(
-        $padding: 1rem,
+.hero-info-box {
+    @include base.flexbox-style(
         $direction: row,
-        $align: center,
-        $wrap: wrap
+        $align: flex-start,
+        $justify: flex-start,
+        $gap: clamp(1.5rem, 3vw, 2.5rem)
     );
 
-    gap: 2rem;
     border-top: 1px solid var(--border);
     margin-top: 2rem;
 
@@ -53,7 +58,9 @@
             800,
             1
         );
+
         color: var(--accent);
+        align-self: flex-start;
     }
 
     // The info
@@ -63,13 +70,27 @@
         text-transform: uppercase;
         opacity: .6;
         margin-top: .15rem;
+
+        align-self: flex-start;
+        text-align: left;
     }
 }
 
 // The info itself
 .hero-info {
-    display: flex;
-    flex-direction: column;
+    @include base.flexbox-style(
+        $direction: column,
+        $align: flex-start,
+        $justify: flex-start,
+        $gap: .2rem,
+        $prevent-text-wrap: true
+    );
+
+    margin-top: 1rem;
+}
+
+//#endregion
+
 }
 
 //#endregion

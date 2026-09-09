@@ -79,6 +79,9 @@ h1 {
         clamp(2.5rem, 6vw, 5rem),
         $mb: 1.5rem
     );
+
+    align-self: center;
+    justify-self: center;
 }
 
 h2 {
@@ -87,6 +90,9 @@ h2 {
         $mb: 1.25rem,
         $lh: 1.2,
     );
+
+    align-self: center;
+    justify-self: center;
 }
 
 h3 {
@@ -182,6 +188,31 @@ em {
 // Default site container
 .main-container {
     @include container-style;
+}
+
+// Flexbox
+@mixin flexbox-style (
+    $direction: row,
+    $align: center,
+    $justify: flex-start,
+    $gap: 0,
+    $wrap: nowrap,
+    $prevent-text-wrap: false
+) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+
+    @if $prevent-text-wrap {
+        white-space: nowrap;
+    }
+}
+
+.flexbox {
+    @include flexbox-style;
 }
 
     /* # Media # */
