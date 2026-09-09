@@ -164,7 +164,7 @@ em {
 
     /* # Layout # */
 
-// Base container mixin — extended by page-specific containers via @use
+// CONTAINER
 @mixin container-style(
     $max-width: min(var(--max-width), 80vw),
     $padding: var(--main-padding),
@@ -190,11 +190,11 @@ em {
     @include container-style;
 }
 
-// Flexbox
+// FLEXBOX
 @mixin flexbox-style (
     $direction: row,
     $align: center,
-    $justify: flex-start,
+    $justify: center,
     $gap: 0,
     $wrap: nowrap,
     $prevent-text-wrap: false
@@ -211,8 +211,32 @@ em {
     }
 }
 
+// Default flexbox
 .flexbox {
     @include flexbox-style;
+}
+
+// GRID
+@mixin grid-style (
+    $cols: 3,
+    $gap: 1rem,
+    $align: center
+){
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+    align-items: $align;
+
+    display: grid;
+}
+
+@mixin grid-auto($min-width: 300px, $gap: 1.5rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
+    gap: $gap;
+}
+
+.grid {
+    @include grid-style;
 }
 
     /* # Media # */

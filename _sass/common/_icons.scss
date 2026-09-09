@@ -92,7 +92,6 @@
 // Basic arrow
 .arrow {
     @include arrow;
-    translate: 0 1px;
 
     &.down  { rotate: 0deg;   } // Default
     &.right { rotate: -90deg; }
