@@ -4,13 +4,14 @@ title: Home
 description: The home page
 ---
 
+<!-- # HERO SECTION # -->
 <section class="hero-section" id="hero">
     <div class="hero-container">
         <!-- LEFT -->
         <div class="hero-content">
             <!-- Text: tag, header and presentation -->
             <span class="hero-tag" data-i18n="hero.tag"></span>
-            <h1>Fabio Pittaccio</h1>
+            <h1 class="hero-title">Fabio Pittaccio</h1>
             <p data-i18n-html="hero.presentation"></p>
             <br>
 
@@ -21,7 +22,7 @@ description: The home page
             </a>
 
             <!-- Quick info -->
-            <div class="hero-info-container">
+            <div class="hero-info-box">
                 <div class="hero-info">
                     <b>5+</b>
                     <span data-i18n="hero.info.published"></span>
@@ -34,7 +35,7 @@ description: The home page
                     <b>PC · Android</b>
                     <span data-i18n="hero.info.platforms"></span>
                 </div>
-            </div>
+            </div><!-- hero-info-box -->
         </div><!-- hero-content -->
 
         <!-- RIGHT (Image) -->
@@ -52,56 +53,52 @@ description: The home page
     </div><!-- hero-container -->
 </section><!-- hero-section -->
 
-	<!-- ## SHORT ABOUT ## -->
-	<section class="about-skills" id="about">
-		<div class="section-container">
-			<h2 class="section-title" data-i18n="about.title"></h2>
+<!-- ## SHORT ABOUT ## -->
+<section id="about" class="about">
+    <h2 data-i18n="about.title"></h2>
+    <!-- Grid -->
+	<div class="grid">
+        <!-- UE Specialist -->
+        <div class="about-item">
+            <div class="about-icon">🚀</div>
+            <h3 data-i18n="about.item1.title"></h3>
+            <p data-i18n="about.item1.desc"></p>
+        </div>
+        <!-- Cross-Platform -->
+        <div class="about-item">
+            <div class="about-icon">📱</div>
+            <h3 data-i18n="about.item2.title"></h3>
+            <p data-i18n="about.item2.desc"></p>
+        </div>
+        <!-- Full-Cycle Dev -->
+        <div class="about-item">
+            <div class="about-icon">🛠️</div>
+            <h3 data-i18n="about.item3.title"></h3>
+            <p data-i18n="about.item3.desc"></p>
+        </div>
+    </div><!-- grid -->
 
-			<!-- Grid -->
-			<div class="about-grid">
-				<!-- UE Specialist -->
-				<div class="about-item">
-					<div class="about-icon">🚀</div>
-					<h3 data-i18n="about.item1.title"></h3>
-					<p data-i18n="about.item1.desc"></p>
-				</div>
-				<!-- Cross-Platform -->
-				<div class="about-item">
-					<div class="about-icon">📱</div>
-					<h3 data-i18n="about.item2.title"></h3>
-					<p data-i18n="about.item2.desc"></p>
-				</div>
-				<!-- Full-Cycle Dev -->
-				<div class="about-item">
-					<div class="about-icon">🛠️</div>
-					<h3 data-i18n="about.item3.title"></h3>
-					<p data-i18n="about.item3.desc"></p>
-				</div>
-			</div>
+    <!-- Button: Find More -->
+    <a class="btn" href="about.html" style="align-self: center;">
+        <span data-i18n="about.find_more"></span>
+        <!-- svg arrow -->
+        <span class="arrow right"></span>
+    </a><!-- button -->
 
-			<!-- Find More -->
-			<div class="about-more">
-				<a href="about.html" class="resume-link">
-					<span data-i18n="about.find_more"></span>
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-				</a>
-			</div>
-
-			<!-- Technologies icons bar -->
-			<div class="skills-bar">
-				<img src="media/logo/unreal.png"     																			alt="Unreal Engine" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"           alt="C++" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"                       alt="Git" />
-				<img src="media/logo/github.png"                  																alt="GitHub" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"                 alt="GitLab" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitkraken/gitkraken-original-wordmark.svg"  alt="GitKraken" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg"                  alt="Android SDK" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rider/rider-original.svg"                   alt="JetBrains Rider" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"               alt="Blender" />
-				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"           alt="Adobe Photoshop" />
-			</div>
-		</div>
-	</section> <!-- END short about -->
+    <!-- Technologies icons bar -->
+    <div class="about-skills">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg"      alt="Unreal Engine" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"            alt="C++" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"                        alt="Git" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"                  alt="GitHub" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"                  alt="GitLab" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitkraken/gitkraken-original-wordmark.svg"   alt="GitKraken" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg"                   alt="Android SDK" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rider/rider-original.svg"                    alt="JetBrains Rider" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"                alt="Blender" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"            alt="Adobe Photoshop" />
+    </div><!-- tech -->
+</section> <!-- END short about -->
 
 	<!-- ## FEATURED PROJECTS ## -->
 	<section class="projects-section" id="projects">

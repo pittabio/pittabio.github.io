@@ -91,6 +91,37 @@
 
 //#endregion
 
+//#region ABOUT
+
+.about {
+    @include base.container-style($padding: 3rem);
+}
+
+/* Skills Bar */
+.about-skills {
+    @include base.flexbox-style(
+        $justify: center,
+        $wrap: wrap,
+        $gap: clamp(32px, 0.833vw + 16px, 48px)
+    );
+
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    align-self: center;
+    justify-self: center;
+
+    img {
+        width: clamp(40px, 0.521vw + 30px, 50px);
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: var(--transition);
+
+        &:hover {
+            filter: grayscale(0%);
+            transform: scale(1.15);
+        }
+    }
 }
 
 //#endregion
