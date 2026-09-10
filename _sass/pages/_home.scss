@@ -137,8 +137,8 @@
         );
 
         // Layout
-        margin-top: -2.5rem;
-        gap: 1rem;
+        margin-top: -3rem;
+        gap: .75rem;
         text-align: center;
 
         // Order of elements
@@ -184,6 +184,30 @@
 
     // The scroll indicator should not be visible
     .scroll-indicator { display: none; }
+
+    //#endregion
+
+    //#region ABOUT
+
+    .about {
+        @include base.container-style (
+            $max-width: none,
+            $direction: column,
+            $align: center
+        );
+
+        margin-top: 3rem;
+
+        .btn {
+            margin-top: 2rem;
+        }
+    }
+
+    .about-skills {
+        img {
+            width: clamp(30px, .521vw + 20px, 40px);
+        }
+    }
 
     //#endregion
 }
