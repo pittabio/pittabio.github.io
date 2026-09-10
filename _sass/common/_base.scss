@@ -167,14 +167,14 @@ em {
 // CONTAINER
 @mixin container-style(
     $max-width: min(var(--max-width), 80vw),
-    $padding: var(--main-padding),
+    $margin: 0 auto,
     $direction: column,
     $align: flex-start,
     $justify: flex-start,
     $wrap: nowrap
 ) {
     max-width: $max-width;
-    padding: $padding;
+    margin: $margin;
     flex-direction: $direction;
     align-items: $align;
     justify-content: $justify;
@@ -182,7 +182,7 @@ em {
 
     display: flex;
     width: 100%;
-    margin: 0 auto;
+    min-height: calc(95dvh - var(--hedr-h) - var(--main-margin));
 }
 
 // Default site container

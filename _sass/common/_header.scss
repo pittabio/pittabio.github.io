@@ -19,11 +19,10 @@
 
 header {
     @include base.container-style(
-        none,
-        var(--main-padding),
-        row,
-        center,
-        space-between
+        $max-width: none,
+        $direction: row,
+        $align: center,
+        $justify: space-between
     );
 
     // Layout
@@ -31,11 +30,17 @@ header {
     position: fixed;
     z-index: 1000;
     top: 0; left: 0; right: 0;
+    padding: 0 2rem;
+
+    // Height
+    min-height: 0;
     height: var(--hedr-h);
+
+    // Border
     border-bottom: 1px solid var(--border);
-    transition: var(--transition);
 
     // Scroll animation
+    transition: var(--transition);
     animation: header-shrink ease-in-out forwards;
     animation-timeline: scroll(root);
     animation-range: 0 300px;

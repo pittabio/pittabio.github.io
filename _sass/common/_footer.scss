@@ -5,11 +5,10 @@
 footer {
     // Container
     @include base.container-style(
-        none,
-        var(--main-padding),
-        row,
-        center,
-        space-between
+        $max-width: none,
+        $direction: row,
+        $align: center,
+        $justify: space-between
     );
 
     // Typography
@@ -23,6 +22,7 @@ footer {
     transition: var(--transition);
 
     // Margin and border
+    min-height: 3rem;
     margin-top: 3rem;
     padding: 1rem;
     border-top: 1px solid var(--border);
