@@ -217,7 +217,7 @@ em {
 }
 
 // GRID
-@mixin grid-style (
+@mixin grid-column-style (
     $cols: 3,
     $gap: 1rem,
     $align: center
@@ -229,14 +229,18 @@ em {
     display: grid;
 }
 
-@mixin grid-auto($min-width: 300px, $gap: 1.5rem) {
+@mixin grid-auto-style($min-width: 300px, $gap: 1.5rem) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
     gap: $gap;
 }
 
-.grid {
-    @include grid-style;
+.grid-column {
+    @include grid-column-style;
+}
+
+.grid-auto {
+    @include grid-auto-style;
 }
 
     /* # Media # */
@@ -296,5 +300,12 @@ img {
         max-width: none;
         margin-top: -1rem;
         padding: 0 var(--main-padding-sm);
+    }
+
+    .grid-column {
+        @include grid-column-style (
+            $cols: 1,
+            $gap: 0
+        );
     }
 }
