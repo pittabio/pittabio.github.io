@@ -2,7 +2,7 @@
 
 //#region HERO
 
-// The hero (first part of the page)
+// The hero container
 .hero-container {
     @include base.container-style (
         $direction: row,
@@ -42,8 +42,6 @@
 // The info container
 .hero-info-box {
     @include base.flexbox-style(
-        $direction: row,
-        $align: flex-start,
         $justify: flex-start,
         $gap: clamp(1.5rem, 3vw, 2.5rem)
     );
@@ -81,7 +79,6 @@
     @include base.flexbox-style(
         $direction: column,
         $align: flex-start,
-        $justify: flex-start,
         $gap: .2rem,
         $prevent-text-wrap: true
     );
