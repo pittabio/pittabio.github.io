@@ -128,7 +128,7 @@
 
     //#region HERO
 
-    // The hero (first part of the page)
+    // The hero container
     .hero-container {
         @include base.container-style (
             $max-width: none,
@@ -141,24 +141,45 @@
         gap: 1rem;
         text-align: center;
 
-        // Image order
+        // Order of elements
+        .hero-content {
+            display: contents;
+
+            > .hero-tag { order: 1; }
+            > .hero-title {
+                order: 2;
+                align-self: center;
+                justify-self: center;
+            }
+            > p { order: 4; }
+            > .btn.big  { order: 5; }
+            > .hero-info-box { order: 6; }
+        }
         > img { order: 3; }
     }
 
     // The info container
-    .hero-info-container {
-        justify-content: center;
-    }
+    .hero-info-box {
+        @include base.flexbox-style(
+            $wrap: wrap,
+            $gap: 1.25rem 2.5rem
+        );
 
-    // hero contents order
-    #hero {
-        display: contents;
+        // The info itself
+        .hero-info {
+            align-items: center;
 
-        > .hero-tag { order: 1; }
-        > h1        { order: 2; }
-        > p         { order: 4; }
-        > .btn.big  { order: 5; }
-        > .hero-info-container { order: 6; }
+            // Text align
+            b, span {
+                align-self: center;
+                text-align: center;
+            }
+
+            // Last child flexbox
+            &:last-child {
+                flex-basis: 100%;
+            }
+        }
     }
 
     // The scroll indicator should not be visible
