@@ -3,7 +3,7 @@
 //#region HERO
 
 // The hero container
-.hero-container {
+.sec-hero {
     @include base.container-style (
         $direction: row,
         $align: center,
@@ -90,7 +90,7 @@
 
 //#region ABOUT
 
-.about {
+.sec-about {
     @include base.container-style($padding: 3rem);
 }
 
@@ -129,7 +129,7 @@
     //#region HERO
 
     // The hero container
-    .hero-container {
+    .sec-hero {
         @include base.container-style (
             $max-width: none,
             $direction: column,
@@ -189,7 +189,7 @@
 
     //#region ABOUT
 
-    .about {
+    .sec-about {
         @include base.container-style (
             $max-width: none,
             $direction: column,

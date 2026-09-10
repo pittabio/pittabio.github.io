@@ -5,56 +5,54 @@ description: The home page
 ---
 
 <!-- # HERO SECTION # -->
-<section class="hero-section" id="hero">
-    <div class="hero-container">
-        <!-- LEFT -->
-        <div class="hero-content">
-            <!-- Text: tag, header and presentation -->
-            <span class="hero-tag" data-i18n="hero.tag"></span>
-            <h1 class="hero-title">Fabio Pittaccio</h1>
-            <p data-i18n-html="hero.presentation"></p>
-            <br>
+<section id="hero" class="sec-hero">
+    <!-- LEFT -->
+    <div class="hero-content">
+        <!-- Text: tag, header and presentation -->
+        <span class="hero-tag" data-i18n="hero.tag"></span>
+        <h1 class="hero-title">Fabio Pittaccio</h1>
+        <p data-i18n-html="hero.presentation"></p>
+        <br>
 
-            <!-- View Projects Button -->
-            <a class="btn big" href="#">
-                <span data-i18n="hero.projects"></span>
-                <span class="arrow right"></span>
-            </a>
-
-            <!-- Quick info -->
-            <div class="hero-info-box">
-                <div class="hero-info">
-                    <b>5+</b>
-                    <span data-i18n="hero.info.published"></span>
-                </div>
-                <div class="hero-info">
-                    <b>UE5</b>
-                    <span data-i18n="hero.info.engine"></span>
-                </div>
-                <div class="hero-info">
-                    <b>PC · Android</b>
-                    <span data-i18n="hero.info.platforms"></span>
-                </div>
-            </div><!-- /hero-info-box/ -->
-        </div><!-- /hero-content/ -->
-
-        <!-- RIGHT (Image) -->
-        <img src="/media/profile.jpg" alt="Fabio Pittaccio"
-             onclick="openOneImage(this)"
-
-             data-img1="/media/profile.jpg"
-             data-desc1="hero.image_desc"
-        />
-
-        <!-- INDICATOR -->
-        <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
-            <span class="arrow"></span>
+        <!-- View Projects Button -->
+        <a class="btn big" href="#">
+            <span data-i18n="hero.projects"></span>
+            <span class="arrow right"></span>
         </a>
-    </div><!-- /hero-container/ -->
-</section><!-- /hero-section/ -->
+
+        <!-- Quick info -->
+        <div class="hero-info-box">
+            <div class="hero-info">
+                <b>5+</b>
+                <span data-i18n="hero.info.published"></span>
+            </div>
+            <div class="hero-info">
+                <b>UE5</b>
+                <span data-i18n="hero.info.engine"></span>
+            </div>
+            <div class="hero-info">
+                <b>PC · Android</b>
+                <span data-i18n="hero.info.platforms"></span>
+            </div>
+        </div><!-- /hero-info-box/ -->
+    </div><!-- /hero-content/ -->
+
+    <!-- RIGHT (Image) -->
+    <img src="/media/profile.jpg" alt="Fabio Pittaccio"
+         onclick="openOneImage(this)"
+
+         data-img1="/media/profile.jpg"
+         data-desc1="hero.image_desc"
+    />
+
+    <!-- INDICATOR -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
+        <span class="arrow"></span>
+    </a>
+</section><!-- /hero section/ -->
 
 <!-- ## SHORT ABOUT ## -->
-<section id="about" class="about">
+<section id="about" class="sec-about">
     <h2 data-i18n="about.title"></h2>
     <!-- Grid -->
 	<div class="grid-column">
@@ -87,7 +85,7 @@ description: The home page
 
     <!-- Technologies icons bar -->
     {% include sections/skills.html %}
-</section> <!-- /about/ -->
+</section> <!-- /about section/ -->
 
 	<!-- ## FEATURED PROJECTS ## -->
 	<section class="projects-section" id="projects">
