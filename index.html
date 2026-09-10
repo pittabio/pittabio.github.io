@@ -35,8 +35,8 @@ description: The home page
                     <b>PC · Android</b>
                     <span data-i18n="hero.info.platforms"></span>
                 </div>
-            </div><!-- hero-info-box -->
-        </div><!-- hero-content -->
+            </div><!-- /hero-info-box/ -->
+        </div><!-- /hero-content/ -->
 
         <!-- RIGHT (Image) -->
         <img src="/media/profile.jpg" alt="Fabio Pittaccio"
@@ -50,8 +50,8 @@ description: The home page
         <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
             <span class="arrow"></span>
         </a>
-    </div><!-- hero-container -->
-</section><!-- hero-section -->
+    </div><!-- /hero-container/ -->
+</section><!-- /hero-section/ -->
 
 <!-- ## SHORT ABOUT ## -->
 <section id="about" class="about">
@@ -76,29 +76,18 @@ description: The home page
             <h3 data-i18n="about.item3.title"></h3>
             <p data-i18n="about.item3.desc"></p>
         </div>
-    </div><!-- grid -->
+    </div><!-- /grid/ -->
 
     <!-- Button: Find More -->
     <a class="btn" href="about.html" style="align-self: center;">
         <span data-i18n="about.find_more"></span>
         <!-- svg arrow -->
         <span class="arrow right"></span>
-    </a><!-- button -->
+    </a>
 
     <!-- Technologies icons bar -->
-    <div class="about-skills">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg"      alt="Unreal Engine" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"            alt="C++" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"                        alt="Git" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"                  alt="GitHub" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"                  alt="GitLab" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitkraken/gitkraken-original-wordmark.svg"   alt="GitKraken" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg"                   alt="Android SDK" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rider/rider-original.svg"                    alt="JetBrains Rider" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"                alt="Blender" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"            alt="Adobe Photoshop" />
-    </div><!-- tech -->
-</section> <!-- END short about -->
+    {% include sections/skills.html %}
+</section> <!-- /about/ -->
 
 	<!-- ## FEATURED PROJECTS ## -->
 	<section class="projects-section" id="projects">
