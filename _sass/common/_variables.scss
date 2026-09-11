@@ -18,15 +18,15 @@
 
     // Widths
     --max-width: 2600px;
-    --max-width-sm: 768px;
+    --max-width-sm: 1300px;
 
     // Margins
     --main-margin: 2rem;
-    --main-margin-sm: 1rem;
+    --main-margin-sm: -1rem;
 
     // Paddings
-    --main-padding: 0 2rem;
-    --main-padding-sm: 24px;
+    --main-padding: 0 clamp(5rem, 4.167vw, 10rem);
+    --main-padding-sm: 0 clamp(2rem, 1.667vw, 4rem);
 
     /* Design Tokens */
     --border: #33333388;

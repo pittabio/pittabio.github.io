@@ -66,9 +66,11 @@ body {
     min-height: 100vh;
 }
 
+// The main content landmark of the page
 main {
     flex: 1 0 auto;
     margin-top: calc(var(--hedr-h) + var(--main-margin));
+    padding: var(--main-padding);
 }
 
     /* Typography - Headings */
@@ -166,7 +168,7 @@ em {
 
 // CONTAINER
 @mixin container-style(
-    $max-width: min(var(--max-width), 80vw),
+    $max-width: var(--max-width),
     $margin: 0 auto,
     $direction: column,
     $align: flex-start,
@@ -182,7 +184,6 @@ em {
 
     display: flex;
     width: 100%;
-    min-height: calc(95dvh - var(--hedr-h) - var(--main-margin));
 }
 
 // Default site container
@@ -295,11 +296,10 @@ img {
     /* # MOBILE # */
 
 @media (max-width: 768px) {
-    // Default site container
-    .main-container {
-        max-width: none;
-        margin-top: -1rem;
-        padding: 0 var(--main-padding-sm);
+    // The main content landmark of the page.
+    main {
+        margin-top: calc(var(--hedr-h) + var(--main-margin-sm));
+        padding: var(--main-padding-sm);
     }
 
     .grid-column {
