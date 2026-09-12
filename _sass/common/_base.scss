@@ -298,7 +298,7 @@ img {
 @media (max-width: 768px) {
     // The main content landmark of the page.
     main {
-        margin-top: calc(var(--hedr-h) + var(--main-margin-sm));
+        margin-top: calc(var(--hedr-h) - var(--main-margin-sm));
         padding: var(--main-padding-sm);
     }
 
