@@ -3,10 +3,10 @@
 // A container with a background layer and a foreground layer overlapping.
 // Reuses container-style for centering/padding/max-width, adds only the stacking.
 @mixin layered-container(
-    $min-height: 400px,
-    $back-color: var(--text),
-    $back-font-size: clamp(8rem, 30vw, 20rem),
-    $fore-img-width: 120px,
+    $min-height: auto,
+    $back-color: var(--accent),
+    $back-font-size: 140px,
+    $fore-img-width: 140px,
     $fore-img-height: auto
 ) {
     @include base.container-style($align: center, $justify: center);
@@ -38,7 +38,7 @@
         .bg-text {
             @include base.display-text($back-font-size, 800, 1);
             color: $back-color;
-            opacity: .06;
+            opacity: .1;
         }
     }
 
@@ -49,7 +49,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
 
         // When the foreground has an image, make it fit within the container
         img {
@@ -62,5 +61,20 @@
 
 // A default container that uses the layered-container mixin, with default parameters.
 .main-layered-container {
-    @include layered-container;
+    @include layered-container
+    (
+        $min-height: calc(80vh - var(--hedr-h) - var(--main-margin)),
+        $back-font-size: clamp(20rem, 8.333vw + 160px, 30rem)
+    );
+}
+
+@media (max-width: 768px) {
+    .main-layered-container {
+        @include layered-container
+        (
+            $min-height: calc(var(--hedr-h) - var(--main-margin-sm)),
+            $back-font-size: clamp(10rem, 8.333vw, 20rem)
+        );
+        padding-top: var(--hedr-h);
+    }
 }

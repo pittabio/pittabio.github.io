@@ -6,7 +6,7 @@ description: "The requested page was not found. Return to the main level of Fabi
 ---
 
 <!-- Page Container -->
-<div class="error-container">
+<div class="main-layered-container">
 
     <!-- BACKGROUND -->
     <div class="layer--bg" aria-hidden="true">
@@ -19,11 +19,15 @@ description: "The requested page was not found. Return to the main level of Fabi
         <!-- Logo -->
         <img src="media/fox_sad.png" alt="Fox is sad" />
 
+        <br>
+
         <!-- Title -->
         <h1 data-i18n="404.title"></h1>
 
         <!-- Description -->
         <span data-i18n-html="404.subtitle"></span>
+
+        <br>
 
         <!-- Button -->
         <a class="btn" href="{{ '/' | relative_url }}" data-i18n="404.button"></a>
