@@ -297,8 +297,9 @@ img {
     /* # MOBILE # */
 
 @media (max-width: 768px) {
-    // The main content landmark of the page.
+    // The main content landmark of the page
     main {
+        margin-top:clamp(3rem, 3.922vw + 2.118rem, 4rem);
         padding: var(--main-padding-sm);
     }
 
