@@ -10,12 +10,26 @@
         $justify: center
     );
 
-    // Fill the screen minus the header
+    // Section top margin
+    min-height: calc(100vh - var(--hedr-h));
+
+    // Gap between elements
     gap: clamp(3rem, 6vw, 8rem);
+
+    > * {
+        min-width: 0;
+    }
+
+    > img {
+        flex: 1 1 300px;
+        min-width: 0;
+        max-width: 750px;
+    }
 }
 
 // Section specific width
 .hero-content {
+    flex: 1 1 400px;
     max-width: 700px;
     flex-shrink: 0;
 }
@@ -126,17 +140,16 @@
     // The hero container
     .sec-hero {
         @include base.container-style (
-            $max-width: none,
             $direction: column,
             $align: center
         );
 
         // Layout
-        margin-top: -3rem;
-        gap: .75rem;
+        gap: clamp(1rem, .833vw, 2rem);
         text-align: center;
 
         // Order of elements
+        > img { order: 3; }
         .hero-content {
             display: contents;
 
@@ -150,7 +163,15 @@
             > .btn.big  { order: 5; }
             > .hero-info-box { order: 6; }
         }
-        > img { order: 3; }
+
+        // Reset image layout
+        > img {
+            flex: 0 1 auto;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            min-width: 0;
+        }
     }
 
     // The info container
@@ -177,16 +198,12 @@
         }
     }
 
-    // The scroll indicator should not be visible
-    .scroll-indicator { display: none; }
-
     //#endregion
 
     //#region ABOUT
 
     .sec-about {
         @include base.container-style (
-            $max-width: none,
             $direction: column,
             $align: center
         );
