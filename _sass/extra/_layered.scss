@@ -63,7 +63,7 @@
 .main-layered-container {
     @include layered-container
     (
-        $min-height: calc(80vh - var(--hedr-h) - var(--main-margin)),
+        $min-height: calc(80vh - var(--hedr-h)),
         $back-font-size: clamp(20rem, 8.333vw + 160px, 30rem)
     );
 }
@@ -72,7 +72,7 @@
     .main-layered-container {
         @include layered-container
         (
-            $min-height: calc(var(--hedr-h) - var(--main-margin-sm)),
+            $min-height: calc(var(--hedr-h)),
             $back-font-size: clamp(10rem, 8.333vw, 20rem)
         );
         padding-top: var(--hedr-h);

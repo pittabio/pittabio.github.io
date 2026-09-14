@@ -69,7 +69,7 @@ body {
 // The main content landmark of the page
 main {
     flex: 1 0 auto;
-    margin-top: calc(var(--hedr-h) + var(--main-margin));
+    margin-top: calc(var(--hedr-h));
     padding: var(--main-padding);
 }
 
@@ -189,6 +189,7 @@ em {
 // Default site container
 .main-container {
     @include container-style;
+    padding-top: 2rem;
 }
 
 // FLEXBOX
@@ -298,7 +299,6 @@ img {
 @media (max-width: 768px) {
     // The main content landmark of the page.
     main {
-        margin-top: calc(var(--hedr-h) - var(--main-margin-sm));
         padding: var(--main-padding-sm);
     }
 
