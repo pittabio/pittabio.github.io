@@ -1,4 +1,4 @@
-﻿/* ICON */
+﻿/* BASIC ICON */
 
 // The base of an icon
 %icn-base {
@@ -14,9 +14,9 @@
     display: $display;
 }
 
-/* TRIANGLE used in:
- * "Back To Top" in Footer
- */
+/* TRIANGLE */
+
+// The triangle from svg
 .icn-triangle {
     @include icn($display: inline-block);
 
@@ -39,27 +39,7 @@
     }
 }
 
-/* SCROLL INDICATOR */
-.scroll-indicator {
-    @include icn(40px);
-
-    // Properties
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    border: 1px solid var(--bgbt);
-    border-radius: 100%;
-    animation: bounce 2s infinite;
-
-    // When hovered
-    &:hover {
-        transition: var(--transition);
-        opacity: 1;
-        border-color: var(--accent);
-    }
-}
-
-/* ARROWS */
+/* ARROW */
 
 // The arrow from svg
 %icn-arrow {
@@ -99,6 +79,56 @@
     &.up    { rotate: 180deg; }
 }
 
+/* SCROLL INDICATOR */
+
+// The scroll indicator is a circle that bounce
+.scroll-indicator {
+    @include icn(45px);
+
+    // Properties
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    border: 2px solid var(--bgbt);
+    border-radius: 100%;
+    animation: bounce 2s infinite;
+
+    // The arrow inside is a bit bigger
+    .arrow {
+        @include arrow($dim: 30px);
+    }
+
+    // When hovered
+    &:hover {
+        transition: var(--transition);
+        opacity: 1;
+        border-color: var(--accent);
+    }
+}
+
+/* ANIMATIONS */
+
+// Bounce
+@keyframes bounce {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    50%      { transform: translateX(0) translateY(-6px); }
+}
+
+/** MOBILE **/
+
+@media (max-width: 768px) {
+    /* SCROLL INDICATOR */
+
+    // The scroll indicator should not be visible
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+///////////////
+// OTHERS
+// TODO: UPGRADE
+/*
 .itch-icon {
     transition:
         fill
@@ -115,23 +145,11 @@
     transition: var(--transition);
 }
 
-/* ANIMATIONS */
-
-// Bounce
-@keyframes bounce {
-    0%, 100% { transform: translateX(0) translateY(0); }
-    50%      { transform: translateX(0) translateY(-6px); }
+.scroll-indicator { // MEDIA MOBILE
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 1.5rem auto 0;
 }
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    // SCROLL INDICATOR
-    .scroll-indicator {
-        position: static; // esce dalla modalità "ancorata", torna nel flusso normale
-        bottom: auto;
-        left: auto;
-        transform: none;
-        margin: 1.5rem auto 0;
-    }
-}
+*/
