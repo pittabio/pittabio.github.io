@@ -1,9 +1,7 @@
 @use "../common/base";
 
-//#region HERO
-
 // The hero container
-.cont-hero {
+.hero {
     @include base.container-style (
         $direction: row,
         $align: center,
@@ -16,10 +14,12 @@
     // Gap between elements
     gap: clamp(3rem, 6vw, 8rem);
 
+    // Universal selector
     > * {
         min-width: 0;
     }
 
+    // Image layout
     > img {
         flex: 1 1 300px;
         min-width: 0;
@@ -30,89 +30,91 @@
     p {
         text-align: left;
     }
-}
 
-// Section specific width
-.hero-div {
-    flex: 1 1 400px;
-    max-width: 700px;
-    flex-shrink: 0;
-}
-
-// The hero tag (shortest description, presentation, who i am)
-.hero-tag {
-    @include base.display-text(
-        .75rem,
-        700
-    );
-
-    color: var(--accent);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-// The title (my name)
-.hero-title {
-    align-self: flex-start;
-    justify-self: flex-start;
-}
-
-// The info container
-.hero-info-box {
-    @include base.flexbox-style(
-        $justify: flex-start,
-        $gap: clamp(1.5rem, 3vw, 2.5rem)
-    );
-
-    border-top: 1px solid var(--border);
-    margin-top: 2rem;
-
-    // The mini-title
-    b {
-        @include base.mini-title;
-        text-align: left;
+    // The hero text section
+    .desc {
+        flex: 1 1 400px;
+        max-width: 700px;
+        flex-shrink: 0;
     }
 
-    // The info
-    span {
-        @include base.display-text(.75rem);
-        letter-spacing: .06em;
+    // The hero tag (shortest description, presentation, who i am)
+    .tag {
+        @include base.display-text(
+            .75rem,
+            700
+        );
+
+        color: var(--accent);
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        opacity: .6;
-        margin-top: .15rem;
+    }
 
+    // The title (my name)
+    .title {
         align-self: flex-start;
-        text-align: left;
+        justify-self: flex-start;
+    }
+
+    // The info container
+    .info-box {
+        @include base.flexbox-style(
+            $justify: flex-start,
+            $gap: clamp(1.5rem, 3vw, 2.5rem)
+        );
+
+        border-top: 1px solid var(--border);
+        margin-top: 2rem;
+
+        // The mini-title
+        b {
+            @include base.mini-title;
+            text-align: left;
+        }
+
+        // The info
+        span {
+            @include base.display-text(.75rem);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            opacity: .6;
+            margin-top: .15rem;
+
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        // The info itself
+        .info {
+            @include base.flexbox-style(
+                $direction: column,
+                $align: flex-start,
+                $gap: .2rem,
+                $prevent-text-wrap: true
+            );
+
+            margin-top: 1rem;
+        }
     }
 }
 
-// The info itself
-.hero-info {
-    @include base.flexbox-style(
-        $direction: column,
-        $align: flex-start,
-        $gap: .2rem,
-        $prevent-text-wrap: true
-    );
+.about {
+    // Layout
+    padding-top: var(--main-gap);
 
-    margin-top: 1rem;
-}
+    .cont {
+        // Gap between elements
+        gap: var(--main-gap);
 
-//#endregion
+        // The images in the container
+        img {
+            width: clamp(40px, 0.521vw + 30px, 50px);
+        }
 
-//#region ABOUT
-
-.cont {
-    gap: 1rem;
-
-    // The images in the container
-    img {
-        width: clamp(40px, 0.521vw + 30px, 50px);
-    }
-
-    // The mini-title
-    b {
-        @include base.mini-title;
+        // The mini-title
+        b {
+            @include base.mini-title;
+        }
     }
 }
 
@@ -121,69 +123,72 @@
 /* MOBILE */
 @media (max-width: 768px) {
 
-    //#region HERO
-
     // The hero container
-    .sec-hero {
+    .hero {
         @include base.container-style (
-            $direction: column,
-            $align: center
+            $direction: column
         );
 
         // Layout
-        gap: clamp(1rem, .833vw, 2rem);
-        text-align: center;
+        gap: var(--main-gap);
 
-        // Order of elements
-        > img { order: 3; }
-        .hero-content {
+        // The hero text section
+        div {
             display: contents;
+            text-align: center;
 
-            > .hero-tag { order: 1; }
-            > .hero-title {
+            > .tag { order: 1; }
+            > .title {
                 order: 2;
                 align-self: center;
                 justify-self: center;
             }
-            > p { order: 4; }
+            > p {
+                order: 4;
+                text-align: center;
+            }
             > .btn.big  { order: 5; }
-            > .hero-info-box { order: 6; }
+            > .info-box { order: 6; }
         }
 
-        // Reset image layout
+        // Image layout
         > img {
+            order: 3;
             flex: 0 1 auto;
             width: 100%;
             max-width: 320px;
             height: auto;
             min-width: 0;
         }
-    }
 
-    // The info container
-    .hero-info-box {
-        @include base.flexbox-style(
-            $wrap: wrap,
-            $gap: 1.25rem 2.5rem
-        );
+        // The info container
+        .info-box {
+            @include base.flexbox-style(
+                $wrap: wrap,
+                $gap: 1.25rem 2.5rem
+            );
 
-        // The info itself
-        .hero-info {
-            align-items: center;
+            // The info itself
+            .info {
+                align-items: center;
 
-            // Text align
-            b, span {
-                align-self: center;
-                text-align: center;
-            }
+                // Text align
+                b, span {
+                    align-self: center;
+                    text-align: center;
+                }
 
-            // Last child flexbox
-            &:last-child {
-                flex-basis: 100%;
+                // Last child flexbox
+                &:last-child {
+                    flex-basis: 100%;
+                }
             }
         }
     }
 
-    //#endregion
-
+    .about {
+        .cont {
+            padding-top: var(--main-gap);
+        }
+    }
 }
