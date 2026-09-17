@@ -24,6 +24,9 @@
     --main-padding: 0 clamp(5rem, 4.167vw, 10rem);
     --main-padding-sm: 0 clamp(2rem, 1.667vw, 4rem);
 
+    // Gap 1rem to 2rem
+    --main-gap: clamp(1rem, .833vw, 2rem);
+
     /* Design Tokens */
     --border: #33333388;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
