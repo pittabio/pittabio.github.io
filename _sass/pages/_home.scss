@@ -98,9 +98,10 @@
     }
 }
 
+// The about "choose me" section
 .about {
     // Layout
-    padding-top: var(--main-gap);
+    padding-top: 3rem;
 
     .cont {
         // Gap between elements
@@ -117,8 +118,6 @@
         }
     }
 }
-
-//#endregion
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -186,6 +185,7 @@
         }
     }
 
+    // The about "choose me" section
     .about {
         .cont {
             padding-top: var(--main-gap);
