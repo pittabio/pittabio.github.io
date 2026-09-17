@@ -5,9 +5,9 @@ description: The home page
 ---
 
 <!-- # HERO SECTION # -->
-<section id="hero" class="sec-hero">
+<section id="hero" class="cont-hero">
     <!-- LEFT -->
-    <div class="hero-content">
+    <div class="hero-div">
         <!-- Text: tag, header and presentation -->
         <span class="hero-tag" data-i18n="hero.tag"></span>
         <h1 class="hero-title">Fabio Pittaccio</h1>
@@ -52,34 +52,33 @@ description: The home page
 </section><!-- /hero section/ -->
 
 <!-- ## SHORT ABOUT ## -->
-<section id="about" class="main-container" style="padding: 3rem;">
+<section id="about" class="cont" style="padding: 3rem;">
     <h2 data-i18n="about.title"></h2>
     <!-- Grid -->
-	<div class="grid-column">
+	<div class="grid-column"><!-- TODO: Change the texts -->
         <!-- UE Specialist -->
-        <div class="about-item">
-            <div class="about-icon">🚀</div>
-            <h3 data-i18n="about.item1.title"></h3>
+        <div class="cont">
+            <img src="media/logo/unreal.png" alt="Unreal Engine Logo" />
+            <b data-i18n="about.item1.title"></b>
             <p data-i18n="about.item1.desc"></p>
         </div>
         <!-- Cross-Platform -->
-        <div class="about-item">
-            <div class="about-icon">📱</div>
-            <h3 data-i18n="about.item2.title"></h3>
+        <div class="cont">
+            <img src="media/logo/android-head_3D.png" alt="Android Logo" />
+            <b data-i18n="about.item2.title"></b>
             <p data-i18n="about.item2.desc"></p>
         </div>
         <!-- Full-Cycle Dev -->
-        <div class="about-item">
-            <div class="about-icon">🛠️</div>
-            <h3 data-i18n="about.item3.title"></h3>
+        <div class="cont">
+            <img src="media/logo/github.png" alt="GitHub Logo" />
+            <b data-i18n="about.item3.title"></b>
             <p data-i18n="about.item3.desc"></p>
         </div>
     </div><!-- /grid/ -->
 
     <!-- Button: Find More -->
-    <a class="btn" href="about.html" style="align-self: center;">
+    <a class="btn" href="about.html">
         <span data-i18n="about.find_more"></span>
-        <!-- svg arrow -->
         <span class="arrow right"></span>
     </a>
 

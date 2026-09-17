@@ -3,7 +3,7 @@
 //#region HERO
 
 // The hero container
-.sec-hero {
+.cont-hero {
     @include base.container-style (
         $direction: row,
         $align: center,
@@ -25,10 +25,15 @@
         min-width: 0;
         max-width: 750px;
     }
+
+    // Text alignment
+    p {
+        text-align: left;
+    }
 }
 
 // Section specific width
-.hero-content {
+.hero-div {
     flex: 1 1 400px;
     max-width: 700px;
     flex-shrink: 0;
@@ -62,16 +67,10 @@
     border-top: 1px solid var(--border);
     margin-top: 2rem;
 
-    // Bold (big text)
+    // The mini-title
     b {
-        @include base.display-text(
-            1.5rem,
-            800,
-            1
-        );
-
-        color: var(--accent);
-        align-self: flex-start;
+        @include base.mini-title;
+        text-align: left;
     }
 
     // The info
@@ -97,6 +96,24 @@
     );
 
     margin-top: 1rem;
+}
+
+//#endregion
+
+//#region ABOUT
+
+.cont {
+    gap: 1rem;
+
+    // The images in the container
+    img {
+        width: clamp(40px, 0.521vw + 30px, 50px);
+    }
+
+    // The mini-title
+    b {
+        @include base.mini-title;
+    }
 }
 
 //#endregion

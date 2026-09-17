@@ -136,7 +136,7 @@ h6 {
 
 // Paragraphs
 p {
-    // inherit from body
+    text-align: center;
 }
 
 // Links: inherit paragraph style and add hover effect
@@ -160,6 +160,13 @@ b {
     font-weight: 700;
 }
 
+// Bolt mini title
+@mixin mini-title {
+    @include display-text(1.5rem, 800, 1);
+    color: var(--accent);
+}
+
+// Italic
 em {
     font-style: italic;
 }
@@ -171,8 +178,8 @@ em {
     $max-width: var(--max-width),
     $margin: 0 auto,
     $direction: column,
-    $align: flex-start,
-    $justify: flex-start,
+    $align: center,
+    $justify: center,
     $wrap: nowrap
 ) {
     max-width: $max-width;
@@ -187,7 +194,7 @@ em {
 }
 
 // Default site container
-.main-container {
+.cont {
     @include container-style;
     padding-top: 2rem;
 }
