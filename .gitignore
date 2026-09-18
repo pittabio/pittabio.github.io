@@ -5,15 +5,14 @@ qodana.yaml
 # macOS
 .DS_Store
 
-# Jekyll / Windows
+# Jekyll
 _site/
 .jekyll-cache/
 .jekyll-metadata
 .editorconfig
-
-# Virtual Server for test
 .server/
 
 # Media
+.download/
 media/games/wizard-scape/gems/square/
 media/banner/gimp/
