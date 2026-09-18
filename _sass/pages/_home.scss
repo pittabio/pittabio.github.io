@@ -1,4 +1,5 @@
 @use "../common/base";
+@use "../extra/sections";
 
 // The hero container
 .hero {
@@ -107,14 +108,15 @@
         // Gap between elements
         gap: var(--main-gap);
 
-        // The images in the container
-        img {
-            width: clamp(40px, 0.521vw + 30px, 50px);
-        }
-
-        // The mini-title
+        // The mini title
         b {
             @include base.mini-title;
+            text-align: center;
+        }
+
+        // The mini images
+        img {
+            @extend %img-skills;
         }
     }
 }

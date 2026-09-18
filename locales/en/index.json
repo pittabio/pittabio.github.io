@@ -27,16 +27,25 @@
   "about": {
     "title": "Why choose me?",
     "item1": {
-      "title": "UE5 Gameplay Specialist",
-      "desc": "I develop immersive experiences using the latest Unreal Engine 5 technologies, from Blueprint to C++"
+      "title": "C++ Systems Architecture",
+      "desc": [
+          "I don't just wire up Blueprints: I design modular, interface-driven C++ systems",
+          "(save pipelines, actor-agnostic components, custom subsystems) built to scale with the project."
+      ]
     },
     "item2": {
-      "title": "Cross-Platform",
-      "desc": "Consolidated experience in publishing and optimizing titles for PC and Android devices"
+      "title": "Gameplay Mechanics Engineering",
+      "desc": [
+          "From custom movement (dash, climbing, sliding) to combat, AI behavior, and environmental interaction.",
+          "I build the core mechanics that make a game feel responsive and alive."
+      ]
     },
     "item3": {
       "title": "Full-Cycle Dev",
-      "desc": "Complete project management: from initial concept to publication"
+      "desc": [
+          "From core mechanic to complete game loop: save/load, UI, localization, leaderboards.",
+          "I take projects all the way to a polished, shippable experience."
+      ]
     },
     "find_more": "Find out more"
   },
