@@ -1,5 +1,13 @@
 @use "../common/base";
 
+%img-skills {
+    width: clamp(40px, 0.521vw + 30px, 50px);
+    height: clamp(40px, 0.521vw + 30px, 50px);
+    object-fit: contain;
+    object-position: center;
+    transition: var(--transition);
+}
+
 /* Skills Bar */
 .skills {
     @include base.flexbox-style(
@@ -15,10 +23,8 @@
     justify-self: center;
 
     img {
-        width: clamp(40px, 0.521vw + 30px, 50px);
-        object-fit: contain;
+        @extend %img-skills;
         filter: grayscale(100%);
-        transition: var(--transition);
 
         &:hover {
             filter: grayscale(0%);
