@@ -21,8 +21,11 @@
     --max-width-sm: 1300px;
 
     // Paddings
-    --main-padding: 0 clamp(5rem, 4.167vw, 10rem);
-    --main-padding-sm: 0 clamp(2rem, 1.667vw, 4rem);
+    --pad-big: clamp(5rem, 4.167vw, 10rem);
+    --main-padding: 0 var(--pad-big);
+
+    --pad-sm: clamp(2rem, 1.667vw, 4rem);
+    --main-padding-sm: 0 var(--pad-sm);
 
     // Gap 1rem to 2rem
     --main-gap: clamp(1rem, .833vw, 2rem);
