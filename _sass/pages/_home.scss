@@ -104,6 +104,7 @@
     // Layout
     padding-top: 3rem;
 
+    // The container inside
     .cont {
         // Gap between elements
         gap: var(--main-gap);
@@ -119,6 +120,12 @@
             @extend %img-skills;
         }
     }
+}
+
+// The featured projects section
+.features {
+    // Layout
+    padding-top: 3rem;
 }
 
 /* MOBILE */

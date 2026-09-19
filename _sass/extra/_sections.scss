@@ -1,5 +1,6 @@
 @use "../common/base";
 
+/* Little images skills */
 %img-skills {
     width: clamp(40px, 0.521vw + 30px, 50px);
     height: clamp(40px, 0.521vw + 30px, 50px);
@@ -33,7 +34,46 @@
     }
 }
 
+/* Card */
+.card {
+    border: 2px solid var(--border);
+    border-radius: var(--rad-big);
+    padding: var(--main-gap);
+    gap: var(--main-gap);
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Equal cards height
+    transition: transform var(--transition), box-shadow var(--transition);
+
+    // The image inside the card
+    img {
+        width: 100%;
+        object-fit: cover; // or contain to not cut
+        aspect-ratio: 16 / 9;
+    }
+
+    // The links inside the card
+    a {
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    // The title of the card
+    b {
+        @include base.mini-title;
+        text-align: center;
+    }
+
+    &:hover {
+        border-color: var(--accent); /* The border turns orange */
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
+    }
+}
+
+/* MEDIA MOBILE */
 @media (max-width: 768px) {
+    /* Little images skills */
     .skills img {
         width: clamp(24px, 0.313vw + 18px, 30px);
     }

@@ -15,7 +15,7 @@ description: The home page
         <br>
 
         <!-- View Projects Button -->
-        <a class="btn big" href="#">
+        <a class="btn big" href="projects.html" target="_blank">
             <span data-i18n="hero.projects"></span>
             <span class="arrow right"></span>
         </a>
@@ -55,7 +55,7 @@ description: The home page
 <section id="about" class="cont about">
     <h2 data-i18n="about.title"></h2>
     <!-- Grid -->
-	<div class="grid-column"><!-- TODO: Change the texts -->
+	<div class="grid-column">
         <!-- UE Specialist -->
         <div class="cont">
             <img src="media/index/about/cplusplus.png" alt="C++ logo" />
@@ -78,157 +78,105 @@ description: The home page
 
     <br>
     <!-- Button: Find More -->
-    <a class="btn" href="about.html">
+    <a class="btn" href="about.html" target="_blank">
         <span data-i18n="about.find_more"></span>
         <span class="arrow right"></span>
     </a>
 
     <!-- Technologies icons bar -->
     {% include sections/skills.html %}
-</section> <!-- /about section/ -->
+</section><!-- /about section/ -->
 
-	<!-- ## FEATURED PROJECTS ## -->
-	<section class="projects-section" id="projects">
-		<div class="section-container">
-			<!-- Title -->
-			<h2 class="section-title" data-i18n="projects.title"></h2>
+<!-- ## FEATURED PROJECTS ## -->
+<section id="projects" class="cont features">
+    <!-- Title -->
+    <h2 data-i18n="projects.title"></h2>
+    <!-- Description -->
+    <p data-i18n="projects.desc"></p>
 
-			<!-- Description -->
-			<div class="about-more">
-				<p data-i18n="about.item1.desc"></p>
-			</div>
+    <br>
 
-			<!-- GRID -->
-			<div class="projects-grid">
+    <!-- GRID -->
+    <div class="grid-column">
 
-				<!-- ## Ruins' Rhapsody ## -->
-				<div class="project-card">
-					<!-- Title and image -->
-					<a href="projects/ruins-rhapsody.html" class="project-link" target="_blank">
-						<h3 class="project-name" data-i18n="projects.ruins.name"></h3>
-					</a>
-					<img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody banner"
-						 class="project-image" onclick="openOneImage(this)"
+        <!-- ## Ruins' Rhapsody ## -->
+        <div class="card">
+            <!-- Title link -->
+            <a href="projects/ruins-rhapsody.html" target="_blank"><b data-i18n="projects.ruins.name"></b></a>
+            <!-- Image -->
+            <img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody Banner" onclick="openPopup(this)"/>
+            <!-- Description -->
+            <p class="project-desc" data-i18n-html="projects.ruins.desc"></p>
+            <!-- Buttons -->
+            <div class="flexbox">
+                <!-- itch -->
+                <a class="btn full left" href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank">
+                    <span data-i18n="projects.link1"></span>
+                    <span class="itch-svg"></span>
+                </a>
+                <!-- details -->
+                <a class="btn full right" href="projects/ruins-rhapsody.html" target="_blank">
+                    <span data-i18n="projects.link2"></span>
+                    <span class="arrow right"></span>
+                </a>
+            </div><!-- /buttons/ -->
+        </div><!-- /card/ -->
 
-						 data-img1="../media/games/ruins-rhapsody/banner.jpg"
-						 data-desc1="The Ruins' Rhapsody banner"
-					/>
-					<!-- Description and links -->
-					<p class="project-desc" data-i18n-html="projects.ruins.desc"></p>
-					<div class="project-links">
-						<!-- itch.io Button -->
-						<a href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank" class="link-primary">
-							<span data-i18n="projects.link1"></span>
-							<!-- logo -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
-								<!-- Path with fill -->
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
-								      fill="currentColor" fill-opacity="0.3"></path>
-								<!-- Path with outline (stroke) -->
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-							</svg>
-						</a>
-						<!-- Details Button -->
-						<a href="projects/ruins-rhapsody.html" class="link-secondary">
-							<span data-i18n="projects.link2"></span>
-							<!-- svg arrow -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-						</a>
-					</div>
-				</div>
+        <!-- ## Goblin Jr. Adventure ## -->
+        <div class="card">
+            <!-- Title link -->
+            <a href="projects/goblin-jr.html" target="_blank"><b data-i18n="projects.goblin.name"></b></a>
+            <!-- Image -->
+            <img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure Banner" onclick="openPopup(this)"/>
+            <!-- Description -->
+            <p class="project-desc" data-i18n-html="projects.goblin.desc"></p>
+            <!-- Buttons -->
+            <div class="flexbox">
+                <!-- itch -->
+                <a class="btn full left" href="https://pittabio.itch.io/goblin-jr-adventure" target="_blank">
+                    <span data-i18n="projects.link1"></span>
+                    <span class="itch-svg"></span>
+                </a>
+                <!-- details -->
+                <a class="btn full right" href="projects/goblin-jr.html" target="_blank">
+                    <span data-i18n="projects.link2"></span>
+                    <span class="arrow right"></span>
+                </a>
+            </div><!-- /buttons/ -->
+        </div><!-- /card/ -->
 
-				<!-- ## Goblin Jr. Adventure ## -->
-				<div class="project-card">
-					<!-- Title and image -->
-					<a href="projects/goblin-jr.html" class="project-link" target="_blank">
-						<h3 class="project-name" data-i18n="projects.goblin.name"></h3>
-					</a>
-					<img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure banner"
-						 class="project-image" onclick="openOneImage(this)"
+        <!-- ## Zombie Siege Chronicles ## -->
+        <div class="card">
+            <!-- Title link -->
+            <a href="projects/zombie-siege.html" target="_blank"><b data-i18n="projects.zombie.name"></b></a>
+            <!-- Image -->
+            <img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles Banner" onclick="openPopup(this)"/>
+            <!-- Description -->
+            <p class="project-desc" data-i18n-html="projects.zombie.desc"></p>
+            <!-- Buttons -->
+            <div class="flexbox">
+                <!-- details -->
+                <a class="btn full left" href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank">
+                    <span data-i18n="projects.link1"></span>
+                    <span class="itch-svg"></span>
+                </a>
+                <!-- itch -->
+                <a class="btn full right" href="projects/zombie-siege.html">
+                    <span data-i18n="projects.link2"></span>
+                    <span class="arrow right"></span>
+                </a>
+            </div><!-- /buttons/ -->
+        </div><!-- /card/ -->
+    </div><!-- /grid/ -->
 
-						 data-img1="../media/games/goblin-jr/banner.png"
-						 data-desc1="The Goblin Jr. Adventure banner"
-					/>
-					<!-- Description and links -->
-					<p class="project-desc" data-i18n-html="projects.goblin.desc"></p>
-					<div class="project-links">
-						<!-- itch.io Button -->
-						<a href="https://pittabio.itch.io/goblin-jr-adventure" target="_blank" class="link-primary">
-							<span data-i18n="projects.link1"></span>
-							<!-- logo -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
-								<!-- Path with fill -->
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
-								      fill="currentColor" fill-opacity="0.3"></path>
-								<!-- Path with outline (stroke) -->
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-							</svg>
-						</a>
-						<!-- Details Button -->
-						<a href="projects/goblin-jr.html" class="link-secondary">
-							<span data-i18n="projects.link2"></span>
-							<!-- svg arrow -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-						</a>
-					</div>
-				</div>
+    <br>
 
-				<!-- ## Zombie Siege Chronicles ## -->
-				<div class="project-card">
-					<!-- Title and image -->
-					<a href="projects/zombie-siege.html" class="project-link" target="_blank">
-						<h3 class="project-name" data-i18n="projects.zombie.name"></h3>
-					</a>
-					<img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles banner"
-						 class="project-image" onclick="openOneImage(this)"
-
-						 data-img1="../media/games/zombie-siege/banner.png"
-						 data-desc1="The Zombie Siege Chronicles banner"
-					/>
-					<!-- Description and links -->
-					<p class="project-desc" data-i18n-html="projects.zombie.desc"></p>
-					<div class="project-links">
-						<!-- itch.io Button -->
-						<a href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank" class="link-primary">
-							<span data-i18n="projects.link1"></span>
-							<!-- logo -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="itch-icon" width="18px" height="18px" viewBox="0 0 18 18">
-								<!-- Path with fill -->
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M6.24475 9.75H1.75V13.25C1.75 14.3546 2.64543 15.25 3.75 15.25H14.25C15.3546 15.25 16.25 14.3546 16.25 13.25V9.75H11.727V10.7329C11.727 11.2852 11.2793 11.7329 10.727 11.7329H7.24475C6.69247 11.7329 6.24475 11.2852 6.24475 10.7329V9.75Z"
-								      fill="currentColor" fill-opacity="0.3"></path>
-								<!-- Path with outline (stroke) -->
-								<path d="M11.5 5.75L9 8.25L6.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M9 8.25V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M16.214 9.75H11.75V10.75C11.75 11.302 11.302 11.75 10.75 11.75H7.24999C6.69799 11.75 6.24999 11.302 6.24999 10.75V9.75H1.78699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-								<path d="M12 2.75H12.137C12.959 2.75 13.698 3.253 13.999 4.019L16.112 9.398C16.204 9.631 16.25 9.879 16.25 10.129V13.25C16.25 14.355 15.355 15.25 14.25 15.25H3.75C2.645 15.25 1.75 14.355 1.75 13.25V10.129C1.75 9.879 1.797 9.631 1.888 9.398L4.001 4.019C4.302 3.254 5.04 2.75 5.863 2.75H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-							</svg>
-						</a>
-						<!-- Details Button -->
-						<a href="projects/zombie-siege.html" class="link-secondary">
-							<span data-i18n="projects.link2"></span>
-							<!-- svg arrow -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-						</a>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Button -->
-			<div class="about-more">
-				<a href="projects.html" class="hero-bt">
-					<span data-i18n="projects.view_all"></span>
-					<!-- svg arrow -->
-					<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+    <!-- Button: All Projects -->
+    <a class="btn" href="projects.html">
+        <span data-i18n="projects.view_all"></span>
+        <span class="arrow right"></span>
+    </a>
+</section> <!-- /featured section/ -->
 				</a>
 			</div>
 		</div>
