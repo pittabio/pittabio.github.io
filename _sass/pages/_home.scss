@@ -1,7 +1,7 @@
 @use "../common/base";
 @use "../extra/sections";
 
-// The hero container
+/* The hero container */
 .hero {
     @include base.container-style (
         $direction: row,
@@ -25,11 +25,6 @@
         flex: 1 1 300px;
         min-width: 0;
         max-width: 750px;
-    }
-
-    // Text alignment
-    p {
-        text-align: left;
     }
 
     // The hero text section
@@ -99,21 +94,20 @@
     }
 }
 
-// The about "choose me" section
+/* The "choose me" section */
 .about {
     // Layout
     padding-top: 3rem;
+
+    // Text alignment
+    p {
+        text-align: center;
+    }
 
     // The container inside
     .cont {
         // Gap between elements
         gap: var(--main-gap);
-
-        // The mini title
-        b {
-            @include base.mini-title;
-            text-align: center;
-        }
 
         // The mini images
         img {
@@ -122,16 +116,21 @@
     }
 }
 
-// The featured projects section
+// The "featured projects" section
 .features {
     // Layout
     padding-top: 3rem;
+
+    // The grid of cards
+    .grid-column {
+        gap: var(--main-gap);
+    };
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
 
-    // The hero container
+    /* The hero container */
     .hero {
         @include base.container-style (
             $direction: column
@@ -143,7 +142,6 @@
         // The hero text section
         div {
             display: contents;
-            text-align: center;
 
             > .tag { order: 1; }
             > .title {
@@ -151,11 +149,11 @@
                 align-self: center;
                 justify-self: center;
             }
-            > p {
-                order: 4;
-                text-align: center;
+            > p { order: 4; }
+            > .btn.big  {
+                order: 5;
+                .arrow { display: none; }
             }
-            > .btn.big  { order: 5; }
             > .info-box { order: 6; }
         }
 
@@ -194,10 +192,18 @@
         }
     }
 
-    // The about "choose me" section
+    /* The "choose me" section */
     .about {
+        // The internal containers
         .cont {
+            // Padding between internal containers
             padding-top: var(--main-gap);
         }
+    }
+
+    /* The "featured projects" section */
+    .features {
+        // The subtitle should be in center
+        p[data-i18n="projects.desc"] { text-align: center; }
     }
 }
