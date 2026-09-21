@@ -136,7 +136,7 @@ h6 {
 
 // Paragraphs
 p {
-    text-align: center;
+    text-align: left;
 }
 
 // Links: inherit paragraph style and add hover effect
@@ -161,9 +161,11 @@ b {
 }
 
 // Bolt mini title
-@mixin mini-title {
+@mixin mini-title($accent: true) {
     @include display-text(1.5rem, 800, 1);
-    color: var(--accent);
+    @if($accent) {
+        color: var(--accent);
+    }
 }
 
 // Italic

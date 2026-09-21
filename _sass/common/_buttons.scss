@@ -21,6 +21,7 @@
     border: 1px solid;
     cursor: pointer;
     transition: var(--transition);
+    white-space: nowrap; //
 
     // Typography
     font-family: var(--font-playfair), serif;
@@ -30,7 +31,6 @@
 
     & img {
         display: inline-block;
-        height: 16px;
         filter: grayscale(100%) opacity(1);
         transition: var(--transition);
     }
@@ -156,16 +156,16 @@ button, .btn {
     }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
     button, .btn {
         --btn-padding: .8rem 1.4rem;
+        //height: 100%;
 
         // Big button
         &.big {
             --btn-padding: 1.1rem 2.6rem;
             --btn-radius: calc(var(--rad-big) - 2px);
         }
-
-        &:last-child { border-bottom: none; }
     }
 }
