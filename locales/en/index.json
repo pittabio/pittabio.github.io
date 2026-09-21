@@ -1,99 +1,103 @@
 ﻿{
-  "head_title": "Fabio Pittaccio · Gameplay Developer",
+    "head_title": "Fabio Pittaccio · Gameplay Developer",
 
-  "hero": {
-    "tag": "Gameplay Developer · Unreal Engine C++",
-    "cta": "View Projects",
-    "presentation": [
-      "I am a <strong>Gameplay Developer</strong> specialized in <strong>Unreal Engine</strong> with a solid foundation in C++,",
-      "dedicated to creating engaging and high-performance gaming mechanics.",
-      "My approach covers the entire development cycle: from <em>gameplay architecture</em> to <em>final publication</em>.",
-      "<br><br>",
-      "I combine clean and maintainable code architecture with a constant pursuit of optimization,",
-      "bridging the gap between <em>artistic vision</em> and <em>technical excellence</em>.",
-      "Whether it's exploring ancient ruins or implementing complex AI systems,",
-      "<strong>my goal</strong> is to transform great ideas into solid, high-performance products."
-    ],
-    "projects": "View Projects",
-    "info": {
-      "published": "Published Games",
-      "engine": "Primary Engine",
-      "platforms": "Platforms"
+    "hero": {
+        "tag": "Gameplay Developer · Unreal Engine C++",
+        "cta": "View Projects",
+        "presentation": [
+            "I am a <strong>Gameplay Developer</strong> specialized in <strong>Unreal Engine</strong> with a solid foundation in C++,",
+            "dedicated to creating engaging and high-performance gaming mechanics.",
+            "My approach covers the entire development cycle: from <em>gameplay architecture</em> to <em>final publication</em>.",
+            "<br><br>",
+            "I combine clean and maintainable code architecture with a constant pursuit of optimization,",
+            "bridging the gap between <em>artistic vision</em> and <em>technical excellence</em>.",
+            "Whether it's exploring ancient ruins or implementing complex AI systems,",
+            "<strong>my goal</strong> is to transform great ideas into solid, high-performance products."
+        ],
+        "projects": "View Projects",
+        "info": {
+            "published": "Published Games",
+            "engine": "Primary Engine",
+            "platforms": "Platforms"
+        },
+
+        "image_desc": "<strong>Fabio Pittaccio</strong> (me) during a trip to Villa Gregoriana (Tivoli, Rome)"
     },
 
-    "image_desc": "<strong>Fabio Pittaccio</strong> (me) during a trip to Villa Gregoriana (Tivoli, Rome)"
-  },
-
-  "about": {
-    "title": "Why choose me?",
-    "item1": {
-      "title": "C++ Systems Architecture",
-      "desc": [
-          "I don't just wire up Blueprints: I design modular, interface-driven C++ systems",
-          "(save pipelines, actor-agnostic components, custom subsystems) built to scale with the project."
-      ]
-    },
-    "item2": {
-      "title": "Gameplay Mechanics Engineering",
-      "desc": [
-          "From custom movement (dash, climbing, sliding) to combat, AI behavior, and environmental interaction.",
-          "I build the core mechanics that make a game feel responsive and alive."
-      ]
-    },
-    "item3": {
-      "title": "Full-Cycle Dev",
-      "desc": [
-          "From core mechanic to complete game loop: save/load, UI, localization, leaderboards.",
-          "I take projects all the way to a polished, shippable experience."
-      ]
-    },
-    "find_more": "Find out more"
-  },
-
-  "projects": {
-    "title": "Featured Projects",
-    "link1": "itch.io",
-    "link2": "Details",
-    "view_all": "View all projects",
-
-    "ruins": {
-      "name": "Ruins' Rhapsody",
-      "desc": [
-        "A dynamic adventure inspired by pillars like Tomb Raider.",
-        "Play as an archaeologist searching for a mythical rune, amid environmental puzzles, vertical exploration",
-        "and intense combat in ancient ruins.",
-        "The project highlights the management of complex movement systems and a cinematic atmosphere",
-        "in Unreal Engine."
-      ]
+    "about": {
+        "title": "Why choose me?",
+        "item1": {
+            "title": "C++ Systems Architecture",
+            "desc": [
+                "I don't just wire up Blueprints: I design modular, interface-driven C++ systems",
+                "(save pipelines, actor-agnostic components, custom subsystems) built to scale with the project."
+            ]
+        },
+        "item2": {
+            "title": "Gameplay Mechanics Engineering",
+            "desc": [
+                "From custom movement (dash, climbing, sliding) to combat, AI behavior, and environmental interaction.",
+                "I build the core mechanics that make a game feel responsive and alive."
+            ]
+        },
+        "item3": {
+            "title": "Full-Cycle Dev",
+            "desc": [
+                "From core mechanic to complete game loop: save/load, UI, localization, leaderboards.",
+                "I take projects all the way to a polished, shippable experience."
+            ]
+        },
+        "find_more": "Find out more"
     },
 
-    "goblin": {
-      "name": "Goblin Jr. Adventure",
-      "desc": [
-        "A colorful and vibrant platformer set in stylized cubic worlds.",
-        "Designed with a focus on accessibility and immediate fun,",
-        "the game challenges players to guide a small goblin through traps and secrets.",
-        "An example of clean game design and visual optimization for a smooth and engaging gaming experience."
-      ]
+    "projects": {
+        "title": "Featured Projects",
+        "desc": [
+            "A selection of key projects showcasing my software architecture and development approach.",
+            "Visit the full page to explore the complete portfolio."
+        ],
+        "link1": "itch.io",
+        "link2": "Details",
+        "view_all": "View all projects",
+
+        "ruins": {
+            "name": "Ruins' Rhapsody",
+            "desc": [
+                "A dynamic adventure inspired by pillars like Tomb Raider.",
+                "Play as an archaeologist searching for a mythical rune, amid environmental puzzles, vertical exploration",
+                "and intense combat in ancient ruins.",
+                "The project highlights the management of complex movement systems and a cinematic atmosphere",
+                "in Unreal Engine."
+            ]
+        },
+
+        "goblin": {
+            "name": "Goblin Jr. Adventure",
+            "desc": [
+                "A colorful and vibrant platformer set in stylized cubic worlds.",
+                "Designed with a focus on accessibility and immediate fun,",
+                "the game challenges players to guide a small goblin through traps and secrets.",
+                "An example of clean game design and visual optimization for a smooth and engaging gaming experience."
+            ]
+        },
+
+        "zombie": {
+            "name": "Zombie Siege Chronicles",
+            "desc": [
+                "Developed for the 2024 Rookie Awards, this isometric tower defense game takes survival",
+                "to a new strategic level.",
+                "Defend your base from relentless hordes of undead using special structures, barriers, and upgradeable turrets.",
+                "The project demonstrates the ability to handle dynamic events and enemy AI with unique abilities in UE5."
+            ]
+        }
     },
 
-    "zombie": {
-      "name": "Zombie Siege Chronicles",
-      "desc": [
-        "Developed for the 2024 Rookie Awards, this isometric tower defense game takes survival",
-        "to a new strategic level.",
-        "Defend your base from relentless hordes of undead using special structures, barriers, and upgradeable turrets.",
-        "The project demonstrates the ability to handle dynamic events and enemy AI with unique abilities in UE5."
-      ]
+    "contact": {
+        "tag": "Available for Work",
+        "title": "Let's build something<br><em>together.</em>",
+        "subtitle": "Freelance • Remote • Open to new opportunities",
+        "badge": "Open Contacts",
+        "or": "or",
+        "cta": "Full contact page"
     }
-  },
-
-  "contact": {
-    "tag": "Available for Work",
-    "title": "Let's build something<br><em>together.</em>",
-    "subtitle": "Freelance • Remote • Open to new opportunities",
-    "badge": "Open Contacts",
-    "or": "or",
-    "cta": "Full contact page"
-  }
 }
