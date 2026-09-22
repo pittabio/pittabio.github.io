@@ -71,6 +71,49 @@
     }
 }
 
+/* Badge */
+//#region Badge
+
+// The badge itself
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 80, 0, 0.1);
+    border: 1px solid rgba(255, 80, 0, 0.25);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+// Before the text, there is a pulsing circle
+.badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+// the pulse animation
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+//#endregion
+
+/* A line divider */
+.line {
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
 /* MEDIA MOBILE */
 @media (max-width: 768px) {
     /* Little images skills */
