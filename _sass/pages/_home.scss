@@ -34,18 +34,6 @@
         flex-shrink: 0;
     }
 
-    // The hero tag (shortest description, presentation, who i am)
-    .tag {
-        @include base.display-text(
-            .75rem,
-            700
-        );
-
-        color: var(--accent);
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-    }
-
     // The title (my name)
     .title {
         align-self: flex-start;
