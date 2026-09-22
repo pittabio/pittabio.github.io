@@ -136,7 +136,8 @@ h6 {
 
 // Paragraphs
 p {
-    text-align: left;
+    text-align: justify;
+    hyphens: auto
 }
 
 // Links: inherit paragraph style and add hover effect
