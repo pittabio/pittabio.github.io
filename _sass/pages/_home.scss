@@ -10,7 +10,7 @@
     );
 
     // Section top margin
-    min-height: calc(100vh - var(--hedr-h));
+    min-height: calc(100vh - var(--hedr-h) - var(--pad-top));
 
     // Gap between elements
     gap: clamp(3rem, 6vw, 8rem);
@@ -96,9 +96,6 @@
 
 /* The "choose me" section */
 .about {
-    // Layout
-    padding-top: 3rem;
-
     // Text alignment
     p {
         text-align: center;
@@ -118,9 +115,6 @@
 
 // The "featured projects" section
 .features {
-    // Layout
-    padding-top: 3rem;
-
     // The grid of cards
     .grid-column {
         gap: var(--main-gap);
@@ -137,6 +131,7 @@
         );
 
         // Layout
+        padding-top: calc(var(--pad-top) * -1);
         gap: var(--main-gap);
 
         // The hero text section

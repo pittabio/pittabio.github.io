@@ -198,6 +198,7 @@ em {
 // Default site container
 .cont {
     @include container-style;
+    padding-top: var(--pad-top);
 }
 
 // FLEXBOX
