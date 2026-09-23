@@ -101,13 +101,6 @@
     }
 }
 
-/* The "contacts" section */
-.cnt {
-    @include base.flexbox-style(
-        //$gap: clamp(1rem, 3vw, 2rem)
-    );
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
 
