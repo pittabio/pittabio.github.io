@@ -47,7 +47,7 @@ description: The home page
     />
 
     <!-- INDICATOR -->
-    <a href="#about" class="scroll-indicator" aria-label="Scroll to the about section">
+    <a class="scroll-indicator" href="#about" aria-label="Scroll to the about section">
         <span class="arrow"></span>
     </a>
 </section><!-- /hero section/ -->
@@ -57,19 +57,19 @@ description: The home page
     <h2 data-i18n="about.title"></h2>
     <!-- Grid -->
 	<div class="grid-column">
-        <!-- UE Specialist -->
+        <!-- C++ -->
         <div class="cont">
             <img src="media/index/about/cplusplus.png" alt="C++ logo" />
             <b data-i18n="about.item1.title"></b>
             <p data-i18n="about.item1.desc"></p>
         </div>
-        <!-- Cross-Platform -->
+        <!-- Game Mechanics -->
         <div class="cont">
             <img src="media/index/about/controller.webp" alt="Android Logo" />
             <b data-i18n="about.item2.title"></b>
             <p data-i18n="about.item2.desc"></p>
         </div>
-        <!-- Full-Cycle Dev -->
+        <!-- Full-Cycle -->
         <div class="cont">
             <img src="media/index/about/circle.png" alt="Full Cycle - arrows circle" />
             <b data-i18n="about.item3.title"></b>
@@ -179,63 +179,42 @@ description: The home page
         <span class="arrow right"></span>
     </a>
 </section> <!-- /featured section/ -->
-				</a>
-			</div>
-		</div>
-	</section> <!-- END featured projects -->
 
-	<!-- ## CONTACT ## -->
-	<section class="contact-section" id="contact">
-		<div class="contact-inner">
+<!-- ## CONTACT ## -->
+<div class="line"></div> <!-- Pause line -->
+<section id="contact" class="cont">
+    <!-- Tag, title, paragraph -->
+    <span class="tag" data-i18n="contact.tag"></span>
+    <h2 data-i18n-html="contact.title"></h2>
+    <p data-i18n="contact.subtitle" style="text-align: center;"></p>
+    <br><!-- break -->
+    <span class="badge" data-i18n="contact.badge"></span> <!-- badge -->
 
-			<!-- TEXT -->
-			<span class="contact-tag" data-i18n="contact.tag"></span>
-			<h2 class="contact-title" data-i18n-html="contact.title"></h2>
-			<p class="contact-subtitle" data-i18n="contact.subtitle"></p>
-			<div class="contact-badge" data-i18n="contact.badge"></div>
+    <!-- Buttons -->
+    <div class="grid-column">
+        <!-- LinkedIn -->
+        <a class="btn outline link" href="https://linkedin.com/in/fabio-pittaccio" target="_blank">
+            <img src="media/logo/linkedin.png" />
+            LinkedIn
+        </a>
+        <!-- GitHub -->
+        <a class="btn outline link" href="https://github.com/pittabio" target="_blank">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxnIGZpbGw9Im5vbmUiPgoJCTxnIGNsaXAtcGF0aD0idXJsKCNTVkdYdjhscGMyWSkiPgoJCQk8cGF0aCBmaWxsPSIjZjBmNmZjIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMiAwQzUuMzcgMCAwIDUuMzcgMCAxMmMwIDUuMzEgMy40MzUgOS43OTUgOC4yMDUgMTEuMzg1Yy42LjEwNS44MjUtLjI1NS44MjUtLjU3YzAtLjI4NS0uMDE1LTEuMjMtLjAxNS0yLjIzNWMtMy4wMTUuNTU1LTMuNzk1LS43MzUtNC4wMzUtMS40MWMtLjEzNS0uMzQ1LS43Mi0xLjQxLTEuMjMtMS42OTVjLS40Mi0uMjI1LTEuMDItLjc4LS4wMTUtLjc5NWMuOTQ1LS4wMTUgMS42Mi44NyAxLjg0NSAxLjIzYzEuMDggMS44MTUgMi44MDUgMS4zMDUgMy40OTUuOTljLjEwNS0uNzguNDItMS4zMDUuNzY1LTEuNjA1Yy0yLjY3LS4zLTUuNDYtMS4zMzUtNS40Ni01LjkyNWMwLTEuMzA1LjQ2NS0yLjM4NSAxLjIzLTMuMjI1Yy0uMTItLjMtLjU0LTEuNTMuMTItMy4xOGMwIDAgMS4wMDUtLjMxNSAzLjMgMS4yM2MuOTYtLjI3IDEuOTgtLjQwNSAzLS40MDVzMi4wNC4xMzUgMyAuNDA1YzIuMjk1LTEuNTYgMy4zLTEuMjMgMy4zLTEuMjNjLjY2IDEuNjUuMjQgMi44OC4xMiAzLjE4Yy43NjUuODQgMS4yMyAxLjkwNSAxLjIzIDMuMjI1YzAgNC42MDUtMi44MDUgNS42MjUtNS40NzUgNS45MjVjLjQzNS4zNzUuODEgMS4wOTUuODEgMi4yMmMwIDEuNjA1LS4wMTUgMi44OTUtLjAxNSAzLjNjMCAuMzE1LjIyNS42OS44MjUuNTdBMTIuMDIgMTIuMDIgMCAwIDAgMjQgMTJjMC02LjYzLTUuMzctMTItMTItMTIiIGNsaXAtcnVsZT0iZXZlbm9kZCIgLz4KCQk8L2c+CgkJPGRlZnM+CgkJCTxjbGlwUGF0aCBpZD0iU1ZHWHY4bHBjMlkiPgoJCQkJPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgyNHYyNEgweiIgLz4KCQkJPC9jbGlwUGF0aD4KCQk8L2RlZnM+Cgk8L2c+Cjwvc3ZnPgo="
+                 alt="GitHub" />
+            Github
+        </a>
+        <!-- itch.io -->
+        <a class="btn outline link" href="https://pittabio.itch.io" target="_blank">
+            <img src="media/logo/itch.png" alt="itch.io mini logo"/>
+            itch.io
+        </a>
+    </div>
 
-			<!-- BUTTONS -->
-			<div class="contact-socials">
+    <br><!-- break -->
 
-				<!-- LinkedIn -->
-				<a href="https://linkedin.com/in/fabio-pittaccio" target="_blank" class="contact-social-link">
-					<img src="media/logo/linkedin.png" alt="LinkedIn logo"/>
-					LinkedIn
-				</a>
-
-				<!-- GitHub -->
-				<a href="https://github.com/pittabio" target="_blank" class="contact-social-link">
-					<img src="media/logo/github.png" alt="GitHub logo"/>
-					Github
-				</a>
-
-				<!-- itch.io -->
-				<a href="https://pittabio.itch.io" target="_blank" class="contact-social-link">
-					<img src="media/logo/itch.png" alt="itch.io logo"/>
-					itch.io
-				</a>
-			</div>
-
-			<!-- Divider -->
-			<div class="contact-divider"><span data-i18n="contact.or"></span></div>
-
-			<!-- Full Contacts Button -->
-			<a href="contacts.html" class="contact-cta">
-				<span data-i18n="contact.cta"></span>
-				<!-- svg arrow -->
-				<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-			</a>
-		</div>
-	</section> <!-- END contact -->
-
-	<!-- ## FOOTER ## -->
-	<div id="footer"></div>
-
-</main>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="scripts/main.js"></script>
-<script src="scripts/overlay.js"></script>
-
-</body>
-</html>
+    <!-- Button: Full Contacts -->
+    <a class="btn" href="contacts.html">
+        <span data-i18n="contact.cta"></span>
+        <span class="arrow right"></span>
+    </a>
+</section> <!-- END contact -->

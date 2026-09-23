@@ -101,12 +101,11 @@
     }
 }
 
-// The "featured projects" section
-.features {
-    // The grid of cards
-    .grid-column {
-        gap: var(--main-gap);
-    };
+/* The "contacts" section */
+.cnt {
+    @include base.flexbox-style(
+        //$gap: clamp(1rem, 3vw, 2rem)
+    );
 }
 
 /* MOBILE */
@@ -188,5 +187,13 @@
     .features {
         // The subtitle should be in center
         p[data-i18n="projects.desc"] { text-align: center; }
+    }
+
+    /* The "contacts" section */
+    .ctn {
+        @include base.flexbox-style(
+            $wrap: wrap,
+            $gap: 1.25rem 2.5rem
+        );
     }
 }
