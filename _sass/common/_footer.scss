@@ -1,7 +1,6 @@
 @use "../common/base";
 
-    /* FOOTER */
-
+/* FOOTER */
 footer {
     // Container
     @include base.container-style(
@@ -10,27 +9,30 @@ footer {
         $justify: space-between
     );
 
+    // Layout
+    background: var(--bg);
+    transition: var(--transition);
+
+    // Grid
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
     // Typography
     font-family: var(--font-playfair), serif;
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1.6;
 
-    // Layout
-    background: var(--bg);
-    transition: var(--transition);
-
     // Margin and border
     margin-top: 3rem;
     padding: 1rem 2rem;
     border-top: 1px solid var(--border);
 
-    // Mini container
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    // Justify elements
+    > :first-child  { justify-self: start; }
+    > :nth-child(2) { justify-self: center; }
+    > :last-child   { justify-self: end; }
 
     // Links
     a {
@@ -59,27 +61,17 @@ footer {
     }
 }
 
-    /* # MOBILE # */
-
+/* # MOBILE # */
 @media (max-width: 768px) {
-    // Footer
     footer {
         // Layout
         max-width: none;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        // Mini container
-        div {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        // The hyphen between the name and the license is hidden on mobile
-        .hyphen {
-            display: none;
-        }
+        // The triangle is not displayed on mobile.
+        .icn-triangle { display: none; }
     }
 }
