@@ -14,7 +14,6 @@
             "Whether it's exploring ancient ruins or implementing complex AI systems,",
             "<strong>my goal</strong> is to transform great ideas into solid, high-performance products."
         ],
-        "projects": "View Projects",
         "info": {
             "published": "Published Games",
             "engine": "Primary Engine",
@@ -58,7 +57,6 @@
         ],
         "link1": "itch.io",
         "link2": "Details",
-        "view_all": "View all projects",
 
         "ruins": {
             "name": "Ruins' Rhapsody",
@@ -94,10 +92,8 @@
 
     "contact": {
         "tag": "Available for Work",
-        "title": "Let's build something<br><em>together.</em>",
-        "subtitle": "Freelance • Remote • Open to new opportunities",
-        "badge": "Open Contacts",
-        "or": "or",
-        "cta": "Full contact page"
+        "title": "Let's build something<br><em>together</em>",
+        "subtitle": "Freelance • Flexible • Open to new opportunities",
+        "cta": "Get in Touch"
     }
 }

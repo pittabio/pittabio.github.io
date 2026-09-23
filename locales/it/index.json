@@ -3,7 +3,7 @@
 
     "hero": {
         "tag": "Gameplay Developer · Unreal Engine C++",
-        "cta": "Vedi progetti",
+        "cta": "Guarda i progetti",
         "presentation": [
             "Sono un <strong>Gameplay Developer</strong> specializzato in <strong>Unreal Engine</strong> con una solida base in C++,",
             "dedicato alla creazione di meccaniche di gioco coinvolgenti e performanti.",
@@ -14,7 +14,6 @@
             "Che si tratti di esplorare antiche rovine o implementare sistemi AI complessi,",
             "<strong>il mio obiettivo</strong> è trasformare grandi idee in prodotti solidi e performanti."
         ],
-        "projects": "Guarda i progetti",
         "info": {
             "published": "Giochi pubblicati",
             "engine": "Engine principale",
@@ -58,7 +57,6 @@
         ],
         "link1": "itch.io",
         "link2": "Dettagli",
-        "view_all": "Guarda tutti i progetti",
 
         "ruins": {
             "name": "Ruins' Rhapsody",
@@ -94,10 +92,8 @@
 
     "contact": {
         "tag": "Disponibile per lavoro",
-        "title": "Costruiamo qualcosa<br><em>insieme.</em>",
-        "subtitle": "Freelance • Remoto • Aperto per nuove opportunità",
-        "badge": "Contatti Aperti",
-        "or": "oppure",
-        "cta": "Pagina dei contatti"
+        "title": "Costruiamo qualcosa<br><em>insieme</em>",
+        "subtitle": "Freelance • Flessibile • Aperto a nuove opportunità",
+        "cta": "Contattami"
     }
 }
