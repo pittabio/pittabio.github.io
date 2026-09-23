@@ -21,7 +21,7 @@
     border: 1px solid;
     cursor: pointer;
     transition: var(--transition);
-    white-space: nowrap; //
+    white-space: nowrap;
 
     // Typography
     font-family: var(--font-playfair), serif;
@@ -153,6 +153,22 @@ button, .btn {
                 $border: var(--accent)
             );
         }
+    }
+}
+
+/* Other buttons */
+.link {
+    // btn outline
+    background: var(--bgbt);
+    gap: 0.6rem;
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
     }
 }
 

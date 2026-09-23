@@ -95,6 +95,7 @@ h2 {
 
     align-self: center;
     justify-self: center;
+    text-align: center;
 }
 
 h3 {
@@ -243,7 +244,7 @@ em {
 // GRID
 @mixin grid-column-style (
     $cols: 3,
-    $gap: 1rem,
+    $gap: var(--main-gap),
     $align: center
 ){
     grid-template-columns: repeat($cols, 1fr);
@@ -327,8 +328,7 @@ img {
 
     .grid-column {
         @include grid-column-style (
-            $cols: 1,
-            $gap: 0
+            $cols: 1
         );
     }
 }
