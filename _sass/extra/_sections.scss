@@ -23,12 +23,12 @@
     align-self: center;
     justify-self: center;
 
-    img {
+    img, svg {
         @extend %img-skills;
-        filter: grayscale(100%);
+        filter: grayscale(1);
 
         &:hover {
-            filter: grayscale(0%);
+            filter: grayscale(0);
             transform: scale(1.15);
         }
     }
@@ -128,8 +128,6 @@
                 justify-content: center;
                 text-align: center;
             }
-
-            //.arrow { display: none; }
         }
     }
 }
