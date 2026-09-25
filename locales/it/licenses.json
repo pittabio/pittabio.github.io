@@ -1,0 +1,17 @@
+{
+    "main_title": "LICENZE",
+    "site": {
+        "title": "Questo sito",
+        "cc": "Questo sito è sotto la licenza Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>"
+    },
+
+    "img": {
+        "title": "Le immagini"
+    },
+
+    "item": {
+        "author": "Autore",
+        "source": "Fonte",
+        "license": "Licenza"
+    }
+}

@@ -1,0 +1,24 @@
+<article class="license_item">
+    <h4>{{ include.item.title }}</h4>
+    <img src="{{ include.item.image }}" alt="{{ include.item.title }}">
+    <dl>
+        {% if include.item.author %}
+            <dt data-i18n="item.author"></dt>
+            <dd>{{ include.item.author }}</dd>
+        {% endif %}
+
+        <dt data-i18n="item.source"></dt>
+        <dd><a href="{{ include.item.source_url }}">{{ include.item.source_name }}</a></dd>
+
+        {%  if include.item.license %}
+            <dt data-i18n="item.license"></dt>
+            <dd>
+                {% if include.item.license_url %}
+                    <a href="{{ include.item.license_url }}">{{ include.item.license }}</a>
+                {% else %}
+                    {{ include.item.license }}
+                {% endif %}
+            </dd>
+        {% endif %}
+    </dl>
+</article>

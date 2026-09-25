@@ -5,17 +5,15 @@ description: This page lists the usage licenses for the site.
 ---
 
 <section id="license" class="cont">
-    <h2>LICENSES</h2>
-    <h3>The site</h3>
-    <p>
-        This site is under the Creative Commons license
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><b>CC BY-NC-ND 4.0</b></a>
-    </p>
+    <h2 data-i18n="main_title"></h2>
+    <h3 data-i18n="site.title"></h3>
+    <p  data-i18n-html="site.cc"></p>
 
     <br>
-    <h3>The images</h3>
-    <p>
+    <h3 data-i18n="img.title"></h3>
 
-    </p>
+    {% for item in site.data.licenses %}
+        {% include sections/license_item.html item=item %}
+    {% endfor %}
 
 </section>
