@@ -15,11 +15,11 @@
     },
 
     "footer": {
-        "copyright": "Licensed under CC BY-NC-ND 4.0",
+        "licenses": "LICENCES",
         "back_top": "BACK TO TOP",
 
         "ARIA": {
-            "license": "Creative Commons License (opens in a new tab)",
+            "licenses": "Licenses page",
             "back_top": "Back to top of page"
         }
     },
