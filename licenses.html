@@ -5,14 +5,23 @@ description: This page lists the usage licenses for the site.
 ---
 
 <section id="license" class="cont">
-    <h2 data-i18n="main_title"></h2>
-    <h3 data-i18n="site.title"></h3>
+    <h2 data-i18n="title.main"></h2>
+    <h3 data-i18n="title.site"></h3>
     <p  data-i18n-html="site.cc"></p>
+    <p  data-i18n-html="site.sources"></p>
+    <br>
+
+    <h3 data-i18n="title.icons"></h3>
+    <br>
+
+    {% for item in site.data.licenses.icons %}
+        {% include sections/license_item.html item=item %}
+    {% endfor %}
 
     <br>
-    <h3 data-i18n="img.title"></h3>
+    <h3 data-i18n="title.images"></h3>
 
-    {% for item in site.data.licenses %}
+    {% for item in site.data.licenses.images %}
         {% include sections/license_item.html item=item %}
     {% endfor %}
 

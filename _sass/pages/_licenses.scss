@@ -11,12 +11,9 @@
     // other page title on the site.)
     h3,
     p,
-    .license-item {
-        align-self: stretch;
-    }
 
     // Breathing room between each license entry
-    .license_item {
+    .license-item {
         margin-top: 1.5rem;
 
         &:first-of-type {
@@ -45,7 +42,7 @@
     }
 
     // The images
-    img {
+    img, .svg {
         max-width: 75px;
     }
 }

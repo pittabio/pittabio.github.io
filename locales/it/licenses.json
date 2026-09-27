@@ -1,12 +1,22 @@
 {
-    "main_title": "LICENZE",
-    "site": {
-        "title": "Questo sito",
-        "cc": "Questo sito è sotto la licenza Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>"
+    "title": {
+        "main": "LICENZE",
+        "site": "Il sito",
+        "icons": "Le icone",
+        "images": "Le immagini"
     },
 
-    "img": {
-        "title": "Le immagini"
+    "site": {
+        "cc": "Questo sito è sotto la licenza Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>",
+        "sources": [
+            "La maggior parte delle icone presenti nel sito, salvo diversa indicazione, proviene dalle raccolte Devicon (<a href=\"https://opensource.org/license/mit\">Licenza MIT</a>)",
+            "e Simple Icons (<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed\">CC0 1.0</a>),",
+            "accessibili tramite <a href=\"https://iconify.design/\">Iconify</a>",
+            "e <a href=\"https://www.jsdelivr.com/\">jsDelivr</a>.",
+            "<br>",
+            "I nomi dei prodotti, i loghi e i marchi citati sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
+            "Il loro utilizzo non implica alcuna forma di approvazione."
+        ]
     },
 
     "item": {
