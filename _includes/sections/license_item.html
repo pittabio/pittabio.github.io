@@ -20,5 +20,10 @@
                 {% endif %}
             </dd>
         {% endif %}
+
+        {% if include.item.note %}
+            <dt data-i18n="item.note"></dt>
+            <dd>{{ include.item.note }}</dd>
+        {% endif %}
     </dl>
 </article>

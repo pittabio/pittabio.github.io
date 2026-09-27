@@ -22,6 +22,7 @@
     "item": {
         "author": "Author",
         "source": "Source",
-        "license": "License"
+        "license": "License",
+        "note": "Note"
     }
 }
