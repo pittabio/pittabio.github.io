@@ -53,6 +53,7 @@
         "title": "Progetti Principali",
         "desc": [
             "Una selezione dei progetti più rilevanti che evidenziano la mia architettura software e il mio approccio allo sviluppo.",
+            "<br>",
             "Visita la pagina completa per esplorare l'intero portfolio"
         ],
         "link1": "itch.io",
@@ -92,7 +93,11 @@
 
     "contact": {
         "tag": "Disponibile per lavoro",
-        "title": "Costruiamo qualcosa<br><em>insieme</em>",
+        "title": [
+            "Costruiamo qualcosa",
+            "<br>",
+            "<b class=\"accent\">insieme</b>"
+        ],
         "subtitle": "Freelance • Flessibile • Aperto a nuove opportunità",
         "cta": "Contattami"
     }

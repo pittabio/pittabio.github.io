@@ -53,6 +53,7 @@
         "title": "Featured Projects",
         "desc": [
             "A selection of key projects showcasing my software architecture and development approach.",
+            "<br>",
             "Visit the full page to explore the complete portfolio."
         ],
         "link1": "itch.io",
@@ -92,7 +93,11 @@
 
     "contact": {
         "tag": "Available for Work",
-        "title": "Let's build something<br><em>together</em>",
+        "title": [
+            "Let's build something",
+            "<br>",
+            "<b class=\"accent\">together</b>"
+        ],
         "subtitle": "Freelance • Flexible • Open to new opportunities",
         "cta": "Get in Touch"
     }
