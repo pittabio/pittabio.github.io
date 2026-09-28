@@ -1,0 +1,17 @@
+- name: "projects.ruins.name"
+  image: "media/games/ruins-rhapsody/banner.jpg"
+  desc: "projects.ruins.desc"
+  link_ext: "https://pittabio.itch.io/ruins-rhapsody-demo"
+  link_page: "projects/ruins-rhapsody.html"
+
+- name: "projects.goblin.name"
+  image: "media/games/goblin-jr/banner.png"
+  desc: "projects.goblin.desc"
+  link_ext: "https://pittabio.itch.io/goblin-jr-adventure"
+  link_page: "projects/goblin-jr.html"
+
+- name: "projects.zombie.name"
+  image: "media/games/zombie-siege/banner.png"
+  desc: "projects.zombie.desc"
+  link_ext: "https://fabriziop.itch.io/zombie-siege-chronicles"
+  link_page: "projects/zombie-siege.html"

@@ -1,0 +1,21 @@
+<article class="card">
+    <!-- Title link -->
+    <a class="mini-title" href="{{ include.project.link_page }}" target="_blank" data-i18n="{{ include.project.name }}"></a>
+    <!-- Image -->
+    <img src="{{ include.project.image }}" alt="{{ include.project.name }} Banner" onclick="openPopup(this)"/>
+    <!-- Description -->
+    <p class="project-desc" data-i18n-html="{{ include.project.desc }}"></p>
+    <!-- Buttons -->
+    <div class="flexbox">
+        <!-- itch -->
+        <a class="btn full left" href="{{ include.project.link_ext }}" target="_blank">
+            <span data-i18n="projects.link1"></span>
+            <span class="itch-svg"></span>
+        </a>
+        <!-- details -->
+        <a class="btn full right" href="{{ include.project.link_page }}" target="_blank">
+            <span data-i18n="projects.link2"></span>
+            <span class="arrow right"></span>
+        </a>
+    </div><!-- /buttons/ -->
+</article><!-- /card/ -->

@@ -101,74 +101,10 @@ description: The home page
     <!-- GRID -->
     <div class="grid-column">
 
-        <!-- ## Ruins' Rhapsody ## -->
-        <div class="card">
-            <!-- Title link -->
-            <a class="mini-title" href="projects/ruins-rhapsody.html" target="_blank" data-i18n="projects.ruins.name"></a>
-            <!-- Image -->
-            <img src="media/games/ruins-rhapsody/banner.jpg" alt="Ruins' Rhapsody Banner" onclick="openPopup(this)"/>
-            <!-- Description -->
-            <p class="project-desc" data-i18n-html="projects.ruins.desc"></p>
-            <!-- Buttons -->
-            <div class="flexbox">
-                <!-- itch -->
-                <a class="btn full left" href="https://pittabio.itch.io/ruins-rhapsody-demo" target="_blank">
-                    <span data-i18n="projects.link1"></span>
-                    <span class="itch-svg"></span>
-                </a>
-                <!-- details -->
-                <a class="btn full right" href="projects/ruins-rhapsody.html" target="_blank">
-                    <span data-i18n="projects.link2"></span>
-                    <span class="arrow right"></span>
-                </a>
-            </div><!-- /buttons/ -->
-        </div><!-- /card/ -->
+        {% for project in site.data.projects %}
+            {% include sections/project-card.html project=project %}
+        {% endfor %}
 
-        <!-- ## Goblin Jr. Adventure ## -->
-        <div class="card">
-            <!-- Title link -->
-            <a class="mini-title" href="projects/goblin-jr.html" target="_blank" data-i18n="projects.goblin.name"></a>
-            <!-- Image -->
-            <img src="media/games/goblin-jr/banner.png" alt="Goblin Jr. Adventure Banner" onclick="openPopup(this)"/>
-            <!-- Description -->
-            <p class="project-desc" data-i18n-html="projects.goblin.desc"></p>
-            <!-- Buttons -->
-            <div class="flexbox">
-                <!-- itch -->
-                <a class="btn full left" href="https://pittabio.itch.io/goblin-jr-adventure" target="_blank">
-                    <span data-i18n="projects.link1"></span>
-                    <span class="itch-svg"></span>
-                </a>
-                <!-- details -->
-                <a class="btn full right" href="projects/goblin-jr.html" target="_blank">
-                    <span data-i18n="projects.link2"></span>
-                    <span class="arrow right"></span>
-                </a>
-            </div><!-- /buttons/ -->
-        </div><!-- /card/ -->
-
-        <!-- ## Zombie Siege Chronicles ## -->
-        <div class="card">
-            <!-- Title link -->
-            <a class="mini-title" href="projects/zombie-siege.html" target="_blank" data-i18n="projects.zombie.name"></a>
-            <!-- Image -->
-            <img src="media/games/zombie-siege/banner.png" alt="Zombie Siege Chronicles Banner" onclick="openPopup(this)"/>
-            <!-- Description -->
-            <p class="project-desc" data-i18n-html="projects.zombie.desc"></p>
-            <!-- Buttons -->
-            <div class="flexbox">
-                <!-- itch -->
-                <a class="btn full left" href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank">
-                    <span data-i18n="projects.link1"></span>
-                    <span class="itch-svg"></span>
-                </a>
-                <!-- details -->
-                <a class="btn full right" href="projects/zombie-siege.html">
-                    <span data-i18n="projects.link2"></span>
-                    <span class="arrow right"></span>
-                </a>
-            </div><!-- /buttons/ -->
-        </div><!-- /card/ -->
     </div><!-- /grid/ -->
 
     <br><!-- break -->
