@@ -93,7 +93,7 @@ async function changeLanguage(lang) {
 
         // 2. Fetch JSON files (Page-specific + Common), in modo "sicuro"
         const [sharedList, pageTranslations] = await Promise.all([
-            Promise.all(sharedList.map(f => safeFetchJson(`${repoName}/locales/${lang}/${f}.json`))),
+            Promise.all(sharedFiles.map(f => safeFetchJson(`${repoName}/locales/${lang}/${f}.json`))),
             isExcluded
                 ? Promise.resolve({})
                 : safeFetchJson(`${repoName}/locales/${lang}/${activePageId}.json`)
