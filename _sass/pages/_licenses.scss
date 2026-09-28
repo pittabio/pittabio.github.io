@@ -1,16 +1,13 @@
 /* # License page # */
 
 #license {
-    // .cont centers its direct children by default (align-items: center);
-    // this page reads better with content starting from the left.
+    // This page reads better with content starting from the left.
     align-items: flex-start;
+    padding-top: var(--pad-top);
 
     // Stretch these to the full container width so their text actually
     // starts at the left edge, instead of being a centered narrow block.
-    // (h2 "LICENSES" is left out on purpose, to stay centered like every
-    // other page title on the site.)
-    h3,
-    p,
+    h3, p,
     .license-item {
         align-self: stretch;
         margin-top: 1.5rem; // Breathing room between each license entry
@@ -20,7 +17,7 @@
         }
     }
 
-    // "Author: Name" / "Source: link" on a single line instead of stacked
+    // Mini container request-response on a single line
     dl {
         display: grid;
         grid-template-columns: max-content 1fr;
@@ -28,6 +25,7 @@
         row-gap: .35rem;
     }
 
+    // Request
     dt {
         font-weight: 600;
 
@@ -36,12 +34,13 @@
         }
     }
 
+    // Response
     dd {
         margin: 0;
     }
 
     // The images
-    img, .svg {
+    img {
         margin: .5rem 0;
         max-width: 50px;
     }
