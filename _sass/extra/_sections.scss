@@ -17,16 +17,19 @@
         $gap: clamp(32px, 0.833vw + 16px, 48px)
     );
 
+    // Layout
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border);
     align-self: center;
     justify-self: center;
 
-    img, svg {
+    // The icons image
+    img {
         @extend %img-skills;
         filter: grayscale(1);
 
+        // When the icon is hovered
         &:hover {
             filter: grayscale(0);
             transform: scale(1.15);
@@ -36,24 +39,30 @@
 
 /* Card */
 .card {
+    @include base.container-style;
+
+    // Layout
     border: 2px solid var(--border);
     border-radius: var(--rad-big);
     padding: var(--main-gap);
     gap: var(--main-gap);
-    display: flex;
-    flex-direction: column;
     height: 100%; // Equal cards height
     transition: transform var(--transition), box-shadow var(--transition);
 
     // The title link
     a {
         text-decoration: none;
+        font-style: normal;
     }
 
-    // The title font
-    b {
-        @include base.mini-title;
-        font-style: normal;
+    // The paragraph - description of the game
+    p {
+        text-align: justify;
+    }
+
+    // The buttons
+    div {
+        width: 100%;
     }
 
     // The image inside the card
@@ -67,7 +76,7 @@
     &:hover {
         border-color: var(--accent); /* The border turns orange */
         transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(255, 80, 0, 0.15);
+        box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.15);
     }
 }
 
@@ -79,8 +88,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255, 80, 0, 0.1);
-    border: 1px solid rgba(255, 80, 0, 0.25);
+    background: rgba(var(--accent-rgb), 0.1);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
     border-radius: 50px;
     padding: 0.35rem 1rem;
     font-size: 0.8rem;
@@ -88,16 +97,16 @@
     color: var(--accent);
     text-transform: uppercase;
     margin-bottom: 2.5rem;
-}
 
-// Before the text, there is a pulsing circle
-.badge::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s infinite;
+    // Before the text, there is a pulsing circle
+    &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: pulse 2s infinite;
+    }
 }
 
 // the pulse animation

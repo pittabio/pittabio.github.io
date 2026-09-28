@@ -74,8 +74,8 @@ main {
 }
 
     /* Typography - Headings */
+//#region Headings
 
-    //#region Headings
 h1 {
     @include display-text(
         clamp(2.5rem, 6vw, 5rem),
@@ -131,13 +131,13 @@ h6 {
     );
     text-transform: uppercase;
 }
-    //#endregion
+
+//#endregion
 
     /* Typography - Body level elements */
 
 // Paragraphs
 p {
-    text-align: justify;
     hyphens: auto
 }
 
@@ -149,6 +149,7 @@ a {
     text-decoration: underline solid var(--link-underline);
     transition: var(--transition);
 
+    // When the link is hovered
     &:hover {
         color: var(--accent);
         cursor: pointer;
@@ -157,17 +158,15 @@ a {
     }
 }
 
-// Bold text: highlighted weight and accent color
+// Bold text: highlighted weight
 b {
     font-weight: 700;
 }
 
 // Bolt mini title
-@mixin mini-title($accent: true) {
+.mini-title {
     @include display-text(1.5rem, 800, 1);
-    @if($accent) {
-        color: var(--accent);
-    }
+    color: var(--accent);
 }
 
 // Italic
@@ -196,7 +195,9 @@ em {
     $direction: column,
     $align: center,
     $justify: center,
-    $wrap: nowrap
+    $text: center,
+    $wrap: nowrap,
+    $display: flex
 ) {
     max-width: $max-width;
     margin: $margin;
@@ -204,8 +205,9 @@ em {
     align-items: $align;
     justify-content: $justify;
     flex-wrap: $wrap;
+    text-align: $text;
+    display: $display;
 
-    display: flex;
     width: 100%;
 }
 
@@ -241,7 +243,7 @@ em {
     @include flexbox-style;
 }
 
-// GRID
+// Grid on column
 @mixin grid-column-style (
     $cols: 3,
     $gap: var(--main-gap),
@@ -254,14 +256,15 @@ em {
     display: grid;
 }
 
+.grid-column {
+    @include grid-column-style;
+}
+
+// Grid automatic
 @mixin grid-auto-style($min-width: 300px, $gap: 1.5rem) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
     gap: $gap;
-}
-
-.grid-column {
-    @include grid-column-style;
 }
 
 .grid-auto {
@@ -303,6 +306,11 @@ img {
     }
 }
 
+// Colorize the text
+.accent {
+    color: var(--accent);
+}
+
     /* Interaction & Accessibility */
 
 // Text Selection
@@ -326,6 +334,7 @@ img {
         padding: var(--main-padding-sm);
     }
 
+    // Grid on column
     .grid-column {
         @include grid-column-style (
             $cols: 1
