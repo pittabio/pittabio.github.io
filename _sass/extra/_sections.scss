@@ -132,10 +132,16 @@
 
     /* The cards */
     .card {
-        .btn {
-            &.left, &.right {
-                justify-content: center;
-                text-align: center;
+        // The divider where the buttons are
+        div {
+            flex-direction: column;
+
+            // The buttons to links
+            .btn {
+                &.left, &.right {
+                    justify-content: center;
+                    text-align: center;
+                }
             }
         }
     }
