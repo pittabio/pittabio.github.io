@@ -56,12 +56,15 @@ Implemented a custom-designed cookie consent banner that integrates directly wit
 ```
 
 ## 📄 License
-This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
-<br>
-You are free to share the link, but you may not use the code or design for commercial purposes or redistribute modified versions of the site.
+This repository is governed by a dual-license approach:
+
+- **Source Code:** Copyright © 2026 Fabio Pittaccio. The source code is provided for viewing and study purposes only. You are not authorized to copy, redistribute, or use this code for commercial purposes or to create derivative works without explicit permission.
+- **Content:** Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+For full details, please refer to the [LICENSE](LICENSE) file.
 
 ---
 
-Developed with 💖 by **Fabio Pittaccio** 
+Developed with 💖 by **Fabio Pittaccio**
 <br>
 Gameplay Developer focused on ***Unreal Engine 5 & C++***

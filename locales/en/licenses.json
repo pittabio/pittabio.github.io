@@ -7,7 +7,15 @@
     },
 
     "site": {
-        "cc":  "This site is under the Creative Commons license <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>.",
+        "cc": [
+            "© 2026 Fabio Pittaccio",
+            "<br>",
+            "<b>Content:</b> Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under",
+            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>.",
+            "<br>",
+            "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
+            "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
+        ],
         "sources": [
             "Most icons throughout the site, where not otherwise specified, come from the Devicon (<a href=\"https://opensource.org/license/mit\">MIT License</a>)",
             "and Simple Icons (<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed\">CC0 1.0</a>) collections,",
