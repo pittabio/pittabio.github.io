@@ -42,14 +42,17 @@ Implemented a custom-designed cookie consent banner that integrates directly wit
 
 ```text
 .
+├── _data/          # Jekyll data files (YAML) rendered via Liquid
 ├── _includes/      # Modular Jekyll components (SEO, Analytics, Banner)
+├── _layouts/       # Base page layout (default.html) shared by all pages
+├── _sass/          # SCSS partials (*.scss) compiled by Jekyll into the site stylesheets
 ├── common/         # Shared HTML fragments (Global Header & Footer)
 ├── favicon/        # Cross-platform icons and manifest files
 ├── locales/        # i18n JSON data: Organized by [language]/[page].json
 ├── media/          # Global assets, game banners, and technical PDF diagrams
 ├── projects/       # Detailed project pages and technical archives
 ├── scripts/        # Custom i18n engine and UI interaction logic
-├── style/          # Modular CSS architecture
+├── style/          # Sass entry point (core.scss): imports the partials from _sass/ and compiles to core.css
 ├── _config.yml     # Global Jekyll settings
 ├── robots.txt      # Crawler instructions and sitemap link
 └── sitemap.xml     # Search engine roadmap
