@@ -1,36 +1,49 @@
 {
-    "title": {
-        "main": "LICENSES",
-        "site": "The site",
-        "icons": "The icons",
-        "images": "The images"
-    },
-
-    "site": {
-        "cc": [
-            "© 2026 Fabio Pittaccio",
-            "<br>",
-            "<b>Content:</b> Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under",
-            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>.",
-            "<br>",
-            "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
-            "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
-        ],
-        "sources": [
-            "Most icons throughout the site, where not otherwise specified, come from the Devicon (<a href=\"https://opensource.org/license/mit\">MIT License</a>)",
-            "and Simple Icons (<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed\">CC0 1.0</a>) collections,",
-            "accessed via <a href=\"https://iconify.design/\">Iconify</a>",
-            "and <a href=\"https://www.jsdelivr.com/\">jsDelivr</a>.",
-            "<br>",
-            "Product names, logos and brands mentioned are property of their respective owners and are used here for identification purposes only.",
-            "Their use does not imply endorsement."
-        ]
-    },
+    "title": "LICENSES",
 
     "item": {
         "author": "Author",
         "source": "Source",
         "license": "License",
         "note": "Note"
+    },
+
+
+    "site": {
+        "title": "The site",
+        "desc": [
+            "© 2026 Fabio Pittaccio",
+            "<br>",
+            "<b>Content:</b> Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under",
+            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND 4.0</a>.",
+            "<br>",
+            "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
+            "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
+        ]
+    },
+
+
+    "icons": {
+        "title": "The icons",
+        "desc": [
+            "Most icons throughout the site are sourced from <a href='https://devicon.dev/'>Devicon</a>.",
+            "<br>",
+            "<b>Please note</b>: all product names, logos, and brands are property of their respective owners and are used here for identification purposes only.",
+            "Usage of these assets does not imply endorsement."
+        ]
+    },
+            "<br>",
+            "Product names, logos and brands mentioned are property of their respective owners and are used here for identification purposes only.",
+            "Their use does not imply endorsement."
+        ]
+
+    "images": {
+        "title": "The images",
+        "desc": [
+            "All images on this site are used under their respective licenses, or are original creations.",
+            "<br>",
+            "For third-party assets, I strive to provide clear attribution as required by the license of the source (e.g., Vecteezy, Unsplash).",
+            "If you believe any content is incorrectly attributed, please feel free to contact me."
+        ]
     }
 }

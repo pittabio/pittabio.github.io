@@ -1,36 +1,45 @@
 {
-    "title": {
-        "main": "LICENZE",
-        "site": "Il sito",
-        "icons": "Le icone",
-        "images": "Le immagini"
-    },
-
-    "site": {
-        "cc": [
-            "© 2026 Fabio Pittaccio",
-            "<br>",
-            "<b>Contenuti:</b> Salvo diversa indicazione, tutti i contenuti originali (testi, immagini e documentazione dei progetti) sono rilasciati sotto licenza",
-            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\"><b>CC BY-NC-ND 4.0</b></a>.",
-            "<br>",
-            "<b>Codice sorgente:</b> Il codice sorgente di questo sito è protetto da copyright. Viene fornito esclusivamente a scopo di consultazione e studio.",
-            "Non è consentito copiarlo, ridistribuirlo, utilizzarlo a fini commerciali o crearne opere derivate senza esplicita autorizzazione."
-        ],
-        "sources": [
-            "La maggior parte delle icone presenti nel sito, salvo diversa indicazione, proviene dalle raccolte Devicon (<a href=\"https://opensource.org/license/mit\">Licenza MIT</a>)",
-            "e Simple Icons (<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed\">CC0 1.0</a>),",
-            "accessibili tramite <a href=\"https://iconify.design/\">Iconify</a>",
-            "e <a href=\"https://www.jsdelivr.com/\">jsDelivr</a>.",
-            "<br>",
-            "I nomi dei prodotti, i loghi e i marchi citati sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
-            "Il loro utilizzo non implica alcuna forma di approvazione."
-        ]
-    },
+    "title": "LICENZE",
 
     "item": {
         "author": "Autore",
         "source": "Fonte",
         "license": "Licenza",
         "note": "Nota"
+    },
+
+
+    "site": {
+        "title": "Il sito",
+        "desc": [
+            "© 2026 Fabio Pittaccio",
+            "<br>",
+            "<b>Contenuti:</b> Salvo diversa indicazione, tutti i contenuti originali (testi, immagini e documentazione dei progetti) sono rilasciati con licenza",
+            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND 4.0</a>.",
+            "<br>",
+            "<b>Codice sorgente:</b> Il codice sorgente di questo sito è protetto da copyright. Viene fornito esclusivamente a scopo di consultazione e studio.",
+            "Non è consentito copiarlo, ridistribuirlo, utilizzarlo a fini commerciali o crearne opere derivate senza esplicita autorizzazione."
+        ]
+    },
+
+    "icons": {
+        "title": "Le icone",
+        "desc": [
+            "La maggior parte delle icone presenti sul sito proviene da <a href='https://devicon.dev/'>Devicon</a>.",
+            "<br>",
+            "<b>Nota bene</b>: tutti i nomi dei prodotti, i loghi e i marchi sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
+            "L'utilizzo di tali risorse non implica alcuna forma di approvazione."
+        ]
+    },
+            "<br>",
+            "I nomi dei prodotti, i loghi e i marchi citati sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
+            "Il loro utilizzo non implica alcuna forma di approvazione."
+        ]
+    },
+
+    "images": {
+        "title": "Le immagini",
+        "desc": [
+        ]
     }
 }

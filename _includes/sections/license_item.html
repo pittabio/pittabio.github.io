@@ -1,15 +1,33 @@
 <article class="license-item">
-    <h4>{{ include.item.title }}</h4>
-    <img src="{{ include.item.image }}" alt="{{ include.item.title }}">
+    <!-- Name of the item -->
+    <h4>{{ include.item.name }}</h4>
+
+    <!-- The image and/or the icon -->
+    <div>
+        {% if include.item.icon %}
+            <span class="{{ include.item.icon }}"></span>
+        {% endif %}
+
+        {% if include.item.image %}
+            <img src="{{ include.item.image }}" alt="{{ include.item.name }}" />
+        {% endif %}
+    </div>
+
+    <!-- The list -->
     <dl>
+        <!-- Author -->
         {% if include.item.author %}
             <dt data-i18n="item.author"></dt>
             <dd>{{ include.item.author }}</dd>
         {% endif %}
 
-        <dt data-i18n="item.source"></dt>
-        <dd><a href="{{ include.item.source_url }}">{{ include.item.source_name }}</a></dd>
+        <!-- Source -->
+        {% if include.item.source_url %}
+            <dt data-i18n="item.source"></dt>
+            <dd><a href="{{ include.item.source_url }}">{{ include.item.source }}</a></dd>
+        {% endif %}
 
+        <!-- License copyright -->
         {%  if include.item.license %}
             <dt data-i18n="item.license"></dt>
             <dd>
@@ -21,9 +39,10 @@
             </dd>
         {% endif %}
 
+        <!-- Other notes if presents -->
         {% if include.item.note %}
             <dt data-i18n="item.note"></dt>
-            <dd>{{ include.item.note }}</dd>
+            <dd data-i18n-html="{{ include.item.note }}"></dd>
         {% endif %}
     </dl>
 </article>

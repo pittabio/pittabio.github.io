@@ -5,13 +5,13 @@ description: This page lists the usage licenses for the site.
 ---
 
 <section id="license">
-    <h2 data-i18n="title.main"></h2>
-    <h3 data-i18n="title.site"></h3>
-    <p  data-i18n-html="site.cc"></p>
-    <p  data-i18n-html="site.sources"></p>
-    <br>
+    <h2  data-i18n="title"></h2>
+    <h3  data-i18n="site.title"></h3>
+    <img src="media/fox.png" alt="The orange fox is my logo"/>
+    <p   data-i18n-html="site.desc"></p>
 
-    <h3 data-i18n="title.icons"></h3>
+    <h3 data-i18n="icons.title"></h3>
+    <p  data-i18n-html="icons.desc"></p>
     <br>
 
     {% for item in site.data.licenses.icons %}
@@ -19,7 +19,8 @@ description: This page lists the usage licenses for the site.
     {% endfor %}
 
     <br>
-    <h3 data-i18n="title.images"></h3>
+    <h3 data-i18n="images.title"></h3>
+    <p  data-i18n="images.desc"></p>
 
     {% for item in site.data.licenses.images %}
         {% include sections/license_item.html item=item %}
