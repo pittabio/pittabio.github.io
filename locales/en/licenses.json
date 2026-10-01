@@ -15,7 +15,7 @@
             "© 2026 Fabio Pittaccio",
             "<br>",
             "<b>Content:</b> Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under",
-            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND 4.0</a>.",
+            "<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a>.",
             "<br>",
             "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
             "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
@@ -26,16 +26,70 @@
     "icons": {
         "title": "The icons",
         "desc": [
-            "Most icons throughout the site are sourced from <a href='https://devicon.dev/'>Devicon</a>.",
+            "Where possible, icons are taken from official assets provided by the respective companies (such as Brand Assets or Press Kits), and the source is specified.",
+            "Where official assets are not available, an unofficial source is specified instead (e.g. <a href='https://devicon.dev/'>Devicon</a>, MIT License).",
+            "The license of such a source covers the collection itself, not the trademarks it contains.",
             "<br>",
             "<b>Please note</b>: all product names, logos, and brands are property of their respective owners and are used here for identification purposes only.",
             "Usage of these assets does not imply endorsement."
         ]
     },
+
+    "note": {
+        "unreal": [
+            "Unreal®, Unreal Engine®, and the Unreal Engine® logo are trademarks or registered trademarks of Epic Games, Inc. in the United States of America and elsewhere",
             "<br>",
-            "Product names, logos and brands mentioned are property of their respective owners and are used here for identification purposes only.",
-            "Their use does not imply endorsement."
+            "Used for identification only, no affiliation or endorsement implied."
+        ],
+
+        "cpp": [
+            "The C++ logo is a trademark of the Standard C++ Foundation.",
+            "Used in accordance with the Foundation's <a href='https://isocpp.org/home/terms-of-use'>Terms of Use</a> for material related to the C++ language.",
+            "<br>",
+            "No endorsement implied."
+        ],
+
+        "github": [
+            "GITHUB®, the GITHUB® logo design, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc., registered in the United States and other countries.",
+            "<br>",
+            "The OCTOCAT design is the exclusive property of GitHub, Inc and has been federally registered with the United States Copyright Office. All rights reserved."
+        ],
+
+        "gitlab": [
+            "GITLAB is a trademark of GitLab Inc. in the United States and other countries and regions.",
+            "<br>",
+            "The GitLab logo is used for identification purposes only.",
+            "This usage is not affiliated with, endorsed, sponsored, or approved by GitLab Inc. No logo usage implies any official partnership."
+        ],
+
+        "gitkraken": [
+            "The GitKraken logo is a trademark of GitKraken (formerly Axosoft) used for identification and promotional purposes in accordance with GitKraken's branding guidelines.",
+            "<br>",
+            "No affiliation or endorsement by GitKraken is implied."
+        ],
+
+        "android": [
+            "Android is a trademark of Google LLC.",
+            "The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
+        ],
+
+        "jetbrains": {
+            "rider": "Copyright © 2026 JetBrains s.r.o. Rider and the Rider logo are trademarks of JetBrains s.r.o.",
+            "webstorm": "Copyright © 2026 JetBrains s.r.o. WebStorm and the WebStorm logo are trademarks of JetBrains s.r.o."
+        },
+
+        "blender": [
+            "Blender is a registered trademark (®) of the Blender Foundation in EU and USA. The Blender logo itself is property of the Blender Foundation.",
+            "The logo and the brand name “Blender” are not part of the GNU GPL, and can only be used commercially by the Blender Foundation on products, websites, and publications."
+        ],
+
+        "photoshop": [
+            "Adobe and Photoshop are either registered trademarks or trademarks of Adobe in the United States and/or other countries.",
+            "<br>",
+            "Used for identification only, no affiliation or endorsement implied."
         ]
+    },
+
 
     "images": {
         "title": "The images",

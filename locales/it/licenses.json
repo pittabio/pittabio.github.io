@@ -22,24 +22,83 @@
         ]
     },
 
+
     "icons": {
         "title": "Le icone",
         "desc": [
-            "La maggior parte delle icone presenti sul sito proviene da <a href='https://devicon.dev/'>Devicon</a>.",
+            "Ove possibile, le icone sono tratte da risorse ufficiali fornite dalle rispettive aziende (come Brand Asset o cartelle stampa) e la fonte è indicata.",
+            "Qualora non siano disponibili risorse ufficiali, viene indicata una fonte non ufficiale (ad es. <a href='https://devicon.dev/'>Devicon</a>, licenza MIT).",
+            "La licenza di tale fonte riguarda la raccolta stessa, non i marchi in essa contenuti.",
             "<br>",
-            "<b>Nota bene</b>: tutti i nomi dei prodotti, i loghi e i marchi sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
-            "L'utilizzo di tali risorse non implica alcuna forma di approvazione."
+            "<b>Nota bene</b>: tutti i nomi di prodotti, i loghi e i marchi sono di proprietà dei rispettivi titolari e sono qui utilizzati esclusivamente a scopo identificativo.",
+            "L'utilizzo di queste risorse non implica alcuna forma di approvazione."
         ]
     },
+
+    "note": {
+        "unreal": [
+            "Unreal®, Unreal Engine® e il logo Unreal Engine® sono marchi o marchi registrati di Epic Games, Inc. negli Stati Uniti d'America e altrove.",
             "<br>",
-            "I nomi dei prodotti, i loghi e i marchi citati sono di proprietà dei rispettivi titolari e sono utilizzati qui esclusivamente a scopo identificativo.",
-            "Il loro utilizzo non implica alcuna forma di approvazione."
+            "Utilizzati esclusivamente a scopo identificativo; non si intende suggerire alcuna affiliazione o approvazione."
+        ],
+
+        "cpp": [
+            "Il logo C++ è un marchio della Standard C++ Foundation.",
+            "Utilizzato in conformità con le <a href='https://isocpp.org/home/terms-of-use'>Condizioni d'uso</a> della Fondazione per materiale relativo al linguaggio C++.",
+            "<br>",
+            "Non implica alcuna approvazione."
+        ],
+
+        "github": [
+            "GITHUB®, il design del logo GITHUB®, il design del logo INVERTOCAT, OCTOCAT® e il design del logo OCTOCAT® sono marchi di GitHub, Inc., registrati negli Stati Uniti e in altri paesi.",
+            "<br>",
+            "Il design OCTOCAT è di proprietà esclusiva di GitHub, Inc. ed è stato registrato a livello federale presso lo United States Copyright Office. Tutti i diritti riservati."
+        ],
+
+        "gitlab": [
+            "GITLAB è un marchio di GitLab Inc. negli Stati Uniti e in altri paesi e regioni.",
+            "<br>",
+            "Il logo GitLab è utilizzato esclusivamente a scopo identificativo.",
+            "Questo utilizzo non implica alcuna affiliazione, approvazione, sponsorizzazione o autorizzazione da parte di GitLab Inc. L'uso del logo non sottintende alcuna partnership ufficiale."
+        ],
+
+        "gitkraken": [
+            "Il logo GitKraken è un marchio di GitKraken (formerly Axosoft) utilizzato a fini identificativi e promozionali in conformità con le linee guida del brand GitKraken.",
+            "<br>",
+            "Non si intende alcuna affiliazione o approvazione da parte di GitKraken."
+        ],
+
+        "android": [
+            "Android è un marchio di Google LLC.",
+            "Il robot Android è riprodotto o modificato da un'opera creata e condivisa da Google e utilizzata in base ai termini descritti nella licenza di attribuzione Creative Commons 3.0."
+        ],
+
+        "jetbrains": {
+            "rider": "Copyright © 2026 JetBrains s.r.o. Rider e il logo Rider sono marchi di JetBrains s.r.o.",
+            "webstorm": "Copyright © 2026 JetBrains s.r.o. WebStorm e il logo WebStorm sono marchi di JetBrains s.r.o."
+        },
+
+        "blender": [
+            "Blender è un marchio registrato (®) della Blender Foundation nell'UE e negli USA. Il logo Blender stesso è di proprietà della Blender Foundation.",
+            "Il logo e il marchio “Blender” non rientrano nella licenza GNU GPL e possono essere utilizzati a fini commerciali esclusivamente dalla Blender Foundation su prodotti, siti web e pubblicazioni."
+        ],
+
+        "photoshop": [
+            "Adobe e Photoshop sono marchi registrati o marchi di Adobe negli Stati Uniti e/o in altri paesi.",
+            "<br>",
+            "L'icona proviene da <a href='https://devicon.dev/'>Devicon</a> (tramite <a href='https://iconify.design/'>Iconify</a>).",
+            "Utilizzata esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
         ]
     },
+
 
     "images": {
         "title": "Le immagini",
         "desc": [
+            "Tutte le immagini presenti su questo sito sono utilizzate nel rispetto delle rispettive licenze o sono creazioni originali.",
+            "<br>",
+            "Per le risorse di terze parti, mi impegno a fornire una chiara attribuzione, come richiesto dalla licenza della fonte (ad es. Vecteezy, Unsplash).",
+            "Se ritieni che un contenuto non sia attribuito correttamente, non esitare a contattarmi."
         ]
     }
 }
