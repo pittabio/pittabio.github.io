@@ -1,4 +1,4 @@
-﻿/* BASIC ICON */
+/* BASIC ICON */
 
 // The base of an icon
 %icn-bs {
@@ -16,6 +16,8 @@
 
     mask-repeat: no-repeat;
     mask-position: center;
+
+    flex-shrink: 0;
 }
 
 // Sets the mask image (webkit + standard) from an svg data-uri
@@ -41,7 +43,6 @@
     @include icn-msk("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E");
 
     // Properties
-    flex-shrink: 0;
     translate: 0 2px;
 
     // When hovered
@@ -65,13 +66,12 @@
 // The arrow configuration
 @mixin arrow (
     $color: var(--text),
-    $dim: 20px
+    $dim: 1.5em
 ){
     @extend %icn-arrow;
     @include icn($dim);
 
     transition: var(--transition), background-color var(--transition);
-    flex-shrink: 0;
 }
 
 // Basic arrow
@@ -147,7 +147,7 @@
 
     // Basic arrow
     .arrow {
-        @include arrow($dim: 14px);
+        @include arrow($dim: 1.25em);
     }
 
     /* SCROLL INDICATOR */

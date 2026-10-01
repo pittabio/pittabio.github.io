@@ -217,6 +217,13 @@ em {
     padding-top: var(--pad-top);
 }
 
+// Default site container
+.cont_left {
+    @include container-style
+        ($align: flex-start, $justify: flex-start, $text: left);
+    padding-top: var(--pad-top);
+}
+
 // FLEXBOX
 @mixin flexbox-style (
     $direction: row,
