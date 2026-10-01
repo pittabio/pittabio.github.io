@@ -2,22 +2,16 @@
     <!-- Name of the item -->
     <h4>{{ include.item.name }}</h4>
 
-    <!-- The image and/or the icon -->
-    <div>
-        {% if include.item.icon %}
-            <span class="{{ include.item.icon }}"></span>
-        {% endif %}
-
-        {% if include.item.image %}
-            <img src="{{ include.item.image }}" alt="{{ include.item.name }}" />
-        {% endif %}
-    </div>
+    <!-- The image -->
+    {% if include.item.image %}
+        <img src="{{ include.item.image }}" alt="{{ include.item.name }}" />
+    {% endif %}
 
     <!-- The list -->
     <dl>
         <!-- Author -->
         {% if include.item.author %}
-            <dt data-i18n="item.author"></dt>
+            <dt data-i18n-html="item.author"></dt>
             <dd>{{ include.item.author }}</dd>
         {% endif %}
 
@@ -32,7 +26,7 @@
             <dt data-i18n="item.license"></dt>
             <dd>
                 {% if include.item.license_url %}
-                    <a href="{{ include.item.license_url }}">{{ include.item.license }}</a>
+                    <a href="{{ include.item.license_url }}"> {{ include.item.license }} </a>
                 {% else %}
                     {{ include.item.license }}
                 {% endif %}
