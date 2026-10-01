@@ -98,14 +98,8 @@ description: The home page
 
     <br><!-- break -->
 
-    <!-- GRID -->
-    <div class="grid-column">
-
-        {% for project in site.data.projects %}
-            {% include sections/project-card.html project=project %}
-        {% endfor %}
-
-    </div><!-- /grid/ -->
+    <!-- Games -->
+    {% include sections/projects.html featured=true %}
 
     <br><!-- break -->
 
