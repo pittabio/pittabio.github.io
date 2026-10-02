@@ -1,42 +1,61 @@
 <article class="license-item">
+    {% assign i = include.item %}
     <!-- Name of the item -->
-    <h4>{{ include.item.name }}</h4>
+    <h4>{{ i.name }}</h4>
 
     <!-- The image -->
-    {% if include.item.image %}
-        <img src="{{ include.item.image }}" alt="{{ include.item.name }}" />
+    {% if i.image %}
+        <img src="{{ i.image }}" alt="{{ i.name }}" />
+    {% elsif i.svg %}
+        <span class="{{ i.svg }}"></span>
     {% endif %}
 
     <!-- The list -->
     <dl>
         <!-- Author -->
-        {% if include.item.author %}
+        {% if i.author %}
             <dt data-i18n-html="item.author"></dt>
-            <dd>{{ include.item.author }}</dd>
+            {% if i.author_url %}
+                <dd><a href="{{ i.author_url }}">{{ i.author }}</a></dd>
+            {% else %}
+                <dd>{{ i.author }}</dd>
+            {% endif %}
         {% endif %}
 
         <!-- Source -->
-        {% if include.item.source_url %}
+        {% if i.source_url %}
             <dt data-i18n="item.source"></dt>
-            <dd><a href="{{ include.item.source_url }}">{{ include.item.source }}</a></dd>
+            <dd><a href="{{ i.source_url }}">{{ i.source }}</a></dd>
         {% endif %}
 
         <!-- License copyright -->
-        {%  if include.item.license %}
+        {%  if i.license %}
             <dt data-i18n="item.license"></dt>
             <dd>
-                {% if include.item.license_url %}
-                    <a href="{{ include.item.license_url }}"> {{ include.item.license }} </a>
+                {% if i.license_url %}
+                    <a href="{{ i.license_url }}"> {{ i.license }} </a>
                 {% else %}
-                    {{ include.item.license }}
+                    {{ i.license }}
+                {% endif %}
+            </dd>
+        {% endif %}
+
+        <!-- Trademark owner if the icon represents a brand -->
+        {% if i.trademark %}
+            <dt data-i18n="item.trademark"></dt>
+            <dd>
+                {% if i.trademark_url %}
+                    <a href="{{ i.trademark_url }}">{{ i.trademark }}</a>
+                {% else %}
+                    {{ i.trademark }}
                 {% endif %}
             </dd>
         {% endif %}
 
         <!-- Other notes if presents -->
-        {% if include.item.note %}
+        {% if i.note %}
             <dt data-i18n="item.note"></dt>
-            <dd data-i18n-html="{{ include.item.note }}"></dd>
+            <dd data-i18n-html="{{ i.note }}"></dd>
         {% endif %}
     </dl>
 </article>
