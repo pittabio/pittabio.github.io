@@ -3,16 +3,16 @@ layout: default
 title: Licenses
 description: This page lists the usage licenses for the site.
 ---
-
+{% assign l = site.data.licenses %}
 <section id="license">
     <h2  data-i18n="title"></h2>
 
     <!-- Sections Links -->
     <section id="sections" class="flexbox">
         <a href="#site" data-i18n="site.title"></a>
-        <a href="#icons" data-i18n="icons.title"></a>
-        <a href="#other_icons" data-i18n="icons2.title"></a>
-        <a href="#images" data-i18n="images.title"></a>
+        <a href="#tech" data-i18n="icons.title"></a>
+        <a href="#ui"   data-i18n="icons2.title"></a>
+        <a href="#img"  data-i18n="images.title"></a>
     </section>
 
     <br>
@@ -25,36 +25,36 @@ description: This page lists the usage licenses for the site.
 
     <br>
     <!-- The licenses of the main icons -->
-    <section id="icons" class="cont_left">
+    <section id="tech" class="cont_left">
         <h3 data-i18n="icons.title"></h3>
         <p  data-i18n-html="icons.desc"></p>
         <br>
 
-        {% for item in site.data.licenses.icons %}
+        {% for item in l.icons %}
             {% include sections/license_item.html item=item %}
         {% endfor %}
     </section>
 
     <br>
     <!-- The licenses of other icons (e.g. svg) -->
-    <section id="other_icons" class="cont_left">
+    <section id="ui" class="cont_left">
         <h3 data-i18n="icons2.title"></h3>
         <p  data-i18n-html="icons2.desc"></p>
         <br>
 
-        {% for item in site.data.licenses.icons2 %}
+        {% for item in l.icons2 %}
             {% include sections/license_item.html item=item %}
         {% endfor %}
     </section>
 
     <br>
     <!-- The licenses of some images -->
-    <section id="images" class="cont_left">
+    <section id="img" class="cont_left">
         <h3 data-i18n="images.title"></h3>
         <p  data-i18n-html="images.desc"></p>
         <br>
 
-        {% for item in site.data.licenses.images %}
+        {% for item in l.images %}
             {% include sections/license_item.html item=item %}
         {% endfor %}
     </section>
