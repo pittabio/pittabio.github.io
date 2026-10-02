@@ -5,7 +5,8 @@
         "author": "Author",
         "source": "Source",
         "license": "License",
-        "note": "Note"
+        "note": "Note",
+        "trademark": "Trademark"
     },
 
     "site": {
@@ -22,7 +23,7 @@
     },
 
     "icons": {
-        "title": "The icons",
+        "title": "Tools & technologies",
         "desc": [
             "Where possible, icons are taken from official assets provided by the respective companies (such as Brand Assets or Press Kits), and the source is specified.",
             "Where official assets are not available, an unofficial source is specified instead (e.g. <a href='https://devicon.dev/'>Devicon</a>, MIT License).",
@@ -81,7 +82,7 @@
     },
 
     "icons2": {
-        "title": "Other icons",
+        "title": "Interface & social icons",
         "desc": [
             "The icons used inside buttons and interface elements are taken from the official websites of the respective companies whenever possible.",
             "When official SVG files are not available, most of them come from <a href='https://iconify.design/'>Iconify</a>, which collects icons from many open-source sets.",
@@ -98,7 +99,6 @@
             "gamejolt": [
                 "Game Jolt and the Game Jolt logo are trademarks of Game Jolt.",
                 "<br>",
-                "This is a simplified version of the logo from <a href='https://simpleicons.org/'>Simple Icons</a> (CC0 1.0), which covers the artwork of the set and not the trademark.",
                 "Used for identification only, no affiliation or endorsement implied."
             ]
         }

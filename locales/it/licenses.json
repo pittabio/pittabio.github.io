@@ -5,7 +5,8 @@
         "author": "Autore",
         "source": "Fonte",
         "license": "Licenza",
-        "note": "Nota"
+        "note": "Nota",
+        "trademark": "Marchio"
     },
 
     "site": {
@@ -22,7 +23,7 @@
     },
 
     "icons": {
-        "title": "Le icone",
+        "title": "Strumenti e tecnologie",
         "desc": [
             "Ove possibile, le icone sono tratte da risorse ufficiali fornite dalle rispettive aziende (come Brand Asset o cartelle stampa) e la fonte è indicata.",
             "Qualora non siano disponibili risorse ufficiali, viene indicata una fonte non ufficiale (ad es. <a href='https://devicon.dev/'>Devicon</a>, licenza MIT).",
@@ -81,7 +82,7 @@
     },
 
     "icons2": {
-        "title": "Altre icone",
+        "title": "Interfaccia e icone social",
         "desc": [
             "Le icone utilizzate all'interno di pulsanti ed elementi dell'interfaccia provengono, ove possibile, dai siti web ufficiali delle rispettive aziende.",
             "Quando non sono disponibili file SVG ufficiali, la maggior parte di esse proviene da <a href='https://iconify.design/'>Iconify</a>, che raccoglie icone da numerosi set open source.",
@@ -98,7 +99,6 @@
             "gamejolt": [
                 "Game Jolt e il logo di Game Jolt sono marchi di Game Jolt.",
                 "<br>",
-                "Questa è una versione semplificata del logo proveniente da <a href='https://simpleicons.org/'>Simple Icons</a> (CC0 1.0), che riguarda la grafica del set e non il marchio.",
                 "Utilizzato esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
             ]
         }
