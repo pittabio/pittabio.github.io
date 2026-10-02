@@ -5,7 +5,7 @@
   source_url: "https://brand.epicgames.com/share/1FqoUZ7cyccG9sFGupt5/collections/853"
   license: "Trademark of Epic Games, Inc."
   license_url: "https://brand.epicgames.com/document/383#/logos/unreal-engine-logo"
-  note: "note.unreal"
+  note: "icons.note.unreal"
 
 - name: "C++ logo"
   image: "/media/logo/skills/cpp.png"
@@ -14,7 +14,7 @@
   source_url: "https://github.com/isocpp/logos"
   license: "Standard C++ Foundation trademark"
   license_url: "https://isocpp.org/home/terms-of-use"
-  note: "note.cpp"
+  note: "icons.note.cpp"
 
 - name: "Git logo"
   image: "/media/logo/skills/git.png"
@@ -31,7 +31,7 @@
   source_url: "https://brand.github.com/"
   license: "Trademark of GitHub, Inc."
   license_url: "https://brand.github.com/foundations/logo"
-  note: "note.github"
+  note: "icons.note.github"
 
 - name: "GitLab logo (Tanuki)"
   image: "/media/logo/skills/gitlab.png"
@@ -40,7 +40,7 @@
   source_url: "https://about.gitlab.com/press/press-kit/"
   license: "Trademark of GitLab Inc."
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
-  note: "note.gitlab"
+  note: "icons.note.gitlab"
 
 - name: "GitKraken logo"
   image: "/media/logo/skills/gitkraken.png"
@@ -49,7 +49,7 @@
   source_url: "https://gitkraken.com/store#logos"
   license: "Trademark of Axosoft, LLC (GitKraken)"
   license_url: "https://gitkraken.com/store#logos"
-  note: "note.gitkraken"
+  note: "icons.note.gitkraken"
 
 - name: "Android robot logo"
   image: "/media/logo/skills/android.png"
@@ -58,7 +58,7 @@
   source_url: "https://developer.android.com/distribute/marketing-tools/brand-guidelines"
   license: "Creative Commons Attribution 3.0 Unported License"
   license_url: "https://creativecommons.org/licenses/by/3.0/"
-  note: "note.android"
+  note: "icons.note.android"
 
 - name: "JetBrains Rider logo"
   image: "/media/logo/skills/rider.png"
@@ -67,7 +67,7 @@
   source_url: "https://www.jetbrains.com/company/brand/"
   license: "Trademark of JetBrains s.r.o."
   license_url: "https://www.jetbrains.com/company/brand/"
-  note: "note.jetbrains.rider"
+  note: "icons.note.jetbrains.rider"
 
 - name: "JetBrains WebStorm logo"
   image: "/media/logo/skills/webstorm.png"
@@ -76,7 +76,7 @@
   source_url: "https://www.jetbrains.com/company/brand/"
   license: "Trademark of JetBrains s.r.o."
   license_url: "https://www.jetbrains.com/company/brand/"
-  note: "note.jetbrains.webstorm"
+  note: "icons.note.jetbrains.webstorm"
 
 - name: "Blender logo"
   image: "/media/logo/skills/blender.png"
@@ -85,7 +85,7 @@
   source_url: "https://www.blender.org/about/logo/"
   license: "Registered trademark of Blender Foundation"
   license_url: "https://www.blender.org/about/trademark-policy/"
-  note: "note.blender"
+  note: "icons.note.blender"
 
 - name: "Adobe Photoshop icon"
   image: "/media/logo/skills/photoshop.svg"
@@ -94,4 +94,4 @@
   source_url: "https://icon-sets.iconify.design/devicon/photoshop/"
   license: "Trademark of Adobe"
   license_url: "https://www.adobe.com/legal/permissions/trademarks.html"
-  note: "note.photoshop"
+  note: "icons.note.photoshop"

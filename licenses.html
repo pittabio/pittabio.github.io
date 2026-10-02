@@ -6,24 +6,57 @@ description: This page lists the usage licenses for the site.
 
 <section id="license">
     <h2  data-i18n="title"></h2>
-    <h3  data-i18n="site.title"></h3>
-    <img src="media/fox.png" alt="The orange fox is my logo"/>
-    <p   data-i18n-html="site.desc"></p>
 
-    <h3 data-i18n="icons.title"></h3>
-    <p  data-i18n-html="icons.desc"></p>
-    <br>
-
-    {% for item in site.data.licenses.icons %}
-        {% include sections/license_item.html item=item %}
-    {% endfor %}
+    <!-- Sections Links -->
+    <section id="sections" class="flexbox">
+        <a href="#site" data-i18n="site.title"></a>
+        <a href="#icons" data-i18n="icons.title"></a>
+        <a href="#other_icons" data-i18n="icons2.title"></a>
+        <a href="#images" data-i18n="images.title"></a>
+    </section>
 
     <br>
-    <h3 data-i18n="images.title"></h3>
-    <p  data-i18n-html="images.desc"></p>
+    <!-- The license of this site -->
+    <section id="site" class="cont_left">
+        <h3  data-i18n="site.title"></h3>
+        <img src="media/fox.png" alt="The orange fox is my logo"/>
+        <p   data-i18n-html="site.desc"></p>
+    </section>
 
-    {% for item in site.data.licenses.images %}
-        {% include sections/license_item.html item=item %}
-    {% endfor %}
+    <br>
+    <!-- The licenses of the main icons -->
+    <section id="icons" class="cont_left">
+        <h3 data-i18n="icons.title"></h3>
+        <p  data-i18n-html="icons.desc"></p>
+        <br>
 
-</section>
+        {% for item in site.data.licenses.icons %}
+            {% include sections/license_item.html item=item %}
+        {% endfor %}
+    </section>
+
+    <br>
+    <!-- The licenses of other icons (e.g. svg) -->
+    <section id="other_icons" class="cont_left">
+        <h3 data-i18n="icons2.title"></h3>
+        <p  data-i18n-html="icons2.desc"></p>
+        <br>
+
+        {% for item in site.data.licenses.icons2 %}
+            {% include sections/license_item.html item=item %}
+        {% endfor %}
+    </section>
+
+    <br>
+    <!-- The licenses of some images -->
+    <section id="images" class="cont_left">
+        <h3 data-i18n="images.title"></h3>
+        <p  data-i18n-html="images.desc"></p>
+        <br>
+
+        {% for item in site.data.licenses.images %}
+            {% include sections/license_item.html item=item %}
+        {% endfor %}
+    </section>
+
+</section><!-- /licenses/ -->
