@@ -8,7 +8,6 @@
         "note": "Note"
     },
 
-
     "site": {
         "title": "The site",
         "desc": [
@@ -21,7 +20,6 @@
             "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
         ]
     },
-
 
     "icons": {
         "title": "The icons",
@@ -82,6 +80,29 @@
         }
     },
 
+    "icons2": {
+        "title": "Other icons",
+        "desc": [
+            "The icons used inside buttons and interface elements are taken from the official websites of the respective companies whenever possible.",
+            "When official SVG files are not available, most of them come from <a href='https://iconify.design/'>Iconify</a>, which collects icons from many open-source sets.",
+            "<br>",
+            "All rights remain with the respective owners and authors. The source, author and license of each icon are listed below."
+        ],
+
+        "note": {
+            "itch": [
+                "itch.io and the itch.io logo are trademarks of Itch Corp.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "gamejolt": [
+                "Game Jolt and the Game Jolt logo are trademarks of Game Jolt.",
+                "<br>",
+                "This is a simplified version of the logo from <a href='https://simpleicons.org/'>Simple Icons</a> (CC0 1.0), which covers the artwork of the set and not the trademark.",
+                "Used for identification only, no affiliation or endorsement implied."
+            ]
+        }
+    },
 
     "images": {
         "title": "The images",
