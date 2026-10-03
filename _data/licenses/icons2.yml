@@ -39,3 +39,12 @@
   trademark: "GameJolt"
   trademark_url: "https://gamejolt.com/"
   note: "icons2.note.gamejolt"
+
+- name: "GitLab Logomark (white)"
+  image: "/media/logo/social/gitlab.svg"
+  author: "GitLab Inc."
+  source: "GitLab Press Kit"
+  source_url: "https://about.gitlab.com/press/press-kit/"
+  license: "Trademark of GitLab Inc."
+  license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
+  note: "icons.note.gitlab"

@@ -25,7 +25,7 @@
   license_url: "https://creativecommons.org/licenses/by/3.0/"
 
 - name: "GitHub Invertocat"
-  image: "/media/logo/skills/github.png"
+  image: "/media/logo/skills/github.svg"
   author: "GitHub, Inc."
   source: "GitHub Brand Assets"
   source_url: "https://brand.github.com/"
@@ -33,7 +33,7 @@
   license_url: "https://brand.github.com/foundations/logo"
   note: "icons.note.github"
 
-- name: "GitLab logo (Tanuki)"
+- name: "GitLab logomark (Tanuki)"
   image: "/media/logo/skills/gitlab.png"
   author: "GitLab Inc."
   source: "GitLab Press Kit"
