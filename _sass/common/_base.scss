@@ -248,6 +248,7 @@ em {
 // Default flexbox
 .flexbox {
     @include flexbox-style;
+    align-items: stretch;
 }
 
 // Grid on column
