@@ -11,13 +11,13 @@
     <!-- Buttons -->
     <div class="flexbox">
 
-        <!-- itch -->
+        <!-- first link -->
         <a class="btn full left" href="{{ p.dl }}" target="_blank">
             <span>{{ p.dl_name }}</span>
             <span class="{{ p.dl_icon }}"></span>
         </a>
 
-        <!-- extra -->
+        <!-- second link -->
         {% if p.dl2 and p.dl2_name and p.dl2_icon %}
             <a class="btn full" href="{{ p.dl2 }}" target="_blank">
                 <span>{{ p.dl2_name }}</span>
@@ -25,10 +25,10 @@
             </a>
         {% endif %}
 
-        <!-- details -->
+        <!-- third link -->
         <a class="btn full right" href="{{ p.page }}" target="_blank">
-            <span data-i18n="games.details"></span>
-            <span class="arrow right"></span>
+            <span data-i18n="card.details"></span>
+            <span class="arrow-svg"></span>
         </a>
 
     </div><!-- /buttons/ -->

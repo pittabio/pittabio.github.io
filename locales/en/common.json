@@ -32,5 +32,9 @@
 
         "accept": "Accept",
         "decline": "Decline"
+    },
+
+    "card": {
+        "details": "Details"
     }
 }

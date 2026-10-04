@@ -32,5 +32,9 @@
 
         "accept": "Accetta",
         "decline": "Rifiuta"
+    },
+
+    "card": {
+        "details": "Dettagli"
     }
 }
