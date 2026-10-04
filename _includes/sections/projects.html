@@ -1,0 +1,10 @@
+{% assign list = site.data.projects %}
+{% if include.featured %}
+    {% assign list = list | where: "feat", true %}
+{% endif %}
+
+<div class="grid-column">
+    {% for p in list %}
+        {% include sections/project-card.html project=p %}
+    {% endfor %}
+</div>
