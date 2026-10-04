@@ -34,10 +34,6 @@
         filter: grayscale(100%) opacity(1);
         transition: var(--transition);
     }
-
-    & svg {
-        transition: var(--transition);
-    }
 }
 
 @mixin btn-theme(
@@ -63,14 +59,10 @@ button, .btn {
             var(--accent-soft)
         );
 
-        & img, & svg {
-            filter: grayscale(0%) opacity(1);
-            stroke: var(--text);
+        & img {
+            filter: grayscale(0%);
             transition: var(--transition);
         }
-
-        font-style: normal;
-        text-decoration: none;
     }
 
     // Internal Alignment
@@ -84,7 +76,12 @@ button, .btn {
         --btn-padding: 1.4rem 2.6rem;
         --btn-radius: var(--rad-big);
         --fnt-size: 1.2rem;
-        --fnt-weight: 700;
+
+        // Icon next to the label
+        & .arrow-svg {
+            translate: 0 .05em;     // caps sit slightly below the box center
+            margin-right: -.1em;    // compensates the empty margin inside the SVG viewBox
+        }
     }
 
     // Language
@@ -153,22 +150,6 @@ button, .btn {
                 $border: var(--accent)
             );
         }
-    }
-}
-
-/* Other buttons */
-.link {
-    // btn outline
-    background: var(--bgbt);
-    gap: 0.6rem;
-
-    img {
-        height: 32px;
-        width: 32px;
-    }
-
-    &:hover {
-        transform: translateY(-3px);
     }
 }
 

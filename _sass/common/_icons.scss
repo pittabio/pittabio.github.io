@@ -80,13 +80,13 @@ $site-icons: (
     --icn-site-dim: 35px;
 
     // Animation
-    animation: bounce 2s infinite;
+    animation:
+        bounce 2s infinite, // Bouncing animation
+        scroll-fade ease-in-out both; // Scrolling fade-out
 
-    // When hovered
-    &:hover {
-        transition: var(--transition);
-        opacity: 1;
-    }
+    // Scroll properties
+    animation-timeline: auto, scroll(root block);
+    animation-range: normal, 0px 200px;
 }
 
 /* ANIMATIONS */
@@ -97,7 +97,14 @@ $site-icons: (
     50%      { transform: translateY(-6px); }
 }
 
+// Fade-out on scroll
+@keyframes scroll-fade {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
 /* MOBILE */
+//
 @media (max-width: 768px) {
 
     // Different dimensions on mobile
