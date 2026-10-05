@@ -11,25 +11,47 @@
     <!-- Buttons -->
     <div class="flexbox">
 
-        <!-- first link -->
-        <a class="btn full left" href="{{ p.dl }}" target="_blank">
-            <span>{{ p.dl_name }}</span>
-            <span class="{{ p.dl_icon }}"></span>
-        </a>
-
-        <!-- second link -->
-        {% if p.dl2 and p.dl2_name and p.dl2_icon %}
-            <a class="btn full" href="{{ p.dl2 }}" target="_blank">
-                <span>{{ p.dl2_name }}</span>
-                <span class="{{ p.dl2_icon }}"></span>
+        <!-- First Link -->
+        {% if p.link1 and p.link1_name %}
+            <a class="btn full left" href="{{ p.link1 }}" target="_blank">
+                <!-- Name of the link -->
+                <span>{{ p.link1_name }}</span>
+                <!-- Icon SVG or Image -->
+                {% if p.link1_icon %}
+                    <span class="{{ p.link1_icon }}"></span>
+                {% elsif p.link1_img %}
+                    <img src="{{ p.link1_img }}" alt="{{ p.link1_name }} logo"/>
+                {% endif %}
             </a>
-        {% endif %}
+        {% endif %} <!-- /first link/ -->
 
-        <!-- third link -->
-        <a class="btn full right" href="{{ p.page }}" target="_blank">
-            <span data-i18n="card.details"></span>
-            <span class="arrow-svg"></span>
-        </a>
+        <!-- Second Link -->
+        {% if p.link2 and p.link2_name %}
+            <a class="btn full" href="{{ p.link2 }}" target="_blank">
+                <!-- Name of the link -->
+                <span>{{ p.link2_name }}</span>
+                <!-- Icon SVG or Image -->
+                {% if p.link2_icon %}
+                    <span class="{{ p.link2_icon }}"></span>
+                {% elsif p.link2_img %}
+                    <img src="{{ p.link2_img }}" alt="{{ p.link2_name }} logo"/>
+                {% endif %}
+            </a>
+        {% endif %} <!-- /second link/ -->
+
+        <!-- Third Link -->
+        {% if p.link3_name %}
+            <a class="btn full right" href="{{ p.page }}" target="_blank">
+                <!-- Name of the link -->
+                <span data-i18n="{{ p.link3_name }}"></span>
+                <!-- Icon SVG or Image -->
+                {% if p.link3_icon %}
+                    <span class="{{ p.link3_icon }}"></span>
+                {% elsif p.link3_img %}
+                    <img src="{{ p.link3_img }}" alt="{{ p.link3_name }} logo"/>
+                {% endif %}
+            </a>
+        {% endif %} <!-- /third link/ -->
 
     </div><!-- /buttons/ -->
 </article><!-- /card/ -->
