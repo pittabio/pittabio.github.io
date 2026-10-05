@@ -28,12 +28,6 @@
     text-transform: uppercase;
     text-decoration: none;
     font-style: normal;
-
-    & img {
-        display: inline-block;
-        filter: grayscale(100%) opacity(1);
-        transition: var(--transition);
-    }
 }
 
 @mixin btn-theme(
@@ -58,11 +52,6 @@ button, .btn {
             var(--text),
             var(--accent-soft)
         );
-
-        & img {
-            filter: grayscale(0%);
-            transition: var(--transition);
-        }
     }
 
     // Internal Alignment
@@ -157,7 +146,6 @@ button, .btn {
 @media (max-width: 768px) {
     button, .btn {
         --btn-padding: .8rem 1.4rem;
-        //height: 100%;
 
         // Big button
         &.big {
