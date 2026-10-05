@@ -1,0 +1,64 @@
+{
+    "games": {
+        "details": "Details",
+
+        "ruins": {
+            "name": "Ruins' Rhapsody",
+            "desc": [
+                "Play as a daring <strong>archaeologist</strong> hunting for an ancient mysterious relic.",
+                "This action-adventure demo, inspired by Tomb Raider and Uncharted, blends a <em>dynamic movement system</em>,",
+                "environmental puzzles and gunfights against robots in ancient ruins."
+            ]
+        },
+
+        "goblin": {
+            "name": "Goblin Jr. Adventure",
+            "desc": [
+                "Guide a courageous little goblin through colorful, stylized <em>cube worlds</em>.",
+                "Designed for kids and casual players, with a focus on accessibility and immediate fun,",
+                "this <strong>collect-a-thon platformer</strong> is a short but thrilling experience full of traps,",
+                "hidden secrets and glittering treasures."
+            ]
+        },
+
+        "zombie": {
+            "name": "Zombie Siege Chronicles",
+            "desc": [
+                "A <strong>group project</strong> created for the <em>Rookie Awards 2024</em>.",
+                "Defend your base from relentless zombie waves using turrets, barriers and special structures",
+                "in this isometric <strong>tower defense</strong> game.",
+                "I built the core systems: the <em>portal network</em>, collision-based placement validation,",
+                "survivor rescue events and the data-driven shop UI."
+            ]
+        },
+
+        "flying": {
+            "name": "Flying Bird",
+            "desc": [
+                "A <strong>3D remake</strong> of the iconic mobile game <em>Flappy Bird</em>,",
+                "available on <strong>Windows and Android</strong>.",
+                "Guide the bird through obstacles with simple one-touch controls",
+                "and chase the highest score in an endless run."
+            ]
+        },
+
+        "wizard": {
+            "name": "WizardScape: The Magic Chase",
+            "desc": [
+                "A Android <strong>survival action game</strong> where you control a young wizard",
+                "with an <em>auto-cast spell combat system</em>.",
+                "Choose your upgrades, manage diamond-based power-ups and survive increasingly difficult enemy waves.",
+                "<em>Pre-Alpha demo</em> showcasing core mechanics in both C++ and Blueprints."
+            ]
+        },
+
+        "more": {
+            "name": "More to come",
+            "desc": [
+                "More projects are on the way!",
+                "<br>",
+                "In the meantime, explore my GitHub and GitLab repositories for a closer look at my code."
+            ]
+        }
+    }
+}

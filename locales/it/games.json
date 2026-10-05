@@ -1,0 +1,64 @@
+{
+    "games": {
+        "link": "Dettagli",
+
+        "ruins": {
+            "name": "Ruins' Rhapsody",
+            "desc": [
+                "Gioca nei panni di un'audace <strong>archeologa</strong> a caccia di un'antica e misteriosa reliquia.",
+                "Questa demo action-adventure, ispirata a Tomb Raider e Uncharted, unisce un <em>sistema di movimento dinamico</em>,",
+                "enigmi ambientali e sparatorie contro robot in antiche rovine."
+            ]
+        },
+
+        "goblin": {
+            "name": "Goblin Jr. Adventure",
+            "desc": [
+                "Guida un piccolo e coraggioso goblin attraverso colorati <em>mondi a cubi</em> stilizzati.",
+                "Pensato per bambini e giocatori occasionali, con un'attenzione particolare all'accessibilità e al divertimento immediato,",
+                "questo <strong>platform con collezionabili</strong> è un'esperienza breve ma avvincente, piena di trappole,",
+                "segreti nascosti e tesori scintillanti."
+            ]
+        },
+
+        "zombie": {
+            "name": "Zombie Siege Chronicles",
+            "desc": [
+                "Un <strong>progetto di gruppo</strong> creato per i <em>Rookie Awards 2024</em>.",
+                "Difendi la tua base da ondate incessanti di zombie con torrette, barriere e strutture speciali",
+                "in questo <strong>tower defense</strong> isometrico.",
+                "Ho realizzato i sistemi principali: la <em>rete di portali</em>, la validazione del posizionamento basata sulle collisioni,",
+                "gli eventi di salvataggio dei sopravvissuti e l'interfaccia del negozio data-driven."
+            ]
+        },
+
+        "flying": {
+            "name": "Flying Bird",
+            "desc": [
+                "Un <strong>remake in 3D</strong> dell'iconico gioco per dispositivi mobili <em>Flappy Bird</em>,",
+                "disponibile per <strong>Windows e Android</strong>.",
+                "Guida l'uccellino tra gli ostacoli con semplici comandi 'one-touch'",
+                "e punta al punteggio più alto in una sfida infinita."
+            ]
+        },
+
+        "wizard": {
+            "name": "WizardScape: The Magic Chase",
+            "desc": [
+                "Un <strong>gioco d'azione survival</strong> per Android in cui controlli un giovane mago",
+                "dotato di un sistema di combattimento con <em>lancio automatico degli incantesimi</em>.",
+                "Scegli i potenziamenti, gestisci i bonus basati sui diamanti e sopravvivi a ondate di nemici sempre più difficili.",
+                "<em>Demo pre-alpha</em> che mostra le meccaniche principali implementate sia in C++ che in Blueprints."
+            ]
+        },
+
+        "more": {
+            "name": "More to come",
+            "desc": [
+                "Altri progetti sono in arrivo!",
+                "<br>",
+                "Nel frattempo, esplora i miei repository su GitHub e GitLab per dare un'occhiata più da vicino al mio codice."
+            ]
+        }
+    }
+}
