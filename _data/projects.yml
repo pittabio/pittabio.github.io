@@ -1,17 +1,88 @@
-- name: "projects.ruins.name"
-  image: "media/games/ruins-rhapsody/banner.jpg"
-  desc: "projects.ruins.desc"
-  link_ext: "https://pittabio.itch.io/ruins-rhapsody-demo"
-  link_page: "projects/ruins-rhapsody.html"
+# Ruins' Rhapsody
+- name: "games.ruins.name"
+  image: "/media/games/ruins-rhapsody/banner.jpg"
+  desc: "games.ruins.desc"
+  page: "projects/ruins-rhapsody.html"
+  feat: true
 
-- name: "projects.goblin.name"
-  image: "media/games/goblin-jr/banner.png"
-  desc: "projects.goblin.desc"
-  link_ext: "https://pittabio.itch.io/goblin-jr-adventure"
-  link_page: "projects/goblin-jr.html"
+  link1: "https://pittabio.itch.io/ruins-rhapsody-demo"
+  link1_name: "itch.io"
+  link1_icon: "itch-svg"
 
-- name: "projects.zombie.name"
-  image: "media/games/zombie-siege/banner.png"
-  desc: "projects.zombie.desc"
-  link_ext: "https://fabriziop.itch.io/zombie-siege-chronicles"
-  link_page: "projects/zombie-siege.html"
+  link2: "https://gamejolt.com/games/ruins-rhapsody-demo/992941"
+  link2_name: "GameJolt"
+  link2_icon: "gamejolt-svg"
+
+  link3_name: "card.details"
+  link3_icon: "arrow-svg"
+
+# Goblin Jr. Adventure
+- name: "games.goblin.name"
+  image: "/media/games/goblin-jr/banner.png"
+  desc: "games.goblin.desc"
+  page: "projects/goblin-jr.html"
+  feat: true
+
+  link1: "https://pittabio.itch.io/goblin-jr-adventure"
+  link1_name: "itch.io"
+  link1_icon: "itch-svg"
+
+  link3_name: "card.details"
+  link3_icon: "arrow-svg"
+
+# Zombie Siege Chronicles
+- name: "games.zombie.name"
+  image: "/media/games/zombie-siege/banner.png"
+  desc: "games.zombie.desc"
+  page: "projects/zombie-siege.html"
+  feat: true
+
+  link1: "https://fabriziop.itch.io/zombie-siege-chronicles"
+  link1_name: "itch.io"
+  link1_icon: "itch-svg"
+
+  link3_name: "card.details"
+  link3_icon: "arrow-svg"
+
+# Flying Bird
+- name: "games.flying.name"
+  image: "/media/games/flying-bird/banner.png"
+  desc: "games.flying.desc"
+  page: "projects/flying-bird.html"
+
+  link1: "https://pittabio.itch.io/flying-bird"
+  link1_name: "itch.io"
+  link1_icon: "itch-svg"
+
+  link3_name: "card.details"
+  link3_icon: "arrow-svg"
+
+# WizardScape
+- name: "games.wizard.name"
+  image: "/media/games/wizard-scape/banner.png"
+  desc: "games.wizard.desc"
+  page: "projects/wizardscape.html"
+
+  link1: "https://pittabio.itch.io/wizardscape"
+  link1_name: "itch.io"
+  link1_icon: "itch-svg"
+
+  link3_name: "card.details"
+  link3_icon: "arrow-svg"
+
+# More...
+- name: "games.more.name"
+  image: "/media/fox.png"
+  desc: "games.more.desc"
+  page: "about.html"
+
+  link1: "https://github.com/pittabio"
+  link1_name: "GitHub"
+  link1_icon: "github-svg"
+
+  link2: "https://gitlab.com/pittabio"
+  link2_name: "GitLab"
+  link2_icon: "gitlab-svg"
+
+  link3_name: "card.about"
+  link3_icon: "arrow-svg"
