@@ -1,147 +1,77 @@
 ﻿{
-  "head_title": "Progetti · Fabio Pittaccio",
+    "projects_page": {
 
-  "projects_page": {
-    "tag": "Giochi & Esperimenti",
-    "title": "Tutti i <em>Progetti</em>",
-    "subtitle": "Gameplay Programming · UE5 · C++ · Blueprint",
-    "description": [
-      "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici — ",
-      "dai titoli action-adventure completi ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
-    ],
+        "tag": "Giochi & Esperimenti",
+        "title": "Tutti i <b class='accent'>Progetti</b>",
+        "subtitle": "Unreal Engine 5 / C++ / Blueprint / PC / Android",
+        "description": [
+            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+            "<br>",
+            "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici",
+            "<br>",
+            "dai titoli action-adventure ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
+        ],
 
-    "games_title": "Giochi",
-    "experiments_title": "Esperimenti & Esplorazioni",
-    "experiments_desc": [
-      "Progetti sperimentali in cui esploro i sistemi avanzati di Unreal Engine e la <strong>logica di gameplay</strong>.",
-      "Showcase tecnici focalizzati sull'<strong>architettura delle meccaniche</strong>, decision-making dell'IA e framework complessi."
-    ],
+        "games_title": "Giochi",
+        "experiments_title": "Esperimenti & Esplorazioni",
+        "experiments_desc": [
+            "Progetti sperimentali in cui esploro sistemi avanzati di Unreal Engine e la <strong>logica di gioco</strong>.",
+            "Dimostrazioni tecniche incentrate sull'<strong>architettura delle meccaniche</strong>, sui processi decisionali dell'IA e su framework complessi."
+        ],
 
-    "link_details": "Dettagli",
-    "link_play":    "itch.io",
-    "link_github":  "Vedi su GitHub",
-    "link_gitlab":  "View on GitLab",
+        "link_github":  "Vedi su GitHub",
+        "link_gitlab":  "Vedi su GitLab",
 
-    "ruins": {
-      "name": "Ruins' Rhapsody",
-      "desc": [
-        "Vesti i panni di <strong>Alessandra Morioka</strong>, un'audace archeologa a caccia di un antico e misterioso reliquia.",
-        "Una demo action-adventure ispirata a Tomb Raider e Uncharted,",
-        "che fonde un <em>sistema di movimento dinamico</em>, puzzle ambientali, combattimenti intensi",
-        "ed esplorazione immersiva tra rovine antiche mozzafiato.",
-        "Sviluppato in <strong>Unreal Engine 5</strong>."
-      ],
-      "banner": "Il banner di <strong>Ruins' Rhapsody</strong>"
-    },
+        "state_trees": {
+            "name": "State Tree AI [WIP]",
+            "desc": [
+                "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
+                "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
+                "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
+                "e a sistemi dinamici basati sugli eventi.",
+                "Lavoro in corso."
+            ]
+        },
 
-    "goblin": {
-      "name": "Goblin Jr. Adventure",
-      "desc": [
-        "Guida un coraggioso piccolo Goblin attraverso <em>mondi a cubi</em> stilizzati pieni di trappole,",
-        "segreti nascosti e tesori scintillanti.",
-        "Un colorato <strong>platform collect-a-thon</strong> pensato per giocatori casual e bambini,",
-        "con raccolta di monete, sfide in classifica e un'esperienza breve ma emozionante.",
-        "Disponibile in <strong>inglese e italiano</strong>."
-      ],
-      "banner": "Il banner di <strong>Goblin Jr. Adventure</strong>"
-    },
+        "gas": {
+            "name": "GAS Abilities",
+            "desc": [
+                "Un approfondimento tecnico sul <strong>Gameplay Ability System (GAS)</strong> di Unreal Engine.",
+                "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
+                "ed effetti di gioco —",
+                "uno dei framework più potenti e complessi di Unreal."
+            ]
+        },
 
-    "zombie": {
-      "name": "Zombie Siege Chronicles",
-      "desc": [
-        "Un <strong>progetto di gruppo</strong> creato per i <em>Rookie Awards 2024</em>.",
-        "Difendi la tua base da ondate implacabili di zombie usando torrette, barriere difensive",
-        "e strutture speciali in questo <strong>tower defense</strong> con visuale dall'alto.",
-        "Include tipi di zombie unici (Tank, Katana…), eventi speciali come la <em>Frenesia Zombie</em>,",
-        "e gestione strategica delle risorse."
-      ],
-      "banner": "Il banner di <strong>Zombie Siege Chronicles</strong>"
-    },
+        "archive_title": "Dev Archive",
+        "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
+        "status_cancelled": "Cancellato",
+        "status_shelved":   "In Pausa",
 
-    "flying": {
-      "name": "Flying Bird",
-      "desc": [
-        "Un <strong>remake 3D</strong> dell'iconico gioco mobile <em>Flappy Bird</em>,",
-        "realizzato in <strong>Unreal Engine 5.4</strong> e disponibile sia per <strong>Windows che Android</strong>.",
-        "Naviga l'uccellino attraverso gli ostacoli con semplici controlli touch.",
-        "Gameplay infinito — punta al punteggio più alto possibile."
-      ],
-      "banner": "Il banner di <strong>Flying Bird</strong>"
-    },
+        "game_cancelled": {
+            "name": "Echoes of the Witch Wood",
+            "desc": [
+                "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
+                "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
+                "e una pipeline di salvataggio completa.",
+                "Cancellato prima dell'annuncio pubblico."
+            ]
+        },
 
-    "wizard": {
-      "name": "WizardScape: The Magic Chase",
-      "desc": [
-        "Un <strong>survival action</strong> per Android realizzato in Unreal Engine.",
-        "Controlla un giovane mago con un <em>sistema di combattimento a incantesimi automatici</em>:",
-        "personalizza i potenziamenti, gestisci i power-up basati sui diamanti",
-        "e sopravvivi a ondate di nemici sempre più difficili.",
-        "<em>Demo Pre-Alpha</em> — mostra le meccaniche principali sia in C++ che in Blueprint."
-      ],
-      "banner": "Il banner di <strong>WizardScape: The Magic Chase</strong>"
-    },
+        "game_shelved": {
+            "name": "Project Pyramid",
+            "desc": [
+                "Un gioco action-adventure di team ambientato nell'antico Egitto.",
+                "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+                "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
+                "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
+            ]
+        },
 
-    "more": {
-      "name": "Altre novità in arrivo",
-      "desc": [
-        "Altri progetti sono in arrivo! Restate sintonizzati per aggiornamenti e nuovi contenuti entusiasmanti.",
-        "Nel frattempo, sentitevi liberi di esplorare i miei repository GitHub e GitLab per approfondimenti più dettagliati."
-      ],
-      "github": "GitHub",
-      "gitlab": "GitLab",
-      "about_me": "Conoscimi"
-    },
-
-    "state_trees": {
-      "name": "State Tree AI [WIP]",
-      "desc": [
-        "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
-        "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
-        "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
-        "e a sistemi dinamici basati sugli eventi.",
-        "Lavoro in corso."
-      ]
-    },
-
-    "gas": {
-      "name": "GAS Abilities",
-      "desc": [
-        "Un approfondimento tecnico sul <strong>Gameplay Ability System (GAS)</strong> di Unreal Engine.",
-        "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
-        "ed effetti di gioco —",
-        "uno dei framework più potenti e complessi di Unreal."
-      ]
-    },
-
-    "archive_title": "Dev Archive",
-    "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
-    "status_cancelled": "Cancellato",
-    "status_shelved":   "In Pausa",
-
-    "game_cancelled": {
-      "name": "Echoes of the Witch Wood",
-      "desc": [
-        "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
-        "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
-        "e una pipeline di salvataggio completa.",
-        "Cancellato prima dell'annuncio pubblico."
-      ]
-    },
-
-    "game_shelved": {
-      "name": "Project Pyramid",
-      "desc": [
-        "Un gioco d'azione e avventura sviluppato da un team e ambientato nell'antico Egitto.",
-        "Ho implementato l'intero <strong>sistema AI di gameplay</strong> — percezione stealth, Behavior Tree,",
-        "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
-        "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
-      ]
-    },
-
-    "cta": {
-      "title": "Ti interessa collaborare<br><em>insieme?</em>",
-      "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",
-      "button": "Contattami"
+        "cta": {
+            "title": "Ti interessa collaborare<br><em>insieme?</em>",
+            "subtitle": "Freelance · Remoto · Aperto a nuove opportunità",
+            "button": "Contattami"
+        }
     }
-  }
 }
