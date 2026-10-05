@@ -4,7 +4,9 @@
     <a class="mini-title" href="{{ p.page }}" target="_blank" data-i18n="{{ p.name }}"></a>
     <!-- Image -->
     {% if p.image %}
-        <img src="{{ p.image }}" alt="The banner image for the game {{ p.name }}" onclick="openPopup(this)"/>
+        <img src="{{ p.image }}"
+             alt="The banner image for the game {{ p.name }}"
+             onclick="openOneImage(this)" />
     {% endif %}
     <!-- Description -->
     <p class="project-desc" data-i18n-html="{{ p.desc }}"></p>
