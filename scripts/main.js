@@ -128,6 +128,12 @@ async function changeLanguage(lang) {
             if (val) el.setAttribute('aria-label', val);
         });
 
+        // 4d. Update image alt text (data-i18n-alt)
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const val = getNestedTranslation(el.getAttribute('data-i18n-alt'));
+            if (val) el.setAttribute('alt', Array.isArray(val) ? val.join(' ') : val);
+        });
+
         // 5. Update the state of the language buttons (syncs Desktop and Mobile)
         document.querySelectorAll('.lang').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
