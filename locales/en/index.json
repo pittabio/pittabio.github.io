@@ -30,21 +30,24 @@
             "desc": [
                 "I don't just wire up Blueprints: I design modular, interface-driven C++ systems",
                 "(save pipelines, actor-agnostic components, custom subsystems) built to scale with the project."
-            ]
+            ],
+            "alt": "C++ logo"
         },
         "item2": {
             "title": "Gameplay Mechanics Engineering",
             "desc": [
                 "From custom movement (dash, climbing, sliding) to combat, AI behavior, and environmental interaction.",
                 "I build the core mechanics that make a game feel responsive and alive."
-            ]
+            ],
+            "alt": "A controller that represents the game mechanics"
         },
         "item3": {
             "title": "Full-Cycle Dev",
             "desc": [
                 "From core mechanic to complete game loop: save/load, UI, localization, leaderboards.",
                 "I take projects all the way to a polished, shippable experience."
-            ]
+            ],
+            "alt": "A circle with 5 arrows that represents the full-cycle development loop"
         },
         "find_more": "Find out more"
     },
@@ -63,7 +66,7 @@
         "title": [
             "Let's build something",
             "<br>",
-            "<b class=\"accent\">together</b>"
+            "<b class='accent'>together</b>"
         ],
         "subtitle": "Freelance • Flexible • Open to new opportunities",
         "cta": "Get in Touch"
