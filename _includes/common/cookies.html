@@ -4,21 +4,16 @@
     role="region" aria-labelledby="cookie-label" aria-describedby="cookie-desc">
 
     <!-- Title -->
-    <h4 data-i18n="cookies.title">Privacy & Analytics</h4>
+    <h4 data-i18n="$common.cookies.title">Privacy & Analytics</h4>
 
     <!-- Description -->
     <div id="cookie-desc">
-        <p data-i18n="cookies.desc1">
-            I use anonymous analytics to understand how visitors interact with my projects.
-        </p>
-        <p data-i18n="cookies.desc2">
-            No personal data is collected.
-        </p>
+        <p data-i18n-html="$common.cookies.desc"></p>
     </div>
 
     <!-- Buttons -->
     <div class="cookie-buttons">
-        <button class="outline" onclick="updateConsent('denied')"  data-i18n="cookies.decline"></button>
-        <button class="btn"     onclick="updateConsent('granted')" data-i18n="cookies.accept"> </button>
+        <button class="outline" onclick="updateConsent('denied')"  data-i18n="$common.cookies.decline"></button>
+        <button class="btn"     onclick="updateConsent('granted')" data-i18n="$common.cookies.accept"> </button>
     </div>
 </div>

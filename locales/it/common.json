@@ -6,6 +6,7 @@
             "about": "Su di me",
             "contacts": "Contatti",
             "support": "Supporto",
+
             "ARIA": {
                 "home": "Torna alla Home",
                 "nav": "Navigazione principale",
@@ -13,21 +14,24 @@
                 "menu_close": "Chiudi menu"
             }
         },
+
         "footer": {
             "licenses": "LICENZE",
-            "back_top": "TORNA SU",
-            "ARIA": {
-                "license": "Licenza Creative Commons (apre in una nuova scheda)",
-                "back_top": "Torna all'inizio della pagina"
-            }
+            "license_ARIA": "Licenze (apre in una nuova scheda)",
+            "back_top": "TORNA SU"
         },
+
         "cookies": {
             "title": "Privacy ed Analisi [GDPR]",
-            "desc1": "Utilizzo analisi anonime per capire come i visitatori interagiscono con il sito.",
-            "desc2": "Non viene raccolto alcun dato personale.",
+            "desc": [
+                "Utilizzo analisi anonime per capire come i visitatori interagiscono con il sito.",
+                "<br>",
+                "Non viene raccolto alcun dato personale."
+            ],
             "accept": "Accetta",
             "decline": "Rifiuta"
         },
+
         "card": {
             "details": "Dettagli",
             "about": "Su di me"
