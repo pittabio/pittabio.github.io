@@ -1,41 +1,36 @@
 ﻿{
-    "head": {
-        "home": "Home",
-        "projects": "Projects",
-        "about": "About me",
-        "contacts": "Contacts",
-        "support": "Support",
-
-        "ARIA": {
-            "home": "Back to Home",
-            "nav": "Main navigation",
-            "menu_open": "Open menu",
-            "menu_close": "Close menu"
+    "$common": {
+        "head": {
+            "home": "Home",
+            "projects": "Projects",
+            "about": "About me",
+            "contacts": "Contacts",
+            "support": "Support",
+            "ARIA": {
+                "home": "Back to Home",
+                "nav": "Main navigation",
+                "menu_open": "Open menu",
+                "menu_close": "Close menu"
+            }
+        },
+        "footer": {
+            "licenses": "LICENCES",
+            "back_top": "BACK TO TOP",
+            "ARIA": {
+                "licenses": "Licenses page",
+                "back_top": "Back to top of page"
+            }
+        },
+        "cookies": {
+            "title": "Privacy & Analytics [GDPR]",
+            "desc1": "I use anonymous analytics to understand how visitors interact with my site.",
+            "desc2": "No personal data is collected.",
+            "accept": "Accept",
+            "decline": "Decline"
+        },
+        "card": {
+            "details": "Details",
+            "about": "About Me"
         }
-    },
-
-    "footer": {
-        "licenses": "LICENCES",
-        "back_top": "BACK TO TOP",
-
-        "ARIA": {
-            "licenses": "Licenses page",
-            "back_top": "Back to top of page"
-        }
-    },
-
-    "cookies": {
-        "title": "Privacy & Analytics [GDPR]",
-
-        "desc1": "I use anonymous analytics to understand how visitors interact with my site.",
-        "desc2": "No personal data is collected.",
-
-        "accept": "Accept",
-        "decline": "Decline"
-    },
-
-    "card": {
-        "details": "Details",
-        "about": "About Me"
     }
 }

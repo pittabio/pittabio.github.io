@@ -38,7 +38,7 @@ function initHeader() {
 
     // 3a. Update ARIA menu
     const updateToggleAria = (isOpen) => {
-        const key = isOpen ? 'head.ARIA.menu_close' : 'head.ARIA.menu_open';
+        const key = isOpen ? '$common.head.ARIA.menu_close' : '$common.head.ARIA.menu_open';
         toggle.setAttribute('data-i18n-aria', key);
         toggle.setAttribute('aria-expanded', isOpen);
 
