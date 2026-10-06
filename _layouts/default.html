@@ -11,7 +11,12 @@
     {% include head/analytics.html %}
 
     <!-- The page title -->
-    <title>{{ page.title }} · {{ site.title }}</title>
+    <title
+        {% if page.i18n_title %}
+            data-i18n="{{ page.i18n_title }}" data-suffix=" · {{ site.title }}"
+        {% endif %}>
+        {{ page.title }} · {{ site.title }}
+    </title>
 
     <!-- Preconnect to speed up font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

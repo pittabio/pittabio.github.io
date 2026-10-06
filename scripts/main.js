@@ -122,16 +122,23 @@ async function changeLanguage(lang) {
             if (val) el.innerHTML = Array.isArray(val) ? val.join(' ') : val;
         });
 
-        // 4c. Update ARIA labels (Accessibility)
-        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-            const val = getNestedTranslation(el.getAttribute('data-i18n-aria'));
-            if (val) el.setAttribute('aria-label', val);
-        });
+        // 4c. Update document title (page title + site suffix)
+        const titleEl = document.querySelector('title[data-i18n]');
+        if (titleEl) {
+            const val = getNestedTranslation(titleEl.getAttribute('data-i18n'));
+            if (val) document.title = val + (titleEl.dataset.suffix || '');
+        }
 
         // 4d. Update image alt text (data-i18n-alt)
         document.querySelectorAll('[data-i18n-alt]').forEach(el => {
             const val = getNestedTranslation(el.getAttribute('data-i18n-alt'));
             if (val) el.setAttribute('alt', Array.isArray(val) ? val.join(' ') : val);
+        });
+
+        // 4e. Update ARIA labels (Accessibility)
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const val = getNestedTranslation(el.getAttribute('data-i18n-aria'));
+            if (val) el.setAttribute('aria-label', val);
         });
 
         // 5. Update the state of the language buttons (syncs Desktop and Mobile)
