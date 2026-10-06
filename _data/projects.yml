@@ -13,7 +13,7 @@
   link2_name: "GameJolt"
   link2_icon: "gamejolt-svg"
 
-  link3_name: "card.details"
+  link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Goblin Jr. Adventure
@@ -27,7 +27,7 @@
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
-  link3_name: "card.details"
+  link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Zombie Siege Chronicles
@@ -41,7 +41,7 @@
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
-  link3_name: "card.details"
+  link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Flying Bird
@@ -54,7 +54,7 @@
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
-  link3_name: "card.details"
+  link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # WizardScape
@@ -67,7 +67,7 @@
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
-  link3_name: "card.details"
+  link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # More...
@@ -84,5 +84,5 @@
   link2_name: "GitLab"
   link2_icon: "gitlab-svg"
 
-  link3_name: "card.about"
+  link3_name: "$common.card.about"
   link3_icon: "arrow-svg"
