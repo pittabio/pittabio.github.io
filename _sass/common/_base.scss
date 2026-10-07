@@ -247,8 +247,9 @@ em {
 
 // Default flexbox
 .flexbox {
-    @include flexbox-style;
-    align-items: stretch;
+    @include flexbox-style(
+        $align: stretch
+    );
 }
 
 // Grid on column
