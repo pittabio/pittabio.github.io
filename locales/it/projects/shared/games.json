@@ -53,11 +53,11 @@
         },
 
         "more": {
-            "name": "More to come",
+            "name": "Altro in arrivo...",
             "desc": [
-                "Altri progetti sono in arrivo!",
+                "Altri progetti <em>sono in arrivo!</em>",
                 "<br>",
-                "Nel frattempo, esplora i miei repository su GitHub e GitLab per dare un'occhiata più da vicino al mio codice."
+                "Nel frattempo, esplora i miei repository su <strong>GitHub</strong> e <strong>GitLab</strong> per dare un'occhiata più da vicino al mio codice."
             ]
         }
     }

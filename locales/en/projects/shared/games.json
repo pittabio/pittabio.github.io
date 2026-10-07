@@ -53,11 +53,11 @@
         },
 
         "more": {
-            "name": "More to come",
+            "name": "More to come...",
             "desc": [
-                "More projects are on the way!",
+                "More projects are <em>on the way!</em>",
                 "<br>",
-                "In the meantime, explore my GitHub and GitLab repositories for a closer look at my code."
+                "In the meantime, explore my <strong>GitHub</strong> and <strong>GitLab</strong> repositories for a closer look at my code."
             ]
         }
     }
