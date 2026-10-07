@@ -6,7 +6,7 @@ let repoName = isGitHubPages ? '' : '';
 const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
 let currentTranslations = {};
 // Files loaded on EVERY page (shared translations)
-const sharedFiles = ['common', 'games'];
+const baseFiles = ['common'];
 // Pages to NOT translate
 const excludedPages = ['debug-room'];
 
@@ -91,9 +91,13 @@ async function changeLanguage(lang) {
         const activePageId = window.forcedPageName || cleanPath;
         const isExcluded = excludedPages.includes(activePageId);
 
-        // 2. Fetch JSON files (Page-specific + Common), in modo "sicuro"
+        // Shared files = always-loaded base + extra files declared by the page
+        const extraFiles = window.extraLocales || [];
+        const filesToLoad = [...baseFiles, ...extraFiles];
+
+        // 2. Fetch JSON files (Page-specific + Common), safe mode
         const [sharedList, pageTranslations] = await Promise.all([
-            Promise.all(sharedFiles.map(f => safeFetchJson(`${repoName}/locales/${lang}/${f}.json`))),
+            Promise.all(filesToLoad.map(f => safeFetchJson(`${repoName}/locales/${lang}/${f}.json`))),
             isExcluded
                 ? Promise.resolve({})
                 : safeFetchJson(`${repoName}/locales/${lang}/${activePageId}.json`)
