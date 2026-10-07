@@ -1,77 +1,76 @@
 ﻿{
-    "head_title": "Projects · Fabio Pittaccio",
+    "head_title": "Projects",
 
-    "projects_page": {
-        "tag": "Games & Experiments",
-        "title": "All <b class='accent'>Projects</b>",
-        "description": [
-            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
-            "<br>",
-            "A complete overview of my published games and technical experiments",
-            "<br>",
-            "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
-        ],
+    "tag": "Games & Experiments",
+    "title": "All <b class='accent'>Projects</b>",
+    "description": [
+        "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+        "<br>",
+        "A complete overview of my published games and technical experiments",
+        "<br>",
+        "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
+    ],
 
-        "games_title": "Games",
-        "experiments_title": "Experiments & Explorations",
-        "experiments_desc": [
-            "Experimental projects where I explore advanced Unreal Engine systems and <strong>gameplay logic</strong>.",
-            "Technical showcases focused on <strong>mechanics architecture</strong>, AI decision-making, and complex frameworks."
-        ],
+    "games_title": "Games",
+    "experiments_title": "Experiments & Explorations",
+    "experiments_desc": [
+        "Experimental projects where I explore advanced Unreal Engine systems and <strong>gameplay logic</strong>.",
+        "<br>",
+        "Technical showcases focused on <strong>mechanics architecture</strong>, AI decision-making, and complex frameworks."
+    ],
 
-        "link_github":  "View on GitHub",
-        "link_gitlab":  "View on GitLab",
+    "link_github":  "View on GitHub",
+    "link_gitlab":  "View on GitLab",
 
-        "state_trees": {
-            "name": "State Tree AI",
-            "desc": [
-                "Practical exploration of Unreal Engine's <strong>State Tree</strong> system",
-                "for <em>AI behavior</em> and quest management.",
-                "Showcasing modern approaches to game logic, AI decision-making,",
-                "and dynamic event-driven systems.",
-                "Work in progress."
-            ]
-        },
+    "state_trees": {
+        "name": "State Tree AI",
+        "desc": [
+            "Practical exploration of Unreal Engine's <strong>State Tree</strong> system",
+            "for <em>AI behavior</em> and quest management.",
+            "Showcasing modern approaches to game logic, AI decision-making,",
+            "and dynamic event-driven systems.",
+            "Work in progress."
+        ]
+    },
 
-        "gas": {
-            "name": "GAS Abilities",
-            "desc": [
-                "A technical deep-dive into Unreal Engine's <strong>Gameplay Ability System (GAS)</strong>.",
-                "Focused on implementing <em>advanced ability mechanics</em>, attribute systems,",
-                "and gameplay effects —",
-                "one of Unreal's most powerful and complex frameworks."
-            ]
-        },
+    "gas": {
+        "name": "GAS Abilities",
+        "desc": [
+            "A technical deep-dive into Unreal Engine's <strong>Gameplay Ability System (GAS)</strong>.",
+            "Focused on implementing <em>advanced ability mechanics</em>, attribute systems,",
+            "and gameplay effects —",
+            "one of Unreal's most powerful and complex frameworks."
+        ]
+    },
 
-        "archive_title": "Dev Archive",
-        "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
-        "status_cancelled": "Cancelled",
-        "status_shelved":   "On Hold",
+    "archive_title": "Dev Archive",
+    "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
+    "status_cancelled": "Cancelled",
+    "status_shelved":   "On Hold",
 
-        "game_cancelled": {
-            "name": "Echoes of the Witch Wood",
-            "desc": [
-                "An internal <strong>action platformer</strong> prototype with two playable characters,",
-                "a shared ability interface system, environmental mechanics, enemy AI,",
-                "and a full save pipeline.",
-                "Cancelled before public announcement."
-            ]
-        },
+    "game_cancelled": {
+        "name": "Echoes of the Witch Wood",
+        "desc": [
+            "An internal <strong>action platformer</strong> prototype with two playable characters,",
+            "a shared ability interface system, environmental mechanics, enemy AI,",
+            "and a full save pipeline.",
+            "Cancelled before public announcement."
+        ]
+    },
 
-        "game_shelved": {
-            "name": "Project Pyramid",
-            "desc": [
-                "A team-developed action-adventure game set in ancient Egypt.",
-                "I implemented the <strong>gameplay AI system</strong> — stealth perception, Behavior Tree,",
-                "EQS search, Dummy Entity subsystem, and ally coordination.",
-                "The team is still actively developing it; my work is currently on hold."
-            ]
-        },
+    "game_shelved": {
+        "name": "Project Pyramid",
+        "desc": [
+            "A team-developed action-adventure game set in ancient Egypt.",
+            "I implemented the <strong>gameplay AI system</strong> — stealth perception, Behavior Tree,",
+            "EQS search, Dummy Entity subsystem, and ally coordination.",
+            "The team is still actively developing it; my work is currently on hold."
+        ]
+    },
 
-        "cta": {
-            "title": "Interested in working<br><em>together?</em>",
-            "subtitle": "Freelance · Remote · Open to new opportunities",
-            "button": "Get in touch"
-        }
+    "cta": {
+        "title": "Interested in working<br><em>together?</em>",
+        "subtitle": "Freelance · Remote · Open to new opportunities",
+        "button": "Get in touch"
     }
 }

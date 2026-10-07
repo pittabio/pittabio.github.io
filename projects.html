@@ -1,14 +1,15 @@
 ---
 layout: default
-title: "Game Projects · Unreal Engine 5 & C++ · Fabio Pittaccio"
+title: Projects
+i18n_title: head_title
 description: "Explore Unreal Engine 5 games and technical experiments focusing on gameplay programming and modular architectures."
 ---
 
 <!-- ## INTRO ## -->
 <section id="intro" class="cont">
-    <p class="tag" data-i18n="projects_page.tag"></p>
-    <h1 data-i18n-html="projects_page.title"></h1>
-    <p data-i18n-html="projects_page.description"></p>
+    <p class="tag" data-i18n="tag"></p>
+    <h1 data-i18n-html="title"></h1>
+    <p data-i18n-html="description"></p>
 </section> <!-- /intro/ -->
 
 <br><!-- break -->
@@ -16,15 +17,19 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 <!-- ## GAMES ## -->
 <section id="games">
     <!-- Grid -->
-    {% include sections/projects.html %}
+    {% include sections/games.html %}
 </section>
 
-    <!-- ## EXPERIMENTS ## -->
-    <section class="resume-section" id="experiments">
-        <div class="section-container">
+<!-- ## EXPERIMENTS ## -->
+<section id="experiments" class="cont">
+    <h2 data-i18n="experiments_title"></h2>
+    <p data-i18n-html="experiments_desc"></p>
 
-            <h2 class="section-title" data-i18n="projects_page.experiments_title"></h2>
-            <p class="resume-description" style="text-align: center; margin-bottom: 2rem;" data-i18n="projects_page.experiments_desc"></p>
+    <br><!-- break -->
+
+    <!-- Grid -->
+    {% include sections/projects/experiments.html %}
+</section>
 
             <div class="about-grid">
 
