@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+i18n_title: head_title
 description: The home page
 ---
 
@@ -48,7 +49,7 @@ description: The home page
 
     <!-- INDICATOR -->
     <div style="position: absolute; left: 50%; bottom: 1.5rem;">
-        <a href="#about" aria-label="Scroll to the about section">
+        <a href="#about" data-i18n-aria="indicator.ARIA" aria-label="">
             <span class="arrow-circle-svg"></span>
         </a>
     </div>
@@ -61,7 +62,7 @@ description: The home page
 	<div class="grid-column">
         <!-- C++ -->
         <div class="cont">
-            <img src="media/logo/skills/cpp.png"
+            <img src="/media/logo/skills/cpp.png"
                  alt="C++ logo"
                  data-i18n-alt="about.item1.alt" />
             <b data-i18n="about.item1.title"></b>
@@ -69,7 +70,7 @@ description: The home page
         </div>
         <!-- Game Mechanics -->
         <div class="cont">
-            <img src="media/index/controller.webp"
+            <img src="/media/index/controller.webp"
                  alt="A controller that represents the game mechanics"
                  data-i18n-alt="about.item2.alt" />
             <b data-i18n="about.item2.title"></b>
@@ -77,8 +78,8 @@ description: The home page
         </div>
         <!-- Full-Cycle -->
         <div class="cont">
-            <img src="media/index/circle.png"
-                 alt="A circle with 5 arrows that rappresents the loop of the full-cycle develop"
+            <img src="/media/index/circle.png"
+                 alt="A circle with 5 arrows that represents the loop of the full-cycle develop"
                  data-i18n-alt="about.item3.alt" />
             <b data-i18n="about.item3.title"></b>
             <p data-i18n="about.item3.desc"></p>

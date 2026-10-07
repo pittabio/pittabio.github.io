@@ -1,5 +1,5 @@
 ﻿{
-    "head_title": "Fabio Pittaccio · Sviluppatore di Videogiochi",
+    "head_title": "Home",
 
     "hero": {
         "tag": "Gameplay Developer · Unreal Engine C++",
@@ -19,8 +19,11 @@
             "engine": "Engine principale",
             "platforms": "Piattaforme"
         },
-
         "image_desc": "<strong>Fabio Pittaccio</strong> (io) durante una gita a Villa Gregoriana (Tivoli, Roma)"
+    },
+
+    "indicator": {
+        "ARIA": "Scorra alla sezione 'Informazioni'"
     },
 
     "about": {
