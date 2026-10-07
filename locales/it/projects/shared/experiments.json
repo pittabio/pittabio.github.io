@@ -1,0 +1,24 @@
+{
+    "$experiments": {
+        "state_trees": {
+            "name": "State Tree AI",
+            "desc": [
+                "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
+                "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
+                "<br>",
+                "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
+                "e a sistemi dinamici basati sugli eventi."
+            ]
+        },
+
+        "gas": {
+            "name": "GAS Abilities",
+            "desc": [
+                "Un approfondimento tecnico sul <strong>Gameplay Ability System (GAS)</strong> di Unreal Engine.",
+                "<br>",
+                "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
+                "ed effetti di gioco — uno dei framework più potenti e complessi di Unreal."
+            ]
+        }
+    }
+}
