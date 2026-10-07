@@ -1,47 +1,36 @@
 ﻿{
     "head_title": "Progetti",
 
-    "tag": "Giochi & Esperimenti",
-    "title": "Tutti i <b class='accent'>Progetti</b>",
-    "description": [
-        "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
-        "<br>",
-        "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici",
-        "<br>",
-        "dai titoli action-adventure ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
-    ],
-
-    "games_title": "Giochi",
-    "experiments_title": "Esperimenti & Esplorazioni",
-    "experiments_desc": [
-        "Progetti sperimentali in cui esploro sistemi avanzati di Unreal Engine e la <strong>logica di gioco</strong>.",
-        "<br>",
-        "Dimostrazioni tecniche incentrate sull'<strong>architettura delle meccaniche</strong>, sui processi decisionali dell'IA e su framework complessi."
-    ],
-
-    "link_github":  "Vedi su GitHub",
-    "link_gitlab":  "Vedi su GitLab",
-
-    "state_trees": {
-        "name": "State Tree AI [WIP]",
+    "intro": {
+        "tag": "Giochi & Esperimenti",
+        "title": "Tutti i <b class='accent'>Progetti</b>",
         "desc": [
-            "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
-            "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
-            "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
-            "e a sistemi dinamici basati sugli eventi.",
-            "Lavoro in corso."
+            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+            "<br>",
+            "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici",
+            "<br>",
+            "dai titoli action-adventure ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
         ]
     },
 
-    "gas": {
-        "name": "GAS Abilities",
+    "games": {
+        "title": "Giochi",
         "desc": [
-            "Un approfondimento tecnico sul <strong>Gameplay Ability System (GAS)</strong> di Unreal Engine.",
-            "Focalizzato sull'implementazione di <em>meccaniche di abilità avanzate</em>, sistemi di attributi",
-            "ed effetti di gioco —",
-            "uno dei framework più potenti e complessi di Unreal."
+            "Progetti giocabili di generi diversi, realizzati in <strong>Unreal Engine 5</strong> con C++ e Blueprint.",
+            "<br>",
+            "Da demo <strong>action-adventure</strong> e <strong>platformer</strong> a <strong>tower defense</strong> e giochi <strong>mobile</strong>."
         ]
     },
+
+    "experiments": {
+        "title": "Esperimenti & Esplorazioni",
+        "desc": [
+            "Progetti sperimentali in cui esploro sistemi avanzati di Unreal Engine e la <strong>logica di gioco</strong>.",
+            "<br>",
+            "Dimostrazioni tecniche incentrate sull'<strong>architettura delle meccaniche</strong>, sui processi decisionali dell'IA e su framework complessi."
+        ]
+    } ,
+
 
     "archive_title": "Dev Archive",
     "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",

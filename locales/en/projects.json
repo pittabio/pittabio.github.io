@@ -1,47 +1,36 @@
 ﻿{
     "head_title": "Projects",
 
-    "tag": "Games & Experiments",
-    "title": "All <b class='accent'>Projects</b>",
-    "description": [
-        "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
-        "<br>",
-        "A complete overview of my published games and technical experiments",
-        "<br>",
-        "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
-    ],
-
-    "games_title": "Games",
-    "experiments_title": "Experiments & Explorations",
-    "experiments_desc": [
-        "Experimental projects where I explore advanced Unreal Engine systems and <strong>gameplay logic</strong>.",
-        "<br>",
-        "Technical showcases focused on <strong>mechanics architecture</strong>, AI decision-making, and complex frameworks."
-    ],
-
-    "link_github":  "View on GitHub",
-    "link_gitlab":  "View on GitLab",
-
-    "state_trees": {
-        "name": "State Tree AI",
+    "intro": {
+        "tag": "Games & Experiments",
+        "title": "All <b class='accent'>Projects</b>",
         "desc": [
-            "Practical exploration of Unreal Engine's <strong>State Tree</strong> system",
-            "for <em>AI behavior</em> and quest management.",
-            "Showcasing modern approaches to game logic, AI decision-making,",
-            "and dynamic event-driven systems.",
-            "Work in progress."
+            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+            "<br>",
+            "A complete overview of my published games and technical experiments",
+            "<br>",
+            "from full action-adventure titles to mobile ports and deep-dives into advanced Unreal Engine systems."
         ]
     },
 
-    "gas": {
-        "name": "GAS Abilities",
+    "games": {
+        "title": "Games",
         "desc": [
-            "A technical deep-dive into Unreal Engine's <strong>Gameplay Ability System (GAS)</strong>.",
-            "Focused on implementing <em>advanced ability mechanics</em>, attribute systems,",
-            "and gameplay effects —",
-            "one of Unreal's most powerful and complex frameworks."
+            "Playable projects across different genres, built in <strong>Unreal Engine 5</strong> with C++ and Blueprints.",
+            "<br>",
+            "From <strong>action-adventure</strong> demos and <strong>platformers</strong> to <strong>tower defense</strong> and <strong>mobile</strong> games."
         ]
     },
+
+    "experiments": {
+        "title": "Experiments & Explorations",
+        "desc": [
+            "Experimental projects where I explore advanced Unreal Engine systems and <strong>gameplay logic</strong>.",
+            "<br>",
+            "Technical showcases focused on <strong>mechanics architecture</strong>, AI decision-making, and complex frameworks."
+        ]
+    },
+
 
     "archive_title": "Dev Archive",
     "archive_desc": "Projects that never shipped — cancelled or shelved along the way. Part of the process.",
