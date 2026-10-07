@@ -108,7 +108,7 @@ description: The home page
     <br><!-- break -->
 
     <!-- Games -->
-    {% include sections/games.html featured=true %}
+    {% include sections/projects/games.html featured=true %}
 
     <br><!-- break -->
 
@@ -139,3 +139,6 @@ description: The home page
         <span class="arrow-svg"></span>
     </a>
 </section> <!-- END contact -->
+
+<!-- Load `/locales/<lang>/projects/games.json` for the games grid -->
+<script> window.extraLocales = ['projects/shared/games'] </script>

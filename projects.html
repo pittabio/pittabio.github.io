@@ -17,7 +17,7 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 <!-- ## GAMES ## -->
 <section id="games">
     <!-- Grid -->
-    {% include sections/games.html %}
+    {% include sections/projects/games.html %}
 </section>
 
 <!-- ## EXPERIMENTS ## -->
@@ -31,7 +31,12 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
     {% include sections/projects/experiments.html %}
 </section>
 
-            <div class="about-grid">
+<!-- Load the text for the included grids -->
+<script> window.extraLocales = [
+    'projects/shared/experiments',
+    'projects/shared/games']
+</script>
+
 
                 <!-- ## StateTrees ## -->
                 <div class="project-card">
