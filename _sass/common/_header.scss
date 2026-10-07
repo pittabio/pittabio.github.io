@@ -54,10 +54,6 @@ header {
         display: flex;
         align-items: center;
 
-        span {
-            color: var(--accent);
-        }
-
         &:hover {
             color: currentColor;
             text-decoration: none;
