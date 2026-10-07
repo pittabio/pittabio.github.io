@@ -1,4 +1,4 @@
-{% assign list = site.data.projects %}
+{% assign list = site.data.projects.games %}
 {% if include.featured %}
     {% assign list = list | where: "feat", true %}
 {% endif %}

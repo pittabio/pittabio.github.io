@@ -1,7 +1,7 @@
 # Ruins' Rhapsody
-- name: "games.ruins.name"
+- name: "$games.ruins.name"
   image: "/media/games/ruins-rhapsody/banner.jpg"
-  desc: "games.ruins.desc"
+  desc: "$games.ruins.desc"
   page: "projects/ruins-rhapsody.html"
   feat: true
 
@@ -17,9 +17,9 @@
   link3_icon: "arrow-svg"
 
 # Goblin Jr. Adventure
-- name: "games.goblin.name"
+- name: "$games.goblin.name"
   image: "/media/games/goblin-jr/banner.png"
-  desc: "games.goblin.desc"
+  desc: "$games.goblin.desc"
   page: "projects/goblin-jr.html"
   feat: true
 
@@ -31,9 +31,9 @@
   link3_icon: "arrow-svg"
 
 # Zombie Siege Chronicles
-- name: "games.zombie.name"
+- name: "$games.zombie.name"
   image: "/media/games/zombie-siege/banner.png"
-  desc: "games.zombie.desc"
+  desc: "$games.zombie.desc"
   page: "projects/zombie-siege.html"
   feat: true
 
@@ -45,9 +45,9 @@
   link3_icon: "arrow-svg"
 
 # Flying Bird
-- name: "games.flying.name"
+- name: "$games.flying.name"
   image: "/media/games/flying-bird/banner.png"
-  desc: "games.flying.desc"
+  desc: "$games.flying.desc"
   page: "projects/flying-bird.html"
 
   link1: "https://pittabio.itch.io/flying-bird"
@@ -58,9 +58,9 @@
   link3_icon: "arrow-svg"
 
 # WizardScape
-- name: "games.wizard.name"
+- name: "$games.wizard.name"
   image: "/media/games/wizard-scape/banner.png"
-  desc: "games.wizard.desc"
+  desc: "$games.wizard.desc"
   page: "projects/wizardscape.html"
 
   link1: "https://pittabio.itch.io/wizardscape"
@@ -71,9 +71,9 @@
   link3_icon: "arrow-svg"
 
 # More...
-- name: "games.more.name"
+- name: "$games.more.name"
   image: "/media/fox/fox_banner.png"
-  desc: "games.more.desc"
+  desc: "$games.more.desc"
   page: "about.html"
 
   link1: "https://github.com/pittabio"
