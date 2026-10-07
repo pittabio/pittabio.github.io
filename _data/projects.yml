@@ -72,7 +72,7 @@
 
 # More...
 - name: "games.more.name"
-  image: "/media/fox.png"
+  image: "/media/fox/fox_banner.png"
   desc: "games.more.desc"
   page: "about.html"
 
