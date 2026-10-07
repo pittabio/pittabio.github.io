@@ -1,11 +1,12 @@
 ﻿{
-    "404": {
-        "title": "Fuori dalla Mappa",
-        "subtitle": [
-            "Sembra che il personaggio sia caduto sotto il livello,",
-            "<br>",
-            "proprio lì dove non erano presenti le collisioni"
-        ],
-        "button": "Ritorna al Checkpoint"
-    }
+    "head_title": "404 · Pagina non trovata",
+
+    "title": "Fuori dalla Mappa",
+    "subtitle": [
+        "Sembra che il personaggio sia caduto sotto il livello,",
+        "<br>",
+        "proprio lì dove non erano presenti le collisioni"
+    ],
+
+    "button": "Ritorna al Checkpoint"
 }

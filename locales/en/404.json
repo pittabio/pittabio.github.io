@@ -1,11 +1,12 @@
 ﻿{
-    "404": {
-        "title": "Out of Bounds",
-        "subtitle": [
-            "It looks like the character clipped through the level,",
-            "<br>",
-            "right where no collisions were placed"
-        ],
-        "button": "Return to Checkpoint"
-    }
+    "head_title": "404 · Page Not Found",
+
+    "title": "Out of Bounds",
+    "subtitle": [
+        "It looks like the character clipped through the level,",
+        "<br>",
+        "right where no collisions were placed"
+    ],
+
+    "button": "Return to Checkpoint"
 }
