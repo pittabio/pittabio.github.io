@@ -13,11 +13,11 @@
     <!-- Buttons -->
     <div class="flexbox">
 
-        <!-- First Link -->
+        <!-- First Link (Left) -->
         {% if p.link1 and p.link1_name %}
             <a class="btn full left" href="{{ p.link1 }}" target="_blank">
                 <!-- Name of the link -->
-                <span>{{ p.link1_name }}</span>
+                <span data-i18n="{{ p.link1_name }}">{{ p.link1_name }}</span>
                 <!-- Icon SVG or Image -->
                 {% if p.link1_icon %}
                     <span class="{{ p.link1_icon }}"></span>
@@ -27,11 +27,11 @@
             </a>
         {% endif %} <!-- /first link/ -->
 
-        <!-- Second Link -->
+        <!-- Second Link (Center) -->
         {% if p.link2 and p.link2_name %}
             <a class="btn full" href="{{ p.link2 }}" target="_blank">
                 <!-- Name of the link -->
-                <span>{{ p.link2_name }}</span>
+                <span data-i18n="{{ p.link2_name }}">{{ p.link2_name }}</span>
                 <!-- Icon SVG or Image -->
                 {% if p.link2_icon %}
                     <span class="{{ p.link2_icon }}"></span>
@@ -41,11 +41,11 @@
             </a>
         {% endif %} <!-- /second link/ -->
 
-        <!-- Third Link -->
+        <!-- Third Link (Right) -->
         {% if p.link3_name %}
             <a class="btn full right" href="{{ p.page }}" target="_blank">
                 <!-- Name of the link -->
-                <span data-i18n="{{ p.link3_name }}"></span>
+                <span data-i18n="{{ p.link3_name }}">{{ p.link3_name }}</span>
                 <!-- Icon SVG or Image -->
                 {% if p.link3_icon %}
                     <span class="{{ p.link3_icon }}"></span>
