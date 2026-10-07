@@ -6,7 +6,7 @@ let repoName = isGitHubPages ? '' : '';
 const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
 let currentTranslations = {};
 // Files loaded on EVERY page (shared translations)
-const baseFiles = ['common'];
+const baseFiles = ['shared/common'];
 // Pages to NOT translate
 const excludedPages = ['debug-room'];
 
