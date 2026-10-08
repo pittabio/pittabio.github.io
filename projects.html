@@ -34,10 +34,22 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
     {% include sections/projects/experiments.html %}
 </section>
 
+<!-- ## ARCHIVE ## -->
+<section id="archive" class="cont">
+    <h2 data-i18n="archive.title"></h2>
+    <p data-i18n-html="archive.desc"></p>
+
+    <br><!-- break -->
+
+    <!-- Grid -->
+    {% include sections/projects/archive.html %}
+</section>
+
 <!-- Load the text for the included grids -->
 <script> window.extraLocales = [
     'projects/shared/experiments',
-    'projects/shared/games']
+    'projects/shared/games',
+    'projects/shared/archive']
 </script>
 
 {% comment %}

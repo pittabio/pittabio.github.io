@@ -31,29 +31,12 @@
         ]
     } ,
 
-
-    "archive_title": "Dev Archive",
-    "archive_desc": "Progetti che non sono mai usciti — cancellati o messi in pausa lungo il percorso. Fa parte del processo.",
-    "status_cancelled": "Cancellato",
-    "status_shelved":   "In Pausa",
-
-    "game_cancelled": {
-        "name": "Echoes of the Witch Wood",
+    "archive": {
+        "title": "Archivio",
         "desc": [
-            "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
-            "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
-            "e una pipeline di salvataggio completa.",
-            "Cancellato prima dell'annuncio pubblico."
-        ]
-    },
-
-    "game_shelved": {
-        "name": "Project Pyramid",
-        "desc": [
-            "Un gioco action-adventure di team ambientato nell'antico Egitto.",
-            "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
-            "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
-            "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
+            "Progetti che non hanno (<em>ancora</em>) visto la luce: cancellati, in pausa o in attesa di una data di uscita.",
+            "<br>",
+            "Anche se non sono usciti, fanno parte del mio <strong>percorso creativo</strong>: mi hanno spinto a sviluppare nuove idee e collaborare in team."
         ]
     },
 

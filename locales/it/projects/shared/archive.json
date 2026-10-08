@@ -1,0 +1,29 @@
+{
+    "$archive": {
+        "echoes": {
+            "name": "Echoes of the Witch Wood",
+            "desc": [
+                "<h1 class='tag'>Cancellato</h1>",
+                "<br>",
+                "Un prototipo interno di <strong>action platformer</strong> con due personaggi giocabili,",
+                "un sistema di interfacce abilità condivise, meccaniche ambientali, IA nemica",
+                "e una pipeline di salvataggio completa.",
+                "<br>",
+                "Cancellato prima dell'annuncio pubblico."
+            ]
+        },
+
+        "pyramid": {
+            "name": "Project Pyramid",
+            "desc": [
+                "<h1 class='tag'>Standby</h1>",
+                "<br>",
+                "Un gioco action-adventure di team ambientato nell'antico Egitto.",
+                "Ho costruito l'intero <strong>sistema AI nemico</strong> — percezione stealth, Behavior Tree,",
+                "ricerca EQS, sottosistema Dummy Entity e coordinamento alleati.",
+                "<br>",
+                "Il team è ancora in sviluppo attivo; il mio lavoro è attualmente in pausa."
+            ]
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{% assign list = site.data.projects.archive %}
+<div class="grid-auto">
+    {% for p in list %}
+        {% include sections/card.html project=p %}
+    {% endfor %}
+</div>
