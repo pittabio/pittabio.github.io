@@ -62,16 +62,5 @@
             "<br>",
             "Visita la pagina completa per esplorare l'intero portfolio"
         ]
-    },
-
-    "contact": {
-        "tag": "Disponibile per lavoro",
-        "title": [
-            "Costruiamo qualcosa",
-            "<br>",
-            "<b class='accent'>insieme</b>"
-        ],
-        "subtitle": "Freelance • Flessibile • Aperto a nuove opportunità",
-        "cta": "Contattami"
     }
 }
