@@ -1,16 +1,17 @@
 ﻿{
-  "head_title": "Su di me · Fabio Pittaccio",
+    "head_title": "Su di me",
 
-  "about": {
-    "tag": "Curriculum Vitae",
-    "title": "Su di me",
-    "subtitle": "Gameplay Developer · Specialista Unreal Engine C++",
-    "description": [
-      "Un riepilogo delle mie qualifiche chiave e competenze tecniche.",
-      "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
-      "contattami tramite la pagina dei contatti."
-    ]
-  },
+    "about": {
+        "tag": "Curriculum Vitae",
+        "title": "Su di me",
+        "subtitle": "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+        "description": [
+            "Un riepilogo delle mie qualifiche chiave e competenze tecniche.",
+            "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
+            "<br>",
+            "sentitevi liberi di contattarmi tramite la pagina dei contatti."
+        ]
+    },
 
   "skills": {
     "title": "Competenze Tecniche",

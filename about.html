@@ -1,44 +1,22 @@
 ---
-title: "About Me · Gameplay Developer · Fabio Pittaccio"
+layout: default
+title: "About Me"
+i18n_title: head_title
 description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skills, Git certification, and professional journey."
 ---
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="head_title">{{ page.title }}</title>
 
-    <!-- FAVICON -->
-    {% include favicon.html %}
-
-    <!-- ## CSS ## -->
-    <link rel="stylesheet" href="style/core.css">                       <!-- Core: Base, Header, Footer -->
-    <link rel="stylesheet" href="style/icons.css">                      <!-- SVG icons -->
-    <link rel="stylesheet" href="style/sections/section-about.css">     <!-- Skills grid -->
-    <link rel="stylesheet" href="style/sections/section-projects.css">  <!-- Card base styles -->
-    <link rel="stylesheet" href="style/sections/section-contact.css">   <!-- Final CTA -->
-
-    <!-- Page specifics -->
-    <link rel="stylesheet" href="style/pages/about.css">  <!-- Timeline & Skills badges -->
-</head>
-<body>
-
-<!-- ## HEADER ## -->
-<div id="header"></div>
+<!-- ## HERO ## -->
+<section id="hero" class="cont">
+    <span class="tag" data-i18n="about.tag">Curriculum Vitae</span>
+    <h1 data-i18n-html="about.title"></h1>
+    <p data-i18n-html="about.subtitle"></p>
+    <p data-i18n-html="about.description"></p>
+</section>
 
 <!-- ## PAGE ## -->
 <main class="page-content resume-page-section">
 
-    <!-- ## PAGE HEAD ## -->
-    <!-- Centered intro block: tag, title, role subtitle, availability badge, description -->
-    <div class="resume-header">
-        <span class="hero-tag"         data-i18n="about.tag"></span>
-        <h1 class="contact-title"      data-i18n-html="about.title"></h1>
-        <p  class="contact-subtitle"   data-i18n="about.subtitle"></p>
-        <p  class="resume-description" data-i18n="about.description"></p>
-    </div>
+   
 
     <!-- ## TECHNICAL SKILLS ## -->
     <section class="resume-section" id="skills">
