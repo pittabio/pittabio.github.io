@@ -1,0 +1,15 @@
+{% assign title = include.title %}
+{% assign skills = include.items %}
+
+<div class="skill-group">
+    <span class="mini-title" data-i18n="{{ title }}">{{ title }}</span>
+
+    <ul>
+        {% for skill in skills %}
+            <li>
+                <span>{{ skill.name }}</span>
+                <span class="skill-level {{ skill.level | downcase }}">{{ skill.level }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -13,15 +13,26 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
     <p data-i18n-html="about.description"></p>
 </section>
 
-<!-- ## PAGE ## -->
-<main class="page-content resume-page-section">
+<br><!-- break -->
 
-   
+<!-- ## SKILLS ## -->
+<section id="skills">
+    <h2 data-i18n="skills.title"></h2>
+    <div class="grid-column">
 
+        <!-- Card 1: Engines + Languages -->
+        <article class="card">
+            {% include sections/skill-group.html title="skills.engines"   items=site.data.about.engines %}
+            <div class="line-nomargin"></div> <!-- Pause line -->
+            {% include sections/skill-group.html title="skills.languages" items=site.data.about.languages %}
+        </article>
+
+    </div>
+</section>
+
+{% comment %}
     <!-- ## TECHNICAL SKILLS ## -->
-    <section class="resume-section" id="skills">
         <div class="section-container">
-            <h2 class="section-title" data-i18n="skills.title"></h2>
 
             <!-- 3 Cards Grid -->
             <div class="about-grid">
@@ -92,7 +103,7 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
                 </div>
             </div>
         </div>
-    </section> <!-- END technical skills -->
+    {% endcomment %}
 
     <!-- ## EDUCATION & TRAINING ## -->
     <section class="resume-section" id="education">
@@ -190,14 +201,3 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
             </div>
         </div>
     </section>
-
-</main>
-
-<!-- ## FOOTER ## -->
-<div id="footer"></div>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="scripts/main.js"></script>
-
-</body>
-</html>
