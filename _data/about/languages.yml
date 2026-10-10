@@ -1,0 +1,17 @@
+- name: "C++"
+  level: "Advanced"
+
+- name: "Blueprint Visual Scripting"
+  level: "Advanced"
+
+- name: "Verse"
+  level: "Learning"
+
+- name: "C#"
+  level: "Intermediate"
+
+- name: "HTML / CSS / JS"
+  level: "Intermediate"
+
+- name: "Java"
+  level: "Basic"

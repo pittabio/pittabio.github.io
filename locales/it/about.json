@@ -13,30 +13,18 @@
         ]
     },
 
-  "skills": {
-    "title": "Competenze Tecniche",
+    "skills": {
+        "title": "Competenze Tecniche",
 
-    "CARD 1": "CARD 1",
+        "learning": "In Studio",
+        "basic": "Base",
+        "intermediate": "Intermedio",
+        "advanced": "Avanzato",
 
-    "engines": {
-      "title": "Motori Grafici",
-      "items": [
-        "<li><span>Unreal Engine 5</span> <span class='skill-level advanced'>Avanzato</span></li>",
-        "<li><span>Unity</span>           <span class='skill-level intermediate'>Intermedio</span></li>"
-      ]
+        "engines": "Motori Grafici",
+        "languages": "Linguaggi e Scripting"
     },
 
-    "languages": {
-      "title": "Linguaggi e Scripting",
-      "items": [
-        "<li><span>C++</span>             <span class='skill-level advanced'>Avanzato</span></li>",
-        "<li><span>Blueprint Visual Scripting</span> <span class='skill-level advanced'>Avanzato</span></li>",
-        "<li><span>Verse</span>           <span class='skill-level learning'>In Studio</span></li>",
-        "<li><span>C#</span>              <span class='skill-level intermediate'>Intermedio</span></li>",
-        "<li><span>HTML / CSS / JS</span> <span class='skill-level intermediate'>Intermedio</span></li>",
-        "<li><span>Java</span>            <span class='skill-level basic'>Base</span></li>"
-      ]
-    },
 
     "CARD 2": "CARD 2",
 
@@ -87,8 +75,7 @@
       "items": [
         "<li>Inglese: Profilo EFSET (In arrivo)</li>"
       ]
-    }
-  },
+    },
 
   "education": {
     "title": "Istruzione e Formazione",
