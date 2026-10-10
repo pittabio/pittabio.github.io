@@ -1,0 +1,75 @@
+/* Skill group: name on the left, level tag on the right */
+.skill-group {
+    text-align: left; // .card centers the text by default
+
+    // Space between the title and the list
+    .mini-title {
+        display: block;
+        margin-bottom: 1.25rem;
+    }
+
+    // Unordered list
+    ul {
+        list-style: none;
+        display: grid;
+        gap: .65rem;
+    }
+
+    // List item
+    li {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        // The name takes all the free space...
+        > span:first-child {
+            display: flex;
+            flex: 1;
+            align-items: baseline;
+            gap: .5rem;
+
+            // ...and fills it with a dotted leader up to the tag
+            &::after {
+                content: '';
+                flex: 1;
+                border-bottom: 2px dotted currentColor;
+                opacity: .02;
+            }
+        }
+    }
+}
+
+/* Skill Levels */
+.skill-level {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.18rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevents the badge from wrapping */
+    letter-spacing: 0.05em;
+
+    &.learning {
+        background: rgba(163, 52, 0, 0.15);
+        color: rgb(163, 52, 0);
+        border: 1px solid rgba(163, 52, 0, 0.3);
+    }
+
+    &.basic {
+        background: rgba(255, 206, 184, 0.15);
+        color: rgb(255, 206, 184);
+        border: 1px solid rgba(255, 206, 184, 0.3);
+    }
+
+    &.intermediate {
+        background: rgba(255, 143, 92, 0.15);
+        color: rgb(255, 143, 92);
+        border: 1px solid rgba(255, 143, 92, 0.3);
+    }
+
+    &.advanced {
+        background: rgba(255, 80, 0, 0.1);
+        color: rgb(255, 80, 0);
+        border: 1px solid rgba(255, 80, 0, 0.3);
+    }
+}

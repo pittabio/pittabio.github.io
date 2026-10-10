@@ -123,6 +123,12 @@
     margin-top: 2rem;
 }
 
+/* A line divider without margin */
+.line-nomargin {
+    border-top: 1px solid var(--border);
+    margin: 0 .5rem;
+}
+
 /* MEDIA MOBILE */
 @media (max-width: 768px) {
     /* Little images skills */
