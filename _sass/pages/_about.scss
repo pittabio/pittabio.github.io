@@ -12,7 +12,7 @@
     ul {
         list-style: none;
         display: grid;
-        gap: .65rem;
+        gap: .6rem;
     }
 
     // List item
@@ -29,12 +29,14 @@
             gap: .5rem;
 
             // ...and fills it with a dotted leader up to the tag
+            /*
             &::after {
                 content: '';
                 flex: 1;
                 border-bottom: 2px dotted currentColor;
                 opacity: .02;
             }
+            */
         }
     }
 }
