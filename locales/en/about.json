@@ -24,25 +24,14 @@
         },
 
         "engines": "Game Engines",
-        "languages": "Languages & Scripting"
+        "languages": "Languages & Scripting",
+        "systems": "Expertise & Systems"
     },
 
-
-    "CARD 2": "CARD 2",
-
-    "systems": {
-      "title": "Expertise & Systems",
-      "rainbow": "[Rainbow Academy Diploma]",
-      "items": [
-        "<li>C++ & Blueprint integration</li>",
-        "<li>Combat and movement mechanics</li>",
-        "<li>AI Systems for NPCs</li>",
-        "<li>Resource management & game economy</li>",
-        "<li>Multi-language localization</li>",
-        "<li>Multi-platform: Windows & Android</li>",
-        "<li>VR and Multiplayer (fundamentals)</li>"
-      ]
+    "certificate": {
+        "rainbow": "[Rainbow Academy Diploma]"
     },
+
 
     "git": {
       "title": "Version Control",

@@ -24,11 +24,14 @@
         },
 
         "engines": "Motori Grafici",
-        "languages": "Linguaggi e Scripting"
+        "languages": "Linguaggi e Scripting",
+        "systems": "Esperienza e Sistemi"
     },
 
+    "certificate": {
+        "rainbow": "[Rainbow Academy Diploma]"
+    },
 
-    "CARD 2": "CARD 2",
 
     "systems": {
       "title": "Esperienza e Sistemi",
