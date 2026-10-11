@@ -41,26 +41,25 @@
             "localization": "Multi-language localization",
             "platforms": "Multi-platform: Windows & Android",
             "vr_multiplayer": "VR and Multiplayer (fundamentals)"
+        },
+
+        "git": {
+            "title": "Version Control",
+
+            "specialist": "Git Certified Specialist",
+            "collaboration": "Repository management & collaboration workflows",
+            "branching": "Branching strategies, merging, rebasing",
+            "remotes": "Remote repositories and pull requests",
+            "advanced": "Advanced: hooks, LFS, worktrees, submodules"
         }
     },
 
     "certificate": {
-        "rainbow": "Official Certification – Rainbow Academy ↗"
+        "rainbow": "Official Certification – Rainbow Academy ↗",
+        "gitkraken": "Official Certification – GitKraken ↗"
     },
 
 
-    "git": {
-      "title": "Version Control",
-      "gitkraken": "[GitKraken Certificate]",
-      "github": "[GitHub Certificate] (Coming Soon)",
-      "items": [
-        "<li>Git Certified Specialist</li>",
-        "<li>Repository management & collaboration workflows</li>",
-        "<li>Branching strategies, merging, rebasing</li>",
-        "<li>Remote repositories and pull requests</li>",
-        "<li>Advanced: hooks, LFS, worktrees, submodules</li>"
-      ]
-    },
 
     "CARD 3": "CARD 3",
 
