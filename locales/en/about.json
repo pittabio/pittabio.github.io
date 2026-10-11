@@ -51,6 +51,10 @@
             "branching": "Branching strategies, merging, rebasing",
             "remotes": "Remote repositories and pull requests",
             "advanced": "Advanced: hooks, LFS, worktrees, submodules"
+        },
+
+        "tools": {
+            "title": "Additional Tools"
         }
     },
 
@@ -59,22 +63,6 @@
         "gitkraken": "Official Certification – GitKraken ↗"
     },
 
-
-
-    "CARD 3": "CARD 3",
-
-    "tools": {
-      "title": "Additional Tools",
-      "items": [
-        "<li>MetaHuman Creator</li>",
-        "<li>Android SDK</li>",
-        "<li>JetBrains Rider (IDE)</li>",
-        "<li>Blender — 3D Graphics</li>",
-        "<li>Adobe Photoshop & Lightroom</li>",
-        "<li>DaVinci Resolve — Video editing</li>",
-        "<li>Cubase & Ableton Live — Audio</li>"
-      ]
-    },
 
     "other": {
       "title": "Other Certificates",

@@ -44,13 +44,17 @@
         },
 
         "git": {
-            "title": "Controllo di versione",
+            "title": "Controllo di Versione",
 
             "specialist": "Specialista Git certificato",
             "collaboration": "Gestione dei repository e flussi di lavoro collaborativi",
             "branching": "Strategie di branching, merge e rebase",
             "remotes": "Repository remoti e pull request",
             "advanced": "Avanzato: hook, LFS, worktree, submodule"
+        },
+
+        "tools": {
+            "title": "Altri Strumenti"
         }
     },
 
@@ -59,22 +63,6 @@
         "gitkraken": "GitKraken Specialist Certificate ↗"
     },
 
-
-
-    "CARD 3": "CARD 3",
-
-    "tools": {
-      "title": "Altri Strumenti",
-      "items": [
-        "<li>MetaHuman Creator</li>",
-        "<li>Android SDK</li>",
-        "<li>JetBrains Rider (IDE)</li>",
-        "<li>Blender — Grafica 3D</li>",
-        "<li>Adobe Photoshop e Lightroom</li>",
-        "<li>DaVinci Resolve — Montaggio video</li>",
-        "<li>Cubase e Ableton Live — Audio</li>"
-      ]
-    },
 
     "other": {
       "title": "Altri Certificati",
