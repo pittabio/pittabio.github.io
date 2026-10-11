@@ -39,7 +39,7 @@
 
 /* Card */
 .card {
-    @include base.container-style;
+    @include base.container-style($justify: flex-start);
 
     // Layout
     border: 2px solid var(--border);

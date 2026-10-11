@@ -5,6 +5,8 @@ i18n_title: head_title
 description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skills, Git certification, and professional journey."
 ---
 
+{% assign abt = site.data.about %}
+
 <!-- ## HERO ## -->
 <section id="hero" class="cont">
     <span class="tag" data-i18n="about.tag">Curriculum Vitae</span>
@@ -24,13 +26,13 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
         <article class="card">
             {% include sections/list.html
                 title = "skill.engines.title"
-                items = site.data.about.engines %}
+                items = abt.engines %}
 
             <div class="line-nomargin"></div> <!-- Pause line -->
 
             {% include sections/list.html
                 title = "skill.languages.title"
-                items = site.data.about.languages %}
+                items = abt.languages %}
         </article>
 
         <!-- Card 2: Technical Expertise -->
@@ -38,7 +40,7 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
             <!-- Expertise & Systems -->
             {% include sections/list.html
                 title = "skill.expertise.title"
-                items = site.data.about.expertise
+                items = abt.expertise
                 link = "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
                 linkname = "certificate.rainbow"
             %}
