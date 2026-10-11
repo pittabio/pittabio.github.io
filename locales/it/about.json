@@ -55,6 +55,17 @@
 
         "tools": {
             "title": "Altri Strumenti"
+        },
+
+        "other": {
+            "title": "Formazione Continua & Obiettivi",
+
+            "soon": [
+                "Costantemente dedicato all'aggiornamento professionale.",
+                "<br>",
+                "Attualmente sto consolidando ulteriormente le mie competenze sul controllo versione (GitHub Certifications)",
+                "e la certificazione del livello di inglese (EFSET)."
+            ]
         }
     },
 
@@ -64,12 +75,6 @@
     },
 
 
-    "other": {
-      "title": "Altri Certificati",
-      "items": [
-        "<li>Inglese: Profilo EFSET (In arrivo)</li>"
-      ]
-    },
 
   "education": {
     "title": "Istruzione e Formazione",

@@ -55,6 +55,17 @@
 
         "tools": {
             "title": "Additional Tools"
+        },
+
+        "other": {
+            "title": "Continuous Learning & Goals",
+
+            "soon": [
+                "Committed to continuous professional growth.",
+                "<br>",
+                "Currently working towards expanding version control credentials (GitHub Certifications)",
+                "and formalizing English proficiency (EFSET)."
+            ]
         }
     },
 
@@ -64,12 +75,6 @@
     },
 
 
-    "other": {
-      "title": "Other Certificates",
-      "items": [
-        "<li>English: EFSET Profile (Coming Soon)</li>"
-      ]
-    },
 
   "education": {
     "title": "Education & Training",
