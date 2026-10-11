@@ -3,14 +3,14 @@
 {% assign link =  include.link  %}
 
 <div class="skill-group">
-    <!-- Link -->
-    {% if link %}
-    <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
-       class="tag" data-i18n="{{ include.linkname }}"></a>
-    {% endif %}
-
     <!-- Title -->
     <span class="mini-title" data-i18n="{{ title }}">{{ title }}</span>
+
+    <!-- Link -->
+    {% if link %}
+        <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
+           class="tag" data-i18n="{{ include.linkname }}"></a>
+    {% endif %}
 
     <!-- List -->
     <ul>

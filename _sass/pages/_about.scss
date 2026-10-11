@@ -5,14 +5,19 @@
     // Space between the title and the list
     .mini-title {
         display: block;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        display: block;
+        margin-bottom: 1rem;
     }
 
     // Unordered list
     ul {
         list-style: none;
         display: grid;
-        gap: .6rem;
+        gap: .4rem;
     }
 
     // List item
