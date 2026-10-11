@@ -8,7 +8,9 @@
         {% for skill in skills %}
             <li>
                 <span>{{ skill.name }}</span>
-                <span class="skill-level {{ skill.level | downcase }}">{{ skill.level }}</span>
+                {% if skill.level %}
+                    <span class="skill-level {{ skill.level | downcase }}">{{ skill.level }}</span>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>
