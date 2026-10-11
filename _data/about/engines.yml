@@ -1,5 +1,5 @@
 - name: "Unreal Engine 5"
-  level: "Advanced"
+  level: "skill.level.advanced"
 
 - name: "Unity"
-  level: "Intermediate"
+  level: "skill.level.intermediate"

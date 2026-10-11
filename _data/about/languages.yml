@@ -1,17 +1,17 @@
 - name: "C++"
-  level: "Advanced"
+  level: "skill.level.advanced"
 
 - name: "Blueprint Visual Scripting"
-  level: "Advanced"
+  level: "skill.level.advanced"
 
 - name: "Verse"
-  level: "Learning"
+  level: "skill.level.learning"
 
 - name: "C#"
-  level: "Intermediate"
+  level: "skill.level.intermediate"
 
 - name: "HTML / CSS / JS"
-  level: "Intermediate"
+  level: "skill.level.intermediate"
 
 - name: "Java"
-  level: "Basic"
+  level: "skill.level.basic"
