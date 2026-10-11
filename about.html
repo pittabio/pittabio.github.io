@@ -17,14 +17,20 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 
 <!-- ## SKILLS ## -->
 <section id="skills">
-    <h2 data-i18n="skills.title"></h2>
+    <h2 data-i18n="skill.title"></h2>
     <div class="grid-column">
 
         <!-- Card 1: Engines + Languages -->
         <article class="card">
-            {% include sections/skill-group.html title="skills.engines"   items=site.data.about.engines %}
+            {% include sections/list.html
+                title = "skill.engines"
+                items = site.data.about.engines %}
+
             <div class="line-nomargin"></div> <!-- Pause line -->
-            {% include sections/skill-group.html title="skills.languages" items=site.data.about.languages %}
+
+            {% include sections/list.html
+                title = "skill.languages"
+                items = site.data.about.languages %}
         </article>
 
     </div>
