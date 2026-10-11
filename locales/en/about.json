@@ -1,4 +1,4 @@
-{
+﻿{
     "head_title": "About Me",
 
     "about": {
@@ -23,9 +23,25 @@
             "advanced": "Advanced"
         },
 
-        "engines": "Game Engines",
-        "languages": "Languages & Scripting",
-        "systems": "Expertise & Systems"
+        "engines": {
+            "title": "Game Engines"
+        },
+
+        "languages": {
+            "title": "Languages & Scripting"
+        },
+
+        "expertise": {
+            "title": "Expertise & Systems",
+
+            "cpp_blueprint": "C++ & Blueprint integration",
+            "combat_movement": "Combat and movement mechanics",
+            "npc_ai": "AI Systems for NPCs",
+            "economy": "Resource management & game economy",
+            "localization": "Multi-language localization",
+            "platforms": "Multi-platform: Windows & Android",
+            "vr_multiplayer": "VR and Multiplayer (fundamentals)"
+        }
     },
 
     "certificate": {

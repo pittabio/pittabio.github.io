@@ -18,7 +18,8 @@
             <!-- List item -->
             <li>
                 <!-- Item name -->
-                <span>{{ item.name }}</span>
+                <span data-i18n="{{ item.name }}">{{ item.name }}</span>
+
                 <!-- Item level if present -->
                 {% if item.level %}
                     {% assign level = item.level | split: '.' | last %}

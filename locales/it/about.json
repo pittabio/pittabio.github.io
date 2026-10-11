@@ -1,4 +1,4 @@
-{
+﻿{
     "head_title": "Su di me",
 
     "about": {
@@ -23,29 +23,31 @@
             "advanced": "Avanzato"
         },
 
-        "engines": "Motori Grafici",
-        "languages": "Linguaggi e Scripting",
-        "systems": "Esperienza e Sistemi"
+        "engines": {
+            "title": "Motori di Gioco"
+        },
+
+        "languages": {
+            "title": "Linguaggi e Scripting"
+        },
+
+        "expertise": {
+            "title": "Competenze e Sistemi",
+
+            "cpp_blueprint": "Integrazione C++ e Blueprint",
+            "combat_movement": "Meccaniche di combattimento e movimento",
+            "npc_ai": "Sistemi di IA per NPC",
+            "economy": "Gestione delle risorse ed economia di gioco",
+            "localization": "Localizzazione multilingua",
+            "platforms": "Multipiattaforma: Windows e Android",
+            "vr_multiplayer": "VR e multiplayer (fondamenti)"
+        }
     },
 
     "certificate": {
         "rainbow": "[Rainbow Academy Diploma]"
     },
 
-
-    "systems": {
-      "title": "Esperienza e Sistemi",
-      "rainbow": "[Diploma Rainbow Academy]",
-      "items": [
-        "<li>Integrazione C++ e Blueprint</li>",
-        "<li>Meccaniche di combattimento e movimento</li>",
-        "<li>Sistemi IA per NPC</li>",
-        "<li>Gestione risorse ed economia di gioco</li>",
-        "<li>Localizzazione multilingua</li>",
-        "<li>Multi-piattaforma: Windows e Android</li>",
-        "<li>VR e Multiplayer (fondamenti)</li>"
-      ]
-    },
 
     "git": {
       "title": "Controllo Versione",
