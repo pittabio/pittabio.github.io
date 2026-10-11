@@ -1,15 +1,31 @@
 {% assign title = include.title %}
-{% assign skills = include.items %}
+{% assign items = include.items %}
+{% assign link =  include.link  %}
 
 <div class="skill-group">
+    <!-- Link -->
+    {% if link %}
+    <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
+       class="tag" data-i18n="{{ include.linkname }}"></a>
+    {% endif %}
+
+    <!-- Title -->
     <span class="mini-title" data-i18n="{{ title }}">{{ title }}</span>
 
+    <!-- List -->
     <ul>
-        {% for skill in skills %}
+        {% for item in items %}
+            <!-- List item -->
             <li>
-                <span>{{ skill.name }}</span>
-                {% if skill.level %}
-                    <span class="skill-level {{ skill.level | downcase }}">{{ skill.level }}</span>
+                <!-- Item name -->
+                <span>{{ item.name }}</span>
+                <!-- Item level if present -->
+                {% if item.level %}
+                    {% assign level = item.level | split: '.' | last %}
+                    <span
+                        class="skill-level {{ level | downcase }}"
+                        data-i18n="{{ item.level }}">
+                    </span>
                 {% endif %}
             </li>
         {% endfor %}
