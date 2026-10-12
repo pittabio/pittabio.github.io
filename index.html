@@ -9,18 +9,13 @@ description: The home page
 <section id="hero" class="cont hero">
     <!-- LEFT -->
     <div class="desc">
-        <!-- Text: tag, header and presentation -->
-        <span class="tag" data-i18n="hero.tag"></span>
-        <h1 class="title">Fabio Pittaccio</h1>
-        <p data-i18n-html="hero.presentation"></p>
-
-        <br><!-- break -->
-
-        <!-- View Projects Button -->
-        <a class="btn big" href="projects.html" target="_blank">
-            <span data-i18n="hero.cta"></span>
-            <span class="arrow-svg"></span>
-        </a>
+        {% include sections/block.html
+            tag = "hero.tag"
+            title = "Fabio Pittaccio"
+            paragraph = "hero.presentation"
+            url = "projects.html"
+            btn_text = "hero.cta"
+        %}
 
         <!-- Quick info -->
         <div class="info-box">
@@ -119,8 +114,18 @@ description: The home page
     </a>
 </section> <!-- /featured section/ -->
 
+<div class="line"></div> <!-- Pause line -->
+
 <!-- ## CONTACT ## -->
-{% include sections/contact.html %}
+<section id="contact" class="cont">
+    {% include sections/block.html
+        tag = "$contact.tag"
+        title = "$contact.title"
+        paragraph = "$contact.subtitle"
+        url = "contacts.html"
+        btn_text = "$contact.cta"
+    %}
+</section>
 
 <!-- Load `/locales/<lang>/projects/games.json` for the games grid -->
 <script> window.extraLocales = [

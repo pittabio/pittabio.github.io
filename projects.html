@@ -7,9 +7,11 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- ## INTRO ## -->
 <section id="hero" class="cont">
-    <p class="tag" data-i18n="intro.tag"></p>
-    <h1 data-i18n-html="intro.title"></h1>
-    <p data-i18n-html="intro.desc"></p>
+    {% include sections/block.html
+        tag = "intro.title"
+        title = "intro.title"
+        paragraph = "intro.desc"
+    %}
 </section> <!-- /intro/ -->
 
 <!-- ## GAMES ## -->
@@ -46,7 +48,15 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 </section>
 
 <!-- ## CONTACT ## -->
-{% include sections/contact.html %}
+<section id="contact" class="cont">
+    {% include sections/block.html
+        tag = "$contact.tag"
+        title = "$contact.title"
+        paragraph = "$contact.subtitle"
+        url = "contacts.html"
+        btn_text = "$contact.cta"
+    %}
+</section>
 
 <!-- Load the text for the included grids -->
 <script> window.extraLocales = [
