@@ -32,16 +32,6 @@
             flex: 1;
             align-items: baseline;
             gap: .5rem;
-
-            // ...and fills it with a dotted leader up to the tag
-            /*
-            &::after {
-                content: '';
-                flex: 1;
-                border-bottom: 2px dotted currentColor;
-                opacity: .02;
-            }
-            */
         }
     }
 }
