@@ -131,16 +131,19 @@
         }
     },
 
+    "cta": {
+        "skills": {
+            "tag": "skills",
+            "title": "Want to see these skills <b class='accent'>in action</b>?",
+            "paragraph": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
+            "button": "View my projects"
+        },
 
-  "projects": {
-    "title": "Want to see these skills <em>in action</em>?",
-    "subtitle": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
-    "button": "View my projects"
-  },
-
-  "cta": {
-    "title": "Need the full <em>resume</em>?",
-    "subtitle": "Reach out for a full PDF resume including work history, certifications, and academic background",
-    "button": "Get in touch"
-  }
+        "resume": {
+            "tag": "resume",
+            "title": "Need the full <b class='accent'>resume</b>?",
+            "paragraph": "Reach out for a full PDF resume including work history, certifications, and academic background",
+            "button": "Get in touch"
+        }
+    }
 }

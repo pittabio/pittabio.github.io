@@ -131,16 +131,19 @@
         }
     },
 
+    "cta": {
+        "skills": {
+            "tag": "competenze",
+            "title": "Vuoi vedere queste abilità <strong>in azione</strong>?",
+            "paragraph": "Scopri come trasformo le competenze tecniche in gameplay coinvolgente",
+            "button": "Guarda i miei progetti"
+        },
 
-  "projects": {
-    "title": "Vuoi vedere queste abilità <em>in azione</em>?",
-    "subtitle": "Scopri come trasformo le competenze tecniche in gameplay coinvolgente",
-    "button": "Guarda i miei progetti"
-  },
-
-  "cta": {
-    "title": "Ti serve il <em>curriculum</em> completo?",
-    "subtitle": "Contattami per il PDF con storia lavorativa, certificazioni e percorso accademico",
-    "button": "Contattami"
-  }
+        "resume": {
+            "tag": "curriculum",
+            "title": "Ti serve il <strong>curriculum</strong> completo?",
+            "paragraph": "Contattami per il PDF con storia lavorativa, certificazioni e percorso accademico",
+            "button": "Contattami"
+        }
+    }
 }

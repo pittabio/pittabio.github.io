@@ -90,101 +90,25 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
     </div>
 </section>
 
-{% comment %}
-    <!-- ## EDUCATION & TRAINING ## -->
-    <section class="resume-section" id="education">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="about.education.title"></h2>
+<div class="line"></div> <!-- Pause line -->
 
-            <!-- Vertical timeline: newest entry first -->
-            <div class="education-timeline">
+<!-- CTA -->
+<section id="cta" class="cont">
+    <article class="grid-auto">
+        {% include sections/block.html
+            tag = "cta.skills.tag"
+            title = "cta.skills.title"
+            paragraph = "cta.skills.paragraph"
+            url = "/projects.html"
+            btn_text = "cta.skills.button"
+        %}
 
-                <!-- ## Entry 1: Git Certified Specialist ## -->
-                <div class="timeline-entry">
-                    <div class="timeline-date" data-i18n="education.gitkraken.date"></div>
-                    <div class="timeline-role" data-i18n="education.gitkraken.role"></div>
-                    <div class="timeline-institution" data-i18n="education.gitkraken.institution"></div>
-
-                    <!-- GitKraken Certificate -->
-                    <a href="https://learn.gitkraken.com/certificates/06p4apf1rm"
-                       target="_blank" rel="noopener noreferrer" class="skill-link" data-i18n="skills.git.gitkraken">
-                    </a>
-
-                    <ul class="timeline-details" data-i18n-html="education.gitkraken.details"></ul>
-                </div>
-
-                <!-- ## Entry 2: Rainbow Academy — Unreal Developer ## -->
-                <div class="timeline-entry">
-                    <div class="timeline-date" data-i18n="education.rainbow.date"></div>
-                    <div class="timeline-role" data-i18n="education.rainbow.role"></div>
-                    <div class="timeline-institution" data-i18n="education.rainbow.institution"></div>
-
-                    <!-- Diploma -->
-                    <a href="https://www.linkedin.com/in/fabio-pittaccio/details/education/"
-                       target="_blank" rel="noopener noreferrer" class="skill-link" data-i18n="skills.systems.rainbow">
-                    </a>
-
-                    <ul class="timeline-details" data-i18n-html="education.rainbow.details"></ul>
-                </div>
-
-                <!-- ## Entry 3: Audio Technician ## -->
-                <div class="timeline-entry">
-                    <div class="timeline-date" data-i18n="education.audio.date"></div>
-                    <div class="timeline-role" data-i18n="education.audio.role"></div>
-                    <div class="timeline-institution" data-i18n="education.audio.institution"></div>
-
-                    <!-- Certificate -->
-                    <a href="https://www.linkedin.com/in/fabio-pittaccio/details/education/"
-                       target="_blank" rel="noopener noreferrer" class="skill-link" data-i18n="education.audio.certificate">
-                    </a>
-
-                    <ul class="timeline-details" data-i18n-html="education.audio.details"></ul>
-                </div>
-
-                <!-- ## Entry 4: Technical Diploma ## -->
-                <div class="timeline-entry">
-                    <div class="timeline-date" data-i18n="education.it.date"></div>
-                    <div class="timeline-role" data-i18n="education.it.role"></div>
-                    <div class="timeline-institution" data-i18n="education.it.institution"></div>
-
-                    <!-- Diploma -->
-                    <a href="https://www.linkedin.com/in/fabio-pittaccio/details/education/"
-                       target="_blank" rel="noopener noreferrer" class="skill-link" data-i18n="education.it.diploma">
-                    </a>
-
-                    <ul class="timeline-details" data-i18n-html="education.it.details"></ul>
-                </div>
-
-            </div> <!-- END education-timeline -->
-        </div>
-    </section> <!-- END education -->
-
-    <!-- ## FINAL ACTIONS (Projects & Resume) ## -->
-    <section class="contact-section">
-        <div class="section-container">
-            <div class="actions-grid">
-
-                <!-- Column 1: Projects -->
-                <div class="action-item">
-                    <h2 class="contact-title" data-i18n-html="projects.title"></h2>
-                    <p class="contact-subtitle" data-i18n="projects.subtitle"></p>
-                    <a href="{{ '/projects.html' | relative_url }}" class="contact-cta">
-                        <span data-i18n="projects.button"></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-
-                <!-- Column 2: CTA (Resume) -->
-                <div class="action-item">
-                    <h2 class="contact-title" data-i18n-html="cta.title"></h2>
-                    <p class="contact-subtitle" data-i18n="cta.subtitle"></p>
-                    <a href="{{ '/contacts.html' | relative_url }}" class="contact-cta">
-                        <span data-i18n="cta.button"></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-{% endcomment %}
+        {% include sections/block.html
+            tag = "cta.resume.tag"
+            title = "cta.resume.title"
+            paragraph = "cta.resume.paragraph"
+            url = "/contacts.html"
+            btn_text = "cta.resume.button"
+        %}
+    </article>
+</section>
