@@ -1,0 +1,61 @@
+@use "../common/base";
+
+/* BULLETED LIST */
+// .tl > .tl-item > .tag (date) + h4 (role) + em (place) + ul (details)
+
+$tl-offset: 1.5rem; // distance between the line and the content
+$tl-dot: 12px;
+
+.tl {
+    @include base.container-style(
+        $max-width: 860px,
+        $margin: 3rem auto 0,
+        $align: stretch,
+        $justify: flex-start,
+        $text: left
+    );
+    position: relative;
+    gap: 1.5rem; // small gap between items
+    padding-left: $tl-offset;
+
+    // The vertical line joining all the dots
+    &::before {
+        content: '';
+        position: absolute;
+        top: .4rem;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        background: var(--border);
+    }
+}
+
+.tl-item {
+    @include base.flexbox-style(
+        $direction: column,
+        $align: flex-start,
+        $justify: flex-start,
+        $gap: .5rem
+    );
+    position: relative;
+
+    // The dot, centered on the line (the 1px is half the line width)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(1px - #{$tl-offset} - #{$tl-dot} / 2);
+        width: $tl-dot;
+        height: $tl-dot;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid var(--bg);
+        box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .18);
+        z-index: 2;
+    }
+
+    h4 { margin-bottom: 0; }          // spacing comes from the gap
+    em { color: var(--text-muted); }
+    ul { padding-left: 1.2rem; }      // the global reset zeroes it
+    li::marker { color: var(--text-muted); }
+}
