@@ -4,8 +4,9 @@
     "about": {
         "tag": "Curriculum Vitae",
         "title": "Su di me",
-        "subtitle": "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
         "description": [
+            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+            "<br>",
             "Un riepilogo delle mie qualifiche chiave e competenze tecniche.",
             "<br>",
             "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
