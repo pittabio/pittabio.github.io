@@ -2,6 +2,9 @@
 .idea/
 qodana.yaml
 
+# JetBrains plugins
+.todo/
+
 # macOS
 .DS_Store
 
