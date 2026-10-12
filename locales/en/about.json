@@ -13,6 +13,11 @@
         ]
     },
 
+    "certificate": {
+        "rainbow": "Official Certification – Rainbow Academy ↗",
+        "gitkraken": "Official Certification – GitKraken ↗"
+    },
+
     "skill": {
         "title": "Technical Skills",
 
@@ -69,42 +74,35 @@
         }
     },
 
-    "certificate": {
-        "rainbow": "Official Certification – Rainbow Academy ↗",
-        "gitkraken": "Official Certification – GitKraken ↗"
-    },
+    "education": {
+        "title": "Education & Training",
 
+        "gitkraken": {
+            "date": "October 2025",
+            "role": "Git Certified Specialist by GitKraken",
+            "place": "GitKraken Learn · Online",
+            "details": {
+                "1": "Foundations of Git — Certification Course",
+                "2": "Passed the 60-question certification exam",
+                "3": "Advanced repository management and collaboration workflows",
+                "4": "Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules"
+            }
+        },
 
-
-  "education": {
-    "title": "Education & Training",
-
-    "gitkraken": {
-      "date": "October 2025",
-      "role": "Git Certified Specialist by GitKraken",
-      "institution": "GitKraken Learn · Online",
-      "details": [
-        "<li>Foundations of Git — Certification Course</li>",
-        "<li>Advanced repository management and collaboration workflows</li>",
-        "<li>Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules</li>",
-        "<li>Passed the 60-question certification exam</li>"
-      ]
-    },
-
-    "rainbow": {
-      "date": "2023 – 2024",
-      "role": "Gameplay Developer — Master in Unreal C++",
-      "institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
-      "details": [
-        "<li>Final Grade: <strong>95/100</strong></li>",
-        "<li>Module Excellence: <strong>100/100 in C++ Programming</strong></li>",
-        "<li>Advanced Blueprint and C++ programming</li>",
-        "<li>Hybrid Blueprint/C++ implementation</li>",
-        "<li>AI development for NPCs and gameplay mechanics</li>",
-        "<li>Multiplayer and VR mechanics</li>",
-        "<li>HUD, SaveGame systems and Audio management</li>"
-      ]
-    },
+        "rainbow": {
+            "date": "2023 – 2024",
+            "role": "Gameplay Developer — Master in Unreal C++",
+            "institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
+            "details": {
+                "1": "Final Grade: <strong>95/100</strong>",
+                "2": "Module Excellence: <strong>100/100 in C++ Programming</strong>",
+                "3": "Advanced Blueprint and C++ programming",
+                "4": "Hybrid Blueprint/C++ implementation",
+                "5": "AI development for NPCs and gameplay mechanics",
+                "6": "Multiplayer and VR mechanics",
+                "7": "HUD, SaveGame systems and Audio management"
+            }
+        },
 
     "audio": {
       "date": "2018 – 2020",

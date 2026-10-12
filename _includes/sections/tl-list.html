@@ -1,0 +1,26 @@
+{% assign form = include.form %}
+
+{% for item in form %}
+<div class="tl-item">
+    <!-- date -->
+    <span class="tag" data-i18n="{{ item.date }}"></span>
+
+    <!-- role -->
+    <h4 data-i18n="{{ item.role }}"></h4>
+
+    <!-- place -->
+    <em data-i18n="{{ item.place }}"></em>
+
+    <!-- url + url_text -->
+    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer"
+       class="tag" data-i18n="{{ item.url_text }}"></a>
+
+    <!-- details -->
+    <ul>
+        {% for detail in item.details %}
+            <li data-i18n-html="{{ detail }}"></li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endfor %}

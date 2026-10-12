@@ -13,6 +13,11 @@
         ]
     },
 
+    "certificate": {
+        "rainbow": "Certificazione ufficiale Rainbow Academy ↗",
+        "gitkraken": "GitKraken Specialist Certificate ↗"
+    },
+
     "skill": {
         "title": "Competenze Tecniche",
 
@@ -69,27 +74,20 @@
         }
     },
 
-    "certificate": {
-        "rainbow": "Certificazione ufficiale Rainbow Academy ↗",
-        "gitkraken": "GitKraken Specialist Certificate ↗"
-    },
+    "education": {
+        "title": "Istruzione e Formazione",
 
-
-
-  "education": {
-    "title": "Istruzione e Formazione",
-
-    "gitkraken": {
-      "date": "Ottobre 2025",
-      "role": "Specialista Certificato Git da GitKraken",
-      "institution": "GitKraken Learn · Online",
-      "details": [
-        "<li>Fondamenti di Git — Corso di Certificazione</li>",
-        "<li>Gestione avanzata dei repository e workflow collaborativi</li>",
-        "<li>Argomenti: Commit, Branch, Merging, Rebasing, Remoti, Fork, Pull Request, LFS, Sottomoduli</li>",
-        "<li>Superamento dell'esame di certificazione da 60 domande</li>"
-      ]
-    },
+        "gitkraken": {
+            "date": "Ottobre 2025",
+            "role": "Specialista Certificato Git da GitKraken",
+            "institution": "GitKraken Learn · Online",
+            "details": {
+                "1": "Fondamenti di Git — Corso di Certificazione",
+                "2": "Superamento dell'esame di certificazione da 60 domande",
+                "3": "Gestione avanzata dei repository e workflow collaborativi",
+                "4": "Argomenti: Commit, Branch, Merging, Rebasing, Remoti, Fork, Pull Request, LFS, Sottomoduli"
+            }
+        },
 
     "rainbow": {
       "date": "2023 – 2024",
