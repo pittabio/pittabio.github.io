@@ -1,4 +1,4 @@
-﻿{
+{
     "head_title": "Su di me",
 
     "about": {
@@ -7,15 +7,17 @@
         "subtitle": "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
         "description": [
             "Un riepilogo delle mie qualifiche chiave e competenze tecniche.",
-            "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
             "<br>",
-            "sentitevi liberi di contattarmi tramite la pagina dei contatti."
+            "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
+            "sentiti libero di contattarmi tramite la <a href='contacts.html'>pagina dei contatti</a>."
         ]
     },
 
     "certificate": {
-        "rainbow": "Certificazione ufficiale Rainbow Academy ↗",
-        "gitkraken": "GitKraken Specialist Certificate ↗"
+        "rainbow": "Certificazione Ufficiale – Rainbow Academy ↗",
+        "gitkraken": "Certificato Specialista – GitKraken ↗",
+        "audio": "Attestato Accademia ↗",
+        "it": "Diploma Istituto Tecnico ↗"
     },
 
     "skill": {
@@ -63,7 +65,7 @@
         },
 
         "other": {
-            "title": "Formazione Continua & Obiettivi",
+            "title": "Formazione Continua e Obiettivi",
 
             "soon": [
                 "Costantemente dedicato all'aggiornamento professionale.",
@@ -85,52 +87,50 @@
                 "1": "Fondamenti di Git — Corso di Certificazione",
                 "2": "Superamento dell'esame di certificazione da 60 domande",
                 "3": "Gestione avanzata dei repository e workflow collaborativi",
-                "4": "Argomenti: Commit, Branch, Merging, Rebasing, Remoti, Fork, Pull Request, LFS, Sottomoduli"
+                "4": "Argomenti: Commit, Branch, Merging, Rebasing, Remotes, Fork, Pull Request, LFS, Submodules"
             }
         },
 
-    "rainbow": {
-      "date": "2023 – 2024",
-      "role": "Gameplay Developer — Master in Unreal C++",
-      "institution": "Rainbow Academy · Digital Entertainment Academy · Roma, Italia",
-      "diploma": "[Vedi Diploma]",
-      "details": [
-        "<li>Votazione Finale: <strong>95/100</strong></li>",
-        "<li>Eccellenza Modulo: <strong>100/100 in Programmazione C++</strong></li>",
-        "<li>Programmazione avanzata in Blueprint e C++</li>",
-        "<li>Implementazione ibrida Blueprint/C++</li>",
-        "<li>Sviluppo IA per NPC e meccaniche di gameplay</li>",
-        "<li>Meccaniche multiplayer e VR</li>",
-        "<li>Sviluppo HUD, sistemi SaveGame e gestione audio</li>"
-      ]
+        "rainbow": {
+            "date": "2023 – 2024",
+            "role": "Gameplay Developer — Master in Unreal C++",
+            "institution": "Rainbow Academy · Digital Entertainment Academy · Roma, Italia",
+            "details": {
+                "1": "Votazione Finale: <strong>95/100</strong>",
+                "2": "Eccellenza Modulo: <strong>100/100 in Programmazione C++</strong>",
+                "3": "Programmazione avanzata in Blueprint e C++",
+                "4": "Implementazione ibrida Blueprint/C++",
+                "5": "Sviluppo IA per NPC e meccaniche di gameplay",
+                "6": "Meccaniche multiplayer e VR",
+                "7": "Sviluppo HUD, sistemi SaveGame e gestione audio"
+            }
+        },
+
+        "audio": {
+            "date": "2018 – 2020",
+            "role": "Certificato di Tecnico del Suono",
+            "institution": "Accademia Professionale per lo Spettacolo · Italia",
+            "details": {
+                "1": "Propagazione del suono ed acustica",
+                "2": "Uso professionale di mixer e apparecchiature audio",
+                "3": "Mixing e mastering con Cubase",
+                "4": "Gestione audio per eventi dal vivo e registrazioni in studio"
+            }
+        },
+
+        "it": {
+            "date": "2011 – 2016",
+            "role": "Diploma Tecnico — Informatica e Telecomunicazioni",
+            "institution": "Alessandro Volta · Istituto Tecnico · Guidonia, Italia",
+            "details": {
+                "1": "Programmazione C++ a livello intermedio",
+                "2": "Corso extra-curriculare di Arduino",
+                "3": "Basi di Java, SQL e HTML",
+                "4": "Sistemi informatici e telecomunicazioni"
+            }
+        }
     },
 
-    "audio": {
-      "date": "2018 – 2020",
-      "role": "Certificato di Tecnico del Suono",
-      "institution": "Accademia Professionale per lo Spettacolo · Italia",
-      "certificate": "[Vedi Certificato]",
-      "details": [
-        "<li>Propagazione del suono ed acustica</li>",
-        "<li>Uso professionale di mixer e apparecchiature audio</li>",
-        "<li>Mixing e mastering con Cubase</li>",
-        "<li>Gestione audio per eventi dal vivo e registrazioni in studio</li>"
-      ]
-    },
-
-    "it": {
-      "date": "2011 – 2016",
-      "role": "Diploma Tecnico — Informatica e Telecomunicazioni",
-      "institution": "Alessandro Volta · Istituto Tecnico · Guidonia, Italia",
-      "diploma": "[Vedi Diploma]",
-      "details": [
-        "<li>Programmazione C++ a livello intermedio</li>",
-        "<li>Corso extra-curriculare di Arduino</li>",
-        "<li>Basi di Java, SQL e HTML</li>",
-        "<li>Sistemi informatici e telecomunicazioni</li>"
-      ]
-    }
-  },
 
   "projects": {
     "title": "Vuoi vedere queste abilità <em>in azione</em>?",

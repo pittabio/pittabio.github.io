@@ -1,4 +1,4 @@
-﻿{
+{
     "head_title": "About Me",
 
     "about": {
@@ -9,13 +9,15 @@
             "A summary of my key qualifications and technical skills.",
             "<br>",
             "For a complete detailed resume with full work history, certifications, and professional references",
-            "fell free to reach out me through the <a href='contacts.html'>contacts page</a>."
+            "fell free to reach out to me through the <a href='contacts.html'>contacts page</a>."
         ]
     },
 
     "certificate": {
-        "rainbow": "Official Certification – Rainbow Academy ↗",
-        "gitkraken": "Official Certification – GitKraken ↗"
+        "rainbow": "Official Certificate – Rainbow Academy ↗",
+        "gitkraken": "Specialist Certificate – GitKraken ↗",
+        "audio": "Academy Certificate ↗",
+        "it": "Technical Institute Diploma ↗"
     },
 
     "skill": {
@@ -80,7 +82,7 @@
         "gitkraken": {
             "date": "October 2025",
             "role": "Git Certified Specialist by GitKraken",
-            "place": "GitKraken Learn · Online",
+            "institution": "GitKraken Learn · Online",
             "details": {
                 "1": "Foundations of Git — Certification Course",
                 "2": "Passed the 60-question certification exam",
@@ -104,32 +106,31 @@
             }
         },
 
-    "audio": {
-      "date": "2018 – 2020",
-      "role": "Audio Technician Certificate",
-      "institution": "Professional Academy for Entertainment · Italy",
-      "certificate": "[View Certificate]",
-      "details": [
-        "<li>Sound propagation and acoustics</li>",
-        "<li>Professional use of mixers and audio equipment</li>",
-        "<li>Mixing and mastering with Cubase</li>",
-        "<li>Audio management for live events and studio recordings</li>"
-      ]
+        "audio": {
+            "date": "2018 – 2020",
+            "role": "Audio Technician Certificate",
+            "institution": "Professional Academy for Entertainment · Italy",
+            "details": {
+                "1": "Sound propagation and acoustics",
+                "2": "Professional use of mixers and audio equipment",
+                "3": "Mixing and mastering with Cubase",
+                "4": "Audio management for live events and studio recordings"
+            }
+        },
+
+        "it": {
+            "date": "2011 – 2016",
+            "role": "Technical Diploma — Computer Science & Telecommunications",
+            "institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
+            "details": {
+                "1": "Intermediate C++ programming",
+                "2": "Extracurricular Arduino course",
+                "3": "Java, SQL and HTML foundations",
+                "4": "Computer systems and telecommunications"
+            }
+        }
     },
 
-    "it": {
-      "date": "2011 – 2016",
-      "role": "Technical Diploma — Computer Science & Telecommunications",
-      "institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
-      "diploma": "[View Diploma]",
-      "details": [
-        "<li>Intermediate C++ programming</li>",
-        "<li>Extracurricular Arduino course</li>",
-        "<li>Java, SQL and HTML foundations</li>",
-        "<li>Computer systems and telecommunications</li>"
-      ]
-    }
-  },
 
   "projects": {
     "title": "Want to see these skills <em>in action</em>?",
@@ -139,7 +140,7 @@
 
   "cta": {
     "title": "Need the full <em>resume</em>?",
-    "subtitle": "Reach out for a full PDF resume including work history, certifications, and academic academic background",
+    "subtitle": "Reach out for a full PDF resume including work history, certifications, and academic background",
     "button": "Get in touch"
   }
 }

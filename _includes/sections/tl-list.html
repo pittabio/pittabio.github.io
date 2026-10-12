@@ -1,26 +1,28 @@
-{% assign form = include.form %}
+{% for item in include.items %}
+    {% assign key = include.prefix | append: "." | append: item.id %}
 
-{% for item in form %}
-<div class="tl-item">
-    <!-- date -->
-    <span class="tag" data-i18n="{{ item.date }}"></span>
+    <div class="tl-item">
+        <!-- Date -->
+        <span class="tag" data-i18n="{{ key }}.date"></span>
 
-    <!-- role -->
-    <h4 data-i18n="{{ item.role }}"></h4>
+        <!-- Role -->
+        <h4 data-i18n="{{ key }}.role"></h4>
 
-    <!-- place -->
-    <em data-i18n="{{ item.place }}"></em>
+        <!-- Institution -->
+        <em data-i18n="{{ key }}.institution"></em>
 
-    <!-- url + url_text -->
-    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer"
-       class="tag" data-i18n="{{ item.url_text }}"></a>
+        <!-- url + url_text -->
+        {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer"
+               class="tag" data-i18n="{{ item.url_text }}"></a>
+        {% endif %}
 
-    <!-- details -->
-    <ul>
-        {% for detail in item.details %}
-            <li data-i18n-html="{{ detail }}"></li>
-        {% endfor %}
-    </ul>
+        <!-- Details -->
+        <ul>
+            {% for i in (1..item.details) %}
+                <li data-i18n-html="{{ key }}.details.{{ i }}"></li>
+            {% endfor %}
+        </ul>
 
-</div>
+    </div>
 {% endfor %}
