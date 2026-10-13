@@ -4,7 +4,7 @@
     "hero": {
         "tag": "Curriculum Vitae",
         "title": "About me",
-        "description": [
+        "desc": [
             "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
             "<br>",
             "A summary of my key qualifications and technical skills.",
