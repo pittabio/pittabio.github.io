@@ -4,7 +4,7 @@ title: Licenses
 i18n_title: head_title
 description: This page lists the usage licenses for the site.
 ---
-{% assign l = site.data.licenses %}
+
 <section id="license">
     <h2  data-i18n="title"></h2>
 
@@ -26,6 +26,7 @@ description: This page lists the usage licenses for the site.
 
     <br>
     <!-- The licenses of the main icons -->
+    {% assign l = site.data.licenses %}
     <section id="tech" class="cont_left">
         <h3 data-i18n="icons.title"></h3>
         <p  data-i18n-html="icons.desc"></p>
