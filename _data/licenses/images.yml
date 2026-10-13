@@ -1,10 +1,10 @@
 - name: "Xbox Core Controller"
-  image: "media/index/about/controller.webp"
+  image: "/media/index/controller.webp"
   source: "gamepadla.com"
   source_url: "https://gamepadla.com/xbox-core-controller.html"
 
 - name: "Circle Chart / Cycle Diagram Templates"
-  image: "media/index/about/circle.png"
+  image: "/media/index/circle.png"
   author: "Amonrat Rungreangfangsai"
   source: "Vecteezy.com"
   source_url: "https://www.vecteezy.com/vector-art/534964-circle-chart-circle-arrows-infographic-or-cycle-diagram-templates"

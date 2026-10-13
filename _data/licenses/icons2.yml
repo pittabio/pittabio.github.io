@@ -57,3 +57,12 @@
   license: "Trademark of GitLab Inc."
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
   note: "icons.note.gitlab"
+
+- name: "Icon 'location'"
+  svg: "loc-svg"
+  author: "Dan Klammer"
+  author_url: "https://github.com/danklammer/bytesize-icons"
+  source: "Bytesize Icons (via Iconify)"
+  source_url: "https://icon-sets.iconify.design/bytesize/location/"
+  license: "MIT"
+  license_url: "https://github.com/danklammer/bytesize-icons/blob/master/LICENSE.md"
