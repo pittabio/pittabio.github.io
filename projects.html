@@ -5,14 +5,14 @@ i18n_title: head_title
 description: "Explore Unreal Engine 5 games and technical experiments focusing on gameplay programming and modular architectures."
 ---
 
-<!-- ## INTRO ## -->
+<!-- ## HERO ## -->
 <section id="hero" class="cont">
     {% include sections/block.html
-        tag = "intro.tag"
-        title = "intro.title"
-        paragraph = "intro.desc"
+        tag = "hero.tag"
+        title = "hero.title"
+        paragraph = "hero.desc"
     %}
-</section> <!-- /intro/ -->
+</section><!-- /hero/ -->
 
 <!-- ## GAMES ## -->
 <section id="games" class="cont">
@@ -23,7 +23,7 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
     <!-- Grid -->
     {% include sections/projects/games.html %}
-</section>
+</section><!-- /games/ -->
 
 <!-- ## EXPERIMENTS ## -->
 <section id="experiments" class="cont">
@@ -34,7 +34,7 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
     <!-- Grid -->
     {% include sections/projects/experiments.html %}
-</section>
+</section><!-- /experiments/ -->
 
 <!-- ## ARCHIVE ## -->
 <section id="archive" class="cont">
@@ -45,9 +45,9 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
     <!-- Grid -->
     {% include sections/projects/archive.html %}
-</section>
+</section><!-- /archive/ -->
 
-<!-- ## CONTACT ## -->
+<!-- ## CTA ## -->
 <section id="contact" class="cont">
     {% include sections/block.html
         tag = "$contact.tag"
@@ -56,7 +56,7 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
         url = "contacts.html"
         btn_text = "$contact.cta"
     %}
-</section>
+</section><!-- /cta/ -->
 
 <!-- Load the text for the included grids -->
 <script> window.extraLocales = [
