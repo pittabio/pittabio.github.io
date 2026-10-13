@@ -3,7 +3,7 @@
 
     "hero": {
         "tag": "Curriculum Vitae",
-        "title": "About me",
+        "title": "About <b class='accent'>me</b>",
         "desc": [
             "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
             "<br>",
