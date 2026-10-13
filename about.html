@@ -19,18 +19,24 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 <!-- ## SKILLS ## -->
 {% assign abt = site.data.about %}
 <section id="skills">
+    <!-- Technologies icons bar -->
+    {% include sections/skills-icons.html %}
+    <br>
+
     <h2 data-i18n="skill.title"></h2>
+
+    <!-- Grid of cards -->
     <div class="grid-column">
 
         <!-- Card 1: Engines + Languages -->
         <article class="card">
-            {% include sections/list.html
+            {% include sections/list/skills.html
                 title = "skill.engines.title"
                 items = abt.engines %}
 
             <div class="line-nomargin"></div> <!-- Pause line -->
 
-            {% include sections/list.html
+            {% include sections/list/skills.html
                 title = "skill.languages.title"
                 items = abt.languages %}
         </article>
@@ -38,7 +44,7 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
         <!-- Card 2: Technical Expertise -->
         <article class="card">
             <!-- Expertise & Systems -->
-            {% include sections/list.html
+            {% include sections/list/skills.html
                 title = "skill.expertise.title"
                 items = abt.expertise
                 link = "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
@@ -48,7 +54,7 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
             <div class="line-nomargin"></div> <!-- Pause line -->
 
             <!-- Version Control -->
-            {% include sections/list.html
+            {% include sections/list/skills.html
                 title = "skill.git.title"
                 items = abt.git
                 link = "https://learn.gitkraken.com/certificates/06p4apf1rm"
@@ -59,7 +65,7 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
         <!-- Card 3: Production Tools & Languages -->
         <article class="card">
             <!-- Tools -->
-            {% include sections/list.html
+            {% include sections/list/skills.html
                 title = "skill.tools.title"
                 items = abt.tools
             %}
@@ -81,9 +87,8 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 <!-- ## EDUCATION ## -->
 <section id="education" class="cont">
     <h2 data-i18n="education.title"></h2>
-
     <div class="tl">
-        {% include sections/tl-list.html
+        {% include sections/list/timeline.html
             items  = abt.education
             prefix = "education"
         %}
