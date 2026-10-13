@@ -1,10 +1,19 @@
-﻿{
-  "head_title": "Contatti · Fabio Pittaccio",
+{
+    "head_title": "Contatti",
 
-  "contact_page": {
-    "tag": "Mettiti in contatto",
-    "title": "Parliamo del tuo prossimo <em>progetto.</em>",
-    "subtitle": "Che tu voglia discutere di opportunità lavorative, collaborazioni su Unreal Engine o semplicemente farmi una domanda, sono a tua disposizione.",
+    "hero": {
+        "tag": "Mettiamoci in contatto",
+        "title": [
+            "Parliamo del tuo",
+            "<br>",
+            "prossimo <b class='accent'>progetto!</b>"
+        ],
+        "desc": [
+            "Che tu voglia discutere di opportunità lavorative, collaborazioni su Unreal Engine,",
+            "o semplicemente farmi una domanda, sono a tua disposizione."
+        ]
+    },
+
 
     "quick_info": "Info rapide",
     "dev_profiles": "Profili Dev",
@@ -45,8 +54,7 @@
         "subject": "es. Opportunità di lavoro",
         "message": "Il messaggio qui..."
       }
-    }
-  },
+    },
 
   "feedback": {
     "success_title": "✅ Messaggio inviato con successo!",

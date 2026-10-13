@@ -1,10 +1,19 @@
-﻿{
-  "head_title": "Contacts · Fabio Pittaccio",
+{
+    "head_title": "Contacts",
 
-  "contact_page": {
-    "tag": "Get in touch",
-    "title": "Let's talk about your next <em>project.</em>",
-    "subtitle": "Whether you want to discuss job opportunities, Unreal Engine collaborations, or simply ask a question, I'm here to help.",
+    "hero": {
+        "tag": "Get in touch",
+        "title": [
+            "Let's talk about",
+            "<br>",
+            "your next <b class='accent'>project!</b>"
+        ],
+        "desc": [
+            "Whether you want to discuss job opportunities, Unreal Engine collaborations,",
+            "or simply ask a question, I'm here to help."
+        ]
+    },
+
 
     "quick_info": "Quick info",
     "dev_profiles": "Dev Profiles",
@@ -42,11 +51,8 @@
       "placeholder": {
         "name": "e.g. John Doe",
         "email": "e.g. john_doe@example.com",
-        "subject": "e.g. Job Opportunity",
-        "message": "Your message here..."
-      }
-    }
-  },
+        }
+    },
 
   "feedback": {
     "success_title": "✅ Message sent successfully!",
