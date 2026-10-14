@@ -67,6 +67,7 @@
 
     // The image inside the card
     img {
+        border-radius: var(--rad-sml);
         width: 100%;
         object-fit: cover; // or contain to not cut
         aspect-ratio: 16 / 9;
