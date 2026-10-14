@@ -5,12 +5,40 @@ i18n_title: head_title
 description: "Contact Fabio Pittaccio for Gameplay Development opportunities, UE5 collaborations, or technical inquiries."
 ---
 
+{% assign cnt = site.data.contacts %}
+
+<!-- ## HERO ## -->
 <section id="hero" class="cont">
     {% include sections/block.html
         tag = "hero.tag"
         title = "hero.title"
         paragraph = "hero.desc"
     %}
+</section>
+
+<!-- ## INFO ## -->
+<section id="info" class="cont">
+    {% include sections/list/info.html
+        title = "info.title"
+        infos = cnt.info
+    %}
+</section>
+
+<!-- ## PROFILES ## -->
+<section id="profiles" class="cont">
+    <div class="grid-auto">
+        <!-- Dev profiles -->
+        {% include sections/list/info.html
+            title = "profiles.dev"
+            infos = cnt.dev
+        %}
+
+        <!-- Social -->
+        {% include sections/list/info.html
+            title = "profiles.social"
+            infos = cnt.social
+        %}
+    </div>
 </section>
 
 {% comment %}
