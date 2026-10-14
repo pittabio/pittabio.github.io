@@ -1,0 +1,34 @@
+/* Profiles Layout */
+.profiles {
+    // Unordered list
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        list-style: none;
+        display: grid;
+        gap: .5rem;
+    }
+
+    // List item
+    li {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        img {
+            width: 2rem;
+            flex-shrink: 0;
+        }
+    }
+}

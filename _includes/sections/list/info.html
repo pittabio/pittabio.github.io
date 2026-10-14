@@ -1,0 +1,49 @@
+{% comment %}
+To include:
+- title
+- infos:
+  - label
+  - desc (optional description)
+  - img (media) or svg (icon)
+  - url (opional)
+{% endcomment %}
+
+{% assign title = include.title %}
+{% assign infos = include.infos %}
+
+<div class="profiles">
+    <!-- Mini Title -->
+    <h3 data-i18n="{{ title }}">{{ title }}</h3>
+
+    <!-- The list -->
+    <ul>
+        {% for info in infos %}
+            {% capture item_content %}
+                <!-- Mini Image -->
+                {% if info.img %}
+                    <img src="{{ info.img }}" alt="{{ info.label }} logo" />
+                {% elsif info.svg %}
+                    <span class="{{ info.svg }}"></span>
+                {% endif %}
+
+                <!-- Label -->
+                <b data-i18n="{{ info.label }}">{{ info.label }}</b>
+
+                <!-- Extra Description -->
+                {% if info.desc %}
+                    <span data-i18n="{{ info.desc }}"></span>
+                {% endif %}
+            {% endcapture %}
+
+            <li>
+                {% if info.url %}
+                    <a href="{{ info.url }}">
+                        {{ item_content }}
+                    </a>
+                {% else %}
+                    {{ item_content }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul><!-- /list/ -->
+</div><!-- /cont/ -->
