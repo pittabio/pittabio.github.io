@@ -23,7 +23,7 @@
   note: "icons2.note.gamejolt"
 
 - name: "GitLab Logomark (white)"
-  image: "/media/logo/social/gitlab.svg"
+  svg: "gitlab-w-svg"
   author: "GitLab Inc."
   source: "GitLab Press Kit"
   source_url: "https://about.gitlab.com/press/press-kit/"
