@@ -1,0 +1,15 @@
+- label: "Linkedin"
+  img: "/media/profile.jpg"
+  url: "https://linkedin.com/in/fabio-pittaccio"
+
+- label: "GitHub"
+  img: "/media/profile.jpg"
+  url: "https://github.com/pittabio"
+
+- label: "GitLab"
+  img: "/media/profile.jpg"
+  url: "https://gitlab.com/pittabio"
+
+- label: "itch.io"
+  img: "/media/profile.jpg"
+  url: "https://fabiopitt.itch.io/"

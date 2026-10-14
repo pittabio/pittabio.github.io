@@ -1,0 +1,15 @@
+- label: "Instagram"
+  img: "/media/profile.jpg"
+  url: "https://www.instagram.com/pittabio/"
+
+- label: "Discord"
+  img: "/media/profile.jpg"
+  url: "https://discord.com/users/1169951922522968104"
+
+- label: "YouTube"
+  img: "/media/profile.jpg"
+  url: "https://www.youtube.com/@pittabio"
+
+- label: "Twitch"
+  img: "/media/profile.jpg"
+  url: "https://www.twitch.tv/pittabio"
