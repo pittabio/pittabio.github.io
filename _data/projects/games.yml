@@ -82,7 +82,7 @@
 
   link2: "https://gitlab.com/pittabio"
   link2_name: "GitLab"
-  link2_icon: "gitlab-svg"
+  link2_icon: "gitlab-w-svg"
 
   link3_name: "$common.card.about"
   link3_icon: "arrow-svg"

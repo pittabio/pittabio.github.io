@@ -8,7 +8,7 @@
 
   link3: "https://gitlab.com/pittabio/StateTrees"
   link3_name: "GitLab"
-  link3_icon: "gitlab-svg"
+  link3_icon: "gitlab-w-svg"
 
 # GAS Abilities
 - name: "$experiments.gas.name"
@@ -20,4 +20,4 @@
 
   link3: "https://gitlab.com/pittabio/GasAbilities"
   link3_name: "GitLab"
-  link3_icon: "gitlab-svg"
+  link3_icon: "gitlab-w-svg"
