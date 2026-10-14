@@ -26,18 +26,26 @@
     },
 
     "info": {
-      "location_label": "Current Location:",
-      "location": "Rome, Italy",
+        "title": "Quick info",
 
-      "timezone_label": "Time Zone:",
-      "timezone": "CET (Europe/Rome)",
+        "loc_label": "Current Location:",
+        "loc": "Rome, Italy",
 
-      "lang_label": "Preferred Languages:",
-      "lang": "English, Italian",
+        "tz_label": "Time Zone:",
+        "tz": "CET (Europe/Rome)",
 
-      "status_label": "Status:",
-      "status_value": "Available for new opportunities"
+        "lang_label": "Preferred Languages:",
+        "lang": "English, Italian",
+
+        "status_label": "Status:",
+        "status": "Available for new opportunities"
     },
+
+    "profiles": {
+        "dev": "Dev Profiles",
+        "social": "Social"
+    },
+
     "form": {
       "title": "Contact Form",
       "subtitle": "Please, don't use for spam",

@@ -26,18 +26,26 @@
     },
 
     "info": {
-      "location_label": "Posizione attuale:",
-      "location": "Roma, Italia",
+        "title": "Info rapide",
 
-      "timezone_label": "Fuso Orario:",
-      "timezone": "CET (Europa/Roma)",
+        "location_label": "Posizione attuale:",
+        "location": "Roma, Italia",
 
-      "lang_label": "Lingue Parlate:",
-      "lang": "Italiano, Inglese",
+        "timezone_label": "Fuso Orario:",
+        "timezone": "CET (Europa/Roma)",
 
-      "status_label": "Stato:",
-      "status_value": "Disponibile per nuove opportunità"
+        "lang_label": "Lingue Parlate:",
+        "lang": "Italiano, Inglese",
+
+        "status_label": "Stato:",
+        "status_value": "Disponibile per nuove opportunità"
     },
+
+    "profiles": {
+        "dev": "Profili Dev",
+        "social": "Social"
+    },
+
     "form": {
       "title": "Modulo di contatto",
       "subtitle": "Per favore, non usatelo per lo spam",
