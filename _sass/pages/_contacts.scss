@@ -8,7 +8,7 @@
         align-items: center;
         list-style: none;
         display: grid;
-        gap: .5rem;
+        gap: .75rem;
     }
 
     // List item
@@ -17,18 +17,43 @@
         align-items: center;
         gap: .5rem;
 
+        // List image properties
+        img {
+            width: 2rem;
+            flex-shrink: 0; // Don't squash the icon next to long labels
+        }
+
+        // Links
         a {
+            // Layout
+
+            // Must be flex too: it's the only flex child of the li, and img is
+            // display:block (see %img-base), so otherwise the label wraps below it
             display: flex;
             align-items: center;
             gap: .5rem;
 
+            // Custom underline: a border spans the icon too, unlike text-decoration
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--accent);
             font-style: normal;
             text-decoration: none;
-        }
 
-        img {
-            width: 2rem;
-            flex-shrink: 0;
+            // Icons stay muted until the link is hovered or focused
+            img {
+                filter: grayscale(1);
+            }
+
+            // When the link is hovered
+            &:hover,
+            &:focus-visible {
+                gap: .75rem;
+
+                // The image return
+                img {
+                    filter: grayscale(0);
+                }
+            }
         }
     }
 }
