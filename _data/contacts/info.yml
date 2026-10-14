@@ -1,15 +1,15 @@
 - label: "info.loc_label"
   desc: "info.loc"
-  img: "/media/profile.jpg"
+  svg: "loc-svg"
 
 - label: "info.tz_label"
   desc: "info.tz"
-  img: "/media/profile.jpg"
+  svg: "time-svg"
 
 - label: "info.lang_label"
   desc: "info.lang"
-  img: "/media/profile.jpg"
+  svg: "lang-svg"
 
 - label: "info.status_label"
   desc: "info.status"
-  img: "/media/profile.jpg"
+  svg: "job-svg"
