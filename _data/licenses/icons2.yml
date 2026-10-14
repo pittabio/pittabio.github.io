@@ -31,6 +31,16 @@
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
   note: "icons.note.gitlab"
 
+- name: "LinkedIn"
+  image: "/media/logo/dev/linkedin.png"
+  author: "LinkedIn"
+  author_url: "https://brand.linkedin.com/en-us"
+  source: "LinkedIn Brand"
+  source_url: "https://brand.linkedin.com/downloads"
+  license: "Trademark of LinkedIn Corp."
+  license_url: "https://brand.linkedin.com/trademarks"
+  note: "icons2.note.linkedin"
+
 
 - name: "Right-Pointing Arrow [akar-icons:arrow-right]"
   svg: "arrow-svg"
