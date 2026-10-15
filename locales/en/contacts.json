@@ -46,6 +46,17 @@
         "social": "Social"
     },
 
+    "fun_fact": {
+        "title": "Fun Fact",
+        "desc": [
+            "The nickname <strong>pittabio</strong> comes from a fusion of",
+            "my surname <strong>Pittaccio</strong> and my name <strong>Fabio</strong>.",
+            "<br>",
+            "With this handler you can find me practically everywhere."
+        ]
+    },
+
+
     "form": {
       "title": "Contact Form",
       "subtitle": "Please, don't use for spam",

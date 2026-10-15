@@ -46,6 +46,17 @@
         "social": "Social"
     },
 
+    "fun_fact": {
+        "title": "Curiosità",
+        "desc": [
+            "Il nickname <strong>pittabio</strong> nasce dalla fusione",
+            "del mio cognome <strong>Pittaccio</strong> e del mio nome <strong>Fabio</strong>.",
+            "<br>",
+            "Con questo handler mi potete trovare praticamente ovunque."
+        ]
+    },
+
+
     "form": {
       "title": "Modulo di contatto",
       "subtitle": "Per favore, non usatelo per lo spam",
