@@ -1,4 +1,4 @@
-{
+﻿{
     "head_title": "Contatti",
 
     "hero": {
@@ -12,17 +12,6 @@
             "Che tu voglia discutere di opportunità lavorative, collaborazioni su Unreal Engine,",
             "o semplicemente farmi una domanda, sono a tua disposizione."
         ]
-    },
-
-
-    "quick_info": "Info rapide",
-    "dev_profiles": "Profili Dev",
-    "social_networks": "Community & Social",
-
-    "fun_fact":
-    {
-      "title": "Curiosità",
-      "description": "Il nickname @pittabio nasce dalla fusione del mio cognome (Pittaccio) e del mio nome (Fabio). Mi trovi così quasi ovunque."
     },
 
     "info": {
@@ -56,32 +45,33 @@
         ]
     },
 
-
     "form": {
-      "title": "Modulo di contatto",
-      "subtitle": "Per favore, non usatelo per lo spam",
+        "title": "Modulo di contatto",
+        "subtitle": "Per favore, non usatelo per lo spam",
 
-      "name": "Nome Completo",
-      "email": "Indirizzo Email - Per essere ricontattati",
-      "subject": "Oggetto del messaggio",
-      "message": "Messaggio",
-      "submit": "Invia Messaggio",
+        "name": "Nome Completo",
+        "email": "Indirizzo Email - Per essere ricontattati",
+        "subject": "Oggetto del messaggio",
+        "message": "Messaggio",
+        "submit": "Invia Messaggio",
 
-      "placeholder": {
-        "name": "es. Mario Rossi",
-        "email": "es. mario_rossi@email.it",
-        "subject": "es. Opportunità di lavoro",
-        "message": "Il messaggio qui..."
-      }
+        "placeholder": {
+            "name": "es. Mario Rossi",
+            "email": "es. mario_rossi@email.it",
+            "subject": "es. Opportunità di lavoro",
+            "message": "Il messaggio qui..."
+        }
     },
 
-  "feedback": {
-    "success_title": "✅ Messaggio inviato con successo!",
-    "success_body": "Grazie per avermi contattato. Ti risponderò il prima possibile.",
-    "error_title": "❌ Errore durante l'invio del messaggio.",
-    "error_detail_prefix": "Dettaglio: ",
-    "error_body": "Riprova tra qualche istante o contattami direttamente via email.",
-    "network_error": "Errore di rete. Controlla la connessione.",
-    "sending": "Invio in corso…"
-  }
+    "feedback": {
+        "sending": "Invio in corso...",
+
+        "success_title": "✅ Messaggio inviato con successo!",
+        "success_body": "Grazie per avermi contattato. Ti risponderò il prima possibile.",
+
+        "error_title": "❌ Errore durante l'invio del messaggio.",
+        "error_detail_prefix": "Dettaglio: ",
+        "error_body": "Riprova tra qualche istante o contattami direttamente via email.",
+        "error_network": "Errore di rete. Controlla la connessione."
+    }
 }
