@@ -1,0 +1,51 @@
+@use "../common/base";
+
+// Form: centered card, same container as the site but narrower
+.form {
+    @include base.container-style(
+        $max-width: 40rem,
+        $margin: 2rem auto 0,
+        $align: stretch,
+        $justify: flex-start,
+        $text: left
+    );
+
+    gap: var(--main-gap);
+    padding: var(--pad-sm);
+    background: var(--bgbt);
+    border: 1px solid var(--border);
+    border-radius: var(--rad-big);
+    box-shadow: 0 .5rem 1.5rem var(--shadow);
+}
+
+// Field: label (text) + input/textarea in a column
+.field {
+    @include base.flexbox-style(
+        $direction: column,
+        $align: stretch,
+        $justify: flex-start,
+        $gap: .4rem
+    );
+
+    input,
+    textarea {
+        @include base.body-text;
+
+        width: 100%;
+        padding: .8rem 1rem;
+        background: var(--bg);   // darker than the card (--bgbt)
+        border: 1px solid var(--border);
+        border-radius: var(--rad-sml);
+        transition: var(--transition);
+
+        &::placeholder { color: var(--text-muted); }
+
+        // The outline already comes from :focus-visible in _base.scss
+        &:focus { border-color: var(--accent); }
+    }
+
+    textarea {
+        min-height: 8rem;
+        resize: vertical;
+    }
+}

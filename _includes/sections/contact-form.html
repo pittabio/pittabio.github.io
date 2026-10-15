@@ -1,0 +1,45 @@
+<!-- CONTACT FORM -->
+<form class="form" novalidate>
+
+    <!-- Web3Forms bot-check honeypot (hidden) -->
+    <label>
+        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
+    </label>
+
+    <!-- Name -->
+    <label class="field">
+        <span class="tag" data-i18n="form.name"></span>
+        <input type="text" name="name" required
+               data-i18n-placeholder="form.placeholder.name">
+    </label>
+
+    <!-- Email -->
+    <label class="field">
+        <span class="tag" data-i18n="form.email"></span>
+        <input type="email" name="email" required
+               data-i18n-placeholder="form.placeholder.email">
+    </label>
+
+    <!-- Subject -->
+    <label class="field">
+        <span class="tag" data-i18n="form.subject"></span>
+        <input type="text" name="subject" required
+               data-i18n-placeholder="form.placeholder.subject">
+    </label>
+
+    <!-- Message -->
+    <label class="field">
+        <span class="tag" data-i18n="form.message"></span>
+        <textarea name="message" rows="6" required
+                  data-i18n-placeholder="form.placeholder.message"></textarea>
+    </label>
+
+    <!-- hCaptcha widget (Web3Forms zero-config) -->
+    <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+
+    <!-- Submit button -->
+    <button type="submit" class="big full">
+        <span data-i18n="form.submit"></span>
+        <span class="arrow-svg" aria-hidden="true"></span>
+    </button>
+</form>
