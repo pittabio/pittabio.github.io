@@ -76,6 +76,9 @@ function initHeader() {
 }
 
 // -- LANGUAGE ENGINE -- //
+window.forcedPageName = undefined;
+window.extraLocales = undefined;
+
 async function changeLanguage(lang) {
     try {
         // 1. Identifies the relative path to the JSON file
@@ -133,10 +136,13 @@ async function changeLanguage(lang) {
             if (val) document.title = val + (titleEl.dataset.suffix || '');
         }
 
-        // 4d. Update image alt text (data-i18n-alt)
-        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-            const val = getNestedTranslation(el.getAttribute('data-i18n-alt'));
-            if (val) el.setAttribute('alt', Array.isArray(val) ? val.join(' ') : val);
+        // 4d. Update attributes (data-i18n-alt, data-i18n-placeholder)
+        ['alt', 'placeholder']
+            .forEach(attr => {
+            document.querySelectorAll(`[data-i18n-${attr}]`).forEach(el => {
+                const val = getNestedTranslation(el.getAttribute(`data-i18n-${attr}`));
+                if (val) el.setAttribute(attr, Array.isArray(val) ? val.join(' ') : val);
+            });
         });
 
         // 4e. Update ARIA labels (Accessibility)
