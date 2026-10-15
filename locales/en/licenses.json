@@ -92,19 +92,43 @@
         ],
 
         "note": {
-            "itch": [
-                "itch.io and the itch.io logo are trademarks of Itch Corp.",
-                "<br>",
-                "Used for identification only, no affiliation or endorsement implied."
-            ],
             "gamejolt": [
                 "Game Jolt and the Game Jolt logo are trademarks of Game Jolt.",
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
             ],
+
             "linkedin": [
                 "LinkedIn and [in]® are registered trademarks or trademarks of LinkedIn Corporation",
                 "and its affiliates in the United States and/or other countries"
+            ],
+            "itch": [
+                "itch.io and the itch.io logo are trademarks of Itch Corp.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+
+            "instagram": [
+                "Meta’s trademarks are owned by Meta and may only be used as provided in these guidelines or with Meta’s permission",
+                "I not use or register, or otherwise claim rights in any Meta trademark,",
+                "including as or as part of any trademark, service mark, company name, trade name, username or domain registration.",
+                "I not use or claim rights in any trademark in a way that is confusingly similar to or dilutive of Meta’s trademarks,",
+                "including as, or as any part of, a trademark. I do not use Meta’s trademarks for anything that would be inconsistent with Meta’s Terms of Service or Community Standards."
+            ],
+            "discord": [
+                "DISCORD, DISCORD NITRO, the “Clyde” Logo and any other trademark owned by Discord and its affiliates (the “Discord Marks”)",
+                "and other brand materials such as logos, trade dress, the Discord look and feel, and other aesthetic features unique to the brand (the “Brand Assets”)",
+                "are the exclusive property of Discord Inc."
+            ],
+            "youtube": [
+                "YouTube and the YouTube icon are trademarks of Google LLC.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "twitch": [
+                "Twitch and the Twitch Glitch logo are trademarks of Twitch Interactive, Inc.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
             ]
         }
     },

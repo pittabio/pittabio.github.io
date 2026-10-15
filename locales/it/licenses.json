@@ -92,19 +92,43 @@
         ],
 
         "note": {
-            "itch": [
-                "itch.io e il logo di itch.io sono marchi di Itch Corp.",
-                "<br>",
-                "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
-            ],
             "gamejolt": [
                 "Game Jolt e il logo di Game Jolt sono marchi di Game Jolt.",
                 "<br>",
                 "Utilizzato esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
             ],
+
             "linkedin": [
                 "LinkedIn e [in]® sono marchi registrati o marchi di LinkedIn Corporation",
                 "e delle sue affiliate negli Stati Uniti e/o in altri paesi"
+            ],
+            "itch": [
+                "itch.io e il logo di itch.io sono marchi di Itch Corp.",
+                "<br>",
+                "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
+            ],
+
+            "instagram": [
+                "I marchi di Meta sono di proprietà di Meta e possono essere utilizzati esclusivamente secondo quanto previsto dalle presenti linee guida o previa autorizzazione da parte di Meta.",
+                "Non utilizzerò, registrerò né rivendicherò in altro modo diritti su alcun marchio di Meta,",
+                "incluso l'utilizzo come marchio, marchio di servizio, denominazione sociale, nome commerciale, nome utente o nome di dominio, o come parte di essi.",
+                "Non utilizzerò né rivendicherò diritti su alcun marchio in modo tale da creare una somiglianza che possa generare confusione o che possa diluire il valore dei marchi di Meta,",
+                "nemmeno come parte di un altro marchio. Non utilizzerò i marchi di Meta per finalità che risultino incompatibili con i Termini di servizio o gli Standard della community di Meta."
+            ],
+            "discord": [
+                "DISCORD, DISCORD NITRO, il logo 'Clyde' e qualsiasi altro marchio di proprietà di Discord e delle sue affiliate (i 'Marchi Discord')",
+                "nonché altri elementi distintivi del brand quali loghi, *trade dress*, l'aspetto e l'atmosfera (*look and feel*) di Discord e altre caratteristiche estetiche peculiari del brand (gli 'Elementi del Brand')",
+                "sono di proprietà esclusiva di Discord Inc."
+            ],
+            "youtube": [
+                "YouTube e l'icona di YouTube sono marchi di Google LLC.",
+                "<br>",
+                "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
+            ],
+            "twitch": [
+                "Twitch e il logo Twitch Glitch sono marchi di Twitch Interactive, Inc.",
+                "<br>",
+                "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
             ]
         }
     },
