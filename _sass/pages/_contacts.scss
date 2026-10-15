@@ -2,12 +2,11 @@
 .profiles {
     // Unordered list
     ul {
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
         justify-items: center;
         align-items: center;
         list-style: none;
-        display: grid;
         gap: .75rem;
     }
 
@@ -39,20 +38,11 @@
             font-style: normal;
             text-decoration: none;
 
-            // Icons stay muted until the link is hovered or focused
-            img {
-                filter: grayscale(1);
-            }
-
             // When the link is hovered
             &:hover,
             &:focus-visible {
                 gap: .75rem;
-
-                // The image return
-                img {
-                    filter: grayscale(0);
-                }
+                letter-spacing: .1rem;
             }
         }
     }
