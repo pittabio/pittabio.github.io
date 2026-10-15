@@ -1,9 +1,9 @@
 - label: "Instagram"
-  svg: "/media/logo/social/instagram.svg"
+  img: "/media/logo/social/instagram.svg"
   url: "https://www.instagram.com/pittabio/"
 
 - label: "Discord"
-  svg: "/media/logo/social/discord.svg"
+  img: "/media/logo/social/discord.svg"
   url: "https://discord.com/users/1169951922522968104"
 
 - label: "YouTube"
@@ -11,5 +11,5 @@
   url: "https://www.youtube.com/@pittabio"
 
 - label: "Twitch"
-  svg: "/media/logo/social/twitch.svg"
+  img: "/media/logo/social/twitch.svg"
   url: "https://www.twitch.tv/pittabio"
