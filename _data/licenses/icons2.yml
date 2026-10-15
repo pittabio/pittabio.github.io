@@ -52,7 +52,7 @@
 
 
 - name: "Instagram"
-  image: "/media/logo/social/instagram.svg"
+  image: "instagram-svg"
   author: "Meta Platforms Technologies"
   author_url: "https://www.meta.com/brand/resources/"
   source: "Instagram brand assets and guidelines"
@@ -62,7 +62,7 @@
   note: "icons2.note.instagram"
 
 - name: "Discord Logo"
-  image: "/media/logo/social/discord.svg"
+  svg: "discord-svg"
   author: "Discord Inc."
   author_url: "https://discord.com/"
   source: "Discord Brand Assets"
@@ -82,7 +82,7 @@
   note: "icons2.note.youtube"
 
 - name: "Glitch (Twitch icon)"
-  image: "/media/logo/social/twitch.svg"
+  svg: "twitch-svg"
   author: "Twitch Interactive, Inc."
   author_url: "https://www.twitch.tv/"
   source: "Twitch Brand Assets"
