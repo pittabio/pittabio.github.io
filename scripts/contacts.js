@@ -67,12 +67,7 @@
                 submitBtn.disabled = true;
                 submitBtn.innerHTML =
                     `<span>${t.sending}</span>` +
-                    `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" opacity="0.25"/>
-                        <path d="M12 2a10 10 0 0 1 10 10" stroke-dasharray="31.4" stroke-dashoffset="0">
-                            <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/>
-                        </path>
-                    </svg>`;
+                    `<span class="loading-svg"></span>`;
             }
 
             try {
