@@ -119,6 +119,15 @@
   license: "MIT"
   license_url: "https://github.com/artcoholic/akar-icons/blob/master/LICENSE"
 
+- name: "bubble-loading"
+  svg: "loading-svg"
+  author: "SUSE UX/UI team"
+  author_url: "https://gitlab.com/SUSE-UIUX/eos-icons"
+  source: "EOS Icons (via Iconify)"
+  source_url: "https://icon-sets.iconify.design/eos-icons/bubble-loading/"
+  license: "MIT"
+  license_url: "https://gitlab.com/SUSE-UIUX/eos-icons/-/blob/master/LICENSE"
+
 
 - name: "location"
   svg: "loc-svg"
