@@ -1,11 +1,15 @@
-{
+﻿{
     "head_title": "Supporta il mio lavoro",
 
-  "support_page": {
-    "tag": "Supporto & Community",
-    "title": "Supporta il mio <em>lavoro!</em>",
-    "subtitle": "Se apprezzi quello che faccio e vuoi aiutarmi a continuare, ecco come puoi farlo. Ogni aiuto è davvero apprezzato 💖",
-
+    "hero": {
+        "tag": "Supporto & Community",
+        "title": "Supporta il mio <b class='accent'>lavoro!</b>",
+        "desc": [
+            "Se apprezzi quello che faccio e vuoi aiutarmi a <b>continuare</b>, ecco come puoi farlo.",
+            "<br>",
+            "Ogni <b>aiuto</b> è davvero apprezzato 💖"
+        ]
+    },
 
     "direct": {
       "title": "☕ Offrimi un caffè",
@@ -55,4 +59,3 @@
       "button": "Contattami"
     }
   }
-}

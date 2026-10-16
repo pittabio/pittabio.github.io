@@ -1,11 +1,15 @@
-{
+﻿{
     "head_title": "Support My Work · Fabio Pittaccio",
 
-  "support_page": {
-    "tag": "Support & Community",
-    "title": "Support my <em>work!</em>",
-    "subtitle": "If you appreciate what I do and want to help me continue, here's how you can do it. Any help is truly appreciated 💖",
-
+    "hero": {
+        "tag": "Support & Community",
+        "title": "Support my <b class='accent'>work!</b>",
+        "desc": [
+            "If you appreciate what I do and want to help me <b>continue</b>, here's how you can do it.",
+            "<br>",
+            "Any <b>help</b> is truly appreciated 💖"
+        ]
+    },
 
     "direct": {
       "title": "☕ Offer me a coffee",
@@ -55,4 +59,3 @@
       "button": "Get in touch"
     }
   }
-}
