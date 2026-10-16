@@ -42,7 +42,12 @@
             &:hover,
             &:focus-visible {
                 gap: .75rem;
-                letter-spacing: .1rem;
+
+                // Security: letter spacing only on text [not imgs or svg]
+                b,
+                span[data-i18n] {
+                    letter-spacing: .1rem;
+                }
             }
         }
     }
