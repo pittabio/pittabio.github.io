@@ -2,9 +2,7 @@
 <form class="form" novalidate>
 
     <!-- Web3Forms bot-check honeypot (hidden) -->
-    <label>
-        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
-    </label>
+    <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
 
     <!-- Name -->
     <label class="field">
@@ -43,3 +41,7 @@
         <span class="arrow-svg" aria-hidden="true"></span>
     </button>
 </form>
+
+<!-- ## Form Scripts ## -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script src="{{ '/scripts/contacts.js' | relative_url }}"></script>

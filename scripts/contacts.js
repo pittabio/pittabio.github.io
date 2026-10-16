@@ -6,49 +6,41 @@
 (function () {
     "use strict";
 
-    /* ── CONFIGURATION ── */
+    /* CONFIGURATION */
     const WEB3FORMS_ACCESS_KEY = "a307525d-a65d-45ee-9b44-ce6fa6279698";
     const WEB3FORMS_ENDPOINT   = "https://api.web3forms.com/submit";
 
-    /* ── I18N ── */
-    // Will hold the loaded strings from contacts.json
-    let t = {};
+    /* I18N */
+    // Fallback used only if contacts.json is missing or incomplete
+    const DEFAULT_STRINGS = {
+        sending:             "Sending...",
+        success_title:       "Message sent successfully!",
+        success_body:        "Thank you for reaching out. I'll get back to you as soon as possible.",
 
-    /**
-     * Loads `/locales/{lang}/contacts.json` and extracts the 'feedback' object.
-     */
-    async function fetchFeedbackStrings() {
-        const lang = localStorage.getItem('preferredLang') || 'en';
+        error_title:         "Error sending the message.",
+        error_detail_prefix: "Detail: ",
+        error_body:          "Please try again in a moment or contact me directly via email.",
+        error_network:       "Network error. Please check your connection."
+    };
 
-        // Costruzione del path corretta per GitHub Pages (come in main.js)
-        const isGitHubPages = window.location.hostname.includes('github.io');
-        const repoName = isGitHubPages ? '/' + window.location.pathname.split('/')[1] : '';
+    // Feedback strings are the ones currently loaded by main.js (always in the active language)
+    const getT = () => {
+        const loaded = (typeof currentTranslations !== "undefined" && currentTranslations.feedback) || {};
+        return { ...DEFAULT_STRINGS, ...loaded };
+    };
 
-        try {
-            const res = await fetch(`${repoName}/locales/${lang}/contacts.json`);
-            if (res.ok) {
-                const json = await res.json();
-                t = json.feedback || {};
-            } else {
-                console.error(`[contacts.js] Could not load translations (HTTP ${res.status})`);
-            }
-        } catch (e) {
-            console.error("[contacts.js] Error fetching contacts.json", e);
-        }
-    }
+    /* HELPERS */
 
-    /* ── HELPERS ── */
-
+    /** Reset the captcha **/
     function resetCaptcha() {
         if (typeof hcaptcha !== "undefined" && hcaptcha !== null) {
             try { hcaptcha.reset(); } catch (_) {}
         }
     }
 
-    /**
-     * Shows a native alert with a success or error message.
-     */
+    /** Shows a native alert with a success or error message. **/
     function showFeedback(success, detail) {
+        const t = getT();
         if (success) {
             window.alert(`${t.success_title}\n\n${t.success_body}`);
         } else {
@@ -57,27 +49,24 @@
         }
     }
 
-    /* ── INITIALIZATION ── */
+    /* INITIALIZATION */
 
-    document.addEventListener("DOMContentLoaded", async function () {
-        const form = document.querySelector(".contact-form-element");
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("#contact-form form");
         if (!form) return;
 
-        // Load translations from contacts.json before interaction
-        await fetchFeedbackStrings();
-
-        /* ── SUBMIT HANDLER ── */
+        /** SUBMIT HANDLER **/
         form.addEventListener("submit", async function (event) {
             event.preventDefault();
+            const t = getT();
 
-            const submitBtn = form.querySelector(".contact-submit-btn");
+            const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnContent = submitBtn ? submitBtn.innerHTML : null;
 
             if (submitBtn) {
                 submitBtn.disabled = true;
-                // 't.sending' comes from contacts.json
                 submitBtn.innerHTML =
-                    `<span>${t.sending || 'Sending...'}</span>` +
+                    `<span>${t.sending}</span>` +
                     `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10" opacity="0.25"/>
                         <path d="M12 2a10 10 0 0 1 10 10" stroke-dasharray="31.4" stroke-dashoffset="0">
@@ -110,7 +99,7 @@
 
             } catch (networkError) {
                 resetCaptcha();
-                showFeedback(false, t.network_error);
+                showFeedback(false, t.error_network);
             } finally {
                 if (submitBtn && originalBtnContent) {
                     submitBtn.disabled = false;
