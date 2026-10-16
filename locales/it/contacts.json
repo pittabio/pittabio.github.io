@@ -17,17 +17,17 @@
     "info": {
         "title": "Info rapide",
 
-        "location_label": "Posizione attuale:",
-        "location": "Roma, Italia",
+        "loc_label": "Posizione attuale:",
+        "loc": "Roma, Italia",
 
-        "timezone_label": "Fuso Orario:",
-        "timezone": "CET (Europa/Roma)",
+        "tz_label": "Fuso Orario:",
+        "tz": "CET (Europa/Roma)",
 
         "lang_label": "Lingue Parlate:",
         "lang": "Italiano, Inglese",
 
         "status_label": "Stato:",
-        "status_value": "Disponibile per nuove opportunità"
+        "status": "Disponibile per nuove opportunità"
     },
 
     "profiles": {
