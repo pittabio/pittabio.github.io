@@ -1,9 +1,11 @@
 # Ruins' Rhapsody
 - name: "$games.ruins.name"
-  image: "/media/games/ruins-rhapsody/banner.jpg"
   desc: "$games.ruins.desc"
-  page: "projects/ruins-rhapsody.html"
+  page: &page_rr "projects/ruins-rhapsody.html"
   feat: true
+
+  img: "/media/games/ruins-rhapsody/banner.jpg"
+  img_alt: "The `Ruins' Rhapsody` game banner"
 
   link1: "https://pittabio.itch.io/ruins-rhapsody-demo"
   link1_name: "itch.io"
@@ -13,68 +15,83 @@
   link2_name: "GameJolt"
   link2_icon: "gamejolt-svg"
 
+  link3: *page_rr
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Goblin Jr. Adventure
 - name: "$games.goblin.name"
-  image: "/media/games/goblin-jr/banner.png"
   desc: "$games.goblin.desc"
-  page: "projects/goblin-jr.html"
+  page: &page_gja "projects/goblin-jr.html"
   feat: true
+
+  img: "/media/games/goblin-jr/banner.png"
+  img_alt: "The `Goblin Junior Adventure` game banner"
 
   link1: "https://pittabio.itch.io/goblin-jr-adventure"
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
+  link3: *page_gja
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Zombie Siege Chronicles
 - name: "$games.zombie.name"
-  image: "/media/games/zombie-siege/banner.png"
   desc: "$games.zombie.desc"
-  page: "projects/zombie-siege.html"
+  page: &page_zsc "projects/zombie-siege.html"
   feat: true
+
+  img: "/media/games/zombie-siege/banner.png"
+  img_alt: "The `Zombie Siege Chronicles` game banner"
 
   link1: "https://fabriziop.itch.io/zombie-siege-chronicles"
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
+  link3: *page_zsc
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # Flying Bird
 - name: "$games.flying.name"
-  image: "/media/games/flying-bird/banner.png"
   desc: "$games.flying.desc"
-  page: "projects/flying-bird.html"
+  page: &page_fb "projects/flying-bird.html"
+
+  img: "/media/games/flying-bird/banner.png"
+  img_alt: "The `Flying Bird` game banner"
 
   link1: "https://pittabio.itch.io/flying-bird"
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
+  link3: *page_fb
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # WizardScape
 - name: "$games.wizard.name"
-  image: "/media/games/wizard-scape/banner.png"
   desc: "$games.wizard.desc"
-  page: "projects/wizardscape.html"
+  page: &page_ws "projects/wizardscape.html"
+
+  img: "/media/games/wizard-scape/banner.png"
+  img_alt: "The `WizardScape: The Magic Chase` game banner"
 
   link1: "https://pittabio.itch.io/wizardscape"
   link1_name: "itch.io"
   link1_icon: "itch-svg"
 
+  link3: *page_ws
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
 # More...
 - name: "$games.more.name"
-  image: "/media/fox/fox_banner.png"
   desc: "$games.more.desc"
-  page: "about.html"
+  page: &page_more "about.html"
+
+  img: "/media/fox/fox_banner.png"
+  img_alt: "$common.card.fox"
 
   link1: "https://github.com/pittabio"
   link1_name: "GitHub"
@@ -84,5 +101,6 @@
   link2_name: "GitLab"
   link2_icon: "gitlab-w-svg"
 
+  link3: *page_more
   link3_name: "$common.card.about"
   link3_icon: "arrow-svg"

@@ -34,7 +34,8 @@
 
         "card": {
             "details": "Details",
-            "about": "About Me"
+            "about": "About Me",
+            "fox": "The logo of Fabio Pittaccio"
         }
     }
 }
