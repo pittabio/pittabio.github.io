@@ -76,9 +76,6 @@ function initHeader() {
 }
 
 // -- LANGUAGE ENGINE -- //
-window.forcedPageName = undefined;
-window.extraLocales = undefined;
-
 async function changeLanguage(lang) {
     try {
         // 1. Identifies the relative path to the JSON file
