@@ -1,0 +1,23 @@
+# GitHub Sponsor
+- name: "GitHub Sponsors"
+  desc: "direct.github.desc"
+  page: &github "https://github.com/sponsors/pittabio"
+  img: "/media/logo/skills/github.svg"
+  link2: *github
+  link2_name: "direct.github.button"
+
+# KoFi
+- name: "Ko-Fi"
+  desc: "direct.kofi.desc"
+  page: &kofi "https://ko-fi.com/pittabio"
+  img: "/media/logo/support/kofi.png"
+  link2: *kofi
+  link2_name: "direct.kofi.button"
+
+# PayPal
+- name: "PayPal"
+  desc: "direct.paypal.desc"
+  page: &paypal "https://www.paypal.com/paypalme/FabioPittaccio"
+  img: "/media/logo/support/paypal.png"
+  link2: *paypal
+  link2_name: "direct.paypal.button"

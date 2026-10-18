@@ -12,23 +12,23 @@
     },
 
     "direct": {
-      "title": "☕ Offer me a coffee",
-      "subtitle": "Direct support for my independent game development"
-    },
+        "title": "☕ Offer me a coffee",
+        "desc": "Direct support for my independent game development",
 
-    "kofi": {
-      "desc": "Make a one-time donation or become a member to support my projects. It's commission-free and completely flexible.",
-      "button": "Buy me a coffee"
-    },
+        "github": {
+            "desc": "Sponsor me on GitHub. It's a great way to show your appreciation and support my work.",
+            "button": "Sponsor me"
+        },
 
-    "paypal": {
-      "desc": "Donate directly through PayPal. You can use credit or debit cards or your PayPal account.",
-      "button": "Donate via PayPal"
-    },
+        "kofi": {
+            "desc": "Make a one-time donation or become a member to support my projects. It's commission-free and completely flexible.",
+            "button": "Buy me a coffee"
+        },
 
-    "github": {
-      "desc": "Sponsor me on GitHub. It's a great way to show your appreciation and support my work.",
-      "button": "Sponsor me"
+        "paypal": {
+            "desc": "Donate directly through PayPal. You can use credit or debit cards or your PayPal account.",
+            "button": "Donate via PayPal"
+        }
     },
 
 

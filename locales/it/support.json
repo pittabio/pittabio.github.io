@@ -12,23 +12,23 @@
     },
 
     "direct": {
-      "title": "☕ Offrimi un caffè",
-      "subtitle": "Supporto diretto per il mio sviluppo di giochi indipendenti"
-    },
+        "title": "☕ Offrimi un caffè",
+        "desc": "Supporto diretto per il mio sviluppo di giochi indipendenti",
 
-    "kofi": {
-      "desc": "Fai una donazione una tantum o diventa un membro per supportare i miei progetti. È senza commissioni e completamente flessibile.",
-      "button": "Offrimi un caffè"
-    },
+        "github": {
+            "desc": "Sii un mio sostenitore su GitHub. È un ottimo modo per dimostrare il tuo apprezzamento e supportare il mio lavoro.",
+            "button": "Sostienimi"
+        },
 
-    "paypal": {
-      "desc": "Dona direttamente tramite PayPal. Puoi usare carte di credito, di debito o il tuo conto PayPal.",
-      "button": "Dona con PayPal"
-    },
+        "kofi": {
+            "desc": "Fai una donazione una tantum o diventa un membro per supportare i miei progetti. È senza commissioni e completamente flessibile.",
+            "button": "Offrimi un caffè"
+        },
 
-    "github": {
-      "desc": "Sii un mio sostenitore su GitHub. È un ottimo modo per dimostrare il tuo apprezzamento e supportare il mio lavoro.",
-      "button": "Sostienimi"
+        "paypal": {
+            "desc": "Dona direttamente tramite PayPal. Puoi usare carte di credito, di debito o il tuo conto PayPal.",
+            "button": "Dona con PayPal"
+        }
     },
 
 
