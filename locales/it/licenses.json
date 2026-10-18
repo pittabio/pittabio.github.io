@@ -138,7 +138,13 @@
             "paypal": [
                 "PayPal, il logo PayPal e tutti i loghi correlati sono marchi o marchi registrati di PayPal o dei suoi licenziatari.",
                 "<br>",
-                "Utilizzati senza modifiche, esclusivamente per creare un collegamento ai servizi PayPal e a fini identificativi. Non viene sottintesa alcuna affiliazione, sponsorizzazione o approvazione."            ]
+                "Utilizzati senza modifiche, esclusivamente per creare un collegamento ai servizi PayPal e a fini identificativi. Non viene sottintesa alcuna affiliazione, sponsorizzazione o approvazione."
+            ],
+            "ms-reward": [
+                "Microsoft e Microsoft Rewards sono marchi del gruppo di società Microsoft.",
+                "<br>",
+                "Utilizzati esclusivamente a fini identificativi; non implicano alcuna affiliazione o approvazione."
+            ]
         }
     },
 

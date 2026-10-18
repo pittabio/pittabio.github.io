@@ -111,3 +111,13 @@
   license: "Trademark of PayPal"
   license_url: "https://www.paypal.com/it/legalhub/paypal/useragreement-full#other"
   note: "social.note.paypal"
+
+- name: "Microsoft Rewards Logo"
+  image: "/media/logo/social/ms-rewards.png"
+  author: "Microsoft Corporation"
+  author_url: "https://www.microsoft.com/"
+  source: "Microsoft Rewards website (not an official brand kit)"
+  source_url: "https://rewards.bing.com/about"
+  license: "Trademark of the Microsoft group of companies"
+  license_url: "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+  note: "icons2.note.msrewards"
