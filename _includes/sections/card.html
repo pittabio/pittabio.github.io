@@ -29,9 +29,9 @@ Optional:
 <article class="card">
     <!-- Title link -->
     {% if o.page %}
-        <a class="mini-title" href="{{ o.page }}" target="_blank" data-i18n="{{ o.name }}"></a>
+        <a class="mini-title" href="{{ o.page }}" target="_blank" data-i18n="{{ o.name }}">{{ o.name }}</a>
     {% else %}
-        <span class="mini-title" data-i18n="{{ o.name }}"></span>
+        <span class="mini-title" data-i18n="{{ o.name }}">{{ o.name }}</span>
     {% endif %}
 
     <!-- Image -->
