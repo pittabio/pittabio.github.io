@@ -50,6 +50,7 @@
   license_url: "https://brand.linkedin.com/trademarks"
   note: "social.note.linkedin"
 
+
 - name: "Instagram"
   image: "/media/logo/social/instagram.svg"
   author: "Meta Platforms Technologies"
@@ -90,6 +91,7 @@
   license_url: "https://legal.twitch.com/legal/terms-of-service/"
   note: "social.note.twitch"
 
+
 - name: "Ko-fi logo"
   image: "/media/logo/support/kofi.svg"
   author: "Ko-fi Labs"
@@ -99,3 +101,13 @@
   license: "Trademark of Ko-fi Labs Limited"
   license_url: "https://help.ko-fi.com/hc/en-us/articles/10598202486429-Copyright-Guidelines"
   note: "social.note.kofi"
+
+- name: "PayPal vertical full color"
+  image: "/media/logo/social/paypal.png"
+  author: "PayPal"
+  author_url: "https://newsroom.paypal-corp.com/"
+  source: "PayPal Newsroom - Media Resources"
+  source_url: "https://newsroom.paypal-corp.com/media-resources"
+  license: "Trademark of PayPal"
+  license_url: "https://www.paypal.com/it/legalhub/paypal/useragreement-full#other"
+  note: "social.note.paypal"
