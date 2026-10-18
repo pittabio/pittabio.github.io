@@ -27,9 +27,11 @@ description: "Support the independent game development and UE5 tools created by 
 
     <!-- Cards Grids -->
     <article class="grid-column">
-        {% assign list = data.direct %}
-        {% for p in list %}
-            {% include sections/card.html object=p %}
+        {% for d in data.direct %}
+            {% include sections/card.html object=d %}
+        {% endfor %}
+    </article>
+</section>
         {% endfor %}
     </article>
 </section>
