@@ -10,7 +10,7 @@
 - name: "Ko-Fi"
   desc: "direct.kofi.desc"
   page: &kofi "https://ko-fi.com/pittabio"
-  img: "/media/logo/support/kofi.png"
+  img: "/media/logo/support/kofi.svg"
   link2: *kofi
   link2_name: "direct.kofi.button"
 
