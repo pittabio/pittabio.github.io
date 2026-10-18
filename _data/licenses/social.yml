@@ -17,7 +17,7 @@
   license_url: "https://creativecommons.org/publicdomain/zero/1.0/"
   trademark: "Itch Corp."
   trademark_url: "https://itch.io/press-kit"
-  note: "icons2.note.itch"
+  note: "social.note.itch"
 
 - name: "GameJolt Bolt [simple-icons:gamejolt]"
   svg: "gamejolt-svg"
@@ -29,7 +29,7 @@
   license_url: "https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md"
   trademark: "GameJolt"
   trademark_url: "https://gamejolt.com/"
-  note: "icons2.note.gamejolt"
+  note: "social.note.gamejolt"
 
 - name: "GitLab Logomark (white)"
   svg: "gitlab-w-svg"
@@ -38,7 +38,7 @@
   source_url: "https://about.gitlab.com/press/press-kit/"
   license: "Trademark of GitLab Inc."
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
-  note: "icons.note.gitlab"
+  note: "tools.note.gitlab"
 
 - name: "LinkedIn"
   image: "/media/logo/dev/linkedin.png"
@@ -48,8 +48,7 @@
   source_url: "https://brand.linkedin.com/downloads"
   license: "Trademark of LinkedIn Corp."
   license_url: "https://brand.linkedin.com/trademarks"
-  note: "icons2.note.linkedin"
-
+  note: "social.note.linkedin"
 
 - name: "Instagram"
   image: "/media/logo/social/instagram.svg"
@@ -59,7 +58,7 @@
   source_url: "https://www.meta.com/brand/resources/instagram/instagram-brand/"
   license: "Meta Platforms Trademarks"
   license_url: "https://www.meta.com/brand/resources/meta/our-trademarks/"
-  note: "icons2.note.instagram"
+  note: "social.note.instagram"
 
 - name: "Discord Logo"
   image: "/media/logo/social/discord.svg"
@@ -69,7 +68,7 @@
   source_url: "https://discord.com/branding"
   license: "Property of Discord Inc"
   license_url: "https://my.corebook.io/1zObrQ89Q4wHhgFCfYIUhMUvmNf4XjxO/01-overview/legal-brand-guidelines"
-  note: "icons2.note.discord"
+  note: "social.note.discord"
 
 - name: "YouTube icon"
   image: "/media/logo/social/youtube.png"
@@ -79,7 +78,7 @@
   source_url: "https://brand.youtube/youtube-icon/"
   license: "Trademark of Google LLC"
   license_url: "https://brand.youtube/"
-  note: "icons2.note.youtube"
+  note: "social.note.youtube"
 
 - name: "Glitch (Twitch icon)"
   image: "/media/logo/social/twitch.svg"
@@ -89,4 +88,14 @@
   source_url: "https://brand.twitch.com/"
   license: "Trademark of Twitch Interactive, Inc."
   license_url: "https://legal.twitch.com/legal/terms-of-service/"
-  note: "icons2.note.twitch"
+  note: "social.note.twitch"
+
+- name: "Ko-fi logo"
+  image: "/media/logo/support/kofi.svg"
+  author: "Ko-fi Labs"
+  author_url: "https://ko-fi.com/"
+  source: "Ko-fi Brand Assets (Creator kit)"
+  source_url: "https://more.ko-fi.com/brand-assets"
+  license: "Trademark of Ko-fi Labs Limited"
+  license_url: "https://help.ko-fi.com/hc/en-us/articles/10598202486429-Copyright-Guidelines"
+  note: "social.note.kofi"

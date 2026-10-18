@@ -92,19 +92,20 @@
         ],
 
         "note": {
+            "itch": [
+                "itch.io and the itch.io logo are trademarks of Itch Corp.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
             "gamejolt": [
                 "Game Jolt and the Game Jolt logo are trademarks of Game Jolt.",
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
             ],
+
             "linkedin": [
                 "LinkedIn and [in]® are registered trademarks or trademarks of LinkedIn Corporation",
                 "and its affiliates in the United States and/or other countries"
-            ],
-            "itch": [
-                "itch.io and the itch.io logo are trademarks of Itch Corp.",
-                "<br>",
-                "Used for identification only, no affiliation or endorsement implied."
             ],
             "instagram": [
                 "Instagram and Meta trademarks are the property of Meta Platforms, Inc.",
@@ -126,6 +127,12 @@
                 "Twitch and the Twitch Glitch logo are trademarks of Twitch Interactive, Inc.",
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "kofi": [
+                "Ko-fi and the Ko-fi logo are trademarks of Ko-fi Labs Limited.",
+                "<br>",
+                "Used in accordance with Ko-fi's Brand Assets guidelines for identification and linking purposes only.",
+                "No affiliation or endorsement is implied."
             ]
         }
     },
