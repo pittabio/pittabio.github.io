@@ -103,7 +103,7 @@
   note: "social.note.kofi"
 
 - name: "PayPal vertical full color"
-  image: "/media/logo/social/paypal.png"
+  image: "/media/logo/support/paypal.png"
   author: "PayPal"
   author_url: "https://newsroom.paypal-corp.com/"
   source: "PayPal Newsroom - Media Resources"
@@ -113,7 +113,7 @@
   note: "social.note.paypal"
 
 - name: "Microsoft Rewards Logo"
-  image: "/media/logo/social/ms-rewards.png"
+  image: "/media/logo/support/ms-rewards.png"
   author: "Microsoft Corporation"
   author_url: "https://www.microsoft.com/"
   source: "Microsoft Rewards website (not an official brand kit)"
