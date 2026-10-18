@@ -11,20 +11,20 @@
     },
 
     "site": {
-        "title": "Il sito",
+        "title": "Sito",
         "desc": [
             "© 2026 Fabio Pittaccio",
             "<br>",
             "<b>Contenuti:</b> Salvo diversa indicazione, tutti i contenuti originali (testi, immagini e documentazione dei progetti) sono rilasciati con licenza",
-            "<a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND 4.0</a>.",
+            "<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a>.",
             "<br>",
             "<b>Codice sorgente:</b> Il codice sorgente di questo sito è protetto da copyright. Viene fornito esclusivamente a scopo di consultazione e studio.",
             "Non è consentito copiarlo, ridistribuirlo, utilizzarlo a fini commerciali o crearne opere derivate senza esplicita autorizzazione."
         ]
     },
 
-    "icons": {
-        "title": "Strumenti e tecnologie",
+    "tools": {
+        "title": "Strumenti",
         "desc": [
             "Ove possibile, le icone sono tratte da risorse ufficiali fornite dalle rispettive aziende (come Brand Asset o cartelle stampa) e la fonte è indicata.",
             "Qualora non siano disponibili risorse ufficiali, viene indicata una fonte non ufficiale (ad es. <a href='https://devicon.dev/'>Devicon</a>, licenza MIT).",
@@ -58,13 +58,13 @@
                 "Questo utilizzo non implica alcuna affiliazione, approvazione, sponsorizzazione o autorizzazione da parte di GitLab Inc. L'uso del logo non sottintende alcuna partnership ufficiale."
             ],
             "gitkraken": [
-                "Il logo GitKraken è un marchio di GitKraken (formerly Axosoft) utilizzato a fini identificativi e promozionali in conformità con le linee guida del brand GitKraken.",
+                "Il logo GitKraken è un marchio di GitKraken (precedentemente Axosoft) utilizzato a fini identificativi e promozionali in conformità con le linee guida del brand GitKraken.",
                 "<br>",
                 "Non si intende alcuna affiliazione o approvazione da parte di GitKraken."
             ],
             "android": [
                 "Android è un marchio di Google LLC.",
-                "Il robot Android è riprodotto o modificato da un'opera creata e condivisa da Google e utilizzata in base ai termini descritti nella licenza di attribuzione Creative Commons 3.0."
+                "Il robot Android è riprodotto o modificato a partire da un'opera creata e condivisa da Google, ed è utilizzato in base ai termini descritti nella licenza di attribuzione Creative Commons 3.0."
             ],
             "jetbrains": {
                 "rider": "Copyright © 2026 JetBrains s.r.o. Rider e il logo Rider sono marchi di JetBrains s.r.o.",
@@ -77,47 +77,44 @@
             "photoshop": [
                 "Adobe e Photoshop sono marchi registrati o marchi di Adobe negli Stati Uniti e/o in altri paesi.",
                 "<br>",
-                "Utilizzata esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
+                "Utilizzati esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
             ]
         }
     },
 
-    "icons2": {
-        "title": "Interfaccia e icone social",
+    "social": {
+        "title": "Social",
         "desc": [
-            "Le icone utilizzate all'interno di pulsanti ed elementi dell'interfaccia provengono, ove possibile, dai siti web ufficiali delle rispettive aziende.",
-            "Quando non sono disponibili file SVG ufficiali, la maggior parte di esse proviene da <a href='https://iconify.design/'>Iconify</a>, che raccoglie icone da numerosi set open source.",
+            "Le icone e i loghi che rappresentano social network e piattaforme online provengono, ove disponibili, dalle risorse grafiche e dai media kit ufficiali di ciascun servizio.",
             "<br>",
-            "Tutti i diritti rimangono ai rispettivi proprietari e autori. La fonte, l'autore e la licenza di ciascuna icona sono indicati di seguito."
+            "Tutti i marchi registrati, i loghi e i nomi commerciali appartengono ai rispettivi proprietari.",
+            "Sono utilizzati qui esclusivamente a scopo identificativo e per collegare i profili esterni, senza alcuna affiliazione, sponsorizzazione o approvazione implicita."
         ],
 
         "note": {
             "gamejolt": [
                 "Game Jolt e il logo di Game Jolt sono marchi di Game Jolt.",
                 "<br>",
-                "Utilizzato esclusivamente a scopo identificativo; non implica alcuna affiliazione o approvazione."
+                "Utilizzati esclusivamente a scopo identificativo; non si intende suggerire alcuna affiliazione o approvazione."
             ],
-
             "linkedin": [
                 "LinkedIn e [in]® sono marchi registrati o marchi di LinkedIn Corporation",
-                "e delle sue affiliate negli Stati Uniti e/o in altri paesi"
+                "e delle sue affiliate negli Stati Uniti e/o in altri paesi."
             ],
             "itch": [
                 "itch.io e il logo di itch.io sono marchi di Itch Corp.",
                 "<br>",
                 "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
             ],
-
             "instagram": [
-                "I marchi di Meta sono di proprietà di Meta e possono essere utilizzati esclusivamente secondo quanto previsto dalle presenti linee guida o previa autorizzazione da parte di Meta.",
-                "Non utilizzerò, registrerò né rivendicherò in altro modo diritti su alcun marchio di Meta,",
-                "incluso l'utilizzo come marchio, marchio di servizio, denominazione sociale, nome commerciale, nome utente o nome di dominio, o come parte di essi.",
-                "Non utilizzerò né rivendicherò diritti su alcun marchio in modo tale da creare una somiglianza che possa generare confusione o che possa diluire il valore dei marchi di Meta,",
-                "nemmeno come parte di un altro marchio. Non utilizzerò i marchi di Meta per finalità che risultino incompatibili con i Termini di servizio o gli Standard della community di Meta."
+                "I marchi Instagram e Meta sono di proprietà di Meta Platforms, Inc.",
+                "<br>",
+                "Utilizzati in conformità con le linee guida sul marchio (Brand Guidelines) di Meta, esclusivamente a fini di identificazione e collegamento.",
+                "Non viene sottintesa alcuna affiliazione o approvazione."
             ],
             "discord": [
                 "DISCORD, DISCORD NITRO, il logo 'Clyde' e qualsiasi altro marchio di proprietà di Discord e delle sue affiliate (i 'Marchi Discord')",
-                "nonché altri elementi distintivi del brand quali loghi, *trade dress*, l'aspetto e l'atmosfera (*look and feel*) di Discord e altre caratteristiche estetiche peculiari del brand (gli 'Elementi del Brand')",
+                "nonché altri elementi distintivi del brand quali loghi, <i>trade dress</i>, l'aspetto e l'atmosfera (<i>look and feel</i>) di Discord e altre caratteristiche estetiche peculiari del brand (gli 'Elementi del Brand')",
                 "sono di proprietà esclusiva di Discord Inc."
             ],
             "youtube": [
@@ -133,13 +130,23 @@
         }
     },
 
+    "ui": {
+        "title": "Interfaccia",
+        "desc": [
+            "Le icone utilizzate all'interno di pulsanti ed elementi dell'interfaccia provengono, ove possibile, dai siti web ufficiali delle rispettive aziende.",
+            "Quando non sono disponibili file SVG ufficiali, la maggior parte di esse proviene da <a href='https://iconify.design/'>Iconify</a>, che raccoglie icone da numerosi set open source.",
+            "<br>",
+            "Tutti i diritti rimangono ai rispettivi proprietari e autori. La fonte, l'autore e la licenza di ciascuna icona sono indicati di seguito."
+        ]
+    },
+
     "images": {
-        "title": "Le immagini",
+        "title": "Immagini",
         "desc": [
             "Tutte le immagini presenti su questo sito sono utilizzate nel rispetto delle rispettive licenze o sono creazioni originali.",
             "<br>",
-            "Per le risorse di terze parti, mi impegno a fornire una chiara attribuzione, come richiesto dalla licenza della fonte (ad es. Vecteezy, Unsplash).",
-            "Se ritieni che un contenuto non sia attribuito correttamente, non esitare a contattarmi."
+            "Per le risorse di terze parti, viene fornita una chiara attribuzione in conformità con quanto richiesto dalla licenza di origine (ad es. Vecteezy, Unsplash).",
+            "Qualora un contenuto risultasse attribuito in modo non corretto o violasse il copyright, è possibile contattarmi per richiederne la rettifica o la rimozione."
         ]
     }
 }

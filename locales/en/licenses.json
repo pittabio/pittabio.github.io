@@ -11,7 +11,7 @@
     },
 
     "site": {
-        "title": "The site",
+        "title": "Site",
         "desc": [
             "© 2026 Fabio Pittaccio",
             "<br>",
@@ -23,8 +23,8 @@
         ]
     },
 
-    "icons": {
-        "title": "Tools & technologies",
+    "tools": {
+        "title": "Tools",
         "desc": [
             "Where possible, icons are taken from official assets provided by the respective companies (such as Brand Assets or Press Kits), and the source is specified.",
             "Where official assets are not available, an unofficial source is specified instead (e.g. <a href='https://devicon.dev/'>Devicon</a>, MIT License).",
@@ -82,13 +82,13 @@
         }
     },
 
-    "icons2": {
-        "title": "Interface & social icons",
+    "social": {
+        "title": "Social",
         "desc": [
-            "The icons used inside buttons and interface elements are taken from the official websites of the respective companies whenever possible.",
-            "When official SVG files are not available, most of them come from <a href='https://iconify.design/'>Iconify</a>, which collects icons from many open-source sets.",
+            "The icons and logos representing social networks and online platforms are taken from the official brand assets and media kits of each service whenever available.",
             "<br>",
-            "All rights remain with the respective owners and authors. The source, author and license of each icon are listed below."
+            "All trademarks, logos, and brand names are the property of their respective owners.",
+            "They are used here exclusively for identification purposes and to link to external profiles, with no endorsement, sponsorship, or affiliation implied."
         ],
 
         "note": {
@@ -97,7 +97,6 @@
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
             ],
-
             "linkedin": [
                 "LinkedIn and [in]® are registered trademarks or trademarks of LinkedIn Corporation",
                 "and its affiliates in the United States and/or other countries"
@@ -107,13 +106,11 @@
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
             ],
-
             "instagram": [
-                "Meta’s trademarks are owned by Meta and may only be used as provided in these guidelines or with Meta’s permission",
-                "I not use or register, or otherwise claim rights in any Meta trademark,",
-                "including as or as part of any trademark, service mark, company name, trade name, username or domain registration.",
-                "I not use or claim rights in any trademark in a way that is confusingly similar to or dilutive of Meta’s trademarks,",
-                "including as, or as any part of, a trademark. I do not use Meta’s trademarks for anything that would be inconsistent with Meta’s Terms of Service or Community Standards."
+                "Instagram and Meta trademarks are the property of Meta Platforms, Inc.",
+                "<br>",
+                "Used in accordance with Meta's Brand Guidelines for identification and linking purposes only.",
+                "No affiliation or endorsement is implied."
             ],
             "discord": [
                 "DISCORD, DISCORD NITRO, the “Clyde” Logo and any other trademark owned by Discord and its affiliates (the “Discord Marks”)",
@@ -133,13 +130,23 @@
         }
     },
 
-    "images": {
-        "title": "The images",
+    "ui": {
+        "title": "Interface",
         "desc": [
-            "All images on this site are used under their respective licenses, or are original creations.",
+            "The icons used inside buttons and interface elements are taken from the official websites of the respective companies whenever possible.",
+            "When official SVG files are not available, most of them come from <a href='https://iconify.design/'>Iconify</a>, which collects icons from many open-source sets.",
             "<br>",
-            "For third-party assets, I strive to provide clear attribution as required by the license of the source (e.g., Vecteezy, Unsplash).",
-            "If you believe any content is incorrectly attributed, please feel free to contact me."
+            "All rights remain with the respective owners and authors. The source, author and license of each icon are listed below."
+        ]
+    },
+
+    "images": {
+        "title": "Images",
+        "desc": [
+            "All images on this site are used under their respective licenses or are original creations.",
+            "<br>",
+            "For third-party assets, clear attribution is provided as required by the source license (e.g., Vecteezy, Unsplash).",
+            "If any content appears to be incorrectly attributed or infringes copyright, please reach out to request a correction or removal."
         ]
     }
 }
