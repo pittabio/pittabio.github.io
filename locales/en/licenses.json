@@ -128,11 +128,17 @@
                 "<br>",
                 "Used for identification only, no affiliation or endorsement implied."
             ],
+
             "kofi": [
                 "Ko-fi and the Ko-fi logo are trademarks of Ko-fi Labs Limited.",
                 "<br>",
                 "Used in accordance with Ko-fi's Brand Assets guidelines for identification and linking purposes only.",
                 "No affiliation or endorsement is implied."
+            ],
+            "paypal": [
+                "PayPal, the PayPal logo, and all related logos are trademarks or registered trademarks of PayPal or its licensors.",
+                "<br>",
+                "Used without modification, only to link to PayPal services and for identification purposes. No affiliation, sponsorship, or endorsement is implied."
             ]
         }
     },

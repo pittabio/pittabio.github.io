@@ -128,12 +128,17 @@
                 "<br>",
                 "Utilizzati esclusivamente a scopo identificativo; non implicano alcuna affiliazione o approvazione."
             ],
+
             "kofi": [
                 "Ko-fi e il logo Ko-fi sono marchi di Ko-fi Labs Limited.",
                 "<br>",
                 "Utilizzati in conformità con le linee guida sugli elementi del brand (Brand Assets) di Ko-fi, esclusivamente a fini di identificazione e collegamento.",
                 "Non viene sottintesa alcuna affiliazione o approvazione."
-            ]
+            ],
+            "paypal": [
+                "PayPal, il logo PayPal e tutti i loghi correlati sono marchi o marchi registrati di PayPal o dei suoi licenziatari.",
+                "<br>",
+                "Utilizzati senza modifiche, esclusivamente per creare un collegamento ai servizi PayPal e a fini identificativi. Non viene sottintesa alcuna affiliazione, sponsorizzazione o approvazione."            ]
         }
     },
 
