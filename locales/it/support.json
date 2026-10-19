@@ -12,38 +12,53 @@
     },
 
     "direct": {
-        "title": "☕ Offrimi un caffè",
-        "desc": "Supporto diretto per il mio sviluppo di giochi indipendenti",
+        "title": "☕ Offrimi un caffè ☕",
 
         "github": {
             "desc": [
-                "Sii un mio sostenitore su GitHub.",
+                "Sponsorizzami su GitHub, mensilmente o con una donazione singola.",
                 "<br>",
-                "È un ottimo modo per dimostrare il tuo apprezzamento e supportare il mio lavoro."
+                "Supporta direttamente il tempo che dedico allo sviluppo e alla manutenzione dei miei progetti."
             ],
-            "button": "Sostienimi"
+            "button": "Sponsorizzami"
         },
         "kofi": {
             "desc": [
-                "Fai una donazione una tantum o diventa un membro per supportare i miei progetti.",
+                "Lascia una mancia singola o abbonati come membro per sostenere i miei progetti.",
                 "<br>",
-                "È senza commissioni e completamente flessibile."
+                "Le donazioni su Ko-fi non hanno commissioni di piattaforma, quindi quasi tutto ciò che doni arriva direttamente a me."
             ],
             "button": "Offrimi un caffè"
+        },
+        "wishlist": {
+            "desc": [
+                "Preferisci fare un regalo invece di una donazione? Dai un'occhiata alla mia lista desideri Amazon.",
+                "<br>",
+                "È del tutto facoltativo e ogni regalo è davvero molto apprezzato."
+            ],
+            "button": "Vedi la lista desideri"
         }
     },
 
     "mutual": {
-        "title": "🤝 Supporto reciproco",
-        "desc": "Tu aiuti me, io aiuto te: vinciamo entrambi!",
+        "title": "🤝 Supporto reciproco 🤝",
+        "desc": "Tu aiuti me, io aiuto te: win-win!",
 
         "gitkraken": {
-            "desc": "GitKraken è un potente client Git. Clicca qui sotto per ottenere il 50% di sconto sulla versione Pro e aiutarmi con una commissione.",
-            "button": "Scopri di più"
+            "desc": [
+                "GitKraken è un potente client Git.",
+                "<br>",
+                "Usa il mio link per ottenere il 50% di sconto su Pro: io ricevo una piccola commissione e tu ottieni lo sconto."
+            ],
+            "button": "Ottieni il 50% di sconto"
         },
         "ms_rewards": {
-            "desc": "Accumula punti ricompensa cercando con Bing. Clicca sul mio link di invito, registrati e guadagneremo punti bonus insieme.",
-            "button": "Scopri di più"
+            "desc": [
+                "Guadagna punti Microsoft Rewards semplicemente facendo ricerche con Bing.",
+                "<br>",
+                "Iscriviti con il mio link referral e completa la Missione di benvenuto per ottenere punti bonus: anch'io guadagnerò qualche punto quando fai ricerche."
+            ],
+            "button": "Iscriviti a Rewards"
         }
     },
 

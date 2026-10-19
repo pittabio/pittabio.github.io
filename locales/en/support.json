@@ -1,5 +1,5 @@
 {
-    "head_title": "Support My Work · Fabio Pittaccio",
+    "head_title": "Support My Work",
 
     "hero": {
         "tag": "Support & Community",
@@ -12,46 +12,53 @@
     },
 
     "direct": {
-        "title": "☕ Offer me a coffee",
-        "desc": "Direct support for my independent game development",
+        "title": "☕ Treat me to a coffee ☕",
 
         "github": {
             "desc": [
-                "Sponsor me directly on GitHub.",
+                "Sponsor me on GitHub, monthly or as a one-time contribution.",
                 "<br>",
-                "It's a great way to show your appreciation and support my work."
+                "It goes straight into the time I spend building and maintaining my projects."
             ],
             "button": "Sponsor me"
         },
         "kofi": {
             "desc": [
-                "Make a one-time donation or become a member to support my projects.",
+                "Leave a one-time tip or join as a member to support my projects.",
                 "<br>",
-                "It's commission-free and completely flexible."
+                "Tips on Ko-fi carry no platform fees, so almost everything you give reaches me."
             ],
             "button": "Buy me a coffee"
+        },
+        "wishlist": {
+            "desc": [
+                "Would you rather gift something than donate? Take a look at my Amazon wish list.",
+                "<br>",
+                "It's entirely optional, and every gift is truly appreciated."
+            ],
+            "button": "View wish list"
         }
     },
 
     "mutual": {
-        "title": "🤝 Mutual Support",
+        "title": "🤝 Mutual Support 🤝",
         "desc": "You help me, I help you: win-win!",
 
         "gitkraken": {
             "desc": [
                 "GitKraken is a powerful Git client.",
                 "<br>",
-                "Click below to get 50% off Pro, and help me with a commission."
+                "Use my link to get 50% off Pro: I receive a small commission, and you get the discount."
             ],
-            "button": "Learn more"
+            "button": "Get 50% off"
         },
         "ms_rewards": {
             "desc": [
-                "Earn rewards points by searching with Bing.",
+                "Earn Microsoft Rewards points just by searching with Bing.",
                 "<br>",
-                "Click my referral link, sign up, and earn bonus points together."
+                "Join with my referral link and complete the Welcome Quest for bonus points: I also earn a few points when you search."
             ],
-            "button": "Learn more"
+            "button": "Join Rewards"
         }
     },
 
