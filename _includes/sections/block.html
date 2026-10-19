@@ -12,22 +12,24 @@ Optional:
 {% assign h = include.heading | default: "h1" %}
 
 <article>
-<!-- Tag -->
-<span class="tag" data-i18n="{{ include.tag }}"></span>
+    <!-- Tag -->
+    {% if include.tag %}
+        <span class="tag" data-i18n="{{ include.tag }}"></span>
+    {% endif %}
 
-<!-- Title -->
-<{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
+    <!-- Title -->
+    <{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
 
-<!-- The paragraph of the block -->
-<p data-i18n-html={{ include.paragraph }}></p>
+    <!-- The paragraph of the block -->
+    <p data-i18n-html={{ include.paragraph }}></p>
 
-<!-- If the url is imported, then it's a button -->
-{% if include.url %}
-    <br><!-- break -->
+    <!-- If the url is imported, then it's a button -->
+    {% if include.url %}
+        <br><!-- break -->
 
-    <a class="btn big" href="{{ include.url }}" target="_blank">
-        <span data-i18n="{{ include.btn_text }}"></span>
-        <span class="arrow-svg"></span>
-    </a>
-{% endif %}
+        <a class="btn big" href="{{ include.url }}" target="_blank">
+            <span data-i18n="{{ include.btn_text }}"></span>
+            <span class="arrow-svg"></span>
+        </a>
+    {% endif %}
 </article>
