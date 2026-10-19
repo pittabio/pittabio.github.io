@@ -13,6 +13,7 @@
 
     "direct": {
         "title": "☕ Treat me to a coffee ☕",
+        "desc": "Support me directly, with a tip, a sponsorship or a gift.",
 
         "github": {
             "desc": [
@@ -65,7 +66,7 @@
     "cause": {
         "tag": "A thought",
         "title": "🍉 Something that matters more than me 🍉",
-        "paragraph": [
+        "desc": [
             "Your support means the world to me, truly. But it makes me even happier to know you're also helping people who need it far more than I do.",
             "<br>",
             "I think especially of the children in <b>Palestine</b> who have lost everything. I won't list any campaigns here: there are too many, and I can't verify them all.",
@@ -75,10 +76,12 @@
         ]
     },
 
-
     "thanks": {
-      "title": "Thank you so much for your <em>support!</em><br>💖",
-      "subtitle": "Every contribution helps me dedicate more time to game development and tools.",
-      "button": "Get in touch"
+        "title": "💖 Thank you for being <em>here</em> 💖",
+        "desc": [
+            "Whether you donate, share my work, or just stop by, it means a lot.",
+            "If you'd like to tell me something, including about the thought above, I'd love to hear from you."
+        ],
+        "button": "Get in touch"
     }
-  }
+}

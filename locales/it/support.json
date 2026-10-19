@@ -1,4 +1,4 @@
-{
+﻿{
     "head_title": "Supporta il mio lavoro",
 
     "hero": {
@@ -13,6 +13,7 @@
 
     "direct": {
         "title": "☕ Offrimi un caffè ☕",
+        "desc": "Sostienimi direttamente, con una mancia, una sponsorizzazione o un regalo.",
 
         "github": {
             "desc": [
@@ -75,10 +76,12 @@
         ]
     },
 
-
     "thanks": {
-      "title": "Grazie di cuore per il tuo <em>supporto!</em><br>💖",
-      "subtitle": "Ogni contributo mi aiuta a dedicare più tempo allo sviluppo di giochi e strumenti.",
-      "button": "Contattami"
+        "title": "💖 Grazie per essere <em>qui</em> 💖",
+        "paragraph": [
+            "Che tu faccia una donazione, condivida il mio lavoro o passi semplicemente a trovarmi, per me conta tantissimo.",
+            "Se vuoi dirmi qualcosa, anche riguardo al pensiero qui sopra, mi farebbe piacere sentirti."
+        ],
+        "button": "Contattami"
     }
-  }
+}
