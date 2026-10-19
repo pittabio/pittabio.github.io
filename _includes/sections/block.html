@@ -4,16 +4,19 @@ To include:
 - title
 - paragraph
 Optional:
+- heading (h1 by default, e.g. "h3")
 - url
 - btn_text
 {% endcomment %}
+
+{% assign h = include.heading | default: "h1" %}
 
 <article>
 <!-- Tag -->
 <span class="tag" data-i18n="{{ include.tag }}"></span>
 
 <!-- Title -->
-<h1 class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</h1>
+<{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
 
 <!-- The paragraph of the block -->
 <p data-i18n-html={{ include.paragraph }}></p>
