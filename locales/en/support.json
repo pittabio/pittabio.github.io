@@ -1,4 +1,4 @@
-﻿{
+{
     "head_title": "Support My Work · Fabio Pittaccio",
 
     "hero": {
@@ -16,40 +16,51 @@
         "desc": "Direct support for my independent game development",
 
         "github": {
-            "desc": "Sponsor me on GitHub. It's a great way to show your appreciation and support my work.",
+            "desc": [
+                "Sponsor me directly on GitHub.",
+                "<br>",
+                "It's a great way to show your appreciation and support my work."
+            ],
             "button": "Sponsor me"
         },
-
         "kofi": {
-            "desc": "Make a one-time donation or become a member to support my projects. It's commission-free and completely flexible.",
+            "desc": [
+                "Make a one-time donation or become a member to support my projects.",
+                "<br>",
+                "It's commission-free and completely flexible."
+            ],
             "button": "Buy me a coffee"
         },
-
         "paypal": {
-            "desc": "Donate directly through PayPal. You can use credit or debit cards or your PayPal account.",
+            "desc": [
+                "Donate directly through PayPal.",
+                "<br>",
+                "You can use credit or debit cards or your PayPal account."
+            ],
             "button": "Donate via PayPal"
         }
     },
 
-
     "mutual": {
-      "title": "🤝 Mutual Support",
-      "subtitle": "You help me, I help you: win-win!"
-    },
+        "title": "🤝 Mutual Support",
+        "desc": "You help me, I help you: win-win!",
 
-    "gitkraken": {
-      "desc": "GitKraken is a powerful Git client. Click below to get 50% off Pro, and help me with a commission.",
-      "button": "Learn more"
-    },
-
-    "ms_rewards": {
-      "desc": "Earn rewards points by searching with Bing. Click my referral link, sign up, and earn bonus points together.",
-      "button": "Learn more"
-    },
-
-    "revolut": {
-      "desc": "Join me and over 75 million other users who love Revolut.",
-      "button": "Learn more"
+        "gitkraken": {
+            "desc": [
+                "GitKraken is a powerful Git client.",
+                "<br>",
+                "Click below to get 50% off Pro, and help me with a commission."
+            ],
+            "button": "Learn more"
+        },
+        "ms_rewards": {
+            "desc": [
+                "Earn rewards points by searching with Bing.",
+                "<br>",
+                "Click my referral link, sign up, and earn bonus points together."
+            ],
+            "button": "Learn more"
+        }
     },
 
 

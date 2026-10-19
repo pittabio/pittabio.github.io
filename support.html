@@ -26,12 +26,25 @@ description: "Support the independent game development and UE5 tools created by 
     <br><!-- break -->
 
     <!-- Cards Grids -->
-    <article class="grid-column">
+    <article class="grid-auto">
         {% for d in data.direct %}
             {% include sections/card.html object=d %}
         {% endfor %}
     </article>
 </section>
+
+<!-- ## MUTUAL ## -->
+<section id="mutual" class="cont">
+    <!-- Title and Description -->
+    <h2 data-i18n="mutual.title"></h2>
+    <p data-i18n="mutual.desc"></p>
+
+    <br><!-- break -->
+
+    <!-- Cards Grids -->
+    <article class="grid-auto">
+        {% for d in data.mutual %}
+            {% include sections/card.html object=d %}
         {% endfor %}
     </article>
 </section>

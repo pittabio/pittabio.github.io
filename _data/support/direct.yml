@@ -14,10 +14,10 @@
   link2: *kofi
   link2_name: "direct.kofi.button"
 
-# PayPal
-- name: "PayPal"
-  desc: "direct.paypal.desc"
-  page: &paypal "https://www.paypal.com/paypalme/FabioPittaccio"
-  img: "/media/logo/support/paypal.png"
-  link2: *paypal
-  link2_name: "direct.paypal.button"
+# PayPal?
+#- name: "PayPal"
+#  desc: "direct.paypal.desc"
+#  page: &paypal ""
+#  img: "/media/logo/support/paypal.png"
+#  link2: *paypal
+#  link2_name: "direct.paypal.button"
