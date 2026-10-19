@@ -30,14 +30,6 @@
                 "It's commission-free and completely flexible."
             ],
             "button": "Buy me a coffee"
-        },
-        "paypal": {
-            "desc": [
-                "Donate directly through PayPal.",
-                "<br>",
-                "You can use credit or debit cards or your PayPal account."
-            ],
-            "button": "Donate via PayPal"
         }
     },
 
