@@ -1,4 +1,4 @@
-{
+﻿{
     "head_title": "Support My Work",
 
     "hero": {
@@ -60,6 +60,19 @@
             ],
             "button": "Join Rewards"
         }
+    },
+
+    "cause": {
+        "tag": "A thought",
+        "title": "🍉 Something that matters more than me 🍉",
+        "paragraph": [
+            "Your support means the world to me, truly. But it makes me even happier to know you're also helping people who need it far more than I do.",
+            "<br>",
+            "I think especially of the children in <b>Palestine</b> who have lost everything. I won't list any campaigns here: there are too many, and I can't verify them all.",
+            "If you decide to help, choose <b>people</b> or organizations you can check yourself, ideally ones working directly on the ground and transparent about where the money goes.",
+            "<br>",
+            "And if you do, feel free to tell me. It would mean a lot to me, and even more to them."
+        ]
     },
 
 

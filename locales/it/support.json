@@ -62,6 +62,19 @@
         }
     },
 
+    "cause": {
+        "tag": "Un pensiero",
+        "title": "🍉 Qualcosa che conta più di me 🍉",
+        "paragraph": [
+            "Il tuo supporto significa molto per me, davvero. Ma mi rende ancora più felice sapere che aiuti anche chi ne ha molto più bisogno di me.",
+            "<br>",
+            "Penso soprattutto ai bambini della <b>Palestina</b> che hanno perso tutto. Non metterò qui nessuna raccolta fondi: sono troppe e non posso verificarle tutte.",
+            "Se decidi di aiutare, scegli <b>persone</b> o organizzazioni che puoi controllare tu stesso, meglio se operano direttamente sul posto e sono trasparenti su come usano i fondi.",
+            "<br>",
+            "E se lo fai, sentiti libero di dirmelo. Significherebbe molto per me e per loro."
+        ]
+    },
+
 
     "thanks": {
       "title": "Grazie di cuore per il tuo <em>supporto!</em><br>💖",
