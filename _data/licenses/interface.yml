@@ -34,6 +34,15 @@
   license: "MIT"
   license_url: "https://gitlab.com/SUSE-UIUX/eos-icons/-/blob/master/LICENSE"
 
+- name: "close-outline"
+  svg: "close-svg"
+  author: "Carbon - IBM"
+  author_url: "https://github.com/carbon-design-system/carbon/tree/main/packages/icons"
+  source: "carbon-design-system via Iconify"
+  source_url: "https://icon-sets.iconify.design/carbon/close-outline/"
+  license: "Apache 2.0"
+  license_url: "https://github.com/carbon-design-system/carbon/blob/main/LICENSE"
+
 
 - name: "location"
   svg: "loc-svg"
