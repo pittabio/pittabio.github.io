@@ -10,6 +10,9 @@
     h3, p,
     .license-item {
         align-self: stretch;
+        justify-items: flex-start;
+        text-align: left;
+        overflow: hidden;
         margin-top: 1.5rem; // Breathing room between each license entry
 
         &:first-of-type {
@@ -41,7 +44,17 @@
 
     // The images
     img {
-        margin: .5rem 0;
-        max-width: 50px;
+        --img-w: 160px;
+        --img-h: 80px;
+        --img-marg: 15px 0;
+
+        width: var(--img-w);
+        height: var(--img-h);
+        margin: var(--img-marg);
+        max-width: 100%;
+        object-fit: contain;
+        object-position: left center;
+        justify-self: flex-start;
+        align-self: flex-start;
     }
 }
