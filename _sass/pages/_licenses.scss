@@ -42,19 +42,30 @@
         margin: 0;
     }
 
-    // The images
-    img {
-        --img-w: 160px;
-        --img-h: 80px;
-        --img-marg: 15px 0;
+    /* Images and SVG */
 
+    // Shared slot for images and SVG icons: change it here, both follow
+    --img-w: 140px;
+    --img-h: 80px;
+    --img-m: 12px 0;
+
+    img,
+    [class*="-svg"] {
         width: var(--img-w);
         height: var(--img-h);
-        margin: var(--img-marg);
+        margin: var(--img-m);
         max-width: 100%;
-        object-fit: contain;
-        object-position: left center;
         justify-self: flex-start;
         align-self: flex-start;
+    }
+
+    img {
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    [class*="-svg"] {
+        -webkit-mask-position: left center;
+        mask-position: left center;
     }
 }
