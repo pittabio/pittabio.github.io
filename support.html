@@ -7,10 +7,10 @@ description: "Support the independent game development and UE5 tools created by 
 
 <!-- ## HERO ## -->
 <section id="hero" class="cont">
-    {% include sections/block.html
+    {% include sections/content/block.html
         tag = "hero.tag"
         title = "hero.title"
-        paragraph = "hero.desc"
+        p = "hero.desc"
     %}
 </section>
 
@@ -19,50 +19,54 @@ description: "Support the independent game development and UE5 tools created by 
 
 <!-- ## DIRECT ## -->
 <section id="direct" class="cont">
-    <!-- Title and Description -->
-    <h2 data-i18n="direct.title"></h2>
-    <p data-i18n="direct.desc"></p>
+    {% include sections/content/block.html
+        title = "direct.title"
+        h = "h2"
+        p = "direct.desc"
+    %}
 
     <br><!-- break -->
 
     <!-- Cards Grids -->
     <article class="grid-auto">
         {% for d in data.direct %}
-            {% include sections/card.html object=d %}
+            {% include sections/content/card.html object=d %}
         {% endfor %}
     </article>
 </section>
 
 <!-- ## MUTUAL ## -->
 <section id="mutual" class="cont">
-    <!-- Title and Description -->
-    <h2 data-i18n="mutual.title"></h2>
-    <p data-i18n="mutual.desc"></p>
+    {% include sections/content/block.html
+        title = "mutual.title"
+        h = "h2"
+        p = "mutual.desc"
+    %}
 
     <br><!-- break -->
 
     <!-- Cards Grids -->
     <article class="grid-auto">
         {% for d in data.mutual %}
-            {% include sections/card.html object=d %}
+            {% include sections/content/card.html object=d %}
         {% endfor %}
     </article>
 </section>
 
 <!-- ## CAUSE ## -->
 <section id="cause" class="cont">
-    {% include sections/block.html
-        tag="cause.tag"
-        title="cause.title" heading="h2"
-        paragraph="cause.desc"
+    {% include sections/content/block.html
+        tag = "cause.tag"
+        title = "cause.title" h="h2"
+        p = "cause.desc"
     %}
 </section>
 
 <!-- ## THANKS ## -->
 <section id="thanks" class="cont">
-    {% include sections/block.html
-        title="thanks.title" heading="h2"
-        paragraph="thanks.desc"
+    {% include sections/content/block.html
+        title="thanks.title" h="h2"
+        p="thanks.desc"
         url="/contacts.html"
         btn_text="thanks.button"
     %}

@@ -65,11 +65,13 @@
 
     "cause": {
         "tag": "Un pensiero",
-        "title": "🍉 Qualcosa che conta più di me 🍉",
-        "paragraph": [
+        "title": "🍉 Qualcosa di più grande di me 🍉",
+        "desc": [
             "Il tuo supporto significa molto per me, davvero. Ma mi rende ancora più felice sapere che aiuti anche chi ne ha molto più bisogno di me.",
             "<br>",
-            "Penso soprattutto ai bambini della <b>Palestina</b> che hanno perso tutto. Non metterò qui nessuna raccolta fondi: sono troppe e non posso verificarle tutte.",
+            "Penso soprattutto ai bambini di <b>Gaza</b> che hanno perso tutto, e a ogni bambino coinvolto in una guerra, ovunque si trovi.",
+            "Non metterò qui nessuna raccolta fondi: sono troppe e non posso verificarle tutte.",
+            "<br>",
             "Se decidi di aiutare, scegli <b>persone</b> o organizzazioni che puoi controllare tu stesso, meglio se operano direttamente sul posto e sono trasparenti su come usano i fondi.",
             "<br>",
             "E se lo fai, sentiti libero di dirmelo. Significherebbe molto per me e per loro."
@@ -78,7 +80,7 @@
 
     "thanks": {
         "title": "💖 Grazie per essere <em>qui</em> 💖",
-        "paragraph": [
+        "desc": [
             "Che tu faccia una donazione, condivida il mio lavoro o passi semplicemente a trovarmi, per me conta tantissimo.",
             "Se vuoi dirmi qualcosa, anche riguardo al pensiero qui sopra, mi farebbe piacere sentirti."
         ],
