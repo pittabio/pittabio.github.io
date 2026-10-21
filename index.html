@@ -9,37 +9,41 @@ description: The home page
 <section id="hero" class="cont hero">
     <!-- LEFT -->
     <div class="desc">
-        {% include sections/block.html
+        {% include sections/content/block.html
             tag = "hero.tag"
             title = "Fabio Pittaccio"
-            paragraph = "hero.desc"
+            p = "hero.desc"
             url = "projects.html"
             btn_text = "hero.cta"
         %}
 
         <!-- Quick info -->
         <div class="info-box">
-            <div class="info">
-                <b class="mini-title">5+</b>
-                <p data-i18n="hero.info.published"></p>
-            </div>
-            <div class="info">
-                <b class="mini-title">UE5</b>
-                <p data-i18n="hero.info.engine"></p>
-            </div>
-            <div class="info">
-                <b class="mini-title">PC · Android</b>
-                <p data-i18n="hero.info.platforms"></p>
-            </div>
+            <!-- Published Games -->
+            {% include sections/content/block-mini.html
+                class = "info"
+                title = "5+"
+                p = "hero.info.published"
+            %}
+            <!-- Primary Engine -->
+            {% include sections/content/block-mini.html
+                class = "info"
+                title = "UE5"
+                p = "hero.info.engine"
+            %}
+            <!-- Platforms -->
+            {% include sections/content/block-mini.html
+                class = "info"
+                title = "PC · Android"
+                p = "hero.info.platforms"
+            %}
+
         </div><!-- /hero-info-box/ -->
     </div><!-- /hero-content/ -->
 
     <!-- RIGHT (Image) -->
     <img src="/media/profile.jpg" alt="Fabio Pittaccio"
-         onclick="openOneImage(this)"
-
-         data-img1="/media/profile.jpg"
-         data-desc1="hero.image_desc"
+         data-desc="hero.image_desc"  onclick="openGallery(this)"
     />
 
     <!-- INDICATOR -->
@@ -53,27 +57,30 @@ description: The home page
 	<div class="grid-column">
 
         <!-- C++ -->
-        {% include sections/block-mini.html
+        {% include sections/content/block-mini.html
+            class = "cont"
             img = "/media/logo/skills/cpp.png"
             img_alt = "about.item1.alt"
             title = "about.item1.title"
-            paragraph = "about.item1.desc"
+            p = "about.item1.desc"
         %}
 
         <!-- Game Mechanics -->
-        {% include sections/block-mini.html
+        {% include sections/content/block-mini.html
+            class = "cont"
             img = "/media/more/controller.webp"
             img_alt = "about.item2.alt"
             title = "about.item2.title"
-            paragraph = "about.item2.desc"
+            p = "about.item2.desc"
         %}
 
         <!-- Full-Cycle -->
-        {% include sections/block-mini.html
+        {% include sections/content/block-mini.html
+            class = "cont"
             img = "/media/more/circle.png"
             img_alt = "about.item3.alt"
             title = "about.item3.title"
-            paragraph = "about.item3.desc"
+            p = "about.item3.desc"
         %}
 
     </div><!-- /grid/ -->
@@ -87,15 +94,15 @@ description: The home page
     </a>
 
     <!-- Technologies icons bar -->
-    {% include sections/skills-icons.html %}
+    {% include sections/legal/skills-icons.html %}
 </section><!-- /about section/ -->
 
 <!-- ## FEATURED PROJECTS ## -->
 <section id="projects" class="cont features">
-    <!-- Title -->
-    <h2 data-i18n="projects.title"></h2>
-    <!-- Description -->
-    <p data-i18n-html="projects.desc"></p>
+    {% include sections/content/block.html
+        title = "projects.title" h = "h2"
+        p = "projects.desc"
+    %}
 
     <br><!-- break -->
 
@@ -115,7 +122,7 @@ description: The home page
 
 <!-- ## CONTACT ## -->
 <section id="contact" class="cont">
-    {% include sections/block.html
+    {% include sections/content/block.html
         tag = "$contact.tag"
         title = "$contact.title"
         paragraph = "$contact.subtitle"
