@@ -3,15 +3,19 @@
 
 USAGE Example
 {/%/ include sections/block-mini.html
-    img = "/image/source"
-    img_alt = "image.alt"
+    class = "the-class"
+    img = "/image/source"   (optional, only together with img_alt)
+    img_alt = "image.alt"   (optional, only together with img)
     title = "title.to.include"
     paragraph = "parag.to.include"
 /%/}
 
+NOTE: img and img_alt are optional, but must be used together.
+The image is rendered only if both are provided.
+
 {% endcomment %}
 
-<div class="cont">
+<div class="{{ include.class }}">
     <!-- Image -->
     {% if include.img and include.img_alt %}
         <img src="{{ include.img }}"
@@ -24,5 +28,5 @@ USAGE Example
     <b data-i18n-html="{{ include.title }}">{{ include.title }}</b>
 
     <!-- The paragraph of the block -->
-    <p data-i18n-html={{ include.paragraph }}></p>
+    <p data-i18n-html="{{ include.paragraph }}"></p>
 </div>
