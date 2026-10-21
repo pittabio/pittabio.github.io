@@ -55,30 +55,31 @@ description: The home page
     <h2 data-i18n="about.title"></h2>
     <!-- Grid -->
 	<div class="grid-column">
+
         <!-- C++ -->
-        <div class="cont">
-            <img src="/media/logo/skills/cpp.png"
-                 alt="C++ logo"
-                 data-i18n-alt="about.item1.alt" />
-            <b data-i18n="about.item1.title"></b>
-            <p data-i18n="about.item1.desc"></p>
-        </div>
+        {% include sections/block-mini.html
+            img = "/media/logo/skills/cpp.png"
+            img_alt = "about.item1.alt"
+            title = "about.item1.title"
+            paragraph = "about.item1.desc"
+        %}
+
         <!-- Game Mechanics -->
-        <div class="cont">
-            <img src="/media/more/controller.webp"
-                 alt="A controller that represents the game mechanics"
-                 data-i18n-alt="about.item2.alt" />
-            <b data-i18n="about.item2.title"></b>
-            <p data-i18n="about.item2.desc"></p>
-        </div>
+        {% include sections/block-mini.html
+            img = "/media/more/controller.webp"
+            img_alt = "about.item2.alt"
+            title = "about.item2.title"
+            paragraph = "about.item2.desc"
+        %}
+
         <!-- Full-Cycle -->
-        <div class="cont">
-            <img src="/media/more/circle.png"
-                 alt="A circle with 5 arrows that represents the loop of the full-cycle develop"
-                 data-i18n-alt="about.item3.alt" />
-            <b data-i18n="about.item3.title"></b>
-            <p data-i18n="about.item3.desc"></p>
-        </div>
+        {% include sections/block-mini.html
+            img = "/media/more/circle.png"
+            img_alt = "about.item3.alt"
+            title = "about.item3.title"
+            paragraph = "about.item3.desc"
+        %}
+
     </div><!-- /grid/ -->
 
     <br><!-- break -->
