@@ -7,7 +7,7 @@ USAGE Example
     img = "/image/source"   (optional, only together with img_alt)
     img_alt = "image.alt"   (optional, only together with img)
     title = "title.to.include"
-    paragraph = "parag.to.include"
+    p = "paragraph.to.include"
 /%/}
 
 NOTE: img and img_alt are optional, but must be used together.
@@ -28,5 +28,5 @@ The image is rendered only if both are provided.
     <b data-i18n-html="{{ include.title }}">{{ include.title }}</b>
 
     <!-- The paragraph of the block -->
-    <p data-i18n-html="{{ include.paragraph }}"></p>
+    <p data-i18n-html="{{ include.p }}"></p>
 </div>

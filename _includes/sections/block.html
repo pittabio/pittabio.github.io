@@ -5,8 +5,8 @@ USAGE Example
 {/%/ include sections/block.html
   tag = "tag.to.include"        (optional)
   title = "title.to.include"
-  heading = "h3"                (optional, h1 by default)
-  paragraph = "parag.to.include"
+  h = "h3"                (optional, h1 by default)
+  p = "parag.to.include"
   url = "/link/to/include.html" (optional)
   btn_text = "button.text"      (optional)
 /%/}
@@ -20,7 +20,7 @@ USAGE Example
     {% endif %}
 
     <!-- Title -->
-    {% assign h = include.heading | default: "h1" %}
+    {% assign h = include.h | default: "h1" %}
     <{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
 
     <!-- The paragraph of the block -->
