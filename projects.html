@@ -7,17 +7,19 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- ## HERO ## -->
 <section id="hero" class="cont">
-    {% include sections/block.html
+    {% include sections/content/block.html
         tag = "hero.tag"
         title = "hero.title"
-        paragraph = "hero.desc"
+        p = "hero.desc"
     %}
 </section><!-- /hero/ -->
 
 <!-- ## GAMES ## -->
 <section id="games" class="cont">
-    <h2 data-i18n-html="games.title"></h2>
-    <p data-i18n-html="games.desc"></p>
+    {% include sections/content/block.html
+        title = "games.title" h = "h2"
+        p = "games.desc"
+    %}
 
     <br><!-- break -->
 
@@ -27,8 +29,10 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- ## EXPERIMENTS ## -->
 <section id="experiments" class="cont">
-    <h2 data-i18n="experiments.title"></h2>
-    <p data-i18n-html="experiments.desc"></p>
+    {% include sections/content/block.html
+        title = "experiments.title" h = "h2"
+        p = "experiments.desc"
+    %}
 
     <br><!-- break -->
 
@@ -38,8 +42,10 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- ## ARCHIVE ## -->
 <section id="archive" class="cont">
-    <h2 data-i18n="archive.title"></h2>
-    <p data-i18n-html="archive.desc"></p>
+    {% include sections/content/block.html
+        title = "archive.title" h = "h2"
+        p = "archive.desc"
+    %}
 
     <br><!-- break -->
 
@@ -49,10 +55,10 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- ## CTA ## -->
 <section id="contact" class="cont">
-    {% include sections/block.html
+    {% include sections/content/block.html
         tag = "$contact.tag"
         title = "$contact.title"
-        paragraph = "$contact.subtitle"
+        p = "$contact.subtitle"
         url = "contacts.html"
         btn_text = "$contact.cta"
     %}
