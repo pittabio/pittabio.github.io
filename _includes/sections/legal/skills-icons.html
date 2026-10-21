@@ -1,5 +1,5 @@
 <div class="skills">
-    {% for item in site.data.licenses.icons %}
+    {% for item in site.data.licenses.tools %}
         {% if item.image %}
             {% assign img_src = item.image | relative_url %}
             <img src="{{ img_src }}" alt="{{ item.name }}" loading="lazy"/>

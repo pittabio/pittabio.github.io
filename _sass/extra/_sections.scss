@@ -27,12 +27,12 @@
     // The icons image
     img {
         @extend %img-skills;
-        filter: grayscale(1);
+        //filter: grayscale(1);
 
         // When the icon is hovered
         &:hover {
-            filter: grayscale(0);
-            transform: scale(1.15);
+            //filter: grayscale(0);
+            transform: scale(1.2);
         }
     }
 }
