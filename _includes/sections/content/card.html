@@ -1,26 +1,27 @@
 {% comment %}
+// -- A REUSABLE CARD -- //
 
-Use:
-  {% include sections/content/card.html object=OBJECT %}
+USAGE Example
+{/%/ include sections/content/card.html
+    object = OBJECT
+/%/}
 
-OBJECT is a `_data` voice with this fields:
+NOTE: OBJECT is a `_data` entry with these fields:
+    name    = "name.to.include"     (i18n key of the title)
+    desc    = "desc.to.include"     (i18n key of the description, can contain HTML)
+    page    = "/link/to/include"    (optional, the title becomes a link)
+    img     = "/image/source"       (optional, opens with openOneImage on click)
+    img_alt = "image.alt"           (optional, alt text of the image)
 
-Mandatory:
-- name:  i18n key of the title (data-i18n)
-- desc:  i18n key of the description (data-i18n-html, so can contain HTML)
+Buttons: up to 3, with N = 1, 2, 3
+    linkN      = "/link/to/include" (URL of the button)
+    linkN_name = "button.text"      (i18n key of the text)
+    linkN_icon = "icon-class"       (optional, CSS class of the icon)
+    linkN_img  = "/image/source"    (optional, used only if linkN_icon is missing)
 
-Optional:
-- page:  URL; if present, the title becomes a link
-- img: banner path (opens with openOneImage upon clicking)
-- img_alt: The alternative text for the image
-- Buttons, max 3 (N = 1, 2, 3):
-    - linkN        Button URL (required)
-    - linkN_name   i18n key of the text (mandatory)
-    - linkN_icon   CSS class of the icon
-      [or]
-    - linkN_img    logo path (used only if linkN_icon is missing)
-  Position: link1 = left, link2 = center, link3 = right
-  A button appears only if it has both linkN and linkN_name.
+A button is rendered only if it has both linkN and linkN_name.
+Position: link1 = left, link2 = center, link3 = right.
+
 {% endcomment %}
 
 {% assign o = include.object %}
