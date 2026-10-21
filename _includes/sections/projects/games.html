@@ -1,3 +1,19 @@
+{% comment %}
+// -- A LIST OF GAME CARDS -- //
+
+USAGE Example
+{/%/ include sections/content/games.html
+    featured = true     (optional)
+/%/}
+
+NOTE: The projects are read from `site.data.projects.games`,
+and each one is rendered with sections/content/card.html
+in a column grid.
+
+If featured is set, only the entries with `feat: true` are shown.
+
+{% endcomment %}
+
 {% assign list = site.data.projects.games %}
 {% if include.featured %}
     {% assign list = list | where: "feat", true %}
