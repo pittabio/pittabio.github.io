@@ -1,12 +1,16 @@
 {% comment %}
-To include:
-- tag
-- title
-- paragraph
-Optional:
-- heading (h1 by default, e.g. "h3")
-- url
-- btn_text
+// -- A REUSABLE BLOCK FOR EVERY PAGE -- //
+
+USAGE Example
+{% include sections/block.html
+  [Optional] tag = "tag.to.include"
+  title = "title.to.include"
+  paragraph = "parag.to.include"
+
+  [Optional] heading (h1 by default) = "h3"
+  [Optional] url = "/link/to/include.html"
+  [Optional] btn_text = "button.text"
+
 {% endcomment %}
 
 {% assign h = include.heading | default: "h1" %}
