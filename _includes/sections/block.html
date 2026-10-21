@@ -1,19 +1,17 @@
 {% comment %}
-// -- A REUSABLE BLOCK FOR EVERY PAGE -- //
+// -- A REUSABLE BLOCK -- //
 
 USAGE Example
-{% include sections/block.html
-  [Optional] tag = "tag.to.include"
+{/%/ include sections/block.html
+  tag = "tag.to.include"        (optional)
   title = "title.to.include"
+  heading = "h3"                (optional, h1 by default)
   paragraph = "parag.to.include"
-
-  [Optional] heading (h1 by default) = "h3"
-  [Optional] url = "/link/to/include.html"
-  [Optional] btn_text = "button.text"
+  url = "/link/to/include.html" (optional)
+  btn_text = "button.text"      (optional)
+/%/}
 
 {% endcomment %}
-
-{% assign h = include.heading | default: "h1" %}
 
 <article>
     <!-- Tag -->
@@ -22,6 +20,7 @@ USAGE Example
     {% endif %}
 
     <!-- Title -->
+    {% assign h = include.heading | default: "h1" %}
     <{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
 
     <!-- The paragraph of the block -->
