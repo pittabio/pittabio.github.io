@@ -135,14 +135,18 @@
     "cta": {
         "skills": {
             "tag": "competenze",
-            "title": "Vuoi vedere queste abilità <b class='accent'>in azione</b>?",
+            "title": [
+                "Vuoi vedere queste abilità",
+                "<br>",
+                "<b class='accent'>in azione</b>?"
+            ],
             "paragraph": "Scopri come trasformo le competenze tecniche in gameplay coinvolgente",
             "button": "Guarda i miei progetti"
         },
 
         "resume": {
             "tag": "curriculum",
-            "title": "Ti serve il <b class='accent'>curriculum<b> completo?",
+            "title": "Ti serve il <b class='accent'>curriculum</b> completo?",
             "paragraph": "Contattami per il PDF con storia lavorativa, certificazioni e percorso accademico",
             "button": "Contattami"
         }

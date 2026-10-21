@@ -135,7 +135,11 @@
     "cta": {
         "skills": {
             "tag": "skills",
-            "title": "Want to see these skills <b class='accent'>in action</b>?",
+            "title": [
+                "Want to see these skills",
+                "<br>",
+                "<b class='accent'>in action</b>?"
+            ],
             "paragraph": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
             "button": "View my projects"
         },

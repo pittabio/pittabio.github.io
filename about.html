@@ -7,10 +7,10 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 
 <!-- ## HERO ## -->
 <section id="hero" class="cont">
-   {% include sections/block.html
+   {% include sections/content/block.html
        tag = "hero.tag"
        title = "hero.title"
-       paragraph = "hero.desc"
+       p = "hero.desc"
    %}
 </section><!-- /hero/ -->
 
@@ -20,8 +20,9 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 {% assign abt = site.data.about %}
 <section id="skills">
     <!-- Technologies icons bar -->
-    {% include sections/skills-icons.html %}
-    <br>
+    {% include sections/legal/skills-icons.html %}
+
+    <br><!-- break -->
 
     <h2 data-i18n="skill.title"></h2>
 
@@ -72,11 +73,9 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 
             <div class="line-nomargin"></div> <!-- Pause line -->
 
-            <!-- Other -->
+            <!-- Goals -->
             <div class="skill-group">
-                <!-- Title -->
                 <span class="mini-title" data-i18n="skill.other.title"></span>
-                <!-- Item name -->
                 <span data-i18n-html="skill.other.soon"></span>
             </div>
         </article>
@@ -100,18 +99,20 @@ description: "Gameplay Developer & UE5 Specialist. Explore my C++ technical skil
 <!-- CTA -->
 <section id="cta" class="cont">
     <div class="grid-auto">
-        {% include sections/block.html
+        {% include sections/content/block.html
             tag = "cta.skills.tag"
             title = "cta.skills.title"
-            paragraph = "cta.skills.paragraph"
+            h = "h2"
+            p = "cta.skills.paragraph"
             url = "/projects.html"
             btn_text = "cta.skills.button"
         %}
 
-        {% include sections/block.html
+        {% include sections/content/block.html
             tag = "cta.resume.tag"
             title = "cta.resume.title"
-            paragraph = "cta.resume.paragraph"
+            h = "h2"
+            p = "cta.resume.paragraph"
             url = "/contacts.html"
             btn_text = "cta.resume.button"
         %}
