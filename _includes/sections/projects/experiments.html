@@ -1,3 +1,14 @@
+{% comment %}
+// -- A LIST OF EXPERIMENT CARDS -- //
+
+USAGE Example
+{/%/ include sections/content/experiments.html /%/}
+
+NOTE: No parameters needed.
+The projects are read from `site.data.projects.experiments`, and each one is rendered with sections/content/card.html in an auto-sized grid.
+
+{% endcomment %}
+
 {% assign list = site.data.projects.experiments %}
 <div class="grid-auto">
     {% for p in list %}
