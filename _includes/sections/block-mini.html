@@ -1,0 +1,28 @@
+{% comment %}
+// -- A REUSABLE MINI BLOCK -- //
+
+USAGE Example
+{/%/ include sections/block-mini.html
+    img = "/image/source"
+    img_alt = "image.alt"
+    title = "title.to.include"
+    paragraph = "parag.to.include"
+/%/}
+
+{% endcomment %}
+
+<div class="cont">
+    <!-- Image -->
+    {% if include.img and include.img_alt %}
+        <img src="{{ include.img }}"
+             alt="{{ include.img_alt }}"
+             data-i18n-alt="{{ include.img_alt }}"
+        />
+    {% endif %}
+
+    <!-- Title -->
+    <b data-i18n-html="{{ include.title }}">{{ include.title }}</b>
+
+    <!-- The paragraph of the block -->
+    <p data-i18n-html={{ include.paragraph }}></p>
+</div>
