@@ -52,6 +52,12 @@
         border-top: 1px solid var(--border);
         margin-top: 2rem;
         text-align: left;
+        padding-top: .5rem;
+
+        b {
+            @include base.display-text(1.5rem, 800, 1);
+            color: var(--accent);
+        }
 
         // The info
         p {
@@ -62,18 +68,6 @@
             margin-top: .15rem;
 
             align-self: flex-start;
-        }
-
-        // The info itself
-        .info {
-            @include base.flexbox-style(
-                $direction: column,
-                $align: flex-start,
-                $gap: .2rem,
-                $prevent-text-wrap: true
-            );
-
-            margin-top: 1rem;
         }
     }
 }
