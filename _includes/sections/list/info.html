@@ -1,12 +1,20 @@
 {% comment %}
-To include:
-- title
-- infos:
-  - label
-  - desc (optional description)
-  - img (media) or svg (icon)
-  - url (opional)
-{% endcomment %}
+// -- A REUSABLE INFO LIST -- //
+
+USAGE Example
+{/%/ include sections/list/info.html
+    title = "title.to.include"
+    infos = page.infos
+/%/}
+
+NOTE: "infos" is a list, and each entry supports these fields:
+    label = "label.to.include"
+    desc = "desc.to.include" (optional)
+    img = "/image/source"    (optional, has priority over svg)
+    svg = "svg-class"        (optional, used only if img is missing)
+    url = "/link/to/include" (optional, wraps the entry in a link)
+
+s{% endcomment %}
 
 {% assign title = include.title %}
 {% assign infos = include.infos %}

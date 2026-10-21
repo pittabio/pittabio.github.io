@@ -1,3 +1,27 @@
+{% comment %}
+// -- A REUSABLE TIMELINE -- //
+
+USAGE Example
+{/%/ include sections/list/timeline.html
+    prefix = "prefix.of.the.keys"
+    items = page.items
+/%/}
+
+NOTE:
+• "items" is a list, and each entry supports these fields:
+    id = "item-id"
+    details = 3 (number of details lines)
+    url = "/link/to/include"    (optional)
+    url_text = "url.text"       (optional, only together with url)
+
+The texts are read from the keys built as "prefix.id":
+• prefix.id.date
+• prefix.id.role
+• prefix.id.institution
+• prefix.id.details.1 ... prefix.id.details.N
+
+{% endcomment %}
+
 {% for item in include.items %}
     {% assign key = include.prefix | append: "." | append: item.id %}
 
