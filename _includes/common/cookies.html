@@ -1,19 +1,18 @@
-<script src="{{ '/scripts/cookies.js' | relative_url }}"></script>
+<div id="cookie-banner" class="card cookie-banner"
+     role="region" aria-labelledby="cookie-label" aria-describedby="cookie-desc">
 
-<div id="cookie-banner" class="cookie-banner"
-    role="region" aria-labelledby="cookie-label" aria-describedby="cookie-desc">
+    <!-- Text -->
+    <h4 id="cookie-label" class="accent" data-i18n="$common.cookies.title">Privacy &amp; Analytics</h4>
+    <p id="cookie-desc" data-i18n-html="$common.cookies.desc"></p>
 
-    <!-- Title -->
-    <h4 data-i18n="$common.cookies.title">Privacy & Analytics</h4>
-
-    <!-- Description -->
-    <div id="cookie-desc">
-        <p data-i18n-html="$common.cookies.desc"></p>
-    </div>
+    <br><!-- break -->
 
     <!-- Buttons -->
-    <div class="cookie-buttons">
-        <button class="outline" onclick="updateConsent('denied')"  data-i18n="$common.cookies.decline"></button>
-        <button class="btn"     onclick="updateConsent('granted')" data-i18n="$common.cookies.accept"> </button>
+    <div class="flexbox">
+        <button class="outline full" onclick="updateConsent('denied')"  data-i18n="$common.cookies.decline"></button>
+        <button class="full"         onclick="updateConsent('granted')" data-i18n="$common.cookies.accept"></button>
     </div>
 </div>
+
+<!-- Cookies Script -->
+<script src="{{ '/scripts/cookies.js' | relative_url }}"></script>

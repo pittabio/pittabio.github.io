@@ -1,55 +1,24 @@
-﻿@use "../base";
-
-.cookie-banner {
+﻿// Cookie banner: a fixed-position .card (see _sections.scss)
+// .card.cookie-banner has higher specificity than .card, so the import order doesn't matter
+.card.cookie-banner {
     // Layout
     position: fixed;
     bottom: 20px; left: 20px;
     z-index: 200;
-    width: 300px;
-    max-width: calc(100vw - 40px);
-    padding: 1.5rem;
-    display: none;  // JS manage this
+    width: min(500px, calc(100vw - 40px));
+    height: auto;           // .card sets 100%, which on a fixed element means the whole viewport
+    display: none;          // JS manage this
 
-    // Container Aesthetics
+    // Colors
     background: var(--bgbt);
-    border: 1px solid var(--accent);
-    border-radius: var(--rad-big);
-    box-shadow: 0 10px 25px var(--shadow);
+    border-color: var(--accent);
 
     // Animation
     animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-
-    h4 {
-        margin-bottom: .75rem;
-        color: var(--accent);
-    }
-
-    p {
-        margin: .5rem;
-        line-height: 1.4;
-    }
-
-    .cookie-buttons {
-        display: flex;
-        gap: 10px;
-        margin-top: 1.25rem;
-
-        button { // Maneged by _buttons.scss
-            flex: 1;
-        }
-    }
 }
 
-/* Animation */
+// The slide-in animation
 @keyframes slideIn {
     from { transform: translateX(-110%);  opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-/* Mobile optimization */
-@media (max-width: 480px) {
-    .cookie-banner {
-        left: 10px; bottom: 10px;
-        width: calc(100% - 20px);
-    }
+    to   { transform: translateX(0);      opacity: 1; }
 }
