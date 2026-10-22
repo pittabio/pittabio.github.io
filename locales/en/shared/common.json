@@ -35,7 +35,8 @@
         "card": {
             "details": "Details",
             "about": "About Me",
-            "fox": "The logo of Fabio Pittaccio"
+            "fox_alt": "The mascotte of Fabio Pittaccio",
+            "fox_desc": "The mascotte of <strong>Fabio Pittaccio</strong>"
         }
     }
 }

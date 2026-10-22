@@ -5,7 +5,8 @@
   feat: true
 
   img: "/media/games/ruins-rhapsody/banner.jpg"
-  img_alt: "The `Ruins' Rhapsody` game banner"
+  img_alt: "$games.ruins.img_alt"
+  img_desc: "$games.ruins.img_desc"
 
   link1: "https://pittabio.itch.io/ruins-rhapsody-demo"
   link1_name: "itch.io"
@@ -26,7 +27,8 @@
   feat: true
 
   img: "/media/games/goblin-jr/banner.png"
-  img_alt: "The `Goblin Junior Adventure` game banner"
+  img_alt: "$games.goblin.img_alt"
+  img_desc: "$games.goblin.img_desc"
 
   link1: "https://pittabio.itch.io/goblin-jr-adventure"
   link1_name: "itch.io"
@@ -43,7 +45,8 @@
   feat: true
 
   img: "/media/games/zombie-siege/banner.png"
-  img_alt: "The `Zombie Siege Chronicles` game banner"
+  img_alt: "$games.zombie.img_alt"
+  img_desc: "$games.zombie.img_desc"
 
   link1: "https://fabriziop.itch.io/zombie-siege-chronicles"
   link1_name: "itch.io"
@@ -59,7 +62,8 @@
   page: &page_fb "projects/flying-bird.html"
 
   img: "/media/games/flying-bird/banner.png"
-  img_alt: "The `Flying Bird` game banner"
+  img_alt: "$games.flying.img_alt"
+  img_desc: "$games.flying.img_desc"
 
   link1: "https://pittabio.itch.io/flying-bird"
   link1_name: "itch.io"
@@ -75,7 +79,8 @@
   page: &page_ws "projects/wizardscape.html"
 
   img: "/media/games/wizard-scape/banner.png"
-  img_alt: "The `WizardScape: The Magic Chase` game banner"
+  img_alt: "$games.wizard.img_alt"
+  img_desc: "$games.wizard.img_desc"
 
   link1: "https://pittabio.itch.io/wizardscape"
   link1_name: "itch.io"
@@ -91,7 +96,8 @@
   page: &page_more "about.html"
 
   img: "/media/fox/fox_banner.png"
-  img_alt: "$common.card.fox"
+  img_alt: "$common.card.fox_alt"
+  img_desc: "$common.card.fox_desc"
 
   link1: "https://github.com/pittabio"
   link1_name: "GitHub"

@@ -8,7 +8,9 @@
                 "Gioca nei panni di un'audace <strong>archeologa</strong> a caccia di un'antica e misteriosa reliquia.",
                 "Questa demo action-adventure, ispirata a Tomb Raider e Uncharted, unisce un <em>sistema di movimento dinamico</em>,",
                 "enigmi ambientali e sparatorie contro robot in antiche rovine."
-            ]
+            ],
+            "img_alt": "Il banner del gioco demo `Ruins' Rhapsody`",
+            "img_desc": "Il banner del gioco demo <strong>Ruins' Rhapsody<strong>"
         },
 
         "goblin": {
@@ -18,7 +20,9 @@
                 "Pensato per bambini e giocatori occasionali, con un'attenzione particolare all'accessibilità e al divertimento immediato,",
                 "questo <strong>platform con collezionabili</strong> è un'esperienza breve ma avvincente, piena di trappole,",
                 "segreti nascosti e tesori scintillanti."
-            ]
+            ],
+            "img_alt": "Il banner del gioco `Goblin Junior Adventure`",
+            "img_desc": "Il banner del gioco <strong>Goblin Jr. Adventure</strong>"
         },
 
         "zombie": {
@@ -29,7 +33,9 @@
                 "in questo <strong>tower defense</strong> isometrico.",
                 "Ho realizzato i sistemi principali: la <em>rete di portali</em>, la validazione del posizionamento basata sulle collisioni,",
                 "gli eventi di salvataggio dei sopravvissuti e l'interfaccia del negozio data-driven."
-            ]
+            ],
+            "img_alt": "Il banner del gioco `Zombie Siege Chronicles`",
+            "img_desc": "Il banner del gioco <strong>Zombie Siege Chronicles</strong>"
         },
 
         "flying": {
@@ -39,7 +45,9 @@
                 "disponibile per <strong>Windows e Android</strong>.",
                 "Guida l'uccellino tra gli ostacoli con semplici comandi 'one-touch'",
                 "e punta al punteggio più alto in una sfida infinita."
-            ]
+            ],
+            "img_alt": "Il banner del gioco `Flying Bird`",
+            "img_desc": "Il banner del gioco <strong>Flying Bird</strong>"
         },
 
         "wizard": {
@@ -49,7 +57,9 @@
                 "dotato di un sistema di combattimento con <em>lancio automatico degli incantesimi</em>.",
                 "Scegli i potenziamenti, gestisci i bonus basati sui diamanti e sopravvivi a ondate di nemici sempre più difficili.",
                 "<em>Demo pre-alpha</em> che mostra le meccaniche principali implementate sia in C++ che in Blueprints."
-            ]
+            ],
+            "img_alt": "Il banner del gioco `WizardScape: The Magic Chase`",
+            "img_desc": "Il banner del gioco <strong>WizardScape: The Magic Chase</strong>"
         },
 
         "more": {

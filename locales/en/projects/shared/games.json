@@ -6,7 +6,9 @@
                 "Play as a daring <strong>archaeologist</strong> hunting for an ancient mysterious relic.",
                 "This action-adventure demo, inspired by Tomb Raider and Uncharted, blends a <em>dynamic movement system</em>,",
                 "environmental puzzles and gunfights against robots in ancient ruins."
-            ]
+            ],
+            "img_alt": "The `Ruins' Rhapsody` game demo banner",
+            "img_desc": "The <strong>Ruins' Rhapsody</strong> game demo banner"
         },
 
         "goblin": {
@@ -16,7 +18,9 @@
                 "Designed for kids and casual players, with a focus on accessibility and immediate fun,",
                 "this <strong>collect-a-thon platformer</strong> is a short but thrilling experience full of traps,",
                 "hidden secrets and glittering treasures."
-            ]
+            ],
+            "img_alt": "The `Goblin Junior Adventure` game banner",
+            "img_desc": "The <strong>Goblin Jr. Adventure</strong> game banner"
         },
 
         "zombie": {
@@ -27,7 +31,9 @@
                 "in this isometric <strong>tower defense</strong> game.",
                 "I built the core systems: the <em>portal network</em>, collision-based placement validation,",
                 "survivor rescue events and the data-driven shop UI."
-            ]
+            ],
+            "img_alt": "The `Zombie Siege Chronicles` game banner",
+            "img_desc": "The <strong>Zombie Siege Chronicles</strong> game banner"
         },
 
         "flying": {
@@ -37,7 +43,9 @@
                 "available on <strong>Windows and Android</strong>.",
                 "Guide the bird through obstacles with simple one-touch controls",
                 "and chase the highest score in an endless run."
-            ]
+            ],
+            "img_alt": "The `Flying Bird` game banner",
+            "img_desc": "The <strong>Flying Bird</strong> game banner"
         },
 
         "wizard": {
@@ -47,7 +55,9 @@
                 "with an <em>auto-cast spell combat system</em>.",
                 "Choose your upgrades, manage diamond-based power-ups and survive increasingly difficult enemy waves.",
                 "<em>Pre-Alpha demo</em> showcasing core mechanics in both C++ and Blueprints."
-            ]
+            ],
+            "img_alt": "The `WizardScape: The Magic Chase` game banner",
+            "img_desc": "The <strong>WizardScape: The Magic Chase</strong> game banner"
         },
 
         "more": {
