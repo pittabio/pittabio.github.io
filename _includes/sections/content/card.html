@@ -7,11 +7,14 @@ USAGE Example
 /%/}
 
 NOTE: OBJECT is a `_data` entry with these fields:
-    name    = "name.to.include"     (i18n key of the title)
-    desc    = "desc.to.include"     (i18n key of the description, can contain HTML)
-    page    = "/link/to/include"    (optional, the title becomes a link)
-    img     = "/image/source"       (optional, opens with openOneImage on click)
-    img_alt = "image.alt"           (optional, alt text of the image)
+    name     = "name.to.include"     (i18n key of the title)
+    desc     = "desc.to.include"     (i18n key of the description, can contain HTML)
+    page     = "/link/to/include"    (optional, the title becomes a link)
+    img      = "/image/source"       (optional, opens with openOneImage on click)
+    img_alt  = "image.alt"           (optional, alt text of the image - used together with the img)
+    img_desc = "img.desc.to.include" (optional, i18n key for the description of the image when opened - used together with the img)
+
+`img`, `img_alt` and `img_desc` they must be used together
 
 Buttons: up to 3, with N = 1, 2, 3
     linkN      = "/link/to/include" (URL of the button)
@@ -36,10 +39,10 @@ Position: link1 = left, link2 = center, link3 = right.
     {% endif %}
 
     <!-- Image -->
-    {% if o.img %}
-        <img src="{{ o.img }}"
-             alt="{{ o.img_alt }}"
-             onclick="openOneImage(this)" />
+    {% if o.img and o.img and o.img_desc %}
+        <img src="{{ o.img }}" alt="{{ o.img_alt }}"
+             data-desc="{{ o.img_desc }}"
+             onclick="openGallery(this)" />
     {% endif %}
 
     <!-- Description -->
