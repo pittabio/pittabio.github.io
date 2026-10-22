@@ -1,3 +1,16 @@
+{% comment %}
+// -- A LIST OF TOOL ICONS -- //
+
+USAGE Example
+{/%/ include sections/legal/skills-icons.html /%/}
+
+NOTE: No parameters needed.
+The tools are read from `site.data.licenses.tools`,
+and only the entries with an image are rendered,
+loaded lazily and with the entry name as alt text.
+
+{% endcomment %}
+
 <div class="skills">
     {% for item in site.data.licenses.tools %}
         {% if item.image %}
