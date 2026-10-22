@@ -1,3 +1,29 @@
+{% comment %}
+// -- A REUSABLE LICENSE ITEM -- //
+
+USAGE Example
+{/%/ include sections/legal/license-item.html
+    item = ITEM
+/%/}
+
+NOTE: ITEM is a `_data` entry with these fields:
+    name          = "name.to.include"       (plain text, not translated)
+    image         = "/image/source"         (optional, used only if svg is missing)
+    svg           = "svg-class"             (optional, used only if image is missing)
+    author        = "author.name"           (optional)
+    author_url    = "/link/to/include"      (optional, only together with author)
+    source        = "source.name"           (text of the source link)
+    source_url    = "/link/to/include"      (optional, the source is shown only if present)
+    license       = "license.name"          (optional)
+    license_url   = "/link/to/include"      (optional, only together with license)
+    trademark     = "owner.name"            (optional, owner of the brand if the icon is one)
+    trademark_url = "/link/to/include"      (optional, only together with trademark)
+    note          = "note.to.include"       (optional, i18n key, can contain HTML)
+
+Each optional field is rendered in the list only if it is present.
+
+{% endcomment %}
+
 <article class="license-item">
     {% assign i = include.item %}
     <!-- Name of the item -->
