@@ -20,7 +20,8 @@
             "<br>",
             "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
             "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
-        ]
+        ],
+        "img_alt": "My mascotte, it's an orange fox with white accents"
     },
 
     "tools": {

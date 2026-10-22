@@ -20,7 +20,8 @@
             "<br>",
             "<b>Codice sorgente:</b> Il codice sorgente di questo sito è protetto da copyright. Viene fornito esclusivamente a scopo di consultazione e studio.",
             "Non è consentito copiarlo, ridistribuirlo, utilizzarlo a fini commerciali o crearne opere derivate senza esplicita autorizzazione."
-        ]
+        ],
+        "img_alt": "La mia mascotte, è una volpe arancione con dettagli bianchi"
     },
 
     "tools": {

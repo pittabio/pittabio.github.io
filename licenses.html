@@ -19,9 +19,11 @@ description: This page lists the usage licenses for the site.
 
     <!-- The license of this site -->
     <section id="site" class="cont_left">
-        <h3  data-i18n="site.title"></h3>
-        <img src="media/fox/fox.png" alt="The orange fox is my logo"/>
-        <p   data-i18n-html="site.desc"></p>
+        {% include sections/content/block.html
+            title = "site.title" h = "h3"
+            img = "/media/fox/fox.png" img_alt = "site.img_alt"
+            p = "site.desc"
+        %}
     </section>
 
     <!-- Get the data folder -->
@@ -29,45 +31,57 @@ description: This page lists the usage licenses for the site.
 
     <!-- The licenses of the tools (images or icons) -->
     <section id="tools" class="cont_left">
-        <h3 data-i18n="tools.title"></h3>
-        <p  data-i18n-html="tools.desc"></p>
-        <br>
+        {% include sections/content/block.html
+            title = "tools.title" h = "h3"
+            p = "tools.desc"
+        %}
+
+        <br><!-- break -->
 
         {% for item in l.tools %}
-            {% include sections/license-item.html item=item %}
+            {% include sections/legal/license-item.html item=item %}
         {% endfor %}
     </section>
 
     <!-- The licenses of the social icons -->
     <section id="social" class="cont_left">
-        <h3 data-i18n="social.title"></h3>
-        <p  data-i18n-html="social.desc"></p>
-        <br>
+        {% include sections/content/block.html
+            title = "social.title" h = "h3"
+            p = "social.desc"
+        %}
+
+        <br><!-- break -->
 
         {% for item in l.social %}
-            {% include sections/license-item.html item=item %}
+            {% include sections/legal/license-item.html item=item %}
         {% endfor %}
     </section>
 
     <!-- The licenses of the interface (ui svg icons) -->
     <section id="ui" class="cont_left">
-        <h3 data-i18n="ui.title"></h3>
-        <p  data-i18n-html="ui.desc"></p>
-        <br>
+        {% include sections/content/block.html
+            title = "ui.title" h = "h3"
+            p = "ui.desc"
+        %}
+
+        <br><!-- break -->
 
         {% for item in l.interface %}
-            {% include sections/license-item.html item=item %}
+            {% include sections/legal/license-item.html item=item %}
         {% endfor %}
     </section>
 
     <!-- The licenses of the images -->
     <section id="img" class="cont_left">
-        <h3 data-i18n="images.title"></h3>
-        <p  data-i18n-html="images.desc"></p>
-        <br>
+        {% include sections/content/block.html
+            title = "images.title" h = "h3"
+            p = "images.desc"
+        %}
+
+        <br><!-- break -->
 
         {% for item in l.images %}
-            {% include sections/license-item.html item=item %}
+            {% include sections/legal/license-item.html item=item %}
         {% endfor %}
     </section>
 
