@@ -81,10 +81,10 @@
         "title": "Istruzione e Formazione",
 
         "gitkraken": {
-            "date": "Ottobre 2025",
-            "role": "Specialista Certificato Git da GitKraken",
-            "institution": "GitKraken Learn · Online",
-            "details": {
+            "tag": "Ottobre 2025",
+            "title": "Specialista Certificato Git da GitKraken",
+            "subtitle": "GitKraken Learn · Online",
+            "points": {
                 "1": "Fondamenti di Git — Corso di Certificazione",
                 "2": "Superamento dell'esame di certificazione da 60 domande",
                 "3": "Gestione avanzata dei repository e workflow collaborativi",
@@ -93,10 +93,10 @@
         },
 
         "rainbow": {
-            "date": "2023 – 2024",
-            "role": "Gameplay Developer — Master in Unreal C++",
-            "institution": "Rainbow Academy · Digital Entertainment Academy · Roma, Italia",
-            "details": {
+            "tag": "2023 - 2024",
+            "title": "Gameplay Developer · Master in Unreal C++",
+            "subtitle": "Rainbow Academy · Digital Entertainment Academy · Roma, Italia",
+            "points": {
                 "1": "Votazione Finale: <strong>95/100</strong>",
                 "2": "Eccellenza Modulo: <strong>100/100 in Programmazione C++</strong>",
                 "3": "Programmazione avanzata in Blueprint e C++",
@@ -108,10 +108,10 @@
         },
 
         "audio": {
-            "date": "2018 – 2020",
-            "role": "Certificato di Tecnico del Suono",
-            "institution": "Accademia Professionale per lo Spettacolo · Italia",
-            "details": {
+            "tag": "2018 - 2020",
+            "title": "Certificato di Tecnico del Suono",
+            "subtitle": "Accademia Professionale per lo Spettacolo · Italia",
+            "points": {
                 "1": "Propagazione del suono ed acustica",
                 "2": "Uso professionale di mixer e apparecchiature audio",
                 "3": "Mixing e mastering con Cubase",
@@ -120,10 +120,10 @@
         },
 
         "it": {
-            "date": "2011 – 2016",
-            "role": "Diploma Tecnico — Informatica e Telecomunicazioni",
-            "institution": "Alessandro Volta · Istituto Tecnico · Guidonia, Italia",
-            "details": {
+            "tag": "2011 - 2016",
+            "title": "Diploma Tecnico · Informatica e Telecomunicazioni",
+            "subtitle": "Alessandro Volta · Istituto Tecnico · Guidonia, Italia",
+            "points": {
                 "1": "Programmazione C++ a livello intermedio",
                 "2": "Corso extra-curriculare di Arduino",
                 "3": "Basi di Java, SQL e HTML",

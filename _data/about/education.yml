@@ -1,21 +1,23 @@
 # Newest first.
-# `details` = how many details.N keys exist in locales/*/about.json
+# `details` = how many details.N keys exist in locales/#/*.json
+# tag, title, subtitle are shown by default (set to false = hide them)
+
 - id: gitkraken
-  details: 4
+  points: 4
   url: "https://learn.gitkraken.com/certificates/06p4apf1rm"
   url_text: certificate.gitkraken
 
 - id: rainbow
-  details: 7
+  points: 7
   url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
   url_text: certificate.rainbow
 
 - id: audio
-  details: 4
+  points: 4
   url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
   url_text: certificate.audio
 
 - id: it
-  details: 4
+  points: 4
   url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
   url_text: certificate.it

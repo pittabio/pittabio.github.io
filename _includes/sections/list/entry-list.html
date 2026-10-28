@@ -10,15 +10,22 @@ USAGE Example
 NOTE:
 • "items" is a list, and each entry supports these fields:
     id = "item-id"
+
+    tag      = false                (optional, hides the tag)
+    title    = false                (optional, hides the title)
+    subtitle = false                (optional, hides the subtitle)
+
     details = 3 (number of details lines)
     url = "/link/to/include"    (optional)
     url_text = "url.text"       (optional, only together with url)
 
-The texts are read from the keys built as "prefix.id":
-• prefix.id.date
-• prefix.id.role
-• prefix.id.institution
-• prefix.id.details.1 ... prefix.id.details.N
+The texts are read from the i18n keys in locales/#/*.json (built as "prefix.id"):
+• prefix.id.tag
+• prefix.id.title
+• prefix.id.subtitle
+• prefix.id.points.1 ... prefix.id.points.N
+
+"url_text" is a full key (without prefix), e.g. "certificate.rainbow".
 
 {% endcomment %}
 
@@ -26,14 +33,20 @@ The texts are read from the keys built as "prefix.id":
     {% assign key = include.prefix | append: "." | append: item.id %}
 
     <div class="tl-item">
-        <!-- Date -->
-        <span class="tag" data-i18n="{{ key }}.date"></span>
+        <!-- Tag -->
+        {% unless item.tag == false %}
+            <span class="tag" data-i18n="{{ key }}.tag"></span>
+        {% endunless %}
 
-        <!-- Role -->
-        <h4 data-i18n="{{ key }}.role"></h4>
+        <!-- Title -->
+        {% unless item.title == false %}
+            <h4 data-i18n="{{ key }}.title"></h4>
+        {% endunless %}
 
-        <!-- Institution -->
-        <em data-i18n="{{ key }}.institution"></em>
+        <!-- Subtitle -->
+        {% unless item.subtitle == false %}
+            <em data-i18n="{{ key }}.subtitle"></em>
+        {% endunless %}
 
         <!-- url + url_text -->
         {% if item.url %}
@@ -41,12 +54,14 @@ The texts are read from the keys built as "prefix.id":
                class="tag" data-i18n="{{ item.url_text }}"></a>
         {% endif %}
 
-        <!-- Details -->
-        <ul>
-            {% for i in (1..item.details) %}
-                <li data-i18n-html="{{ key }}.details.{{ i }}"></li>
-            {% endfor %}
-        </ul>
+        <!-- Points -->
+        {% if item.points %}
+            <ul>
+                {% for i in (1..item.points) %}
+                    <li data-i18n-html="{{ key }}.points.{{ i }}"></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
     </div>
 {% endfor %}

@@ -81,10 +81,10 @@
         "title": "Education & Training",
 
         "gitkraken": {
-            "date": "October 2025",
-            "role": "Git Certified Specialist by GitKraken",
-            "institution": "GitKraken Learn · Online",
-            "details": {
+            "tag": "October 2025",
+            "title": "Git Certified Specialist by GitKraken",
+            "subtitle": "GitKraken Learn · Online",
+            "points": {
                 "1": "Foundations of Git — Certification Course",
                 "2": "Passed the 60-question certification exam",
                 "3": "Advanced repository management and collaboration workflows",
@@ -93,10 +93,10 @@
         },
 
         "rainbow": {
-            "date": "2023 – 2024",
-            "role": "Gameplay Developer — Master in Unreal C++",
-            "institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
-            "details": {
+            "tag": "2023 - 2024",
+            "title": "Gameplay Developer · Master in Unreal C++",
+            "subtitle": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
+            "points": {
                 "1": "Final Grade: <strong>95/100</strong>",
                 "2": "Module Excellence: <strong>100/100 in C++ Programming</strong>",
                 "3": "Advanced Blueprint and C++ programming",
@@ -108,10 +108,10 @@
         },
 
         "audio": {
-            "date": "2018 – 2020",
-            "role": "Audio Technician Certificate",
-            "institution": "Professional Academy for Entertainment · Italy",
-            "details": {
+            "tag": "2018 - 2020",
+            "title": "Audio Technician Certificate",
+            "subtitle": "Professional Academy for Entertainment · Italy",
+            "points": {
                 "1": "Sound propagation and acoustics",
                 "2": "Professional use of mixers and audio equipment",
                 "3": "Mixing and mastering with Cubase",
@@ -120,10 +120,10 @@
         },
 
         "it": {
-            "date": "2011 – 2016",
-            "role": "Technical Diploma — Computer Science & Telecommunications",
-            "institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
-            "details": {
+            "tag": "2011 - 2016",
+            "title": "Technical Diploma · Computer Science & Telecommunications",
+            "subtitle": "Alessandro Volta · Technical Institute · Guidonia, Italy",
+            "points": {
                 "1": "Intermediate C++ programming",
                 "2": "Extracurricular Arduino course",
                 "3": "Java, SQL and HTML foundations",
