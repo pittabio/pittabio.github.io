@@ -1,10 +1,13 @@
+// NOTE: no Liquid ({{ ... }}) in this file. Partials loaded with @use are NOT processed by Liquid.
+// URLs are relative to the compiled CSS (/style/core.css), so `fonts/x.woff2` -> /style/fonts/x.woff2
+
 /* `DM Sans` variable - Normal */
 @font-face {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 100 1000;
     font-display: swap;
-    src: url('{{ "/style/fonts/dm-sans-latin-wght-normal.woff2" | relative_url }}') format('woff2');
+    src: url('fonts/dm-sans-latin-wght-normal.woff2') format('woff2');
 }
 
 /* `DM Sans` variable - Italic */
@@ -13,7 +16,7 @@
     font-style: italic;
     font-weight: 100 1000;
     font-display: swap;
-    src: url('{{ "/style/fonts/dm-sans-latin-wght-italic.woff2" | relative_url }}') format('woff2');
+    src: url('fonts/dm-sans-latin-wght-italic.woff2') format('woff2');
 }
 
 
@@ -23,7 +26,7 @@
     font-style: normal;
     font-weight: 400 900;
     font-display: swap;
-    src: url('{{ "/style/fonts/playfair-display-latin-wght-normal.woff2" | relative_url }}') format('woff2');
+    src: url('fonts/playfair-display-latin-wght-normal.woff2') format('woff2');
 }
 
 /* `Playfair Display` variable - Italic */
@@ -32,5 +35,5 @@
     font-style: italic;
     font-weight: 400 900;
     font-display: swap;
-    src: url('{{ "/style/fonts/playfair-display-latin-wght-italic.woff2" | relative_url }}') format('woff2');
+    src: url('fonts/playfair-display-latin-wght-italic.woff2') format('woff2');
 }
