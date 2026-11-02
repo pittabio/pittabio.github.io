@@ -1,0 +1,36 @@
+/* `DM Sans` variable - Normal */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('{{ "/style/fonts/dm-sans-latin-wght-normal.woff2" | relative_url }}') format('woff2');
+}
+
+/* `DM Sans` variable - Italic */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('{{ "/style/fonts/dm-sans-latin-wght-italic.woff2" | relative_url }}') format('woff2');
+}
+
+
+/* `Playfair Display` variable - Normal */
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('{{ "/style/fonts/playfair-display-latin-wght-normal.woff2" | relative_url }}') format('woff2');
+}
+
+/* `Playfair Display` variable - Italic */
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('{{ "/style/fonts/playfair-display-latin-wght-italic.woff2" | relative_url }}') format('woff2');
+}

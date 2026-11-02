@@ -1,14 +1,13 @@
 ---
 ---
 
-/* ## IMPORTS ## */
+/* ## FILE USAGE ## */
+@use "fonts" as *;      // Local Fonts
 @use "common" as *;     // Common Folder
 @use "sections" as *;   // Sections Folder
 @use "pages" as *;      // Pages Folder
 @use "extra" as *;      // Extra Folder
 
-/* ## FONTS & ICONS ## */
-// Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+/* ## URL IMPORT ## */
 // Devicons
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
