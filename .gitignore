@@ -16,6 +16,8 @@ _site/
 .server/
 
 # Media
-.download/
 media/games/wizard-scape/gems/square/
 media/banner/gimp/
+
+# Backup
+.backup
