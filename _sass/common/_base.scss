@@ -7,6 +7,9 @@
     padding: 0;
 }
 
+// Translation loading
+html.i18n-loading body { visibility: hidden; }
+
     /* # Typography Mixins # */
 
 // Common Base Text Style
@@ -45,13 +48,14 @@ html, body {
 // Base HTML settings: smooth scrolling and font antialiasing
 html {
     // Typograph calculation [min, const + coeff, max]
-    font-size: clamp(16px, .234vw + 13px, 22px);
+    font-size: clamp(1rem, .234vw + .8125rem, 1.375rem);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 // Base body styles: colors, font and overflow
@@ -341,6 +345,11 @@ img {
     main {
         margin-top: clamp(3rem, 3.922vw + 2.118rem, 4rem);
         padding: var(--main-padding-sm);
+    }
+
+    // Base body styles
+    body {
+        min-height: 100dvh;
     }
 
     // Grid on column
