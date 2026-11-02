@@ -4,8 +4,15 @@ url: "https://pittabio.github.io"
 baseurl: ""
 encoding: utf-8
 include: [".well-known"]
+
 sass:
     sass_dir: _sass
     style: compressed
 plugins:
     - jekyll-sitemap
+
+defaults:
+    - scope:
+          path: "media/**/*.pdf"
+      values:
+          sitemap: false
