@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ site.lang | default: 'en' }}"
+    {% if page.i18n_description %}
+        data-i18n-description="{{ page.i18n_description }}"
+    {% endif %}>
+
+<!-- ## HEAD ## -->
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Translation: hides the page until texts are translated (rule in `_base.scss`) -->
+    <script>
+        (function () {
+            try {
+                var lang = localStorage.getItem('preferredLang') || (navigator.language || 'en').slice(0, 2);
+                if (lang === 'en') return;
+
+                var root = document.documentElement;
+                root.classList.add('i18n-loading');
+                // Safety net: never leave the page hidden if main.js fails to load
+                setTimeout(function () { root.classList.remove('i18n-loading'); }, 3000);
+            } catch (e) {}
+        })();
+    </script>
 
     <!-- Favicon -->
     {% include head/favicon.html %}
@@ -13,19 +33,20 @@
     <!-- The page title -->
     <title
         {% if page.i18n_title %}
-            data-i18n="{{ page.i18n_title }}" data-suffix=" · {{ site.title }}"
+            data-i18n="{{ page.i18n_title }}" data-suffix=" · {{ site.author }}"
         {% endif %}>
-        {{ page.title }} · {{ site.title }}
+        {{ page.title }} · {{ site.author }}
     </title>
 
-    <!-- Preconnect to speed up font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload fonts -->
+    <link rel="preload" href="{{ '/style/fonts/dm-sans-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/style/fonts/playfair-display-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ '/style/core.css' | relative_url }}">
 </head>
 
+<!-- ## BODY ## -->
 <body id="top" class="{{ page.title | slugify }}">
     <!-- Header -->
     {% include common/header.html %}
@@ -39,7 +60,8 @@
     {% include common/footer.html %}
     {% include common/cookies.html %}
 
-    <!-- Scripts -->
+    <!-- # SCRIPTS # -->
+    <script>window.SITE_BASEURL = {{ site.baseurl | jsonify }};</script>
     <script src="{{ '/scripts/main.js' | relative_url }}"></script>
     <script src="{{ '/scripts/images.js' | relative_url }}"></script>
 </body>
