@@ -36,10 +36,19 @@
         flex-shrink: 0;
     }
 
-    // The title (my name)
-    .title {
-        align-self: flex-start;
-        justify-self: flex-start;
+    // The left section of the hero
+    article {
+        @include base.container-style (
+            $align: flex-start,
+            $justify: flex-start,
+            $text: left
+        );
+
+        // The title (name)
+        .title {
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
     }
 
     // The info container
