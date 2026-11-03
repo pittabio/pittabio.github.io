@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Licenses
+title: Licenses & Privacy
 i18n_title: head_title
-description: This page lists the usage licenses for the site.
+description: Licenses, credits and privacy information for this site.
 ---
 
 <section id="license">
     <h2 data-i18n="title"></h2>
 
-    <!-- Sections Links -->
-    <section id="sections" class="flexbox">
+    <!-- Summary links -->
+    <section id="summary" class="flexbox">
         <a href="#site" data-i18n="site.title"></a>
+        <a href="#privacy" data-i18n="privacy.title"></a>
         <a href="#tools" data-i18n="tools.title"></a>
         <a href="#social" data-i18n="social.title"></a>
         <a href="#ui"   data-i18n="ui.title"></a>
@@ -24,6 +25,29 @@ description: This page lists the usage licenses for the site.
             img = "/media/fox/fox.png" img_alt = "site.img_alt"
             p = "site.desc"
         %}
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy" class="cont_left">
+        {% include sections/content/block.html
+            title = "privacy.title" h = "h3"
+            p = "privacy.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.hosting.title" h = "h4"
+            p = "privacy.hosting.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.storage.title" h = "h4"
+            p = "privacy.storage.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.stats.title" h = "h4"
+            p = "privacy.stats.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.form.title" h = "h4"
+            p = "privacy.form.desc" %}
     </section>
 
     <!-- Get the data folder -->

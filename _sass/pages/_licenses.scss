@@ -5,9 +5,27 @@
     align-items: flex-start;
     padding-top: var(--pad-top);
 
+    // Every section
+    section {
+        scroll-margin-top: calc(var(--hedr-h) + 1rem);
+    }
+
+    // The summary links - first section
+    #summary {
+        align-self: center;
+        align-content: center;
+        justify-self: center;
+        justify-items: center;
+
+        max-width: fit-content;
+        border: 1px var(--accent) solid;
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
     // Stretch these to the full container width so their text actually
     // starts at the left edge, instead of being a centered narrow block.
-    h3, p,
+    h3, h4, p,
     .license-item {
         align-self: stretch;
         justify-items: flex-start;

@@ -1,6 +1,50 @@
 {
-    "title": "LICENZE",
-    "head_title": "Licenze",
+    "title": "Licenze e Privacy",
+    "head_title": "Licenze e Privacy",
+
+    "privacy": {
+        "title": "Privacy",
+        "desc": [
+            "Questa sezione spiega cosa succede ai tuoi dati quando visiti questo sito.",
+            "Il titolare del trattamento è Fabio Pittaccio.",
+            "<br>",
+            "Per chiedere informazioni sui tuoi dati (accesso, rettifica o cancellazione) usa il <a href='/contacts.html#contact-form'>modulo di contatto</a>."
+        ],
+        "stats": {
+            "title": "Statistiche",
+            "desc": [
+                "Questo sito usa <a href='https://umami.is/'>Umami</a>, un servizio attento alla privacy, per contare le visite.",
+                "Non usa cookie, non salva nulla sul tuo dispositivo e non ti traccia tra siti diversi.",
+                "Registra solo informazioni aggregate come pagine visitate, provenienza, browser, sistema operativo, tipo di dispositivo e paese.",
+                "<br>",
+                "I dati sono conservati nella regione UE di Umami Cloud."
+            ]
+        },
+        "form": {
+            "title": "Modulo di contatto",
+            "desc": [
+                "Se mi scrivi tramite il modulo, nome, indirizzo email, oggetto e messaggio che inserisci vengono inviati tramite <a href='https://web3forms.com/'>Web3Forms</a>, che me li recapita via email.",
+                "Li uso solo per risponderti e li conservo per il tempo necessario a gestire la tua richiesta.",
+                "<br>",
+                "Il captcha anti-spam è fornito da <a href='https://www.hcaptcha.com/'>hCaptcha</a>, che può trattare il tuo indirizzo IP e dati tecnici del browser per distinguere le persone dai bot."
+            ]
+        },
+        "hosting": {
+            "title": "Hosting",
+            "desc": [
+                "Questo sito è ospitato su <a href='https://pages.github.com/'>GitHub Pages</a>.",
+                "Come ogni servizio di hosting, GitHub può trattare dati tecnici come il tuo indirizzo IP per consegnare le pagine e mantenere il servizio sicuro.",
+                "Vedi l'<a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>informativa sulla privacy di GitHub</a>."
+            ]
+        },
+        "storage": {
+            "title": "Dati sul tuo dispositivo",
+            "desc": [
+                "Il sito salva nel browser (local storage) la lingua che scegli, per ricordarla alla prossima visita.",
+                "Resta sul tuo dispositivo e non viene usata per tracciarti."
+            ]
+        }
+    },
 
     "item": {
         "author": "Autore",

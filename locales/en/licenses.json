@@ -1,6 +1,50 @@
 {
-    "title": "LICENSES",
-    "head_title": "Licenses",
+    "title": "Licenses & Privacy",
+    "head_title": "Licenses & Privacy",
+
+    "privacy": {
+        "title": "Privacy",
+        "desc": [
+            "This section explains what happens to your data when you visit this site.",
+            "The data controller is Fabio Pittaccio.",
+            "<br>",
+            "To ask about your data (access, correction or deletion), use the <a href='/contacts.html#contact-form'>contact form</a>."
+        ],
+        "stats": {
+            "title": "Statistics",
+            "desc": [
+                "This site uses <a href='https://umami.is/'>Umami</a>, a privacy-focused service, to count visits.",
+                "It does not use cookies, does not store anything on your device and does not track you across websites.",
+                "It only records aggregated information such as visited pages, referrer, browser, operating system, device type and country.",
+                "<br>",
+                "Data is stored in the EU region of Umami Cloud."
+            ]
+        },
+        "form": {
+            "title": "Contact form",
+            "desc": [
+                "If you write to me through the form, the name, email address, subject and message you enter are sent through <a href='https://web3forms.com/'>Web3Forms</a>, which delivers them to me by email.",
+                "I use them only to reply to you, and I keep them for as long as needed to handle your request.",
+                "<br>",
+                "The anti-spam captcha is provided by <a href='https://www.hcaptcha.com/'>hCaptcha</a>, which may process your IP address and technical data about your browser to tell humans from bots."
+            ]
+        },
+        "hosting": {
+            "title": "Hosting",
+            "desc": [
+                "This site is hosted on <a href='https://pages.github.com/'>GitHub Pages</a>.",
+                "As with any web host, GitHub may process technical data such as your IP address to deliver the pages and keep the service secure.",
+                "See the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>GitHub privacy statement</a>."
+            ]
+        },
+        "storage": {
+            "title": "Data on your device",
+            "desc": [
+                "The site stores your language choice in your browser (local storage) to remember it on your next visit.",
+                "It stays on your device and is not used to track you."
+            ]
+        }
+    },
 
     "item": {
         "author": "Author",
