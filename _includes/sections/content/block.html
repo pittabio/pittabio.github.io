@@ -29,7 +29,6 @@ USAGE Example
         <{{ h }}
             class="title"
             data-i18n-html="{{ include.title }}">
-                {{ include.title }}
         </{{ h }}>
     {% endif %}
 
@@ -44,7 +43,7 @@ USAGE Example
         {% if include.img_desc %}
             <img src="{{ include.img }}"
                  alt="{{ include.img_alt }}"
-                 onclick="openGallery(this)" data-desc="{{ page.hero.img_desc }}">
+                 onclick="openGallery(this)" data-desc="{{ include.img_desc }}">
         {% else %}
             <img src="{{ include.img }}"
                  alt="{{ include.img_alt }}">
