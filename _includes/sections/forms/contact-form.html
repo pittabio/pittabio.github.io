@@ -1,5 +1,5 @@
 <!-- CONTACT FORM -->
-<form class="form" novalidate>
+<form class="form">
 
     <!-- Web3Forms bot-check honeypot (hidden) -->
     <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
@@ -8,6 +8,7 @@
     <label class="field">
         <span class="tag" data-i18n="form.name"></span>
         <input type="text" name="name" required
+               autocomplete="name"
                data-i18n-placeholder="form.placeholder.name">
     </label>
 
@@ -15,6 +16,7 @@
     <label class="field">
         <span class="tag" data-i18n="form.email"></span>
         <input type="email" name="email" required
+               autocomplete="email"
                data-i18n-placeholder="form.placeholder.email">
     </label>
 

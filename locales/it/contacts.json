@@ -63,6 +63,15 @@
         }
     },
 
+    "privacy": {
+        "title": "Privacy",
+        "form": [
+            "I dati che inserisci nel modulo (nome, email, oggetto e messaggio) sono usati solo per risponderti e conservati per il tempo necessario a gestire la tua richiesta.",
+            "<br>",
+            "Il messaggio viene inoltrato tramite Web3Forms e la protezione anti-spam è fornita da hCaptcha, che può trattare il tuo indirizzo IP."
+        ]
+    },
+
     "feedback": {
         "sending": "Invio in corso...",
 

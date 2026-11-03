@@ -63,6 +63,15 @@
         }
     },
 
+    "privacy": {
+        "title": "Privacy",
+        "form": [
+            "The data you enter in the contact form (name, email, subject and message) is used only to reply to you and is kept as long as needed to handle your request.",
+            "<br>",
+            "The message is delivered through Web3Forms, and the anti-spam captcha is provided by hCaptcha, which may process your IP address."
+        ]
+    },
+
     "feedback": {
         "sending": "Sending...",
 
