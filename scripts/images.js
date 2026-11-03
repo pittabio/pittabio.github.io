@@ -3,8 +3,9 @@
 USAGE (HTML)
 
 1. A single image (uses its own `src`):
-   <img src="/media/a.jpg" data-desc="gallery.a" onclick="openGallery(this)">
+   <img src="/media/a.jpg" alt="..." data-desc="gallery.a" onclick="openGallery(this)">
    Optional: data-full="/media/a-big.jpg" opens a higher resolution version.
+   If there is no description, the `alt` of the clicked image is reused in the overlay.
 
 2. A grid of N images (numbering must be consecutive: 1, 2, 3...):
    <img src="/media/cover.jpg"
@@ -17,6 +18,9 @@ USAGE (HTML)
 `data-desc*` is a translation key and the description can contain HTML: it is
 rendered like `data-i18n-html` in main.js (<strong>, <br>, <a>...). If the key is
 not found, the text itself is shown (and parsed as HTML), so plain text also works.
+
+Every element with onclick="openGallery(this)" is made keyboard accessible
+automatically (Tab to focus, Enter or Space to open).
 */
 
 (function () {
@@ -26,14 +30,10 @@ not found, the text itself is shown (and parsed as HTML), so plain text also wor
     let overlay, grid, closeLink, lastFocus;
 
     // 1. TRANSLATION HELPER
-    // `currentTranslations` is the `let` declared in main.js: it is not a property
-    // of `window`, but it is visible from any other classic script of the page.
-    function t(key, fallback = key) {
-        const dict = typeof currentTranslations !== 'undefined' ? currentTranslations : {};
-        const val = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), dict);
-
-        if (!val) return fallback;
-        return Array.isArray(val) ? val.join(' ') : val;
+    // Uses `t()` from main.js (same lookup, with fallback to the default language).
+    // If main.js is missing or the key is not found, `fallback` is returned.
+    function tr(key, fallback = key) {
+        return (typeof t === 'function' && t(key)) || fallback;
     }
 
     // 2. OVERLAY CREATION (once, on the first opening)
@@ -50,7 +50,7 @@ not found, the text itself is shown (and parsed as HTML), so plain text also wor
         closeLink.href = '#';
         closeLink.className = 'overlay-close';
         closeLink.setAttribute('data-i18n-aria', CLOSE_KEY); // main.js keeps it translated
-        closeLink.setAttribute('aria-label', t(CLOSE_KEY, 'Close'));
+        closeLink.setAttribute('aria-label', tr(CLOSE_KEY, 'Close'));
         closeLink.innerHTML = '<span class="close-svg" aria-hidden="true"></span>';
 
         // Scrollable area + grid that will contain the images
@@ -77,32 +77,33 @@ not found, the text itself is shown (and parsed as HTML), so plain text also wor
 
         // data-img1/data-desc1, data-img2/data-desc2, ... until the numbering stops
         for (let i = 1; el.dataset['img' + i]; i++) {
-            items.push({ src: el.dataset['img' + i], desc: el.dataset['desc' + i] || '' });
+            items.push({ src: el.dataset['img' + i], desc: el.dataset['desc' + i] || '', alt: '' });
         }
 
         // No numbered attributes: the clicked image itself
         if (!items.length) {
             const src = el.dataset.full || el.currentSrc || el.src;
-            if (src) items.push({ src, desc: el.dataset.desc || '' });
+            if (src) items.push({ src, desc: el.dataset.desc || '', alt: el.getAttribute('alt') || '' });
         }
 
         return items;
     }
 
     // 4. A SINGLE ITEM (image + description)
-    function createItem({ src, desc }) {
+    function createItem({ src, desc, alt }) {
         const fig = document.createElement('figure');
         fig.className = 'overlay-item';
 
         const img = document.createElement('img');
         img.src = src;
-        img.alt = ''; // the description below already says what it is
+        // With a description the caption already says what it is; otherwise reuse the original alt
+        img.alt = desc ? '' : alt;
         fig.append(img);
 
         if (desc) {
             const cap = document.createElement('figcaption');
             cap.setAttribute('data-i18n-html', desc); // if the language changes while it is open, main.js updates it
-            cap.innerHTML = t(desc);
+            cap.innerHTML = tr(desc);
             fig.append(cap);
         }
 
@@ -142,20 +143,49 @@ not found, the text itself is shown (and parsed as HTML), so plain text also wor
         lastFocus = null;
     }
 
+    // 7. KEYBOARD
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeGallery();
+
+        // Focus trap: Tab cycles inside the dialog while it is open
+        if (e.key === 'Tab' && overlay && overlay.classList.contains('active')) {
+            const focusable = [...overlay.querySelectorAll('a[href], button')];
+            if (!focusable.length) return;
+
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
     });
 
-    // 7. PUBLIC API
+    // Elements that open the gallery become reachable with Tab and work with Enter/Space
+    function makeTriggersAccessible() {
+        document.querySelectorAll('[onclick*="openGallery"]').forEach(el => {
+            if (!el.hasAttribute('tabindex')) el.tabIndex = 0;
+            el.setAttribute('role', 'button');
+            el.setAttribute('aria-haspopup', 'dialog');
+
+            el.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openGallery(el);
+                }
+            });
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', makeTriggersAccessible);
+
+    // 8. PUBLIC API
     window.openGallery = openGallery;
     window.closeGallery = closeGallery;
-
-    // Old names, so the existing HTML keeps working (remove them once the pages are updated)
-    window.openOneImage = openGallery;
-    window.openTwoImages = openGallery;
-    window.openThreeImages = openGallery;
-    window.closePopup = closeGallery;
-    window.t = t;
 })();
 
 // -- SELECT A RANDOM IMAGE -- //
