@@ -50,7 +50,7 @@
     transition: transform var(--transition), box-shadow var(--transition);
 
     // The title link
-    a:not(.tag) {
+    .mini-title {
         text-decoration: none;
         font-style: normal;
     }
