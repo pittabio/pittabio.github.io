@@ -193,7 +193,9 @@ async function changeLanguage(lang) {
 
         // Sync language buttons (Desktop and Mobile)
         document.querySelectorAll('.lang').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            const isActive = btn.getAttribute('data-lang') === lang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', String(isActive));
         });
 
         writeStorage('preferredLang', lang);
