@@ -59,6 +59,11 @@ footer {
             text-decoration: none;
         }
     }
+
+    .footer-links {
+        display: flex;
+        gap: 2rem;
+    }
 }
 
 /* # MOBILE # */

@@ -10,6 +10,7 @@
             "ARIA": {
                 "home": "Torna alla Home",
                 "nav": "Navigazione principale",
+                "overlay_close": "Chiudi gallery",
                 "menu_open": "Apri menu",
                 "menu_close": "Chiudi menu"
             }
@@ -18,6 +19,7 @@
         "footer": {
             "licenses": "LICENZE",
             "license_ARIA": "Licenze (apre in una nuova scheda)",
+            "cookies": "COOKIES",
             "back_top": "TORNA SU"
         },
 
