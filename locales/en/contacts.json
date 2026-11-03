@@ -69,6 +69,7 @@
         "success_title": "✅ Message sent successfully!",
         "success_body": "Thank you for reaching out. I'll get back to you as soon as possible.",
 
+        "error_captcha": "Please complete the captcha.",
         "error_title": "❌ Error sending the message.",
         "error_detail_prefix": "Detail: ",
         "error_body": "Please try again in a moment or contact me directly via email.",

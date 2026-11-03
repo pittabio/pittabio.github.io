@@ -17,6 +17,7 @@
         success_title:       "Message sent successfully!",
         success_body:        "Thank you for reaching out. I'll get back to you as soon as possible.",
 
+        error_captcha:       "Please complete the captcha.",
         error_title:         "Error sending the message.",
         error_detail_prefix: "Detail: ",
         error_body:          "Please try again in a moment or contact me directly via email.",
@@ -41,6 +42,13 @@
     /** Shows a native alert with a success or error message. **/
     function showFeedback(success, detail) {
         const t = getT();
+
+        // captcha not solved: do not even send (checkbox hCaptcha)
+        if (typeof hcaptcha !== "undefined" && !hcaptcha.getResponse()) {
+            showFeedback(false, t.error_captcha);
+            return;
+        }
+
         if (success) {
             window.alert(`${t.success_title}\n\n${t.success_body}`);
         } else {
@@ -70,6 +78,9 @@
                     `<span class="loading-svg"></span>`;
             }
 
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 s
+
             try {
                 const formData = new FormData(form);
                 formData.set("access_key", WEB3FORMS_ACCESS_KEY);
@@ -77,10 +88,12 @@
                 const response = await fetch(WEB3FORMS_ENDPOINT, {
                     method:  "POST",
                     headers: { "Accept": "application/json" },
-                    body:    formData
+                    body:    formData,
+                    signal:  controller.signal
                 });
 
-                const data = await response.json();
+                let data = {};
+                try { data = await response.json(); } catch (_) { /* not JSON */ }
 
                 if (response.ok && data.success) {
                     form.reset();
@@ -95,7 +108,9 @@
             } catch (networkError) {
                 resetCaptcha();
                 showFeedback(false, t.error_network);
+
             } finally {
+                clearTimeout(timeoutId);
                 if (submitBtn && originalBtnContent) {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnContent;
