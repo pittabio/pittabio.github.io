@@ -215,6 +215,11 @@ em {
     width: 100%;
 }
 
+// A normal container
+article {
+    @include container-style;
+}
+
 // Default site container
 .cont {
     @include container-style;
@@ -295,7 +300,7 @@ em {
 }
 
 // The image style to change
-@mixin img-style ($max-width: 750px) {
+@mixin img-style ($max-width: 752px) {
     @extend %img-base;
     max-width: $max-width;
 }
@@ -303,6 +308,15 @@ em {
 // The images
 img {
     @include img-style;
+}
+
+// iframe used to embed another HTML document
+// such as videos, maps, forms, or entire web pages
+iframe {
+    display: block;
+    height: 423px;
+    width: 100%;
+    max-width: 752px;
 }
 
     /* Decorations */

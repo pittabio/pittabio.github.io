@@ -6,8 +6,10 @@ USAGE Example
   tag       = "tag.to.include"      (optional)
   title     = "title.to.include"    (optional)
   h         = "h3"                  (optional, h1 by default)
-  img       = "/image/to/include"   (optional, use together with img_alt)
+  sub       = "subtitle.to.include" (optional)
+  img       = "/image/to/include"   (optional)
   img_alt   = "image.alt.text"      (optional, use together with img)
+  img_desc  = "image.desc.tesc"     (optional, use together with img)
   p         = "parag.to.include"    (optional)
   url       = "/link/include"       (optional)
   btn_text  = "button.text"         (optional)
@@ -24,12 +26,29 @@ USAGE Example
     <!-- Title -->
     {% if include.title %}
         {% assign h = include.h | default: "h1" %}
-        <{{ h }} class="title" data-i18n-html="{{ include.title }}">{{ include.title }}</{{ h }}>
+        <{{ h }}
+            class="title"
+            data-i18n-html="{{ include.title }}">
+                {{ include.title }}
+        </{{ h }}>
+    {% endif %}
+
+    <!-- A subtitle paragraph -->
+    {% if include.sub %}
+        <p data-i18n-html="{{ include.sub }}"></p>
+        <br>
     {% endif %}
 
     <!-- Image -->
     {% if include.img and include.img_alt %}
-        <img src="{{ include.img }}" alt="{{ include.img_alt }}">
+        {% if include.img_desc %}
+            <img src="{{ include.img }}"
+                 alt="{{ include.img_alt }}"
+                 onclick="openGallery(this)" data-desc="{{ page.hero.img_desc }}">
+        {% else %}
+            <img src="{{ include.img }}"
+                 alt="{{ include.img_alt }}">
+        {% endif %}
     {% endif %}
 
     <!-- The paragraph of the block -->
