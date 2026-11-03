@@ -19,19 +19,7 @@
         "footer": {
             "licenses": "LICENZE",
             "license_ARIA": "Licenze (apre in una nuova scheda)",
-            "cookies": "COOKIES",
             "back_top": "TORNA SU"
-        },
-
-        "cookies": {
-            "title": "Privacy ed Analisi [GDPR]",
-            "desc": [
-                "Utilizzo analisi anonime per capire come i visitatori interagiscono con il sito.",
-                "<br>",
-                "Non viene raccolto alcun dato personale."
-            ],
-            "accept": "Accetta",
-            "decline": "Rifiuta"
         },
 
         "card": {
