@@ -119,17 +119,61 @@
 
 //#endregion
 
-/* A line divider */
-.line {
-    border-top: 1px solid var(--border);
-    margin-top: 2rem;
+/* Dividers */
+
+// Simple line: just a border
+@mixin divider(
+    $border: 1px solid var(--border),
+    $margin: 2rem 0 0 0 // Top, right, bottom, left
+) {
+    border-top: $border;
+    margin: $margin;
+    width: 100%;
 }
 
-/* A line divider without margin */
-.line-nomargin {
-    border-top: 1px solid var(--border);
-    margin: 0 .5rem;
+// Line with text: two lines on the sides, no border on the container
+@mixin divider-text(
+    $border: 1px solid var(--border),
+    $margin: 2rem 0 0 0,
+    $gap: 1rem
+) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    margin: $margin;
+    width: 100%;
+
+    &::before,
+    &::after {
+        content: '';
+        flex: 1;
+        border-top: $border;
+    }
 }
+
+// Standard line divider
+.line {
+    @include divider;
+}
+
+// Line divider with custom margin
+.line-nomargin {
+    @include divider($margin: 0 .5rem);
+}
+
+// Line with a text in the center
+.line-text {
+    @include divider-text;
+    max-width: 40rem;
+
+    span {
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--text);
+    }
+}
+
 
 /* MEDIA MOBILE */
 @media (max-width: 768px) {
