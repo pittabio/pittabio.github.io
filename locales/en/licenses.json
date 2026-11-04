@@ -15,37 +15,45 @@
             "desc": [
                 "This site is hosted on <a href='https://docs.github.com/en/pages'>GitHub Pages</a>.",
                 "As with any web host, GitHub may process technical data such as your IP address to deliver the pages and keep the service secure.",
-                "See the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>GitHub privacy statement</a>.",
-                "<br>",
-                "Some icons are loaded from the <a href='https://www.jsdelivr.com/'>jsDelivr</a> CDN, which receives your IP address when your browser requests them."
-            ]
+                "GitHub also processes data in the United States and adheres to the EU-U.S. Data Privacy Framework.",
+                "Read the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>privacy policy</a> on the GitHub website."            ]
         },
         "storage": {
             "title": "Data on your device",
             "desc": [
                 "The site stores your language choice in your browser (local storage) to remember it on your next visit.",
-                "It stays on your device and is not used to track you."
+                "It stays on your device and is not used to track you.",
+                "<br>",
+                "On the contact page, hCaptcha may set technical cookies needed for the captcha to work"
             ]
         },
         "stats": {
             "title": "Statistics",
             "desc": [
-                "This site uses <a href='https://umami.is/'>Umami</a>, a privacy-focused analytics service, to count visits. Umami's tracker does not use cookies.",
-                "It records page views, referrer, browser, operating system, device type and approximate location.",
-                "To tell visits apart without cookies, Umami generates an identifier from the site ID, your IP address, your browser's User-Agent and a rotating salt.",
-                "I process this data based on my legitimate interest in understanding how the site is used.",
+                "This site uses <a href='https://umami.is/'>Umami</a>, a privacy-focused analytics service, to count visits. The Umami tracker does not use cookies.",
+                "It records page views, referral sources, browsers, operating systems, device types, and approximate locations.",
+                "To distinguish visits without using cookies, Umami generates an identifier [based on the current time].",
+                "It does not store your IP address in the statistics data; it only processes it temporarily, though it may appear in the technical and security logs of Umami and its service providers.",
+                "Umami processes this data on my behalf. Read the <a href='https://umami.is/privacy'>privacy policy</a> on the Umami website.",
                 "<br>",
-                "Analytics data is stored in the EU region of Umami Cloud (Frankfurt) and kept for 6 months.",
-                "See Umami's <a href='https://umami.is/privacy'>Privacy Policy</a>."
+                "Statistical data is stored in the EU region of Umami Cloud (Frankfurt) for 6 months.",
+                "See Umami’s <a href='https://umami.is/privacy'>Privacy Policy</a>."
             ]
         },
         "form": {
             "title": "Contact form",
             "desc": [
-                "If you write to me through the form, the name, email address, subject and message you enter are sent through <a href='https://web3forms.com/'>Web3Forms</a>, which delivers them to me by email.",
-                "I use them only to reply to you, and I keep them for as long as needed to handle your request.",
-                "<br>",
-                "The anti-spam captcha is provided by <a href='https://www.hcaptcha.com/'>hCaptcha</a>. It is loaded together with the contact page, so hCaptcha and Web3Forms receive your IP address and technical data about your browser when you open it, even if you don't send a message."
+                "If you write to me through the form, the name, email address, subject and message you enter are sent to <a href='https://web3forms.com/'>Web3Forms</a>, which delivers them to me by email and acts as my data processor.",
+                "Web3Forms keeps a copy for [up to 3 years / the period I have set] and uses Amazon Web Services, Cloudflare and Hetzner. It operates from India and, for transfers from the EU, applies Standard Contractual Clauses.",
+                "To protect the service from spam, it may send your IP address and email address to CleanTalk and Akismet.",
+                "I use the data only to reply to you, and I keep it for as long as needed to handle your request.",
+                "Read the <a href='https://web3forms.com/privacy'>privacy policy</a> on the Web3Forms website.",
+                "<br><br>",
+                "The anti-spam captcha is provided by <a href='https://www.hcaptcha.com/'>hCaptcha</a> (Intuition Machines, Inc., United States, certified under the Data Privacy Framework).",
+                "It is loaded together with the contact page, so hCaptcha receives your IP address and technical data about your browser when you open it, even if you don't send a message.",
+                "To tell whether you are a person it also collects information about how you interact with the page (for example mouse movements, scrolling, key presses or touches) and may use technical cookies.",
+                "Answers to its challenges may be used to label data for machine learning, without being linked to an identified person.",
+                "Read the <a href='https://www.hcaptcha.com/privacy'>privacy policy</a> on the hCaptcha website."
             ]
         }
     },
