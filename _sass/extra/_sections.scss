@@ -134,7 +134,7 @@
 // Line with text: two lines on the sides, no border on the container
 @mixin divider-text(
     $border: 1px solid var(--border),
-    $margin: 2rem 0 0 0,
+    $margin: 1em 0,
     $gap: 1rem
 ) {
     display: flex;
