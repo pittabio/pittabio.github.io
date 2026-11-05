@@ -1,0 +1,142 @@
+---
+layout: default
+---
+
+{% comment %}
+Layout for the projects pages, based on default.html
+Each object must be placed in the page's front matter.
+
+layout: project
+title: "Project Name"
+i18n_title: "project.title" (optional, for the translated title)
+description: "Project description for
+
+[required] (see block.html)
+hero:
+    [required]
+    tag, title, sub
+
+    [optionals]
+    img: "/media/folder/image.type"
+    img_alt: "project.hero.img_alt"   (use together with img)
+    img_desc: "project.hero.img_desc" (use together with img)
+
+[optional] (see entry-list.html)
+details:
+    prefix (where the i18n read the texts)
+    items:
+        (The `-` represents an object; ensure there is space for each element so that they appear in a column and within the object)
+        [required]:
+        - id: "details.object.name"
+
+          [shown by default (true is not necessary), set to false to hide]
+          tag: true/false
+          title: true/false
+          subtitle: true/false
+
+          [optionals]
+          url: https://github.com/pittabio
+          url_text: "details.items.site"
+          points: N (it's a number of list points)
+
+[optional]
+video:
+    header: "project.video.header"
+    src:    https://www.youtube-nocookie.com/embed/id
+    title:  "project.video.accesibility.title"
+
+[optional] (documentation, see block.html)
+doc:
+    title:  "project.documentation.title" (e.g.: "Project Documentation")
+    sub:    "project.documentation.subtitle" (the section description)
+    cards: (see card.html)
+        (The `-` represents an object; ensure there is space for each element so that they appear in a column and within the object)
+        [required]
+        - name: doc.object.name
+          desc: doc.object.description
+
+          [optionals]
+          page: "/link/to/include" (the title becomes a link)
+          img: "/media/folder/doc/card.img"
+          img_alt:  "project.doc.img_alt"  (use together with img)
+          img_desc: "project.doc.img_desc" (use together with img)
+
+[optional] (see cta.html)
+cta:
+    data: "data.name" (just the data name, neither the folder nor the extension is required)
+    title: "project.cta.title"
+    subtitle: "project.cta.subtitle"
+    divider: "divider.text"
+    more: "last.button.cta"
+    more_link: /cta/button/link
+
+{% endcomment %}
+
+<!-- ## HERO ## -->
+<section id="hero" class="cont">
+    {% include sections/content/block.html
+        tag      = page.hero.tag
+        title    = page.hero.title
+        img      = page.hero.img
+        img_alt  = page.hero.img_alt
+        img_desc = page.hero.img_desc
+        sub      = page.hero.sub
+    %}
+</section><!-- /hero/ -->
+
+<!-- ## DETAILS ## -->
+{% if page.details %}
+    <section id="details">
+        <div class="tl">
+            {% include sections/list/entry-list.html
+                prefix = page.details.prefix
+                items = page.details.items
+            %}
+        </div>
+    </section>
+{% endif %}<!-- /details/ -->
+
+<!-- ## VIDEO ## -->
+{% if page.video %}
+    <section id="video" class="cont">
+        <h2 data-i18n="{{ page.video.header }}"></h2>
+        <iframe
+            src="{{ page.video.src }}"
+            title="{{ page.video.title }}"
+            allowfullscreen loading="lazy"
+        ></iframe>
+    </section>
+{% endif %}
+
+<!-- ## DOCUMENTATION ## -->
+{% if page.doc %}
+    <section id="doc" class="cont">
+        {% include sections/content/block.html
+            title = page.doc.title
+            h = "h2"
+            sub = page.doc.sub
+        %}
+
+        <!-- Cards Grid -->
+        <div class="grid-column">
+            {% for c in page.doc.cards %}
+                {% include sections/content/card.html object=c %}
+            {% endfor %}
+        </div>
+
+    </section>
+{% endif %}
+
+<!-- ## CTA ## -->
+{% if page.cta %}
+    <section id="contact" class="cont">
+        {% include sections/content/cta.html
+            data = page.cta.data
+            title = page.cta.title
+            subtitle = page.cta.subtitle
+            divider = page.cta.divider
+            more = page.cta.more
+            more_link = page.cta.more_link
+        %}
+    </section>
+{% endif %}
