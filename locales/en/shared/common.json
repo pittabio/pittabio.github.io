@@ -27,6 +27,11 @@
             "about": "About Me",
             "fox_alt": "The mascotte of Fabio Pittaccio",
             "fox_desc": "The mascotte of <strong>Fabio Pittaccio</strong>"
+        },
+
+        "cta": {
+            "or": "or",
+            "more": "View more projects"
         }
     }
 }

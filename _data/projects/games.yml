@@ -20,6 +20,11 @@
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
+    # Project page - CTA section - 3rd button
+  cta_link3: "https://gitlab.com/pittabio/RuinsRhapsody"
+  cta_link3_name: "GitLab"
+  cta_link3_icon: "gitlab-w-svg"
+
 # Goblin Jr. Adventure
 - name: "$games.goblin.name"
   desc: "$games.goblin.desc"

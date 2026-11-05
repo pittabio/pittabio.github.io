@@ -27,6 +27,11 @@
             "about": "Su di me",
             "fox_alt": "La mascotte di Fabio Pittaccio",
             "fox_desc": "La mascotte di <strong>Fabio Pittaccio</strong>"
+        },
+
+        "cta": {
+            "or": "oppure",
+            "more": "Vedi altri progetti"
         }
     }
 }
