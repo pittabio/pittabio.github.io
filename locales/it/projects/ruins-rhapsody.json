@@ -68,37 +68,37 @@
                 "Fai clic <a href='/media/games/ruins-rhapsody/code-map.pdf' target='_blank'>qui</a>",
                 "per visualizzare la versione PDF in alta qualità."
             ],
-            "img_alt": "L'immagine illustra la logica di base e le interazioni tra le classi utilizzando blocchi collegati tra loro",
-            "img_desc": "L'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando dei blocchi"
+            "img_alt": "La panoramica dell'architettura di sistema iniziale mostra la logica di base e le interazioni tra le classi tramite blocchi interconnessi.",
+            "img_desc": "<strong>Architettura di sistema iniziale</strong>: L'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando blocchi interconnessi."
         },
         "components": {
             "title": "Logica del personaggio modulare",
             "desc": "Componenti C++ personalizzati che estendono la base MetaHuman per un framework di movimento riutilizzabile.",
-            "img_alt": "Stack dei componenti: Vista del blueprint del personaggio principale con i moduli C++ personalizzati (arrampicata, nuoto, inventario) collegati.",
+            "img_alt": "La vista dello stack dei componenti mostra il blueprint del personaggio principale con i moduli C++ personalizzati (arrampicata, nuoto, inventario) collegati.",
             "img_desc": "<strong>Stack dei componenti</strong>: Vista del <em>blueprint</em> del personaggio principale con i <strong>moduli C++</strong> personalizzati (arrampicata, nuoto, inventario) collegati."
         },
         "input": {
             "title": "Sistema di input avanzato",
             "desc": "Schema di controllo scalabile che utilizza i Data Asset di UE5 per gestire il movimento, il combattimento e le azioni dell'interfaccia utente.",
-            "img_alt": "Configurazione degli input: mappatura degli stati di movimento e interazione tramite il plugin Enhanced Input.",
+            "img_alt": "La vista della configurazione degli input mostra la mappatura degli stati di movimento e interazione tramite il plugin Enhanced Input.",
             "img_desc": "<strong>Configurazione degli input</strong>: Mappatura degli stati di movimento e interazione tramite il plugin <strong>Enhanced Input</strong>."
         },
         "ai": {
             "title": "IA e calibrazione dei parametri",
             "desc": "Configurazione per il rilevamento dei nemici, i sistemi di bottino procedurali e il feedback visivo.",
-            "img_alt": "Configurazione dell'IA: Dettagli dei componenti di rilevamento e dei parametri di combattimento per i nemici robotici.",
+            "img_alt": "I dettagli della configurazione dell'IA mostrano i componenti di rilevamento e i parametri di combattimento per i nemici robotici.",
             "img_desc": "<strong>Configurazione dell'IA</strong>: Dettagli dei <strong>componenti di rilevamento</strong> e dei parametri di combattimento per i <em>nemici robotici</em>."
         },
         "bt": {
             "title": "Behavior tree dell'IA",
             "desc": "Flusso logico caratterizzato da 3 stati principali: pattugliamento autonomo, inseguimento del giocatore e combattimento a distanza.",
-            "img_alt": "Behavior Tree: Flusso logico visivo che gestisce il processo decisionale dei nemici e le transizioni di stato.",
+            "img_alt": "Il flusso logico visivo del behavior tree gestisce il processo decisionale dei nemici e le transizioni di stato.",
             "img_desc": "<strong>Behavior Tree</strong>: Flusso logico visivo che gestisce il processo decisionale dei nemici e le transizioni di stato."
         },
         "world": {
             "title": "Composizione del mondo e streaming",
             "desc": "Implementazione del Level Streaming per ottimizzare le prestazioni e le transizioni delle aree.",
-            "img_alt": "Gestione dei livelli: configurazione del caricamento asincrono per mantenere alte prestazioni senza interruzioni di gioco.",
+            "img_alt": "La configurazione della gestione dei livelli mostra il caricamento asincrono impostato per mantenere alte prestazioni senza interruzioni di gioco.",
             "img_desc": "<strong>Gestione dei livelli</strong>: Configurazione del <em>caricamento asincrono</em> per mantenere alte prestazioni senza interruzioni di gioco."
         }
     },
