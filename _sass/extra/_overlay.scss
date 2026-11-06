@@ -12,6 +12,10 @@ Opened by openGallery() (images.js). Generated structure:
             └── figcaption          (may contain HTML)
 */
 
+[onclick*="openGallery"] {
+    cursor: pointer;
+}
+
 // Scroll lock while the overlay is open
 body.no-scroll {
     overflow: hidden;
@@ -67,7 +71,7 @@ body.no-scroll {
 .overlay-grid {
     @include base.grid-column-style(
         $cols: var(--cols, 1),
-        $align: stretch
+        $align: center // TODO: to choose between center, start or stretch
     );
 
     --img-h: 55dvh; // max image height when there are more images
@@ -116,7 +120,7 @@ body.no-scroll {
     .overlay-grid {
         @include base.grid-column-style(
             $cols: 1,
-            $align: stretch
+            $align: center // TODO: to choose between center, start or stretch
         );
 
         --img-h: 45dvh;
