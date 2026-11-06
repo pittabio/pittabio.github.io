@@ -24,31 +24,31 @@
             "tag": "Meccaniche",
             "title": "Funzionalità di gioco immersive",
             "points": {
-                "1": "<strong>Movimento avanzato:</strong> Un sistema di movimento multimodale che include arrampicata, navigazione su sporgenze e meccaniche di nuoto subacqueo.",
-                "2": "<strong>Interazione ambientale:</strong> Complesse risoluzioni di enigmi tramite meccaniche chiave-porta e trigger basati sull'inventario.",
-                "3": "<strong>Combattimento tattico:</strong> Affronta diverse minacce IA (animali, robot, umani) con sistemi di armi modulari e gestione delle munizioni.",
-                "4": "<strong>Esplorazione:</strong> Tre distinte zone atmosferiche: Tempio Antico, un lago con grotta sotterranea e rovine all'aperto."
+                "1": "<strong>Movimento avanzato:</strong> un sistema di movimento multimodale che include arrampicata, navigazione su sporgenze e meccaniche di nuoto subacqueo.",
+                "2": "<strong>Interazione ambientale:</strong> complesse risoluzioni di enigmi tramite meccaniche chiave-porta e trigger basati sull'inventario.",
+                "3": "<strong>Combattimento tattico:</strong> affronta diverse minacce IA (animali, robot, umani) con sistemi di armi modulari e gestione delle munizioni.",
+                "4": "<strong>Esplorazione:</strong> tre distinte zone atmosferiche: il Tempio Antico, un lago con grotta sotterranea e rovine all'aperto."
             }
         },
         "tech": {
             "tag": "Tecnica",
             "title": "Architettura di base (C++)",
             "points": {
-                "1": "<strong>Logica basata su componenti:</strong> Componenti C++ personalizzati per arrampicata, nuoto (con resistenza dell'apnea) e gestione dell'inventario.",
-                "2": "<strong>Level Streaming:</strong> Implementazione di un mondo persistente con streaming dei sottolivelli per eliminare le schermate di caricamento e ottimizzare la memoria.",
-                "3": "<strong>Sistema di salvataggio/caricamento:</strong> Una robusta pipeline di serializzazione in C++ che tiene traccia degli stati dei sottolivelli, della posizione del giocatore e della persistenza dell'inventario.",
-                "4": "<strong>Percezione IA:</strong> I nemici utilizzano componenti di rilevamento (Sensing Components) e behavior tree personalizzati per stati di combattimento e rilevamento realistici.",
-                "5": "<strong>Collisioni personalizzate:</strong> Canali di tracciamento ECC (Trace Channels) specializzati per tiri ad alta precisione, rilevamento dell'arrampicata e interazioni fluide."
+                "1": "<strong>Logica basata su componenti:</strong> componenti C++ personalizzati per arrampicata, nuoto (con resistenza dell'apnea) e gestione dell'inventario.",
+                "2": "<strong>Level Streaming:</strong> implementazione di un mondo persistente con streaming dei sottolivelli per eliminare le schermate di caricamento e ottimizzare la memoria.",
+                "3": "<strong>Sistema di salvataggio/caricamento:</strong> una robusta pipeline di serializzazione in C++ che tiene traccia degli stati dei sottolivelli, della posizione del giocatore e della persistenza dell'inventario.",
+                "4": "<strong>Percezione IA:</strong> i nemici utilizzano componenti di rilevamento (Sensing Components) e Behavior Tree personalizzati per stati di combattimento e rilevamento realistici.",
+                "5": "<strong>Collisioni personalizzate:</strong> canali di tracciamento ECC (Trace Channels) specializzati per tiri ad alta precisione, rilevamento dell'arrampicata e interazioni fluide."
             }
         },
         "systems": {
             "tag": "Sistemi",
             "title": "Ottimizzazione e UX",
             "points": {
-                "1": "<strong>Pipeline di salvataggio/caricamento:</strong> Un robusto sistema di serializzazione che traccia gli stati dei sottolivelli, la progressione del giocatore e la persistenza dell'inventario.",
-                "2": "<strong>Localizzazione:</strong> Framework di traduzione integrato con attivazione a runtime tra inglese e italiano.",
-                "3": "<strong>UI interattiva:</strong> Widget del menu principale 3D integrati nell'ambiente di gioco con design audio ambientale stratificato.",
-                "4": "<strong>Prestazioni:</strong> Approfondita profilazione e ottimizzazione degli asset per mantenere un'esperienza stabile e ottimizzata su Windows."
+                "1": "<strong>Pipeline di salvataggio/caricamento:</strong> un robusto sistema di serializzazione che traccia gli stati dei sottolivelli, la progressione del giocatore e la persistenza dell'inventario.",
+                "2": "<strong>Localizzazione:</strong> framework di traduzione integrato con attivazione a runtime tra inglese e italiano.",
+                "3": "<strong>UI interattiva:</strong> widget del menu principale 3D integrati nell'ambiente di gioco con design audio ambientale stratificato.",
+                "4": "<strong>Prestazioni:</strong> approfondita profilazione e ottimizzazione degli asset per mantenere un'esperienza stabile e ottimizzata su Windows."
             }
         }
     },
@@ -69,37 +69,37 @@
                 "per visualizzare la versione PDF in alta qualità."
             ],
             "img_alt": "La panoramica dell'architettura di sistema iniziale mostra la logica di base e le interazioni tra le classi tramite blocchi interconnessi.",
-            "img_desc": "<strong>Architettura di sistema iniziale</strong>: L'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando blocchi interconnessi."
+            "img_desc": "<strong>Architettura di sistema iniziale</strong>: l'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando blocchi interconnessi."
         },
         "components": {
             "title": "Logica del personaggio modulare",
             "desc": "Componenti C++ personalizzati che estendono la base MetaHuman per un framework di movimento riutilizzabile.",
             "img_alt": "La vista dello stack dei componenti mostra il blueprint del personaggio principale con i moduli C++ personalizzati (arrampicata, nuoto, inventario) collegati.",
-            "img_desc": "<strong>Stack dei componenti</strong>: Vista del <em>blueprint</em> del personaggio principale con i <strong>moduli C++</strong> personalizzati (arrampicata, nuoto, inventario) collegati."
+            "img_desc": "<strong>Stack dei componenti</strong>: vista del <em>blueprint</em> del personaggio principale con i <strong>moduli C++</strong> personalizzati (arrampicata, nuoto, inventario) collegati."
         },
         "input": {
             "title": "Sistema di input avanzato",
             "desc": "Schema di controllo scalabile che utilizza i Data Asset di UE5 per gestire il movimento, il combattimento e le azioni dell'interfaccia utente.",
             "img_alt": "La vista della configurazione degli input mostra la mappatura degli stati di movimento e interazione tramite il plugin Enhanced Input.",
-            "img_desc": "<strong>Configurazione degli input</strong>: Mappatura degli stati di movimento e interazione tramite il plugin <strong>Enhanced Input</strong>."
+            "img_desc": "<strong>Configurazione degli input</strong>: mappatura degli stati di movimento e interazione tramite il plugin <strong>Enhanced Input</strong>."
         },
         "ai": {
             "title": "IA e calibrazione dei parametri",
             "desc": "Configurazione per il rilevamento dei nemici, i sistemi di bottino procedurali e il feedback visivo.",
             "img_alt": "I dettagli della configurazione dell'IA mostrano i componenti di rilevamento e i parametri di combattimento per i nemici robotici.",
-            "img_desc": "<strong>Configurazione dell'IA</strong>: Dettagli dei <strong>componenti di rilevamento</strong> e dei parametri di combattimento per i <em>nemici robotici</em>."
+            "img_desc": "<strong>Configurazione dell'IA</strong>: dettagli dei <strong>componenti di rilevamento</strong> e dei parametri di combattimento per i <em>nemici robotici</em>."
         },
         "bt": {
-            "title": "Behavior tree dell'IA",
+            "title": "Behavior Tree dell'IA",
             "desc": "Flusso logico caratterizzato da 3 stati principali: pattugliamento autonomo, inseguimento del giocatore e combattimento a distanza.",
             "img_alt": "Il flusso logico visivo del behavior tree gestisce il processo decisionale dei nemici e le transizioni di stato.",
-            "img_desc": "<strong>Behavior Tree</strong>: Flusso logico visivo che gestisce il processo decisionale dei nemici e le transizioni di stato."
+            "img_desc": "<strong>Behavior Tree</strong>: flusso logico visivo che gestisce il processo decisionale dei nemici e le transizioni di stato."
         },
         "world": {
             "title": "Composizione del mondo e streaming",
             "desc": "Implementazione del Level Streaming per ottimizzare le prestazioni e le transizioni delle aree.",
             "img_alt": "La configurazione della gestione dei livelli mostra il caricamento asincrono impostato per mantenere alte prestazioni senza interruzioni di gioco.",
-            "img_desc": "<strong>Gestione dei livelli</strong>: Configurazione del <em>caricamento asincrono</em> per mantenere alte prestazioni senza interruzioni di gioco."
+            "img_desc": "<strong>Gestione dei livelli</strong>: configurazione del <em>caricamento asincrono</em> per mantenere alte prestazioni senza interruzioni di gioco."
         }
     },
 

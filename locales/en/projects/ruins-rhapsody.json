@@ -46,7 +46,7 @@
             "title": "Optimization & UX",
             "points": {
                 "1": "<strong>Save/Load Pipeline:</strong> A robust serialization system tracking sub-level states, player progression, and inventory persistence.",
-                "2": "<strong>Localisation:</strong> Built-in translation framework with runtime toggle between English and Italian.",
+                "2": "<strong>Localization:</strong> Built-in translation framework with runtime toggle between English and Italian.",
                 "3": "<strong>Interactive UI:</strong> 3D Main Menu widgets integrated into the game environment with layered ambient audio design.",
                 "4": "<strong>Performance:</strong> Extensive profiling and asset optimization to maintain a stable and optimized experience on Windows."
             }
@@ -65,7 +65,7 @@
             "desc": [
                 "Foundational software map designed during the thesis phase, illustrating core logic and class interactions.",
                 "<br>",
-                "Click <a href='/media/games/ruins-rhapsody/code-map.pdf' target='_blank'>here</a>,",
+                "Click <a href='/media/games/ruins-rhapsody/code-map.pdf' target='_blank'>here</a>",
                 "to visualize the high quality pdf version."
             ],
             "img_alt": "The initial system architecture overview shows the core logic and class interactions using interconnected blocks.",
