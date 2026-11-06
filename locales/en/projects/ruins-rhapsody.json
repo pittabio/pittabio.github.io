@@ -69,7 +69,12 @@
                 "to visualize the high quality pdf version."
             ],
             "img_alt": "The initial system architecture overview shows the core logic and class interactions using interconnected blocks.",
-            "img_desc": "<strong>Initial System Architecture:</strong> The image illustrates the <strong>core logic</strong> and <strong>class interactions</strong> using interconnected blocks."
+            "img_desc": [
+                "<strong>Initial System Architecture:</strong> The image illustrates the <strong>core logic</strong> and <strong>class interactions</strong> using interconnected blocks.",
+                "<br>",
+                "Click <a href='/media/games/ruins-rhapsody/code-map.pdf' target='_blank'>here</a>",
+                "to visualize the high quality pdf version."
+            ]
         },
         "components": {
             "title": "Modular Character Logic",

@@ -69,7 +69,12 @@
                 "per visualizzare la versione PDF in alta qualità."
             ],
             "img_alt": "La panoramica dell'architettura di sistema iniziale mostra la logica di base e le interazioni tra le classi tramite blocchi interconnessi.",
-            "img_desc": "<strong>Architettura di sistema iniziale:</strong> l'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando blocchi interconnessi."
+            "img_desc": [
+                "<strong>Architettura di sistema iniziale:</strong> l'immagine illustra la <strong>logica di base</strong> e le <strong>interazioni tra le classi</strong> utilizzando blocchi interconnessi.",
+                "<br>",
+                "Fai clic <a href='/media/games/ruins-rhapsody/code-map.pdf' target='_blank'>qui</a>",
+                "per visualizzare la versione PDF in alta qualità."
+            ]
         },
         "components": {
             "title": "Logica del personaggio modulare",
