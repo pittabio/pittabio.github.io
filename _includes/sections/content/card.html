@@ -26,6 +26,7 @@ Image opening: choose ONE of the two modes
 
 If img1 is present the grid mode is used, and img_desc / img_full are ignored (as in images.js).
 `img` and `img_alt` must be used together.
+Without img_desc (mode A) or img1 (mode B) the image is NOT rendered.
 
 Buttons: up to 3, with N = 1, 2, 3
     linkN      = "/link/to/include" (URL of the button)
@@ -50,7 +51,8 @@ Position: link1 = left, link2 = center, link3 = right.
     {% endif %}
 
     <!-- Image -->
-    {% if o.img and o.img_alt %}
+	{% assign can_open = o.img1 | default: o.img_desc %}
+    {% if o.img and o.img_alt and can_open %}
         {% capture gallery_attrs %}
             {% if o.img1 %}
                 {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
@@ -69,11 +71,9 @@ Position: link1 = left, link2 = center, link3 = right.
             {% endif %}
         {% endcapture %}
 
-        {% if gallery_attrs contains "data-" %}
-            <img src="{{ o.img }}" alt="{{ o.img_alt }}"
-                 {{ gallery_attrs | strip }}
-                 onclick="openGallery(this)" />
-        {% endif %}
+        <img src="{{ o.img }}" alt="{{ o.img_alt }}"
+         {{ gallery_attrs | strip }}
+         onclick="openGallery(this)" />
     {% endif %}
 
     <!-- Description -->
