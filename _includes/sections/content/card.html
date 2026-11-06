@@ -10,11 +10,22 @@ NOTE: OBJECT is a `_data` entry with these fields:
     name     = "name.to.include"     (i18n key of the title)
     desc     = "desc.to.include"     (i18n key of the description, can contain HTML)
     page     = "/link/to/include"    (optional, the title becomes a link)
-    img      = "/image/source"       (optional, opens with openOneImage on click)
+    img      = "/image/source"       (optional, the image shown in the card, opens with openGallery on click)
     img_alt  = "image.alt"           (optional, alt text of the image - used together with the img)
-    img_desc = "img.desc.to.include" (optional, i18n key for the description of the image when opened - used together with the img)
 
-`img`, `img_alt` and `img_desc` they must be used together
+Image opening: choose ONE of the two modes
+
+  A) Single image (the card image itself is opened)
+    img_desc = "img.desc.to.include" (i18n key for the description of the image when opened)
+    img_full = "/image/source-big"   (optional, higher resolution version)
+
+  B) Grid of N images (img is only the cover shown in the card)
+    imgN      = "/image/source"       (N = 1, 2, 3... numbering must be consecutive, it stops at the first missing one)
+    imgN_desc = "img.desc.to.include" (optional, i18n key for the description of the Nth image)
+    img_cols  = 2                     (optional, forces the number of columns)
+
+If img1 is present the grid mode is used, and img_desc / img_full are ignored (as in images.js).
+`img` and `img_alt` must be used together.
 
 Buttons: up to 3, with N = 1, 2, 3
     linkN      = "/link/to/include" (URL of the button)
@@ -39,10 +50,30 @@ Position: link1 = left, link2 = center, link3 = right.
     {% endif %}
 
     <!-- Image -->
-    {% if o.img and o.img and o.img_desc %}
-        <img src="{{ o.img }}" alt="{{ o.img_alt }}"
-             data-desc="{{ o.img_desc }}"
-             onclick="openGallery(this)" />
+    {% if o.img and o.img_alt %}
+        {% capture gallery_attrs %}
+            {% if o.img1 %}
+                {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
+                {% for i in (1..12) %}
+                    {% assign k_img  = "img" | append: i %}
+                    {% assign k_desc = k_img | append: "_desc" %}
+                    {% unless o[k_img] %}{% break %}{% endunless %}
+                    data-img{{ i }}="{{ o[k_img] }}"
+                    {% if o[k_desc] %}data-desc{{ i }}="{{ o[k_desc] }}"{% endif %}
+                {% endfor %}
+                {% if o.img_cols %}data-cols="{{ o.img_cols }}"{% endif %}
+            {% elsif o.img_desc %}
+                {% comment %} Single image {% endcomment %}
+                data-desc="{{ o.img_desc }}"
+                {% if o.img_full %}data-full="{{ o.img_full }}"{% endif %}
+            {% endif %}
+        {% endcapture %}
+
+        {% if gallery_attrs contains "data-" %}
+            <img src="{{ o.img }}" alt="{{ o.img_alt }}"
+                 {{ gallery_attrs | strip }}
+                 onclick="openGallery(this)" />
+        {% endif %}
     {% endif %}
 
     <!-- Description -->

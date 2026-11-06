@@ -3,16 +3,16 @@
 USAGE (HTML)
 
 1. A single image (uses its own `src`):
-   <img src="/media/a.jpg" alt="..." data-desc="gallery.a" onclick="openGallery(this)">
+   <img src="/media/a.jpg" alt="..." data-desc="gallery.a" onclick="openGallery(this)" />
    Optional: data-full="/media/a-big.jpg" opens a higher resolution version.
    If there is no description, the `alt` of the clicked image is reused in the overlay.
 
 2. A grid of N images (numbering must be consecutive: 1, 2, 3...):
-   <img src="/media/cover.jpg"
+   <img src="/media/cover.jpg" onclick="openGallery(this)"
         data-img1="/media/a.jpg" data-desc1="gallery.a"
         data-img2="/media/b.jpg" data-desc2="gallery.b"
         data-img3="/media/c.jpg" data-desc3="gallery.c"
-        onclick="openGallery(this)">
+   />
    Optional: data-cols="2" forces the number of columns.
 
 `data-desc*` is a translation key and the description can contain HTML: it is
