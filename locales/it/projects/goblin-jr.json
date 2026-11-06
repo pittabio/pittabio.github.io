@@ -75,9 +75,9 @@
             "title": "Flusso di sviluppo ibrido",
             "desc": "Utilizzo di <strong>BlueprintImplementableEvent</strong> per attivare la logica visiva dalle classi di base in C++.",
             "img_alt": "L'immagine mostra l'integrazione tra C++ e Blueprint con un esempio della classe blueprint del forziero che chiama eventi C++ per le animazioni estetiche.",
-            "img1_desc": "<strong>Integrazione BP:</strong> eventi Blueprint per le animazioni estetiche.",
-            "img2_desc": "<strong>Header:</strong> BlueprintImplementableEvent per attivare la logica visiva dalle classi di base in C++.",
-            "img3_desc": "<strong>Implementazione:</strong> quando il forziero viene aperto, richiama l'evento BlueprintImplementableEvent dell'animazione."
+            "img1_desc": "<strong>Integrazione BP:</strong> eventi <em>Blueprint</em> per le animazioni estetiche.",
+            "img2_desc": "<strong>Header:</strong> <em>BlueprintImplementableEvent</em> per attivare la logica visiva dalle classi di base in C++.",
+            "img3_desc": "<strong>Implementazione:</strong> quando il forziero viene aperto, richiama l'evento <em>BlueprintImplementableEvent</em> dell'animazione."
         },
         "persistence": {
             "title": "Sistema di salvataggio e serializzazione",
@@ -90,14 +90,14 @@
             "title": "Enhanced Input e scalabilità",
             "desc": "Mappatura unificata per tastiera, controller e touch tramite Enhanced Input di UE5.",
             "img_alt": "L'immagine mostra la mappatura degli input e la configurazione dello schema di controllo multipiattaforma per un'accessibilità universale.",
-            "img1_desc": "<strong>Controller:</strong> le azioni disponibili per il giocatore come input da controller.",
+            "img1_desc": "<strong>Controller:</strong> le <em>azioni</em> disponibili per il giocatore come input da controller.",
             "img2_desc": "<strong>Mappatura degli input:</strong> configurazione dello schema di controllo multipiattaforma per un'accessibilità universale."
         },
         "instance": {
             "title": "Game Instance e stato globale",
             "desc": "Gestione centralizzata dei riferimenti ai file di salvataggio e degli stati globali che persistono tra i livelli.",
             "img_alt": "L'immagine mostra l'implementazione della classe GameInstance per gestire i dati persistenti tra le sessioni.",
-            "img_desc": "<strong>Logica globale:</strong> implementazione della classe GameInstance per gestire i dati persistenti tra le sessioni."
+            "img_desc": "<strong>Logica globale:</strong> implementazione della classe <em>GameInstance</em> per gestire i dati persistenti tra le sessioni."
         },
         "ui": {
             "title": "Gerarchia UI e UX Design",

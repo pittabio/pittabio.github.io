@@ -75,9 +75,9 @@
             "title": "Hybrid Development Workflow",
             "desc": "Usage of <strong>BlueprintImplementableEvent</strong> to trigger visual logic from C++ core classes.",
             "img_alt": "The image shows the C++ and Blueprint integration with an example of the blueprint chest class calling C++ events for cosmetic animations.",
-            "img1_desc": "<strong>BP Integration:</strong> Blueprint events for cosmetic animations.",
-            "img2_desc": "<strong>Header:</strong> BlueprintImplementableEvent to trigger visual logic from C++ core classes.",
-            "img3_desc": "<strong>Implementation:</strong> when the chest is opened, call the animation BlueprintImplementableEvent."
+            "img1_desc": "<strong>BP Integration:</strong> <em>Blueprint</em> events for cosmetic animations.",
+            "img2_desc": "<strong>Header:</strong> <em>BlueprintImplementableEvent</em> to trigger visual logic from C++ core classes.",
+            "img3_desc": "<strong>Implementation:</strong> When the chest is opened, call the animation <em>BlueprintImplementableEvent</em>."
         },
         "persistence": {
             "title": "Save System & Serialization",
@@ -90,14 +90,14 @@
             "title": "Enhanced Input & Scalability",
             "desc": "Unified mapping for Keyboard, Gamepad, and Touch using UE5 Enhanced Input.",
             "img_alt": "The image shows the Input Mapping and the Cross-platform control scheme setup for universal accessibility.",
-            "img1_desc": "<strong>Controller:</strong> The Actions available for the player as controller input.",
+            "img1_desc": "<strong>Controller:</strong> The <em>Actions</em> available for the player as controller input.",
             "img2_desc": "<strong>Input Mapping:</strong> Cross-platform control scheme setup for universal accessibility."
         },
         "instance": {
             "title": "Game Instance & Global State",
             "desc": "Centralized management of save file references and global states that persist across levels.",
             "img_alt": "The image shows the implementation of the GameInstance class to handle persistent data between sessions.",
-            "img_desc": "<strong>Global Logic:</strong> Implementation of the GameInstance class to handle persistent data between sessions."
+            "img_desc": "<strong>Global Logic:</strong> Implementation of the <em>GameInstance</em> class to handle persistent data between sessions."
         },
         "ui": {
             "title": "UI Hierarchy & UX Design",
