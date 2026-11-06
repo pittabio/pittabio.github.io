@@ -18,13 +18,15 @@ NOTE:
     url = "/link/to/include"    (optional)
     url_text = "url.text"       (optional, only together with url)
 
-    points = 3 (optional, number of points lines)
+    desc   = "full.i18n.key"  (optional, plain paragraph; use it only when there is no bullet list)
+    points = 3                (optional, number of bullet points; takes priority over desc)
 
 The texts are read from the i18n keys in locales/#/*.json (built as "prefix.id"):
 • prefix.id.tag
 • prefix.id.title
 • prefix.id.subtitle
 • prefix.id.points.1 ... prefix.id.points.N
+• desc is NOT built from the prefix: pass the full key (e.g. "details.about.desc")
 
 {% endcomment %}
 
@@ -60,6 +62,8 @@ The texts are read from the i18n keys in locales/#/*.json (built as "prefix.id")
                     <li data-i18n-html="{{ key }}.points.{{ i }}"></li>
                 {% endfor %}
             </ul>
+        {% elsif item.desc %}
+            <p data-i18n-html="{{ item.desc }}"></p>
         {% endif %}
 
     </div>
