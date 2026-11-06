@@ -57,9 +57,21 @@ doc:
 
           [optionals]
           page: "/link/to/include" (the title becomes a link)
-          img: "/media/folder/doc/card.img"
-          img_alt:  "project.doc.img_alt"  (use together with img)
-          img_desc: "project.doc.img_desc" (use together with img)
+          img: "/media/folder/doc/card.img" (the image shown in the card, opens with openGallery on click)
+          img_alt: "project.doc.img_alt"    (use together with img)
+
+          [image opening, only with img and img_alt: choose ONE of the two modes]
+
+          [A) single image: the card image itself is opened]
+          img_desc: "project.doc.img_desc"           (description of the opened image)
+          img_full: "/media/folder/doc/card-big.img" (optional, higher resolution version)
+
+          [B) grid of N images: img is only the cover, if img1 is present img_desc and img_full are ignored]
+          img1:      "/media/folder/doc/a.img"  (N = 1, 2, 3... consecutive, it stops at the first missing one, max 12)
+          img1_desc: "project.doc.img1_desc"    (optional, description of the Nth image)
+          img2:      "/media/folder/doc/b.img"
+          img2_desc: "project.doc.img2_desc"
+          img_cols:  2  (optional, forces the number of columns)
 
 [optional] (see cta.html)
 cta:
