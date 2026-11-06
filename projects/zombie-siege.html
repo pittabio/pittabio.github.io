@@ -1,251 +1,111 @@
 ---
-title: "Zombie Siege Chronicles · Fabio Pittaccio"
+layout: project
+title: "Zombie Siege Chronicles"
 description: "Strategic Tower Defense in UE5. Featuring spatial placement validation and custom modular C++ portal systems."
+
+hero:
+    tag: "hero.tag"
+    title: "hero.title"
+    sub: "hero.p"
+
+    img: "/media/games/zombie-siege/banner.png"
+    img_alt: "img.alt"
+    img_desc: "img.desc"
+
+details:
+    prefix: "details"
+    items:
+        - id: about
+          subtitle: false
+          points: 3
+        - id: gameplay
+          subtitle: false
+          points: 4
+        - id: tech
+          subtitle: false
+          points: 4
+        - id: systems
+          subtitle: false
+          points: 4
+
+video:
+    header: "video.header"
+    title: "video.title"
+    src: https://www.youtube.com/embed/ip6X4Cvti4c
+
+doc:
+    title: "doc.title"
+    cards:
+        # Project Documentation
+        - name: "doc.architecture.title"
+          desc: "doc.architecture.desc"
+          page: "/media/games/zombie-siege/tech/code-map.pdf"
+          img: "/media/games/zombie-siege/tech/code-map.png"
+          img_alt: "doc.architecture.img_alt"
+          img_desc: "doc.architecture.img_desc"
+
+        # Spatial Placement Validation
+        - name: "doc.placement.title"
+          desc: "doc.placement.desc"
+          img: "/media/games/zombie-siege/placement/turret-details.png"
+          img_alt: "doc.placement.img_alt"
+          img1: "/media/games/zombie-siege/placement/turret-details.png"
+          img1_desc: "doc.placement.img1_desc"
+          img2: "/media/games/zombie-siege/placement/turrets-placements.png"
+          img2_desc: "doc.placement.img2_desc"
+
+        # Teleportation System
+        - name: "doc.portals.title"
+          desc: "doc.portals.desc"
+          img: "/media/games/zombie-siege/portals/portal-preview.png"
+          img_alt: "doc.portals.img_alt"
+          img1: "/media/games/zombie-siege/portals/portal-bp.png"
+          img1_desc: "doc.portals.img1_desc"
+          img2: "/media/games/zombie-siege/portals/portal-no.png"
+          img2_desc: "doc.portals.img2_desc"
+          img3: "/media/games/zombie-siege/portals/portal-yes.png"
+          img3_desc: "doc.portals.img3_desc"
+
+        # Hybrid Cinematic Menu
+        - name: "doc.menu.title"
+          desc: "doc.menu.desc"
+          img: "/media/games/zombie-siege/menu/menu.png"
+          img_alt: "doc.menu.img_alt"
+          img1: "/media/games/zombie-siege/menu/menu-level.png"
+          img1_desc: "doc.menu.img1_desc"
+          img2: "/media/games/zombie-siege/menu/menu-widget.png"
+          img2_desc: "doc.menu.img2_desc"
+
+        # Data-Driven Shop System
+        - name: "doc.shop.title"
+          desc: "doc.shop.desc"
+          img: "/media/games/zombie-siege/shop/shop-in-game.png"
+          img_alt: "doc.shop.img_alt"
+          img1: "/media/games/zombie-siege/shop/shop-dt.png"
+          img1_desc: "doc.shop.img1_desc"
+          img2: "/media/games/zombie-siege/shop/shop-widget.png"
+          img2_desc: "doc.shop.img2_desc"
+          img3: "/media/games/zombie-siege/shop/shop-item.png"
+          img3_desc: "doc.shop.img3_desc"
+
+        # Survivor Rescue System (Events)
+        - name: "doc.survivors.title"
+          desc: "doc.survivors.desc"
+          img: "/media/games/zombie-siege/events/preview.png"
+          img_alt: "doc.survivors.img_alt"
+          img1: "/media/games/zombie-siege/events/event.png"
+          img1_desc: "doc.survivors.img1_desc"
+          img2: "/media/games/zombie-siege/events/people.png"
+          img2_desc: "doc.survivors.img2_desc"
+          img3: "/media/games/zombie-siege/events/person.png"
+          img3_desc: "doc.survivors.img3_desc"
+
+cta:
+    data: "games"
+    title: "cta.title"
+    subtitle: "cta.subtitle"
+    divider: "$common.cta.or"
+    more: "$common.cta.more"
+    more_link: /projects.html
+
 ---
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="head_title">{{ page.title }}</title>
-
-    <!-- FAVICON -->
-    {% include favicon.html %}
-
-    <!-- ## CSS ## -->
-    <link rel="stylesheet" href="../style/core.css">                        <!-- Core: Base, Header, Footer -->
-    <link rel="stylesheet" href="../style/icons.css">						<!-- SVG icons -->
-    <link rel="stylesheet" href="../style/pages/about.css">                 <!-- Manages the timeline and resume header -->
-    <link rel="stylesheet" href="../style/sections/section-projects.css">   <!-- Manages the gallery (grid and card) -->
-    <link rel="stylesheet" href="../style/sections/section-contact.css">    <!-- Manages the final CTA section -->
-    <link rel="stylesheet" href="../style/pages/project.css">               <!-- Manages banners and videos -->
-</head>
-<body>
-
-<!-- ## HEADER ## -->
-<div id="header"></div>
-
-<!-- ## PAGE ## -->
-<main class="page-content resume-page-section">
-
-    <!-- ## PAGE HEAD ## -->
-    <div class="resume-header">
-        <span class="hero-tag"        data-i18n-html="zombie_page.tag"></span>
-        <h1 class="contact-title"     data-i18n-html="zombie_page.title"></h1>
-        <p  class="contact-subtitle"  data-i18n="zombie_page.subtitle"></p>
-    </div>
-
-    <!-- ## BANNER IMAGE ## -->
-    <section class="resume-section">
-        <div class="section-container">
-            <img
-                src="../media/games/zombie-siege/banner.png"
-                alt="Zombie Siege Chronicles - Banner"
-                class="project-banner"
-                onclick="openOneImage(this)"
-
-                data-img1="../media/games/zombie-siege/banner.png"
-                data-desc1="zombie_page.banner"
-            />
-        </div>
-    </section> <!-- END banner -->
-
-    <!-- ## ABOUT ## -->
-    <section class="resume-section" id="about">
-        <div class="section-container">
-            <div class="education-timeline">
-
-                <!-- 1. Overview -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="zombie_page.about.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="zombie_page.about.title"></div>
-                    <p class="timeline-details" data-i18n-html="zombie_page.about.desc"></p>
-                </div>
-
-                <!-- 2. Mechanics -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="zombie_page.gameplay.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="zombie_page.gameplay.title"></div>
-                    <ul class="timeline-details" data-i18n-html="zombie_page.gameplay.items"></ul>
-                </div>
-
-                <!-- 3. Technical Architecture (C++/UE5) -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="zombie_page.tech.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="zombie_page.tech.title"></div>
-                    <ul class="timeline-details" data-i18n-html="zombie_page.tech.items"></ul>
-                </div>
-
-                <!-- 4. Systems -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="zombie_page.systems.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="zombie_page.systems.title"></div>
-                    <ul class="timeline-details" data-i18n-html="zombie_page.systems.items"></ul>
-                </div>
-
-            </div>
-        </div>
-    </section> <!-- END about -->
-
-    <!-- ## VIDEO ## -->
-    <section class="resume-section" id="video">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="zombie_page.video_title"></h2>
-            <div class="project-video-wrapper">
-                <!-- Replace VIDEO_ID with the actual YouTube video ID -->
-                <iframe
-                        src="https://www.youtube.com/embed/ip6X4Cvti4c"
-                        title="Zombie Siege Chronicles - Trailer"
-                        allowfullscreen
-                ></iframe>
-            </div>
-        </div>
-    </section> <!-- END video -->
-
-    <!-- ## GALLERY ## -->
-    <section class="resume-section" id="gallery">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="zombie_page.gallery.title"></h2>
-
-            <!-- ## GRID ## -->
-            <div class="projects-grid">
-
-                <!-- 1. Technical Class Diagram -->
-                <div class="project-card">
-                    <a href="../media/games/zombie-siege/tech/TechDiagram.pdf" target="_blank">
-                        <img src="../media/games/zombie-siege/tech/TechDiagram-wb.png" alt="Class Diagram" class="project-image" />
-                    </a>
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.architecture.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.architecture.desc"></p>
-                </div>
-
-                <!-- 2. Placement Validation -->
-                <div class="project-card">
-                    <img src="../media/games/zombie-siege/placement/turrets-placements.png" alt="Placement"
-                         class="project-image" onclick="openTwoImages(this)"
-
-                         data-img1="../media/games/zombie-siege/placement/turret-details.png"
-                         data-desc1="zombie_page.gallery.placement.img1"
-
-                         data-img2="../media/games/zombie-siege/placement/turrets-placements.png"
-                         data-desc2="zombie_page.gallery.placement.img2"
-                    />
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.placement.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.placement.desc"></p>
-                </div>
-
-                <!-- 3. Portals -->
-                <div class="project-card">
-                    <img src="../media/games/zombie-siege/portals/portal-preview.png" alt="Portals"
-                         class="project-image" onclick="openThreeImages(this)"
-
-                         data-img1="../media/games/zombie-siege/portals/portal-bp.png"
-                         data-desc1="zombie_page.gallery.portals.img1"
-
-                         data-img2="../media/games/zombie-siege/portals/portal-no.png"
-                         data-desc2="zombie_page.gallery.portals.img2"
-
-                         data-img3="../media/games/zombie-siege/portals/portal-yes.png"
-                         data-desc3="zombie_page.gallery.portals.img3"
-                    />
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.portals.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.portals.desc"></p>
-                </div>
-
-                <!-- 4. Cinematic Menu -->
-                <div class="project-card">
-                    <img src="../media/games/zombie-siege/menu/menu.png" alt="Menu"
-                         class="project-image" onclick="openTwoImages(this)"
-
-                         data-img1="../media/games/zombie-siege/menu/menu-level.png"
-                         data-desc1="zombie_page.gallery.menu.img1"
-
-                         data-img2="../media/games/zombie-siege/menu/menu-widget.png"
-                         data-desc2="zombie_page.gallery.menu.img2"
-                    />
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.menu.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.menu.desc"></p>
-                </div>
-
-                <!-- 5. Shop -->
-                <div class="project-card">
-                    <img src="../media/games/zombie-siege/shop/shop-in-game.png" alt="Shop"
-                         class="project-image" onclick="openThreeImages(this)"
-
-                         data-img1="../media/games/zombie-siege/shop/shop-dt.png"
-                         data-desc1="zombie_page.gallery.shop.img1"
-
-                         data-img2="../media/games/zombie-siege/shop/shop-widget.png"
-                         data-desc2="zombie_page.gallery.shop.img2"
-
-                         data-img3="../media/games/zombie-siege/shop/shop-item.png"
-                         data-desc3="zombie_page.gallery.shop.img3"
-                    />
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.shop.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.shop.desc"></p>
-                </div>
-
-                <!-- 6. Survivor Events -->
-                <div class="project-card">
-                    <img src="../media/games/zombie-siege/events/preview.png" alt="Survivor Event"
-                         class="project-image" onclick="openThreeImages(this)"
-
-                         data-img1="../media/games/zombie-siege/events/event.png"
-                         data-desc1="zombie_page.gallery.survivors.img1"
-
-                         data-img2="../media/games/zombie-siege/events/people.png"
-                         data-desc2="zombie_page.gallery.survivors.img2"
-
-                         data-img3="../media/games/zombie-siege/events/person.png"
-                         data-desc3="zombie_page.gallery.survivors.img3"
-                    />
-                    <h3 class="project-name" data-i18n="zombie_page.gallery.survivors.title"></h3>
-                    <p class="project-desc" data-i18n-html="zombie_page.gallery.survivors.desc"></p>
-                </div>
-
-            </div>
-        </div>
-    </section> <!-- END gallery -->
-
-    <!-- ## CTA ## -->
-    <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"    data-i18n-html="zombie_page.cta.title"></h2>
-            <p  class="contact-subtitle" data-i18n="zombie_page.cta.subtitle"></p>
-
-            <div class="contact-socials">
-                <!-- itch.io -->
-                <a href="https://fabriziop.itch.io/zombie-siege-chronicles" target="_blank" class="contact-social-link">
-                    <img src="../media/logo/itch.png" alt="itch.io"/>
-                    itch.io
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/pittabio/ZombieSiege" target="_blank" class="contact-social-link">
-                    <img src="../media/logo/github.png" alt="GitHub"/>
-                    GitHub
-                </a>
-            </div>
-
-            <div class="contact-divider">
-                <span data-i18n="zombie_page.cta.or"></span>
-            </div>
-
-            <a href="../projects.html" class="contact-cta">
-                <span data-i18n="zombie_page.cta.btn_back"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </section> <!-- END cta -->
-</main>
-
-<!-- ## FOOTER ## -->
-<div id="footer"></div>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="../scripts/main.js"></script>
-<script src="../scripts/overlay.js"></script>
-
-</body>
-</html>
