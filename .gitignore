@@ -18,6 +18,7 @@ _site/
 # Media
 media/games/wizard-scape/gems/square/
 media/banner/gimp/
+*.xcf
 
 # Backup
 .backup
