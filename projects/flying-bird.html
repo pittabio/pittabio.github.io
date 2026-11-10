@@ -1,236 +1,112 @@
 ---
-title: "Flying Bird · Cross-Platform · Fabio Pittaccio"
+layout: project
+title: "Flying Bird"
 description: "C++ gameplay architecture study on the mobile pipeline, recreating 3D physics mechanics for Windows and Android."
+
+hero:
+    tag: "hero.tag"
+    title: "hero.title"
+    sub: "hero.p"
+
+    img: "/media/games/flying-bird/banner.png"
+    img_alt: "img.alt"
+    img_desc: "img.desc"
+
+details:
+    prefix: "details"
+    items:
+        - id: about
+          subtitle: false
+          desc: "details.about.desc"
+        - id: gameplay
+          subtitle: false
+          points: 2
+        - id: tech
+          subtitle: false
+          points: 2
+        - id: systems
+          subtitle: false
+          points: 2
+
+video:
+    header: "video.header"
+    title: "video.title"
+    src: https://www.youtube.com/embed/x2w_DxW26f4
+
+doc:
+    title: "doc.title"
+    cards:
+        # Event Architecture (Game State)
+        - name: "doc.events.title"
+          desc: "doc.events.desc"
+          img: "/media/games/flying-bird/events/widget-binding.png"
+          img_alt: "doc.events.img_alt"
+          img1: "/media/games/flying-bird/events/delegates.png"
+          img1_desc: "doc.events.img1_desc"
+          img2: "/media/games/flying-bird/events/broadcast.png"
+          img2_desc: "doc.events.img2_desc"
+          img3: "/media/games/flying-bird/events/widget-binding.png"
+          img3_desc: "doc.events.img3_desc"
+
+        # Physics & Impulse
+        - name: "doc.bird.title"
+          desc: "doc.bird.desc"
+          img: "/media/games/flying-bird/physics/bird.png"
+          img_alt: "doc.bird.img_alt"
+          img1: "/media/games/flying-bird/physics/bird.png"
+          img1_desc: "doc.bird.img1_desc"
+          img2: "/media/games/flying-bird/physics/impulse.png"
+          img2_desc: "doc.bird.img2_desc"
+
+        # Collision Management
+        - name: "doc.collisions.title"
+          desc: "doc.collisions.desc"
+          img: "/media/games/flying-bird/collisions/pipes.png"
+          img_alt: "doc.collisions.img_alt"
+          img1: "/media/games/flying-bird/collisions/trace-channels.png"
+          img1_desc: "doc.collisions.img1_desc"
+          img2: "/media/games/flying-bird/collisions/constructors.png"
+          img2_desc: "doc.collisions.img2_desc"
+          img3: "/media/games/flying-bird/collisions/collisions-presets.png"
+          img3_desc: "doc.collisions.img3_desc"
+
+        # Procedural Spawning
+        - name: "doc.spawner.title"
+          desc: "doc.spawner.desc"
+          img: "/media/games/flying-bird/spawner/config.png"
+          img_alt: "doc.spawner.img_alt"
+          img1: "/media/games/flying-bird/spawner/config.png"
+          img1_desc: "doc.spawner.img1_desc"
+          img2: "/media/games/flying-bird/spawner/spawner-cpp.png"
+          img2_desc: "doc.spawner.img2_desc"
+
+        # Cross-Platform Input
+        - name: "doc.input.title"
+          desc: "doc.input.desc"
+          img: "/media/games/flying-bird/input/input-mapping.png"
+          img_alt: "doc.input.img_alt"
+          img1: "/media/games/flying-bird/input/input-mapping.png"
+          img1_desc: "doc.input.img1_desc"
+          img2: "/media/games/flying-bird/input/controller-cpp.png"
+          img2_desc: "doc.input.img2_desc"
+
+        # Logic-Driven & Cross-Platform UI
+        - name: "doc.ui.title"
+          desc: "doc.ui.desc"
+          img: "/media/games/flying-bird/ui/all.png"
+          img_alt: "doc.ui.img_alt"
+          img1: "/media/games/flying-bird/ui/android-macro.png"
+          img1_desc: "doc.ui.img1_desc"
+          img2: "/media/games/flying-bird/ui/parenting.png"
+          img2_desc: "doc.ui.img2_desc"
+          img3: "/media/games/flying-bird/ui/all.png"
+          img3_desc: "doc.ui.img3_desc"
+
+cta:
+    data: "games"
+    title: "cta.title"
+    subtitle: "cta.subtitle"
+    divider: "$common.cta.or"
+    more: "$common.cta.more"
+    more_link: /projects.html
 ---
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="head_title">{{ page.title }}</title>
-
-    <!-- FAVICON -->
-    {% include favicon.html %}
-
-    <!-- ## CSS ## -->
-    <link rel="stylesheet" href="../style/core.css">                        <!-- Core: Base, Header, Footer -->
-    <link rel="stylesheet" href="../style/icons.css">						<!-- SVG icons -->
-    <link rel="stylesheet" href="../style/pages/about.css">                 <!-- Manages the timeline and resume header -->
-    <link rel="stylesheet" href="../style/sections/section-projects.css">   <!-- Manages the gallery (grid and card) -->
-    <link rel="stylesheet" href="../style/sections/section-contact.css">    <!-- Manages the final CTA section -->
-    <link rel="stylesheet" href="../style/pages/project.css">               <!-- Manages banners and videos -->
-</head>
-<body>
-
-<!-- ## HEADER ## -->
-<div id="header"></div>
-
-<!-- ## PAGE ## -->
-<main class="page-content resume-page-section">
-
-    <!-- ## PAGE HEAD ## -->
-    <div class="resume-header">
-        <span class="hero-tag"        data-i18n-html="flying_page.tag"></span>
-        <h1 class="contact-title"     data-i18n-html="flying_page.title"></h1>
-        <p  class="contact-subtitle"  data-i18n="flying_page.subtitle"></p>
-    </div>
-
-    <!-- ## BANNER IMAGE ## -->
-    <section class="resume-section">
-        <div class="section-container">
-            <img
-                src="../media/games/flying-bird/banner.png"
-                alt="Flying Bird Banner"
-                class="project-banner"
-                onclick="openOneImage(this)"
-
-                data-img1="../media/games/flying-bird/banner.png"
-                data-desc1="flying_page.banner"
-            />
-        </div>
-    </section> <!-- END banner -->
-
-    <!-- ## ABOUT ## -->
-    <section class="resume-section" id="about">
-        <div class="section-container">
-            <div class="education-timeline">
-
-                <!-- 1. Overview -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="flying_page.about.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="flying_page.about.title"></div>
-                    <p class="timeline-details" data-i18n-html="flying_page.about.desc"></p>
-                </div>
-
-                <!-- 2. Gameplay & Features -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="flying_page.gameplay.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="flying_page.gameplay.title"></div>
-                    <ul class="timeline-details" data-i18n-html="flying_page.gameplay.items"></ul>
-                </div>
-
-                <!-- 3. Technical Architecture (C++/UE5) -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="flying_page.tech.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="flying_page.tech.title"></div>
-                    <ul class="timeline-details" data-i18n-html="flying_page.tech.items"></ul>
-                </div>
-
-                <!-- 4. Optimization & Systems -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="flying_page.systems.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="flying_page.systems.title"></div>
-                    <ul class="timeline-details" data-i18n-html="flying_page.systems.items"></ul>
-                </div>
-
-            </div>
-        </div>
-    </section> <!-- END about -->
-
-    <!-- ## VIDEO ## -->
-    <section class="resume-section" id="video">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="flying_page.video_title"></h2>
-            <div class="project-video-wrapper">
-                <!-- Replace VIDEO_ID with the actual YouTube video ID -->
-                <iframe
-                        src="https://www.youtube.com/embed/x2w_DxW26f4"
-                        title="Flying Bird Gameplay"
-                        allowfullscreen
-                ></iframe>
-            </div>
-        </div>
-    </section> <!-- END video -->
-
-    <!-- ## GALLERY ## -->
-    <section class="resume-section" id="gallery">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="flying_page.gallery.title"></h2>
-
-            <!-- ## GRID ## -->
-            <div class="projects-grid">
-
-                <!-- 1. Game State -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/gamestate.png" alt="Game State"
-                         class="project-image" onclick="openOneImage(this)"
-
-                         data-img1="../media/games/flying-bird/gamestate.png"
-                         data-desc1="flying_page.gallery.game_state.img1"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.game_state.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.game_state.desc"></p>
-                </div>
-
-                <!-- 2. Bird -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/bird-physics.png" alt="Bird"
-                         class="project-image" onclick="openOneImage(this)"
-
-                         data-img1="../media/games/flying-bird/bird-physics.png"
-                         data-desc1="flying_page.gallery.bird.img1"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.bird.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.bird.desc"></p>
-                </div>
-
-                <!-- 3. Pipes -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/pipes-collision.png" alt="Pipes"
-                         class="project-image" onclick="openOneImage(this)"
-
-                         data-img1="../media/games/flying-bird/pipes-collision.png"
-                         data-desc1="flying_page.gallery.pipes.img1"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.pipes.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.pipes.desc"></p>
-                </div>
-
-                <!-- 4. Spawner -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/spawner-config.png" alt="Spawner"
-                         class="project-image" onclick="openOneImage(this)"
-
-                         data-img1="../media/games/flying-bird/spawner-config.png"
-                         data-desc1="flying_page.gallery.spawner.img1"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.spawner.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.spawner.desc"></p>
-                </div>
-
-                <!-- 5. Input -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/input-mapping.png" alt="Input"
-                         class="project-image" onclick="openOneImage(this)"
-
-                         data-img1="../media/games/flying-bird/input-mapping.png"
-                         data-desc1="flying_page.gallery.input.img1"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.input.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.input.desc"></p>
-                </div>
-
-                <!-- 6. UI -->
-                <div class="project-card">
-                    <img src="../media/games/flying-bird/ui/menu.png" alt="UI"
-                         class="project-image" onclick="openThreeImages(this)"
-
-                         data-img1="../media/games/flying-bird/ui/android-macro.png"
-                         data-desc1="flying_page.gallery.ui.img1"
-
-                         data-img2="../media/games/flying-bird/ui/parenting.png"
-                         data-desc2="flying_page.gallery.ui.img2"
-
-                         data-img3="../media/games/flying-bird/ui/ui.png"
-                         data-desc3="flying_page.gallery.ui.img3"
-                    />
-                    <h3 class="project-name" data-i18n="flying_page.gallery.ui.title"></h3>
-                    <p class="project-desc" data-i18n-html="flying_page.gallery.ui.desc"></p>
-                </div>
-
-            </div>
-        </div>
-    </section> <!-- END gallery -->
-
-    <!-- ## CTA ## -->
-    <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"    data-i18n-html="flying_page.cta.title"></h2>
-            <p  class="contact-subtitle" data-i18n="flying_page.cta.subtitle"></p>
-
-            <div class="contact-socials">
-                <!-- itch.io -->
-                <a href="https://pittabio.itch.io/flying-bird" target="_blank" class="contact-social-link">
-                    <img src="../media/logo/itch.png" alt="itch.io"/>
-                    itch.io
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/pittabio/Flying_Bird" target="_blank" class="contact-social-link">
-                    <img src="../media/logo/github.png" alt="GitHub"/>
-                    GitHub
-                </a>
-            </div>
-
-            <div class="contact-divider">
-                <span data-i18n="flying_page.cta.or"></span>
-            </div>
-
-            <a href="../projects.html" class="contact-cta">
-                <span data-i18n="flying_page.cta.btn_back"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </section> <!-- END cta -->
-</main>
-
-<!-- ## FOOTER ## -->
-<div id="footer"></div>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="../scripts/main.js"></script>
-<script src="../scripts/overlay.js"></script>
-
-</body>
-</html>

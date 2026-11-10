@@ -88,6 +88,11 @@
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
+    # Project page - CTA section - 2nd button
+  cta_link2: "https://github.com/pittabio/Flying_Bird"
+  cta_link2_name: "GitHub"
+  cta_link2_icon: "github-svg"
+
 # WizardScape
 - name: "$games.wizard.name"
   desc: "$games.wizard.desc"
