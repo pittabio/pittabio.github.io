@@ -110,6 +110,11 @@
   link3_name: "$common.card.details"
   link3_icon: "arrow-svg"
 
+    # Project page - CTA section - 2nd button
+  cta_link2: "https://github.com/pittabio/WizardScape"
+  cta_link2_name: "GitHub"
+  cta_link2_icon: "github-svg"
+
 # More...
 - name: "$games.more.name"
   desc: "$games.more.desc"
