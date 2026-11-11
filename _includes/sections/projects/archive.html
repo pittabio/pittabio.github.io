@@ -14,6 +14,6 @@ in an auto-sized grid.
 {% assign list = site.data.projects.archive %}
 <div class="grid-auto">
     {% for p in list %}
-        {% include sections/content/card.html object=p %}
+        {% include sections/content/card.liquid object=p %}
     {% endfor %}
 </div>

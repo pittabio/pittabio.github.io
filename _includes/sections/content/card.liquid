@@ -13,6 +13,12 @@ NOTE: OBJECT is a `_data` entry with these fields:
     img      = "/image/source"       (optional, the image shown in the card, opens with openGallery on click)
     img_alt  = "image.alt"           (optional, alt text of the image - used together with the img)
 
+    Random image: instead of a fixed `img`, give a YAML list in `img_random`
+    img_random:
+      - "/image/a.png"
+      - "/image/b.png"
+      - "/image/c.png"
+
 Image opening: choose ONE of the two modes
 
   A) Single image (the card image itself is opened)
@@ -52,10 +58,12 @@ Position: link1 = left, link2 = center, link3 = right.
 
     <!-- Image -->
 	{% assign can_open = o.img1 | default: o.img_desc %}
+	{% assign img_src  = o.img | default: o.img_random.first %}
+
     {% if o.img and o.img_alt and can_open %}
         {% capture gallery_attrs %}
+            {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
             {% if o.img1 %}
-                {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
                 {% for i in (1..12) %}
                     {% assign k_img  = "img" | append: i %}
                     {% assign k_desc = k_img | append: "_desc" %}
@@ -64,14 +72,23 @@ Position: link1 = left, link2 = center, link3 = right.
                     {% if o[k_desc] %}data-desc{{ i }}="{{ o[k_desc] }}"{% endif %}
                 {% endfor %}
                 {% if o.img_cols %}data-cols="{{ o.img_cols }}"{% endif %}
+
+            {% comment %} Single image {% endcomment %}
             {% elsif o.img_desc %}
-                {% comment %} Single image {% endcomment %}
                 data-desc="{{ o.img_desc }}"
                 {% if o.img_full %}data-full="{{ o.img_full }}"{% endif %}
             {% endif %}
         {% endcapture %}
 
+        {% comment %} Random image {% endcomment %}
+        {% capture random_attrs %}
+            {% if o.img_random %}
+                class="random-img" data-srcs="{{ o.img_random | join: ',' }}"
+            {% endif %}
+        {% endcapture %}
+
         <img src="{{ o.img }}" alt="{{ o.img_alt }}"
+         {{ random_attrs | strip }}
          {{ gallery_attrs | strip }}
          onclick="openGallery(this)" />
     {% endif %}

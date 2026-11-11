@@ -30,7 +30,7 @@ description: "Support the independent game development and UE5 tools created by 
     <!-- Cards Grids -->
     <article class="grid-auto">
         {% for d in data.direct %}
-            {% include sections/content/card.html object=d %}
+            {% include sections/content/card.liquid object=d %}
         {% endfor %}
     </article>
 </section>
@@ -48,7 +48,7 @@ description: "Support the independent game development and UE5 tools created by 
     <!-- Cards Grids -->
     <article class="grid-auto">
         {% for d in data.mutual %}
-            {% include sections/content/card.html object=d %}
+            {% include sections/content/card.liquid object=d %}
         {% endfor %}
     </article>
 </section>
