@@ -1,3 +1,6 @@
+# Gameplay & technical expertise areas
+# `name` references localization keys in locales/#/*.json
+
 - name: "skill.expertise.cpp_blueprint"
 - name: "skill.expertise.combat_movement"
 - name: "skill.expertise.npc_ai"

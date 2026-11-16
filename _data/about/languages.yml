@@ -1,17 +1,26 @@
+# Programming and markup languages with proficiency levels
+# `level` references localization keys in locales/#/*.json
+
+# C++
 - name: "C++"
   level: "skill.level.advanced"
 
+# Blueprint Visual Scripting (Unreal Engine)
 - name: "Blueprint Visual Scripting"
   level: "skill.level.advanced"
 
+# Verse (Unreal Editor for Fortnite)
 - name: "Verse"
   level: "skill.level.learning"
 
+# C#
 - name: "C#"
   level: "skill.level.intermediate"
 
+# HTML / CSS / JS
 - name: "HTML / CSS / JS"
   level: "skill.level.intermediate"
 
+# Java
 - name: "Java"
   level: "skill.level.basic"

@@ -1,3 +1,6 @@
+# Version control / Git competencies
+# `name` references localization keys in locales/#/*.json
+
 - name: "skill.git.specialist"
 - name: "skill.git.collaboration"
 - name: "skill.git.branching"
