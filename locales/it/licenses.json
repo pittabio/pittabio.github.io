@@ -33,7 +33,7 @@
             "desc": [
                 "Questo sito usa <a href='https://umami.is/'>Umami</a>, un servizio di statistiche attento alla privacy, per contare le visite. Il tracker di Umami non usa cookie.",
                 "Registra visualizzazioni di pagina, provenienza, browser, sistema operativo, tipo di dispositivo e posizione approssimativa.",
-                "Per distinguere le visite senza cookie, Umami genera un identificativo [basato sull'ora].",
+                "Per distinguere le visite senza cookie, Umami genera un identificativo basato sull'ora attuale.",
                 "Non salva il tuo indirizzo IP nei dati statistici: lo elabora solo temporaneamente, ma può comparire nei log tecnici e di sicurezza di Umami e dei suoi fornitori",
                 "Umami tratta questi dati per mio conto. Leggi l’<a href='https://umami.is/privacy'>informativa sulla privacy</a> sul sito di Umami.",
                 "<br>",
@@ -45,7 +45,7 @@
             "title": "Modulo di contatto",
             "desc": [
                 "Se mi scrivi tramite il modulo, nome, indirizzo email, oggetto e messaggio che inserisci vengono inviati a <a href='https://web3forms.com/'>Web3Forms</a>, che me li recapita via email e agisce come mio responsabile del trattamento.",
-                "Web3Forms ne conserva una copia per [un massimo di 3 anni / il periodo che ho impostato] e si avvale di Amazon Web Services, Cloudflare e Hetzner. Opera dall'India e, per i trasferimenti dall'UE, applica le clausole contrattuali standard.",
+                "Web3Forms ne conserva una copia per 7 giorni e si avvale di Amazon Web Services, Cloudflare e Hetzner. Opera dall'India e, per i trasferimenti dall'UE, applica le clausole contrattuali standard.",
                 "Per proteggere il servizio dallo spam, può inviare il tuo indirizzo IP e il tuo indirizzo email a CleanTalk e Akismet.",
                 "Io uso i dati solo per risponderti e li conservo per il tempo necessario a gestire la tua richiesta.",
                 "Leggi l'<a href='https://web3forms.com/privacy'>informativa sulla privacy</a> sul sito di Web3Forms.",

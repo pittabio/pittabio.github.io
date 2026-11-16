@@ -33,7 +33,7 @@
             "desc": [
                 "This site uses <a href='https://umami.is/'>Umami</a>, a privacy-focused analytics service, to count visits. The Umami tracker does not use cookies.",
                 "It records page views, referral sources, browsers, operating systems, device types, and approximate locations.",
-                "To distinguish visits without using cookies, Umami generates an identifier [based on the current time].",
+                "To distinguish visits without using cookies, Umami generates an identifier based on the current time.",
                 "It does not store your IP address in the statistics data; it only processes it temporarily, though it may appear in the technical and security logs of Umami and its service providers.",
                 "Umami processes this data on my behalf. Read the <a href='https://umami.is/privacy'>privacy policy</a> on the Umami website.",
                 "<br>",
@@ -45,7 +45,7 @@
             "title": "Contact form",
             "desc": [
                 "If you write to me through the form, the name, email address, subject and message you enter are sent to <a href='https://web3forms.com/'>Web3Forms</a>, which delivers them to me by email and acts as my data processor.",
-                "Web3Forms keeps a copy for [up to 3 years / the period I have set] and uses Amazon Web Services, Cloudflare and Hetzner. It operates from India and, for transfers from the EU, applies Standard Contractual Clauses.",
+                "Web3Forms keeps a copy for 7 days and uses Amazon Web Services, Cloudflare and Hetzner. It operates from India and, for transfers from the EU, applies Standard Contractual Clauses.",
                 "To protect the service from spam, it may send your IP address and email address to CleanTalk and Akismet.",
                 "I use the data only to reply to you, and I keep it for as long as needed to handle your request.",
                 "Read the <a href='https://web3forms.com/privacy'>privacy policy</a> on the Web3Forms website.",
