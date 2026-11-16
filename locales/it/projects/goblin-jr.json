@@ -77,7 +77,7 @@
             "img_alt": "L'immagine mostra l'integrazione tra C++ e Blueprint con un esempio della classe blueprint del forziero che chiama eventi C++ per le animazioni estetiche.",
             "img1_desc": "<strong>Integrazione BP:</strong> eventi <em>Blueprint</em> per le animazioni estetiche.",
             "img2_desc": "<strong>Header:</strong> <em>BlueprintImplementableEvent</em> per attivare la logica visiva dalle classi di base in C++.",
-            "img3_desc": "<strong>Implementazione:</strong> quando il forziero viene aperto, richiama l'evento <em>BlueprintImplementableEvent</em> dell'animazione."
+            "img3_desc": "<strong>Implementazione:</strong> quando il forziere viene aperto, richiama l'evento <em>BlueprintImplementableEvent</em> dell'animazione."
         },
         "persistence": {
             "title": "Sistema di salvataggio e serializzazione",

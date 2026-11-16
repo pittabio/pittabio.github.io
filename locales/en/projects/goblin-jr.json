@@ -75,16 +75,16 @@
             "title": "Hybrid Development Workflow",
             "desc": "Usage of <strong>BlueprintImplementableEvent</strong> to trigger visual logic from C++ core classes.",
             "img_alt": "The image shows the C++ and Blueprint integration with an example of the blueprint chest class calling C++ events for cosmetic animations.",
-            "img1_desc": "<strong>BP Integration:</strong> <code>Blueprint</code> events for cosmetic animations.",
-            "img2_desc": "<strong>Header:</strong> <code>BlueprintImplementableEvent</code> to trigger visual logic from C++ core classes.",
-            "img3_desc": "<strong>Implementation:</strong> When the chest is opened, call the animation <code>BlueprintImplementableEvent</code>."
+            "img1_desc": "<strong>BP Integration:</strong> <em>Blueprint</em> events for cosmetic animations.",
+            "img2_desc": "<strong>Header:</strong> <em>BlueprintImplementableEvent</em> to trigger visual logic from C++ core classes.",
+            "img3_desc": "<strong>Implementation:</strong> When the chest is opened, call the animation <em>BlueprintImplementableEvent</em>."
         },
         "persistence": {
             "title": "Save System & Serialization",
             "desc": "Implementation of a robust save system for gameplay progression and user preferences.",
             "img_alt": "Data saving, in other words configuration of the SaveGame object used to persist coins and checkpoints.",
-            "img1_desc": "<strong>Data Saving:</strong> Configuration of the <code>SaveGame</code> object used to persist coins and checkpoints.",
-            "img2_desc": "<strong>Settings Saving:</strong> Configuration of the <code>SaveSettings</code> object used to persist user preferences."
+            "img1_desc": "<strong>Data Saving:</strong> Configuration of the <em>SaveGame</em> object used to persist coins and checkpoints.",
+            "img2_desc": "<strong>Settings Saving:</strong> Configuration of the <em>SaveSettings</em> object used to persist user preferences."
         },
         "input": {
             "title": "Enhanced Input & Scalability",
@@ -97,7 +97,7 @@
             "title": "Game Instance & Global State",
             "desc": "Centralized management of save file references and global states that persist across levels.",
             "img_alt": "The image shows the implementation of the GameInstance class to handle persistent data between sessions.",
-            "img_desc": "<strong>Global Logic:</strong> Implementation of the <code>GameInstance</code> class to handle persistent data between sessions."
+            "img_desc": "<strong>Global Logic:</strong> Implementation of the <em>GameInstance</em> class to handle persistent data between sessions."
         },
         "ui": {
             "title": "UI Hierarchy & UX Design",
@@ -109,7 +109,7 @@
 
     "cta": {
         "title": "Ready for <em>adventure?</em>",
-        "subtitle": "Available for Windows on itch.io. Try to achive a record!",
+        "subtitle": "Available for Windows on itch.io. Try to achieve a record!",
         "or": "or",
         "btn_back": "View more projects"
     }
