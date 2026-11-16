@@ -23,7 +23,7 @@
             "tag": "Meccaniche",
             "title": "Logica principale",
             "points": {
-                "1": "<strong>Reset della velocità:</strong> Logica di volo personalizzata che normalizza la velocità verticale prima di ogni impulso per garantire saltuarietà coerenti.",
+                "1": "<strong>Reset della velocità:</strong> Logica di volo personalizzata che normalizza la velocità verticale prima di ogni impulso per garantire salti costanti.",
                 "2": "<strong>Loop procedurale:</strong> Sistema di spawner che gestisce il ciclo di vita e lo scostamento casuale sull'asse Z degli ostacoli."
             }
         },
@@ -73,7 +73,7 @@
             "img_alt": "Filtraggio delle collisioni: configurazione di canali di tracciamento personalizzati e tipi di oggetti per un rilevamento accurato delle interazioni.",
             "img1_desc": "<strong>Canali di tracciamento personalizzati:</strong> Definizione di canali di tracciamento di gioco dedicati (<code>BIRD</code>, <code>PIPE</code>, <code>SCORE</code>) all'interno di <code>Flying_Bird.h</code>.",
             "img2_desc": "<strong>Configurazione del costruttore in C++:</strong> Vista affiancata di <code>Bird.cpp</code> e <code>Pipes.cpp</code> che inizializzano programmaticamente i tipi di oggetto e le risposte alle collisioni.",
-            "img3_desc": "<strong>Preset di collisione dell'editor:</strong> Pannelli dell'editor combinati che mostrano le impostazioni di blocco della fisica per le mesh dei tubi, la configurazione sola query per i trigger di punteggio e la configurazione del personaggio volatile."
+            "img3_desc": "<strong>Preset di collisione dell'editor:</strong> Pannelli dell'editor combinati che mostrano le impostazioni di blocco della fisica per le mesh dei tubi, la configurazione sola query per i trigger di punteggio e la configurazione del personaggio."
         },
         "spawner": {
             "title": "Generazione procedurale",
