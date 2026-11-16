@@ -1,6 +1,6 @@
 ﻿<header>
     <!-- TITLE -->
-    <b><a href="/index.html" data-i18n-aria="$common.head.ARIA.home">
+    <b><a href="{{ '/index.html' | relative_url }}" data-i18n-aria="$common.head.ARIA.home">
         Fabio Pittaccio
             <span class='accent'>.</span>
     </a></b>
@@ -15,11 +15,11 @@
 
         <!-- Pages -->
         <div class="links-wrapper">
-            <a class="btn link"  href="/index.html"     data-i18n="$common.head.home"       id="nav-home">      </a>
-            <a class="btn link"  href="/projects.html"  data-i18n="$common.head.projects"   id="nav-projects">  </a>
-            <a class="btn link"  href="/about.html"     data-i18n="$common.head.about"      id="nav-about">     </a>
-            <a class="btn link"  href="/contacts.html"  data-i18n="$common.head.contacts"   id="nav-contacts">  </a>
-            <a class="btn link"  href="/support.html"   data-i18n="$common.head.support"    id="nav-support">   </a>
+            <a class="btn link" href="{{ '/index.html' | relative_url }}" data-i18n="$common.head.home" id="nav-home"></a>
+            <a class="btn link" href="{{ '/projects.html' | relative_url }}" data-i18n="$common.head.projects" id="nav-projects"></a>
+            <a class="btn link" href="{{ '/about.html' | relative_url }}" data-i18n="$common.head.about" id="nav-about"></a>
+            <a class="btn link" href="{{ '/contacts.html' | relative_url }}" data-i18n="$common.head.contacts" id="nav-contacts"></a>
+            <a class="btn link" href="{{ '/support.html' | relative_url }}" data-i18n="$common.head.support" id="nav-support"></a>
         </div>
     </nav>
 

@@ -60,7 +60,7 @@ Position: link1 = left, link2 = center, link3 = right.
 	{% assign can_open = o.img1 | default: o.img_desc %}
 	{% assign img_src  = o.img | default: o.img_random.first %}
 
-    {% if o.img or o.img_random and o.img_alt and can_open %}
+    {% if img_src and o.img_alt and can_open %}
         {% capture gallery_attrs %}
             {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
             {% if o.img1 %}
