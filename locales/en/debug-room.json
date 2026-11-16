@@ -1,0 +1,24 @@
+{
+    "card1": {
+        "name": "Single image card",
+        "desc": "This is a description",
+        "img_alt": "The fox",
+        "img_desc": "The description for the image"
+    },
+    "card2": {
+        "name": "Multiple images card",
+        "desc": "This is another description",
+        "img_alt": "The fox",
+        "img_desc": "The description for the image",
+        "img1_desc": "<strong>This is</strong> a <code>description</code> for the <em>first image</em>",
+        "img2_desc": "<strong>This is</strong> a <code>description</code> for the <em>second image</em>"
+    },
+    "card3": {
+        "name": "Card with random images",
+        "desc": "This is a description",
+        "img_alt": "The fox",
+        "img_desc": "The description for the image",
+        "img1_desc": "<strong>This is</strong> a <code>description</code> for the <em>first image</em>",
+        "img2_desc": "<strong>This is</strong> a <code>description</code> for the <em>second image</em>"
+    }
+}

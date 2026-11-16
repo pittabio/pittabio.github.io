@@ -24,7 +24,9 @@ description: This is a Layout and Typography test page
     <p>This is a normal paragraph</p>
     <p><a href="#">This is a link</a> in a paragraph</p>
     <p><b>This is a bold text</b> in a paragraph</p>
+    <p><strong>This is a strong text</strong> used for labels</p>
     <p><em>This is an italic text</em> in a paragraph</p>
+    <p><code>This is a code</code> in a paragraph</p>
 
     <br>
 
@@ -56,13 +58,32 @@ description: This is a Layout and Typography test page
 
     <button>
         This is a button with an image
-        <img src="media/logo/skills/cpp.png" alt="profile image"/>
+        <img src="media/logo/skills/cpp.png" alt="cpp logo"/>
     </button><br>
 
     <a class="btn" href="#" target="_blank">
         <span>This is a link button with a svg</span>
         <span class="arrow-svg"></span>
     </a>
+
+    <br>
+
+    <div class="cont">
+        <span class="tag">This is a tag</span>
+        <h1 class="title">This is a Title</h1>
+        <h2 class="title">This is a subtitle</h2>
+        <p>This is a paragraph</p>
+        <br>
+        <img src="media/fox/fox.png" alt="fox image"/>
+        <br>
+        <p>A third-person Action-Adventure framework focusing on <em>traversal</em>, exploration, and <code>C++ systems</code></p>
+        <br>
+        <div class="grid-column">
+            {% for o in site.data.debug-room %}
+                {% include sections/content/card.liquid object=o %}
+            {% endfor %}
+        </div>
+    </div>
 
     <br>
 

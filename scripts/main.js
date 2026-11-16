@@ -7,7 +7,7 @@ const DEFAULT_LANG = 'en';
 // Files loaded on EVERY page (shared translations)
 const baseFiles = ['shared/common'];
 // Pages to NOT translate
-const excludedPages = ['debug-room'];
+const excludedPages = [];
 
 // -- STATE -- //
 let currentTranslations = {};
