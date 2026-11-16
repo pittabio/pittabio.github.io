@@ -63,7 +63,7 @@
         }
     },
 
-    "cause": {
+    "causes": {
         "tag": "Un pensiero",
         "title": "🍉 Qualcosa di più grande di me 🍉",
         "desc": [
@@ -79,10 +79,11 @@
     },
 
     "thanks": {
-        "title": "💖 Grazie per essere <em>qui</em> 💖",
+        "tag": "Grazie",
+        "title": "💖 Ti ringrazio per essere <em>qui</em> 💖",
         "desc": [
             "Che tu faccia una donazione, condivida il mio lavoro o passi semplicemente a trovarmi, per me conta tantissimo.",
-            "Se vuoi dirmi qualcosa, anche riguardo al pensiero qui sopra, mi farebbe piacere sentirti."
+            "Se vuoi dirmi qualcosa, sul pensiero qui sopra, o su un progetto, mi farebbe piacere sentirti."
         ],
         "button": "Contattami"
     }
