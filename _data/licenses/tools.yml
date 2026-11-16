@@ -1,3 +1,4 @@
+# Unreal Engine
 - name: "Unreal Engine logo"
   image: "/media/logo/skills/unreal.png"
   author: "Epic Games, Inc."
@@ -7,6 +8,7 @@
   license_url: "https://brand.epicgames.com/document/383#/logos/unreal-engine-logo"
   note: "tools.note.unreal"
 
+# C++
 - name: "C++ logo"
   image: "/media/logo/skills/cpp.png"
   author: "Jeremy Kratz"
@@ -16,6 +18,7 @@
   license_url: "https://isocpp.org/home/terms-of-use"
   note: "tools.note.cpp"
 
+# Git
 - name: "Git logo"
   image: "/media/logo/skills/git.png"
   author: "Jason Long"
@@ -24,6 +27,7 @@
   license: "Creative Commons Attribution 3.0 Unported License"
   license_url: "https://creativecommons.org/licenses/by/3.0/"
 
+# GitHub
 - name: "GitHub Invertocat"
   image: "/media/logo/skills/github.svg"
   author: "GitHub, Inc."
@@ -33,6 +37,7 @@
   license_url: "https://brand.github.com/foundations/logo"
   note: "tools.note.github"
 
+# GitLab
 - name: "GitLab logomark (Tanuki)"
   image: "/media/logo/skills/gitlab.png"
   author: "GitLab Inc."
@@ -42,6 +47,7 @@
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
   note: "tools.note.gitlab"
 
+# GitKraken
 - name: "GitKraken logo"
   image: "/media/logo/skills/gitkraken.png"
   author: "GitKraken (formerly Axosoft LLC)"
@@ -51,6 +57,7 @@
   license_url: "https://gitkraken.com/store#logos"
   note: "tools.note.gitkraken"
 
+# Android
 - name: "Android robot logo"
   image: "/media/logo/skills/android.png"
   author: "Google LLC."
@@ -60,6 +67,7 @@
   license_url: "https://creativecommons.org/licenses/by/3.0/"
   note: "tools.note.android"
 
+# JetBrains Rider
 - name: "JetBrains Rider logo"
   image: "/media/logo/skills/rider.png"
   author: "JetBrains s.r.o."
@@ -70,6 +78,7 @@
   license_url: "https://www.jetbrains.com/company/brand/"
   note: "tools.note.jetbrains.rider"
 
+# JetBrains WebStorm
 - name: "JetBrains WebStorm logo"
   image: "/media/logo/skills/webstorm.png"
   author: "JetBrains s.r.o."
@@ -80,6 +89,7 @@
   license_url: "https://www.jetbrains.com/company/brand/"
   note: "tools.note.jetbrains.webstorm"
 
+# Blender
 - name: "Blender logo"
   image: "/media/logo/skills/blender.png"
   author: "Blender Foundation"
@@ -90,6 +100,7 @@
   license_url: "https://www.blender.org/about/trademark-policy/"
   note: "tools.note.blender"
 
+# Adobe Photoshop
 - name: "Adobe Photoshop icon"
   image: "/media/logo/skills/photoshop.svg"
   author: "konpa"

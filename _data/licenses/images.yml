@@ -1,8 +1,10 @@
+# Xbox Core Controller
 - name: "Xbox Core Controller"
   image: "/media/more/controller.webp"
   source: "gamepadla.com"
   source_url: "https://gamepadla.com/xbox-core-controller.html"
 
+# Circle chart / cycle diagram
 - name: "Circle Chart / Cycle Diagram Templates"
   image: "/media/more/circle.png"
   author: "Amonrat Rungreangfangsai"
@@ -11,6 +13,7 @@
   license: "Vecteezy Free License — attribution required"
   license_url: "https://www.vecteezy.com/licensing-information"
 
+# Gift box
 - name: "Gifts Boxes (PNGimg #100212)"
   image: "/media/more/gift.png"
   author: "unknown - via pngimg"

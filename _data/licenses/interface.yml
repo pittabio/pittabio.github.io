@@ -1,3 +1,4 @@
+# Right arrow icon
 - name: "Right-Pointing Arrow [akar-icons:arrow-right]"
   svg: "arrow-svg"
   author: "Arturo Wibawa"
@@ -7,6 +8,7 @@
   license: "MIT"
   license_url: "https://github.com/artcoholic/akar-icons/blob/master/LICENSE"
 
+# Arrow in a circle icon
 - name: "Arrow inside a circle [bi:arrow-down-circle]"
   svg: "arrow-circle-svg"
   author: "The Bootstrap Authors"
@@ -16,6 +18,7 @@
   license: "MIT"
   license_url: "https://github.com/twbs/icons/blob/main/LICENSE.md"
 
+# Chevron up icon
 - name: "chevron-up"
   svg: "chevron-svg"
   author: "Arturo Wibawa"
@@ -25,6 +28,7 @@
   license: "MIT"
   license_url: "https://github.com/artcoholic/akar-icons/blob/master/LICENSE"
 
+# Loading bubbles icon
 - name: "bubble-loading"
   svg: "loading-svg"
   author: "SUSE UX/UI team"
@@ -34,6 +38,7 @@
   license: "MIT"
   license_url: "https://gitlab.com/SUSE-UIUX/eos-icons/-/blob/master/LICENSE"
 
+# Close icon
 - name: "close-outline"
   svg: "close-svg"
   author: "Carbon - IBM"
@@ -44,6 +49,7 @@
   license_url: "https://github.com/carbon-design-system/carbon/blob/main/LICENSE"
 
 
+# Location icon
 - name: "location"
   svg: "loc-svg"
   author: "Dan Klammer"
@@ -53,6 +59,7 @@
   license: "MIT"
   license_url: "https://github.com/danklammer/bytesize-icons/blob/master/LICENSE.md"
 
+# Time zone icon
 - name: "time-zone"
   svg: "time-svg"
   author: "Hugeicons"
@@ -61,6 +68,7 @@
   source_url: "https://icon-sets.iconify.design/hugeicons/time-zone/"
   license: "MIT"
 
+# Language icon
 - name: "language"
   svg: "lang-svg"
   author: "Arturo Wibawa"
@@ -70,6 +78,7 @@
   license: "MIT"
   license_url: "https://github.com/artcoholic/akar-icons/blob/master/LICENSE"
 
+# Job search icon
 - name: "job-search"
   svg: "job-svg"
   author: "Hugeicons"

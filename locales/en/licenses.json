@@ -16,7 +16,8 @@
                 "This site is hosted on <a href='https://docs.github.com/en/pages'>GitHub Pages</a>.",
                 "As with any web host, GitHub may process technical data such as your IP address to deliver the pages and keep the service secure.",
                 "GitHub also processes data in the United States and adheres to the EU-U.S. Data Privacy Framework.",
-                "Read the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>privacy policy</a> on the GitHub website."            ]
+                "Read the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>privacy policy</a> on the GitHub website."
+            ]
         },
         "storage": {
             "title": "Data on your device",

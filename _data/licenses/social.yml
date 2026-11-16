@@ -1,3 +1,4 @@
+# itch.io (image)
 - name: "itch.io Logo"
   image: "/media/logo/dev/itchio.svg"
   author: "Leaf Corcoran & itch.io team"
@@ -7,6 +8,7 @@
   license: "Copyright © 2026 itch corp"
   license_url: "https://itch.io/press-kit"
 
+# itch.io (SVG icon)
 - name: "itch.io shop logo [cib:itch-io]"
   svg: "itch-svg"
   author: "creativeLabs Łukasz Holeczek"
@@ -19,6 +21,7 @@
   trademark_url: "https://itch.io/press-kit"
   note: "social.note.itch"
 
+# GameJolt
 - name: "GameJolt Bolt [simple-icons:gamejolt]"
   svg: "gamejolt-svg"
   author: "Simple Icons Collaborators"
@@ -31,6 +34,7 @@
   trademark_url: "https://gamejolt.com/"
   note: "social.note.gamejolt"
 
+# GitLab (white)
 - name: "GitLab Logomark (white)"
   svg: "gitlab-w-svg"
   author: "GitLab Inc."
@@ -40,6 +44,7 @@
   license_url: "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/"
   note: "tools.note.gitlab"
 
+# LinkedIn
 - name: "LinkedIn"
   image: "/media/logo/dev/linkedin.png"
   author: "LinkedIn"
@@ -51,6 +56,7 @@
   note: "social.note.linkedin"
 
 
+# Instagram
 - name: "Instagram"
   image: "/media/logo/social/instagram.svg"
   author: "Meta Platforms Technologies"
@@ -61,6 +67,7 @@
   license_url: "https://www.meta.com/brand/resources/meta/our-trademarks/"
   note: "social.note.instagram"
 
+# Discord
 - name: "Discord Logo"
   image: "/media/logo/social/discord.svg"
   author: "Discord Inc."
@@ -71,6 +78,7 @@
   license_url: "https://my.corebook.io/1zObrQ89Q4wHhgFCfYIUhMUvmNf4XjxO/01-overview/legal-brand-guidelines"
   note: "social.note.discord"
 
+# YouTube
 - name: "YouTube icon"
   image: "/media/logo/social/youtube.png"
   author: "YouTube"
@@ -81,6 +89,7 @@
   license_url: "https://brand.youtube/"
   note: "social.note.youtube"
 
+# Twitch
 - name: "Glitch (Twitch icon)"
   image: "/media/logo/social/twitch.svg"
   author: "Twitch Interactive, Inc."
@@ -92,6 +101,7 @@
   note: "social.note.twitch"
 
 
+# Ko-fi
 - name: "Ko-fi logo"
   image: "/media/logo/support/kofi.svg"
   author: "Ko-fi Labs"
@@ -102,6 +112,7 @@
   license_url: "https://help.ko-fi.com/hc/en-us/articles/10598202486429-Copyright-Guidelines"
   note: "social.note.kofi"
 
+# PayPal
 - name: "PayPal vertical full color"
   image: "/media/logo/support/paypal.png"
   author: "PayPal"
@@ -112,6 +123,7 @@
   license_url: "https://www.paypal.com/it/legalhub/paypal/useragreement-full#other"
   note: "social.note.paypal"
 
+# Microsoft Rewards
 - name: "Microsoft Rewards Logo"
   image: "/media/logo/support/ms-rewards.png"
   author: "Microsoft Corporation"
@@ -120,4 +132,4 @@
   source_url: "https://rewards.bing.com/about"
   license: "Trademark of the Microsoft group of companies"
   license_url: "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-  note: "icons2.note.msrewards"
+  note: "social.note.ms-rewards"
