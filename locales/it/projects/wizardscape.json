@@ -58,27 +58,27 @@
             "title": "Architettura a componenti modulari",
             "desc": "La logica del personaggio del giocatore è suddivisa in Actor Component C++ specializzati. Questo approccio modulare garantisce che sistemi come Salute, Economia e Generazione siano indipendenti, riutilizzabili e facili da debuggare.",
 
-            "img1": "<strong>Stack dei componenti del personaggio:</strong> Una vista della gerarchia di BP_Character che mostra i componenti C++ personalizzati (Salute, Denaro, Spawner) integrati nell'attore principale.",
-            "img2": "<strong>Logica di salute e bottino:</strong> Dettagli di <code>HealthComponent</code>. Gestisce i parametri vitali e la logica di generazione alla morte (\"Spawn on Dead\"), assicurando che i nemici rilascino gemme specifiche con offset personalizzati sull'asse Z quando vengono sconfitti.",
-            "img3": "<strong>Sistema di generazione dinamica:</strong> La configurazione di <code>SpawnerComponent</code>. Gestisce i pool di maghi nemici e i pattern di generazione casuali rispetto alla posizione del giocatore nel mondo."
+            "img1_desc": "<strong>Stack dei componenti del personaggio:</strong> Una vista della gerarchia di BP_Character che mostra i componenti C++ personalizzati (Salute, Denaro, Spawner) integrati nell'attore principale.",
+            "img2_desc": "<strong>Logica di salute e bottino:</strong> Dettagli di <code>HealthComponent</code>. Gestisce i parametri vitali e la logica di generazione alla morte (\"Spawn on Dead\"), assicurando che i nemici rilascino gemme specifiche con offset personalizzati sull'asse Z quando vengono sconfitti.",
+            "img3_desc": "<strong>Sistema di generazione dinamica:</strong> La configurazione di <code>SpawnerComponent</code>. Gestisce i pool di maghi nemici e i pattern di generazione casuali rispetto alla posizione del giocatore nel mondo."
         },
 
         "gems": {
             "title": "Ecosistema di risorse dinamico",
             "desc": "Un sistema di generazione basato sulla probabilità per le risorse interattive. Sfruttando una gerarchia polimorfica in C++, le gemme offrono modificatori di gameplay specifici mantenendo un impatto di dati ridotto.",
 
-            "img1": "<strong>Configurazione dello spawner:</strong> Una vista delle proprietà di <code>BP_GemSpawner</code>. Consente ai designer di assegnare probabilità basate su pesi (es. 55/45) a diverse classi di attori, che il backend C++ normalizza poi a runtime.",
-            "img2": "<strong>Gerarchia polimorfica:</strong> Vetrina dei tre Blueprint di gemme. Ognuno di essi eredita da una classe genitore C++ specializzata (Buff, Debuff, Money), dimostrando un netto disaccoppiamento tra logica di base e asset di soli dati.",
-            "img3": "<strong>Implementazione tecnica:</strong> Un frammento della logica di generazione in C++. Utilizza <code>LineTraceSingleByChannel</code> per rilevare il terreno e <code>SpawnActor</code> per istanziare la gemma scelta esattamente nel punto d'impatto."
+            "img1_desc": "<strong>Configurazione dello spawner:</strong> Una vista delle proprietà di <code>BP_GemSpawner</code>. Consente ai designer di assegnare probabilità basate su pesi (es. 55/45) a diverse classi di attori, che il backend C++ normalizza poi a runtime.",
+            "img2_desc": "<strong>Gerarchia polimorfica:</strong> Vetrina dei tre Blueprint di gemme. Ognuno di essi eredita da una classe genitore C++ specializzata (Buff, Debuff, Money), dimostrando un netto disaccoppiamento tra logica di base e asset di soli dati.",
+            "img3_desc": "<strong>Implementazione tecnica:</strong> Un frammento della logica di generazione in C++. Utilizza <code>LineTraceSingleByChannel</code> per rilevare il terreno e <code>SpawnActor</code> per istanziare la gemma scelta esattamente nel punto d'impatto."
         },
 
         "shop": {
             "title": "Negozio di meta-progressione modulare",
             "desc": "Un'interfaccia di aggiornamento scalabile creata utilizzando widget personalizzati riutilizzabili. La logica è guidata da una classe base in C++ che gestisce automaticamente la propagazione dei dati e il broadcasting degli eventi tramite dynamic delegate.",
 
-            "img1": "<strong>Data binding Pre-Construct:</strong> Analisi della funzione <code>NativePreConstruct</code>. Questa logica assicura che descrizioni, prezzi e limiti vengano aggiornati automaticamente nel Viewport non appena un designer modifica le proprietà in C++.",
-            "img2": "<strong>Componente oggetto personalizzato:</strong> Il widget <code>WBP_ShopItem</code>, associato alla classe C++ <code>ShopItem</code>. Incapsula tutta la logica dei singoli pulsanti, inclusa la gestione centralizzata tramite <code>FOnButtonPressedDelegate</code>.",
-            "img3": "<strong>Layout e gerarchia del negozio:</strong> La gerarchia principale di <code>WBP_ShopPage</code>. Utilizza un Vertical Box per gestire più istanze del widget oggetto personalizzato, dimostrando un'architettura UI pulita e basata sul principio DRY (Don't Repeat Yourself)."
+            "img1_desc": "<strong>Data binding Pre-Construct:</strong> Analisi della funzione <code>NativePreConstruct</code>. Questa logica assicura che descrizioni, prezzi e limiti vengano aggiornati automaticamente nel Viewport non appena un designer modifica le proprietà in C++.",
+            "img2_desc": "<strong>Componente oggetto personalizzato:</strong> Il widget <code>WBP_ShopItem</code>, associato alla classe C++ <code>ShopItem</code>. Incapsula tutta la logica dei singoli pulsanti, inclusa la gestione centralizzata tramite <code>FOnButtonPressedDelegate</code>.",
+            "img3_desc": "<strong>Layout e gerarchia del negozio:</strong> La gerarchia principale di <code>WBP_ShopPage</code>. Utilizza un Vertical Box per gestire più istanze del widget oggetto personalizzato, dimostrando un'architettura UI pulita e basata sul principio DRY (Don't Repeat Yourself)."
         }
     },
 
