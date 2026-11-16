@@ -98,7 +98,7 @@
   desc: "$games.wizard.desc"
   page: &page_ws "projects/wizardscape.html"
 
-  img: "/media/games/wizard-scape/banner.png"
+  img: "/media/games/wizardscape/banner.png"
   img_alt: "$games.wizard.img_alt"
   img_desc: "$games.wizard.img_desc"
 

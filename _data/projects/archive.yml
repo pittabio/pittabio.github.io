@@ -1,17 +1,17 @@
 # Echoes of the Witch Wood
 - name: "$archive.echoes.name"
   desc: "$archive.echoes.desc"
-  page: "projects/echoes.html"
+  page: &echoes "projects/archive/echoes.html"
 
-  link2: "projects/echoes.html"
+  link2: *echoes
   link2_name: "$common.card.details"
   link2_icon: "arrow-svg"
 
-# Project Pyramic
+# Project Pyramid
 - name: "$archive.pyramid.name"
   desc: "$archive.pyramid.desc"
-  page: "projects/pyramid.html"
+  page: &pyramid "projects/archive/pyramid.html"
 
-  link2: "projects/pyramid.html"
+  link2: *pyramid
   link2_name: "$common.card.details"
   link2_icon: "arrow-svg"
