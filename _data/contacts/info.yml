@@ -1,15 +1,22 @@
+# General contact information and availability details
+# `label` and `desc` reference localization keys in locales/#/*.json
+
+# Location
 - label: "info.loc_label"
   desc: "info.loc"
   svg: "loc-svg"
 
+# Time zone
 - label: "info.tz_label"
   desc: "info.tz"
   svg: "time-svg"
 
+# Spoken languages
 - label: "info.lang_label"
   desc: "info.lang"
   svg: "lang-svg"
 
+# Job availability status
 - label: "info.status_label"
   desc: "info.status"
   svg: "job-svg"

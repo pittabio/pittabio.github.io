@@ -1,15 +1,21 @@
+# Developer and professional platform profiles
+
+# LinkedIn profile
 - label: "Linkedin"
   img: "/media/logo/dev/linkedin.png"
   url: "https://linkedin.com/in/fabio-pittaccio"
 
+# GitHub profile
 - label: "GitHub"
   img: "/media/logo/skills/github.svg"
   url: "https://github.com/pittabio"
 
+# GitLab profile
 - label: "GitLab"
   img: "/media/logo/skills/gitlab.png"
   url: "https://gitlab.com/pittabio"
 
+# itch.io profile
 - label: "itch.io"
   img: "/media/logo/dev/itchio.svg"
   url: "https://fabiopitt.itch.io/"

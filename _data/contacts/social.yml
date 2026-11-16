@@ -1,15 +1,21 @@
+# General social media profiles
+
+# Instagram profile
 - label: "Instagram"
   img: "/media/logo/social/instagram.svg"
   url: "https://www.instagram.com/pittabio/"
 
+# Discord profile
 - label: "Discord"
   img: "/media/logo/social/discord.svg"
   url: "https://discord.com/users/1169951922522968104"
 
+# YouTube channel
 - label: "YouTube"
   img: "/media/logo/social/youtube.png"
   url: "https://www.youtube.com/@pittabio"
 
+# Twitch channel
 - label: "Twitch"
   img: "/media/logo/social/twitch.svg"
   url: "https://www.twitch.tv/pittabio"
