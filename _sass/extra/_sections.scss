@@ -9,7 +9,7 @@
     transition: var(--transition);
 }
 
-/* Skills Bar */
+/* Skills Bar (skills-icons.html) */
 .skills {
     @include base.flexbox-style(
         $justify: center,
@@ -27,38 +27,57 @@
     // The icons image
     img {
         @extend %img-skills;
-        //filter: grayscale(1);
 
         // When the icon is hovered
         &:hover {
-            //filter: grayscale(0);
             transform: scale(1.2);
         }
     }
 }
 
-/* Card */
-.card {
-    @include base.container-style($justify: flex-start);
+/* CARD mixin */
+@mixin card (
+    $justify: flex-start,
+    $align: center,
+    $background: transparent,
+    $border: 2px solid var(--border),
+    $border-rad: var(--rad-big),
+    $padding: var(--main-gap),
+    $gap: var(--main-gap),
+    $height: 100%,
+    $transition: (var(--transition))
+){
+    // Include the container style mixin
+    @include base.container-style(
+        $justify: $justify,
+        $align: $align
+    );
 
     // Layout
-    border: 2px solid var(--border);
-    border-radius: var(--rad-big);
-    padding: var(--main-gap);
-    gap: var(--main-gap);
-    height: 100%; // Equal cards height
-    transition: transform var(--transition), box-shadow var(--transition);
+    background-color: $background;
+    border: $border;
+    border-radius: $border-rad;
+    padding: $padding;
+    gap: $gap;
+    height: $height; // Equal cards height
+    transition: $transition;
+
+    // The paragraph of the card
+    p {
+        text-align: justify;
+        flex-grow: 1;
+    }
+}
+
+/* Card */
+.card {
+    // Include the card mixin
+    @include card;
 
     // The title link
     .mini-title {
         text-decoration: none;
         font-style: normal;
-    }
-
-    // The paragraph - description of the game
-    p {
-        text-align: justify;
-        flex-grow: 1;
     }
 
     // The buttons
@@ -82,39 +101,66 @@
     }
 }
 
+/* Notice */
+.notice {
+    // Custom properties for background and border
+    --notice-bg: #1f1f1f; // Background color
+    --notice-br: #1f1f1f; // Border color
+
+    // Include the card mixin
+    @include card (
+        $background: var(--notice-bg),
+        $border: 1px solid var(--notice-br),
+        $align: start
+    );
+
+    // When the notice is hovered
+    &:hover {
+        border-color: var(--accent);
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.15);
+    }
+
+    // Data variants
+    &[data-variant="archived"]  { --notice-bg: #24272D; --notice-br: #181A1E; }
+    &[data-variant="collab"]    { --notice-bg: #1B2633; --notice-br: #121A24; }
+}
+
 /* Badge */
 //#region Badge
 
-// The badge itself
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(var(--accent-rgb), 0.1);
-    border: 1px solid rgba(var(--accent-rgb), 0.25);
-    border-radius: 50px;
-    padding: 0.35rem 1rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
+// Badge mixin
+@mixin badge {
+    // Colors properties
+    --badge-color: 100, 100, 100; // This is the variable that changes the most
+    --badge-bg-alpha: 0.15;
+    --badge-br-alpha: 0.3;
 
-    // Before the text, there is a pulsing circle
-    &::before {
-        content: '';
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--accent);
-        animation: pulse 2s infinite;
-    }
+    // Layout
+    padding: 0.18rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevents the badge from wrapping */
+    letter-spacing: 0.05em;
+
+    // Text
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    // Colors applied
+    background: rgba(var(--badge-color), var(--badge-bg-alpha));
+    color: rgb(var(--badge-color));
+    border: 1px solid rgba(var(--badge-color), var(--badge-br-alpha));
 }
 
-// the pulse animation
-@keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%       { opacity: 0.4; transform: scale(0.8); }
+// The badge itself
+.badge {
+    // Include the badge mixin
+    @include badge;
+
+    // The states colors
+    &[data-variant="archived"] { --badge-color: 160, 165, 177; }
+    &[data-variant="collab"]   { --badge-color: 144, 202, 249; }
 }
 
 //#endregion
