@@ -37,15 +37,20 @@
 
 /* CARD mixin */
 @mixin card (
+    // The containter properties
     $justify: flex-start,
     $align: center,
+    // The card properties
     $background: transparent,
     $border: 2px solid var(--border),
     $border-rad: var(--rad-big),
     $padding: var(--main-gap),
     $gap: var(--main-gap),
     $height: 100%,
-    $transition: (var(--transition))
+    $transition: (var(--transition)),
+    // When the card is hovered
+    $hovered-border-color: var(--accent),
+    $hovered-shadow-color: rgba(var(--accent-rgb), 0.15)
 ){
     // Include the container style mixin
     @include base.container-style(
@@ -67,6 +72,15 @@
         text-align: justify;
         flex-grow: 1;
     }
+}
+
+%card-hovered {
+    --card-hovered-border-color: var(--accent);
+    --card-hovered-shadow-color: rgba(var(--accent-rgb), 0.15);
+
+    border-color: var(--card-hovered-border-color);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px var(--card-hovered-shadow-color);
 }
 
 /* Card */
@@ -95,9 +109,7 @@
 
     // When the card is hovered
     &:hover {
-        border-color: var(--accent); /* The border turns orange */
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.15);
+        @extend %card-hovered;
     }
 }
 
@@ -114,16 +126,28 @@
         $align: start
     );
 
-    // When the notice is hovered
-    &:hover {
-        border-color: var(--accent);
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.15);
+    // When the card is hovered
+    &:hover { @extend %card-hovered; }
+
+    // Data variant archived
+    &[data-variant="archived"] {
+        --notice-bg: #2B2250;
+        --notice-br: #7A63E0;
+
+        // When the 'archived' notice is hovered
+        --card-hovered-border-color: #5C4AA8;
+        --card-hovered-shadow-color: #7A63E040;
     }
 
-    // Data variants
-    &[data-variant="archived"]  { --notice-bg: #24272D; --notice-br: #181A1E; }
-    &[data-variant="collab"]    { --notice-bg: #1B2633; --notice-br: #121A24; }
+    // Data variant collab
+    &[data-variant="collab"] {
+        --notice-bg: #0F3633;
+        --notice-br: #22A596;
+
+        // When the 'collab' notice is hovered
+        --card-hovered-border-color: #1A7C70;
+        --card-hovered-shadow-color: #22A59640;
+    }
 }
 
 /* Badge */
@@ -159,8 +183,8 @@
     @include badge;
 
     // The states colors
-    &[data-variant="archived"] { --badge-color: 160, 165, 177; }
-    &[data-variant="collab"]   { --badge-color: 144, 202, 249; }
+    &[data-variant="archived"] { --badge-color: 190, 172, 255; }
+    &[data-variant="collab"]   { --badge-color: 80,  220, 200; }
 }
 
 //#endregion
