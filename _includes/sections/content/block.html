@@ -9,6 +9,7 @@ USAGE Example
   sub       = "subtitle.to.include" (optional)
   img       = "/image/to/include"   (optional)
   img_alt   = "image.alt.text"      (optional, use together with img)
+  img1      = "/image/to/include"   (optional, use if the opened image is different e.g. a preview image and a full screen image)
   img_desc  = "image.desc.tesc"     (optional, use together with img)
   p         = "parag.to.include"    (optional)
   url       = "/link/include"       (optional)
@@ -40,14 +41,16 @@ USAGE Example
 
     <!-- Image -->
     {% if include.img and include.img_alt %}
-        {% if include.img_desc %}
-            <img src="{{ include.img }}"
-                 alt="{{ include.img_alt }}"
-                 onclick="openGallery(this)" data-desc="{{ include.img_desc }}">
-        {% else %}
-            <img src="{{ include.img }}"
-                 alt="{{ include.img_alt }}">
-        {% endif %}
+        <img src="{{ include.img }}"
+             alt="{{ include.img_alt }}"
+             onclick="openGallery(this)"
+             {% if include.img1 and include.img1_desc %}
+                 data-img1="{{ include.img1 }}"
+                 data-desc1="{{ include.img1_desc }}"
+             {% elsif include.img_desc %}
+                 data-desc="{{ include.img_desc }}"
+             {% endif %}
+        />
     {% endif %}
 
     <!-- The paragraph of the block -->

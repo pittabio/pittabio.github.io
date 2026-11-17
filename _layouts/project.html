@@ -17,9 +17,12 @@ hero:
     tag, title, sub
 
     [optionals]
-    img: "/media/folder/image.type"
+    img: "/media/folder/image.type"   (the preview and/or the full screen image when opened)
     img_alt: "project.hero.img_alt"   (use together with img)
-    img_desc: "project.hero.img_desc" (use together with img)
+    img_desc: "project.hero.img_desc" (use together with img; if there is no 'img1')
+
+    img1: "/media/folder/image1.type"   (if the opened image is different e.g. a preview image and a full screen image)
+    img1_desc: "progect.hero.img1_desc" (used together with img1)
 
 [optional] (see entry-list.html)
 details:
@@ -87,12 +90,14 @@ cta:
 <!-- ## HERO ## -->
 <section id="hero" class="cont">
     {% include sections/content/block.html
-        tag      = page.hero.tag
-        title    = page.hero.title
-        img      = page.hero.img
-        img_alt  = page.hero.img_alt
-        img_desc = page.hero.img_desc
-        sub      = page.hero.sub
+        tag       = page.hero.tag
+        title     = page.hero.title
+        img       = page.hero.img
+        img_alt   = page.hero.img_alt
+        img_desc  = page.hero.img_desc
+        img1      = page.hero.img1
+        img1_desc = page.hero.img1_desc
+        sub       = page.hero.sub
     %}
 </section><!-- /hero/ -->
 
