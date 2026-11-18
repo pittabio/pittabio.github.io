@@ -4,7 +4,7 @@
   page: &page_rr "projects/ruins-rhapsody.html"
   feat: true
 
-  img: "/media/games/ruins-rhapsody/banner.jpg"
+  img: "/media/projects/games/ruins-rhapsody/banner.jpg"
   img_alt: "$games.ruins.img_alt"
   img_desc: "$games.ruins.img_desc"
 
@@ -31,7 +31,7 @@
   page: &page_gja "projects/goblin-jr.html"
   feat: true
 
-  img: "/media/games/goblin-jr/banner.png"
+  img: "/media/projects/games/goblin-jr/banner.png"
   img_alt: "$games.goblin.img_alt"
   img_desc: "$games.goblin.img_desc"
 
@@ -54,7 +54,7 @@
   page: &page_zsc "projects/zombie-siege.html"
   feat: true
 
-  img: "/media/games/zombie-siege/banner.png"
+  img: "/media/projects/games/zombie-siege/banner.png"
   img_alt: "$games.zombie.img_alt"
   img_desc: "$games.zombie.img_desc"
 
@@ -76,7 +76,7 @@
   desc: "$games.flying.desc"
   page: &page_fb "projects/flying-bird.html"
 
-  img: "/media/games/flying-bird/banner.png"
+  img: "/media/projects/games/flying-bird/banner.png"
   img_alt: "$games.flying.img_alt"
   img_desc: "$games.flying.img_desc"
 
@@ -98,7 +98,7 @@
   desc: "$games.wizard.desc"
   page: &page_ws "projects/wizardscape.html"
 
-  img: "/media/games/wizardscape/banner.png"
+  img: "/media/projects/games/wizardscape/banner.png"
   img_alt: "$games.wizard.img_alt"
   img_desc: "$games.wizard.img_desc"
 
