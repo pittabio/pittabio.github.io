@@ -1,114 +1,62 @@
 ---
-title: "Project Pyramid · Dev Archive · Fabio Pittaccio"
+layout: project
+title: "Project Pyramid · Dev Archive"
+i18n_title: "head_title"
 description: "AI Systems Engineering: A team-based stealth adventure featuring modular AI and advanced perception frameworks."
+
+hero:
+    tag: "hero.tag"
+    title: "hero.title"
+    sub: "hero.sub"
+
+    img: "/media/projects/archive/pyramid/AI_system_architecture_diagram.png"
+    img_alt: "hero.img_alt"
+
+    img1: "/media/projects/archive/pyramid/Dummy_manager_subsystem.png"
+    img1_alt: "hero.img1_alt"
+    img1_desc: "hero.img1_desc"
+
+    img2: "/media/projects/archive/pyramid/Dummy_code.png"
+    img2_alt: "hero.img2_alt"
+    img2_desc: "hero.img2_desc"
+
+    img3: "/media/projects/archive/pyramid/AI_Sight_EQT.png"
+    img3_alt: "hero.img3_alt"
+    img3_desc: "hero.img3_desc"
+
+details:
+    prefix: "details"
+    items:
+        - id: concept
+          subtitle: false
+          desc: "details.concept.desc"
+        - id: tech
+          subtitle: false
+          points: 5
+        - id: lessons
+          subtitle: false
+          desc: "details.lessons.desc"
+        - id: "highlights"
+          subtitle: true
+          points: 6
+
+cta:
+    data: "games"
+    title: "cta.title"
+    subtitle: "cta.subtitle"
+    divider: "cta.divider"
+    more: "cta.more"
+    more_link: /projects.html
+
 ---
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="head_title">{{ page.title }}</title>
 
-    <!-- FAVICON -->
-    {% include favicon.html %}
-
-    <!-- ## CSS ## -->
-    <link rel="stylesheet" href="../../style/core.css">                         <!-- Core: Base, Header, Footer -->
-    <link rel="stylesheet" href="../../style/pages/about.css">                  <!-- Manages the timeline -->
-    <link rel="stylesheet" href="../../style/sections/section-projects.css">    <!-- Manages the gallery (grid and card) -->
-    <link rel="stylesheet" href="../../style/sections/section-contact.css">     <!-- Manages the final CTA section -->
-    <link rel="stylesheet" href="../../style/pages/project.css">                <!-- Manages banners -->
-    <link rel="stylesheet" href="../../style/icons.css">                        <!-- Arrow -->
-</head>
-<body>
-
-<!-- ## HEADER ## -->
-<div id="header"></div>
-
-<!-- ## PAGE ## -->
-<main class="page-content resume-page-section">
-
-    <!-- ## PAGE HEAD ## -->
-    <div class="resume-header">
-        <span class="hero-tag"        data-i18n-html="pyramid_page.tag"></span>
-        <h1 class="contact-title"     data-i18n-html="pyramid_page.title"></h1>
-        <p  class="contact-subtitle"  data-i18n="pyramid_page.subtitle"></p>
-    </div>
-
-    <!-- ## ? BANNER IMAGE HERE ? ## -->
-
-    <!-- ## ABOUT ## -->
-    <section class="resume-section" id="about">
-        <div class="section-container">
-
-            <!-- NOTICE -->
-            <div class="archive-notice">
-                <span class="status-badge" data-i18n="pyramid_page.status_badge"></span>
-                <p class="timeline-details" data-i18n-html="pyramid_page.status_note"></p>
-            </div>
-
-            <div class="education-timeline">
-			
-                <!-- 1. Role -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="pyramid_page.concept.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="pyramid_page.concept.title"></div>
-                    <p class="timeline-details" data-i18n-html="pyramid_page.concept.desc"></p>
-                </div>
-
-                <!-- 2. Technical -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="pyramid_page.tech_work.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="pyramid_page.tech_work.title"></div>
-                    <ul class="timeline-details" data-i18n-html="pyramid_page.tech_work.items"></ul>
-                </div>
-
-                <!-- 3. Lessons -->
-                <div class="timeline-entry">
-                    <div class="timeline-date"  data-i18n-html="pyramid_page.lessons.tag"></div>
-                    <div class="timeline-role"  data-i18n-html="pyramid_page.lessons.title"></div>
-                    <p class="timeline-details" data-i18n-html="pyramid_page.lessons.desc"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ## HIGHLIGHTS ## -->
-    <section class="resume-section" id="highlights">
-        <div class="section-container">
-
-            <!-- Highlights title -->
-            <h2 class="section-title" data-i18n="pyramid_page.highlights.title"></h2>
-
-            <!-- Items -->
-            <div class="education-timeline">
-                <div class="timeline-entry">
-                    <ul class="timeline-details" data-i18n-html="pyramid_page.highlights.items"></ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ## CTA ## -->
-    <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"    data-i18n-html="pyramid_page.cta.title"></h2>
-            <p  class="contact-subtitle" data-i18n="pyramid_page.cta.subtitle"></p>
-            <a href="../../projects.html" class="contact-cta">
-                <span data-i18n="pyramid_page.cta.btn_back"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </section>
-</main>
-
-<!-- ## FOOTER ## -->
-<div id="footer"></div>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="../../scripts/main.js"></script>
-
-</body>
-</html>
+<!--
+  A notification badge to let the user know that the project is a collaboration
+-->
+<section id="note" class="cont">
+    <aside class="notice" data-variant="collab">
+        <span class="badge" data-variant="collab"
+              data-i18n-html="note.badge"></span>
+        <p data-i18n-html="note.text"></p>
+    </aside>
+</section>

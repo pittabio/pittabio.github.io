@@ -1,66 +1,100 @@
 {
-  "head_title": "Project Pyramid · Dev Archive · Fabio Pittaccio",
+    "head_title": "Project Pyramid · Dev Archive",
 
-  "pyramid_page": {
-    "tag": "In Development · Team Project · UE5",
-    "title": "Project <em>Pyramid</em>",
-    "subtitle": "A stealth-adventure set in ancient Egypt, featuring a modular AI architecture and advanced sensory systems.",
-    "banner": "AI class structure and Subsystem logic in JetBrains Rider",
+    "hero": {
+        "tag": "In Development · Team Project · UE5",
+        "title": "Project <em>Pyramid</em>",
+        "sub": "A stealth-adventure set in ancient Egypt, featuring a modular AI architecture and advanced sensory systems.",
+        "img_alt": "Unreal Engine C++ AI System Architecture Diagram: interaction between Base AI Controller, Dual-Cone Perception (Direct and Peripheral Sight), World Subsystem, and Pooled Deception Dummy Entity.",
+        "img1_alt": "Logical flowchart of the Dummy Manager Subsystem in Unreal Engine C++: Object Pooling lifecycle, Active Viewers tracking, and AI Deception trigger conditions",
+        "img1_desc": [
+            "Implementation of a <code>UWorldSubsystem</code> managing a decoy actor <code>ADummyEntity</code>",
+            "to deceive AI perception when the player breaks line of sight.",
+            "To eliminate runtime spawn overhead and <em>garbage collection</em> spikes, the subsystem utilizes an <strong>Object Pooling</strong> pattern",
+            "instantiating a single actor on level initialization and relocating it on demand.",
+            "An active viewer counter <code>ActiveViewersCount</code> ensures the dummy only activates when all enemies completely lose visual contact,",
+            "paired with an automatic threshold distance check to invalidate the decoy if the player moves too far"
+        ],
 
-    "status_badge": "In Development (Contribution Paused)",
-    "status_note": [
-      "Project Pyramid is an ongoing collaborative team project.",
-      "My role as <strong>AI Systems Programmer</strong> is currently concluded/paused after delivering the core enemy architecture and perception framework.",
-      "The team is now proceeding with level design, asset creation, and puzzle mechanics."
-    ],
+        "img2_alt": "Unreal Engine C++ code snippet: UDummyManagerSubsystem (UWorldSubsystem) and ADummyEntity interface declarations showing IGenericTeamAgentInterface and AI Perception stimuli integration",
+        "img2_desc": [
+            "Declaration of the C++ classes for managing the <strong>Dummy</strong>. <code>ADummyEntity</code> extends <code>AActor</code> and inherits from <em>IGenericTeamAgentInterface</em>,",
+            "overriding <code>GetGenericTeamId()</code> with the same identifier as the player; this ensures that the AI treats the decoy as a legitimate hostile target.",
+            "The <code>UAIPerceptionStimuliSourceComponent</code> emits the visual stimulus required for the deception.",
+            "On the management side, <code>UDummyManagerSubsystem</code> inherits from <em>UWorldSubsystem</em>, ensuring its lifecycle is tied to the game world without the need for singleton constructs or dummy actors placed within the scene."
+        ],
 
-    "concept": {
-      "tag": "Role",
-      "title": "Stealth AI Engineering",
-      "desc": [
-        "In a stealth-focused experience, the AI is the heart of the gameplay loop. I was responsible for designing a system that wasn't just 'reactive', but believable.",
-        "From managing enemy memory via the Dummy System to reinforcement coordination, the goal was to create a scalable framework that designers could easily tune via Data Tables without touching the codebase."
-      ]
+        "img3_alt": "Unreal Engine C++ code snippet: custom AI Sight senses (Direct and Peripheral Sight) and custom Environment Query System (EQS) test driven by Data Tables",
+        "img3_desc": [
+            "Out of the box, <em>Unreal Engine</em>'s <strong>AI Perception</strong> operates with a single uniform sight cone.",
+            "To support nuanced stealth and alertness mechanics, I extended the perception pipeline by creating two independent senses: <code>Direct Sight</code> (narrow cone, fast detection)",
+            "and <code>Peripheral Sight</code> (wide field of view, progressive detection timer based on distance).",
+            "To empower tactical navigation and cover evaluation (e.g.: cover or stroll outside the target sight),",
+            "I authored a custom Environment Query System test <em>UEqt_IsPointInVision</em> extending <em>UEnvQueryTest</em>.",
+            "It filters environmental query points against the active vision cones at runtime, fully driven by designer-friendly <em>Data Tables</em> <code>FPerceptionsParam</code>."
+        ]
     },
 
-    "tech_work": {
-      "tag": "Technical Development",
-      "title": "Core Systems & AI",
-      "items": [
-        "<li><strong>Dummy Entity World Subsystem:</strong> Implemented a C++ system that spawns a 'ghost' entity at the player's last known position. AI units investigate the Dummy instead of 'cheating' with omniscience, creating realistic search patterns.</li>",
-        "<li><strong>Multi-State AI (C++/BT):</strong> Developed a modular Behavior Tree architecture with 5 primary states (Patrol, Alert, Search, Combat, Dead). It features dynamic perception management that live-updates sensory parameters based on the current state.</li>",
-        "<li><strong>Coordination & Roles:</strong> Implemented a synchronized 'Call for Aid' system to prevent overlapping enemy yells. Added role assignment logic (Investigator vs. Support) to ensure enemies surround the player during investigations.</li>",
-        "<li><strong>EQS & Flanking:</strong> Leveraged the Environment Query System for dynamic flanking in combat and to claim exclusive search points, preventing multiple AI agents from stacking on the same spot.</li>",
-        "<li><strong>Slide Component:</strong> Built a standalone, slope-aware sliding mechanic for the player character using vector projection and VLerp of terrain normals for smooth traversal.</li>"
-      ]
+    "note": {
+        "badge": "In Development (Contribution Paused)",
+        "text": [
+            "Project Pyramid is an ongoing collaborative team project.",
+            "My role as <strong>AI Systems Programmer</strong> is currently concluded/paused after delivering the core enemy architecture and perception framework.",
+            "<br>",
+            "The team is now proceeding with level design, asset creation, and puzzle mechanics."
+        ]
     },
 
-    "lessons": {
-      "tag": "Lessons",
-      "title": "Workflow & Tooling",
-      "desc": [
-        "I focused on system optimization by migrating Tick-based components (like footstep detection) to high-performance <strong>Anim Notifies</strong>.",
-        "To improve team iteration, I created editor tools via <strong>Construction Scripts</strong> to visualize patrol paths, indices, and wait times directly in the viewport, removing the need to check individual array elements."
-      ]
-    },
+    "details": {
+        "concept": {
+            "tag": "Role",
+            "title": "Stealth AI Engineering",
+            "desc": [
+                "In a stealth-focused experience, the AI is the heart of the gameplay loop. I was responsible for designing a system that wasn't just 'reactive', but believable.",
+                "<br>",
+                "From managing enemy memory via the Dummy System to reinforcement coordination, the goal was to create a scalable framework that designers could easily tune via Data Tables without touching the codebase."
+            ]
+        },
 
-    "highlights": {
-      "title": "Key Technical Contributions",
-      "items": [
-        "⁕ Dummy System via World Subsystem (C++)<br>",
-        "⁕ Dual-Sight Perception (Direct & Peripheral)<br>",
-        "⁕ Dynamic Flanking and Point Claiming via EQS<br>",
-        "⁕ Data Table-driven AI for rapid balancing<br>",
-        "⁕ Mirror's Edge-style Slide Component<br>",
-        "⁕ Custom Editor Tooling for Spline Patrols"
-      ]
+        "tech": {
+            "tag": "Technical Development",
+            "title": "Core Systems & AI",
+            "points": {
+                "1": "<strong>Dummy Entity World Subsystem:</strong> Implemented a C++ system that spawns a 'ghost' entity at the player's last known position. AI units investigate the Dummy instead of 'cheating' with omniscience, creating realistic search patterns.",
+                "2": "<strong>Multi-State AI (C++/BT):</strong> Developed a modular Behavior Tree architecture with 5 primary states (Patrol, Alert, Search, Combat, Dead). It features dynamic perception management that live-updates sensory parameters based on the current state.",
+                "3": "<strong>Coordination & Roles:</strong> Implemented a synchronized 'Call for Aid' system to prevent overlapping enemy yells. Added role assignment logic (Investigator vs. Support) to ensure enemies surround the player during investigations.",
+                "4": "<strong>EQS & Flanking:</strong> Leveraged the Environment Query System for dynamic flanking in combat and to claim exclusive search points, preventing multiple AI agents from stacking on the same spot.",
+                "5": "<strong>Slide Component:</strong> Built a standalone, slope-aware sliding mechanic for the player character using vector projection and VLerp of terrain normals for smooth traversal."
+            }
+        },
+
+        "lessons": {
+            "tag": "Lessons",
+            "title": "Workflow & Tooling",
+            "desc": [
+                "I focused on system optimization by migrating Tick-based components (like footstep detection) to high-performance <strong>Anim Notifies</strong>.",
+                "<br>",
+                "To improve team iteration, I created editor tools via <strong>Construction Scripts</strong> to visualize patrol paths, indices, and wait times directly in the viewport, removing the need to check individual array elements."
+            ]
+        },
+
+        "highlights": {
+            "title": "Key Technical Contributions",
+            "points": {
+                "1": "Dummy System via World Subsystem (C++)",
+                "2": "Dual-Sight Perception (Direct & Peripheral)",
+                "3": "Dynamic Flanking and Point Claiming via EQS",
+                "4": "Data Table-driven AI for rapid balancing",
+                "5": "Mirror's Edge-style Slide Component",
+                "6": "Custom Editor Tooling for Spline Patrols"
+            }
+        }
     },
 
     "cta": {
-      "title": "Want to see <em>more?</em>",
-      "subtitle": "Explore other projects in my archive or head back to the main project list.",
-      "divider": "so",
-      "btn_back": "Back to Projects"
+        "title": "Want to see <em>more?</em>",
+        "subtitle": "Explore other projects in my archive or head back to the main project list.",
+        "divider": "so",
+        "more": "Back to Projects"
     }
-  }
 }
