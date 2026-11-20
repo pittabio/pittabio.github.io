@@ -313,6 +313,11 @@ img {
     @include img-style;
 }
 
+// The wide images
+.img-wide {
+    max-width: 100%
+}
+
 // iframe used to embed another HTML document
 // such as videos, maps, forms, or entire web pages
 iframe {

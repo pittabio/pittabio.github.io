@@ -49,6 +49,7 @@ USAGE Example
     {% if include.img and include.img_alt %}
         <img src="{{ include.img }}"
              alt="{{ include.img_alt }}"
+             {% if include.img_class %}class="{{ include.img_class }}"{% endif %}
              onclick="openGallery(this)"
             {% if include.img1 and include.img1_desc %}
                 data-img1="{{ include.img1 }}"
