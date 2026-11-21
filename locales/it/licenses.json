@@ -34,10 +34,10 @@
                 "Questo sito usa <a href='https://umami.is/'>Umami</a>, un servizio di statistiche attento alla privacy, per contare le visite. Il tracker di Umami non usa cookie.",
                 "Registra visualizzazioni di pagina, provenienza, browser, sistema operativo, tipo di dispositivo e posizione approssimativa.",
                 "Per distinguere le visite senza cookie, Umami genera un identificativo basato sull'ora attuale.",
-                "Non salva il tuo indirizzo IP nei dati statistici: lo elabora solo temporaneamente, ma può comparire nei log tecnici e di sicurezza di Umami e dei suoi fornitori",
+                "Non salva il tuo indirizzo IP nei dati statistici: lo elabora solo temporaneamente, ma può comparire nei log tecnici e di sicurezza di Umami e dei suoi fornitori.",
                 "Umami tratta questi dati per mio conto. Leggi l’<a href='https://umami.is/privacy'>informativa sulla privacy</a> sul sito di Umami.",
                 "<br>",
-                "I dati delle statistiche sono conservati nella regione UE di Umami Cloud (Francoforte) per 6 mesi.",
+                "I dati delle statistiche sono conservati nella regione UE di Umami Cloud (Francoforte) per 12 mesi.",
                 "Vedi la <a href='https://umami.is/privacy'>Privacy Policy</a> di Umami."
             ]
         },

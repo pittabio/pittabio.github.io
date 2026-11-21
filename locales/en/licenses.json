@@ -37,7 +37,7 @@
                 "It does not store your IP address in the statistics data; it only processes it temporarily, though it may appear in the technical and security logs of Umami and its service providers.",
                 "Umami processes this data on my behalf. Read the <a href='https://umami.is/privacy'>privacy policy</a> on the Umami website.",
                 "<br>",
-                "Statistical data is stored in the EU region of Umami Cloud (Frankfurt) for 6 months.",
+                "Statistical data is stored in the EU region of Umami Cloud (Frankfurt) for 12 months.",
                 "See Umami’s <a href='https://umami.is/privacy'>Privacy Policy</a>."
             ]
         },
