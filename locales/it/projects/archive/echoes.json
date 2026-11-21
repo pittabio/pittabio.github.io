@@ -5,8 +5,9 @@
         "tag": "Archivio · Unreal Engine 5 · C++",
         "title": "Echoes of the <em>Witch Wood</em>",
         "sub": "Un'architettura action-platformer solida e scalabile, costruita su sistemi C++ personalizzati e logiche IA modulari.",
-        "img_alt": "Cartelle principali del progetto",
-        "img1_desc": "Nell'immagine si nota la struttura scalabile del progetto, mostrando la cartella <code>Public</code> e le sottocartelle che rappresentano le diverse componenti del progetto."
+        "img_alt": "Schema architetturale delle interfacce e sottosistemi di gioco",
+        "img1_desc": "<strong>Panoramica dell'architettura disaccoppiata:</strong> <code>AHeroCharacter</code> comunica con i sottosistemi di salvataggio, ambiente e nemici unicamente tramite contratti d'interfaccia (<code>ISaveGameInterface</code> e <code>IFloorInterface</code>), eliminando dipendenze circolari e cast rigidi.",
+        "img2_desc": "<strong>Pipeline del sistema di salvataggio:</strong> flusso di propagazione dall'evento di trigger in-world (<code>ACheckpoint</code>) alla serializzazione su disco locale tramite il container <code>UEchoesSaveData</code> (suddiviso in struct per player e slot)."
     },
 
     "note": {
@@ -28,7 +29,6 @@
                 "dai portali alle piattaforme mobili, la comunicazione avviene tramite interfacce per garantire la massima manutenibilità."
             ]
         },
-
         "tech": {
             "tag": "Sviluppo Tecnico (Il mio ruolo)",
             "title": "Ingegneria dei Sistemi Core",
@@ -40,7 +40,6 @@
                 "5": "<strong>Sistema Audio Modulare:</strong> Creazione di un componente audio personalizzato per standardizzare la gestione delle variabili sonore e semplificare la funzione di riproduzione in tutto il progetto."
             }
         },
-
         "lessons": {
             "tag": "Post-Mortem",
             "title": "Lezioni Apprese",
@@ -49,7 +48,6 @@
                 "La pulizia del codice e la creazione di una <em>CodeMap</em> sono state vitali per coordinare i sistemi di movimento con quelli di interazione (leve/porte)."
             ]
         },
-
         "highlights": {
             "tag": "Competenze",
             "title": "Contributi Tecnici Chiave",
@@ -61,6 +59,31 @@
                 "4": "Interfaccia Hero & Ability per sistemi decoupled",
                 "5": "Sistema di caricamento asincrono (Loading Screens)",
                 "6": "Meccaniche ambientali guidate da Spline e Timer"
+            }
+        }
+    },
+
+    "doc": {
+        "title": "Documentazione Tecnica C++",
+        "sub": "Estratti implementativi dei sistemi principali sviluppati per il progetto.",
+        "cards": {
+            "save": {
+                "name": "Pipeline Save System",
+                "desc": "Persistenza dati basata su interfaccia, struct modulari e salvataggio asincrono su slot.",
+                "img_alt": "Codice C++ di SaveGameInterface e EchoesSaveData",
+                "img_desc": "Dichiarazione dell'interfaccia <code>ISaveGameInterface</code> e della classe <code>UEchoesSaveData</code> (derivata da <code>USaveGame</code>), strutturata con <code>FSlotData</code> e <code>FPlayerData</code> per la separazione delle responsabilità."
+            },
+            "ai": {
+                "name": "AI Framework & Kamikaze",
+                "desc": "Macchina a stati con compiti Behavior Tree C++ e nemico derivato con autodistruzione.",
+                "img_alt": "Codice C++ dell'AI Controller, Kamikaze Character e Task BT",
+                "img_desc": "Implementazione della macchina a stati <code>EEnemyState</code>, della classe specializzata <code>AKamikaze_Character</code> con timer di detonazione e del task personalizzato <code>UBTTask_Kamikaze_Chase</code>."
+            },
+            "floor": {
+                "name": "Interazioni Ambientali",
+                "desc": "Rilevamento del terreno tramite component box e contratti d'interfaccia polimorfici.",
+                "img_alt": "Codice C++ di FloorInterface, FloorCheckComponent e PressurePlate",
+                "img_desc": "Astrazione del calpestio: <code>UFloorCheckComponent</code> rileva gli attori ed esegue <code>IFloorInterface</code> su attori reattivi polimorfici come <code>APressurePlate</code> senza richiedere cast specifici."
             }
         }
     },

@@ -5,8 +5,9 @@
         "tag": "Dev Archive · Unreal Engine 5 · C++",
         "title": "Echoes of the <em>Witch Wood</em>",
         "sub": "A solid and scalable action-platformer architecture, built on custom C++ systems and modular AI logic.",
-        "img_alt": "Main project folders",
-        "img1_desc": "In the image, the scalable structure of the project is visible, showing the <code>Public</code> folder and the subfolders that represent the different components of the project."
+        "img_alt": "Architectural diagram of gameplay interfaces and subsystems",
+        "img1_desc": "<strong>Decoupled architecture overview:</strong> <code>AHeroCharacter</code> interfaces with Save, Environmental, and AI subsystems strictly via abstraction contracts (<code>ISaveGameInterface</code> and <code>IFloorInterface</code>), eliminating hard casting and circular dependencies.",
+        "img2_desc": "<strong>Save System persistence pipeline:</strong> data propagation flow from in-world triggers (<code>ACheckpoint</code>) down to local disk storage via <code>UEchoesSaveData</code>, separating player progression and slot metadata."
     },
 
     "note": {
@@ -28,7 +29,6 @@
                 "from portals to moving platforms, communication occurs via interfaces to ensure maximum maintainability."
             ]
         },
-
         "tech": {
             "tag": "Technical Development (My Role)",
             "title": "Core Systems Engineering",
@@ -40,7 +40,6 @@
                 "5": "<strong>Modular Audio System:</strong> Creation of a custom audio component to standardize sound variable management and simplify playback functions across the project."
             }
         },
-
         "lessons": {
             "tag": "Post-Mortem",
             "title": "Lessons Learned",
@@ -49,7 +48,6 @@
                 "Code cleanliness and the creation of a <em>CodeMap</em> were vital for coordinating movement systems with interaction systems (levers/doors)."
             ]
         },
-
         "highlights": {
             "tag": "Highlights",
             "title": "Key Technical Contributions",
@@ -61,6 +59,31 @@
                 "4": "Hero & Ability Interface for decoupled systems",
                 "5": "Async Loading System (Loading Screens)",
                 "6": "Spline and Timer-driven environmental mechanics"
+            }
+        }
+    },
+
+    "doc": {
+        "title": "C++ Technical Documentation",
+        "sub": "Implementation excerpts of the core systems developed for the project.",
+        "cards": {
+            "save": {
+                "name": "Save System Pipeline",
+                "desc": "Interface-driven persistence, modular structs, and asynchronous slot-based saving.",
+                "img_alt": "C++ code of SaveGameInterface and EchoesSaveData",
+                "img_desc": "Declaration of <code>ISaveGameInterface</code> and <code>UEchoesSaveData</code> (derived from <code>USaveGame</code>), utilizing <code>FSlotData</code> and <code>FPlayerData</code> structs for clean separation of concerns."
+            },
+            "ai": {
+                "name": "AI Framework & Kamikaze",
+                "desc": "State machine driven by C++ Behavior Tree tasks and derived self-destructing enemy.",
+                "img_alt": "C++ code of AI Controller, Kamikaze Character and BT Task",
+                "img_desc": "Implementation of <code>EEnemyState</code> Finite State Machine, specialized <code>AKamikaze_Character</code> with timed explosion lifecycle, and custom <code>UBTTask_Kamikaze_Chase</code>."
+            },
+            "floor": {
+                "name": "Environmental Interactions",
+                "desc": "Foot-level box detection querying decoupled polymorphic floor interface contracts.",
+                "img_alt": "C++ code of FloorInterface, FloorCheckComponent and PressurePlate",
+                "img_desc": "Surface interaction abstraction: <code>UFloorCheckComponent</code> triggers <code>IFloorInterface</code> on polymorphic reactive actors like <code>APressurePlate</code> with zero hard casting."
             }
         }
     },
