@@ -7,7 +7,8 @@
         "sub": "Un'avventura stealth ambientata nell'antico Egitto, con un sistema di IA modulare e navigazione avanzata.",
         "img_alt": "Diagramma architetturale del sistema AI e Deception Subsystem",
         "img1_desc": "<strong>Panoramica dell'architettura AI:</strong> integrazione modulare tra AI Perception a doppio cono (Direct e Peripheral), AI Controller con compiti EQS e World Subsystem per la gestione dell'esca fittizia.",
-        "img2_desc": "<strong>Ciclo di vita del Dummy Manager Subsystem:</strong> gestione dell'Object Pooling (pre-spawn out of bounds), tracking degli osservatori attivi (<code>ActiveViewersCount</code>) e trigger di riposizionamento e invalidazione dell'esca."    },
+        "img2_desc": "<strong>Ciclo di vita del Dummy Manager Subsystem:</strong> gestione dell'Object Pooling (pre-spawn out of bounds), tracking degli osservatori attivi (<code>ActiveViewersCount</code>) e trigger di riposizionamento e invalidazione dell'esca."
+    },
 
     "note": {
         "badge": "In Sviluppo (Contributo Pausato)",
@@ -29,7 +30,6 @@
                 "Dalla gestione della memoria dei nemici (Dummy System) alla coordinazione dei rinforzi, l'obiettivo è stato creare un framework scalabile e facilmente bilanciabile dai designer tramite Data Table."
             ]
         },
-
         "tech": {
             "tag": "Sviluppo Tecnico",
             "title": "Sistemi Core e IA",
@@ -41,7 +41,6 @@
                 "5": "<strong>Slide Component:</strong> Sviluppo di una meccanica di scivolata basata sulla pendenza (slope-aware) tramite proiezione di vettori e VLerp delle normali del terreno."
             }
         },
-
         "lessons": {
             "tag": "Lessons",
             "title": "Workflow e Strumenti",
@@ -51,7 +50,6 @@
                 "Ho inoltre creato strumenti per l'editor (Construction Script) per visualizzare i percorsi di pattugliamento e i tempi di attesa direttamente nel viewport, velocizzando drasticamente l'iterazione del team."
             ]
         },
-
         "highlights": {
             "title": "Contributi Tecnici Chiave",
             "points": {
