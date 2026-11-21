@@ -5,36 +5,9 @@
         "tag": "In Sviluppo · Team Project · UE5",
         "title": "Project <em>Pyramid</em>",
         "sub": "Un'avventura stealth ambientata nell'antico Egitto, con un sistema di IA modulare e navigazione avanzata.",
-        "img_alt": "Diagramma architetturale del sistema AI in Unreal Engine C++: interazione tra AI Controller, percezione visiva a doppio cono (diretta e periferica), World Subsystem e gestione dell'entità esca tramite Object Pooling",
-
-        "img1_alt": "Diagramma di flusso logico del Dummy Manager Subsystem in Unreal Engine C++: ciclo di vita dell'Object Pooling, gestione del contatore di osservatori e condizioni di attivazione dell'esca per l'AI",
-        "img1_desc": [
-            "Implementazione di un <code>UWorldSubsystem</code> dedicato alla gestione di un'esca fittizia <code>ADummyEntity</code>",
-            "per ingannare i sensi dell'AI quando il giocatore spezza la linea di vista.",
-            "Per azzerare l'impatto sul <em>garbage collector</em> e sui frame a runtime, il sistema adotta un pattern di <strong>Object Pooling</strong>:",
-            "una singola entità viene creata all'avvio del livello e riutilizzata dinamicamente.",
-            "Un contatore di osservatori attivi <code>ActiveViewersCount</code> assicura che l'esca venga posizionata solo quando tutti i nemici perdono il contatto visivo diretto,",
-            "mentre un timer periodico ne gestisce l'invalidazione automatica in caso di allontanamento eccessivo"
-        ],
-
-        "img2_alt": "Estratto di codice C++ per Unreal Engine: implementazione di UDummyManagerSubsystem (UWorldSubsystem) e ADummyEntity con IGenericTeamAgentInterface per la registrazione nell'AI Perception",
-        "img2_desc": [
-            "Dichiarazione delle classi C++ per la gestione del <strong>Dummy</strong>. <code>ADummyEntity</code> estende <code>AActor</code> ed eredita da <em>IGenericTeamAgentInterface</em>,",
-            "sovrascrivendo <code>GetGenericTeamId()<code> con lo stesso identificativo del giocatore, il sistema garantisce che l'AI tratti l'esca come un bersaglio ostile legittimo.",
-            "Il componente <code>UAIPerceptionStimuliSourceComponent</code> emette lo stimolo visivo necessario per l'inganno.",
-            "Lato manager, <code>UDummyManagerSubsystem</code> eredita da <em>UWorldSubsystem</em>, garantendo un ciclo di vita vincolato al mondo di gioco senza richiedere costrutti singleton o attori fittizi piazzati nella scena"
-        ],
-
-        "img3_alt": "Estratto di codice C++ per Unreal Engine: implementazione di sensi visivi custom (Direct e Peripheral Sight) e test personalizzato per l'Environment Query System (EQS) basato su Data Table",
-        "img3_desc": [
-            "Di default, l'<strong>AI Perception</strong> di <em>Unreal Engine</em> gestisce un unico cono visivo generico.",
-            "Per supportare dinamiche stealth avanzate, ho esteso il modulo creando due sensi distinti: <code>UAISense_SightDirect</code> (campo visivo stretto con rilevamento rapido)",
-            "e <code>UAISense_SightPeripheral</code> (campo visivo ampio con accumulo di rilevamento progressivo in base alla distanza).",
-            "Per consentire all'AI decisioni spaziali intelligenti (es. coperture o percorsi di pattugliamento al di fuori della vista del bersaglio),",
-            "ho sviluppato un test EQS personalizzato <em>UEqt_IsPointInVision</em> utilizzando <em>UEnvQueryTest</em>.",
-            "Il test valuta e filtra i punti dello spazio navigabile a runtime, attingendo direttamente a configurazioni bilanciabili dai designer tramite <em>Data Table</em> <code>FPerceptionsParam</code>."
-        ]
-    },
+        "img_alt": "Diagramma architetturale del sistema AI e Deception Subsystem",
+        "img1_desc": "<strong>Panoramica dell'architettura AI:</strong> integrazione modulare tra AI Perception a doppio cono (Direct e Peripheral), AI Controller con compiti EQS e World Subsystem per la gestione dell'esca fittizia.",
+        "img2_desc": "<strong>Ciclo di vita del Dummy Manager Subsystem:</strong> gestione dell'Object Pooling (pre-spawn out of bounds), tracking degli osservatori attivi (<code>ActiveViewersCount</code>) e trigger di riposizionamento e invalidazione dell'esca."    },
 
     "note": {
         "badge": "In Sviluppo (Contributo Pausato)",
@@ -88,6 +61,31 @@
                 "4": "IA Driven da Data Table per bilanciamento rapido",
                 "5": "Componente di scivolata Mirror's Edge-style",
                 "6": "Tooling editor per visualizzazione Spline Patrol"
+            }
+        }
+    },
+
+    "doc": {
+        "title": "Documentazione Tecnica C++",
+        "sub": "Approfondimento dell'architettura AI, del sottosistema di disaccoppiamento e delle estensioni native.",
+        "cards": {
+            "dummy": {
+                "name": "Deception & World Subsystem",
+                "desc": "Gestione del ciclo di vita dell'esca tramite Object Pooling e registrazione con IGenericTeamAgentInterface.",
+                "img_alt": "Codice C++ di DummyManagerSubsystem e DummyEntity",
+                "img_desc": "Dichiarazione del sottosistema basato su <code>UWorldSubsystem</code> e dell'attore pooled <code>ADummyEntity</code>, registrato come sorgente di stimoli visivi tramite <code>UAIPerceptionStimuliSourceComponent</code>."
+            },
+            "sight": {
+                "name": "Dual-Cone Vision & Custom EQS",
+                "desc": "Sdoppiamento della vista in visione Diretta e Periferica con test personalizzato per l'Environment Query System.",
+                "img_alt": "Codice C++ di CustomSightConfig e EQT_IsPointInVision",
+                "img_desc": "Estensione di <code>UAISenseConfig_Sight</code> per gestire coni visivi indipendenti e implementazione di <code>UEqt_IsPointInVision</code> per filtrare punti di navigazione tramite Data Table."
+            },
+            "controller": {
+                "name": "Data-Driven Controller & Timers",
+                "desc": "Calibrazione dinamica dei sensi tramite Data Table e calcolo dei tempi di rilevamento basati sulla distanza.",
+                "img_alt": "Codice C++ di PerceptionsParam e BaseAIController",
+                "img_desc": "Struttura <code>FPerceptionsParam</code> per la configurazione data-driven dei sensi e metodi di calcolo dinamico delle curve di allerta in base alla distanza dello stimolo."
             }
         }
     },

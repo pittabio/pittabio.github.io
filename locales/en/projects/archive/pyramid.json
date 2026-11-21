@@ -5,34 +5,9 @@
         "tag": "In Development · Team Project · UE5",
         "title": "Project <em>Pyramid</em>",
         "sub": "A stealth-adventure set in ancient Egypt, featuring a modular AI architecture and advanced sensory systems.",
-        "img_alt": "Unreal Engine C++ AI System Architecture Diagram: interaction between Base AI Controller, Dual-Cone Perception (Direct and Peripheral Sight), World Subsystem, and Pooled Deception Dummy Entity.",
-        "img1_alt": "Logical flowchart of the Dummy Manager Subsystem in Unreal Engine C++: Object Pooling lifecycle, Active Viewers tracking, and AI Deception trigger conditions",
-        "img1_desc": [
-            "Implementation of a <code>UWorldSubsystem</code> managing a decoy actor <code>ADummyEntity</code>",
-            "to deceive AI perception when the player breaks line of sight.",
-            "To eliminate runtime spawn overhead and <em>garbage collection</em> spikes, the subsystem utilizes an <strong>Object Pooling</strong> pattern",
-            "instantiating a single actor on level initialization and relocating it on demand.",
-            "An active viewer counter <code>ActiveViewersCount</code> ensures the dummy only activates when all enemies completely lose visual contact,",
-            "paired with an automatic threshold distance check to invalidate the decoy if the player moves too far"
-        ],
-
-        "img2_alt": "Unreal Engine C++ code snippet: UDummyManagerSubsystem (UWorldSubsystem) and ADummyEntity interface declarations showing IGenericTeamAgentInterface and AI Perception stimuli integration",
-        "img2_desc": [
-            "Declaration of the C++ classes for managing the <strong>Dummy</strong>. <code>ADummyEntity</code> extends <code>AActor</code> and inherits from <em>IGenericTeamAgentInterface</em>,",
-            "overriding <code>GetGenericTeamId()</code> with the same identifier as the player; this ensures that the AI treats the decoy as a legitimate hostile target.",
-            "The <code>UAIPerceptionStimuliSourceComponent</code> emits the visual stimulus required for the deception.",
-            "On the management side, <code>UDummyManagerSubsystem</code> inherits from <em>UWorldSubsystem</em>, ensuring its lifecycle is tied to the game world without the need for singleton constructs or dummy actors placed within the scene."
-        ],
-
-        "img3_alt": "Unreal Engine C++ code snippet: custom AI Sight senses (Direct and Peripheral Sight) and custom Environment Query System (EQS) test driven by Data Tables",
-        "img3_desc": [
-            "Out of the box, <em>Unreal Engine</em>'s <strong>AI Perception</strong> operates with a single uniform sight cone.",
-            "To support nuanced stealth and alertness mechanics, I extended the perception pipeline by creating two independent senses: <code>Direct Sight</code> (narrow cone, fast detection)",
-            "and <code>Peripheral Sight</code> (wide field of view, progressive detection timer based on distance).",
-            "To empower tactical navigation and cover evaluation (e.g.: cover or stroll outside the target sight),",
-            "I authored a custom Environment Query System test <em>UEqt_IsPointInVision</em> extending <em>UEnvQueryTest</em>.",
-            "It filters environmental query points against the active vision cones at runtime, fully driven by designer-friendly <em>Data Tables</em> <code>FPerceptionsParam</code>."
-        ]
+        "img_alt": "AI System Architecture and Deception Subsystem Diagram",
+        "img1_desc": "<strong>High-level AI architecture overview:</strong> modular integration between Dual-Cone AI Perception (Direct & Peripheral), Base AI Controller with spatial EQS queries, and the World Subsystem managing the deception decoy.",
+        "img2_desc": "<strong>Dummy Manager Subsystem lifecycle:</strong> Object Pooling pre-spawn logic, active viewer tracking (<code>ActiveViewersCount</code>), and runtime relocation and invalidation triggers."
     },
 
     "note": {
@@ -87,6 +62,31 @@
                 "4": "Data Table-driven AI for rapid balancing",
                 "5": "Mirror's Edge-style Slide Component",
                 "6": "Custom Editor Tooling for Spline Patrols"
+            }
+        }
+    },
+
+    "doc": {
+        "title": "C++ Technical Documentation",
+        "sub": "In-depth look at the AI architecture, decoupling subsystems, and engine extensions.",
+        "cards": {
+            "dummy": {
+                "name": "Deception & World Subsystem",
+                "desc": "Decoy lifecycle management via Object Pooling and registration through IGenericTeamAgentInterface.",
+                "img_alt": "C++ code of DummyManagerSubsystem and DummyEntity",
+                "img_desc": "Declaration of the <code>UWorldSubsystem</code> manager alongside the pooled <code>ADummyEntity</code>, dynamically broadcasting visual stimuli via <code>UAIPerceptionStimuliSourceComponent</code>."
+            },
+            "sight": {
+                "name": "Dual-Cone Vision & Custom EQS",
+                "desc": "Bifurcated Direct and Peripheral vision senses paired with a custom Environment Query System test.",
+                "img_alt": "C++ code of CustomSightConfig and EQT_IsPointInVision",
+                "img_desc": "Extension of <code>UAISenseConfig_Sight</code> to handle independent perception cones and implementation of <code>UEqt_IsPointInVision</code> to evaluate tactical spatial queries."
+            },
+            "controller": {
+                "name": "Data-Driven Controller & Timers",
+                "desc": "Runtime parameter updates via Data Tables and distance-based progressive alert curves.",
+                "img_alt": "C++ code of PerceptionsParam and BaseAIController",
+                "img_desc": "<code>FPerceptionsParam</code> struct enabling designer-friendly balance and mathematical calculation of detection delay curves as a function of stimulus distance."
             }
         }
     },
