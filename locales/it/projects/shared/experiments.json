@@ -4,9 +4,9 @@
             "name": "State Tree AI",
             "desc": [
                 "Esplorazione pratica del sistema <strong>State Tree</strong> di Unreal Engine",
-                "per il <em>comportamento dell' IA</em> e la gestione delle quest.",
+                "per il <em>comportamento dell'IA</em> e la gestione delle quest.",
                 "<br>",
-                "Mostra approcci moderni alla logica di gioco, al decision-making dell' IA",
+                "Mostra approcci moderni alla logica di gioco, al decision-making dell'IA",
                 "e a sistemi dinamici basati sugli eventi."
             ]
         },
