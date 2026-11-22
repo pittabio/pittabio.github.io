@@ -1,58 +1,90 @@
 ﻿{
-  "head_title": "Supporta il mio lavoro · Fabio Pittaccio",
+    "head_title": "Supporta il mio lavoro",
 
-  "support_page": {
-    "tag": "Supporto & Community",
-    "title": "Supporta il mio <em>lavoro!</em>",
-    "subtitle": "Se apprezzi quello che faccio e vuoi aiutarmi a continuare, ecco come puoi farlo. Ogni aiuto è davvero apprezzato 💖",
-
+    "hero": {
+        "tag": "Supporto & Community",
+        "title": "Supporta il mio <b class='accent'>lavoro!</b>",
+        "desc": [
+            "Se apprezzi quello che faccio e vuoi aiutarmi a <b>continuare</b>, ecco come puoi farlo.",
+            "<br>",
+            "Ogni <b>aiuto</b> è davvero apprezzato 💖"
+        ]
+    },
 
     "direct": {
-      "title": "☕ Offrimi un caffè",
-      "subtitle": "Supporto diretto per il mio sviluppo di giochi indipendenti"
-    },
+        "title": "Offrimi un caffè ☕",
+        "desc": "Sostienimi direttamente, con una mancia, una sponsorizzazione o un regalo.",
 
-    "kofi": {
-      "desc": "Fai una donazione una tantum o diventa un membro per supportare i miei progetti. È senza commissioni e completamente flessibile.",
-      "button": "Offrimi un caffè"
+        "github": {
+            "desc": [
+                "Sponsorizzami su GitHub, mensilmente o con una donazione singola.",
+                "<br>",
+                "Supporta direttamente il tempo che dedico allo sviluppo e alla manutenzione dei miei progetti."
+            ],
+            "button": "Sponsorizzami"
+        },
+        "kofi": {
+            "desc": [
+                "Lascia una mancia singola o abbonati come membro per sostenere i miei progetti.",
+                "<br>",
+                "Le donazioni su Ko-fi non hanno commissioni di piattaforma, quindi quasi tutto ciò che doni arriva direttamente a me."
+            ],
+            "button": "Offrimi un caffè"
+        },
+        "wishlist": {
+            "desc": [
+                "Preferisci fare un regalo invece di una donazione? Dai un'occhiata alla mia lista desideri Amazon.",
+                "<br>",
+                "È del tutto facoltativo e ogni regalo è davvero molto apprezzato."
+            ],
+            "button": "Vedi la lista desideri"
+        }
     },
-
-    "paypal": {
-      "desc": "Dona direttamente tramite PayPal. Puoi usare carte di credito, di debito o il tuo conto PayPal.",
-      "button": "Dona con PayPal"
-    },
-
-    "github": {
-      "desc": "Sii un mio sostenitore su GitHub. È un ottimo modo per dimostrare il tuo apprezzamento e supportare il mio lavoro.",
-      "button": "Sostienimi"
-    },
-
 
     "mutual": {
-      "title": "🤝 Supporto reciproco",
-      "subtitle": "Tu aiuti me, io aiuto te: vinciamo entrambi!"
+        "title": "Supporto reciproco 🤝",
+        "desc": "Tu aiuti me, io aiuto te: win-win!",
+
+        "gitkraken": {
+            "desc": [
+                "GitKraken è un potente client Git.",
+                "<br>",
+                "Usa il mio link per ottenere il 50% di sconto su Pro: io ricevo una piccola commissione e tu ottieni lo sconto."
+            ],
+            "button": "Ottieni il 50% di sconto"
+        },
+        "ms_rewards": {
+            "desc": [
+                "Guadagna punti Microsoft Rewards semplicemente facendo ricerche con Bing.",
+                "<br>",
+                "Iscriviti con il mio link referral e completa la Missione di benvenuto per ottenere punti bonus: anch'io guadagnerò qualche punto quando fai ricerche."
+            ],
+            "button": "Iscriviti a Rewards"
+        }
     },
 
-    "gitkraken": {
-      "desc": "GitKraken è un potente client Git. Clicca qui sotto per ottenere il 50% di sconto sulla versione Pro e aiutarmi con una commissione.",
-      "button": "Scopri di più"
+    "causes": {
+        "tag": "Un pensiero",
+        "title": "Qualcosa di più grande di me 🍉",
+        "desc": [
+            "Il tuo supporto significa molto per me, davvero. Ma mi rende ancora più felice sapere che aiuti anche chi ne ha molto più bisogno di me.",
+            "<br>",
+            "Penso soprattutto ai bambini di <b>Gaza</b> che hanno perso tutto, e a ogni bambino coinvolto in una guerra, ovunque si trovi.",
+            "Non metterò qui nessuna raccolta fondi: sono troppe e non posso verificarle tutte.",
+            "<br class='no-br-mobile'>",
+            "Se decidi di aiutare, scegli <b>persone</b> o organizzazioni che puoi controllare tu stesso, meglio se operano direttamente sul posto e sono trasparenti su come usano i fondi.",
+            "<br>",
+            "E se lo fai, sentiti libero di dirmelo. Significherebbe molto per me e per loro."
+        ]
     },
-
-    "ms_rewards": {
-      "desc": "Accumula punti ricompensa cercando con Bing. Clicca sul mio link di invito, registrati e guadagneremo punti bonus insieme.",
-      "button": "Scopri di più"
-    },
-
-    "revolut": {
-      "desc": "Unisciti a me e a oltre 75 milioni di altri utenti che amano Revolut.",
-      "button": "Scopri di più"
-    },
-
 
     "thanks": {
-      "title": "Grazie di cuore per il tuo <em>supporto!</em><br>💖",
-      "subtitle": "Ogni contributo mi aiuta a dedicare più tempo allo sviluppo di giochi e strumenti.",
-      "button": "Contattami"
+        "tag": "Grazie",
+        "title": "Ti ringrazio per essere <em>qui</em> 💖",
+        "desc": [
+            "Che tu faccia una donazione, condivida il mio lavoro o passi semplicemente a trovarmi, per me conta tantissimo.",
+            "Se vuoi dirmi qualcosa, sul pensiero qui sopra, o su un progetto, mi farebbe piacere sentirti."
+        ],
+        "button": "Contattami"
     }
-  }
 }

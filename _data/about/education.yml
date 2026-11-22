@@ -1,0 +1,27 @@
+# Newest first.
+# `details` = how many details.N keys exist in locales/#/*.json
+# tag, title, subtitle are shown by default (set to false = hide them)
+
+# GitKraken certificate
+- id: gitkraken
+  points: 4
+  url: "https://learn.gitkraken.com/certificates/06p4apf1rm"
+  url_text: certificate.gitkraken
+
+# Rainbow Academy
+- id: rainbow
+  points: 7
+  url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
+  url_text: certificate.rainbow
+
+# Sound engineer
+- id: audio
+  points: 4
+  url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
+  url_text: certificate.audio
+
+# IT education
+- id: it
+  points: 4
+  url: "https://www.linkedin.com/in/fabio-pittaccio/details/education/"
+  url_text: certificate.it

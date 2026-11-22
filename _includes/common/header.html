@@ -1,0 +1,33 @@
+﻿<header>
+    <!-- TITLE -->
+    <b><a href="{{ '/index.html' | relative_url }}" data-i18n-aria="$common.head.ARIA.home">
+        Fabio Pittaccio
+            <span class='accent'>.</span>
+    </a></b>
+
+    <!-- MAIN MENU -->
+    <nav id="main-menu" data-i18n-aria="$common.head.ARIA.nav">
+        <!-- Languages -->
+        <div class="lang-switcher">
+            <button class="lang" id="lang-en" data-lang="en" lang="en" aria-label="English">EN</button>
+            <button class="lang" id="lang-it" data-lang="it" lang="it" aria-label="Italiano">IT</button>
+        </div>
+
+        <!-- Pages -->
+        <div class="links-wrapper">
+            <a class="btn link" href="{{ '/index.html' | relative_url }}" data-i18n="$common.head.home" id="nav-home"></a>
+            <a class="btn link" href="{{ '/projects.html' | relative_url }}" data-i18n="$common.head.projects" id="nav-projects"></a>
+            <a class="btn link" href="{{ '/about.html' | relative_url }}" data-i18n="$common.head.about" id="nav-about"></a>
+            <a class="btn link" href="{{ '/contacts.html' | relative_url }}" data-i18n="$common.head.contacts" id="nav-contacts"></a>
+            <a class="btn link" href="{{ '/support.html' | relative_url }}" data-i18n="$common.head.support" id="nav-support"></a>
+        </div>
+    </nav>
+
+    <!-- HAMBURGER (Mobile) -->
+    <button class="hamburger" id="mobile-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            data-i18n-aria="$common.head.ARIA.menu_open">
+        <span></span> <span></span> <span></span>
+    </button>
+</header>

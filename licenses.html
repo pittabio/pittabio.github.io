@@ -1,0 +1,112 @@
+---
+layout: default
+title: Licenses & Privacy
+i18n_title: head_title
+description: Licenses, credits and privacy information for this site.
+---
+
+<section id="license">
+    <h2 data-i18n="title"></h2>
+
+    <!-- Summary links -->
+    <section id="summary" class="flexbox">
+        <a href="#site" data-i18n="site.title"></a>
+        <a href="#privacy" data-i18n="privacy.title"></a>
+        <a href="#tools" data-i18n="tools.title"></a>
+        <a href="#social" data-i18n="social.title"></a>
+        <a href="#ui"   data-i18n="ui.title"></a>
+        <a href="#img"  data-i18n="images.title"></a>
+    </section>
+
+    <!-- The license of this site -->
+    <section id="site" class="cont_left">
+        {% include sections/content/block.html
+            title = "site.title" h = "h3"
+            img = "/media/fox/fox.png" img_alt = "site.img_alt"
+            p = "site.desc"
+        %}
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy" class="cont_left">
+        {% include sections/content/block.html
+            title = "privacy.title" h = "h3"
+            p = "privacy.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.hosting.title" h = "h4"
+            p = "privacy.hosting.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.storage.title" h = "h4"
+            p = "privacy.storage.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.stats.title" h = "h4"
+            p = "privacy.stats.desc" %}
+        <br><!-- break -->
+        {% include sections/content/block.html
+            title = "privacy.form.title" h = "h4"
+            p = "privacy.form.desc" %}
+    </section>
+
+    <!-- Get the data folder -->
+    {% assign l = site.data.licenses %}
+
+    <!-- The licenses of the tools (images or icons) -->
+    <section id="tools" class="cont_left">
+        {% include sections/content/block.html
+            title = "tools.title" h = "h3"
+            p = "tools.desc"
+        %}
+
+        <br><!-- break -->
+
+        {% for item in l.tools %}
+            {% include sections/legal/license-item.html item=item %}
+        {% endfor %}
+    </section>
+
+    <!-- The licenses of the social icons -->
+    <section id="social" class="cont_left">
+        {% include sections/content/block.html
+            title = "social.title" h = "h3"
+            p = "social.desc"
+        %}
+
+        <br><!-- break -->
+
+        {% for item in l.social %}
+            {% include sections/legal/license-item.html item=item %}
+        {% endfor %}
+    </section>
+
+    <!-- The licenses of the interface (ui svg icons) -->
+    <section id="ui" class="cont_left">
+        {% include sections/content/block.html
+            title = "ui.title" h = "h3"
+            p = "ui.desc"
+        %}
+
+        <br><!-- break -->
+
+        {% for item in l.interface %}
+            {% include sections/legal/license-item.html item=item %}
+        {% endfor %}
+    </section>
+
+    <!-- The licenses of the images -->
+    <section id="img" class="cont_left">
+        {% include sections/content/block.html
+            title = "images.title" h = "h3"
+            p = "images.desc"
+        %}
+
+        <br><!-- break -->
+
+        {% for item in l.images %}
+            {% include sections/legal/license-item.html item=item %}
+        {% endfor %}
+    </section>
+
+</section><!-- /licenses/ -->

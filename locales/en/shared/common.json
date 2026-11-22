@@ -1,0 +1,37 @@
+﻿{
+    "$common": {
+        "head": {
+            "home": "Home",
+            "projects": "Projects",
+            "about": "About me",
+            "contacts": "Contacts",
+            "support": "Support",
+
+            "ARIA": {
+                "home": "Back to Home",
+                "nav": "Main navigation",
+                "overlay_close": "Close gallery",
+                "menu_open": "Open menu",
+                "menu_close": "Close menu"
+            }
+        },
+
+        "footer": {
+            "licenses": "LICENSES & PRIVACY",
+            "licenses_ARIA": "Licenses and privacy (opens in a new tab)",
+            "back_top": "BACK TO TOP"
+        },
+
+        "card": {
+            "details": "Details",
+            "about": "About Me",
+            "fox_alt": "The mascot of Fabio Pittaccio",
+            "fox_desc": "The mascot of <strong>Fabio Pittaccio</strong>"
+        },
+
+        "cta": {
+            "or": "or",
+            "more": "View more projects"
+        }
+    }
+}

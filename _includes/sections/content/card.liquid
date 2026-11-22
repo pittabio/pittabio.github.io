@@ -1,0 +1,128 @@
+{% comment %}
+// -- A REUSABLE CARD -- //
+
+USAGE Example
+{/%/ include sections/content/card.html
+    object = OBJECT
+/%/}
+
+NOTE: OBJECT is a `_data` entry with these fields:
+    name     = "name.to.include"     (i18n key of the title)
+    desc     = "desc.to.include"     (i18n key of the description, can contain HTML)
+    page     = "/link/to/include"    (optional, the title becomes a link)
+    img      = "/image/source"       (optional, the image shown in the card, opens with openGallery on click)
+    img_alt  = "image.alt"           (optional, alt text of the image - used together with the img)
+
+    Random image: instead of a fixed `img`, give a YAML list in `img_random`
+    img_random:
+      - "/image/a.png"
+      - "/image/b.png"
+      - "/image/c.png"
+
+Image opening: choose ONE of the two modes
+
+  A) Single image (the card image itself is opened)
+    img_desc = "img.desc.to.include" (i18n key for the description of the image when opened)
+    img_full = "/image/source-big"   (optional, higher resolution version)
+
+  B) Grid of N images (img is only the cover shown in the card)
+    imgN      = "/image/source"       (N = 1, 2, 3... numbering must be consecutive, it stops at the first missing one)
+    imgN_desc = "img.desc.to.include" (i18n key for the description of the Nth image, always include it: without it the image has no accessible text)
+    img_cols  = 2                     (optional, forces the number of columns)
+
+If img1 is present the grid mode is used, and img_desc / img_full are ignored (as in images.js).
+`img` and `img_alt` must be used together.
+Without img_desc (mode A) or img1 (mode B) the image is NOT rendered.
+
+Buttons: up to 3, with N = 1, 2, 3
+    linkN      = "/link/to/include" (URL of the button)
+    linkN_name = "button.text"      (i18n key of the text)
+    linkN_icon = "icon-class"       (optional, CSS class of the icon)
+    linkN_img  = "/image/source"    (optional, used only if linkN_icon is missing)
+
+A button is rendered only if it has both linkN and linkN_name.
+Position: link1 = left, link2 = center, link3 = right.
+
+{% endcomment %}
+
+{% assign o = include.object %}
+{% assign btn_positions = "left,center,right" | split: "," %}
+
+<article class="card">
+    <!-- Title link -->
+    {% if o.page %}
+        <a class="mini-title" href="{{ o.page }}" target="_blank" data-i18n="{{ o.name }}">{{ o.name }}</a>
+    {% else %}
+        <span class="mini-title" data-i18n="{{ o.name }}">{{ o.name }}</span>
+    {% endif %}
+
+    <!-- Image -->
+	{% assign can_open = o.img1 | default: o.img_desc %}
+	{% assign img_src  = o.img | default: o.img_random.first %}
+
+    {% if img_src and o.img_alt and can_open %}
+        {% capture gallery_attrs %}
+            {% comment %} Grid: data-img1/data-desc1, data-img2/data-desc2, ... {% endcomment %}
+            {% if o.img1 %}
+                {% for i in (1..12) %}
+                    {% assign k_img  = "img" | append: i %}
+                    {% assign k_desc = k_img | append: "_desc" %}
+                    {% unless o[k_img] %}{% break %}{% endunless %}
+                    data-img{{ i }}="{{ o[k_img] }}"
+                    {% if o[k_desc] %}data-desc{{ i }}="{{ o[k_desc] }}"{% endif %}
+                {% endfor %}
+                {% if o.img_cols %}data-cols="{{ o.img_cols }}"{% endif %}
+
+            {% comment %} Single image {% endcomment %}
+            {% elsif o.img_desc %}
+                data-desc="{{ o.img_desc }}"
+                {% if o.img_full %}data-full="{{ o.img_full }}"{% endif %}
+            {% endif %}
+        {% endcapture %}
+
+        {% comment %} Random image {% endcomment %}
+        {% capture random_attrs %}
+            {% if o.img_random %}
+                class="random-img" data-srcs="{{ o.img_random | join: ',' }}"
+            {% endif %}
+        {% endcapture %}
+
+        <img src="{{ img_src }}" alt="{{ o.img_alt }}"
+            {{ random_attrs | strip }}
+            {{ gallery_attrs | strip }}
+             onclick="openGallery(this)" />
+    {% endif %}
+
+    <!-- Description -->
+    <p data-i18n-html="{{ o.desc }}"></p>
+
+    <!-- Buttons -->
+    <div class="flexbox">
+
+        {% for i in (1..3) %}
+            {% assign key      = "link" | append: i %}
+            {% assign key_name = key | append: "_name" %}
+            {% assign key_icon = key | append: "_icon" %}
+            {% assign key_img  = key | append: "_img" %}
+
+            {% assign btn_url  = o[key] %}
+            {% assign btn_name = o[key_name] %}
+            {% assign btn_icon = o[key_icon] %}
+            {% assign btn_img  = o[key_img] %}
+
+            {% if btn_url and btn_name %}
+                <a class="btn full {{ btn_positions[forloop.index0] }}" href="{{ btn_url }}" target="_blank">
+                    <!-- Name of the link -->
+                    <span data-i18n="{{ btn_name }}">{{ btn_name }}</span>
+                    <!-- Icon SVG or Image -->
+                    {% if btn_icon %}
+                        <span class="{{ btn_icon }}"></span>
+                    {% elsif btn_img %}
+                        <img src="{{ btn_img }}" alt="{{ btn_name }} image"/>
+                    {% endif %}
+                </a>
+            {% endif %}
+        {% endfor %}
+
+    </div><!-- /buttons/ -->
+</article><!-- /card/ -->

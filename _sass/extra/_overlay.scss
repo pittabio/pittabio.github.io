@@ -1,0 +1,128 @@
+﻿@use "../common/base";
+
+/* IMAGE OVERLAY
+Opened by openGallery() (images.js). Generated structure:
+
+.overlay
+├── a.overlay-close > span.close-svg
+└── .overlay-body            (scrolls when the content is taller than the screen)
+    └── .overlay-grid        (--cols and data-count are set by the JS)
+        └── figure.overlay-item
+            ├── img
+            └── figcaption          (may contain HTML)
+*/
+
+[onclick*="openGallery"] {
+    cursor: pointer;
+}
+
+// Scroll lock while the overlay is open
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Background */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter: blur(12px);
+
+    // Always in the DOM (after the first opening): hidden with opacity so the fade can animate
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    // Close icon: a plain link with the `.close-svg` icon (_icons.scss).
+    // Color and hover (accent) come from the global `a`; here we only drop its text style.
+    .overlay-close {
+        --icn-site-dim: 2rem;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1;
+        display: flex;
+        padding: .5rem; // bigger click area than the icon itself
+        font-style: normal;
+        text-decoration: none;
+    }
+}
+
+/* Scrollable area */
+.overlay-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 4.5rem var(--pad-sm) var(--pad-sm); // top: room for the close button
+}
+
+/* Grid: the number of columns comes from the JS (--cols) */
+.overlay-grid {
+    @include base.grid-column-style(
+        $cols: var(--cols, 1),
+        $align: center // TODO: to choose between center, start or stretch
+    );
+
+    --img-h: 55dvh; // max image height when there are more images
+
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto; // centers the grid, and still allows scrolling when it is taller
+
+    // A single image: as big as the screen allows
+    &[data-count="1"] {
+        --img-h: calc(100dvh - 14rem); // leaves room for padding, caption and close button
+        max-width: var(--max-width-sm);
+    }
+}
+
+/* Image + description */
+.overlay-item {
+    @include base.container-style(
+        $max-width: none,
+        $margin: 0,
+        $justify: flex-start
+    );
+
+    gap: var(--main-gap);
+    padding: var(--main-gap);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--rad-big);
+
+    img {
+        width: auto;
+        max-width: 100%; // overrides the global 750px of img-style
+        max-height: var(--img-h);
+        object-fit: contain;
+        border-radius: var(--rad-sml);
+    }
+
+    figcaption {
+        @include base.body-text(.9rem, $lh: 1.5);
+        color: var(--text-muted);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .overlay-grid {
+        @include base.grid-column-style(
+            $cols: 1,
+            $align: center // TODO: to choose between center, start or stretch
+        );
+
+        --img-h: 45dvh;
+    }
+}

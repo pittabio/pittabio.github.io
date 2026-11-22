@@ -1,0 +1,191 @@
+@use "../common/base";
+@use "../extra/sections";
+
+/* The hero container */
+.hero {
+    @include base.container-style (
+        $direction: row,
+        $align: center,
+        $justify: center,
+        $text: left
+    );
+
+    // Section top margin
+    min-height: calc(100vh - var(--hedr-h) - var(--pad-top));
+
+    // Gap between elements
+    gap: clamp(3rem, 6vw, 8rem);
+
+    // Universal selector
+    > * {
+        min-width: 0;
+    }
+
+    // Image layout
+    > img {
+        border-radius: var(--rad-img);
+        flex: 1 1 300px;
+        min-width: 0;
+        max-width: 750px;
+    }
+
+    // The hero text section
+    .desc {
+        flex: 1 1 400px;
+        max-width: 700px;
+        flex-shrink: 0;
+    }
+
+    // The left section of the hero
+    article {
+        @include base.container-style (
+            $align: flex-start,
+            $justify: flex-start,
+            $text: left
+        );
+
+        // The title (name)
+        .title {
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
+    }
+
+    // The info container
+    .info-box {
+        @include base.flexbox-style(
+            $justify: flex-start,
+            $gap: clamp(1.5rem, 3vw, 2.5rem)
+        );
+
+        border-top: 1px solid var(--border);
+        margin-top: 2rem;
+        text-align: left;
+        padding-top: .5rem;
+
+        b {
+            @include base.display-text(1.5rem, 800, 1);
+            color: var(--accent);
+        }
+
+        // The info
+        p {
+            @include base.display-text(.75rem);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            opacity: .6;
+            margin-top: .15rem;
+
+            align-self: flex-start;
+        }
+    }
+}
+
+/* The "choose me" section */
+.about {
+    // The container inside
+    .cont {
+        // Gap between elements
+        gap: var(--main-gap);
+
+        // The mini images
+        img {
+            @extend %img-skills;
+        }
+    }
+}
+
+    /* --- MOBILE --- */
+
+@media (max-width: 768px) {
+
+    /* The hero container */
+    .hero {
+        @include base.container-style (
+            $direction: column
+        );
+
+        // Layout
+        //padding-top: calc(var(--pad-top) * -1);
+        //gap: var(--main-gap);
+
+        // The hero text section
+        div {
+            display: contents;
+
+            > .tag { order: 1; }
+            > .title {
+                order: 2;
+                align-self: center;
+                justify-self: center;
+            }
+            > p { order: 4; }
+            > .btn.big  {
+                order: 5;
+                .arrow { display: none; }
+            }
+            > .info-box { order: 6; }
+        }
+
+        // Image layout
+        > img {
+            order: 3;
+            flex: 0 1 auto;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            min-width: 0;
+        }
+
+        // The info container
+        .info-box {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            gap: 1.25rem 2.5rem;
+            text-align: center;
+
+            // The info itself
+            .info {
+                // Restore the box (override the "display: contents" inherited from `.hero div`)
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // Text align (b e p, non span)
+                b, p {
+                    align-self: center;
+                    text-align: center;
+                }
+
+                // Last child: occupa l'intera seconda riga
+                &:last-child {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+    }
+
+    /* The "choose me" section */
+    .about {
+        // The internal containers
+        .cont {
+            // Padding between internal containers
+            padding-top: var(--main-gap);
+        }
+    }
+
+    /* The "featured projects" section */
+    .features {
+        // The subtitle should be in center
+        p[data-i18n="projects.desc"] { text-align: center; }
+    }
+
+    /* The "contacts" section */
+    .ctn {
+        @include base.flexbox-style(
+            $wrap: wrap,
+            $gap: 1.25rem 2.5rem
+        );
+    }
+}

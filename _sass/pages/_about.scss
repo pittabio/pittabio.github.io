@@ -1,0 +1,51 @@
+@use "../extra/sections";
+
+/* Skill group: name on the left, level tag on the right */
+.skill-group {
+    text-align: left; // .card centers the text by default
+
+    // Space between the title and the list
+    .mini-title {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    // Unordered list
+    ul {
+        list-style: none;
+        display: grid;
+        gap: .4rem;
+    }
+
+    // List item
+    li {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        // The name takes all the free space...
+        > span:first-child {
+            display: flex;
+            flex: 1;
+            align-items: baseline;
+            gap: .5rem;
+        }
+    }
+}
+
+/* Skill Levels */
+.skill-level {
+    // Include the badge mixin
+    @include sections.badge;
+
+    // The states colors
+    &.learning { --badge-color: 163, 52, 0; }
+    &.basic { --badge-color: 255, 206, 184; }
+    &.intermediate { --badge-color: 255, 143, 92; }
+    &.advanced { --badge-color: 255, 80, 0; }
+}

@@ -1,0 +1,15 @@
+# GitKraken
+- name: "GitKraken"
+  desc: "mutual.gitkraken.desc"
+  page: &gk "https://gitkraken.cello.so/SUBU3498xEG"
+  img: "/media/logo/skills/gitkraken.png"
+  link2: *gk
+  link2_name: "mutual.gitkraken.button"
+
+# Microsoft Rewards
+- name: "Microsoft Rewards"
+  desc: "mutual.ms_rewards.desc"
+  page: &ms "https://rewards.bing.com/welcome?rh=mSj3Stfhqyg&ref=rafsrchae"
+  img: "/media/logo/support/ms-rewards.png"
+  link2: *ms
+  link2_name: "mutual.ms_rewards.button"

@@ -1,0 +1,55 @@
+{% comment %}
+// -- A REUSABLE SKILL GROUP -- //
+
+USAGE Example
+{/%/ include sections/list/skills.html
+    title = "title.to.include"
+    items = page.skills
+    link = "/link/to/include"   (optional)
+    linkname = "link.text"      (optional, only together with link)
+/%/}
+
+NOTE:
+• "items" is a list, and each entry supports these fields:
+    name = "name.to.include"
+    level = "skills.level.advanced" (optional)
+
+• The last part of "level" (after the last dot) is also used as a CSS class, in lowercase: "skills.level.advanced" gives the class "advanced".
+• The link is rendered only if "link" is provided, and "linkname" is the translation key of its text.
+
+{% endcomment %}
+
+{% assign title = include.title %}
+{% assign items = include.items %}
+{% assign link =  include.link  %}
+
+<div class="skill-group">
+    <!-- Title -->
+    <span class="mini-title" data-i18n="{{ title }}">{{ title }}</span>
+
+    <!-- Link -->
+    {% if link %}
+        <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
+           class="tag" data-i18n-html="{{ include.linkname }}"></a>
+    {% endif %}
+
+    <!-- List -->
+    <ul>
+        {% for item in items %}
+            <!-- List item -->
+            <li>
+                <!-- Item name -->
+                <span data-i18n="{{ item.name }}">{{ item.name }}</span>
+
+                <!-- Item level if present -->
+                {% if item.level %}
+                    {% assign level = item.level | split: '.' | last %}
+                    <span
+                        class="skill-level {{ level | downcase }}"
+                        data-i18n="{{ item.level }}">
+                    </span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

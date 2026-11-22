@@ -1,0 +1,145 @@
+---
+layout: default
+sitemap: false
+noindex: true
+title: Debug Room
+description: This is a Layout and Typography test page
+---
+<div class="cont">
+
+    <h1>H1 Title</h1>
+    <h2>H2 Title</h2>
+    <h3>H3 Title</h3>
+    <h4>H4 Title</h4>
+    <h5>H5 Title</h5>
+    <h6>H6 Title</h6>
+
+    <h1 class="underline">H1 Title</h1>
+    <h2 class="underline">H2 Title</h2>
+    <h3 class="underline">H3 Title</h3>
+    <h4 class="underline">H4 Title</h4>
+
+    <br>
+
+    <p>This is a normal paragraph</p>
+    <p><a href="#">This is a link</a> in a paragraph</p>
+    <p><b>This is a bold text</b> in a paragraph</p>
+    <p><strong>This is a strong text</strong> used for labels</p>
+    <p><em>This is an italic text</em> in a paragraph</p>
+    <p><code>This is a code</code> in a paragraph</p>
+
+    <br>
+
+    <p>
+        This is a paragraph with <a href="#">a link</a> and <span>a generic span</span>
+        and <b>a bold text</b> and <em>an italic text</em>
+    </p>
+
+    <br>
+
+    <img src="media/profile.jpg" alt="profile image"/>
+
+    <br>
+
+    <button>This is a normal button</button><br>
+    <a class="btn" href="#">This is a custom link button</a><br>
+
+    <button class="full">Full width 100%</button><br>
+    <button class="full center">Center aligned text</button><br>
+    <button class="full left">Left aligned text</button><br>
+    <button class="full right">Right aligned text</button><br>
+
+    <button class="big">This is a big button</button><br>
+    <a class="btn big" href="#">This is a big link button</a>
+    <br>
+    <button class="lang">This button is used to change language</button><br>
+    <button class="outline">This button has just an outline</button><br>
+    <a class="btn link">This is used in the header</a><br>
+
+    <button>
+        This is a button with an image
+        <img src="media/logo/skills/cpp.png" alt="cpp logo"/>
+    </button><br>
+
+    <a class="btn" href="#" target="_blank">
+        <span>This is a link button with a svg</span>
+        <span class="arrow-svg"></span>
+    </a>
+
+    <br>
+
+    <div class="cont">
+        <span class="tag">This is a tag</span>
+        <h1 class="title">This is a Title</h1>
+        <h2 class="title">This is a subtitle</h2>
+        <p>This is a paragraph</p>
+        <br>
+        <img src="media/fox/fox.png" alt="fox image"/>
+        <br>
+        <p>A third-person Action-Adventure framework focusing on <em>traversal</em>, exploration, and <code>C++ systems</code></p>
+        <br>
+        <div class="grid-column">
+            {% for o in site.data.debug-room %}
+                {% include sections/content/card.liquid object=o %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <br>
+
+    <div class="main-layered-container">
+        <!-- BACKGROUND -->
+        <div class="layer--bg" aria-hidden="true">
+            <span class="bg-text">Text</span>
+        </div>
+
+        <!-- FOREGROUND -->
+        <div class="layer--fg">
+            <img src="/media/fox/fox_sad.png" alt="Fox sad" />
+            <h1>Foreground Title</h1>
+            <p>Foreground paragraph, hello world!</p>
+            <a href="#" class="btn">Foreground button</a>
+        </div>
+    </div>
+
+    <br>
+
+    <code>unordered list &lt;ul&gt; of items &lt;li&gt;</code>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <br>
+
+    <code>unordered list &lt;menu&gt; of items &lt;li&gt;</code>
+    <menu>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </menu>
+
+    <br>
+
+    <code>ordered list &lt;ol&gt; of items &lt;li&gt;</code>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+
+    <br>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
+    </p>
+
+</div>

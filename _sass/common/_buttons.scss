@@ -1,0 +1,163 @@
+/* BUTTON SKELETON */
+%btn-base {
+    // # Custom Properties
+    --btn-padding: .8rem 1.4rem;
+    --fnt-size: .8rem;
+    --fnt-weight: 700;
+    --btn-radius: var(--rad-sml);
+
+    // Apply Custom Properties
+    padding: var(--btn-padding);
+    font-size: var(--fnt-size);
+    font-weight: var(--fnt-weight);
+    border-radius: var(--btn-radius);
+
+    // Layout
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    gap: .5rem;
+    border: 1px solid;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+
+    // Typography
+    font-family: var(--font-playfair), serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-style: normal;
+}
+
+@mixin btn-theme(
+    $bg: var(--accent),
+    $txt: var(--bg),
+    $border: transparent
+) {
+    background: $bg;
+    color: $txt;
+    border-color: $border;
+}
+
+/* APPLY THE SKELETON */
+button, .btn {
+    // Images inside the buttons
+    img {
+        width: 1rem;
+        height: auto;
+    }
+
+    @extend %btn-base;
+    @include btn-theme;
+
+    // When hovered
+    &:hover {
+        @include btn-theme (
+            var(--accent-dark),
+            var(--text),
+            var(--accent-soft)
+        );
+        text-decoration: none;
+    }
+
+    // Internal Alignment
+    &.center { justify-content: center;     text-align: center; }
+    &.left   { justify-content: flex-start; text-align: left; }
+    &.right  { justify-content: flex-end;   text-align: right; }
+    &.full   { width: 100%; }
+
+    // Big button
+    &.big {
+        --btn-padding: 1.4rem 2.6rem;
+        --btn-radius: var(--rad-big);
+        --fnt-size: 1.2rem;
+
+        // Icon next to the label
+        & .arrow-svg {
+            translate: 0 .05em;     // caps sit slightly below the box center
+            margin-right: -.1em;    // compensates the empty margin inside the SVG viewBox
+        }
+    }
+
+    // Language
+    &.lang {
+        @include btn-theme(
+            transparent,
+            var(--text)
+        );
+
+        --btn-padding: .25rem .6rem;
+        --fnt-size: .75rem;
+        --btn-radius: 4px;
+
+        &.active {
+            @include btn-theme (
+                var(--accent),
+                var(--bg)
+            );
+        }
+
+        &:hover:not(.active) {
+            @include btn-theme (
+                var(--accent-dark),
+                var(--text-muted)
+            );
+        }
+    }
+
+    // Navigation Header Links Buttons
+    &.link {
+        @include btn-theme(
+            transparent,
+            var(--text)
+        );
+
+        --btn-padding: .45rem .85rem;
+
+        &:hover {
+            @include btn-theme(
+                transparent,
+                var(--accent-dark),
+                var(--accent)
+            );
+        }
+
+        &.active {
+            @include btn-theme (
+                var(--bgbt),
+                var(--accent)
+            );
+        }
+    }
+
+    // Just an outline
+    &.outline {
+        @include btn-theme(
+            transparent,
+            var(--text-muted),
+            var(--border)
+        );
+
+        &:hover {
+            @include btn-theme(
+                $bg: var(--bg-alt),
+                $txt: var(--text),
+                $border: var(--accent)
+            );
+        }
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    button, .btn {
+        --btn-padding: .8rem 1.4rem;
+
+        // Big button
+        &.big {
+            --btn-padding: 1.1rem 2.6rem;
+            --btn-radius: calc(var(--rad-big) - 2px);
+        }
+    }
+}

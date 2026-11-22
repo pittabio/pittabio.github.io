@@ -1,66 +1,97 @@
 {
-  "head_title": "Echoes of the Witch Wood · Dev Archive · Fabio Pittaccio",
+    "head_title": "Echoes of the Witch Wood · Dev Archive",
 
-  "echoes_page": {
-    "tag": "Dev Archive · Unreal Engine 5 · C++",
-    "title": "Echoes of the <em>Witch Wood</em>",
-    "subtitle": "A solid and scalable action-platformer architecture, built on custom C++ systems and modular AI logic.",
-    "banner": "Main project folders",
-
-    "status_badge": "Archived / Technical Prototype",
-    "status_note": [
-      "This project served as a fundamental testing ground for implementing core systems in C++.",
-      "Although development is suspended, the code produced for enemy AI and the save system represents some of my most structured work."
-    ],
-
-    "concept": {
-      "tag": "Concept",
-      "title": "Systems over Quantity",
-      "desc": [
-        "The focus was on creating a robust framework for a two-character platformer.",
-        "Every system was designed to be actor-agnostic: ",
-        "from portals to moving platforms, communication occurs via interfaces to ensure maximum maintainability."
-      ]
+    "hero": {
+        "tag": "Dev Archive · Unreal Engine 5 · C++",
+        "title": "Echoes of the <em>Witch Wood</em>",
+        "sub": "A solid and scalable action-platformer architecture, built on custom C++ systems and modular AI logic.",
+        "img_alt": "Architectural diagram of gameplay interfaces and subsystems",
+        "img1_desc": "<strong>Decoupled architecture overview:</strong> <code>AHeroCharacter</code> interfaces with Save, Environmental, and AI subsystems strictly via abstraction contracts (<code>ISaveGameInterface</code> and <code>IFloorInterface</code>), eliminating hard casting and circular dependencies.",
+        "img2_desc": "<strong>Save System persistence pipeline:</strong> data propagation flow from in-world triggers (<code>ACheckpoint</code>) down to local disk storage via <code>UEchoesSaveData</code>, separating player progression and slot metadata."
     },
 
-    "tech_work": {
-      "tag": "Technical Development (My Role)",
-      "title": "Core Systems Engineering",
-      "items": [
-        "<li><strong>AI & Enemy Framework:</strong> Developed a generic enemy base class with health management and a complex 'Kamikaze' AI, complete with State Machines (Chase, Attack, Stroll), Behavior Trees (Blackboard), and positional SFX.</li>",
-        "<li><strong>Save Architecture:</strong> Implementation of a complete data persistence pipeline based on interfaces, supporting checkpoints, multiple slots, and serialization of Player State and Game State.</li>",
-        "<li><strong>Advanced Movement Systems:</strong> Development of the Dash mechanic (Ground/Air) with conflict resolution on steep surfaces, and creation of a 'Floor Checking' system through C++ components and interfaces.</li>",
-        "<li><strong>Environmental Mechanics:</strong> Design of Spline-based moving platforms, timed platforms (falling platforms), and a portal system for instantaneous actor teleportation.</li>",
-        "<li><strong>Modular Audio System:</strong> Creation of a custom audio component to standardize sound variable management and simplify playback functions across the project.</li>"
-      ]
+    "note": {
+        "badge": "Archived / Multidisciplinary Prototype",
+        "text": [
+            "Originally conceived as a cross-functional indie initiative—bringing together graduates from different tracks like programming, concept art, and 3D modeling—this project was a great exercise in remote team-building via Discord and core systems architecture.",
+            "<br>",
+            "Although the team eventually parted ways and development was suspended, the C++ code produced for the AI and save systems remains some of my most structured and educational work."
+        ]
     },
 
-    "lessons": {
-      "tag": "Post-Mortem",
-      "title": "Lessons Learned",
-      "desc": [
-        "Through this project, I refined <strong>C++ Timer</strong> management for timed mechanics and <strong>Inheritance</strong> logic for AI.",
-        "Code cleanliness and the creation of a <em>CodeMap</em> were vital for coordinating movement systems with interaction systems (levers/doors)."
-      ]
+    "details": {
+        "concept": {
+            "tag": "Concept",
+            "title": "Systems over Quantity",
+            "desc": [
+                "The focus was on creating a robust framework for a two-character platformer.",
+                "Every system was designed to be actor-agnostic: ",
+                "from portals to moving platforms, communication occurs via interfaces to ensure maximum maintainability."
+            ]
+        },
+        "tech": {
+            "tag": "Technical Development (My Role)",
+            "title": "Core Systems Engineering",
+            "points": {
+                "1": "<strong>AI & Enemy Framework:</strong> Developed a generic enemy base class with health management and a complex 'Kamikaze' AI, complete with State Machines (Chase, Attack, Stroll), Behavior Trees (Blackboard), and positional SFX.",
+                "2": "<strong>Save Architecture:</strong> Implementation of a complete data persistence pipeline based on interfaces, supporting checkpoints, multiple slots, and serialization of Player State and Game State.",
+                "3": "<strong>Advanced Movement Systems:</strong> Development of the Dash mechanic (Ground/Air) with conflict resolution on steep surfaces, and creation of a 'Floor Checking' system through C++ components and interfaces.",
+                "4": "<strong>Environmental Mechanics:</strong> Design of Spline-based moving platforms, timed platforms (falling platforms), and a portal system for instantaneous actor teleportation.",
+                "5": "<strong>Modular Audio System:</strong> Creation of a custom audio component to standardize sound variable management and simplify playback functions across the project."
+            }
+        },
+        "lessons": {
+            "tag": "Post-Mortem",
+            "title": "Lessons Learned",
+            "desc": [
+                "Through this project, I refined <strong>C++ Timer</strong> management for timed mechanics and <strong>Inheritance</strong> logic for AI.",
+                "Code cleanliness and the creation of a <em>CodeMap</em> were vital for coordinating movement systems with interaction systems (levers/doors)."
+            ]
+        },
+        "highlights": {
+            "tag": "Highlights",
+            "title": "Key Technical Contributions",
+            "subtitle": "Systems I have worked on",
+            "points": {
+                "1": "Enemy AI with State Machine and Blackboard",
+                "2": "Save System Pipeline (Slots & Checkpoints)",
+                "3": "Custom Dash Logic (Ground/Air)",
+                "4": "Hero & Ability Interface for decoupled systems",
+                "5": "Async Loading System (Loading Screens)",
+                "6": "Spline and Timer-driven environmental mechanics"
+            }
+        }
     },
 
-    "highlights": {
-      "title": "Key Technical Contributions",
-      "items": [
-        "⁕ Enemy AI with State Machine and Blackboard<br>",
-        "⁕ Save System Pipeline (Slots & Checkpoints)<br>",
-        "⁕ Custom Dash Logic (Ground/Air)<br>",
-        "⁕ Hero & Ability Interface for decoupled systems<br>",
-        "⁕ Async Loading System (Loading Screens)<br>",
-        "⁕ Spline and Timer-driven environmental mechanics"
-      ]
+    "doc": {
+        "title": "C++ Technical Documentation",
+        "sub": "Implementation excerpts of the core systems developed for the project.",
+        "cards": {
+            "save": {
+                "name": "Save System Pipeline",
+                "desc": "Interface-driven persistence, modular structs, and asynchronous slot-based saving.",
+                "img_alt": "C++ code of SaveGameInterface and EchoesSaveData",
+                "img_desc": "Declaration of <code>ISaveGameInterface</code> and <code>UEchoesSaveData</code> (derived from <code>USaveGame</code>), utilizing <code>FSlotData</code> and <code>FPlayerData</code> structs for clean separation of concerns."
+            },
+            "ai": {
+                "name": "AI Framework & Kamikaze",
+                "desc": "State machine driven by C++ Behavior Tree tasks and derived self-destructing enemy.",
+                "img_alt": "C++ code of AI Controller, Kamikaze Character and BT Task",
+                "img_desc": "Implementation of <code>EEnemyState</code> Finite State Machine, specialized <code>AKamikaze_Character</code> with timed explosion lifecycle, and custom <code>UBTTask_Kamikaze_Chase</code>."
+            },
+            "floor": {
+                "name": "Environmental Interactions",
+                "desc": "Foot-level box detection querying decoupled polymorphic floor interface contracts.",
+                "img_alt": "C++ code of FloorInterface, FloorCheckComponent and PressurePlate",
+                "img_desc": "Surface interaction abstraction: <code>UFloorCheckComponent</code> triggers <code>IFloorInterface</code> on polymorphic reactive actors like <code>APressurePlate</code> with zero hard casting."
+            }
+        }
     },
 
     "cta": {
-      "title": "Explore other <em>projects</em>",
-      "subtitle": "Even though this journey has ended, the systems created live on in my subsequent works.",
-      "divider": "so",
-      "btn_back": "Back to Projects"
+        "title": "Explore other <em>projects</em>",
+        "subtitle": "Even though this journey has ended, the systems created live on in my subsequent works.",
+        "divider": "so",
+        "more": "Back to Projects"
     }
-  }
 }

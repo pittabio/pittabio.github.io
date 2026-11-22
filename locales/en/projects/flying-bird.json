@@ -1,98 +1,108 @@
-﻿{
-  "head_title": "Flying Bird · Fabio Pittaccio",
-
-  "flying_page": {
-    "tab_title": "Flying Bird · Fabio Pittaccio",
-    "tag": "Technical Study · Android & Windows",
-    "title": "Flying <em>Bird</em>",
-    "subtitle": "A 3D remake of Flappy Bird focused on C++ gameplay architecture and cross-platform deployment.",
-
-    "banner": "The <strong>Flying Bird</strong> banner",
-
-    "about": {
-      "tag": "Project Goal",
-      "title": "Technical Recreation",
-      "desc": "<strong>Flying Bird</strong> is a personal study project designed to practice the <strong>Unreal Engine mobile pipeline</strong>. The objective was to recreate classic mechanics using a full C++ backend."
-    },
-    "gameplay": {
-      "tag": "Mechanics",
-      "title": "Core Logic",
-      "items": [
-        "<li><strong>Velocity Reset:</strong> Custom flight logic that normalizes vertical speed before each impulse for consistent jumps.</li>",
-        "<li><strong>Procedural Loop:</strong> Spawner system managing the lifecycle and randomized Z-axis offsetting of obstacles.</li>"
-      ]
-    },
-    "tech": {
-      "tag": "Technical",
-      "title": "C++ Architecture",
-      "items": [
-        "<li><strong>Event-Driven:</strong> Usage of Dynamic Multicast Delegates to decouple gameplay logic from UI and Audio.</li>",
-        "<li><strong>Data Persistence:</strong> Full C++ implementation of SaveGame for local high scores and settings.</li>"
-      ]
-    },
-    "systems": {
-      "tag": "Systems",
-      "title": "Mobile Optimization",
-      "items": [
-        "<li><strong>Cross-Platform:</strong> Use of <code>#if PLATFORM_ANDROID</code> macros for dynamic UI injection.</li>",
-        "<li><strong>Code-Driven UI:</strong> Widget hierarchy parented to C++ classes with programmatic Slate styling.</li>"
-      ]
+{
+    "hero": {
+        "tag": "Technical Study · Android & Windows",
+        "title": "Flying Bird",
+        "p": "A 3D remake of Flappy Bird focused on C++ gameplay architecture and cross-platform deployment."
     },
 
-    "video_title": "Gameplay Trailer",
-    "gallery": {
-      "title": "Project Documentation",
+    "img": {
+        "alt": "Flying Bird banner",
+        "desc": "The banner for the <strong>Flying Bird</strong> project."
+    },
 
-      "game_state": {
-        "title": "Event Architecture",
-        "desc": "Usage of <code>Dynamic Multicast Delegates</code> in the GameState to decouple gameplay triggers (Score, Death) from the UI and audio systems.",
+    "details": {
+        "about": {
+            "tag": "Project Goal",
+            "title": "Technical Recreation",
+            "desc": [
+                "<strong>Flying Bird</strong> is a personal study project designed to practice the <strong>Unreal Engine mobile pipeline</strong>.",
+                "The objective was to recreate classic mechanics using a full C++ backend."
+            ]
+        },
+        "gameplay": {
+            "tag": "Mechanics",
+            "title": "Core Logic",
+            "points": {
+                "1": "<strong>Velocity Reset:</strong> Custom flight logic that normalizes vertical speed before each impulse for consistent jumps.",
+                "2": "<strong>Procedural Loop:</strong> Spawner system managing the lifecycle and randomized Z-axis offsetting of obstacles."
+            }
+        },
+        "tech": {
+            "tag": "Technical",
+            "title": "C++ Architecture",
+            "points": {
+                "1": "<strong>Event-Driven:</strong> Usage of Dynamic Multicast Delegates to decouple gameplay logic from UI and Audio.",
+                "2": "<strong>Data Persistence:</strong> Full C++ implementation of SaveGame for local high scores and settings."
+            }
+        },
+        "systems": {
+            "tag": "Systems",
+            "title": "Mobile Optimization",
+            "points": {
+                "1": "<strong>Cross-Platform:</strong> Use of <code>#if PLATFORM_ANDROID</code> macros for dynamic UI injection.",
+                "2": "<strong>Code-Driven UI:</strong> Widget hierarchy parented to C++ classes with programmatic Slate styling."
+            }
+        }
+    },
 
-        "img1": "Delegate System: Implementation of event broadcasting to maintain a clean communication flow between classes."
-      },
+    "video": {
+        "header": "Gameplay Trailer",
+        "title": "Flying Bird Gameplay"
+    },
 
-      "bird": {
-        "title": "Physics & Impulse",
-        "desc": "Flight logic handled via <code>AddImpulse</code>. The system dampens angular velocity and locks rotation to maintain stability during physics simulation.",
-
-        "img1": "Impulse Logic: A view of the impulse force parameters and the air resistance (Linear Damping) setup."
-      },
-
-      "pipes": {
-        "title": "Collision Management",
-        "desc": "Optimization of collision channels to separate lethal meshes from scoring triggers, preventing false-positive overlaps.",
-
-        "img1": "Collision Filtering: Configuration of custom object types for accurate interaction detection."
-      },
-
-      "spawner": {
-        "title": "Procedural Spawning",
-        "desc": "Implementation of a tick-based generator that uses <code>FFloatRange</code> to randomize obstacle height within set bounds.",
-
-        "img1": "Spawner Setup: View of the spawner properties, including spawn delays and vertical range offsets."
-      },
-
-      "input": {
-        "title": "Cross-Platform Input",
-        "desc": "Unified mapping via Enhanced Input, allowing the same logic to handle Android touch events and Windows keyboard/mouse clicks.",
-
-        "img1": "IMC_Input: Configuration showing the mapping for spacebar and screen taps."
-      },
-
-      "ui": {
-        "title": "Logic-Driven & Cross-Platform UI",
-        "desc": "A sophisticated UI system where every Widget Blueprint is parented to a C++ class. It features platform-specific logic and programmatic styling to ensure performance and visual consistency.",
-
-        "img1": "Android Platform Optimization: A C++ code snippet showing the use of preprocessor macros (<code>#if PLATFORM_ANDROID</code>) to conditionally inject the pause button only on mobile builds.",
-        "img2": "C++ Parenting & Architecture: A view of the Widget Blueprint editor highlighting the <code>PauseWidget</code> C++ parent class and the organized hierarchy of the interactive elements.",
-        "img3": "Complete UI Ecosystem: A comprehensive look at the full game loop interface, including the main menu, the minimalist gameplay HUD, and the death screen with score persistence."
-      }
+    "doc": {
+        "title": "Project Documentation",
+        "events": {
+            "title": "Event Architecture",
+            "desc": "Usage of <code>Dynamic Multicast Delegates</code> in the <em>GameState</em> to decouple gameplay triggers (Score, Death, High Score) from the UI and audio systems, ensuring a clean and modular communication flow.",
+            "img_alt": "Delegate System: Implementation of event broadcasting to maintain a clean communication flow between classes.",
+            "img1_desc": "<strong>Delegate Declarations:</strong> C++ header definitions of the dynamic multicast delegates (Start, Countdown, Score, Pause, Dead) inside the GameState class.",
+            "img2_desc": "<strong>Event Broadcasting:</strong> Implementation in the .cpp file showing the <code>.Broadcast()</code> calls for score updates, high scores, and player death.",
+            "img3_desc": "<strong>UI Event Binding:</strong> Initialization inside <code>NativeConstruct()</code> binding GameState delegates via <code>AddDynamic</code> to update UI text elements seamlessly."
+        },
+        "bird": {
+            "title": "Physics & Impulse",
+            "desc": "Flight logic handled via <code>AddImpulse</code>. The system dampens angular velocity and locks rotation to maintain stability during physics simulation.",
+            "img_alt": "Impulse Logic: A view of the impulse force parameters and the character setup in the editor.",
+            "img1_desc": "<strong>Blueprint Setup:</strong> View of the <code>BP_Bird</code> actor in the editor, highlighting the exposed <code>ImpulseForce</code> parameter in the Details panel.",
+            "img2_desc": "<strong>Impulse & Velocity Reset:</strong> C++ code showing the vertical velocity normalization prior to applying the physical impulse force."
+        },
+        "collisions": {
+            "title": "Collision Management",
+            "desc": "Optimization of custom collision channels to separate lethal meshes from scoring triggers, preventing false-positive overlaps and ensuring accurate interaction detection via C++ configuration and editor presets.",
+            "img_alt": "Collision Filtering: Custom trace channels and object types configuration for accurate interaction detection.",
+            "img1_desc": "<strong>Custom Trace Channels:</strong> Definition of dedicated game trace channels (<code>BIRD</code>, <code>PIPE</code>, <code>SCORE</code>) inside <code>Flying_Bird.h</code>.",
+            "img2_desc": "<strong>C++ Constructor Setup:</strong> Side-by-side view of <code>Bird.cpp</code> and <code>Pipes.cpp</code> initializing object types and collision responses programmatically.",
+            "img3_desc": "<strong>Editor Collision Presets:</strong> Combined editor panels showing physics blocking settings for pipe meshes, query-only setup for score triggers, and the bird character configuration."
+        },
+        "spawner": {
+            "title": "Procedural Spawning",
+            "desc": "Implementation of a tick-based generator managing obstacle lifecycles. It utilizes <code>FFloatRange</code> and random ranges to procedurally offset the vertical height of spawned pipes at regular time intervals.",
+            "img_alt": "Procedural Spawner: Setup of the spawner properties and random generation logic.",
+            "img1_desc": "<strong>Spawner Properties:</strong> Editor view of the <code>BP_PipesSpawner</code> actor exposing configurable properties like spawn delay and vertical bounds (Min/Max).",
+            "img2_desc": "<strong>Randomized Spawn Logic:</strong> C++ implementation in <code>PipesSpawner.cpp</code> using <code>FFloatRange</code> to randomize the Z-axis offset during actor spawning."
+        },
+        "input": {
+            "title": "Cross-Platform Input",
+            "desc": "Unified mapping via Unreal's Enhanced Input system, allowing the exact same gameplay logic to seamlessly handle Android touch events and Windows keyboard/mouse clicks.",
+            "img_alt": "Enhanced Input System: Configuration showing input actions, data assets, and mapping context for multi-platform support.",
+            "img1_desc": "<strong>Enhanced Input Assets:</strong> Combined view showing the Input Mapping Context (IMC), Data Asset container, and individual Input Actions (Fly and Pause) configured for touch and keyboard.",
+            "img2_desc": "<strong>C++ Input Binding:</strong> Implementation in <code>BirdController.cpp</code> handling action bindings and platform-specific conditional compilation macros."
+        },
+        "ui": {
+            "title": "Logic-Driven & Cross-Platform UI",
+            "desc": "A sophisticated UI system where every Widget Blueprint is parented to a C++ class. It features platform-specific logic and programmatic styling to ensure performance and visual consistency.",
+            "img_alt": "Cross-Platform UI System: Code-driven widgets, preprocessor macros, and complete game loop interfaces.",
+            "img1_desc": "<strong>Android Platform Optimization:</strong> A C++ code snippet showing the use of preprocessor macros (<code>#if PLATFORM_ANDROID</code>) to conditionally inject and display the pause button only on mobile builds.",
+            "img2_desc": "<strong>C++ Parenting & Hierarchy:</strong> A view of the Widget Blueprint editor highlighting the C++ parent class and the organized hierarchy of interactive elements.",
+            "img3_desc": "<strong>Complete UI Ecosystem:</strong> A comprehensive look at the full game loop interface, combining the main menu, the minimalist gameplay HUD, and the death screen with score persistence."
+        }
     },
 
     "cta": {
-      "title": "Ready for a <em>challenge?</em>",
-      "subtitle": "Test the physics and try to beat your high score. Available for Android and Windows.",
-      "or": "or",
-      "btn_back": "View more projects"
+        "title": "Ready for a <em>challenge?</em>",
+        "subtitle": "Test the physics and try to beat your high score. Available for Android and Windows.",
+        "or": "or",
+        "btn_back": "View more projects"
     }
-  }
 }

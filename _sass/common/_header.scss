@@ -1,0 +1,193 @@
+@use "base";
+
+    /* PROPRIETIES */
+
+// Header Height
+@property --hedr-h {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 65px;
+}
+
+// Root variables
+:root {
+    // Header Height when scrolled
+    --hedr-h-scr: 45px;
+}
+
+    /* HEADER */
+
+header {
+    @include base.container-style(
+        $direction: row,
+        $align: center,
+        $justify: space-between
+    );
+
+    // Layout
+    background: var(--bg);
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0; right: 0;
+    padding: 0 2rem;
+
+    // Height
+    min-height: 0;
+    height: var(--hedr-h);
+
+    // Border
+    border-bottom: 1px solid var(--border);
+
+    // Scroll animation
+    transition: var(--transition);
+    animation: header-shrink ease-in-out forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 300px;
+
+    // Title
+    a {
+        @include base.display-text;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            color: currentColor;
+            text-decoration: none;
+        }
+    }
+
+    // Navigation Links
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        // Language Switcher
+        .lang-switcher {
+            display: flex;
+            gap: 0.25rem;
+            padding: 3px;
+            background: var(--bgbt);
+            border: 1px solid var(--border);
+            border-radius: var(--rad-sml);
+        }
+
+        // Navigation Links
+        .links-wrapper {
+            display: flex;
+            gap: 0.15rem;
+        }
+    }
+
+    // Mobile Hamburger
+    .hamburger {
+        display: none; // Don't show the mobile hamburger in the header
+    }
+}
+
+    /* ANIMATIONS */
+
+// Animation Keyframes for scrolling
+@keyframes header-shrink {
+    to {
+        --hedr-h: var(--hedr-h-scr);
+        box-shadow: 0 5px 20px var(--shadow);
+    }
+}
+
+// Animation Keyframes for sliding down the mobile menu
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+    /* # MOBILE # */
+
+@media (max-width: 768px) {
+    header {
+        max-width: none;
+        padding: 0 0 0 1.1rem;
+
+        // Title
+        & a {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            white-space: nowrap;
+        }
+
+        // Buttons inside the hamburger
+        & .btn {
+            padding: .8rem;
+            font-size: 1rem;
+        }
+
+        // The language buttons
+        .lang {
+            padding: .25rem .6rem;
+            font-size: 1rem;
+        }
+
+        // Navigation Menu
+        nav {
+            display: none; // Don't show the navigation menu in the header
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+
+            // List Layout
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+
+            // Open the hamburger menu
+            &.open {
+                display: flex; // When opened show the navigation menu
+                animation: slideDown 0.3s forwards;
+            }
+
+            // Language Switcher
+            .lang-switcher {
+                margin: 0;
+                align-self: center;
+            }
+
+            // Navigation Links
+            .links-wrapper {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+        }
+
+        // Mobile Menu Hamburger
+        .hamburger {
+            // Classic layout
+            border: none;
+            z-index: 1000;
+
+            // Simulate the hamburger (3 lines) icon
+            display: inline-flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+
+            // Span is a line
+            span {
+                width: 22px;
+                height: 2px;
+                background: var(--text);
+                border-radius: 5px;
+                transition: var(--transition);
+            }
+
+            // The cross animation opening the hamburger menu
+            &.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            &.open span:nth-child(2) { opacity: 0; }
+            &.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        }
+    }
+}

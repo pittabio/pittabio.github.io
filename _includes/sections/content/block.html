@@ -1,0 +1,91 @@
+{% comment %}
+// -- A REUSABLE BLOCK -- //
+
+USAGE Example
+{/%/ include sections/content/block.html
+  tag       = "tag.to.include"      (optional)
+  title     = "title.to.include"    (optional)
+  h         = "h3"                  (optional, h1 by default)
+  sub       = "subtitle.to.include" (optional)
+
+  img       = "/image/to/include"   (optional)
+  img_alt   = "image.alt.text"      (optional, use together with img)
+  img_desc  = "image.desc.text"     (optional, for a single image)
+  img1      = "/image1/to/include"  (optional, use if the opened image is different and it's the first element of a grid)
+  img1_desc = "image1.desc.text"    (optional, use together with img)
+  img2      = "/image2/to/include"  (optional, use if the opened image is different and it's the second element of a grid)
+  img2_desc = "image2.desc.text"    (optional, use together with img)
+  img3      = "/image3/to/include"  (optional, use if the opened image is different and it's the third element of a grid)
+  img3_desc = "image3.desc.text"    (optional, use together with img)
+
+  p         = "parag.to.include"    (optional)
+  url       = "/link/include"       (optional)
+  btn_text  = "button.text"         (optional)
+/%/}
+
+{% endcomment %}
+
+<article>
+    <!-- Tag -->
+    {% if include.tag %}
+        <span class="tag" data-i18n="{{ include.tag }}"></span>
+    {% endif %}
+
+    <!-- Title -->
+    {% if include.title %}
+        {% assign h = include.h | default: "h1" %}
+        <{{ h }}
+            class="title"
+            data-i18n-html="{{ include.title }}">
+        </{{ h }}>
+    {% endif %}
+
+    <!-- A subtitle paragraph -->
+    {% if include.sub %}
+        <p data-i18n-html="{{ include.sub }}"></p>
+        <br>
+    {% endif %}
+
+    <!-- Image -->
+    {% if include.img and include.img_alt %}
+        <img src="{{ include.img }}"
+             alt="{{ include.img_alt }}"
+             {% if include.img_class %}class="{{ include.img_class }}"{% endif %}
+             onclick="openGallery(this)"
+            {% comment %} First element {% endcomment %}
+            {% if include.img1 and include.img1_desc %}
+                data-img1="{{ include.img1 }}"
+                data-desc1="{{ include.img1_desc }}"
+            {% endif %}
+            {% comment %} Second element {% endcomment %}
+            {% if include.img2 and include.img2_desc %}
+                data-img2="{{ include.img2 }}"
+                data-desc2="{{ include.img2_desc }}"
+            {% endif %}
+            {% comment %} Third element {% endcomment %}
+            {% if include.img3 and include.img3_desc %}
+                data-img3="{{ include.img3 }}"
+                data-desc3="{{ include.img3_desc }}"
+            {% endif %}
+            {% comment %} Single element {% endcomment %}
+            {% if include.img_desc %}
+                data-desc="{{ include.img_desc }}"
+            {% endif %}
+        />
+    {% endif %}
+
+    <!-- The paragraph of the block -->
+    {% if include.p %}
+        <p data-i18n-html="{{ include.p }}"></p>
+    {% endif %}
+
+    <!-- If the url is imported, then it's a button -->
+    {% if include.url %}
+        <br><!-- break -->
+
+        <a class="btn big" href="{{ include.url }}" target="_blank">
+            <span data-i18n="{{ include.btn_text }}"></span>
+            <span class="arrow-svg"></span>
+        </a>
+    {% endif %}
+</article>

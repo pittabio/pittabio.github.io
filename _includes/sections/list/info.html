@@ -1,0 +1,57 @@
+{% comment %}
+// -- A REUSABLE INFO LIST -- //
+
+USAGE Example
+{/%/ include sections/list/info.html
+    title = "title.to.include"
+    infos = page.infos
+/%/}
+
+NOTE: "infos" is a list, and each entry supports these fields:
+    label = "label.to.include"
+    desc = "desc.to.include" (optional)
+    img = "/image/source"    (optional, has priority over svg)
+    svg = "svg-class"        (optional, used only if img is missing)
+    url = "/link/to/include" (optional, wraps the entry in a link)
+
+{% endcomment %}
+
+{% assign title = include.title %}
+{% assign infos = include.infos %}
+
+<div class="profiles">
+    <!-- Mini Title -->
+    <h3 data-i18n="{{ title }}">{{ title }}</h3>
+
+    <!-- The list -->
+    <ul>
+        {% for info in infos %}
+            {% capture item_content %}
+                <!-- Mini Image -->
+                {% if info.img %}
+                    <img src="{{ info.img }}" alt="{{ info.label }} logo" />
+                {% elsif info.svg %}
+                    <span class="{{ info.svg }}"></span>
+                {% endif %}
+
+                <!-- Label -->
+                <b data-i18n="{{ info.label }}">{{ info.label }}</b>
+
+                <!-- Extra Description -->
+                {% if info.desc %}
+                    <span data-i18n="{{ info.desc }}"></span>
+                {% endif %}
+            {% endcapture %}
+
+            <li>
+                {% if info.url %}
+                    <a href="{{ info.url }}">
+                        {{ item_content }}
+                    </a>
+                {% else %}
+                    {{ item_content }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul><!-- /list/ -->
+</div><!-- /cont/ -->

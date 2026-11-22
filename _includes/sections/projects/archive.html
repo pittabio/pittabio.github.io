@@ -1,0 +1,19 @@
+{% comment %}
+// -- A LIST OF ARCHIVE CARDS -- //
+
+USAGE Example
+{/%/ include sections/content/archive.html /%/}
+
+NOTE: No parameters needed.
+The projects are read from `site.data.projects.archive`,
+and each one is rendered with sections/content/card.liquid
+in an auto-sized grid.
+
+{% endcomment %}
+
+{% assign list = site.data.projects.archive %}
+<div class="grid-auto">
+    {% for p in list %}
+        {% include sections/content/card.liquid object=p %}
+    {% endfor %}
+</div>

@@ -1,0 +1,87 @@
+{% comment %}
+// -- A REUSABLE LICENSE ITEM -- //
+
+USAGE Example
+{/%/ include sections/legal/license-item.html
+    item = ITEM
+/%/}
+
+NOTE: ITEM is a `_data` entry with these fields:
+    name          = "name.to.include"       (plain text, not translated)
+    image         = "/image/source"         (optional, used only if svg is missing)
+    svg           = "svg-class"             (optional, used only if image is missing)
+    author        = "author.name"           (optional)
+    author_url    = "/link/to/include"      (optional, only together with author)
+    source        = "source.name"           (text of the source link)
+    source_url    = "/link/to/include"      (optional, the source is shown only if present)
+    license       = "license.name"          (optional)
+    license_url   = "/link/to/include"      (optional, only together with license)
+    trademark     = "owner.name"            (optional, owner of the brand if the icon is one)
+    trademark_url = "/link/to/include"      (optional, only together with trademark)
+    note          = "note.to.include"       (optional, i18n key, can contain HTML)
+
+Each optional field is rendered in the list only if it is present.
+
+{% endcomment %}
+
+<article class="license-item">
+    {% assign i = include.item %}
+    <!-- Name of the item -->
+    <h4>{{ i.name }}</h4>
+
+    <!-- The image -->
+    {% if i.image %}
+        <img src="{{ i.image }}" alt="" />
+    {% elsif i.svg %}
+        <span class="{{ i.svg }}" style="animation: none" aria-hidden="true"></span>
+    {% endif %}
+
+    <!-- The list -->
+    <dl>
+        <!-- Author -->
+        {% if i.author %}
+            <dt data-i18n-html="item.author"></dt>
+            {% if i.author_url %}
+                <dd><a href="{{ i.author_url }}">{{ i.author }}</a></dd>
+            {% else %}
+                <dd>{{ i.author }}</dd>
+            {% endif %}
+        {% endif %}
+
+        <!-- Source -->
+        {% if i.source_url %}
+            <dt data-i18n="item.source"></dt>
+            <dd><a href="{{ i.source_url }}">{{ i.source }}</a></dd>
+        {% endif %}
+
+        <!-- License copyright -->
+        {%  if i.license %}
+            <dt data-i18n="item.license"></dt>
+            <dd>
+                {% if i.license_url %}
+                    <a href="{{ i.license_url }}"> {{ i.license }} </a>
+                {% else %}
+                    {{ i.license }}
+                {% endif %}
+            </dd>
+        {% endif %}
+
+        <!-- Trademark owner if the icon represents a brand -->
+        {% if i.trademark %}
+            <dt data-i18n="item.trademark"></dt>
+            <dd>
+                {% if i.trademark_url %}
+                    <a href="{{ i.trademark_url }}">{{ i.trademark }}</a>
+                {% else %}
+                    {{ i.trademark }}
+                {% endif %}
+            </dd>
+        {% endif %}
+
+        <!-- Other notes if presents -->
+        {% if i.note %}
+            <dt data-i18n="item.note"></dt>
+            <dd data-i18n-html="{{ i.note }}"></dd>
+        {% endif %}
+    </dl>
+</article>

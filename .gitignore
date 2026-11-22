@@ -1,17 +1,24 @@
 # JetBrains WebStorm
 .idea/
+qodana.yaml
+
+# JetBrains plugins
+.todo/
 
 # macOS
 .DS_Store
 
-# Jekyll / Windows
+# Jekyll
 _site/
 .jekyll-cache/
 .jekyll-metadata
-
-# Console
-start-dev.ps1
+.editorconfig
+.server/
 
 # Media
 media/games/wizard-scape/gems/square/
 media/banner/gimp/
+*.xcf
+
+# Backup
+.backup

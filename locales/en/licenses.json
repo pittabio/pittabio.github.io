@@ -1,0 +1,228 @@
+{
+    "title": "Licenses & Privacy",
+    "head_title": "Licenses & Privacy",
+
+    "privacy": {
+        "title": "Privacy",
+        "desc": [
+            "This section explains what happens to your data when you visit this site.",
+            "The data controller is Fabio Pittaccio.",
+            "<br>",
+            "To ask about your data (access, correction or deletion), use the <a href='/contacts.html#contact-form'>contact form</a>."
+        ],
+        "hosting": {
+            "title": "Hosting and external resources",
+            "desc": [
+                "This site is hosted on <a href='https://docs.github.com/en/pages'>GitHub Pages</a>.",
+                "As with any web host, GitHub may process technical data such as your IP address to deliver the pages and keep the service secure.",
+                "GitHub also processes data in the United States and adheres to the EU-U.S. Data Privacy Framework.",
+                "Read the <a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>privacy policy</a> on the GitHub website."
+            ]
+        },
+        "storage": {
+            "title": "Data on your device",
+            "desc": [
+                "The site stores your language choice in your browser (local storage) to remember it on your next visit.",
+                "It stays on your device and is not used to track you.",
+                "<br>",
+                "On the contact page, hCaptcha may set technical cookies needed for the captcha to work"
+            ]
+        },
+        "stats": {
+            "title": "Statistics",
+            "desc": [
+                "This site uses <a href='https://umami.is/'>Umami</a>, a privacy-focused analytics service, to count visits. The Umami tracker does not use cookies.",
+                "It records page views, referral sources, browsers, operating systems, device types, and approximate locations.",
+                "To distinguish visits without using cookies, Umami generates an identifier based on the current time.",
+                "It does not store your IP address in the statistics data; it only processes it temporarily, though it may appear in the technical and security logs of Umami and its service providers.",
+                "Umami processes this data on my behalf. Read the <a href='https://umami.is/privacy'>privacy policy</a> on the Umami website.",
+                "<br>",
+                "Statistical data is stored in the EU region of Umami Cloud (Frankfurt) for 12 months.",
+                "See Umami’s <a href='https://umami.is/privacy'>Privacy Policy</a>."
+            ]
+        },
+        "form": {
+            "title": "Contact form",
+            "desc": [
+                "If you write to me through the form, the name, email address, subject and message you enter are sent to <a href='https://web3forms.com/'>Web3Forms</a>, which delivers them to me by email and acts as my data processor.",
+                "Web3Forms keeps a copy for 7 days and uses Amazon Web Services, Cloudflare and Hetzner. It operates from India and, for transfers from the EU, applies Standard Contractual Clauses.",
+                "To protect the service from spam, it may send your IP address and email address to CleanTalk and Akismet.",
+                "I use the data only to reply to you, and I keep it for as long as needed to handle your request.",
+                "Read the <a href='https://web3forms.com/privacy'>privacy policy</a> on the Web3Forms website.",
+                "<br><br>",
+                "The anti-spam captcha is provided by <a href='https://www.hcaptcha.com/'>hCaptcha</a> (Intuition Machines, Inc., United States, certified under the Data Privacy Framework).",
+                "It is loaded together with the contact page, so hCaptcha receives your IP address and technical data about your browser when you open it, even if you don't send a message.",
+                "To tell whether you are a person it also collects information about how you interact with the page (for example mouse movements, scrolling, key presses or touches) and may use technical cookies.",
+                "Answers to its challenges may be used to label data for machine learning, without being linked to an identified person.",
+                "Read the <a href='https://www.hcaptcha.com/privacy'>privacy policy</a> on the hCaptcha website."
+            ]
+        }
+    },
+
+    "item": {
+        "author": "Author",
+        "source": "Source",
+        "license": "License",
+        "note": "Note",
+        "trademark": "Trademark"
+    },
+
+    "site": {
+        "title": "Site",
+        "desc": [
+            "© 2026 Fabio Pittaccio",
+            "<br>",
+            "<b>Content:</b> Unless otherwise stated, all original content (text, images, and projects documentation) is licensed under",
+            "<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a>.",
+            "<br>",
+            "<b>Source Code:</b> The source code of this site is protected by copyright. It is provided for viewing and study purposes only.",
+            "You are not authorized to copy, redistribute, or use it for commercial purposes or to create derivative works without explicit permission."
+        ],
+        "img_alt": "My mascotte, it's an orange fox with white accents"
+    },
+
+    "tools": {
+        "title": "Tools",
+        "desc": [
+            "Where possible, icons are taken from official assets provided by the respective companies (such as Brand Assets or Press Kits), and the source is specified.",
+            "Where official assets are not available, an unofficial source is specified instead (e.g. <a href='https://devicon.dev/'>Devicon</a>, MIT License).",
+            "The license of such a source covers the collection itself, not the trademarks it contains.",
+            "<br>",
+            "<b>Please note</b>: all product names, logos, and brands are property of their respective owners and are used here for identification purposes only.",
+            "Usage of these assets does not imply endorsement."
+        ],
+
+        "note": {
+            "unreal": [
+                "Unreal®, Unreal Engine®, and the Unreal Engine® logo are trademarks or registered trademarks of Epic Games, Inc. in the United States of America and elsewhere",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "cpp": [
+                "The C++ logo is a trademark of the Standard C++ Foundation.",
+                "Used in accordance with the Foundation's <a href='https://isocpp.org/home/terms-of-use'>Terms of Use</a> for material related to the C++ language.",
+                "<br>",
+                "No endorsement implied."
+            ],
+            "github": [
+                "GITHUB®, the GITHUB® logo design, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc., registered in the United States and other countries.",
+                "<br>",
+                "The OCTOCAT design is the exclusive property of GitHub, Inc and has been federally registered with the United States Copyright Office. All rights reserved."
+            ],
+            "gitlab": [
+                "GITLAB is a trademark of GitLab Inc. in the United States and other countries and regions.",
+                "<br>",
+                "The GitLab logo is used for identification purposes only.",
+                "This usage is not affiliated with, endorsed, sponsored, or approved by GitLab Inc. No logo usage implies any official partnership."
+            ],
+            "gitkraken": [
+                "The GitKraken logo is a trademark of GitKraken (formerly Axosoft) used for identification and promotional purposes in accordance with GitKraken's branding guidelines.",
+                "<br>",
+                "No affiliation or endorsement by GitKraken is implied."
+            ],
+            "android": [
+                "Android is a trademark of Google LLC.",
+                "The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
+            ],
+            "jetbrains": {
+                "rider": "Copyright © 2026 JetBrains s.r.o. Rider and the Rider logo are trademarks of JetBrains s.r.o.",
+                "webstorm": "Copyright © 2026 JetBrains s.r.o. WebStorm and the WebStorm logo are trademarks of JetBrains s.r.o."
+            },
+            "blender": [
+                "Blender is a registered trademark (®) of the Blender Foundation in EU and USA. The Blender logo itself is property of the Blender Foundation.",
+                "The logo and the brand name “Blender” are not part of the GNU GPL, and can only be used commercially by the Blender Foundation on products, websites, and publications."
+            ],
+            "photoshop": [
+                "Adobe and Photoshop are either registered trademarks or trademarks of Adobe in the United States and/or other countries.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ]
+        }
+    },
+
+    "social": {
+        "title": "Social",
+        "desc": [
+            "The icons and logos representing social networks and online platforms are taken from the official brand assets and media kits of each service whenever available.",
+            "<br>",
+            "All trademarks, logos, and brand names are the property of their respective owners.",
+            "They are used here exclusively for identification purposes and to link to external profiles, with no endorsement, sponsorship, or affiliation implied."
+        ],
+
+        "note": {
+            "itch": [
+                "itch.io and the itch.io logo are trademarks of Itch Corp.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "gamejolt": [
+                "Game Jolt and the Game Jolt logo are trademarks of Game Jolt.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+
+            "linkedin": [
+                "LinkedIn and [in]® are registered trademarks or trademarks of LinkedIn Corporation",
+                "and its affiliates in the United States and/or other countries"
+            ],
+            "instagram": [
+                "Instagram and Meta trademarks are the property of Meta Platforms, Inc.",
+                "<br>",
+                "Used in accordance with Meta's Brand Guidelines for identification and linking purposes only.",
+                "No affiliation or endorsement is implied."
+            ],
+            "discord": [
+                "DISCORD, DISCORD NITRO, the “Clyde” Logo and any other trademark owned by Discord and its affiliates (the “Discord Marks”)",
+                "and other brand materials such as logos, trade dress, the Discord look and feel, and other aesthetic features unique to the brand (the “Brand Assets”)",
+                "are the exclusive property of Discord Inc."
+            ],
+            "youtube": [
+                "YouTube and the YouTube icon are trademarks of Google LLC.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+            "twitch": [
+                "Twitch and the Twitch Glitch logo are trademarks of Twitch Interactive, Inc.",
+                "<br>",
+                "Used for identification only, no affiliation or endorsement implied."
+            ],
+
+            "kofi": [
+                "Ko-fi and the Ko-fi logo are trademarks of Ko-fi Labs Limited.",
+                "<br>",
+                "Used in accordance with Ko-fi's Brand Assets guidelines for identification and linking purposes only.",
+                "No affiliation or endorsement is implied."
+            ],
+            "paypal": [
+                "PayPal, the PayPal logo, and all related logos are trademarks or registered trademarks of PayPal or its licensors.",
+                "<br>",
+                "Used without modification, only to link to PayPal services and for identification purposes. No affiliation, sponsorship, or endorsement is implied."
+            ],
+            "ms-rewards": [
+                "Microsoft and Microsoft Rewards are trademarks of the Microsoft group of companies.",
+                "<br>",
+                "Used for identification purposes only, no affiliation or endorsement implied."
+            ]
+        }
+    },
+
+    "ui": {
+        "title": "Interface",
+        "desc": [
+            "The icons used inside buttons and interface elements are taken from the official websites of the respective companies whenever possible.",
+            "When official SVG files are not available, most of them come from <a href='https://iconify.design/'>Iconify</a>, which collects icons from many open-source sets.",
+            "<br>",
+            "All rights remain with the respective owners and authors. The source, author and license of each icon are listed below."
+        ]
+    },
+
+    "images": {
+        "title": "Images",
+        "desc": [
+            "All images on this site are used under their respective licenses or are original creations.",
+            "<br>",
+            "For third-party assets, clear attribution is provided as required by the source license (e.g., Vecteezy, Unsplash).",
+            "If any content appears to be incorrectly attributed or infringes copyright, please reach out to request a correction or removal."
+        ]
+    }
+}

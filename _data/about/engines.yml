@@ -1,0 +1,10 @@
+# Game Engines and proficiency levels
+# `level` references localization keys in locales/#/*.json
+
+# Unreal Engine 5
+- name: "Unreal Engine 5"
+  level: "skill.level.advanced"
+
+# Unity
+- name: "Unity"
+  level: "skill.level.intermediate"

@@ -1,0 +1,70 @@
+{% comment %}
+// -- A REUSABLE ENTRY LIST -- //
+
+USAGE Example
+{/%/ include sections/list/entry-list.html
+    prefix = "prefix.of.the.keys"
+    items = page.items
+/%/}
+
+NOTE:
+• "items" is a list, and each entry supports these fields:
+    id = "item-id"
+
+    tag      = false                (optional, hides the tag)
+    title    = false                (optional, hides the title)
+    subtitle = false                (optional, hides the subtitle)
+
+    url = "/link/to/include"    (optional)
+    url_text = "url.text"       (optional, only together with url)
+
+    desc   = "full.i18n.key"  (optional, plain paragraph; use it only when there is no bullet list)
+    points = 3                (optional, number of bullet points; takes priority over desc)
+
+The texts are read from the i18n keys in locales/#/*.json (built as "prefix.id"):
+• prefix.id.tag
+• prefix.id.title
+• prefix.id.subtitle
+• prefix.id.points.1 ... prefix.id.points.N
+• desc is NOT built from the prefix: pass the full key (e.g. "details.about.desc")
+
+{% endcomment %}
+
+{% for item in include.items %}
+    {% assign key = include.prefix | append: "." | append: item.id %}
+
+    <div class="tl-item">
+        <!-- Tag -->
+        {% unless item.tag == false %}
+            <span class="tag" data-i18n="{{ key }}.tag"></span>
+        {% endunless %}
+
+        <!-- Title -->
+        {% unless item.title == false %}
+            <h4 data-i18n="{{ key }}.title"></h4>
+        {% endunless %}
+
+        <!-- Subtitle -->
+        {% unless item.subtitle == false %}
+            <em data-i18n="{{ key }}.subtitle"></em>
+        {% endunless %}
+
+        <!-- url + url_text -->
+        {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer"
+               class="tag" data-i18n-html="{{ item.url_text }}"></a>
+        {% endif %}
+
+        <!-- Points -->
+        {% if item.points %}
+            <ul>
+                {% for i in (1..item.points) %}
+                    <li data-i18n-html="{{ key }}.points.{{ i }}"></li>
+                {% endfor %}
+            </ul>
+        {% elsif item.desc %}
+            <p data-i18n-html="{{ item.desc }}"></p>
+        {% endif %}
+
+    </div>
+{% endfor %}

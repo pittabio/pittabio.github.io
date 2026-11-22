@@ -1,5 +1,28 @@
-title: "Fabio Pittaccio - Portfolio"
+# Jekyll Site Configuration
+
+# Site identity and metadata
+title: "Fabio Pittaccio · Gameplay Developer"
+author: "Fabio Pittaccio"
 url: "https://pittabio.github.io"
 baseurl: ""
 encoding: utf-8
+
+# Additional files/directories to include in the build
 include: [".well-known"]
+
+# Sass / SCSS processing settings
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Jekyll plugins
+plugins:
+    - jekyll-sitemap
+
+# Front matter defaults
+defaults:
+    # Exclude PDF files from the generated sitemap
+    - scope:
+          path: "media/**/*.pdf"
+      values:
+          sitemap: false

@@ -1,0 +1,292 @@
+@use "../common/base";
+
+/* Little images skills */
+%img-skills {
+    width: clamp(40px, 0.521vw + 30px, 50px);
+    height: clamp(40px, 0.521vw + 30px, 50px);
+    object-fit: contain;
+    object-position: center;
+    transition: var(--transition);
+}
+
+/* Skills Bar (skills-icons.html) */
+.skills {
+    @include base.flexbox-style(
+        $justify: center,
+        $wrap: wrap,
+        $gap: clamp(32px, 0.833vw + 16px, 48px)
+    );
+
+    // Layout
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    align-self: center;
+    justify-self: center;
+
+    // The icons image
+    img {
+        @extend %img-skills;
+
+        // When the icon is hovered
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+/* CARD mixin */
+@mixin card (
+    // The containter properties
+    $justify: flex-start,
+    $align: center,
+    // The card properties
+    $background: transparent,
+    $border: 2px solid var(--border),
+    $border-rad: var(--rad-big),
+    $padding: var(--main-gap),
+    $gap: var(--main-gap),
+    $height: 100%,
+    $transition: (var(--transition)),
+    // When the card is hovered
+    $hovered-border-color: var(--accent),
+    $hovered-shadow-color: rgba(var(--accent-rgb), 0.15)
+){
+    // Include the container style mixin
+    @include base.container-style(
+        $justify: $justify,
+        $align: $align
+    );
+
+    // Layout
+    background-color: $background;
+    border: $border;
+    border-radius: $border-rad;
+    padding: $padding;
+    gap: $gap;
+    height: $height; // Equal cards height
+    transition: $transition;
+
+    // The paragraph of the card
+    p {
+        text-align: justify;
+        flex-grow: 1;
+    }
+}
+
+%card-hovered {
+    --card-hovered-border-color: var(--accent);
+    --card-hovered-shadow-color: rgba(var(--accent-rgb), 0.15);
+
+    border-color: var(--card-hovered-border-color);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px var(--card-hovered-shadow-color);
+}
+
+/* Card */
+.card {
+    // Include the card mixin
+    @include card;
+
+    // The title link
+    .mini-title {
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    // The buttons
+    div {
+        width: 100%;
+    }
+
+    // The image inside the card
+    img {
+        border-radius: var(--rad-sml);
+        width: 100%;
+        object-fit: contain; // or contain to not cut
+        aspect-ratio: 16 / 9;
+    }
+
+    // When the card is hovered
+    &:hover {
+        @extend %card-hovered;
+    }
+}
+
+/* Notice */
+.notice {
+    // Custom properties for background and border
+    --notice-bg: #1f1f1f; // Background color
+    --notice-br: #1f1f1f; // Border color
+
+    // Include the card mixin
+    @include card (
+        $background: var(--notice-bg),
+        $border: 1px solid var(--notice-br),
+        $align: start
+    );
+
+    // When the card is hovered
+    &:hover { @extend %card-hovered; }
+
+    // Data variant archived
+    &[data-variant="archived"] {
+        --notice-bg: #2B2250;
+        --notice-br: #7A63E0;
+
+        // When the 'archived' notice is hovered
+        --card-hovered-border-color: #5C4AA8;
+        --card-hovered-shadow-color: #7A63E040;
+    }
+
+    // Data variant collab
+    &[data-variant="collab"] {
+        --notice-bg: #0F3633;
+        --notice-br: #22A596;
+
+        // When the 'collab' notice is hovered
+        --card-hovered-border-color: #1A7C70;
+        --card-hovered-shadow-color: #22A59640;
+    }
+}
+
+/* Badge */
+//#region Badge
+
+// Badge mixin
+@mixin badge {
+    // Colors properties
+    --badge-color: 100, 100, 100; // This is the variable that changes the most
+    --badge-bg-alpha: 0.15;
+    --badge-br-alpha: 0.3;
+
+    // Layout
+    padding: 0.18rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevents the badge from wrapping */
+    letter-spacing: 0.05em;
+
+    // Text
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    // Colors applied
+    background: rgba(var(--badge-color), var(--badge-bg-alpha));
+    color: rgb(var(--badge-color));
+    border: 1px solid rgba(var(--badge-color), var(--badge-br-alpha));
+}
+
+// The badge itself
+.badge {
+    // Include the badge mixin
+    @include badge;
+
+    // The states colors
+    &[data-variant="archived"] { --badge-color: 190, 172, 255; }
+    &[data-variant="collab"]   { --badge-color: 80,  220, 200; }
+}
+
+//#endregion
+
+/* Dividers */
+
+// Simple line: just a border
+@mixin divider(
+    $border: 1px solid var(--border),
+    $margin: 2rem 0 0 0 // Top, right, bottom, left
+) {
+    border-top: $border;
+    margin: $margin;
+    width: 100%;
+}
+
+// Line with text: two lines on the sides, no border on the container
+@mixin divider-text(
+    $border: 1px solid var(--border),
+    $margin: 1em 0,
+    $gap: 1rem
+) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    margin: $margin;
+    width: 100%;
+
+    &::before,
+    &::after {
+        content: '';
+        flex: 1;
+        border-top: $border;
+    }
+}
+
+// Standard line divider
+.line {
+    @include divider;
+}
+
+// Line divider with custom margin
+.line-nomargin {
+    @include divider($margin: 0 .5rem);
+}
+
+// Line with a text in the center
+.line-text {
+    @include divider-text;
+    max-width: 40rem;
+
+    span {
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--text);
+    }
+}
+
+    /* --- MOBILE --- */
+
+@media (max-width: 768px) {
+    /* Little images skills */
+    .skills img {
+        width: clamp(24px, 0.313vw + 18px, 30px);
+    }
+
+    /* The cards */
+    .card {
+        // The divider where the buttons are
+        div {
+            flex-direction: column;
+
+            // The buttons to links
+            .btn {
+                &.left, &.right {
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    /* Contacts-Profiles */
+    .contacts #profiles {
+        .grid-auto {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    /* The divider where the buttons are */
+    .flexbox {
+        flex-direction: column;
+        width: 100%;
+
+        // The buttons to links
+        .btn {
+            &.left, &.right {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

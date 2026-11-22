@@ -1,200 +1,74 @@
 ---
-title: "Support My Work · Fabio Pittaccio"
+layout: default
+title: Support My Work
+i18n_title: head_title
 description: "Support the independent game development and UE5 tools created by Fabio Pittaccio. Every contribution helps."
 ---
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="head_title">{{ page.title }}</title>
 
-    <!-- FAVICON -->
-    {% include favicon.html %}
+<!-- ## HERO ## -->
+<section id="hero" class="cont">
+    {% include sections/content/block.html
+        tag = "hero.tag"
+        title = "hero.title"
+        p = "hero.desc"
+    %}
+</section>
 
-    <!-- ## CSS ## -->
-    <link rel="stylesheet" href="style/core.css">                       <!-- Core: Base, Header, Footer -->
-    <link rel="stylesheet" href="style/icons.css">						<!-- SVG icons -->
-    <link rel="stylesheet" href="style/sections/section-about.css">     <!-- .about-grid e .about-item -->
-    <link rel="stylesheet" href="style/sections/section-projects.css">  <!-- .project-card -->
-    <link rel="stylesheet" href="style/sections/section-contact.css">   <!-- .contact-section -->
-    <link rel="stylesheet" href="style/pages/about.css">                <!-- .resume-header -->
-    <link rel="stylesheet" href="style/pages/support.css">              <!-- .logo-image -->
-</head>
-<body>
+<!-- Get the support data folder -->
+{% assign data = site.data.support %}
 
-<!-- ## HEADER ## -->
-<div id="header"></div>
+<!-- ## DIRECT ## -->
+<section id="direct" class="cont">
+    {% include sections/content/block.html
+        title = "direct.title"
+        h = "h2"
+        p = "direct.desc"
+    %}
 
-<!-- ## PAGE ## -->
-<main class="page-content resume-page-section">
+    <br><!-- break -->
 
-    <!-- ## PAGE HEAD ## -->
-    <div class="resume-header">
-        <span class="hero-tag"         data-i18n="support_page.tag"></span>
-        <h1 class="contact-title"      data-i18n-html="support_page.title"></h1>
-        <p  class="contact-subtitle"   data-i18n="support_page.subtitle"></p>
-    </div>
+    <!-- Cards Grids -->
+    <article class="grid-auto">
+        {% for d in data.direct %}
+            {% include sections/content/card.liquid object=d %}
+        {% endfor %}
+    </article>
+</section>
 
-    <br>
+<!-- ## MUTUAL ## -->
+<section id="mutual" class="cont">
+    {% include sections/content/block.html
+        title = "mutual.title"
+        h = "h2"
+        p = "mutual.desc"
+    %}
 
-    <!-- ## SECTION 1: DIRECT SUPPORT ## -->
-    <div class="about-more">
-        <h2 class="section-title" data-i18n-html="support_page.direct.title"></h2>
-        <p class="resume-description" data-i18n="support_page.direct.subtitle"></p>
-    </div>
+    <br><!-- break -->
 
-    <section class="projects-section" id="direct-support">
-        <div class="section-container">
-            <div class="projects-grid">
+    <!-- Cards Grids -->
+    <article class="grid-auto">
+        {% for d in data.mutual %}
+            {% include sections/content/card.liquid object=d %}
+        {% endfor %}
+    </article>
+</section>
 
-                <!-- ## Ko-Fi ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://ko-fi.com/pittabio" target="_blank">
-                        <img src="media/logo/support/kofi.png" alt="Ko-Fi Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.kofi.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://ko-fi.com/pittabio" target="_blank" class="link">
-                            <span data-i18n="support_page.kofi.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
+<!-- ## CAUSES ## -->
+<section id="causes" class="cont">
+    {% include sections/content/block.html
+        tag = "causes.tag"
+        title = "causes.title" h="h2"
+        p = "causes.desc"
+    %}
+</section>
 
-                <!-- ## PayPal ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://paypal.me/FabioPittaccio" target="_blank">
-                        <img src="media/logo/support/PayPal.png" alt="PayPal Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.paypal.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://paypal.me/FabioPittaccio" target="_blank" class="link">
-                            <span data-i18n="support_page.paypal.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ## GitHub Sponsor ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://github.com/sponsors/pittabio" target="_blank">
-                        <img src="media/logo/support/mona.png" alt="GitHub Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.github.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://github.com/sponsors/pittabio" target="_blank" class="link">
-                            <span data-i18n="support_page.github.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ## SECTION 2: MUTUAL SUPPORT ## -->
-    <div class="about-more">
-        <h2 class="section-title" data-i18n-html="support_page.mutual.title"></h2>
-        <p class="resume-description" data-i18n="support_page.mutual.subtitle"></p>
-    </div>
-
-    <section class="projects-section" id="mutual-support">
-        <div class="section-container">
-            <div class="projects-grid">
-
-                <!-- ## GitKraken ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://gitkraken.cello.so/SUBU3498xEG" target="_blank">
-                        <img src="media/logo/support/gitkraken.png" alt="GitKraken Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.gitkraken.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://gitkraken.cello.so/SUBU3498xEG" target="_blank" class="link">
-                            <span data-i18n="support_page.gitkraken.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ## Microsoft Rewards ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://rewards.bing.com/welcome?rh=mSj3Stfhqyg&ref=rafsrchae" target="_blank">
-                        <img src="media/logo/support/ms-rewards.png" alt="Microsoft Rewards Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.ms_rewards.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://rewards.bing.com/welcome?rh=mSj3Stfhqyg&ref=rafsrchae" target="_blank" class="link">
-                            <span data-i18n="support_page.ms_rewards.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ## Revolut ## -->
-                <div class="project-card">
-                    <!-- Image -->
-                    <a href="https://revolut.com/referral/?referral-code=fabio_2f_x2jn!AUG1-26-AR&geo-redirect" target="_blank">
-                        <img src="media/logo/support/revolut.png" alt="Revolut Logo" class="support-logo"/>
-                    </a>
-                    <!-- Description -->
-                    <p class="project-desc" data-i18n-html="support_page.revolut.desc"></p>
-                    <!-- Button -->
-                    <div class="support-button">
-                        <a href="https://revolut.com/referral/?referral-code=fabio_2f_x2jn!AUG1-26-AR&geo-redirect" target="_blank" class="link">
-                            <span data-i18n="support_page.revolut.button"></span>
-                            <!-- svg arrow -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ## THANK YOU CTA ## -->
-    <section class="contact-section">
-        <div class="contact-inner">
-            <h2 class="contact-title"    data-i18n-html="support_page.thanks.title"></h2>
-            <p  class="contact-subtitle" data-i18n="support_page.thanks.subtitle"></p>
-            <a href="contacts.html" class="contact-cta">
-                <span data-i18n="support_page.thanks.button"></span>
-                <!-- svg arrow -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </section>
-
-</main>
-
-<!-- ## FOOTER ## -->
-<div id="footer"></div>
-
-<!-- ## JAVASCRIPT ## -->
-<script src="scripts/main.js"></script>
-
-</body>
-</html>
+<!-- ## THANKS ## -->
+<section id="thanks" class="cont">
+    {% include sections/content/block.html
+        tag="thanks.tag"
+        title="thanks.title" h="h2"
+        p="thanks.desc"
+        url="/contacts.html"
+        btn_text="thanks.button"
+    %}
+</section>

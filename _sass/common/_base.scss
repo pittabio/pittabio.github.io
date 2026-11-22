@@ -1,0 +1,407 @@
+/* # Reset # */
+
+// Global reset for box-sizing and spacing
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Translation loading
+html.i18n-loading body { visibility: hidden; }
+
+    /* # Typography Mixins # */
+
+// Common Base Text Style
+@mixin text-base {
+    color: var(--text);
+    margin: 0;
+}
+
+// Editorial serif - for big element (e.g. Titles)
+@mixin display-text($size: 1rem, $weight: 800, $mb: 0, $lh: 1.1) {
+    @include text-base;
+
+    font-family: var(--font-playfair), serif;
+    font-size: $size;
+    font-weight: $weight;
+    margin-bottom: $mb;
+    line-height: $lh;
+}
+
+// UI sans for body text (e.g. Paragraph)
+@mixin body-text($size: 1rem, $weight: 400, $lh: 1.6) {
+    @include text-base;
+
+    font-family: var(--font-sans), sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lh;
+}
+
+    /* # Base # */
+
+/* Hide the line break on desktop to keep text flowing */
+@media (min-width: 769px) {
+    br.no-br-desktop {
+        display: none;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+// Base HTML settings: smooth scrolling and font antialiasing
+html {
+    // Typograph calculation [min, const + coeff, max]
+    font-size: clamp(1rem, .234vw + .8125rem, 1.375rem);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+}
+
+// Base body styles: colors, font and overflow
+body {
+    @include body-text;
+    background-color: var(--bg);
+    overflow-x: hidden;
+
+    // Sticky footer
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// The main content landmark of the page
+main {
+    flex: 1 0 auto;
+    margin-top: var(--hedr-h);
+    padding: var(--main-padding);
+}
+
+    /* Typography - Headings */
+//#region Headings
+
+h1 {
+    @include display-text(
+        clamp(2.5rem, 6vw, 5rem),
+        $mb: 1.5rem
+    );
+
+    align-self: center;
+    justify-self: center;
+}
+
+h2 {
+    @include display-text(
+        clamp(2rem, 5vw, 3.5rem),
+        $mb: 1.25rem,
+        $lh: 1.2,
+    );
+
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+h3 {
+    @include display-text(
+        clamp(1.5rem, 4vw, 2.5rem),
+        700,
+        1rem
+    );
+}
+
+h4 {
+    @include display-text(
+        clamp(1.25rem, 2.5vw, 1.75rem),
+        700,
+        .75rem
+    );
+}
+
+h5 {
+    @include display-text(
+        1.1rem,
+        600,
+        .5rem
+    );
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+h6 {
+    @include display-text(
+        .9rem,
+        600
+    );
+    text-transform: uppercase;
+}
+
+//#endregion
+
+    /* Typography - Body level elements */
+
+// Paragraphs
+p {
+    hyphens: auto
+}
+
+// Links: inherit paragraph style and add hover effect
+a {
+    color: inherit;
+    font: inherit;
+    font-style: italic;
+    text-decoration: underline solid var(--link-underline);
+    transition: var(--transition);
+
+    // When the link is hovered
+    &:hover {
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline dotted var(--link-underline-hvr);
+        transition: var(--transition);
+    }
+}
+
+// Bold text: highlighted weight
+b {
+    font-weight: 700;
+}
+
+// Bolt mini title
+.mini-title {
+    @include display-text(1.5rem, 800, 1);
+    color: var(--accent);
+}
+
+// Italic
+em {
+    font-style: italic;
+}
+
+// A tag (little description)
+.tag {
+    @include display-text(
+        .75rem,
+        700
+    );
+
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    margin-bottom: .5rem;
+}
+
+    /* # Layout # */
+
+// CONTAINER
+@mixin container-style(
+    $max-width: var(--max-width),
+    $margin: 0 auto,
+    $direction: column,
+    $align: center,
+    $justify: center,
+    $text: center,
+    $wrap: nowrap,
+    $display: flex
+) {
+    max-width: $max-width;
+    margin: $margin;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    text-align: $text;
+    display: $display;
+
+    width: 100%;
+}
+
+// A normal container
+article {
+    @include container-style;
+}
+
+// Default site container
+.cont {
+    @include container-style;
+    padding-top: var(--pad-top);
+}
+
+// Default site container
+.cont_left {
+    @include container-style (
+        $align: flex-start,
+        $justify: flex-start,
+        $text: left
+    );
+    padding-top: var(--pad-top);
+}
+
+// FLEXBOX
+@mixin flexbox-style (
+    $direction: row,
+    $align: center,
+    $justify: center,
+    $gap: 1rem,
+    $wrap: nowrap,
+    $prevent-text-wrap: false
+) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+
+    @if $prevent-text-wrap {
+        white-space: nowrap;
+    }
+}
+
+// Default flexbox
+.flexbox {
+    @include flexbox-style(
+        $align: stretch
+    );
+}
+
+// Grid on column
+@mixin grid-column-style (
+    $cols: 3,
+    $gap: var(--main-gap),
+    $align: center
+){
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+    align-items: $align;
+
+    display: grid;
+}
+
+.grid-column {
+    @include grid-column-style;
+}
+
+// Grid automatic
+@mixin grid-auto-style($min-width: 300px, $gap: 1.5rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
+    gap: $gap;
+}
+
+.grid-auto {
+    @include grid-auto-style;
+    width: 100%;
+}
+
+    /* # Media # */
+
+// The standard image
+%img-base {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+// The image style to change
+@mixin img-style ($max-width: 752px) {
+    @extend %img-base;
+    max-width: $max-width;
+}
+
+// The images
+img {
+    @include img-style;
+}
+
+// The wide images
+.img-wide {
+    max-width: 100%
+}
+
+// iframe used to embed another HTML document
+// such as videos, maps, forms, or entire web pages
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 752px;
+    aspect-ratio: 16 / 9;
+}
+
+    /* Decorations */
+
+// Underline
+.underline {
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+        margin: 1rem auto 0;
+    }
+}
+
+// Colorize the text
+.accent {
+    color: var(--accent);
+}
+
+    /* Interaction & Accessibility */
+
+// Text Selection
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+// Keyboard focus outline
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+    /* --- MOBILE --- */
+
+@media (max-width: 768px) {
+    // The main content landmark of the page
+    main {
+        margin-top: clamp(3rem, 3.922vw + 2.118rem, 4rem);
+        padding: var(--main-padding-sm);
+    }
+
+    // Base body styles
+    body {
+        min-height: 100dvh;
+    }
+
+    /* Hide the line break on mobile to keep text flowing */
+    br.no-br-mobile {
+        display: none;
+    }
+
+    // Grid on column
+    .grid-column {
+        @include grid-column-style (
+            $cols: 1
+        );
+    }
+
+    // iframe used to embed another HTML document
+    // such as videos, maps, forms, or entire web pages
+    iframe {
+        display: block;
+        width: 100%;
+        max-width: 752px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}

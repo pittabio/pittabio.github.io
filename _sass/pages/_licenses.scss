@@ -1,0 +1,110 @@
+/* # License page # */
+
+#license {
+    // This page reads better with content starting from the left.
+    align-items: flex-start;
+    padding-top: var(--pad-top);
+
+    // Every section
+    section {
+        scroll-margin-top: calc(var(--hedr-h) + 1rem);
+    }
+
+    // The summary links - first section
+    #summary {
+        align-self: center;
+        align-content: center;
+        justify-self: center;
+        justify-items: center;
+
+        max-width: fit-content;
+        border: 1px var(--accent) solid;
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
+    // Stretch these to the full container width so their text actually
+    // starts at the left edge, instead of being a centered narrow block.
+    h3, h4, p,
+    .license-item {
+        align-self: stretch;
+        align-items: flex-start;
+        justify-items: flex-start;
+        text-align: left;
+        overflow: hidden;
+        margin-top: 1.5rem; // Breathing room between each license entry
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    // Mini container request-response on a single line
+    dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        column-gap: .5rem;
+        row-gap: .35rem;
+    }
+
+    // Request
+    dt {
+        font-weight: 600;
+
+        &::after {
+            content: ":";
+        }
+    }
+
+    // Response
+    dd {
+        margin: 0;
+    }
+
+    /* Images and SVG */
+
+    // Shared slot for images and SVG icons: change it here, both follow
+    --img-w: 140px;
+    --img-h: 80px;
+    --img-m: 12px 0;
+
+    img,
+    [class*="-svg"] {
+        width: var(--img-w);
+        height: var(--img-h);
+        margin: var(--img-m);
+        max-width: 100%;
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
+
+    img {
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    [class*="-svg"] {
+        -webkit-mask-position: left center;
+        mask-position: left center;
+    }
+}
+
+    /* --- MOBILE --- */
+
+@media (max-width: 768px) {
+    #license {
+        // The summary links - first section
+        #summary {
+            flex-direction: column;
+            align-self: center;
+            align-content: center;
+            justify-self: center;
+            justify-items: center;
+
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+
+            border: 1px var(--accent) solid;
+        }
+    }
+}

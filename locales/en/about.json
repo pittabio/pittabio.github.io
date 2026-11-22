@@ -1,160 +1,154 @@
-﻿{
-  "head_title": "About Me · Fabio Pittaccio",
+{
+    "head_title": "About Me",
 
-  "about": {
-    "tag": "Curriculum Vitae",
-    "title": "About me",
-    "subtitle": "Gameplay Developer · Unreal Engine C++ Specialist",
-    "description": [
-      "A summary of my key qualifications and technical skills.",
-      "For a complete detailed resume with full work history, certifications, and professional references,",
-      "please reach out to me through the contacts page."
-    ]
-  },
-
-  "skills": {
-    "title": "Technical Skills",
-
-    "CARD 1": "CARD 1",
-
-    "engines": {
-      "title": "Game Engines",
-      "items": [
-        "<li><span>Unreal Engine 5</span> <span class='skill-level advanced'>Advanced</span></li>",
-        "<li><span>Unity</span>           <span class='skill-level intermediate'>Intermediate</span></li>"
-      ]
+    "hero": {
+        "tag": "Curriculum Vitae",
+        "title": "About <b class='accent'>me</b>",
+        "desc": [
+            "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
+            "<br><br>",
+            "A summary of my key qualifications and technical skills.",
+            "<br class='no-br-mobile'>",
+            "For a complete detailed resume with full work history, certifications, and professional references",
+            "feel free to reach out to me through the <a href='contacts.html'>contacts page</a>."
+        ]
     },
 
-    "languages": {
-      "title": "Languages & Scripting",
-      "items": [
-        "<li><span>C++</span>             <span class='skill-level advanced'>Advanced</span></li>",
-        "<li><span>Blueprint Visual Scripting</span> <span class='skill-level advanced'>Advanced</span></li>",
-        "<li><span>Verse</span>           <span class='skill-level learning'>Learning</span></li>",
-        "<li><span>C#</span>              <span class='skill-level intermediate'>Intermediate</span></li>",
-        "<li><span>HTML / CSS / JS</span> <span class='skill-level intermediate'>Intermediate</span></li>",
-        "<li><span>Java</span>            <span class='skill-level basic'>Basic</span></li>"
-      ]
+    "certificate": {
+        "rainbow": "Official Certificate <br class='no-br-desktop'> – Rainbow Academy ↗",
+        "gitkraken": "Specialist Certificate <br class='no-br-desktop'> – GitKraken ↗",
+        "audio": "Academy Certificate ↗",
+        "it": "Technical Institute Diploma ↗"
     },
 
-    "CARD 2": "CARD 2",
+    "skill": {
+        "title": "Technical Skills",
 
-    "systems": {
-      "title": "Expertise & Systems",
-      "rainbow": "[Rainbow Academy Diploma]",
-      "items": [
-        "<li>C++ & Blueprint integration</li>",
-        "<li>Combat and movement mechanics</li>",
-        "<li>AI Systems for NPCs</li>",
-        "<li>Resource management & game economy</li>",
-        "<li>Multi-language localization</li>",
-        "<li>Multi-platform: Windows & Android</li>",
-        "<li>VR and Multiplayer (fundamentals)</li>"
-      ]
+        "level": {
+            "learning": "Learning",
+            "basic": "Basic",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced"
+        },
+
+        "engines": {
+            "title": "Game Engines"
+        },
+
+        "languages": {
+            "title": "Languages & Scripting"
+        },
+
+        "expertise": {
+            "title": "Expertise & Systems",
+
+            "cpp_blueprint": "C++ & Blueprint integration",
+            "combat_movement": "Combat and movement mechanics",
+            "npc_ai": "AI Systems for NPCs",
+            "economy": "Resource management & game economy",
+            "localization": "Multi-language localization",
+            "platforms": "Multi-platform: Windows & Android",
+            "vr_multiplayer": "VR and Multiplayer (fundamentals)"
+        },
+
+        "git": {
+            "title": "Version Control",
+
+            "specialist": "Git Certified Specialist",
+            "collaboration": "Repository management & collaboration workflows",
+            "branching": "Branching strategies, merging, rebasing",
+            "remotes": "Remote repositories and pull requests",
+            "advanced": "Advanced: hooks, LFS, worktrees, submodules"
+        },
+
+        "tools": {
+            "title": "Additional Tools"
+        },
+
+        "other": {
+            "title": "Continuous Learning & Goals",
+
+            "soon": [
+                "Committed to continuous professional growth.",
+                "<br>",
+                "Currently working towards expanding version control credentials (GitHub Certifications)",
+                "and formalizing English proficiency (EFSET)."
+            ]
+        }
     },
 
-    "git": {
-      "title": "Version Control",
-      "gitkraken": "[GitKraken Certificate]",
-      "github": "[GitHub Certificate] (Coming Soon)",
-      "items": [
-        "<li>Git Certified Specialist</li>",
-        "<li>Repository management & collaboration workflows</li>",
-        "<li>Branching strategies, merging, rebasing</li>",
-        "<li>Remote repositories and pull requests</li>",
-        "<li>Advanced: hooks, LFS, worktrees, submodules</li>"
-      ]
+    "education": {
+        "title": "Education & Training",
+
+        "gitkraken": {
+            "tag": "October 2025",
+            "title": "Git Certified Specialist by GitKraken",
+            "subtitle": "GitKraken Learn · Online",
+            "points": {
+                "1": "Foundations of Git — Certification Course",
+                "2": "Passed the 60-question certification exam",
+                "3": "Advanced repository management and collaboration workflows",
+                "4": "Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules"
+            }
+        },
+
+        "rainbow": {
+            "tag": "2023 - 2024",
+            "title": "Gameplay Developer · Master in Unreal C++",
+            "subtitle": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
+            "points": {
+                "1": "Final Grade: <strong>95/100</strong>",
+                "2": "Module Excellence: <strong>100/100 in C++ Programming</strong>",
+                "3": "Advanced Blueprint and C++ programming",
+                "4": "Hybrid Blueprint/C++ implementation",
+                "5": "AI development for NPCs and gameplay mechanics",
+                "6": "Multiplayer and VR mechanics",
+                "7": "HUD, SaveGame systems and Audio management"
+            }
+        },
+
+        "audio": {
+            "tag": "2018 - 2020",
+            "title": "Audio Technician Certificate",
+            "subtitle": "Professional Academy for Entertainment · Italy",
+            "points": {
+                "1": "Sound propagation and acoustics",
+                "2": "Professional use of mixers and audio equipment",
+                "3": "Mixing and mastering with Cubase",
+                "4": "Audio management for live events and studio recordings"
+            }
+        },
+
+        "it": {
+            "tag": "2011 - 2016",
+            "title": "Technical Diploma · Computer Science & Telecommunications",
+            "subtitle": "Alessandro Volta · Technical Institute · Guidonia, Italy",
+            "points": {
+                "1": "Intermediate C++ programming",
+                "2": "Extracurricular Arduino course",
+                "3": "Java, SQL and HTML foundations",
+                "4": "Computer systems and telecommunications"
+            }
+        }
     },
 
-    "CARD 3": "CARD 3",
+    "cta": {
+        "skills": {
+            "tag": "skills",
+            "title": [
+                "Want to see these skills",
+                "<br>",
+                "<b class='accent'>in action</b>?"
+            ],
+            "paragraph": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
+            "button": "View my projects"
+        },
 
-    "tools": {
-      "title": "Additional Tools",
-      "items": [
-        "<li>MetaHuman Creator</li>",
-        "<li>Android SDK</li>",
-        "<li>JetBrains Rider (IDE)</li>",
-        "<li>Blender — 3D Graphics</li>",
-        "<li>Adobe Photoshop & Lightroom</li>",
-        "<li>DaVinci Resolve — Video editing</li>",
-        "<li>Cubase & Ableton Live — Audio</li>"
-      ]
-    },
-
-    "other": {
-      "title": "Other Certificates",
-      "items": [
-        "<li>English: EFSET Profile (Coming Soon)</li>"
-      ]
+        "resume": {
+            "tag": "resume",
+            "title": "Need the full <b class='accent'>resume</b>?",
+            "paragraph": "Reach out for a full PDF resume including work history, certifications, and academic background",
+            "button": "Get in touch"
+        }
     }
-  },
-
-  "education": {
-    "title": "Education & Training",
-
-    "gitkraken": {
-      "date": "October 2025",
-      "role": "Git Certified Specialist by GitKraken",
-      "institution": "GitKraken Learn · Online",
-      "details": [
-        "<li>Foundations of Git — Certification Course</li>",
-        "<li>Advanced repository management and collaboration workflows</li>",
-        "<li>Topics: Commits, Branches, Merging, Rebasing, Remotes, Forks, Pull Requests, LFS, Submodules</li>",
-        "<li>Passed the 60-question certification exam</li>"
-      ]
-    },
-
-    "rainbow": {
-      "date": "2023 – 2024",
-      "role": "Gameplay Developer — Master in Unreal C++",
-      "institution": "Rainbow Academy · Digital Entertainment Academy · Rome, Italy",
-      "details": [
-        "<li>Final Grade: <strong>95/100</strong></li>",
-        "<li>Module Excellence: <strong>100/100 in C++ Programming</strong></li>",
-        "<li>Advanced Blueprint and C++ programming</li>",
-        "<li>Hybrid Blueprint/C++ implementation</li>",
-        "<li>AI development for NPCs and gameplay mechanics</li>",
-        "<li>Multiplayer and VR mechanics</li>",
-        "<li>HUD, SaveGame systems and Audio management</li>"
-      ]
-    },
-
-    "audio": {
-      "date": "2018 – 2020",
-      "role": "Audio Technician Certificate",
-      "institution": "Professional Academy for Entertainment · Italy",
-      "certificate": "[View Certificate]",
-      "details": [
-        "<li>Sound propagation and acoustics</li>",
-        "<li>Professional use of mixers and audio equipment</li>",
-        "<li>Mixing and mastering with Cubase</li>",
-        "<li>Audio management for live events and studio recordings</li>"
-      ]
-    },
-
-    "it": {
-      "date": "2011 – 2016",
-      "role": "Technical Diploma — Computer Science & Telecommunications",
-      "institution": "Alessandro Volta · Technical Institute · Guidonia, Italy",
-      "diploma": "[View Diploma]",
-      "details": [
-        "<li>Intermediate C++ programming</li>",
-        "<li>Extracurricular Arduino course</li>",
-        "<li>Java, SQL and HTML foundations</li>",
-        "<li>Computer systems and telecommunications</li>"
-      ]
-    }
-  },
-
-  "projects": {
-    "title": "Want to see these skills <em>in action</em>?",
-    "subtitle": "Explore my portfolio to see how I translate technical expertise into engaging gameplay",
-    "button": "View my projects"
-  },
-
-  "cta": {
-    "title": "Need the full <em>resume</em>?",
-    "subtitle": "Reach out for a full PDF resume including work history, certifications, and academic academic background",
-    "button": "Get in touch"
-  }
 }

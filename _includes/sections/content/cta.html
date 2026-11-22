@@ -1,0 +1,72 @@
+<!-- Block -->
+{% include sections/content/block.html
+    tag = include.tag
+    title = include.title
+    sub = include.subtitle
+%}
+
+<!-- Dynamically choose the data file based on the front matter -->
+{% assign dataset = site.data.projects[include.data] %}
+
+<!-- Find the correct object in the list of games -->
+{% assign current_game = dataset | where: "page", page.url | first %}
+{% unless current_game %}
+    {% assign current_game = dataset | where: "page", page.path | first %}
+{% endunless %}
+
+<!-- Assign the found object to the variable 'o' (so that card.html or the button logic works in the same way) -->
+{% assign o = current_game %}
+{% assign btn_positions = "left,center,right" | split: "," %}
+
+<!-- Buttons (Shamelessly copied from card.html) -->
+{% if o %}
+    <div class="flexbox">
+        {% for i in (1..3) %}
+            {% assign key      = "link" | append: i %}
+            {% assign key_name = key | append: "_name" %}
+            {% assign key_icon = key | append: "_icon" %}
+            {% assign key_img  = key | append: "_img" %}
+
+            <!-- 1. Check if a specific 'cta_' version exists for this button -->
+            {% assign cta_key      = "cta_link" | append: i %}
+            {% assign cta_key_name = cta_key | append: "_name" %}
+            {% assign cta_key_icon = cta_key | append: "_icon" %}
+            {% assign cta_key_img  = cta_key | append: "_img" %}
+
+            <!-- 2. If a cta_link is present, we use that; otherwise, we fall back to the standard link -->
+            {% assign btn_url  = o[cta_key] | default: o[key] %}
+            {% assign btn_name = o[cta_key_name] | default: o[key_name] %}
+            {% assign btn_icon = o[cta_key_icon] | default: o[key_icon] %}
+            {% assign btn_img  = o[cta_key_img] | default: o[key_img] %}
+
+            <!-- 3. In any case, avoid recursion if it points to the page itself -->
+            {% assign is_current_page = false %}
+            {% if btn_url == page.url or btn_url == page.path %}
+                {% assign is_current_page = true %}
+            {% endif %}
+
+            <!-- 4. Create the button -->
+            {% if btn_url and btn_name and is_current_page == false %}
+                <a class="btn full {{ btn_positions[forloop.index0] }}" href="{{ btn_url | relative_url }}" target="_blank">
+                    <span data-i18n="{{ btn_name }}">{{ btn_name }}</span>
+                    {% if btn_icon %}
+                        <span class="{{ btn_icon }}"></span>
+                    {% elsif btn_img %}
+                        <img src="{{ btn_img }}" alt="{{ btn_name }} image"/>
+                    {% endif %}
+                </a>
+            {% endif %}
+        {% endfor %}<!-- /for each element/ -->
+    </div><!-- /buttons/ -->
+{% endif %}<!-- /if object/ -->
+
+<!-- Line Divider -->
+<div class="line-text">
+    <span data-i18n="{{ include.divider }}"></span>
+</div>
+
+<!-- Go to projects -->
+<a class="btn" href="{{ include.more_link }}">
+    <span data-i18n-html="{{ include.more }}"></span>
+    <span class="arrow-svg"></span>
+</a>

@@ -1,60 +1,79 @@
 ﻿{
-  "head_title": "Contacts · Fabio Pittaccio",
+    "head_title": "Contacts",
 
-  "contact_page": {
-    "tag": "Get in touch",
-    "title": "Let's talk about your next <em>project.</em>",
-    "subtitle": "Whether you want to discuss job opportunities, Unreal Engine collaborations, or simply ask a question, I'm here to help.",
-
-    "quick_info": "Quick info",
-    "dev_profiles": "Dev Profiles",
-    "social_networks": "Community & Social",
-
-    "fun_fact":
-    {
-      "title": "Fun Fact",
-      "description": "The nickname @pittabio comes from a fusion of my surname first (Pittaccio) and my name later (Fabio). You can find me everywhere with this handler."
+    "hero": {
+        "tag": "Get in touch",
+        "title": [
+            "Let's talk about",
+            "<br>",
+            "your next <b class='accent'>project!</b>"
+        ],
+        "desc": [
+            "Whether you want to discuss job opportunities, Unreal Engine collaborations,",
+            "or simply ask a question, I'm here to help."
+        ]
     },
 
     "info": {
-      "location_label": "Current Location:",
-      "location": "Rome, Italy",
+        "title": "Quick info",
 
-      "timezone_label": "Time Zone:",
-      "timezone": "CET (Europe/Rome)",
+        "loc_label": "Current Location:",
+        "loc": "Rome, Italy",
 
-      "lang_label": "Preferred Languages:",
-      "lang": "English, Italian",
+        "tz_label": "Time Zone:",
+        "tz": "CET (Europe/Rome)",
 
-      "status_label": "Status:",
-      "status_value": "Available for new opportunities"
+        "lang_label": "Preferred Languages:",
+        "lang": "English, Italian",
+
+        "status_label": "Status:",
+        "status": "Available for new opportunities"
     },
+
+    "profiles": {
+        "dev": "Dev Profiles",
+        "social": "Social"
+    },
+
+    "fun_fact": {
+        "title": "Fun Fact",
+        "desc": [
+            "The nickname <strong>pittabio</strong> comes from a fusion of",
+            "my surname <strong>Pittaccio</strong> and my name <strong>Fabio</strong>.",
+            "<br>",
+            "With this handle you can find me practically everywhere."
+        ]
+    },
+
     "form": {
-      "title": "Contact Form",
-      "subtitle": "Please, don't use for spam",
+        "title": "Contact Form",
+        "subtitle": "Please, don't use for spam",
+        "privacy_note": "Your data is only used to reply to you. See <a href='/licenses.html#privacy'>Privacy</a>",
 
-      "name": "Full Name",
-      "email": "Email Address - To be recontacted ",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send Message",
+        "name": "Full Name",
+        "email": "Email Address - To be recontacted ",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message",
 
-      "placeholder": {
-        "name": "e.g. John Doe",
-        "email": "e.g. john_doe@example.com",
-        "subject": "e.g. Job Opportunity",
-        "message": "Your message here..."
-      }
+        "placeholder": {
+            "name": "e.g. John Doe",
+            "email": "e.g. john_doe@example.com",
+            "subject": "e.g. Job Opportunity",
+            "message": "Your message here..."
+        }
+    },
+
+    "feedback": {
+        "sending": "Sending...",
+
+        "success_title": "✅ Message sent successfully!",
+        "success_body": "Thank you for reaching out. I'll get back to you as soon as possible.",
+
+        "error_captcha": "Please complete the captcha.",
+        "error_title": "❌ Error sending the message.",
+        "error_detail_prefix": "Detail: ",
+        "error_body": "Please try again in a moment or contact me directly via email.",
+        "error_network": "Network error. Please check your connection."
     }
-  },
-
-  "feedback": {
-    "success_title": "✅ Message sent successfully!",
-    "success_body": "Thank you for reaching out. I'll get back to you as soon as possible.",
-    "error_title": "❌ Error sending the message.",
-    "error_detail_prefix": "Detail: ",
-    "error_body": "Please try again in a moment or contact me directly via email.",
-    "network_error": "Network error. Please check your connection.",
-    "sending": "Sending…"
-  }
 }

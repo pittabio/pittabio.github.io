@@ -1,0 +1,48 @@
+:root {
+    /* Colors */
+    --bg: #1E1E1E;
+    --bg-alt: #252525;
+    --bgbt: #333333;
+    --text-muted: #999999;
+    --text: #DADADA;
+
+    --accent-soft: #FF7C5C;
+    --accent: #FF3300;
+    --accent-rgb: 255,51,0;
+    --accent-dark: #A32100;
+
+    /* Fonts */
+    --font-playfair: 'Playfair Display';
+    --font-sans: 'DM Sans';
+
+    /* Layout & Spacing */
+
+    // Widths
+    --max-width: 2600px;
+    --max-width-sm: 1300px;
+
+    // Paddings
+    --pad-big: clamp(5rem, 4.167vw, 10rem);
+    --main-padding: 0 var(--pad-big);
+
+    --pad-sm: clamp(2rem, 1.667vw, 4rem);
+    --main-padding-sm: 0 var(--pad-sm);
+
+    --pad-top: 3rem;
+
+    // Gap 1rem to 2rem
+    --main-gap: clamp(1rem, .833vw, 2rem);
+
+    /* Design Tokens */
+    --border: #33333388;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: #00000011;
+
+    --link-underline: #DADADA88;
+    --link-underline-hvr: #FF330088;
+
+    /* Design Tokens - Radii */
+    --rad-sml: 6px;
+    --rad-big: 12px;
+    --rad-img: 16px;
+}

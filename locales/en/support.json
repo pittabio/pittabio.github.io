@@ -1,58 +1,90 @@
 ﻿{
-  "head_title": "Support My Work · Fabio Pittaccio",
+    "head_title": "Support My Work",
 
-  "support_page": {
-    "tag": "Support & Community",
-    "title": "Support my <em>work!</em>",
-    "subtitle": "If you appreciate what I do and want to help me continue, here's how you can do it. Any help is truly appreciated 💖",
-
+    "hero": {
+        "tag": "Support & Community",
+        "title": "Support my <b class='accent'>work!</b>",
+        "desc": [
+            "If you appreciate what I do and want to help me <b>continue</b>, here's how you can do it.",
+            "<br>",
+            "Any <b>help</b> is truly appreciated 💖"
+        ]
+    },
 
     "direct": {
-      "title": "☕ Offer me a coffee",
-      "subtitle": "Direct support for my independent game development"
-    },
+        "title": "Buy me a coffee ☕",
+        "desc": "Support me directly, with a tip, a sponsorship or a gift.",
 
-    "kofi": {
-      "desc": "Make a one-time donation or become a member to support my projects. It's commission-free and completely flexible.",
-      "button": "Buy me a coffee"
+        "github": {
+            "desc": [
+                "Sponsor me on GitHub, monthly or as a one-time contribution.",
+                "<br>",
+                "It goes straight into the time I spend building and maintaining my projects."
+            ],
+            "button": "Sponsor me"
+        },
+        "kofi": {
+            "desc": [
+                "Leave a one-time tip or join as a member to support my projects.",
+                "<br>",
+                "Tips on Ko-fi carry no platform fees, so almost everything you give reaches me."
+            ],
+            "button": "Buy me a coffee"
+        },
+        "wishlist": {
+            "desc": [
+                "Would you rather gift something than donate? Take a look at my Amazon wish list.",
+                "<br>",
+                "It's entirely optional, and every gift is truly appreciated."
+            ],
+            "button": "View wish list"
+        }
     },
-
-    "paypal": {
-      "desc": "Donate directly through PayPal. You can use credit or debit cards or your PayPal account.",
-      "button": "Donate via PayPal"
-    },
-
-    "github": {
-      "desc": "Sponsor me on GitHub. It's a great way to show your appreciation and support my work.",
-      "button": "Sponsor me"
-    },
-
 
     "mutual": {
-      "title": "🤝 Mutual Support",
-      "subtitle": "You help me, I help you: win-win!"
+        "title": "Mutual Support 🤝",
+        "desc": "You help me, I help you: win-win!",
+
+        "gitkraken": {
+            "desc": [
+                "GitKraken is a powerful Git client.",
+                "<br>",
+                "Use my link to get 50% off Pro: I receive a small commission, and you get the discount."
+            ],
+            "button": "Get 50% off"
+        },
+        "ms_rewards": {
+            "desc": [
+                "Earn Microsoft Rewards points just by searching with Bing.",
+                "<br>",
+                "Join with my referral link and complete the Welcome Quest for bonus points: I also earn a few points when you search."
+            ],
+            "button": "Join Rewards"
+        }
     },
 
-    "gitkraken": {
-      "desc": "GitKraken is a powerful Git client. Click below to get 50% off Pro, and help me with a commission.",
-      "button": "Learn more"
+    "causes": {
+        "tag": "A thought",
+        "title": "Something bigger than me 🍉",
+        "desc": [
+            "Your support means the world to me, truly. But it makes me even happier to know you're also helping people who need it far more than I do.",
+            "<br>",
+            "I think especially of the children in <b>Gaza</b> who have lost everything, and of every child caught in war, wherever it may be.",
+            "I won't list any campaigns here: there are too many, and I can't verify them all.",
+            "<br class='no-br-mobile'>",
+            "If you decide to help, choose <b>people</b> or organizations you can check yourself, ideally ones working directly on the ground and transparent about where the money goes.",
+            "<br>",
+            "And if you do, feel free to tell me. It would mean a lot to me, and even more to them."
+        ]
     },
-
-    "ms_rewards": {
-      "desc": "Earn rewards points by searching with Bing. Click my referral link, sign up, and earn bonus points together.",
-      "button": "Learn more"
-    },
-
-    "revolut": {
-      "desc": "Join me and over 75 million other users who love Revolut.",
-      "button": "Learn more"
-    },
-
 
     "thanks": {
-      "title": "Thank you so much for your <em>support!</em><br>💖",
-      "subtitle": "Every contribution helps me dedicate more time to game development and tools.",
-      "button": "Get in touch"
+        "tag": "Thanks",
+        "title": "Thank you for being <em>here</em> 💖",
+        "desc": [
+            "Whether you donate, share my work, or just stop by, it means a lot.",
+            "If you'd like to tell me something, about the thought above, or a project, I'd love to hear from you."
+        ],
+        "button": "Get in touch"
     }
-  }
 }
