@@ -12,7 +12,7 @@
     },
 
     "direct": {
-        "title": "☕ Treat me to a coffee ☕",
+        "title": "Buy me a coffee ☕",
         "desc": "Support me directly, with a tip, a sponsorship or a gift.",
 
         "github": {
@@ -42,7 +42,7 @@
     },
 
     "mutual": {
-        "title": "🤝 Mutual Support 🤝",
+        "title": "Mutual Support 🤝",
         "desc": "You help me, I help you: win-win!",
 
         "gitkraken": {
@@ -65,13 +65,13 @@
 
     "causes": {
         "tag": "A thought",
-        "title": "🍉 Something bigger than me 🍉",
+        "title": "Something bigger than me 🍉",
         "desc": [
             "Your support means the world to me, truly. But it makes me even happier to know you're also helping people who need it far more than I do.",
             "<br>",
             "I think especially of the children in <b>Gaza</b> who have lost everything, and of every child caught in war, wherever it may be.",
             "I won't list any campaigns here: there are too many, and I can't verify them all.",
-            "<br>",
+            "<br class='no-br-mobile'>",
             "If you decide to help, choose <b>people</b> or organizations you can check yourself, ideally ones working directly on the ground and transparent about where the money goes.",
             "<br>",
             "And if you do, feel free to tell me. It would mean a lot to me, and even more to them."
@@ -80,7 +80,7 @@
 
     "thanks": {
         "tag": "Thanks",
-        "title": "💖 Thank you for being <em>here</em> 💖",
+        "title": "Thank you for being <em>here</em> 💖",
         "desc": [
             "Whether you donate, share my work, or just stop by, it means a lot.",
             "If you'd like to tell me something, about the thought above, or a project, I'd love to hear from you."

@@ -6,9 +6,9 @@
         "title": "Tutti i <b class='accent'>Progetti</b>",
         "desc": [
             "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
-            "<br>",
+            "<br><br>",
             "Una panoramica completa dei miei giochi pubblicati e degli esperimenti tecnici",
-            "<br>",
+            "<br class='no-br-mobile'>",
             "dai titoli action-adventure ai porting mobile e approfondimenti sui sistemi avanzati di Unreal Engine."
         ]
     },

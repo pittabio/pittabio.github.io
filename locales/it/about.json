@@ -6,17 +6,17 @@
         "title": "Su di <b class='accent'>me</b>",
         "desc": [
             "<em>Gameplay Programming · UE5 · C++ · Blueprint</em>",
-            "<br>",
+            "<br><br>",
             "Un riepilogo delle mie qualifiche chiave e competenze tecniche.",
-            "<br>",
+            "<br class='no-br-mobile'>",
             "Per un curriculum completo e dettagliato con l'intera storia lavorativa, certificazioni e referenze professionali,",
             "sentiti libero di contattarmi tramite la <a href='contacts.html'>pagina dei contatti</a>."
         ]
     },
 
     "certificate": {
-        "rainbow": "Certificazione Ufficiale – Rainbow Academy ↗",
-        "gitkraken": "Certificato Specialista – GitKraken ↗",
+        "rainbow": "Certificazione Ufficiale <br class='no-br-desktop'> – Rainbow Academy ↗",
+        "gitkraken": "Certificato Specialista <br class='no-br-desktop'> – GitKraken ↗",
         "audio": "Attestato Accademia ↗",
         "it": "Diploma Istituto Tecnico ↗"
     },

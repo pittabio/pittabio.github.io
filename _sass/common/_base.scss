@@ -41,6 +41,13 @@ html.i18n-loading body { visibility: hidden; }
 
     /* # Base # */
 
+/* Hide the line break on desktop to keep text flowing */
+@media (min-width: 769px) {
+    br.no-br-desktop {
+        display: none;
+    }
+}
+
 html, body {
     height: 100%;
 }
@@ -188,6 +195,8 @@ em {
     color: var(--accent);
     letter-spacing: 0.14em;
     text-transform: uppercase;
+
+    margin-bottom: .5rem;
 }
 
     /* # Layout # */
@@ -322,9 +331,9 @@ img {
 // such as videos, maps, forms, or entire web pages
 iframe {
     display: block;
-    height: 423px;
     width: 100%;
     max-width: 752px;
+    aspect-ratio: 16 / 9;
 }
 
     /* Decorations */
@@ -360,7 +369,7 @@ iframe {
     outline-offset: 3px;
 }
 
-    /* # MOBILE # */
+    /* --- MOBILE --- */
 
 @media (max-width: 768px) {
     // The main content landmark of the page
@@ -374,10 +383,25 @@ iframe {
         min-height: 100dvh;
     }
 
+    /* Hide the line break on mobile to keep text flowing */
+    br.no-br-mobile {
+        display: none;
+    }
+
     // Grid on column
     .grid-column {
         @include grid-column-style (
             $cols: 1
         );
+    }
+
+    // iframe used to embed another HTML document
+    // such as videos, maps, forms, or entire web pages
+    iframe {
+        display: block;
+        width: 100%;
+        max-width: 752px;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 }

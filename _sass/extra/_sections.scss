@@ -244,8 +244,8 @@
     }
 }
 
+    /* --- MOBILE --- */
 
-/* MEDIA MOBILE */
 @media (max-width: 768px) {
     /* Little images skills */
     .skills img {
@@ -264,6 +264,28 @@
                     justify-content: center;
                     text-align: center;
                 }
+            }
+        }
+    }
+
+    /* Contacts-Profiles */
+    .contacts #profiles {
+        .grid-auto {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    /* The divider where the buttons are */
+    .flexbox {
+        flex-direction: column;
+        width: 100%;
+
+        // The buttons to links
+        .btn {
+            &.left, &.right {
+                justify-content: center;
+                text-align: center;
             }
         }
     }

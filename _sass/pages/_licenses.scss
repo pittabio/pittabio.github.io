@@ -88,3 +88,23 @@
         mask-position: left center;
     }
 }
+
+    /* --- MOBILE --- */
+
+@media (max-width: 768px) {
+    #license {
+        // The summary links - first section
+        #summary {
+            flex-direction: column;
+            align-self: center;
+            align-content: center;
+            justify-self: center;
+            justify-items: center;
+
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+
+            border: 1px var(--accent) solid;
+        }
+    }
+}

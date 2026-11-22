@@ -95,7 +95,8 @@
     }
 }
 
-/* MOBILE */
+    /* --- MOBILE --- */
+
 @media (max-width: 768px) {
 
     /* The hero container */
@@ -105,8 +106,8 @@
         );
 
         // Layout
-        padding-top: calc(var(--pad-top) * -1);
-        gap: var(--main-gap);
+        //padding-top: calc(var(--pad-top) * -1);
+        //gap: var(--main-gap);
 
         // The hero text section
         div {
@@ -138,24 +139,28 @@
 
         // The info container
         .info-box {
-            @include base.flexbox-style(
-                $wrap: wrap,
-                $gap: 1.25rem 2.5rem
-            );
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            gap: 1.25rem 2.5rem;
+            text-align: center;
 
             // The info itself
             .info {
+                // Restore the box (override the "display: contents" inherited from `.hero div`)
+                display: flex;
+                flex-direction: column;
                 align-items: center;
 
-                // Text align
-                b, span {
+                // Text align (b e p, non span)
+                b, p {
                     align-self: center;
                     text-align: center;
                 }
 
-                // Last child flexbox
+                // Last child: occupa l'intera seconda riga
                 &:last-child {
-                    flex-basis: 100%;
+                    grid-column: 1 / -1;
                 }
             }
         }
