@@ -64,12 +64,12 @@
             "desc": [
                 "The class diagram provides a comprehensive initial overview of the system's architecture, highlighting the intricate relationships between various components such as Game Mode logic, enemy spawners, and structure hierarchy.",
                 "<br>",
-                "Click <a href='/media/games/zombie-siege/tech/code-map.pdf'>here</a> to view the full architectural map in pdf format."
+                "Click <a href='/media/projects/games/zombie-siege/tech/code-map.pdf'>here</a> to view the full architectural map in pdf format."
             ],
             "img_desc": [
                 "<strong>Full architectural map</strong> illustrating the relationships between Game Mode logic, enemy spawners, and structure hierarchy.",
                 "<br>",
-                "Click <a href='/media/games/zombie-siege/tech/code-map.pdf'>here</a> to view the full architectural map in pdf format."
+                "Click <a href='/media/projects/games/zombie-siege/tech/code-map.pdf'>here</a> to view the full architectural map in pdf format."
             ],
             "img_alt": "A detailed class diagram showcasing the relationships between Game Mode logic, enemy spawners, and structure hierarchy."
         },
