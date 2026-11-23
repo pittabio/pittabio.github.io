@@ -5,7 +5,7 @@ const repoName = (window.SITE_BASEURL || '').replace(/\/+$/, '');
 
 const DEFAULT_LANG = 'en';
 // Files loaded on EVERY page (shared translations)
-const baseFiles = ['shared/common', 'projects/shared/games', 'projects/shared/archive'];
+const baseFiles = ['shared/common', 'projects/shared/games', 'projects/shared/archive', "projects/shared/experiments"];
 // Pages to NOT translate
 const excludedPages = [];
 

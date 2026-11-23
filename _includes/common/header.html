@@ -54,8 +54,13 @@
                                 data-i18n="$common.head.experiments"></button>
                         <ul class="submenu" id="sub-experiments">
                             {% for p in site.data.projects.experiments %}
-                                <li><a class="btn link" href="{{ p.page | relative_url }}"
-                                       data-i18n="{{ p.name }}"></a></li>
+                                {% if p.page %}
+                                    <li><a class="btn link" href="{{ p.page | relative_url }}"
+                                           data-i18n="{{ p.name }}"></a></li>
+                                {% else %}
+                                    <li><a class="btn link" href="{{ p.link1 }}" target="_blank" rel="noopener"
+                                           data-i18n="{{ p.name }}"></a></li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </li>

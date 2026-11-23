@@ -39,7 +39,13 @@ function initSubmenus() {
         btn.addEventListener('click', (e) => {
             e.stopPropagation(); // do not trigger the "click outside" below
             const item = btn.closest('.has-sub');
-            setSub(item, !item.classList.contains('open'));
+            const willOpen = !item.classList.contains('open');
+
+            // Close the siblings (e.g. "Archive" while opening "Experiments")
+            item.parentElement.querySelectorAll(':scope > .has-sub.open')
+                .forEach(s => { if (s !== item) setSub(s, false); });
+
+            setSub(item, willOpen);
         });
     });
 
