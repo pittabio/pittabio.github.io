@@ -15,10 +15,47 @@
 
         <!-- Pages -->
         <div class="links-wrapper">
+            <!-- Button: index -->
             <a class="btn link" href="{{ '/index.html' | relative_url }}" data-i18n="$common.head.home" id="nav-home"></a>
-            <a class="btn link" href="{{ '/projects.html' | relative_url }}" data-i18n="$common.head.projects" id="nav-projects"></a>
+
+            <!-- Button: projects -->
+            <div class="has-sub">
+                <a class="btn link" href="{{ '/projects.html' | relative_url }}"
+                   data-i18n="$common.head.projects" id="nav-projects"></a>
+                <button class="btn link sub-toggle"
+                        aria-expanded="false" aria-controls="sub-projects"
+                        data-i18n-aria="$common.head.ARIA.projects_menu"></button>
+
+                <!-- Submenu: games -->
+                <ul class="submenu" id="sub-projects">
+                    {% assign menu_games = site.data.projects.games | where_exp: "p", "p.page contains 'projects/'" %}
+                    {% for p in menu_games %}
+                        <li><a class="btn link" href="{{ p.page | relative_url }}"
+                               data-i18n="{{ p.name }}"></a></li>
+                    {% endfor %}
+
+                    <!-- Submenu: archives -->
+                    <li class="has-sub">
+                        <button class="btn link sub-toggle"
+                                aria-expanded="false" aria-controls="sub-archive"
+                                data-i18n="$common.head.archive"></button>
+                        <ul class="submenu" id="sub-archive">
+                            {% for p in site.data.projects.archive %}
+                                <li><a class="btn link" href="{{ p.page | relative_url }}"
+                                       data-i18n="{{ p.name }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Button: about -->
             <a class="btn link" href="{{ '/about.html' | relative_url }}" data-i18n="$common.head.about" id="nav-about"></a>
+
+            <!-- Button: contacts -->
             <a class="btn link" href="{{ '/contacts.html' | relative_url }}" data-i18n="$common.head.contacts" id="nav-contacts"></a>
+
+            <!-- Button: support -->
             <a class="btn link" href="{{ '/support.html' | relative_url }}" data-i18n="$common.head.support" id="nav-support"></a>
         </div>
     </nav>
