@@ -16,11 +16,11 @@ This repository contains the source code for my professional portfolio, hosted o
 
 While I am primarily a Gameplay Developer, I built this portfolio with a focus on clean architecture, scalability, and performance:
 
-- **SSG:** [Jekyll](https://jekyllrb.com/) (GitHub Pages native engine).
-- **Templating:** Liquid for modular components and SEO management.
-- **Frontend:** Vanilla HTML5, CSS3 (custom variables/grid/flexbox), and Modern JavaScript.
-- **Localization:** Custom JSON-based **i18n** engine for multi-language support (EN/IT).
-- **Analytics:** [Umami](https://umami.is/) (privacy-friendly, cookie-free analytics hosted in the EU).
+- **SSG & Build:** [Jekyll 4.4+](https://jekyllrb.com/) powered by **Dart Sass** (`sass-embedded`), built and deployed via custom **GitHub Actions** CI/CD.
+- **Templating:** Modular Liquid architecture with shared layouts (`default`, `project`) and reusable components.
+- **Frontend:** Vanilla HTML5, modern SCSS (mixins, CSS Grid, custom properties), and vanilla ES6+ JavaScript.
+- **Localization:** Custom zero-dependency **i18n** engine with dynamic JSON loading and baseurl auto-prefixing.
+- **Analytics & Privacy:** [Umami](https://umami.is/) (privacy-first, cookie-free, EU-hosted) and YouTube-NoCookie embeds.
 
 ## 🚀 Key Features
 
