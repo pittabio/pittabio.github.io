@@ -2,7 +2,10 @@
     "$common": {
         "head": {
             "home": "Home",
+
             "projects": "Progetti",
+            "archive": "Archivio",
+
             "about": "Su di me",
             "contacts": "Contatti",
             "support": "Supporto",
@@ -12,7 +15,8 @@
                 "nav": "Navigazione principale",
                 "overlay_close": "Chiudi gallery",
                 "menu_open": "Apri menu",
-                "menu_close": "Chiudi menu"
+                "menu_close": "Chiudi menu",
+                "projects_menu": "Mostra lista progetti"
             }
         },
 
