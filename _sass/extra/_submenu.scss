@@ -45,6 +45,17 @@ header {
         transform: rotate(225deg);
     }
 
+    // Chevron of "Projects": no frame (not even on hover/tap) and the same
+    // color of its link (the link comes first in the HTML, so `~` works)
+    .links-wrapper > .has-sub > .sub-toggle {
+        border-color: transparent;
+    }
+
+    .links-wrapper > .has-sub > a.active ~ .sub-toggle,
+    .links-wrapper > .has-sub > a.active-section:not(:hover) ~ .sub-toggle {
+        color: var(--accent);
+    }
+
     // -- THE BOXES -- //
     .submenu {
         display: none;
@@ -154,12 +165,45 @@ header {
         .has-sub {
             align-self: stretch;
         }
+
+        // "Projects": link and chevron share the same grid cell, so the chevron
+        // sits INSIDE the link (the box is absolute, it does not take a row)
+        .links-wrapper > .has-sub {
+            display: grid;
+            align-items: center;
+
+            > a,
+            > .sub-toggle { grid-area: 1 / 1; }
+
+            // Room for the chevron on the right of the text
+            > a { --btn-padding: .45rem 1.6rem .45rem .85rem; }
+
+            > .sub-toggle {
+                justify-self: end;
+                padding: .45rem .85rem;
+            }
+        }
+    }
+}
+
+// Desktop with a mouse: while the mouse is on the chevron or inside the box,
+// the "Projects" link keeps its hover look, so link + chevron read as one.
+@media (hover: hover) and (min-width: 769px) {
+    header .links-wrapper > .has-sub:hover > a:not(.active) {
+        color: var(--accent-dark);
+        border-color: var(--accent);
+    }
+
+    header .links-wrapper > .has-sub:hover > a:not(.active) ~ .sub-toggle {
+        color: var(--accent-dark);
     }
 }
 
 /* # MOBILE # */
 
-// In the hamburger menu the boxes become an accordion
+// In the hamburger menu the boxes become an accordion.
+// Every link stays centered in its row: the chevrons float on the right
+// edge and take no space, so the column keeps its symmetry.
 @media (max-width: 768px) {
     header {
         nav {
@@ -167,44 +211,68 @@ header {
             overflow-y: auto;
         }
 
+        // A row (link or label) + its box below.
+        // Grid: link and chevron share the same cell, the box is the next row.
         .has-sub {
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 100%;
             width: 100%;
 
-            > a {
-                flex: 1;
-            }
-
-            > .sub-toggle {
-                padding: .8rem 1.2rem;
-            }
+            > a,
+            > .sub-toggle { grid-area: 1 / 1; }
+            > .submenu    { grid-area: 2 / 1; }
         }
 
+        // Chevron of "Projects": on top of the right side of the link
+        .links-wrapper > .has-sub > .sub-toggle {
+            justify-self: end;
+            padding: 0 1.2rem;
+        }
+
+        // The boxes: a framed card, so they do not blend with the menu
         .submenu,
         .submenu .submenu {
             position: static;
-            flex-basis: 100%;
+            width: calc(100% - 2rem);
             min-width: 0;
-            padding: 0 0 0 1.5rem;
-            background: none;
-            border: none;
-            border-radius: 0;
+            margin: .35rem auto .5rem;
+            padding: var(--sub-pad);
+            background: var(--bg-alt);
+            border: 1px solid var(--bgbt);
+            border-radius: var(--rad-big);
             box-shadow: none;
             animation: none;
         }
 
-        // Chevron: down, up when open
+        // The second level sits inside the first: slightly different background
+        .submenu .submenu {
+            margin-bottom: .25rem;
+            background: var(--bg);
+        }
+
+        // Entries are centered like the main menu (long names can wrap)
+        .submenu a,
         .submenu .sub-toggle {
-            justify-content: space-between;
+            justify-content: center;
+            text-align: center;
+            white-space: normal;
+        }
+
+        // "Archive" / "Experiments": centered label, chevron on the right
+        .submenu .sub-toggle {
+            position: relative;
 
             &::after {
+                position: absolute;
+                right: 1rem;
+                top: calc(50% - .2em);
                 order: 0;
-                transform: rotate(45deg);
+                transform: rotate(45deg); // down
             }
         }
 
         .submenu .has-sub.open > .sub-toggle::after {
-            transform: rotate(225deg);
+            transform: rotate(225deg); // up
         }
     }
 }
