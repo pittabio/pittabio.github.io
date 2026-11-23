@@ -27,19 +27,6 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
     {% include sections/projects/games.html %}
 </section><!-- /games/ -->
 
-<!-- ## EXPERIMENTS ## -->
-<section id="experiments" class="cont">
-    {% include sections/content/block.html
-        title = "experiments.title" h = "h2"
-        p = "experiments.desc"
-    %}
-
-    <br><!-- break -->
-
-    <!-- Grid -->
-    {% include sections/projects/experiments.html %}
-</section><!-- /experiments/ -->
-
 <!-- ## ARCHIVE ## -->
 <section id="archive" class="cont">
     {% include sections/content/block.html
@@ -52,6 +39,19 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
     <!-- Grid -->
     {% include sections/projects/archive.html %}
 </section><!-- /archive/ -->
+
+<!-- ## EXPERIMENTS ## -->
+<section id="experiments" class="cont">
+    {% include sections/content/block.html
+            title = "experiments.title" h = "h2"
+            p = "experiments.desc"
+    %}
+
+    <br><!-- break -->
+
+    <!-- Grid -->
+    {% include sections/projects/experiments.html %}
+</section><!-- /experiments/ -->
 
 <!-- ## CTA ## -->
 <section id="contact" class="cont">
@@ -66,8 +66,6 @@ description: "Explore Unreal Engine 5 games and technical experiments focusing o
 
 <!-- Load the text for the included grids -->
 <script> window.extraLocales = [
-    'projects/shared/archive',
     'projects/shared/experiments',
-    'projects/shared/games',
     'shared/contact'
 ] </script>

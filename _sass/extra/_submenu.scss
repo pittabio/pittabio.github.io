@@ -1,0 +1,210 @@
+/* SUBMENU (Projects -> Archive) */
+
+// Import it AFTER the header: @use "submenu";
+
+:root {
+    --sub-pad: .4rem; // Inner padding of a box
+    --sub-w: 14rem;     // Min width of a box
+}
+
+// A little chevron drawn with borders (no icon font, follows the text color)
+@mixin chevron($deg) {
+    content: '';
+    flex: none;
+    width: .4em;
+    height: .4em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate($deg); // 45 = down, 135 = left, 225 = up
+    transition: transform .2s;
+}
+
+header {
+
+    // A link (or label) + the box it opens
+    .has-sub {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    // -- BUTTONS THAT OPEN A BOX -- //
+
+    // Both buttons ("Projects" chevron and "Archive" label) have the classes
+    // `btn link sub-toggle` in header.html: colors, font, hover and .active
+    // come from _buttons.scss, exactly like the other links.
+    .btn.sub-toggle {
+        --btn-padding: .45rem .5rem; // narrow: it is only the chevron
+
+        &::after {
+            @include chevron(45deg);
+        }
+    }
+
+    .has-sub.open > .sub-toggle::after {
+        transform: rotate(225deg);
+    }
+
+    // -- THE BOXES -- //
+    .submenu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px); // 1px = the border-bottom of the header
+        left: 0;
+        z-index: 1;
+
+        min-width: var(--sub-w);
+        padding: var(--sub-pad);
+        list-style: none;
+        text-align: left;
+
+        background: var(--bg-alt);
+        border: 1px solid var(--bgbt);
+        border-top: none;
+        border-radius: 0 0 var(--rad-big) var(--rad-big);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .35); // --shadow is too light on a dark bg
+
+        // Every entry (links and the "Archive" label)
+        a,
+        .sub-toggle {
+            width: 100%;
+            padding: .55rem .8rem;
+            justify-content: flex-start;
+            text-align: left;
+            white-space: nowrap;
+            border-radius: var(--rad-sml);
+        }
+
+        // Second level: opens on the LEFT of the first box.
+        // "Projects" is on the right side of the header, on the right
+        // the box would go out of the screen. Use `left: 100%` to flip it.
+        .submenu {
+            top: calc(-1 * (var(--sub-pad) + 1px));
+            right: 100%;
+            left: auto;
+            border-top: 1px solid var(--bgbt);
+            border-radius: var(--rad-big);
+        }
+
+        // On desktop the label points to the box (left)
+        .sub-toggle::after {
+            order: -1;
+            transform: rotate(135deg);
+        }
+
+        .has-sub.open > .sub-toggle::after {
+            transform: rotate(135deg);
+        }
+    }
+
+    // Show a box: click/tap or keyboard (.open from JS), mouse hover (desktop only)
+    .has-sub.open > .submenu {
+        display: block;
+    }
+
+    @media (hover: hover) and (min-width: 769px) {
+        .has-sub:hover > .submenu {
+            display: block;
+        }
+    }
+
+    // Short fade-in, only for people who do not disable motion
+    @media (prefers-reduced-motion: no-preference) {
+        .submenu {
+            animation: slideDown .18s ease-out;
+        }
+        // keyframes are in _header.scss
+    }
+
+    // -- HIGHLIGHT -- //
+
+    // .active (in _buttons.scss) = filled: "you are on this page".
+    // The outline version = "you are inside this section".
+    // :not(:hover) keeps the normal hover of .btn.link.
+
+    // "Projects" while you are inside a project
+    // (the opened project gets the standard .active inside the box)
+    .link.active-section:not(:hover) {
+        color: var(--accent);
+        border-color: var(--bgbt);
+    }
+
+    // "Archive" while you are inside an archived project
+    .submenu .has-sub:has(.active) > .sub-toggle:not(:hover) {
+        color: var(--accent);
+        border-color: var(--bgbt);
+    }
+}
+
+// Desktop: the wrapper takes the whole height of the header, so there is no
+// gap between "Projects" and the box (a gap would close it while you move)
+@media (min-width: 769px) {
+    header nav {
+        align-self: stretch;
+        align-items: stretch;
+
+        .lang-switcher {
+            align-self: center;
+        }
+
+        .links-wrapper {
+            align-items: center;
+        }
+
+        .has-sub {
+            align-self: stretch;
+        }
+    }
+}
+
+/* # MOBILE # */
+
+// In the hamburger menu the boxes become an accordion
+@media (max-width: 768px) {
+    header {
+        nav {
+            max-height: calc(100dvh - 4rem);
+            overflow-y: auto;
+        }
+
+        .has-sub {
+            flex-wrap: wrap;
+            width: 100%;
+
+            > a {
+                flex: 1;
+            }
+
+            > .sub-toggle {
+                padding: .8rem 1.2rem;
+            }
+        }
+
+        .submenu,
+        .submenu .submenu {
+            position: static;
+            flex-basis: 100%;
+            min-width: 0;
+            padding: 0 0 0 1.5rem;
+            background: none;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            animation: none;
+        }
+
+        // Chevron: down, up when open
+        .submenu .sub-toggle {
+            justify-content: space-between;
+
+            &::after {
+                order: 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        .submenu .has-sub.open > .sub-toggle::after {
+            transform: rotate(225deg);
+        }
+    }
+}
