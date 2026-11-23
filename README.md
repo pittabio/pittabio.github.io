@@ -35,8 +35,11 @@ The site uses a custom JavaScript engine that dynamically fetches and injects tr
 ### 3. Modular Architecture
 Used Jekyll `_includes` to manage repetitive components (favicons, SEO, analytics, privacy banners) to maintain a **DRY (Don't Repeat Yourself)** codebase.
 
-### 4. Privacy & Compliance (GDPR)
-Implemented a custom-designed cookie consent banner that integrates directly with GA4 Advanced Consent Mode, ensuring anonymous tracking only upon user approval.
+### 4. Privacy-First by Design (GDPR)
+Built with a strong privacy-by-default philosophy, eliminating the need for intrusive cookie consent banners:
+- **Cookie-Free Analytics:** Powered by [Umami](https://umami.is/), an open-source and privacy-focused analytics platform hosted in the EU that does not store personal data or use tracking cookies.
+- **Privacy-Enhanced Media:** Video embeds use YouTube's `youtube-nocookie.com` domain to prevent third-party profiling prior to playback.
+- **Transparent Disclosures:** Dedicated privacy and licenses page detailing data flows, contact form retention periods, and infrastructure hosting.
 
 ## 📁 Key Project Structure
 
