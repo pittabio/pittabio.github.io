@@ -239,11 +239,12 @@ function updateAllTexts() {
         if (val) el.innerHTML = val;
     });
 
-    // 5. Attributes (data-i18n-alt, data-i18n-placeholder)
-    ['alt', 'placeholder'].forEach(attr => {
+    // 5. Attributes (data-i18n-alt, data-i18n-placeholder, data-i18n-src)
+    ['alt', 'placeholder', 'src'].forEach(attr => {
         document.querySelectorAll(`[data-i18n-${attr}]`).forEach(el => {
             const val = t(el.getAttribute(`data-i18n-${attr}`));
-            if (val) el.setAttribute(attr, val);
+            // Skip if unchanged: re-setting an iframe's src would reload it
+            if (val && el.getAttribute(attr) !== val) el.setAttribute(attr, val);
         });
     });
 

@@ -44,9 +44,10 @@ details:
 
 [optional]
 video:
-    header: "project.video.header"
-    src:    https://www.youtube-nocookie.com/embed/id
-    title:  "project.video.accesibility.title"
+    header:   "project.video.header"
+    src:      https://www.youtube-nocookie.com/embed/id  (default / fallback)
+    src_i18n: "project.video.src"  (optional, the translated video URL)
+    title:    "project.video.accesibility.title"
 
 [optional] (documentation, see block.html)
 doc:
@@ -130,9 +131,10 @@ cta:
     <section id="video" class="cont">
         <h2 data-i18n="{{ page.video.header }}"></h2>
         <iframe
-            src="{{ page.video.src }}"
-            title="{{ page.video.title }}"
-            allowfullscreen loading="lazy"
+                src="{{ page.video.src }}"
+                {% if page.video.src_i18n %}data-i18n-src="{{ page.video.src_i18n }}"{% endif %}
+                title="{{ page.video.title }}"
+                allowfullscreen loading="lazy"
         ></iframe>
     </section>
 {% endif %}
