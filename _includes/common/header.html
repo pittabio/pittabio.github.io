@@ -46,6 +46,19 @@
                             {% endfor %}
                         </ul>
                     </li>
+
+                    <!-- Submenu: experiments -->
+                    <li class="has-sub">
+                        <button class="btn link sub-toggle"
+                                aria-expanded="false" aria-controls="sub-experiments"
+                                data-i18n="$common.head.experiments"></button>
+                        <ul class="submenu" id="sub-experiments">
+                            {% for p in site.data.projects.experiments %}
+                                <li><a class="btn link" href="{{ p.page | relative_url }}"
+                                       data-i18n="{{ p.name }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
