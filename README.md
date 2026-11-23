@@ -20,7 +20,7 @@ While I am primarily a Gameplay Developer, I built this portfolio with a focus o
 - **Templating:** Liquid for modular components and SEO management.
 - **Frontend:** Vanilla HTML5, CSS3 (custom variables/grid/flexbox), and Modern JavaScript.
 - **Localization:** Custom JSON-based **i18n** engine for multi-language support (EN/IT).
-- **Analytics:** Google Analytics 4 with **Advanced Consent Mode** and a custom-built privacy banner.
+- **Analytics:** [Umami](https://umami.is/) (privacy-friendly, cookie-free analytics hosted in the EU).
 
 ## 🚀 Key Features
 
