@@ -46,19 +46,18 @@ Built with a strong privacy-by-default philosophy, eliminating the need for intr
 ```text
 .
 ├── _data/          # Jekyll data files (YAML) rendered via Liquid
-├── _includes/      # Modular Jekyll components (SEO, Analytics, Banner)
-├── _layouts/       # Base page layout (default.html) shared by all pages
-├── _sass/          # SCSS partials (*.scss) compiled by Jekyll into the site stylesheets
-├── common/         # Shared HTML fragments (Global Header & Footer)
+├── _includes/      # Modular Liquid components (Navigation, cards, UI sections)
+├── _layouts/       # Base page layouts (default.html, project.html)
+├── _sass/          # SCSS partials (*.scss) compiled into the site stylesheets
 ├── favicon/        # Cross-platform icons and manifest files
 ├── locales/        # i18n JSON data: Organized by [language]/[page].json
-├── media/          # Global assets, game banners, and technical PDF diagrams
+├── media/          # Global assets, game media, and technical PDF diagrams
 ├── projects/       # Detailed project pages and technical archives
 ├── scripts/        # Custom i18n engine and UI interaction logic
-├── style/          # Sass entry point (core.scss): imports the partials from _sass/ and compiles to core.css
-├── _config.yml     # Global Jekyll settings
-├── robots.txt      # Crawler instructions and sitemap link
-└── sitemap.xml     # Search engine roadmap
+├── style/          # Sass entry point (core.scss): imports partials from _sass/
+├── _config.yml     # Global Jekyll settings and plugin configurations
+├── Gemfile         # Ruby dependencies and Jekyll plugin declarations
+└── robots.txt      # Crawler instructions and sitemap reference
 ```
 
 ## 📄 License
