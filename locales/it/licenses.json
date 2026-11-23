@@ -19,6 +19,14 @@
                 "Leggi l'<a href='https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'>informativa sulla privacy</a> sul sito di GitHub."
             ]
         },
+        "video": {
+            "title": "Video incorporati (YouTube)",
+            "desc": [
+                "Alcune pagine dei progetti possono includere video ospitati su <a href='https://www.youtube.com'>YouTube</a> (utilizzando modalità con privacy avanzata/youtube-nocookie ove possibile).",
+                "Quando visualizzi una pagina con un video incorporato, YouTube potrebbe impostare cookie o raccogliere dati tecnici relativi alla tua interazione con il player.",
+                "Questi cookie e trattamenti di dati sono gestiti interamente da Google / YouTube. Non ho alcun controllo né alcuna responsabilità sulle pratiche di trattamento dei dati di piattaforme terze."
+            ]
+        },
         "storage": {
             "title": "Dati sul tuo dispositivo",
             "desc": [
